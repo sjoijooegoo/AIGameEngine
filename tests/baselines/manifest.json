@@ -1,0 +1,30 @@
+{
+  "fingerprint": {
+    "godot": "4.7.2-stable (official)",
+    "renderer": "gl_compatibility",
+    "gpu": "NVIDIA GeForce RTX 3080"
+  },
+  "reviewer": "AI fixture review: visible meshes, UV labels, material response and UI readability; not final art approval",
+  "source_report": "D:\\RemakeGame\\artifacts\\sessions\\20261002-170458-a756dd1e\\report.json",
+  "images": {
+    "overview": "a7b2c46e339f2df85f713334ca3d4ba2121838fb193387a3bb32c32ba93ac7c9",
+    "materials": "89a1d05f761c27ffa4f90451cb52836823511679ada4c57b69b0249e2fc3c37c",
+    "model": "0dee23c7f13813f03d9b75f10cbe3fa8a9eed5402467421ca9af07bffb215ccd",
+    "npc": "bde03fcc6c34713f28ed644f9c6156fa836fdf897ce898b26fcc550b0f16bf36",
+    "model_90": "5766b7e6ccd1afa429accb7370983aedbbfc83977fd33d3a7d20cb0f6cacf880",
+    "model_180": "21ba3ea2579665768419b6c5dbd88c9b8038ca07522a7f61b03ad50c416c0f60",
+    "model_270": "822b62ec8849b73b2e791e6747f162ec2f076e1e7cf349e297e0368f79bf5c36",
+    "ui_gameplay_1280x720": "db1d2115a3b7949a71783ec2419e94aad242f36d8162c89cf405f12232a49c4e",
+    "ui_inventory_1280x720": "79818dfa7c7144d483197f87df639af8222ae0961f8fbb125a8a9dc448585238",
+    "ui_pause_1280x720": "4fa23d3c664f9e6c8eb394d85158130b4b2c5f1a2e4a1288da87be44db466a1f",
+    "ui_gameplay_1024x768": "9e64af7024ee73ffbe3bb63a2b980aaa640feab3b23cb8cffd527228fbdcc35e",
+    "ui_inventory_1024x768": "3ac1c5f28b79dc1ae57b5b4bf69a4de95e67a31d8de51851fbc42d7ce9001a01",
+    "ui_pause_1024x768": "e4b8bc7fc1df78835ecb8886d393fbcee3be57177b4ec883f2408003bf86c898",
+    "ui_gameplay_1920x1080": "42c5f7c95d587c4234a691bee185fabfb1e63540ed84da0ade6c6b653f2cc3c7",
+    "ui_inventory_1920x1080": "8d96269a72f15a52d59e0e1fef8481d9050d0711351b95e82d01d2473f51cde2",
+    "ui_pause_1920x1080": "ff7eb06543eb9f9de50b34c465ffe90fabfb99c6ef644b5b68c7a1e667c05d24",
+    "ui_gameplay_800x600": "07793ece808d98e050062b4d2ff21236613cd56e9a655ac928dd29cbcca376ee",
+    "ui_inventory_800x600": "7fbdb51e99aeb14ecfbe69a866f82fb5292c4f7e51de3e08368ae6cf09d3207d",
+    "ui_pause_800x600": "5b0c660cb0056fdc4468443b3d616e5d2ae859f095ba2a2a7853878b8af896bb"
+  }
+}

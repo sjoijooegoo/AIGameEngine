@@ -1,0 +1,72 @@
+[
+  {"name":"movement_and_release","description":"W moves 1.5 m / 30 ticks; releasing W stops movement", "steps":[
+    {"command":"reset"},
+    {"command":"act","args":{"keys":["W"],"frames":30},"assert":[{"path":"player.position.2","op":"near","value":3.5,"tolerance":0.03}]},
+    {"command":"step","args":{"frames":30},"assert":[{"path":"player.position.2","op":"near","value":3.5,"tolerance":0.03}]}
+  ]},
+  {"name":"run_speed","description":"Shift + W uses the configured run speed", "steps":[
+    {"command":"reset"},
+    {"command":"act","args":{"keys":["SHIFT","W"],"frames":30},"assert":[{"path":"player.position.2","op":"near","value":2.525,"tolerance":0.03}]}
+  ]},
+  {"name":"locked_door_collision","description":"No key: E reports locked, W cannot pass through the door", "steps":[
+    {"command":"reset","args":{"fixture":"door_locked"}},
+    {"command":"act","args":{"keys":["E"],"frames":1},"assert":[{"path":"door_open","value":false},{"path":"events.0.type","value":"door_locked"}]},
+    {"command":"act","args":{"keys":["W"],"frames":60},"assert":[{"path":"player.position.2","op":"gte","value":-2.65}]}
+  ]},
+  {"name":"key_door_objective","description":"Complete the entire pickup -> unlock -> exit loop using input events", "steps":[
+    {"command":"reset"},
+    {"command":"act","args":{"keys":["W"],"frames":38}},
+    {"command":"act","args":{"keys":["E"],"frames":1},"assert":[{"path":"inventory","op":"contains","value":"access_card"}]},
+    {"command":"act","args":{"keys":["E"],"frames":1},"assert":[{"path":"inventory","op":"length","value":1}]},
+    {"command":"act","args":{"keys":["W"],"frames":82}},
+    {"command":"act","args":{"keys":["E"],"frames":1},"assert":[{"path":"door_open","value":true}]},
+    {"command":"act","args":{"keys":["W"],"frames":100},"assert":[{"path":"objective_complete","value":true}]}
+  ]},
+  {"name":"inventory_blocks_movement","description":"Tab opens inventory; game movement is suspended until closed", "steps":[
+    {"command":"reset"},
+    {"command":"act","args":{"keys":["TAB"],"frames":1},"assert":[{"path":"inventory_open","value":true}]},
+    {"command":"act","args":{"keys":["W"],"frames":60},"assert":[{"path":"player.position.2","op":"near","value":5,"tolerance":0.001}]},
+    {"command":"ui","assert":[{"path":"controls.inventory.visible","value":true},{"path":"controls.inventory_items.text","value":"暂无物品"}]},
+    {"command":"act","args":{"keys":["TAB"],"frames":1},"assert":[{"path":"inventory_open","value":false}]}
+  ]},
+  {"name":"pause_and_ui_hit_test","description":"Esc pauses simulation; clicking the actual resume control resumes", "steps":[
+    {"command":"reset"},
+    {"command":"act","args":{"keys":["ESC"],"frames":1},"assert":[{"path":"paused","value":true}]},
+    {"command":"act","args":{"keys":["W"],"frames":60},"assert":[{"path":"player.position.2","op":"near","value":5,"tolerance":0.001}]},
+    {"command":"click","args":{"control":"resume"},"assert":[{"path":"paused","value":false}]},
+    {"command":"act","args":{"keys":["W"],"frames":30},"assert":[{"path":"player.position.2","op":"near","value":3.5,"tolerance":0.03}]}
+  ]},
+  {"name":"mouse_look","description":"Relative mouse motion reaches the same camera input handler", "steps":[
+    {"command":"reset"},
+    {"command":"act","args":{"mouse":[100,50],"frames":1},"assert":[{"path":"player.yaw","op":"near","value":-0.3,"tolerance":0.001},{"path":"player.pitch","op":"near","value":-0.3,"tolerance":0.001}]}
+  ]},
+  {"name":"npc_line_of_sight","description":"The opaque partition blocks NPC detection and attacks", "steps":[
+    {"command":"reset","args":{"fixture":"npc_occluded"}},
+    {"command":"step","args":{"frames":180},"assert":[{"path":"npc.state","value":"patrol"},{"path":"npc.line_of_sight","value":false},{"path":"player.hp","value":100}]}
+  ]},
+  {"name":"npc_chase_attack","description":"NPC detects, approaches, then damages a visible player", "steps":[
+    {"command":"reset","args":{"fixture":"npc_chase"}},
+    {"command":"step","args":{"frames":1},"assert":[{"path":"npc.state","value":"chase"}]},
+    {"command":"step","args":{"frames":180},"assert":[{"path":"npc.state","value":"attack"},{"path":"player.hp","op":"lt","value":100},{"path":"npc.attacks","op":"gte","value":1}]}
+  ]},
+  {"name":"combat_and_death","description":"Four valid player attacks kill the NPC; dead NPC no longer attacks", "steps":[
+    {"command":"reset","args":{"fixture":"combat"}},
+    {"command":"act","args":{"buttons":["left"],"frames":1}},
+    {"command":"act","args":{"buttons":["left"],"frames":1}},
+    {"command":"act","args":{"buttons":["left"],"frames":1}},
+    {"command":"act","args":{"buttons":["left"],"frames":1},"assert":[{"path":"npc.hp","value":0},{"path":"npc.state","value":"dead"}]},
+    {"command":"step","args":{"frames":180},"assert":[{"path":"player.hp","value":100},{"path":"npc.attacks","value":0}]}
+  ]},
+  {"name":"save_load_ui","description":"Save/load buttons preserve player position and inventory", "steps":[
+    {"command":"reset"},
+    {"command":"act","args":{"keys":["W"],"frames":40}},
+    {"command":"act","args":{"keys":["E"],"frames":1}},
+    {"command":"act","args":{"keys":["ESC"],"frames":1}},
+    {"command":"click","args":{"control":"save"}},
+    {"command":"click","args":{"control":"resume"}},
+    {"command":"act","args":{"keys":["S"],"frames":30}},
+    {"command":"act","args":{"keys":["ESC"],"frames":1}},
+    {"command":"click","args":{"control":"load"},"assert":[{"path":"inventory","op":"contains","value":"access_card"},{"path":"player.position.2","op":"near","value":3,"tolerance":0.03}]},
+    {"command":"click","args":{"control":"restart"},"assert":[{"path":"inventory","op":"length","value":0},{"path":"player.position.2","op":"near","value":5,"tolerance":0.001}]}
+  ]}
+]

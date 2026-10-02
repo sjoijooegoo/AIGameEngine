@@ -1,0 +1,7 @@
+.tools/
+.venv/
+artifacts/
+build/
+game/.godot/
+**/__pycache__/
+*.pyc

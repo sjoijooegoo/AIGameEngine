@@ -1,0 +1,7 @@
+{
+  "pixel_threshold": 16,
+  "max_changed_ratio": 0.005,
+  "max_mean_absolute_error": 1.5,
+  "masks": {},
+  "note": "Masks are named screenshot rectangles [x,y,width,height] in output pixels. Add only justified dynamic regions. Baselines require explicit review and matching engine/GPU/renderer."
+}
