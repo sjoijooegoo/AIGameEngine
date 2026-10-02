@@ -232,6 +232,7 @@ def prepare(asset_id, unit_scale=1.0, yaw_degrees=0.0, textures=None, job=None):
         old = asset.get("preparations", {}).get(key)
         if old and output.exists() and digest(output) == old["output_sha256"] and all((target / name).is_file() and digest(target/name)==sha for name,sha in old.get("artifact_hashes", {}).items()):
             asset["prepared"] = old
+            asset["declared"] = {"unit_scale": unit_scale, "yaw_degrees": yaw_degrees, "texture_roles": textures or {}}
             asset["status"] = "prepared"
             atomic_json(CATALOG / (asset_id + ".json"), asset)
             return {"asset": asset, "cache_hit": True}

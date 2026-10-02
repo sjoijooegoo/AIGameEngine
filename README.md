@@ -202,6 +202,6 @@ python tools/smoke_release.py
 
 输出 `build/BankCrisisLab.exe`。发布构建不激活测试桥，即使传入 `--ai-session`。模板固定版本且校验 SHA512。当前 EXE 未签名，仅是试验场演示程序。
 
-`.github/workflows/qa.yml` 是可用的 Windows headless CI 配置，推送到 GitHub 仓库后运行。本地已经验证，尚未在远程 CI 执行。渲染回归需要带 GPU 的环境；`audit` 中计数是诊断信息，固定帧率测试不代表真实性能基准。
+`.github/workflows/qa.yml` 是可用的 Windows headless CI 配置，推送到 GitHub 仓库后运行。每次推送会在干净环境执行框架、资产管线及 headless 玩法检查，结果以对应 GitHub Actions 运行记录为准。渲染回归需要带 GPU 的环境；`audit` 中计数是诊断信息，固定帧率测试不代表真实性能基准。
 
 技术参考：[Godot 命令行](https://docs.godotengine.org/en/stable/tutorials/editor/command_line_tutorial.html)、[Input](https://docs.godotengine.org/en/stable/classes/class_input.html)、[Viewport](https://docs.godotengine.org/en/stable/classes/class_viewport.html)、[MCP stdio](https://modelcontextprotocol.io/specification/2025-06-18/basic/transports)。

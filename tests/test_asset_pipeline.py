@@ -51,6 +51,11 @@ class AssetPipelineTests(unittest.TestCase):
         self.assertAlmostEqual(result['measured']['bounds_min'][1],0,places=4)
         self.assertEqual(result['options']['unit_scale'],2)
         self.assertIn('albedo',result['options']['texture_hashes'])
+        prepare('qa.transformed',unit_scale=1)
+        cached=prepare('qa.transformed',unit_scale=2,yaw_degrees=90,textures={'albedo':'demo.wood'})
+        self.assertTrue(cached['cache_hit'])
+        self.assertEqual(cached['asset']['declared']['unit_scale'],2)
+        self.assertEqual(cached['asset']['declared']['texture_roles'],{'albedo':'demo.wood'})
 
     def test_missing_texture_blocks_preparation(self):
         result=ingest(ROOT/'tests/asset_fixtures/missing_texture.gltf','qa.missing')
