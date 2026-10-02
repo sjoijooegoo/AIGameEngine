@@ -47,27 +47,59 @@ def check_image(path: Path):
         return {"size": list(image.size), "mean": stats.mean, "stddev": stats.stddev, "nonblank": max(stats.stddev) > 3, "sha256": hashlib.sha256(path.read_bytes()).hexdigest()}
 
 
-def approve(report_path: Path, reviewer: str):
+def approve(report_path: Path, reviewer: str, reason="", names=None, accept_visual_changes=False, baseline_dir=None):
+    import re
+    from datetime import datetime, timezone
+    from lab import atomic_json
+    destination = Path(baseline_dir) if baseline_dir else BASELINES
     report_path = report_path.resolve()
     report = json.loads(report_path.read_text(encoding="utf-8"))
-    if report["summary"]["failed"]:
-        raise ValueError("Cannot approve a report with failed checks")
-    if not report["visuals"]:
-        raise ValueError("Report has no visual captures")
-    BASELINES.mkdir(parents=True, exist_ok=True)
-    for entry in report["visuals"]:
-        source = Path(entry["path"])
-        if not check_image(source)["nonblank"]:
-            raise ValueError(f"Blank capture: {source}")
-    for entry in report["visuals"]:
-        shutil.copyfile(entry["path"], BASELINES / (entry["name"] + ".png"))
-    (BASELINES / "manifest.json").write_text(json.dumps({"fingerprint": fingerprint(report["engine"]), "reviewer": reviewer, "source_report": str(report_path), "images": {v["name"]: v["image"]["sha256"] for v in report["visuals"]}}, indent=2), encoding="utf-8")
+    # Separate executable failures from expected image changes. No bypass for broken logic/capture.
+    if any(c["status"] == "fail" for c in report["checks"]):
+        raise ValueError("Cannot approve a report with failed executable checks")
+    if not reviewer.strip():
+        raise ValueError("Reviewer is required")
+    visuals = {entry["name"]: entry for entry in report["visuals"]}
+    selected = set(names) if names else set(visuals)
+    if not selected or not selected <= visuals.keys():
+        raise ValueError("Select existing visual captures")
+    old_path = destination / "manifest.json"
+    old = json.loads(old_path.read_text(encoding="utf-8")) if old_path.exists() else {}
+    new_fingerprint = fingerprint(report["engine"])
+    if old and old["fingerprint"] != new_fingerprint and not old["images"].keys() <= selected:
+        raise ValueError("Changing renderer fingerprint requires reviewing every existing baseline")
+    checked = {}
+    for name in selected:
+        if not re.fullmatch(r"[A-Za-z0-9_-]{1,80}", name):
+            raise ValueError("Invalid baseline name")
+        entry = visuals[name]
+        image = check_image(Path(entry["path"]))
+        if not image["nonblank"]:
+            raise ValueError(f"Blank capture: {name}")
+        if image["sha256"] != entry["image"]["sha256"]:
+            raise ValueError(f"Capture modified since report was generated: {name}")
+        if entry["comparison"]["status"] == "fail" and not (accept_visual_changes and reason.strip()):
+            raise ValueError("Visual changes require --accept-visual-changes and --reason after review")
+        checked[name] = image["sha256"]
+    destination.mkdir(parents=True, exist_ok=True)
+    for name in selected:
+        temp = destination / (name + ".png.tmp")
+        shutil.copyfile(visuals[name]["path"], temp)
+        temp.replace(destination / (name + ".png"))
+    images = dict(old.get("images", {}))
+    images.update(checked)
+    review = {"reviewer": reviewer, "reason": reason, "source_report": str(report_path), "images": sorted(selected), "time": datetime.now(timezone.utc).isoformat()}
+    history = old.get("reviews", []) + [review]
+    atomic_json(old_path, {"fingerprint": new_fingerprint, "reviewer": reviewer, "source_report": str(report_path), "images": images, "reviews": history})
 
 
 if __name__ == "__main__":
-    parser = argparse.ArgumentParser(description="Explicitly promote a visually reviewed run; never call to silence a regression")
+    parser = argparse.ArgumentParser(description="Promote explicitly reviewed captures; executable failures remain blocking")
     parser.add_argument("report", type=Path)
     parser.add_argument("--reviewer", required=True)
+    parser.add_argument("--reason", default="")
+    parser.add_argument("--names", nargs="+")
+    parser.add_argument("--accept-visual-changes", action="store_true")
     args = parser.parse_args()
-    approve(args.report, args.reviewer)
+    approve(args.report, args.reviewer, args.reason, args.names, args.accept_visual_changes)
     print(BASELINES)

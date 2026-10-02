@@ -12,6 +12,7 @@ import traceback
 
 from lab import Client, ROOT, atomic_json
 from visual import BASELINES, check_image, compare, fingerprint
+from extended_checks import snapshot_restore_replay, invalid_checkpoint_is_atomic, adapter_contract, animation_time_control, save_load_continuity
 
 
 def lookup(data, path):
@@ -79,6 +80,8 @@ def write_report(report, directory):
     report["summary"] = {
         "passed": sum(c["status"] == "pass" for c in report["checks"]),
         "failed": sum(c["status"] == "fail" for c in report["checks"]) + sum(v["comparison"]["status"] == "fail" for v in report["visuals"]),
+        "check_failed": sum(c["status"] == "fail" for c in report["checks"]),
+        "visual_failed": sum(v["comparison"]["status"] == "fail" for v in report["visuals"]),
         "visual_passed": sum(v["comparison"]["status"] == "pass" for v in report["visuals"]),
         "visual_needs_review": sum(v["comparison"]["status"] == "needs_review" for v in report["visuals"]),
     }
@@ -98,13 +101,14 @@ def write_report(report, directory):
             links += f' · <a href="{esc(Path(baseline).name)}">基准图</a>'
         figures.append(f'<figure><a href="{esc(image_name)}"><img loading="lazy" src="{esc(image_name)}" alt="{esc(visual["name"])}"></a><figcaption><strong>{esc(visual["name"])}</strong><span class="{status}">{status}</span><p>{links}</p><small>{esc(json.dumps(visual["comparison"], ensure_ascii=False))}</small></figcaption></figure>')
     summary = report["summary"]
+    sequences = "".join(f'<p><a href="{esc(Path(s["viewer"]).name)}">{esc(s["name"])}：逐帧 / 慢放检查</a> · <a href="{esc(Path(s["animation"]).name)}">动画预览</a> · <a href="{esc(Path(s["contact_sheet"]).name)}">帧联系表</a></p>' for s in report.get("sequences", []))
     page = f'''<!doctype html><html lang="zh-CN"><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>银行危机 · 开发测试报告</title>
 <style>
 :root{{color-scheme:light}}*{{box-sizing:border-box}}body{{margin:0;background:#edf1f4;color:#183244;font:16px/1.6 "Microsoft YaHei",sans-serif}}header{{background:#183e54;color:#fff;padding:40px max(24px,calc((100vw - 1280px)/2))}}h1{{font-size:30px;font-weight:600;margin:0 0 12px}}header p{{max-width:72ch;margin:8px 0;color:#d0e1eb}}main{{max-width:1328px;margin:auto;padding:24px}}.summary{{display:flex;gap:24px;flex-wrap:wrap;background:#fff;padding:16px 24px;border-left:5px solid #286888}}.summary b{{font-size:26px;margin-right:6px}}h2{{font-size:22px;margin-top:32px}}table{{border-collapse:collapse;background:#fff;width:100%;font-size:14px}}td,th{{padding:12px;text-align:left;border-bottom:1px solid #d9e3ea;overflow-wrap:anywhere}}td:first-child{{width:90px}}.pass{{color:#206349}}.fail{{color:#aa273c}}.needs_review{{color:#916008}}.gallery{{display:grid;grid-template-columns:repeat(auto-fit,minmax(min(100%,480px),1fr));gap:24px}}figure{{margin:0;background:#fff}}img{{width:100%;display:block}}figcaption{{padding:16px}}figcaption>span{{float:right}}small{{display:block;overflow-wrap:anywhere;color:#526674}}a{{color:#17658b}}a:focus-visible{{outline:3px solid #b37320;outline-offset:3px}}pre{{white-space:pre-wrap;overflow-wrap:anywhere;font-size:13px}}footer{{margin:30px 0}}@media(max-width:700px){{header{{padding:24px}}main{{padding:16px}}td{{padding:8px}}h1{{font-size:25px}}}}
 </style><header><h1>银行危机 · 开发测试报告</h1><p>输入回放、玩法断言与渲染证据。截图比较用于发现变化；美术质量、可读性和操作手感需要结合审阅判断。</p><p>{esc(report['engine'].get('godot','unknown'))} / {esc(report['engine'].get('gpu','unknown'))}</p></header><main>
 <div class="summary"><span><b>{summary['passed']}</b>检查通过</span><span><b>{summary['failed']}</b>失败</span><span><b>{summary['visual_passed']}</b>视觉回归通过</span><span><b>{summary['visual_needs_review']}</b>画面待审阅</span></div>
 <h2>操作与逻辑</h2><table><thead><tr><th>结果</th><th>检查项</th><th>证据 / 原因</th></tr></thead><tbody>{checks}</tbody></table>
-<h2>视觉检查台</h2><div class="gallery">{''.join(figures)}</div>
+<h2>视觉检查台</h2><div class="gallery">{''.join(figures)}</div><h2>连续帧与动画</h2>{sequences}
 <footer><a href="report.json">完整 JSON 报告</a> · <a href="trace.jsonl">输入回放</a> · <a href="engine.log">引擎日志</a><p>未验证范围：操作系统焦点与实体设备、主观美术评分、生产模型骨骼动画、完整原游戏流程、长期性能表现。</p></footer></main></html>'''
     (directory / "report.html").write_text(page, encoding="utf-8")
 
@@ -143,7 +147,9 @@ def run(headless=False, cases_path=None):
         image = check_image(path)
         assert image["nonblank"], f"Blank frame: {name}"
         baseline = BASELINES / (name + ".png")
-        if manifest and manifest.get("fingerprint") != fingerprint(report["engine"]):
+        if baseline.exists() and manifest.get("images", {}).get(name) != hashlib.sha256(baseline.read_bytes()).hexdigest():
+            comparison = {"status": "fail", "reason": "Baseline hash differs from approval manifest"}
+        elif manifest and manifest.get("fingerprint") != fingerprint(report["engine"]):
             comparison = {"status": "needs_review", "reason": "Engine/GPU/renderer differs from approved baseline"}
         else:
             comparison = compare(path, baseline, client.session / (name + "_diff.png"), policy, name)
@@ -178,6 +184,11 @@ def run(headless=False, cases_path=None):
             for path in ("player.position.0", "player.position.2", "player.hp", "npc.position.0", "npc.position.2", "npc.attacks"):
                 assert_state(results[1], {"path": path, "op": "near", "value": lookup(results[0], path), "tolerance": 0.0001})
         check("repeatability", deterministic)
+        check("adapter_contract", adapter_contract)
+        check("snapshot_restore_replay", lambda: snapshot_restore_replay(client))
+        check("save_load_continuity", lambda: save_load_continuity(client))
+        check("invalid_checkpoint_is_atomic", lambda: invalid_checkpoint_is_atomic(client))
+        check("animation_time_control", lambda: animation_time_control(client))
         audit = client.call("audit")
         atomic_json(client.session / "asset-audit.json", audit)
         check("model_material_texture_audit", lambda: check_assets(audit))
@@ -214,6 +225,37 @@ def run(headless=False, cases_path=None):
                         capture(name)
                         assert report["visuals"][-1]["image"]["size"] == [width, height], "Render size was clamped or changed"
                     check(name, sized_capture)
+            def animation_sequence():
+                from sequence import build
+                client.call("resize", width=1280, height=720)
+                client.call("reset", fixture="gallery")
+                client.call("view", name="npc", hud=False)
+                client.call("animation", entity="npc", clip="walk", time=0)
+                result = client.call("sequence", name="walk_cycle", count=13, interval=5)
+                data = json.loads(Path(result["path"]).read_text(encoding="utf-8"))
+                assert len(data["frames"]) == 13
+                for index, frame in enumerate(data["frames"]):
+                    assert frame["state"]["tick"] == index * 5, "Simulation advanced while waiting for rendering"
+                    assert check_image(Path(frame["path"]))["nonblank"]
+                digests = {check_image(Path(f["path"]))["sha256"] for f in data["frames"]}
+                assert len(digests) >= 4, "Animation did not visibly change"
+                product = build(Path(result["path"]), speed=0.25)
+                report.setdefault("sequences", []).append({"name": "walk_cycle", **product})
+                return "13 real renders, 60 simulation ticks, varied poses; quarter-speed review generated"
+            check("animation_sequence", animation_sequence)
+            def movement_sequence():
+                from sequence import build
+                client.call("reset")
+                client.call("view", name="player", hud=True)
+                result = client.call("sequence", name="movement_input", count=7, interval=5, keys=["W"])
+                data = json.loads(Path(result["path"]).read_text(encoding="utf-8"))
+                end = data["frames"][-1]["state"]
+                assert abs(end["player"]["position"][2] - 3.5) < 0.03
+                stopped = client.call("step", frames=10)
+                assert abs(stopped["player"]["position"][2] - end["player"]["position"][2]) < 0.0001
+                report.setdefault("sequences", []).append({"name": "movement_input", **build(Path(result["path"]))})
+                return "Held input drives real movement during capture and is released afterwards"
+            check("movement_sequence", movement_sequence)
         else:
             report["visual_skipped"] = "Headless mode cannot validate rendered appearance"
     except Exception as error:

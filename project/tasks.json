@@ -1,0 +1,59 @@
+{
+  "version": 1,
+  "current_milestone": "framework-v2",
+  "next_task": "PORT-001",
+  "tasks": [
+    {
+      "id": "FRAMEWORK-002",
+      "status": "done",
+      "title": "通用适配、恢复、动画证据与验收清单",
+      "acceptance": [
+        "FW-ADAPTER",
+        "FW-RESTORE",
+        "FW-INPUT",
+        "FW-ANIMATION",
+        "ART-CRATE",
+        "ART-UI",
+        "ART-MOTION"
+      ],
+      "depends_on": [],
+      "evidence": [
+        "project/evidence/framework-v2-validation.json",
+        "project/evidence/framework-v2-walk.jpg",
+        "project/evidence/framework-v2-movement.jpg"
+      ]
+    },
+    {
+      "id": "PORT-001",
+      "status": "planned",
+      "title": "从 OriginGame.html 提取一楼布局、交互与门锁规则，建立移植验收说明",
+      "acceptance": [
+        "FW-INPUT"
+      ],
+      "depends_on": [
+        "FRAMEWORK-002"
+      ],
+      "definition_of_done": "产出一楼布局与实体清单、原作规则对应关系、可复现玩法测试方案；实现前补充专属验收项"
+    },
+    {
+      "id": "PORT-002",
+      "status": "planned",
+      "title": "迁移现金区与大厅，实现一条可玩的真实流程",
+      "acceptance": [
+        "FW-INPUT",
+        "FW-RESTORE"
+      ],
+      "depends_on": [
+        "PORT-001"
+      ],
+      "definition_of_done": "使用原作空间布局与门锁规则，并验证画面、操作和存档；不能用现有试验场代替"
+    }
+  ],
+  "known_limits": [
+    "未实现整部游戏移植、生产级导航、多 NPC 拥堵与跨楼层追逐",
+    "连续帧是固定模拟时间的渲染证据，不包含声音且不代表真实性能",
+    "检查点恢复游戏自有状态；Godot 接触缓存与外部资源需要重新建立，不保证跨平台逐比特一致",
+    "美术验收与像素回归分开，用户尚未批准最终画风",
+    "试验场存档升级为版本 2，版本 1 明确拒绝，不做隐式数据迁移"
+  ]
+}

@@ -10,6 +10,8 @@ var enabled := true
 var last_seen := false
 var attacks := 0
 var model: Node3D
+var animator: AnimationPlayer
+var animation_preview := false
 
 func _ready() -> void:
 	name = "Guard"
@@ -23,6 +25,7 @@ func _ready() -> void:
 	collision.position.y = 0.9
 	add_child(collision)
 	model = Props.mannequin(self, Color("a76a60"))
+	animator = Props.animator(self)
 
 func reset_at(pos: Vector3, active: bool = true) -> void:
 	position = pos
@@ -36,10 +39,14 @@ func reset_at(pos: Vector3, active: bool = true) -> void:
 	enabled = active
 	mode = "patrol" if active else "idle"
 	model.rotation = Vector3.ZERO
+	animation_preview = false
+	animator.play("idle")
+	animator.seek(0, true)
 
 func tick(dt: float, player: CharacterBody3D) -> void:
 	if not enabled or hp <= 0:
 		mode = "dead" if hp <= 0 else "idle"
+		Props.animate(animator, dt, false, animation_preview)
 		return
 	cooldown = maxf(0, cooldown - dt)
 	var dist: float = position.distance_to(player.position)
@@ -70,6 +77,7 @@ func tick(dt: float, player: CharacterBody3D) -> void:
 	move_and_slide()
 	if direction.length() > 0.01:
 		model.rotation.y = atan2(-direction.x, -direction.z)
+	Props.animate(animator, dt, walk_speed > 0, animation_preview)
 
 func state() -> Dictionary:
-	return {"position": [position.x, position.y, position.z], "state": mode, "hp": hp, "line_of_sight": last_seen, "attacks": attacks}
+	return {"position": [position.x, position.y, position.z], "velocity": [velocity.x, velocity.y, velocity.z], "state": mode, "hp": hp, "line_of_sight": last_seen, "attacks": attacks, "cooldown": cooldown, "home": [home.x, home.y, home.z], "patrol_target": [patrol_target.x, patrol_target.y, patrol_target.z], "enabled": enabled, "model_yaw": model.rotation.y, "animation": Props.animation_state(animator, animation_preview)}

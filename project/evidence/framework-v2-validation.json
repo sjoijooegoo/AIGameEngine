@@ -1,0 +1,376 @@
+{
+  "milestone": "framework-v2",
+  "date": "2026-10-02",
+  "source_fingerprint": "9057c9f12516d279865560f5832c15721b48a0d20170d6ba9c4da5191346e8d9",
+  "engine": {
+    "adapter": {
+      "adapter_version": 1,
+      "capabilities": [
+        "view",
+        "asset",
+        "animation",
+        "checkpoint"
+      ],
+      "entities": [
+        "player",
+        "npc"
+      ],
+      "fixtures": [
+        "default",
+        "door_locked",
+        "npc_chase",
+        "npc_occluded",
+        "combat",
+        "gallery"
+      ],
+      "game_id": "bank_lab",
+      "state_version": 2,
+      "views": [
+        "player",
+        "overview",
+        "materials",
+        "model",
+        "npc"
+      ]
+    },
+    "commands": [
+      "describe",
+      "state",
+      "ui",
+      "reset",
+      "act",
+      "step",
+      "click",
+      "capture",
+      "sequence",
+      "checkpoint",
+      "restore",
+      "animation",
+      "view",
+      "resize",
+      "audit",
+      "asset",
+      "quit"
+    ],
+    "godot": "4.7.2-stable (official)",
+    "gpu": "NVIDIA GeForce RTX 3080",
+    "inputs": [
+      "W",
+      "A",
+      "S",
+      "D",
+      "E",
+      "TAB",
+      "ESC",
+      "SHIFT"
+    ],
+    "pid": 86136,
+    "protocol": 2,
+    "rendered": true,
+    "renderer": "gl_compatibility"
+  },
+  "summary": {
+    "passed": 53,
+    "failed": 0,
+    "check_failed": 0,
+    "visual_failed": 0,
+    "visual_passed": 19,
+    "visual_needs_review": 0
+  },
+  "framework_tests": {
+    "passed": 13,
+    "failed": 0
+  },
+  "release_smoke": [
+    {
+      "headless": true,
+      "exit_code": 0,
+      "bridge_disabled": true
+    },
+    {
+      "headless": false,
+      "exit_code": 0,
+      "bridge_disabled": true
+    }
+  ],
+  "checks": [
+    {
+      "name": "movement_and_release",
+      "status": "pass"
+    },
+    {
+      "name": "run_speed",
+      "status": "pass"
+    },
+    {
+      "name": "locked_door_collision",
+      "status": "pass"
+    },
+    {
+      "name": "key_door_objective",
+      "status": "pass"
+    },
+    {
+      "name": "inventory_blocks_movement",
+      "status": "pass"
+    },
+    {
+      "name": "pause_and_ui_hit_test",
+      "status": "pass"
+    },
+    {
+      "name": "mouse_look",
+      "status": "pass"
+    },
+    {
+      "name": "npc_line_of_sight",
+      "status": "pass"
+    },
+    {
+      "name": "npc_chase_attack",
+      "status": "pass"
+    },
+    {
+      "name": "combat_and_death",
+      "status": "pass"
+    },
+    {
+      "name": "save_load_ui",
+      "status": "pass"
+    },
+    {
+      "name": "repeatability",
+      "status": "pass"
+    },
+    {
+      "name": "adapter_contract",
+      "status": "pass"
+    },
+    {
+      "name": "snapshot_restore_replay",
+      "status": "pass"
+    },
+    {
+      "name": "save_load_continuity",
+      "status": "pass"
+    },
+    {
+      "name": "invalid_checkpoint_is_atomic",
+      "status": "pass"
+    },
+    {
+      "name": "animation_time_control",
+      "status": "pass"
+    },
+    {
+      "name": "model_material_texture_audit",
+      "status": "pass"
+    },
+    {
+      "name": "bridge_validation",
+      "status": "pass"
+    },
+    {
+      "name": "capture_overview",
+      "status": "pass"
+    },
+    {
+      "name": "capture_materials",
+      "status": "pass"
+    },
+    {
+      "name": "capture_model",
+      "status": "pass"
+    },
+    {
+      "name": "capture_npc",
+      "status": "pass"
+    },
+    {
+      "name": "model_orbit_90",
+      "status": "pass"
+    },
+    {
+      "name": "model_orbit_180",
+      "status": "pass"
+    },
+    {
+      "name": "model_orbit_270",
+      "status": "pass"
+    },
+    {
+      "name": "ui_gameplay_1280x720_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_gameplay_1280x720",
+      "status": "pass"
+    },
+    {
+      "name": "ui_inventory_1280x720_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_inventory_1280x720",
+      "status": "pass"
+    },
+    {
+      "name": "ui_pause_1280x720_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_pause_1280x720",
+      "status": "pass"
+    },
+    {
+      "name": "ui_gameplay_1024x768_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_gameplay_1024x768",
+      "status": "pass"
+    },
+    {
+      "name": "ui_inventory_1024x768_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_inventory_1024x768",
+      "status": "pass"
+    },
+    {
+      "name": "ui_pause_1024x768_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_pause_1024x768",
+      "status": "pass"
+    },
+    {
+      "name": "ui_gameplay_1920x1080_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_gameplay_1920x1080",
+      "status": "pass"
+    },
+    {
+      "name": "ui_inventory_1920x1080_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_inventory_1920x1080",
+      "status": "pass"
+    },
+    {
+      "name": "ui_pause_1920x1080_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_pause_1920x1080",
+      "status": "pass"
+    },
+    {
+      "name": "ui_gameplay_800x600_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_gameplay_800x600",
+      "status": "pass"
+    },
+    {
+      "name": "ui_inventory_800x600_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_inventory_800x600",
+      "status": "pass"
+    },
+    {
+      "name": "ui_pause_800x600_bounds",
+      "status": "pass"
+    },
+    {
+      "name": "ui_pause_800x600",
+      "status": "pass"
+    },
+    {
+      "name": "animation_sequence",
+      "status": "pass"
+    },
+    {
+      "name": "movement_sequence",
+      "status": "pass"
+    },
+    {
+      "name": "engine_errors",
+      "status": "pass"
+    }
+  ],
+  "acceptance": [
+    {
+      "id": "FW-ADAPTER",
+      "status": "pass",
+      "detail": "adapter_contract"
+    },
+    {
+      "id": "FW-RESTORE",
+      "status": "pass",
+      "detail": "snapshot_restore_replay, invalid_checkpoint_is_atomic, save_load_continuity"
+    },
+    {
+      "id": "FW-INPUT",
+      "status": "pass",
+      "detail": "key_door_objective, pause_and_ui_hit_test, inventory_blocks_movement, mouse_look"
+    },
+    {
+      "id": "FW-ANIMATION",
+      "status": "pass",
+      "detail": "animation_time_control, animation_sequence, movement_sequence"
+    },
+    {
+      "id": "ART-CRATE",
+      "status": "pass",
+      "detail": "Inspected the multi-angle fixture renders. Box faces are present and side labels retain the expected orientation. The top label naturally appears upside down when viewed from the back. Static captures also match the previously reviewed baseline."
+    },
+    {
+      "id": "ART-UI",
+      "status": "pass",
+      "detail": "Inspected the current 800x600 pause screen and movement contact sheet; text and controls remain inside the screen with a dark footer. Four resolution matrices passed. No production typography approval is implied."
+    },
+    {
+      "id": "ART-MOTION",
+      "status": "pass",
+      "detail": "Inspected all 13 walk-cycle poses and the seven movement frames. Arms/legs alternate continuously and return to the initial pose at one second. The moving player and camera progress consistently. This is a rigid-part animation fixture, not a validated skinned character or foot-contact system."
+    }
+  ],
+  "visual_review": {
+    "reviewer": "AI visual inspection, 2026-10-02",
+    "scope": "Development fixtures only. Not user approval of production art or animation.",
+    "decisions": {
+      "ART-CRATE": {
+        "status": "pass",
+        "notes": "Inspected the multi-angle fixture renders. Box faces are present and side labels retain the expected orientation. The top label naturally appears upside down when viewed from the back. Static captures also match the previously reviewed baseline."
+      },
+      "ART-UI": {
+        "status": "pass",
+        "notes": "Inspected the current 800x600 pause screen and movement contact sheet; text and controls remain inside the screen with a dark footer. Four resolution matrices passed. No production typography approval is implied."
+      },
+      "ART-MOTION": {
+        "status": "pass",
+        "notes": "Inspected all 13 walk-cycle poses and the seven movement frames. Arms/legs alternate continuously and return to the initial pose at one second. The moving player and camera progress consistently. This is a rigid-part animation fixture, not a validated skinned character or foot-contact system."
+      }
+    }
+  },
+  "evidence": [
+    "framework-v2-walk.jpg",
+    "framework-v2-movement.jpg"
+  ],
+  "reproduce": [
+    "python -m unittest discover -s tests -p \"test_*.py\" -v",
+    "python tools/qa.py",
+    "python tools/project.py --report <new-session>/report.json",
+    "python tools/smoke_release.py"
+  ],
+  "note": "Acceptance reviews are tied to their original report. New runs need their own visual review; this summary is historical evidence."
+}

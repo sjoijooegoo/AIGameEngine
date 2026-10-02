@@ -4,6 +4,8 @@
 
 当前附带的是开发试验场。`OriginGame.html` 保留为后续移植参考，原游戏尚未整体移植。试验场的方块人物、木箱和材质球用于验证工具，不代表最终美术效果。
 
+第二版已加入通用 `GameAdapter`、独立场景契约测试、完整游戏状态检查点、固定时间动画采样、连续帧证据，以及可校验的任务/验收清单。接手前先运行 `python tools/project.py`；当前进度与下一项任务以 `project/tasks.json` 为准。
+
 ## 现在可以做什么
 
 | 领域 | 已实现 | 不能据此自动证明的事情 |
@@ -66,6 +68,7 @@ python tools/lab.py call quit --session $session
 | 命令 | 参数示例 | 用途 |
 | --- | --- | --- |
 | `state` | `{}` | 角色、NPC、背包、门、任务、事件 |
+| `describe` | `{}` | 当前适配器、实体、场景、观察视角和支持能力 |
 | `ui` | `{}` | 控件文本、矩形、可见性、是否越界 |
 | `act` | `{"keys":["W","SHIFT"],"mouse":[30,0],"frames":60}` | 同时按键、相对视角输入，推进 1–600 个物理帧后自动松开 |
 | `act` | `{"buttons":["left"],"frames":1}` | 鼠标攻击 |
@@ -76,13 +79,37 @@ python tools/lab.py call quit --session $session
 | `view` | `{"name":"model","orbit_degrees":90}` | 模型定角度观察 |
 | `resize` | `{"width":1024,"height":768}` | 调整真实窗口与渲染尺寸 |
 | `capture` | `{"name":"material_review"}` | PNG + 同一时刻状态；headless 会拒绝 |
+| `sequence` | `{"name":"walk","count":13,"interval":5,"keys":["W"]}` | 首帧 + 每 5 个模拟帧采集；结束后释放输入，输出 PNG/每帧状态 |
+| `animation` | `{"entity":"npc","clip":"walk","time":0.25,"preview":true}` | 指定 AnimationPlayer 的动画与时间；preview 模式防止玩法自动切回 idle |
+| `checkpoint` | `{"name":"before_attack"}` | 保存适配器完整状态与源码指纹 |
+| `restore` | `{"name":"before_attack"}` | 校验版本、游戏、源码指纹后恢复；属于测试准备操作 |
 | `audit` | `{}` | 网格、材质、纹理、UV 和基础渲染计数 |
 | `asset` | `{"path":"res://assets/my_model.glb"}` | 替换模型检查台上的已导入资源 |
 | `quit` | `{}` | 正常关闭，保留证据 |
 
 所有参数也可以用 `--args-file path.json` 传递，避免 shell 引号问题。测试在命令之间停止玩法推进，渲染继续；一次只允许一个客户端写入。超时会话应关闭并重新启动，不应重发有副作用的命令。输入桥是引擎内操作，不能证明 Windows 原生设备链路。
 
-重放：`python tools/lab.py replay artifacts/sessions/<运行目录>/trace.jsonl`。重放要求相同代码、资源和引擎；历史版本不会自动恢复，源码哈希用于核对。可加 `--headless` 重放不含截图的轨迹。
+重放：`python tools/lab.py replay artifacts/sessions/<运行目录>/trace.jsonl`。第二版会话具有 `context.json`；默认校验源码/资源指纹，代码变化时仅在有意回归验证时使用 `--allow-source-change`。历史版本不会自动恢复。可加 `--headless` 重放不含截图/序列的轨迹；第一版旧轨迹缺少 context，需要在第二版重新采集。
+
+## 连续帧、慢放和状态恢复
+
+```powershell
+python tools/lab.py call reset --session $session --args '{"fixture":"gallery","seed":12345}'
+python tools/lab.py call view --session $session --args '{"name":"npc","hud":false}'
+python tools/lab.py call animation --session $session --args '{"entity":"npc","clip":"walk","time":0}'
+python tools/lab.py call checkpoint --session $session --args '{"name":"start_pose"}'
+python tools/lab.py call sequence --session $session --args '{"name":"walk_cycle","count":13,"interval":5}'
+python tools/sequence.py "$session/walk_cycle.sequence.json" --speed 0.25
+python tools/lab.py call restore --session $session --args '{"name":"start_pose"}'
+```
+
+序列生成原始 PNG、逐帧状态、HTML 查看页、联系表与无损 WebP 动画。13 张、间隔 5 帧覆盖 1 秒模拟时间。HTML 可前后逐帧、拖动和切换播放速度；WebP 可由支持动画的图片查看器打开。PNG 写入时玩法停止推进，因此慢机器不会造成采样时间漂移。序列最多 120 张、1200 个逻辑步；不录制声音，也不用于测量实际 FPS。
+
+角色动画由真实 `AnimationPlayer` 以手动模式推进。样例使用刚体部件摆动，未建立生产角色骨骼/蒙皮/落脚约束。接入新角色时，适配器负责选择实体、动画和根运动策略。
+
+检查点覆盖试验场的角色位置/速度/生命、NPC 冷却和巡逻点、动画时刻、背包与门、任务、逻辑时钟、事件与待处理命令、随机数状态、UI 和观察相机。恢复前完整校验，错误不得造成半恢复。源码、游戏 ID 或资源检查台不一致会拒绝恢复；路径仅限当前会话。Godot 的接触缓存等引擎内部数据会重新计算，不保证跨平台逐比特一致。
+
+正常存档使用同一游戏状态格式和临时文件替换，已增加真实保存/读取按钮后的战斗续跑测试。格式版本升级为 2；版本 1 的旧试验场存档明确拒绝，未实现迁移。后续正式游戏需要单独设计版本迁移。
 
 ## 模型、材质、纹理开发
 
@@ -103,6 +130,14 @@ python tools/visual.py artifacts/sessions/<运行目录>/report.json --reviewer 
 python tools/qa.py
 ```
 
+若报告中的失败来自**预期的画面改动**，而所有执行检查通过，可明确选择审阅过的图：
+
+```powershell
+python tools/visual.py artifacts/sessions/<运行目录>/report.json --reviewer 'AI' --names model model_90 --accept-visual-changes --reason '按需求修改木箱纹理，已查看原图及差异'
+```
+
+该参数不能绕过玩法、采集或 UI 检查失败。更新会检查原图哈希、记录审阅原因，并保留未选择的旧基准。更换显卡/渲染器时必须重新审阅所有既有基准，避免混合环境。回归会核对基准图与审阅清单中的哈希。
+
 不要用更新基准来消除未知失败。换 GPU/引擎后会标记待审阅。当前字体使用系统字体，跨系统字体差异也可能引起回归；正式发行建议嵌入获授权的固定字体。高光差异、阴影、抗锯齿也需要结合实际图片判断。
 
 ## 扩展玩法与移植原游戏
@@ -120,11 +155,19 @@ tools/visual.py            图片差异与显式基准提升
 tools/mcp_server.py        可选 MCP stdio 适配器
 ```
 
-新增关卡应实现 `tick(dt)`、`snapshot()`、`reset_fixture(id)`、`set_view(id)` 等场景适配方法，并提供 `hud.inspect()`/`hud.controls`。当前桥通过 `world` 引用接入试验场；替换世界时需要相应适配资产检查台接口。别把完整关卡塞进测试桥。
+新增游戏/关卡通过 `game/testing/game_adapter.gd` 接入。`lab_adapter.gd` 封装银行的特定逻辑，`probe_adapter.gd` 用独立计数场景证明桥不依赖玩家/背包/NPC。桥不再直接访问银行字段。接口说明见 [适配契约](docs/adapter-contract.md)，新能力应在适配器中实现，别把完整关卡塞进测试桥。
+
+可直接验证独立场景：`python tools/lab.py start --headless --scene probe`，然后调用 `describe`、`reset`、`act {"keys":["SPACE"],"frames":2}`、`checkpoint`/`restore`。它有不同的按键映射和随机计数逻辑，不支持美术观察命令。
 
 将成功标准写入 `tests/scenarios.json`。支持 `eq`、`near`、`gte`、`lt`、`contains`、`length`，路径支持字典键和数组下标。用 fixture 准备起点，用 `act`/`click` 证明真实流程；禁止通过改状态直接伪造通关。
 
 建议移植顺序：一楼场景与角色 → 调查/背包/门锁 → 单 NPC 战斗 → 存档 → 多楼层与解谜。每加入一个系统，增加对应的成功、失败和边界场景，再进行渲染回归。
+
+## 任务与验收
+
+`project/tasks.json` 保存里程碑、下一项任务、依赖、状态与完成证据。`project/acceptance.json` 保存机器检查和视觉评审的明确标准。`python tools/project.py` 会检查 ID、依赖环和缺失验收项；它是接手与验收工具，不会自行启动无限开发循环。
+
+`python tools/project.py --report <report.json>` 会生成该次运行的 `acceptance.json`。没有执行的测试是 `not_run`，没有视觉评审的是 `needs_review`，不能从测试通过推断用户美术认可。添加 `--review <review.json>` 可附上具名、说明范围、绑定报告及证据 SHA256 的视觉评审；具体格式见 [适配契约](docs/adapter-contract.md)。
 
 ## 可选 MCP 接入
 

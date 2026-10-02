@@ -8,8 +8,8 @@ import sys
 from lab import Client
 
 TOOLS = [
-    {"name": "game_start", "description": "Start an isolated Godot development session. Rendered mode supports screenshots; headless is logic-only.", "inputSchema": {"type": "object", "properties": {"headless": {"type": "boolean", "default": False}}, "additionalProperties": False}},
-    {"name": "game_command", "description": "Send a bounded command to the current game session. Capture returns actual rendered PNG pixels. act sends key/mouse events through normal input; reset is fixture setup, not evidence of gameplay success. Consult README for command arguments.", "inputSchema": {"type": "object", "properties": {"command": {"type": "string", "enum": ["state", "ui", "reset", "act", "step", "click", "capture", "view", "resize", "audit", "asset"]}, "args": {"type": "object"}}, "required": ["command"], "additionalProperties": False}},
+    {"name": "game_start", "description": "Start an isolated Godot development session. Rendered mode supports screenshots; headless is logic-only.", "inputSchema": {"type": "object", "properties": {"headless": {"type": "boolean", "default": False}, "scene": {"type": "string", "enum": ["lab", "probe"], "default": "lab"}}, "additionalProperties": False}},
+    {"name": "game_command", "description": "Send a bounded command to the current game session. Capture returns actual rendered PNG pixels. act sends key/mouse events through normal input; reset is fixture setup, not evidence of gameplay success. Consult README for command arguments.", "inputSchema": {"type": "object", "properties": {"command": {"type": "string", "enum": ["describe", "state", "ui", "reset", "act", "step", "click", "capture", "sequence", "checkpoint", "restore", "animation", "view", "resize", "audit", "asset"]}, "args": {"type": "object"}}, "required": ["command"], "additionalProperties": False}},
     {"name": "game_stop", "description": "Stop this server's game session and preserve its evidence files.", "inputSchema": {"type": "object", "properties": {}, "additionalProperties": False}},
 ]
 
@@ -32,7 +32,7 @@ class Server:
             if name == "game_start":
                 if self.client:
                     raise ValueError("Stop the current session before starting another")
-                self.client = Client.launch(rendered=not args.get("headless", False))
+                self.client = Client.launch(rendered=not args.get("headless", False), scene=args.get("scene", "lab"))
                 result = {"session": str(self.client.session)}
             elif name == "game_stop":
                 self.stop()

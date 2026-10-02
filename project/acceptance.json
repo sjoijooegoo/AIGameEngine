@@ -1,0 +1,77 @@
+{
+  "version": 1,
+  "scope": "AI development framework; the bank game itself is not yet ported",
+  "criteria": [
+    {
+      "id": "FW-ADAPTER",
+      "kind": "automated",
+      "description": "同一测试桥能驱动银行与独立计数场景，使用各自按键映射并拒绝未支持能力。",
+      "checks": [
+        "adapter_contract"
+      ]
+    },
+    {
+      "id": "FW-RESTORE",
+      "kind": "automated",
+      "description": "恢复攻击中途检查点后，冷却、巡逻原点、动画与后续伤害一致；无效快照不得改变状态。",
+      "checks": [
+        "snapshot_restore_replay",
+        "invalid_checkpoint_is_atomic",
+        "save_load_continuity"
+      ]
+    },
+    {
+      "id": "FW-INPUT",
+      "kind": "automated",
+      "description": "玩家流程必须通过真实输入路由完成；暂停和背包必须阻止移动。",
+      "checks": [
+        "key_door_objective",
+        "pause_and_ui_hit_test",
+        "inventory_blocks_movement",
+        "mouse_look"
+      ]
+    },
+    {
+      "id": "FW-ANIMATION",
+      "kind": "automated",
+      "description": "动画可定位到指定时间并恢复；序列必须包含不同真实画面，等待渲染期间不得多推进游戏。",
+      "checks": [
+        "animation_time_control",
+        "animation_sequence",
+        "movement_sequence"
+      ]
+    },
+    {
+      "id": "ART-CRATE",
+      "kind": "review",
+      "description": "木箱四面无缺面，标签朝向正确，纹理无明显拉伸；以实拍渲染图审阅。",
+      "evidence": [
+        "model.png",
+        "model_90.png",
+        "model_180.png",
+        "model_270.png"
+      ],
+      "scope_note": "只用于试验场资产，不代表最终银行美术通过"
+    },
+    {
+      "id": "ART-UI",
+      "kind": "review",
+      "description": "800×600 至 1920×1080 下中文、按钮与操作提示可读，无非预期遮挡；配合自动尺寸检查。",
+      "evidence": [
+        "ui_pause_800x600.png",
+        "ui_gameplay_1920x1080.png"
+      ]
+    },
+    {
+      "id": "ART-MOTION",
+      "kind": "review",
+      "description": "样例步行动画连续，周期首尾衔接，无异常肢体翻转或镜头跳变；通过逐帧和慢放审阅。",
+      "evidence": [
+        "walk_cycle.sequence.json",
+        "walk_cycle.contact.jpg",
+        "walk_cycle.webp"
+      ],
+      "scope_note": "该样例为刚体部件动画，不包含蒙皮或真实落脚约束"
+    }
+  ]
+}

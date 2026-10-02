@@ -51,3 +51,40 @@ static func mannequin(parent: Node3D, color: Color) -> Node3D:
 		box(root, "Arm%s" % side, Vector3(0.16, 0.65, 0.20), Vector3(side * 0.38, 1.1, 0), cloth)
 	box(root, "Badge", Vector3(0.12, 0.08, 0.02), Vector3(-0.12, 1.28, -0.16), material(Color("efbc62")))
 	return root
+
+static func animator(parent: Node3D) -> AnimationPlayer:
+	var player := AnimationPlayer.new()
+	player.name = "Animator"
+	player.callback_mode_process = AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
+	parent.add_child(player)
+	var library := AnimationLibrary.new()
+	for clip in ["idle", "walk"]:
+		var animation := Animation.new()
+		animation.length = 1.0
+		animation.loop_mode = Animation.LOOP_LINEAR
+		for limb in ["Leg-1", "Leg1", "Arm-1", "Arm1"]:
+			var track := animation.add_track(Animation.TYPE_VALUE)
+			animation.track_set_path(track, NodePath("Model/" + limb + ":rotation:x"))
+			var sign_value := -1.0 if limb in ["Leg-1", "Arm1"] else 1.0
+			for i in range(5):
+				var phase := float(i) / 4.0
+				animation.track_insert_key(track, phase, sin(phase * TAU) * 0.55 * sign_value if clip == "walk" else 0.0)
+		library.add_animation(clip, animation)
+	player.add_animation_library("", library)
+	player.play("idle")
+	player.advance(0)
+	return player
+
+static func animate(player: AnimationPlayer, dt: float, moving: bool, preview: bool) -> void:
+	if not preview:
+		var clip := "walk" if moving else "idle"
+		if player.current_animation != clip:
+			player.play(clip)
+	player.advance(dt)
+
+static func animation_state(player: AnimationPlayer, preview: bool) -> Dictionary:
+	return {"clip": str(player.current_animation), "time": player.current_animation_position, "preview": preview}
+
+static func restore_animation(player: AnimationPlayer, data: Dictionary) -> void:
+	player.play(data.clip)
+	player.seek(float(data.time), true)

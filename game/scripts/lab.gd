@@ -26,6 +26,8 @@ var testing := false
 var inspection_view := "player"
 var queued: Array[String] = []
 var save_path := "user://lab_save.json"
+var rng := RandomNumberGenerator.new()
+var inspected_asset := "res://assets/inspection_crate.glb"
 
 func _ready() -> void:
 	_setup_input()
@@ -64,7 +66,7 @@ func _ready() -> void:
 				save_path = session.path_join("save.json")
 				var bridge := BridgeScript.new()
 				bridge.session = session
-				bridge.world = self
+				bridge.adapter = preload("res://testing/lab_adapter.gd").new(self)
 				add_child(bridge)
 				break
 
@@ -287,39 +289,100 @@ func record(type: String, data: Dictionary = {}) -> void:
 func snapshot() -> Dictionary:
 	return {"tick": ticks, "player": player.state(), "npc": npc.state(), "inventory": keys.duplicate(), "door_open": door_open, "objective_complete": complete, "paused": paused, "inventory_open": hud.inventory.visible, "view": inspection_view, "events": events.duplicate(true)}
 
+func export_state() -> Dictionary:
+	return {"version": 2, "player": player.state(), "npc": npc.state(), "inventory": keys.duplicate(), "door_open": door_open, "complete": complete, "paused": paused, "ticks": ticks, "hint": hint, "events": events.duplicate(true), "queued": Array(queued), "rng_state": str(rng.state), "rng_seed": str(rng.seed), "inventory_visible": hud.inventory.visible, "hud_visible": hud.root.visible, "view": inspection_view, "camera_position": [inspection_camera.position.x, inspection_camera.position.y, inspection_camera.position.z], "camera_rotation": [inspection_camera.rotation.x, inspection_camera.rotation.y, inspection_camera.rotation.z], "inspected_asset": inspected_asset}
+
+func restore_state(data: Dictionary) -> String:
+	var codec = preload("res://testing/state_codec.gd")
+	var schema := export_state()
+	# These collections have variable cardinality; validate their entries separately.
+	schema.inventory = []
+	schema.events = []
+	schema.queued = []
+	var error: String = codec.validate(data, schema)
+	if not error.is_empty():
+		return error
+	if data.version != 2 or not data.rng_state.is_valid_int() or not data.rng_seed.is_valid_int():
+		return "Unsupported state version or invalid RNG state"
+	if data.view not in ["player", "overview", "materials", "model", "npc"] or data.inspected_asset != inspected_asset:
+		return "View or inspected asset does not match the current world"
+	for item in data.inventory:
+		if item != "access_card":
+			return "Unknown inventory item"
+	for command in data.queued:
+		if command not in ["interact", "attack"]:
+			return "Unknown queued command"
+	for entry in data.events:
+		if not entry is Dictionary:
+			return "Invalid event history"
+	if data.npc.state not in ["idle", "patrol", "chase", "attack", "dead"]:
+		return "Invalid NPC state"
+	for actor in [data.player, data.npc]:
+		if actor.animation.clip not in ["idle", "walk"] or actor.animation.time < 0 or actor.animation.time > 3600 or actor.hp < 0 or actor.hp > 100:
+			return "Invalid actor health or animation"
+	# Validation is complete. Apply a snapshot without resetting timers or patrol origins.
+	player.position = codec.vec(data.player.position)
+	player.velocity = codec.vec(data.player.velocity)
+	player.hp = data.player.hp
+	player.yaw = data.player.yaw
+	player.pitch = data.player.pitch
+	player.model.rotation.y = data.player.model_yaw
+	player.animation_preview = data.player.animation.preview
+	Props.restore_animation(player.animator, data.player.animation)
+	npc.position = codec.vec(data.npc.position)
+	npc.velocity = codec.vec(data.npc.velocity)
+	npc.hp = data.npc.hp
+	npc.mode = data.npc.state
+	npc.cooldown = data.npc.cooldown
+	npc.home = codec.vec(data.npc.home)
+	npc.patrol_target = codec.vec(data.npc.patrol_target)
+	npc.enabled = data.npc.enabled
+	npc.last_seen = data.npc.line_of_sight
+	npc.attacks = int(data.npc.attacks)
+	npc.model.rotation.y = data.npc.model_yaw
+	npc.animation_preview = data.npc.animation.preview
+	Props.restore_animation(npc.animator, data.npc.animation)
+	keys = data.inventory.duplicate()
+	_set_door(data.door_open)
+	card.visible = not "access_card" in keys
+	complete = data.complete
+	paused = data.paused
+	ticks = int(data.ticks)
+	hint = data.hint
+	events = data.events.duplicate(true)
+	queued.assign(data.queued)
+	rng.seed = int(data.rng_seed)
+	rng.state = int(data.rng_state)
+	hud.inventory.visible = data.inventory_visible
+	hud.pause_panel.visible = paused
+	hud.root.visible = data.hud_visible
+	set_view(data.view)
+	inspection_camera.position = codec.vec(data.camera_position)
+	inspection_camera.rotation = codec.vec(data.camera_rotation)
+	Input.mouse_mode = Input.MOUSE_MODE_VISIBLE if paused or testing else Input.MOUSE_MODE_CAPTURED
+	player.reset_physics_interpolation()
+	npc.reset_physics_interpolation()
+	update_camera()
+	_refresh_ui()
+	return ""
+
 func save_game() -> void:
-	var data := {"version": 1, "player": player.state(), "inventory": keys, "door_open": door_open, "complete": complete, "npc": npc.state()}
-	var file := FileAccess.open(save_path, FileAccess.WRITE)
+	var file := FileAccess.open(save_path + ".tmp", FileAccess.WRITE)
 	if file == null:
 		record("save_failed")
 		return
-	file.store_string(JSON.stringify(data))
+	file.store_string(JSON.stringify(export_state()))
 	file.close()
-	record("saved")
+	var error := DirAccess.rename_absolute(save_path + ".tmp", save_path)
+	record("saved" if error == OK else "save_failed")
 
 func load_game() -> void:
 	if not FileAccess.file_exists(save_path):
 		record("load_missing")
 		return
 	var data = JSON.parse_string(FileAccess.get_file_as_string(save_path))
-	if not data is Dictionary or data.get("version") != 1:
+	if not data is Dictionary:
 		record("load_invalid")
 		return
-	var pos: Array = data.player.position
-	player.reset_at(Vector3(pos[0], pos[1], pos[2]))
-	player.hp = data.player.hp
-	player.yaw = data.player.yaw
-	player.pitch = data.player.pitch
-	keys = data.inventory.duplicate()
-	_set_door(data.door_open)
-	complete = data.complete
-	card.visible = not "access_card" in keys
-	var enemy: Array = data.npc.position
-	npc.reset_at(Vector3(enemy[0], enemy[1], enemy[2]), data.npc.state != "idle")
-	npc.hp = data.npc.hp
-	npc.mode = data.npc.state
-	npc.attacks = data.npc.attacks
-	queued.clear()
-	update_camera()
-	_refresh_ui()
-	record("loaded")
+	var error := restore_state(data)
+	record("loaded" if error.is_empty() else "load_invalid", {"reason": error})

@@ -2,6 +2,7 @@
 from __future__ import annotations
 
 import argparse
+import hashlib
 import json
 import os
 from pathlib import Path
@@ -10,8 +11,23 @@ import sys
 import time
 import uuid
 
+# PowerShell/CI pipe readers expect UTF-8, regardless of the Windows legacy code page.
+for stream in (sys.stdout, sys.stderr):
+    if hasattr(stream, "reconfigure"):
+        stream.reconfigure(encoding="utf-8")
+
 ROOT = Path(__file__).resolve().parents[1]
 SESSIONS = ROOT / "artifacts/sessions"
+SCENES = {"lab": "res://scenes/lab.tscn", "probe": "res://scenes/adapter_probe.tscn"}
+
+
+def source_fingerprint():
+    digest = hashlib.sha256()
+    for path in sorted((ROOT / "game").rglob("*")):
+        if path.is_file() and ".godot" not in path.parts and path.suffix not in (".uid", ".import"):
+            digest.update(path.relative_to(ROOT).as_posix().encode())
+            digest.update(path.read_bytes())
+    return digest.hexdigest()
 
 
 def godot_path() -> Path:
@@ -28,6 +44,18 @@ def atomic_json(path: Path, data):
     os.replace(temp, path)
 
 
+def read_json_retry(path: Path, timeout=2):
+    """Retry only transient Windows file-sharing failures, never resend a game command."""
+    deadline = time.monotonic() + timeout
+    while True:
+        try:
+            return json.loads(path.read_text(encoding="utf-8"))
+        except (PermissionError, FileNotFoundError):
+            if time.monotonic() >= deadline:
+                raise
+            time.sleep(0.01)
+
+
 def validate_session(value: str | Path) -> Path:
     path = Path(value).resolve()
     if path.parent != SESSIONS.resolve() or not path.is_dir():
@@ -41,10 +69,14 @@ class Client:
         self.process = process
 
     @classmethod
-    def launch(cls, rendered=True, timeout=45):
+    def launch(cls, rendered=True, timeout=45, scene="lab"):
+        if scene not in SCENES:
+            raise ValueError(f"Unknown scene: {scene}")
         session = SESSIONS / (time.strftime("%Y%m%d-%H%M%S") + "-" + uuid.uuid4().hex[:8])
         session.mkdir(parents=True)
+        atomic_json(session / "context.json", {"build_id": source_fingerprint(), "scene": scene})
         command = [str(godot_path()), "--path", str(ROOT / "game"), "--fixed-fps", "60", "--max-fps", "60", "--resolution", "1280x720", "--position", "40,40"]
+        command.extend(["--scene", SCENES[scene]])
         if not rendered:
             command.append("--headless")
         command.extend(["--", "--ai-session=" + session.as_posix()])
@@ -65,6 +97,10 @@ class Client:
         return client
 
     def call(self, command: str, timeout=30, **args):
+        if command == "sequence":
+            timeout = max(timeout, min(120, args.get("count", 12) * (args.get("interval", 5) / 60 + 0.5) + 10))
+        if (self.session / "timed-out.json").exists() and command != "quit":
+            raise RuntimeError("This session timed out; restart it before sending more commands")
         lock = self.session / ".command-lock"
         try:
             lock.mkdir()
@@ -84,9 +120,10 @@ class Client:
                 if self.process and self.process.poll() is not None:
                     raise RuntimeError("Godot exited during command")
                 if time.monotonic() > deadline:
+                    atomic_json(self.session / "timed-out.json", request)
                     raise TimeoutError(f"Timed out on {command}. See {self.session / 'engine.log'}")
                 time.sleep(0.01)
-            result = json.loads(response.read_text(encoding="utf-8"))
+            result = read_json_retry(response)
             if str(result.get("id")) != request_id:
                 raise RuntimeError("Mismatched protocol response")
             if not result["ok"]:
@@ -112,6 +149,7 @@ def main():
     subs = parser.add_subparsers(dest="mode", required=True)
     start = subs.add_parser("start")
     start.add_argument("--headless", action="store_true")
+    start.add_argument("--scene", choices=SCENES, default="lab")
     call = subs.add_parser("call")
     call.add_argument("command")
     call.add_argument("--session", required=True)
@@ -123,15 +161,19 @@ def main():
     replay = subs.add_parser("replay")
     replay.add_argument("trace", type=Path)
     replay.add_argument("--headless", action="store_true")
+    replay.add_argument("--allow-source-change", action="store_true")
     args = parser.parse_args()
     if args.mode == "start":
-        client = Client.launch(rendered=not args.headless)
+        client = Client.launch(rendered=not args.headless, scene=args.scene)
         print(json.dumps({"session": str(client.session), "ready": json.loads((client.session / "ready.json").read_text())}, ensure_ascii=False))
     elif args.mode == "call":
         payload = json.loads(args.args_file.read_text(encoding="utf-8")) if args.args_file else json.loads(args.args)
         print(json.dumps(Client(args.session).call(args.command, **payload), ensure_ascii=False, indent=2))
     elif args.mode == "replay":
-        client = Client.launch(rendered=not args.headless)
+        context = json.loads((args.trace.parent / "context.json").read_text(encoding="utf-8"))
+        if context["build_id"] != source_fingerprint() and not args.allow_source_change:
+            raise RuntimeError("Source changed. Use --allow-source-change only for intentional regression replay.")
+        client = Client.launch(rendered=not args.headless, scene=context["scene"])
         try:
             for line in args.trace.read_text(encoding="utf-8").splitlines():
                 request = json.loads(line)
