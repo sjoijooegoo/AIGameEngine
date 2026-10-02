@@ -163,6 +163,10 @@ tools/mcp_server.py        可选 MCP stdio 适配器
 
 建议移植顺序：一楼场景与角色 → 调查/背包/门锁 → 单 NPC 战斗 → 存档 → 多楼层与解谜。每加入一个系统，增加对应的成功、失败和边界场景，再进行渲染回归。
 
+## 资产管理与场景装配
+
+执行 `python tools/assets.py demo` 可注册原创 GLB/PNG 样例并搭建可玩的房间，再运行 `python tools/lab.py play --scene assembly:bank_room`。支持 GLB/glTF/FBX 与常见纹理，提供内容版本、几何/材质分析、锚点摆放、空间检查、真实引擎预览和 MCP 后台作业。完整命令、参数与第一版范围见 [资产工具链](docs/assets.md)。`python tools/asset_qa.py` 运行故障案例和真实输入测试并生成预览证据。
+
 ## 任务与验收
 
 `project/tasks.json` 保存里程碑、下一项任务、依赖、状态与完成证据。`project/acceptance.json` 保存机器检查和视觉评审的明确标准。`python tools/project.py` 会检查 ID、依赖环和缺失验收项；它是接手与验收工具，不会自行启动无限开发循环。
@@ -171,7 +175,7 @@ tools/mcp_server.py        可选 MCP stdio 适配器
 
 ## Codex 项目级 MCP 接入
 
-本地 stdio 服务已实现 `game_start`、`game_command`、`game_stop`。`capture` 会将 PNG 像素作为 MCP 图像返回，便于支持视觉工具的 AI 直接查看。服务在标准输出上只发送 JSON-RPC；退出时关闭它拥有的游戏会话。
+本地 stdio 服务提供 13 个工具：原有游戏操作，加上资产检索、导入、准备、预览、场景装配和异步作业管理。资产用法见 [资产工具链](docs/assets.md)。`capture` 会将 PNG 像素作为 MCP 图像返回，便于支持视觉工具的 AI 直接查看。服务在标准输出上只发送 JSON-RPC；退出时关闭它拥有的游戏会话。
 
 仓库已包含 `.codex/config.toml`，注册名为 `aigameengine`，启动本地 `tools/mcp_server.py`。`cwd = ".."` 相对于 `.codex/` 指向仓库根目录，不绑定 `D:\RemakeGame`，克隆到其他路径仍然可用。需要先运行 `tools/setup.ps1`，确保 `python` 在 PATH 中；可通过环境变量 `GODOT_BIN` 使用指定引擎。
 

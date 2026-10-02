@@ -59,7 +59,8 @@ class FrameworkTests(unittest.TestCase):
         results = [json.loads(line) for line in process.stdout.splitlines()]
         self.assertEqual(len(results), 5)
         self.assertEqual(results[0]["result"]["protocolVersion"], "2025-06-18")
-        self.assertEqual(len(results[1]["result"]["tools"]), 3)
+        names = {tool["name"] for tool in results[1]["result"]["tools"]}
+        self.assertTrue({"game_start", "game_command", "game_stop", "asset_ingest", "asset_prepare", "asset_search", "asset_inspect", "asset_preview", "scene_build", "scene_validate", "scene_preview", "asset_job_status", "asset_job_cancel"} <= names)
         self.assertFalse(results[3]["result"]["isError"])
         state = json.loads(results[3]["result"]["content"][0]["text"])
         self.assertAlmostEqual(state["player"]["position"][2], 3.5, places=2)

@@ -5,3 +5,7 @@ build/
 game/.godot/
 **/__pycache__/
 *.pyc
+asset_sources/
+asset_catalog/
+game/assets/library/
+game/generated/

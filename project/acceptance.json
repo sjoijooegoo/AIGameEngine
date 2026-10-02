@@ -72,6 +72,35 @@
         "walk_cycle.webp"
       ],
       "scope_note": "该样例为刚体部件动画，不包含蒙皮或真实落脚约束"
+    },
+    {
+      "id": "ASSET-IMPORT",
+      "kind": "automated",
+      "description": "真实 GLB/FBX/PNG 导入、明确转换、缺失纹理拒绝。",
+      "checks": [
+        "test_glb_png_measurements_and_cache",
+        "test_fbx_import_matches_glb_dimensions",
+        "test_explicit_scale_rotation_and_texture_role",
+        "test_missing_texture_blocks_preparation"
+      ]
+    },
+    {
+      "id": "ASSET-SPACE",
+      "kind": "automated",
+      "description": "支撑与空间检查拒绝坏配方，失败保留原场景。",
+      "checks": [
+        "test_reject_float_wall_overlap_support_and_door_sweep",
+        "test_unreachable_route_and_invalid_build_preserve_scene",
+        "test_tabletop_anchor_and_reject_cycles"
+      ]
+    },
+    {
+      "id": "ASSET-PLAY",
+      "kind": "automated",
+      "description": "装配房间通过正常输入挡门、开门并走到出口。",
+      "checks": [
+        "test_real_input_door_collision_and_exit"
+      ]
     }
   ]
 }

@@ -1,0 +1,127 @@
+{
+  "milestone": "assets-v1",
+  "date": "2026-10-02",
+  "scope": "AI-reviewed original fixtures and pipeline correctness, not user acceptance of final art or a completed game port",
+  "engine": "4.7.2.stable.official.ed1daf0bf",
+  "gpu": "NVIDIA GeForce RTX 3080",
+  "source_report_sha256": "474ccf0960e63336aeaa2224b2ab67b8c5d88557bfb8883672e5ffdc02f73348",
+  "checks": [
+    {
+      "name": "test_bad_glb_and_dependency_escape",
+      "status": "pass"
+    },
+    {
+      "name": "test_explicit_scale_rotation_and_texture_role",
+      "status": "pass"
+    },
+    {
+      "name": "test_fbx_import_matches_glb_dimensions",
+      "status": "pass"
+    },
+    {
+      "name": "test_glb_png_measurements_and_cache",
+      "status": "pass"
+    },
+    {
+      "name": "test_jobs_cancel_owned_process_and_queued_work",
+      "status": "pass"
+    },
+    {
+      "name": "test_mcp_async_prepare_and_inspect",
+      "status": "pass"
+    },
+    {
+      "name": "test_missing_texture_blocks_preparation",
+      "status": "pass"
+    },
+    {
+      "name": "test_real_input_door_collision_and_exit",
+      "status": "pass"
+    },
+    {
+      "name": "test_reject_float_wall_overlap_support_and_door_sweep",
+      "status": "pass"
+    },
+    {
+      "name": "test_tabletop_anchor_and_reject_cycles",
+      "status": "pass"
+    },
+    {
+      "name": "test_unreachable_route_and_invalid_build_preserve_scene",
+      "status": "pass"
+    }
+  ],
+  "python_tests": {
+    "passed": 24,
+    "failed": 0
+  },
+  "existing_game_regression": {
+    "passed": 53,
+    "failed": 0,
+    "check_failed": 0,
+    "visual_failed": 0,
+    "visual_passed": 19,
+    "visual_needs_review": 0
+  },
+  "release_smoke": {
+    "rendered": "pass",
+    "headless": "pass",
+    "bridge_disabled": true
+  },
+  "visual_review": {
+    "reviewer": "Codex AI",
+    "previews": [
+      {
+        "asset_id": "demo.counter",
+        "scene_id": null,
+        "preparation_key": "71b3f0199fc841bd",
+        "resource_sha256": "311c50f208bd2db3d1200ec06f83155498a83e9929d6ecb7203fa61f823ff32b",
+        "image": "project/evidence/assets-v1-demo-counter.png",
+        "sha256": "dbf4b8f36f2ffab9e62a4f9704f7bf4360b5363769a825bc7ba89650650841ae",
+        "review_note": "柜台四向结构完整，木纹绑定可见，底面落地。"
+      },
+      {
+        "asset_id": "qa.chair_fbx",
+        "scene_id": null,
+        "preparation_key": "1ea428a6f4d10c4c",
+        "resource_sha256": "5e784aa1e2c62d56780b3065e40e418ae8241be3422f0111e9906758fb4d4504",
+        "image": "project/evidence/assets-v1-qa-chair_fbx.png",
+        "sha256": "df0a4383d2c5b3ca09643f5fb912a7213cd26cfb308e89100a833de5f94d365e",
+        "review_note": "FBX椅子四向结构与GLB尺寸一致，斜光可检查背板和椅腿。"
+      },
+      {
+        "asset_id": "demo.terminal",
+        "scene_id": null,
+        "preparation_key": "ac7c80286322408e",
+        "resource_sha256": "f527ba51eeaf8aaea34cc59c94c2ef9bbdcbcde9e57dc57a7a26a646ea8de41e",
+        "image": "project/evidence/assets-v1-demo-terminal.png",
+        "sha256": "c9f163554e9ab14bb770b9d6308340d4864191585cd0f4c45006b0ccd7f5b6a4",
+        "review_note": "终端暗光四向预览现在尺寸一致；细薄表面仍有少量阴影锯齿，未作最终美术认可。"
+      },
+      {
+        "asset_id": "demo.wood",
+        "scene_id": null,
+        "preparation_key": "0698b99cdb52e4a8",
+        "resource_sha256": "dfe21f5ffb3296f60776b7e8fb2d2bb4fa90688f2fe47a35f347366846df633a",
+        "image": "project/evidence/assets-v1-demo-wood.png",
+        "sha256": "7d5d7c3d2ca541d5d9686dbce5ca05717a3155f9d799317467f198c7c8f1f5e1",
+        "review_note": "RGB及RGBA分通道可读，alpha为全不透明。"
+      },
+      {
+        "asset_id": null,
+        "scene_id": "bank_room",
+        "preparation_key": null,
+        "resource_sha256": "74a3c95aedbbd36eeb2744e8c398938d92c524953ec563b9ada34c8522c68d1f",
+        "image": "project/evidence/assets-v1-bank_room.png",
+        "sha256": "7880896793dcb7da33aa9f70c15f02bc2def718eaf9583b2edba468b82a4043b",
+        "review_note": "房间柜台、椅子、终端支撑及朝向可见，通道无道具阻挡；俯视取景保留整间房。"
+      }
+    ]
+  },
+  "limits": [
+    "Static props, one north-wall door, rectangular single-floor rooms",
+    "Conservative box collisions and 2D open-door reachability; not full3D or NPC navigation proof",
+    "Binary FBX external dependencies are not exhaustively discovered",
+    "No external-game unpacker or automated aesthetic approval"
+  ]
+}

@@ -10,6 +10,7 @@ import subprocess
 import sys
 import time
 import uuid
+import re
 
 # PowerShell/CI pipe readers expect UTF-8, regardless of the Windows legacy code page.
 for stream in (sys.stdout, sys.stderr):
@@ -63,6 +64,17 @@ def validate_session(value: str | Path) -> Path:
     return path
 
 
+def scene_resource(scene):
+    resource = SCENES.get(scene)
+    if scene.startswith("assembly:") and re.fullmatch(r"[a-z][a-z0-9_.-]{0,63}", scene[9:]) and ".." not in scene[9:]:
+        resource = "res://generated/" + scene[9:] + "/scene.tscn"
+        if not (ROOT / "game" / resource[6:]).is_file():
+            raise ValueError("Build the assembled scene first")
+    if resource is None:
+        raise ValueError(f"Unknown scene: {scene}")
+    return resource
+
+
 class Client:
     def __init__(self, session: str | Path, process=None):
         self.session = validate_session(session)
@@ -70,13 +82,12 @@ class Client:
 
     @classmethod
     def launch(cls, rendered=True, timeout=45, scene="lab"):
-        if scene not in SCENES:
-            raise ValueError(f"Unknown scene: {scene}")
+        resource = scene_resource(scene)
         session = SESSIONS / (time.strftime("%Y%m%d-%H%M%S") + "-" + uuid.uuid4().hex[:8])
         session.mkdir(parents=True)
         atomic_json(session / "context.json", {"build_id": source_fingerprint(), "scene": scene})
         command = [str(godot_path()), "--path", str(ROOT / "game"), "--fixed-fps", "60", "--max-fps", "60", "--resolution", "1280x720", "--position", "40,40"]
-        command.extend(["--scene", SCENES[scene]])
+        command.extend(["--scene", resource])
         if not rendered:
             command.append("--headless")
         command.extend(["--", "--ai-session=" + session.as_posix()])
@@ -149,13 +160,13 @@ def main():
     subs = parser.add_subparsers(dest="mode", required=True)
     start = subs.add_parser("start")
     start.add_argument("--headless", action="store_true")
-    start.add_argument("--scene", choices=SCENES, default="lab")
+    start.add_argument("--scene", default="lab", help="lab, probe, or assembly:<scene_id>")
     call = subs.add_parser("call")
     call.add_argument("command")
     call.add_argument("--session", required=True)
     call.add_argument("--args", default="{}")
     call.add_argument("--args-file", type=Path)
-    subs.add_parser("play")
+    subs.add_parser("play").add_argument("--scene", default="lab", help="lab, probe, or assembly:<scene_id>")
     subs.add_parser("editor")
     subs.add_parser("import")
     replay = subs.add_parser("replay")
@@ -188,6 +199,8 @@ def main():
             command.extend(["--headless", "--editor", "--import"])
         elif args.mode == "editor":
             command.append("--editor")
+        elif args.mode == "play":
+            command.extend(["--scene", scene_resource(args.scene)])
         sys.exit(subprocess.call(command))
 
 

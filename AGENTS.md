@@ -29,6 +29,9 @@ This repository contains an original reference (`OriginGame.html`) and a separat
 
 ## Entry points
 
+- Asset work: read `docs/assets.md`. Use `tools/assets.py` / the asset MCP tools; preserve source snapshots, explicit units/texture roles and revision references. Do not infer readiness from a queued job or aesthetic approval from a valid footprint.
+- Run `python tools/asset_qa.py` after asset pipeline changes, inspect actual contact sheets, and use real `act` input in `assembly:<scene_id>` to verify gameplay. Default release export excludes the experimental asset library and generated rooms.
+
 - `python tools/lab.py start` / `call` / `replay`: agent-driven observation and play.
 - `python tools/qa.py`: scenario regression + visual evidence + HTML/JSON report.
 - `python -m unittest discover -s tests -p "test_*.py" -v`: test the test machinery, including negative regression cases and MCP gameplay.
