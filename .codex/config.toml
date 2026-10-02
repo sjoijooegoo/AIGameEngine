@@ -1,0 +1,12 @@
+# Project-local MCP configuration. Paths resolve from this .codex directory.
+# Prerequisite: run tools/setup.ps1 and open this repository as a trusted project.
+[mcp_servers.aigameengine]
+command = "python"
+args = ["-u", "tools/mcp_server.py"]
+cwd = ".."
+env_vars = ["GODOT_BIN"]
+startup_timeout_sec = 30
+tool_timeout_sec = 120
+
+[mcp_servers.aigameengine.env]
+PYTHONUTF8 = "1"

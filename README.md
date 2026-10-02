@@ -169,11 +169,15 @@ tools/mcp_server.py        可选 MCP stdio 适配器
 
 `python tools/project.py --report <report.json>` 会生成该次运行的 `acceptance.json`。没有执行的测试是 `not_run`，没有视觉评审的是 `needs_review`，不能从测试通过推断用户美术认可。添加 `--review <review.json>` 可附上具名、说明范围、绑定报告及证据 SHA256 的视觉评审；具体格式见 [适配契约](docs/adapter-contract.md)。
 
-## 可选 MCP 接入
+## Codex 项目级 MCP 接入
 
 本地 stdio 服务已实现 `game_start`、`game_command`、`game_stop`。`capture` 会将 PNG 像素作为 MCP 图像返回，便于支持视觉工具的 AI 直接查看。服务在标准输出上只发送 JSON-RPC；退出时关闭它拥有的游戏会话。
 
-在支持 MCP 的客户端中配置以下启动信息即可，具体配置位置由客户端决定。框架没有修改全局客户端设置；当前通过 CLI 已能完成完整操作闭环。
+仓库已包含 `.codex/config.toml`，注册名为 `aigameengine`，启动本地 `tools/mcp_server.py`。`cwd = ".."` 相对于 `.codex/` 指向仓库根目录，不绑定 `D:\RemakeGame`，克隆到其他路径仍然可用。需要先运行 `tools/setup.ps1`，确保 `python` 在 PATH 中；可通过环境变量 `GODOT_BIN` 使用指定引擎。
+
+Codex 仅为已信任的项目加载项目级配置。首次打开克隆的仓库时，按客户端提示确认项目可信；如果当前会话没有显示该 MCP，重启客户端或重新打开项目，再检查 `/mcp`。本配置不修改用户级配置或权限策略。参见 [官方项目配置说明](https://developers.openai.com/codex/config-advanced/)。
+
+其他支持 MCP 的客户端可配置以下启动信息，具体配置位置由客户端决定。CLI 仍可独立使用：
 
 ```json
 {
