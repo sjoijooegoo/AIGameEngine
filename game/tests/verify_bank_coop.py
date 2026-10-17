@@ -72,12 +72,9 @@ def main():
         assert a.state()['bank_scene'] and len(server.state()['enemies'])==84
         assert len(a.state()['combat'])==2 and len(b.state()['combat'])==2
         mark('bank_session_ui_join_two',population=84);capture(a)
-        lobby_enemies=server.state()['enemies'];frames(120)
-        assert server.state()['enemies']==lobby_enemies and all(c['hp']==100 for c in server.state()['combat'].values())
-        mark('bank_lobby_world_waits')
-        (a if a.state()['leader']==aid else b).call('click',control='start_button');frames(18)
         assert server.state()['started'] and a.state()['started'] and b.state()['started']
-        mark('bank_lobby_start_ui')
+        assert a.state()['input_enabled'] and b.state()['input_enabled']
+        mark('bank_join_starts_immediately')
         before=player(server,aid)['position'];a.call('input',keys=['S']);frames(30);a.call('input');frames(12)
         distance=math.dist(before,player(server,aid)['position']);assert distance>.5,distance
         assert math.dist(player(b,aid)['target'],player(server,aid)['position'])<.1
@@ -153,7 +150,7 @@ def main():
         until(lambda:not server.state()['players'])
         for p in [a,b]:p.call('click',control='join_button')
         until(lambda:len(a.state()['players'])==2 and len(b.state()['players'])==2);frames(18)
-        assert not server.state()['started'] and sum(e['active'] for e in server.state()['enemies'])==84
+        assert server.state()['started'] and sum(e['active'] for e in server.state()['enemies'])==84
         mark('bank_empty_room_starts_fresh')
         server.close();until(lambda:'断开' in a.state()['status'],15)
         assert not a.state()['players'];mark('bank_server_loss_cleanup')

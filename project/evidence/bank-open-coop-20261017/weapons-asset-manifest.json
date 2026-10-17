@@ -1,0 +1,47 @@
+{
+  "sourceio_commit": "472e81542a6750cf3c282daac41af96a2f5d4fd3",
+  "converter_sha256": "cb9a2ea0cd40c2a90921f277e322f3805ad95c0f8bf8311398059d8e6ec37f00",
+  "units": "0.0254 metre per Source unit",
+  "rights": "local_reference_only_rights_unverified",
+  "texture_roles": [
+    "albedo (sRGB)"
+  ],
+  "weapons": {
+    "pistol": {
+      "resource": "res://coop/local_reference/pistol_world_db1e72dd84c0.glb",
+      "output_sha256": "db1e72dd84c032e91dafc1356d96e4e1ec2e270534763d51c075d01c939bcd25",
+      "source": "models/w_models/weapons/w_pistol_a.mdl",
+      "attach_bone": "ValveBiped.weapon_bone",
+      "muzzle_in_bone": [
+        0.0,
+        0.0476758,
+        0.1707388
+      ],
+      "bones": [
+        "ValveBiped.weapon_bone",
+        "ValveBiped.weapon_bone_Clip",
+        "ValveBiped.weapon_bone_Clip_Bullets",
+        "ValveBiped.weapon_bolt"
+      ],
+      "polygons": 3002
+    },
+    "shotgun": {
+      "resource": "res://coop/local_reference/shotgun_world_663866d26295.glb",
+      "output_sha256": "663866d2629562e8ad1fddfe9087f312fc15b66a0ef85d1d18680945f304f83a",
+      "source": "models/w_models/weapons/w_pumpshotgun_a.mdl",
+      "attach_bone": "ValveBiped.weapon_bone",
+      "muzzle_in_bone": [
+        0.0126746,
+        0.085471,
+        0.781304
+      ],
+      "bones": [
+        "ValveBiped.weapon_bone",
+        "ValveBiped.weapon_bone_Clip"
+      ],
+      "polygons": 3228
+    }
+  },
+  "source_manifest": "D:\\AIGameEngine\\outerasset\\source-snapshots\\coop-world-weapons-v1\\manifest.json",
+  "source_preserved": true
+}

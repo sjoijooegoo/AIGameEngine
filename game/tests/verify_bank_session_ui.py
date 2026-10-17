@@ -31,7 +31,7 @@ def main():
         until(lambda:len(a.state()['players'])==2 and len(b.state()['players'])==2,30)
         for p in peers:p.call('step',frames=3)
         if args.rendered:captures.append(a.call('capture')['capture'])
-        a.call('click',control='start_button');until(lambda:a.state()['started'] and b.state()['started'])
+        until(lambda:a.state()['started'] and b.state()['started'])
         b.call('input',keys=['S']);before=b.state()['players']
         with ThreadPoolExecutor(max_workers=2) as pool:
             for _ in range(12):

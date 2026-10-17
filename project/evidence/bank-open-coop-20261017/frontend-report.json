@@ -1,0 +1,51 @@
+{
+  "checks": [
+    {
+      "name": "frontend_lightweight_and_validation",
+      "status": "pass",
+      "bank_nodes": 0,
+      "bank_resource_cached": false
+    },
+    {
+      "name": "frontend_solo_spawn_bake_and_return",
+      "status": "pass",
+      "active_enemies": 77,
+      "baked_meshes": 481,
+      "real_movement": true
+    },
+    {
+      "name": "frontend_failure_returns_with_fields",
+      "status": "pass",
+      "message": "连接超时"
+    },
+    {
+      "name": "frontend_one_player_enters_without_waiting",
+      "status": "pass"
+    },
+    {
+      "name": "frontend_two_clients_create_join_and_start",
+      "status": "pass",
+      "server_pid": 27412,
+      "players": 2,
+      "real_movement": true
+    },
+    {
+      "name": "frontend_leave_cleans_owned_server",
+      "status": "pass",
+      "remote_return": true
+    },
+    {
+      "name": "frontend_cancel_connection",
+      "status": "pass"
+    }
+  ],
+  "captures": [
+    "D:/AIGameEngine/logs/sessions/bank-frontend-20261017-163527/alpha/01-main-menu.png",
+    "D:/AIGameEngine/logs/sessions/bank-frontend-20261017-163527/alpha/02-server-join.png",
+    "D:/AIGameEngine/logs/sessions/bank-frontend-20261017-163527/alpha/03-single-spawn.png",
+    "D:/AIGameEngine/logs/sessions/bank-frontend-20261017-163527/alpha/04-connection-failed.png",
+    "D:/AIGameEngine/logs/sessions/bank-frontend-20261017-163527/alpha/05-create-session.png",
+    "D:/AIGameEngine/logs/sessions/bank-frontend-20261017-163527/alpha/06-two-player-lobby.png",
+    "D:/AIGameEngine/logs/sessions/bank-frontend-20261017-163527/bravo/07-coop-entered.png"
+  ]
+}

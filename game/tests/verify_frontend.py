@@ -53,6 +53,7 @@ def main():
         s=a.state();assert s['scene']=='MainMenu' and s['bank_nodes']==0 and not s['bank_cached'],s
         capture(a,'01-main-menu');a.call('click',control='multiplayer');s=page(a,'multiplayer')
         assert s['bank_nodes']==0 and not s['bank_cached'];capture(a,'02-server-join')
+        a.call('click',control='join_tab')
         a.call('fields',values={'nickname':'Alpha','address':'','port':'24567'});a.call('click',control='connect')
         s=a.state();assert s['message'] and s['bank_nodes']==0
         a.call('fields',values={'address':'127.0.0.1','port':'0'});a.call('click',control='connect');assert a.state()['message']
@@ -66,23 +67,22 @@ def main():
         a.call('step',frames=300);assert a.state()['hp']==100
         a.call('act',keys=['Escape']);a.call('click',control='to_title');s=page(a,'home');assert s['bank_nodes']==0
         mark('frontend_solo_spawn_bake_and_return',active_enemies=77,baked_meshes=481,real_movement=True)
-        a.call('click',control='multiplayer');a.call('fields',values={'nickname':'Alpha','address':'127.0.0.1','port':str(port())})
+        a.call('click',control='multiplayer');a.call('click',control='join_tab');a.call('fields',values={'nickname':'Alpha','address':'127.0.0.1','port':str(port())})
         a.call('click',control='connect');bank(a)
         until(lambda:a.call('step',frames=60)['state']['scene']=='MainMenu',40)
         s=page(a,'multiplayer');assert s['message'] and s['controls']['nickname']['text']=='Alpha' and s['bank_nodes']==0
         capture(a,'04-connection-failed');mark('frontend_failure_returns_with_fields',message=s['message'])
         p=port();a.call('click',control='create_tab');a.call('fields',values={'port':str(p)})
         capture(a,'05-create-session');a.call('click',control='connect');bank(a);s=connected(a,1)
-        assert not s['started'] and s['controls']['start_button']['disabled'];server_pid=s['server_pid']
+        until(lambda:spin(a)['started'] and a.state()['input_enabled']);server_pid=s['server_pid']
+        mark('frontend_one_player_enters_without_waiting')
         b=FrontendPeer(folder/'bravo',args.rendered);peers.append(b)
-        b.call('click',control='multiplayer');b.call('fields',values={'nickname':'Bravo','address':'127.0.0.1','port':str(p)})
+        b.call('click',control='multiplayer');b.call('click',control='join_tab');b.call('fields',values={'nickname':'Bravo','address':'127.0.0.1','port':str(p)})
         b.call('click',control='connect');bank(b);connected(b,2);s=connected(a,2);capture(a,'06-two-player-lobby')
-        assert not s['controls']['start_button']['disabled'] and b.state()['controls']['start_button']['disabled']
+        assert s['started'] and b.state()['started']
         for value in s['controls'].values():
             if value['visible']:
                 x,y,w,h=value['rect'];assert min(x,y)>=0 and x+w<=1281 and y+h<=721,value
-        a.call('act',keys=['Escape']);assert not a.state()['input_enabled'],'Escape must not bypass the lobby'
-        a.call('click',control='start_button');until(lambda:spin(a)['started'] and spin(b)['started'],15)
         before=a.state()['position'];a.call('act',keys=['W'],frames=45);spin(b);s=a.state();assert math.dist(before,s['position'])>.6
         assert b.state()['input_enabled'];capture(b,'07-coop-entered')
         mark('frontend_two_clients_create_join_and_start',server_pid=server_pid,players=2,real_movement=True)
@@ -93,7 +93,7 @@ def main():
         mark('frontend_leave_cleans_owned_server',remote_return=True)
         # Cancellation during connection is a native UI action, then another join
         # confirms scene lifetime and MultiplayerAPI subscriptions are reusable.
-        b.call('fields',values={'port':str(port())});b.call('click',control='connect');bank(b)
+        b.call('click',control='join_tab');b.call('fields',values={'port':str(port())});b.call('click',control='connect');bank(b)
         b.call('click',control='back_button');s=page(b,'multiplayer');assert s['bank_nodes']==0
         mark('frontend_cancel_connection')
         for peer in peers:

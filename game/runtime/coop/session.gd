@@ -76,6 +76,7 @@ func start_server(port: int, limit: int=4) -> Error:
 
 func join_game(address: String, port: int, label: String) -> Error:
 	if address.strip_edges().is_empty() or port<1024 or port>65535:return ERR_INVALID_PARAMETER
+	if address.strip_edges().to_lower()=="localhost":address="127.0.0.1"
 	disconnect_game("")
 	player_name=label.strip_edges().substr(0,24)
 	if player_name.is_empty():player_name="玩家"

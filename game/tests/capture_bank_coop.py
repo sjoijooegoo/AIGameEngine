@@ -23,7 +23,7 @@ def main():
             for _ in range(count//3):
                 for c in [a,b]:c.call('step',frames=3)
                 server.call('step',frames=3)
-        step(12);a.call('click',control='start_button');step(12)
+        step(24);assert a.state()['started'] and b.state()['started']
         server.call('fixture',name='firearms_range');step(12);a.call('input',keys=['W'])
         aid=a.state()['local_id']
         for _ in range(10):

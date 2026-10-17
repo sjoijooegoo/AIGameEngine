@@ -1,0 +1,50 @@
+{
+  "checks": [
+    {
+      "name": "wsl_localhost_discovery_empty",
+      "status": "pass"
+    },
+    {
+      "name": "wsl_first_player_enters_and_moves",
+      "status": "pass"
+    },
+    {
+      "name": "wsl_localhost_four_independent_peers",
+      "status": "pass"
+    },
+    {
+      "name": "wsl_rejects_fifth_peer",
+      "status": "pass"
+    },
+    {
+      "name": "wsl_native_browse_join_and_leave",
+      "status": "pass"
+    },
+    {
+      "name": "wsl_persistent_service_survives_all_clients_leaving",
+      "status": "pass"
+    }
+  ],
+  "captures": [
+    "D:/AIGameEngine/logs/sessions/bank-local-wsl-20261017-173235/browser/wsl-localhost-0-of-4.png",
+    "D:/AIGameEngine/logs/sessions/bank-local-wsl-20261017-173235/browser/wsl-localhost-4-of-4.png",
+    "D:/AIGameEngine/logs/sessions/bank-local-wsl-20261017-173235/browser/wsl-browse-join.png",
+    "D:/AIGameEngine/logs/sessions/bank-local-wsl-20261017-173235/browser/wsl-stays-online-after-leave.png"
+  ],
+  "installed_server": {
+    "distro": "Ubuntu",
+    "port": 24567,
+    "sha256": "c61c841258f3b48f83acc36c6ec89f2fcb0788af2433460209c34eb4a1cb69c9",
+    "linux_executable": "/home/song/.local/share/aigameengine-bank/c61c841258f3b48f/bank-server",
+    "package": "D:\\AIGameEngine\\build\\bank\\combat-coop\\20261017-172326\\linux\\package"
+  },
+  "local_status_after": {
+    "build": "bank-combat-v3",
+    "capacity": 4,
+    "magic": "BANK_STATUS_1",
+    "name": "Local WSL Bank",
+    "nonce": "1f1364b8f43d423a8e9ff59bb7b17568",
+    "players": 0,
+    "port": 24567
+  }
+}

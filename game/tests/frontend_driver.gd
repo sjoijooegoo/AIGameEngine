@@ -35,7 +35,10 @@ func inspect() -> Dictionary:
 	if current_scene==null:return result
 	result.scene=current_scene.name
 	var items: Dictionary={}
-	if current_scene is Control:items=current_scene.controls
+	if current_scene is Control:
+		items=current_scene.controls
+		result.discovery=current_scene.browser.rows;result.connection_mode=current_scene.connection_mode
+		result.connection_fields=flow.fields
 	else:
 		var world=current_scene
 		result.lighting=world.indirect_stats;result.ui=world.ui.mode;result.hp=world.player_hp
@@ -49,6 +52,7 @@ func inspect() -> Dictionary:
 	for id in items:
 		var node: Control=items[id];var rect:=node.get_global_rect()
 		result.controls[id]={"rect":[rect.position.x,rect.position.y,rect.size.x,rect.size.y],"visible":node.is_visible_in_tree(),"disabled":node.disabled if node is BaseButton else false,"text":node.text if node is Label or node is Button or node is LineEdit else ""}
+		if node.has_meta("server_id"):result.controls[id].server_id=node.get_meta("server_id")
 	return result
 
 func execute(request: Dictionary) -> void:

@@ -577,6 +577,68 @@
         "gallery.html",
         "technical-review.json"
       ]
+    },
+    {
+      "id": "BANK-COOP-OPEN",
+      "kind": "automated",
+      "description": "Native gun bones/actions, server discovery and hard capacity, immediate entry, persistent local WSL service, release and affected bank combat checks.",
+      "checks": [
+        "teammate_native_pistol_grip_aim_walk_run",
+        "teammate_pistol_reload_and_fire",
+        "teammate_native_shotgun_grip_walk_fire_reload",
+        "teammate_weapon_switch_hides_stowed_gun",
+        "discovery_empty_server_without_player_slot",
+        "discovery_native_find_ui_no_scene_load",
+        "open_server_first_player_moves_immediately",
+        "open_server_hard_four_player_limit",
+        "open_server_browse_join_freed_slot",
+        "open_server_disconnect_cleanup",
+        "wsl_localhost_discovery_empty",
+        "wsl_first_player_enters_and_moves",
+        "wsl_localhost_four_independent_peers",
+        "wsl_rejects_fifth_peer",
+        "wsl_native_browse_join_and_leave",
+        "wsl_persistent_service_survives_all_clients_leaving",
+        "frontend_lightweight_and_validation",
+        "frontend_solo_spawn_bake_and_return",
+        "frontend_failure_returns_with_fields",
+        "frontend_one_player_enters_without_waiting",
+        "frontend_two_clients_create_join_and_start",
+        "frontend_leave_cleans_owned_server",
+        "frontend_cancel_connection",
+        "frontend_native_keyboard_navigation",
+        "frontend_layout_1280x720",
+        "frontend_layout_800x600",
+        "frontend_layout_2560x1080",
+        "bank_session_ui_join_two",
+        "bank_join_starts_immediately",
+        "bank_team_movement",
+        "bank_shared_damage_and_separate_ammo",
+        "bank_shared_kill_and_corpse",
+        "bank_server_reload",
+        "bank_local_menu_does_not_pause",
+        "bank_wall_blocks_shot",
+        "bank_shared_door_and_crossing",
+        "bank_teammate_rescues_grab",
+        "bank_server_infected_damage",
+        "bank_team_wipe_restart",
+        "bank_late_join_existing_world",
+        "bank_empty_room_starts_fresh",
+        "bank_server_loss_cleanup",
+        "bank_release_starts_menu_without_world",
+        "bank_release_two_clients",
+        "bank_release_debug_bridge_disabled",
+        "bank_release_bake_loaded"
+      ]
+    },
+    {
+      "id": "BANK-COOP-OPEN-ART",
+      "kind": "review",
+      "description": "World weapon pose sequences and live browser captures. Final user art approval pending.",
+      "evidence": [
+        "gallery.html",
+        "technical-review.json"
+      ]
     }
   ]
 }

@@ -31,9 +31,8 @@ def main():
             clients.append(BankPeer(folder/name,['--connect='+host,'--port=24751','--name='+name,'--real-time']))
         until(lambda:all(len(c.state()['combat'])==4 for c in clients),30)
         first=clients[0];aid=first.state()['local_id']
-        assert all(c['hp']==100 for c in first.state()['combat'].values()),'Lobby must not run combat'
         assert first.state()['leader']==aid
-        first.call('click',control='start_button');until(lambda:all(c.state()['started'] for c in clients))
+        until(lambda:all(c.state()['started'] for c in clients))
         def row(client):return next(p for p in client.state()['players'] if p['id']==aid)
         before=row(first)['position'];first.call('input',keys=['S']);time.sleep(.7);first.call('input');time.sleep(.5)
         after=row(first)['position'];distance=math.dist(before,after);assert 1.3<distance<3.1,(before,after,distance)

@@ -1,0 +1,43 @@
+{
+  "reviewer": "Codex technical review",
+  "user_art_approval": false,
+  "report_sha256": "f305e18b5b66c3f64b9e7e3d5c8be9aa513263de1edc428e9182420f8a4541de",
+  "scope": "Real bank input-driven skeletal weapon poses and discovery UI; no aesthetic baseline promotion.",
+  "reviewed": {
+    "pistol_walk.contact.jpg": "043d71d0facccffa61a1b58ec676ec47b49c9f32e153b528da6b9f3b2e5d6f9c",
+    "pistol_run.contact.jpg": "b0c31c59e55a44a7ae4f1f157bdab0c2f734d9ee1536166d699f68f4f3499ddf",
+    "pistol_fire.contact.jpg": "dae5842252e553293e9bf2d85ff09457bee1112ffbbb32d2ffe6ce5b7eaff763",
+    "pistol_reload.contact.jpg": "7feccde30747abc3979a1a6171b4c38d77839dacc9c229feb56bc46009374f76",
+    "shotgun_walk.contact.jpg": "3edd19d2bc92a70a2ceea8395d53534af806c27d400f6d9e7eb8386488f2e81d",
+    "shotgun_fire.contact.jpg": "1e7b8ea0a50f3cca76372b93831865c07f244bd2beb73b14d40e93aeb71a5d65",
+    "shotgun_reload.contact.jpg": "dc6be54986b3fe3b17350bc6275817a8ea253c62f385d9c2bfebd2a2263d3544",
+    "weapon-view-1.png": "1272f70bd75ac66c19727d221bc6ab0cba9147c6b7737166376fbec153fe7798",
+    "weapon-view-2.png": "fc81f47820f28d9dd3f550c14d60fe2b5542d41fb053b03e7fc9407a1ffd5167",
+    "weapon-view-3.png": "0e0fd8d4e74219b56bd10320dfe73f5b0365b2a074c9b8dce1697714e81b78d6",
+    "weapon-view-4.png": "9e458f56cd43be8e9536b03ecf85422b84f24dc76008c5c124196b1d97216b3e",
+    "empty-0-of-4.png": "8bb0a4e4d827950403a37ed9f07d6e97e06b2f7c394911053159af8e95e6b031",
+    "full-4-of-4.png": "2a7bbcd6ba022275406cfc636e6dcb75e3c72660eaef7e0f5a20d3eb303e1fdb",
+    "wsl-localhost-0-of-4.png": "ce7aa6f61163410e10ee206598e8abf668d14d021851475e853391a98e147665",
+    "wsl-localhost-4-of-4.png": "d15aa37e41d6b249e7c682df5c84363dad0af72dddc3f8ded1f1723832b3c4f3",
+    "wsl-browse-join.png": "ba93255dd04a47d46964fc54db13e2600da9f8a2377aa01df928e8b6e1f7c886",
+    "wsl-stays-online-after-leave.png": "4476fa3ecf18948edb78883ac73038f3a40c26b4023af82f58e697bd036bd373",
+    "multiplayer-1280x720.png": "74654262cff27d958dbf7f57362151d87dafebbee99320339bbfa5ecc9df2186",
+    "multiplayer-2560x1080.png": "0ab8ca8076487d693acde9108a0fe902083a09f4ec717466776771bba857a8dd",
+    "multiplayer-800x600.png": "859c36da95af8c35f91305232b8e4537fc8267cb58652151829021ffb75122b7",
+    "pistol_walk.webp": "0f52eab903678af92148705e94961aabb156e718d8d99388cce7ba8ecb8b33ad",
+    "pistol_run.webp": "1565fbb41e876acf54dac1eff8aeac5de13fb7ef4893c1320d7a05002df5b3ac",
+    "pistol_fire.webp": "4c73ba9b957797a53eae2aa4cc23b4c844f38bbec50b0a2c71984e8f32234cb7",
+    "pistol_reload.webp": "eee49c13a9658a1a1fe71089e7032f47c497a80b4a9639d0126462d3b2bb7e29",
+    "shotgun_walk.webp": "f6d2bbae2fc58fe0b6f7aacfed813afb66e20bebd3c41eef68de60d433d6c928",
+    "shotgun_fire.webp": "a02d63cfcd803779bba988cf0e9a8ae46b194fc1e656c9f019216c58680ee5c4",
+    "shotgun_reload.webp": "64f68caa3f91b77f61eb824eddd7dfe2c12dffe12127e62098bed201ec334a90",
+    "review-contact.jpg": "ee951a7ce869c3743a854c60a0d2c02ec3970a891be0f108423017840b9a8f5d"
+  },
+  "observations": [
+    "Pistol and pump-shotgun Source world meshes follow corresponding survivor weapon, clip and bolt bones.",
+    "Standing/walking/running, pitched aim, muzzle flash and upper-body reload sequences use normal replicated weapon actions and manual animation advancement.",
+    "Inspection camera was moved back inside the current bank parking bounds after the first capture route crossed a wall; failed images retained.",
+    "Live browser 0/4 and 4/4 states inspected, including native disabled Join; no player slot consumed by discovery.",
+    "WSL release service and per-client loopback UDP relay survive all four clients leaving, returning to 0/4."
+  ]
+}

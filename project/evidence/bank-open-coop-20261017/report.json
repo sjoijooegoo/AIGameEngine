@@ -1,0 +1,334 @@
+{
+  "scope": "Current bank native world weapons, live server browser, immediate entry and persistent WSL localhost forwarding. No legacy QA.",
+  "passed": true,
+  "checks": [
+    {
+      "name": "teammate_native_pistol_grip_aim_walk_run",
+      "status": "pass",
+      "muzzle_height": [
+        1.49923014640808,
+        1.73448622226715,
+        1.2133355140686
+      ],
+      "evidence": "weapons-report.json"
+    },
+    {
+      "name": "teammate_pistol_reload_and_fire",
+      "status": "pass",
+      "evidence": "weapons-report.json"
+    },
+    {
+      "name": "teammate_native_shotgun_grip_walk_fire_reload",
+      "status": "pass",
+      "evidence": "weapons-report.json"
+    },
+    {
+      "name": "teammate_weapon_switch_hides_stowed_gun",
+      "status": "pass",
+      "evidence": "weapons-report.json"
+    },
+    {
+      "name": "discovery_empty_server_without_player_slot",
+      "status": "pass",
+      "info": {
+        "build": "bank-combat-v3",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "银行合作服务器",
+        "nonce": "3e54d943b82341ea8d967c96a5998021",
+        "players": 0,
+        "port": 21653
+      },
+      "evidence": "discovery-report.json"
+    },
+    {
+      "name": "discovery_native_find_ui_no_scene_load",
+      "status": "pass",
+      "evidence": "discovery-report.json"
+    },
+    {
+      "name": "open_server_first_player_moves_immediately",
+      "status": "pass",
+      "evidence": "discovery-report.json"
+    },
+    {
+      "name": "open_server_hard_four_player_limit",
+      "status": "pass",
+      "server_message": "房间已满",
+      "ui_disabled": true,
+      "evidence": "discovery-report.json"
+    },
+    {
+      "name": "open_server_browse_join_freed_slot",
+      "status": "pass",
+      "evidence": "discovery-report.json"
+    },
+    {
+      "name": "open_server_disconnect_cleanup",
+      "status": "pass",
+      "evidence": "discovery-report.json"
+    },
+    {
+      "name": "wsl_localhost_discovery_empty",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    },
+    {
+      "name": "wsl_first_player_enters_and_moves",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    },
+    {
+      "name": "wsl_localhost_four_independent_peers",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    },
+    {
+      "name": "wsl_rejects_fifth_peer",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    },
+    {
+      "name": "wsl_native_browse_join_and_leave",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    },
+    {
+      "name": "wsl_persistent_service_survives_all_clients_leaving",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    },
+    {
+      "name": "frontend_lightweight_and_validation",
+      "status": "pass",
+      "bank_nodes": 0,
+      "bank_resource_cached": false,
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_solo_spawn_bake_and_return",
+      "status": "pass",
+      "active_enemies": 77,
+      "baked_meshes": 481,
+      "real_movement": true,
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_failure_returns_with_fields",
+      "status": "pass",
+      "message": "连接超时",
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_one_player_enters_without_waiting",
+      "status": "pass",
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_two_clients_create_join_and_start",
+      "status": "pass",
+      "server_pid": 27412,
+      "players": 2,
+      "real_movement": true,
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_leave_cleans_owned_server",
+      "status": "pass",
+      "remote_return": true,
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_cancel_connection",
+      "status": "pass",
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_native_keyboard_navigation",
+      "status": "pass",
+      "evidence": "layout-report.json"
+    },
+    {
+      "name": "frontend_layout_1280x720",
+      "status": "pass",
+      "evidence": "layout-report.json"
+    },
+    {
+      "name": "frontend_layout_800x600",
+      "status": "pass",
+      "evidence": "layout-report.json"
+    },
+    {
+      "name": "frontend_layout_2560x1080",
+      "status": "pass",
+      "evidence": "layout-report.json"
+    },
+    {
+      "name": "bank_session_ui_join_two",
+      "status": "pass",
+      "population": 84,
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_join_starts_immediately",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_team_movement",
+      "status": "pass",
+      "distance": 1.3999549013850892,
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_shared_damage_and_separate_ammo",
+      "status": "pass",
+      "hp": [
+        65.0,
+        51.0,
+        37.0
+      ],
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_shared_kill_and_corpse",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_server_reload",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_local_menu_does_not_pause",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_wall_blocks_shot",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_shared_door_and_crossing",
+      "status": "pass",
+      "before": [
+        24.1499996185303,
+        -0.019309900701046,
+        6.75
+      ],
+      "after": [
+        26.5300216674805,
+        -0.0190932974219322,
+        6.75
+      ],
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_teammate_rescues_grab",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_server_infected_damage",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_team_wipe_restart",
+      "status": "pass",
+      "fixture": "both players start with 5 HP; normal enemy attacks",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_late_join_existing_world",
+      "status": "pass",
+      "enemy_hp": 65.0,
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_empty_room_starts_fresh",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_server_loss_cleanup",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_release_starts_menu_without_world",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_two_clients",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_debug_bridge_disabled",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_bake_loaded",
+      "status": "pass",
+      "evidence": "release-report.json"
+    }
+  ],
+  "sources": {
+    "weapons": "bank-armed-teammate-20261017-172326",
+    "discovery": "bank-open-server-20261017-175012",
+    "wsl": "bank-local-wsl-20261017-173235",
+    "frontend": "bank-frontend-20261017-163527",
+    "layout": "bank-frontend-layout-20261017-165309",
+    "combat": "bank-combat-coop-20261017-165309",
+    "release": "bank-coop-release-20261017-173224"
+  },
+  "animations": [
+    "pistol_walk.webp",
+    "pistol_run.webp",
+    "pistol_fire.webp",
+    "pistol_reload.webp",
+    "shotgun_walk.webp",
+    "shotgun_fire.webp",
+    "shotgun_reload.webp"
+  ],
+  "captures": [
+    "pistol_walk.contact.jpg",
+    "pistol_run.contact.jpg",
+    "pistol_fire.contact.jpg",
+    "pistol_reload.contact.jpg",
+    "shotgun_walk.contact.jpg",
+    "shotgun_fire.contact.jpg",
+    "shotgun_reload.contact.jpg",
+    "weapon-view-1.png",
+    "weapon-view-2.png",
+    "weapon-view-3.png",
+    "weapon-view-4.png",
+    "empty-0-of-4.png",
+    "full-4-of-4.png",
+    "wsl-localhost-0-of-4.png",
+    "wsl-localhost-4-of-4.png",
+    "wsl-browse-join.png",
+    "wsl-stays-online-after-leave.png",
+    "multiplayer-1280x720.png",
+    "multiplayer-2560x1080.png",
+    "multiplayer-800x600.png"
+  ],
+  "build": "build/bank/combat-coop/20261017-172326",
+  "limitations": [
+    "Final user art acceptance remains pending.",
+    "Windows login shortcut configured and inspected; no forced Windows reboot/login was performed.",
+    "No real VPS/WAN capacity or latency claim.",
+    "Third-person torch and baton models remain outside this gun-model change."
+  ],
+  "failed_attempts_preserved": [
+    "logs/sessions/bank-open-server-20261017-155519",
+    "logs/sessions/bank-open-server-20261017-162441",
+    "logs/sessions/bank-open-server-20261017-163321",
+    "logs/sessions/bank-local-wsl-20261017-170128"
+  ]
+}

@@ -1,0 +1,15 @@
+# AIGameEngine managed local development service
+[Unit]
+Description=AIGameEngine local bank co-op server
+After=network.target
+[Service]
+Type=simple
+User=song
+WorkingDirectory=/home/song/.local/share/aigameengine-bank/c61c841258f3b48f
+ExecStart=/home/song/.local/share/aigameengine-bank/c61c841258f3b48f/bank-server --headless --max-fps 60 -- --server --port=24567 --max-players=4 "--server-name=Local WSL Bank"
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+[Install]
+WantedBy=multi-user.target

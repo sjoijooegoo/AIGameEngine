@@ -1,0 +1,43 @@
+{
+  "checks": [
+    {
+      "name": "discovery_empty_server_without_player_slot",
+      "status": "pass",
+      "info": {
+        "build": "bank-combat-v3",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "银行合作服务器",
+        "nonce": "3e54d943b82341ea8d967c96a5998021",
+        "players": 0,
+        "port": 21653
+      }
+    },
+    {
+      "name": "discovery_native_find_ui_no_scene_load",
+      "status": "pass"
+    },
+    {
+      "name": "open_server_first_player_moves_immediately",
+      "status": "pass"
+    },
+    {
+      "name": "open_server_hard_four_player_limit",
+      "status": "pass",
+      "server_message": "房间已满",
+      "ui_disabled": true
+    },
+    {
+      "name": "open_server_browse_join_freed_slot",
+      "status": "pass"
+    },
+    {
+      "name": "open_server_disconnect_cleanup",
+      "status": "pass"
+    }
+  ],
+  "captures": [
+    "D:/AIGameEngine/logs/sessions/bank-open-server-20261017-175012/browser/empty-0-of-4.png",
+    "D:/AIGameEngine/logs/sessions/bank-open-server-20261017-175012/browser/full-4-of-4.png"
+  ]
+}

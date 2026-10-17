@@ -1,0 +1,19 @@
+{
+  "service": "active",
+  "localhost": {
+    "build": "bank-combat-v3",
+    "capacity": 4,
+    "magic": "BANK_STATUS_1",
+    "name": "Local WSL Bank",
+    "nonce": "08524d8bf05d479ca93b30d6b8454335",
+    "players": 0,
+    "port": 24567
+  },
+  "config": {
+    "distro": "Ubuntu",
+    "port": 24567,
+    "sha256": "c61c841258f3b48f83acc36c6ec89f2fcb0788af2433460209c34eb4a1cb69c9",
+    "linux_executable": "/home/song/.local/share/aigameengine-bank/c61c841258f3b48f/bank-server",
+    "package": "D:\\AIGameEngine\\build\\bank\\combat-coop\\20261017-172326\\linux\\package"
+  }
+}

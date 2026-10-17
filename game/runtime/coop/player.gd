@@ -49,7 +49,7 @@ func present(dt: float, local: bool) -> void:
 	rotation.y=lerp_angle(rotation.y,target_yaw,1.0-exp(-18.0*dt))
 	if avatar:
 		avatar.visible=not local
-		avatar.advance(dt,motion,Vector2(velocity.x,velocity.z).length())
+		avatar.advance(dt,motion,Vector2(velocity.x,velocity.z).length(),aim_pitch)
 
 func observe() -> Dictionary:
 	return {"id":peer_id,"slot":slot,"name":display_name,"position":[position.x,position.y,position.z],"target":[target_position.x,target_position.y,target_position.z],"yaw":rotation.y,"motion":motion,"ack":last_sequence,"avatar":avatar.observe() if avatar else {}}

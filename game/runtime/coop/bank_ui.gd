@@ -9,7 +9,6 @@ var menu: PanelContainer
 var status_label: Label
 var members: Label
 var join_button: Button
-var start_button: Button
 var create_button: Button
 var leave_button: Button
 var resume_button: Button
@@ -27,7 +26,7 @@ func _ready() -> void:
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);mouse_filter=Control.MOUSE_FILTER_IGNORE
 	lobby_backdrop=ColorRect.new();lobby_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);lobby_backdrop.color=Color("09100e");add_child(lobby_backdrop)
 	var backdrop_material:=ShaderMaterial.new();backdrop_material.shader=preload("res://frontend/background.gdshader");lobby_backdrop.material=backdrop_material
-	lobby_header=Label.new();lobby_header.text="BANK CRISIS   /   02  等待队友";lobby_header.position=Vector2(60,36);lobby_header.add_theme_color_override("font_color",S.BRASS);lobby_header.add_theme_font_size_override("font_size",14);add_child(lobby_header)
+	lobby_header=Label.new();lobby_header.text="BANK CRISIS   /   正在进入服务器";lobby_header.position=Vector2(60,36);lobby_header.add_theme_color_override("font_color",S.BRASS);lobby_header.add_theme_font_size_override("font_size",14);add_child(lobby_header)
 	team_hud=Label.new();team_hud.position=Vector2(20,155);team_hud.add_theme_font_size_override("font_size",16);add_child(team_hud)
 	menu=PanelContainer.new();menu.set_anchors_and_offsets_preset(Control.PRESET_CENTER);menu.position=Vector2(-280,-300);menu.custom_minimum_size=Vector2(560,600);add_child(menu)
 	var background:=StyleBoxFlat.new();background.bg_color=Color("101b20f5");background.border_color=S.BRASS
@@ -47,7 +46,6 @@ func _ready() -> void:
 	create_button=button(box,"create_button","创建本地会话",func():game.create_session(int(port.value),capacity.get_selected_id(),nickname.text))
 	join_button=button(box,"join_button","加入指定服务器",func():game.join_game(address.text,int(port.value),nickname.text))
 	members=Label.new();members.add_theme_font_size_override("font_size",16);box.add_child(members)
-	start_button=button(box,"start_button","开始合作行动（至少 2 人）",func():game.send_action("start",true))
 	resume_button=button(box,"resume_button","继续行动",func():game.resume())
 	restart_button=button(box,"restart_button","全队重新开始",func():game.send_action("restart",true))
 	leave_button=button(box,"leave_button","离开会话",func():game.leave_session())
@@ -62,10 +60,10 @@ func refresh() -> void:
 	visible=game.active;menu.visible=not game.input_enabled
 	lobby_backdrop.visible=game.frontend_managed and not game.started
 	lobby_header.visible=lobby_backdrop.visible
-	status_label.text=("等待队友 · 房主点击开始，至少 2 人" if game.players.has(game.local_id) and not game.started else game.status)
+	status_label.text="正在同步银行场景…" if game.players.has(game.local_id) and not game.started else game.status
 	var connected: bool=game.players.has(game.local_id)
 	endpoint_label.visible=connected and not game.started
-	endpoint_label.text="%s : %d   /   %d–%d 人行动" % [address.text,int(port.value),2,game.max_players]
+	endpoint_label.text="%s : %d   /   %d/%d 人" % [address.text,int(port.value),game.players.size(),game.max_players]
 	if game.frontend_managed:
 		var height: float=440 if connected else 340
 		menu.custom_minimum_size=Vector2(560,height);menu.size=Vector2(560,height)
@@ -73,8 +71,6 @@ func refresh() -> void:
 	connection_fields.visible=not connected and not game.frontend_managed
 	create_button.visible=connection_fields.visible;join_button.visible=connection_fields.visible
 	create_button.disabled=game.peer!=null or game.launching;join_button.disabled=create_button.disabled
-	start_button.visible=connected and not game.started
-	start_button.disabled=game.players.size()<2 or game.local_id!=game.leader
 	resume_button.visible=connected and game.started;leave_button.visible=game.peer!=null or game.launching
 	back_button.visible=not connected
 	back_button.text="取消并返回连接页面" if game.frontend_managed else "返回单人模式"

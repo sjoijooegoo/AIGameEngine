@@ -473,6 +473,25 @@
         "docs/bank-coop-combat.md"
       ],
       "notes": "37 项技术检查通过；最终美术验收和真实 VPS/WAN 仍待用户完成。"
+    },
+    {
+      "id": "BANK-COOP-003",
+      "title": "世界武器、寻找服务器、随时加入与常驻 WSL 服务",
+      "status": "done",
+      "depends_on": [
+        "BANK-ENTRY-001"
+      ],
+      "acceptance": [
+        "BANK-COOP-OPEN",
+        "BANK-COOP-OPEN-ART"
+      ],
+      "definition_of_done": "角色握持真实手枪和霰弹枪并同步动作；发现服务器显示人数、满四人拒绝加入；首次连接直接入场；本地 WSL 服务常驻且 localhost 可用。",
+      "evidence": [
+        "project/evidence/bank-open-coop-20261017/report.json",
+        "project/evidence/bank-open-coop-20261017/gallery.html",
+        "docs/bank-coop-combat.md"
+      ],
+      "notes": "46 项技术检查通过，真实用户最终美术验收和公网 VPS 测试未推断为通过。"
     }
   ],
   "known_limits": [

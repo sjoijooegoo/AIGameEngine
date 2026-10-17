@@ -9,6 +9,13 @@ var current_motion := "idle"
 var source := "project_authored"
 var bones: Dictionary={}
 var parts: Array=[]
+var weapon := "pistol"
+var action_phase := "idle"
+var action_time := 0.0
+var action_duration := 0.0
+var overlay: AnimationPlayer
+var upper_action := ""
+static var shared_combat_library: AnimationLibrary
 
 func setup(slot: int) -> void:
 	var reference:="res://coop/local_reference/survivor.glb"
@@ -26,6 +33,7 @@ func setup(slot: int) -> void:
 			animator.callback_mode_process=AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
 			for clip in animator.get_animation_list():animator.get_animation(clip).loop_mode=Animation.LOOP_LINEAR
 			source="local_l4d2_reference"
+			build_overlay()
 			return
 		model.queue_free()
 	rig=Skeleton3D.new();rig.name="SurvivorSkeleton";add_child(rig)
@@ -97,17 +105,66 @@ func make_animation(clip: String) -> Animation:
 			animation.rotation_track_insert_key(track,float(frame)/24.0*animation.length,Quaternion(Vector3.RIGHT,angle))
 	return animation
 
-func advance(dt: float, motion: String, speed: float) -> void:
+func animation_name(key: String) -> String:
+	if animator.has_animation(key):return key
+	for candidate in animator.get_animation_list():
+		if str(candidate).ends_with(key):return str(candidate)
+	return ""
+
+func upper_bone(name: String) -> bool:
+	for part in ["spine","neck","head","clavicle","arm","hand","finger","weapon"]:
+		if part in name.to_lower():return true
+	return false
+
+func build_overlay() -> void:
+	overlay=AnimationPlayer.new();overlay.name="WeaponUpperBody";overlay.root_node=animator.root_node
+	animator.get_parent().add_child(overlay);overlay.callback_mode_process=AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
+	if shared_combat_library!=null:
+		overlay.add_animation_library("",shared_combat_library);return
+	var library:=AnimationLibrary.new()
+	for key in ["reload_pistol","reload_shotgun_start","reload_shotgun_loop","reload_shotgun_end","fire_pistol","fire_shotgun"]:
+		var name:=animation_name(key)
+		if name.is_empty() and key=="reload_shotgun_loop":name=animation_name("reload_shotgun") # glTF loop suffix is stripped by Godot.
+		if name.is_empty():continue
+		var clip: Animation=animator.get_animation(name).duplicate();clip.loop_mode=Animation.LOOP_NONE
+		for track in range(clip.get_track_count()-1,-1,-1):
+			var path:=clip.track_get_path(track)
+			if path.get_subname_count()==0 or not upper_bone(str(path.get_subname(0))):clip.remove_track(track)
+		library.add_animation(key,clip)
+	shared_combat_library=library
+	overlay.add_animation_library("",library)
+
+func combat_state(state: Dictionary) -> void:
+	weapon=state.get("weapon","pistol");action_phase=state.get("phase","idle")
+	action_time=float(state.get("time",0));action_duration=float(state.get("duration",0))
+
+func advance(dt: float, motion: String, speed: float, pitch: float=0.0) -> void:
 	clock+=dt
 	if animator==null:return
-	var clip:=motion
-	if not animator.has_animation(clip):
-		for candidate in animator.get_animation_list():
-			if candidate.to_lower().ends_with(motion):clip=candidate;break
-	if not animator.has_animation(clip):return
+	var clip:=animation_name(("shotgun_" if weapon=="shotgun" else "")+motion)
+	if clip.is_empty():clip=animation_name(motion)
+	if clip.is_empty():return
 	if animator.current_animation!=clip:animator.play(clip,.12)
 	var rate:=1.0 if motion=="idle" else clampf(speed/(2.8 if motion=="walk" else 4.6),.2,1.8)
 	animator.advance(dt*rate);current_motion=motion
+	action_time+=dt;upper_action=""
+	if overlay and weapon in ["pistol","shotgun"]:
+		if action_phase in ["reload","reload_empty"]:upper_action="reload_pistol"
+		elif action_phase=="reload_start":upper_action="reload_shotgun_start"
+		elif action_phase=="insert_shell":upper_action="reload_shotgun_loop"
+		elif action_phase=="reload_end":upper_action="reload_shotgun_end"
+		elif action_phase=="fire":upper_action="fire_"+weapon
+		if overlay.has_animation(upper_action) and action_duration>0:
+			overlay.play(upper_action)
+			overlay.seek(clampf(action_time/action_duration,0,1)*overlay.get_animation(upper_action).length,true)
+		else:overlay.stop()
+	if source=="local_l4d2_reference":
+		var spine:=rig.find_bone("ValveBiped.Bip01_Spine2")
+		if spine>=0:
+			var pose:=rig.get_bone_global_pose(spine)
+			var axis: Vector3=(rig.global_basis.inverse()*global_basis.x).normalized()
+			pose.basis=Basis(axis,pitch*.85)*pose.basis;rig.set_bone_global_pose(spine,pose)
+		rig.force_update_all_bone_transforms()
 	if source=="project_authored":
 		# This segmented rig has no Skin resource to trigger render-skeleton updates.
 		# Sample its real animated bone transforms explicitly for the body pieces.
@@ -117,4 +174,4 @@ func advance(dt: float, motion: String, speed: float) -> void:
 func observe() -> Dictionary:
 	var leg:=rig.find_bone("left_thigh") if source=="project_authored" else rig.find_bone("ValveBiped.Bip01_L_Thigh")
 	var pose:=rig.get_bone_pose_rotation(leg) if leg>=0 else Quaternion.IDENTITY
-	return {"source":source,"bones":rig.get_bone_count() if rig else 0,"motion":current_motion,"time":animator.current_animation_position if animator and not animator.current_animation.is_empty() else 0.0,"clips":animator.get_animation_list() if animator else [],"leg_rotation":[pose.x,pose.y,pose.z,pose.w]}
+	return {"source":source,"bones":rig.get_bone_count() if rig else 0,"motion":current_motion,"weapon":weapon,"upper_action":upper_action,"time":animator.current_animation_position if animator and not animator.current_animation.is_empty() else 0.0,"clips":animator.get_animation_list() if animator else [],"leg_rotation":[pose.x,pose.y,pose.z,pose.w]}

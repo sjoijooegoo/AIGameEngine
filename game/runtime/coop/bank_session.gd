@@ -35,6 +35,9 @@ var equipment: Dictionary={}
 var remote_shots: Dictionary={}
 var closing := false
 var frontend_managed := false
+var discovery: Node
+var client_resources: Array=[]
+var client_prepared := false
 
 func _ready() -> void:
 	original_player=world.player;original_weapon=world.firearms;original_feedback=world.feedback
@@ -50,7 +53,7 @@ func _ready() -> void:
 	super._ready()
 	visual=not is_host
 	# Protocol includes the real bank rules and layout, not the old structural slice.
-	var fingerprint:="bank-combat-v2"
+	var fingerprint:="bank-combat-v3"
 	for path in ["origin_structure","infected","infected_archetypes","firearms","door_design","shooting_feedback"]:
 		fingerprint+=FileAccess.get_file_as_string("res://data/"+path+".json").replace("\r\n","\n")
 	map_hash=fingerprint.sha256_text()
@@ -138,16 +141,36 @@ func create_session(port_number: int, limit: int, label: String) -> void:
 
 func join_game(address: String, port_number: int, label: String) -> Error:
 	active=true;world.ui.set_mode("play");world.ensure_infected()
+	prepare_client_resources()
 	var result:=super.join_game(address,port_number,label)
 	world.player.collision_layer=0;world.player.collision_mask=0
 	for enemy in world.infected:enemy.visible=false;enemy.collision_layer=0;enemy.head_hitbox.collision_layer=0
 	return result
 
+func prepare_client_resources() -> void:
+	if client_prepared:return
+	# Keep imported scenes and the immutable upper-body library resident BEFORE
+	# ENet's RTT handshake. First-roster loading must not throttle live snapshots.
+	for path in ["res://coop/local_reference/manifest.json","res://coop/local_reference/weapons.json"]:
+		if not FileAccess.file_exists(path):continue
+		var data=JSON.parse_string(FileAccess.get_file_as_string(path))
+		if not data is Dictionary:continue
+		var entries: Array=[data] if data.has("resource") else data.get("weapons",{}).values()
+		for entry in entries:
+			var resource:=str(entry.get("resource",""))
+			if resource.begins_with("res://coop/local_reference/") and ResourceLoader.exists(resource):client_resources.append(load(resource))
+	var warmup=preload("res://coop/avatar.gd").new();warmup.visible=false;add_child(warmup)
+	warmup.setup(0);warmup.free();client_prepared=true
+
 func start_server(port_number: int, limit: int=4) -> Error:
 	# Finish expensive actor setup before accepting ENet handshakes. Otherwise
 	# the first client's RTT spike can throttle all its unreliable traffic.
 	world.ensure_infected()
-	return super.start_server(port_number,limit)
+	var error:=super.start_server(port_number,limit)
+	if error==OK:
+		discovery=preload("res://coop/discovery.gd").new();add_child(discovery)
+		if discovery.serve(self,port_number)!=OK:push_warning("Server discovery port unavailable; direct joining is still available")
+	return error
 
 func prepare_player(body: CharacterBody3D) -> void:
 	world.ensure_infected()
@@ -155,6 +178,7 @@ func prepare_player(body: CharacterBody3D) -> void:
 		restore_local();world.reset_fixture("default");round_id+=1
 	body.position=Vector3(23.0-float(body.slot)*.7,.05,8.2);body.rotation.y=-1.120596
 	var context=preload("res://coop/bank_peer.gd").new();context.setup(world,body);contexts[body.peer_id]=context
+	started=true # A successful authenticated join starts/resumes this world immediately.
 	if leader==0:leader=body.peer_id
 	original_player.collision_layer=0
 
@@ -221,14 +245,11 @@ func _action(serial: int, kind: String, value: Variant, aim_yaw: float, aim_pitc
 	if not is_host or not contexts.has(id):return
 	var context=contexts[id]
 	if serial<=context.last_action or not is_finite(aim_yaw) or not is_finite(aim_pitch) or context.action_budget<1 or context.actions.size()>=40:return
-	if kind not in ["trigger","shove","weapon","reload","door","struggle","restart","start"]:return
+	if kind not in ["trigger","shove","weapon","reload","door","struggle","restart"]:return
 	if kind=="weapon" and value not in ["pistol","shotgun","torch","baton"]:return
 	if kind=="struggle" and value not in [KEY_A,KEY_D]:return
-	if kind in ["trigger","shove","reload","door","restart","start"] and not value is bool:return
+	if kind in ["trigger","shove","reload","door","restart"] and not value is bool:return
 	context.last_action=serial;context.action_budget-=1
-	if kind=="start":
-		if id==leader and contexts.size()>=2:started=true
-		return
 	context.actions.append([kind,value,wrapf(aim_yaw,-PI,PI),clampf(aim_pitch,-1.25,1.25)])
 
 func apply_action(context, action: Array) -> void:
@@ -302,10 +323,6 @@ func server_advance(dt: float) -> void:
 	if contexts.is_empty():return
 	var tick_started_usec:=Time.get_ticks_usec()
 	tick+=1;world.tick_count=tick;world.navigation.begin_frame()
-	if not started:
-		for context in contexts.values():context.actions.clear();context.body.axes=Vector2.ZERO
-		if tick%6==0:broadcast_bank()
-		return
 	var restart_requested:=false
 	var grabbed_hits: Dictionary={}
 	for id in contexts:
@@ -482,6 +499,8 @@ func observe() -> Dictionary:
 	for enemy in world.infected:result.enemies.append({"id":str(enemy.name),"hp":enemy.hp,"mode":enemy.mode,"active":enemy.active,"position":[enemy.position.x,enemy.position.y,enemy.position.z]})
 	result["doors"]={}
 	for id in world.doors:result.doors[id]=world.doors[id].state()
+	result["equipment"]={}
+	for id in equipment:result.equipment[str(id)]=equipment[id].observe()
 	return result
 
 func _notification(what: int) -> void:

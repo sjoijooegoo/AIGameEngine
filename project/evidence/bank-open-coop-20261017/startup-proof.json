@@ -1,0 +1,5 @@
+{
+  "Target": "D:\\AIGameEngine\\.venv\\Scripts\\pythonw.exe",
+  "Arguments": "-m game.tools.local_bank_server run",
+  "WorkingDirectory": "D:\\AIGameEngine"
+}

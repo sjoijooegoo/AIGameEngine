@@ -1,4 +1,4 @@
-"""Blender background script: local L4D2 Nick skin and three native locomotion clips.
+"""Blender background script: local L4D2 Nick skin and weapon-specific combat clips.
 
 Read-only installation -> immutable snapshots -> optional client-only GLB.
 Requires the pinned SourceIO checkout; no Blender addon/global configuration changes.
@@ -96,16 +96,27 @@ def main():
     path=source/'models/survivors/anim_gambler.mdl';buffer=FileBuffer(str(path));anim_mdl=MdlV49.from_buffer(buffer)
     ani=FileBuffer(str(path.with_suffix('.ani')))
     blocks=read_anim_block_table(buffer,anim_mdl.header.anim_block_offset,anim_mdl.header.anim_block_count)
-    selected={'idle':'@Idle_Calm_Pistol','walk':'a_WalkN_Rifle','run':'a_RunN_Rifle'}
+    selected={'idle':'@Idle_Standing_pistol','walk':'a_WalkN_Rifle','run':'a_RunN_Rifle',
+        'shotgun_idle':'@Idle_Standing_Shotgun','shotgun_walk':'a_WalkN_Shotgun','shotgun_run':'a_RunN_Shotgun',
+        'reload_pistol':'@Reload_Standing_Pistol_layer','reload_shotgun_start':'@Reload_Standing_PumpShotgun_start',
+        'reload_shotgun_loop':'@Reload_Standing_PumpShotgun_loop1','reload_shotgun_end':'@Reload_Standing_PumpShotgun_end',
+        'fire_pistol':'@Shoot_Standing_PISTOL','fire_shotgun':'@Shoot_Standing_PumpShotgun'}
     anim_bones={bone.name:bone for bone in anim_mdl.bones}
     rig.rotation_euler.z=math.pi/2 # Source +X -> Blender +Y -> Godot -Z.
     rig.animation_data_create();bpy.context.scene.render.fps=30
     def quat(v):return Quaternion((float(v[3]),float(v[0]),float(v[1]),float(v[2]))).normalized()
+    def upper(name):return any(part in name.lower() for part in ['spine','neck','head','clavicle','arm','hand','finger','weapon'])
+    decoded={}
+    for name in selected.values():
+        desc=next(a for a in anim_mdl.anim_descs if a.name==name)
+        decoded[name]=decode(desc,buffer,anim_mdl.bones,ani,blocks)
     metadata={}
     for clip,name in selected.items():
         desc=next(a for a in anim_mdl.anim_descs if a.name==name)
-        assert not int(desc.flags)&4,'Only complete, non-additive clips are accepted'
-        samples=decode(desc,buffer,anim_mdl.bones,ani,blocks)
+        samples=decoded[name]
+        delta=bool(int(desc.flags)&4)
+        base_name='@Idle_Standing_Shotgun' if 'shotgun' in clip else '@Idle_Standing_pistol'
+        base=decoded[base_name]
         action=bpy.data.actions.new(clip);rig.animation_data.action=action
         for frame in range(desc.frame_count):
             bpy.context.scene.frame_set(frame)
@@ -115,6 +126,12 @@ def main():
                 src=anim_bones.get(bone.name)
                 if src and bone.name in samples:
                     sample=samples[bone.name][frame];p=Vector(sample['pos']);q=quat(sample['rot'])
+                    # Native pistol locomotion uses the rifle leg cycle plus a
+                    # pistol upper-body layer; keep both hands on the grip.
+                    if clip in ['walk','run'] and upper(bone.name):
+                        hold=base[bone.name][frame%len(base[bone.name])];p=Vector(hold['pos']);q=quat(hold['rot'])
+                    if delta:
+                        hold=base[bone.name][0];p=Vector(hold['pos'])+p;q=quat(hold['rot'])@q
                     if src.parent_id<0:
                         p.x-=float(samples[bone.name]['pos'][:,0].mean());p.y-=float(samples[bone.name]['pos'][:,1].mean())
                     p=rest.translation+(p-Vector(src.position))*.0254
@@ -128,7 +145,8 @@ def main():
             bpy.context.view_layer.update()
         track=rig.animation_data.nla_tracks.new();track.name=clip
         strip=track.strips.new(clip,0,action);strip.action_slot=action.slots[0];track.mute=True
-        metadata[clip]={'source':name,'frames':desc.frame_count,'source_fps':desc.fps,'duration':(desc.frame_count-1)/30.0}
+        metadata[clip]={'source':name,'frames':desc.frame_count,'source_fps':desc.fps,'duration':(desc.frame_count-1)/30.0,
+            'additive_base':base_name if delta else None,'upper_body_source':base_name if clip in ['walk','run'] else None}
     rig.animation_data.action=None
     for track in rig.animation_data.nla_tracks:track.mute=False
     bpy.context.scene.frame_set(0)

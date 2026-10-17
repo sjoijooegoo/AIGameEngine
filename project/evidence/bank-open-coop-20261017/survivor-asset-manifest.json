@@ -1,0 +1,115 @@
+{
+  "source": "Left 4 Dead 2 / survivor_gambler (Nick)",
+  "rights": "local_reference_only_rights_unverified",
+  "source_manifest": "D:\\AIGameEngine\\outerasset\\source-snapshots\\coop-gambler-v2\\manifest.json",
+  "sourceio_commit": "472e81542a6750cf3c282daac41af96a2f5d4fd3",
+  "converter_sha256": "998b8a3701e6a080867dd44313b61d0ef67c3b81a7b51554a512c4ac9fc19b52",
+  "units": "0.0254 metre per Source unit",
+  "forward": "Godot -Z",
+  "texture_roles": [
+    "albedo (sRGB)"
+  ],
+  "root_motion": "horizontal mean removed; gameplay owns translation",
+  "bones": 85,
+  "clips": {
+    "idle": {
+      "source": "@Idle_Standing_pistol",
+      "frames": 134,
+      "source_fps": 30.0,
+      "duration": 4.433333333333334,
+      "additive_base": null,
+      "upper_body_source": null
+    },
+    "walk": {
+      "source": "a_WalkN_Rifle",
+      "frames": 58,
+      "source_fps": 30.0,
+      "duration": 1.9,
+      "additive_base": null,
+      "upper_body_source": "@Idle_Standing_pistol"
+    },
+    "run": {
+      "source": "a_RunN_Rifle",
+      "frames": 43,
+      "source_fps": 30.0,
+      "duration": 1.4,
+      "additive_base": null,
+      "upper_body_source": "@Idle_Standing_pistol"
+    },
+    "shotgun_idle": {
+      "source": "@Idle_Standing_Shotgun",
+      "frames": 126,
+      "source_fps": 30.0,
+      "duration": 4.166666666666667,
+      "additive_base": null,
+      "upper_body_source": null
+    },
+    "shotgun_walk": {
+      "source": "a_WalkN_Shotgun",
+      "frames": 61,
+      "source_fps": 30.0,
+      "duration": 2.0,
+      "additive_base": null,
+      "upper_body_source": null
+    },
+    "shotgun_run": {
+      "source": "a_RunN_Shotgun",
+      "frames": 48,
+      "source_fps": 30.0,
+      "duration": 1.5666666666666667,
+      "additive_base": null,
+      "upper_body_source": null
+    },
+    "reload_pistol": {
+      "source": "@Reload_Standing_Pistol_layer",
+      "frames": 66,
+      "source_fps": 30.0,
+      "duration": 2.1666666666666665,
+      "additive_base": null,
+      "upper_body_source": null
+    },
+    "reload_shotgun_start": {
+      "source": "@Reload_Standing_PumpShotgun_start",
+      "frames": 40,
+      "source_fps": 40.0,
+      "duration": 1.3,
+      "additive_base": null,
+      "upper_body_source": null
+    },
+    "reload_shotgun_loop": {
+      "source": "@Reload_Standing_PumpShotgun_loop1",
+      "frames": 50,
+      "source_fps": 42.86000061035156,
+      "duration": 1.6333333333333333,
+      "additive_base": null,
+      "upper_body_source": null
+    },
+    "reload_shotgun_end": {
+      "source": "@Reload_Standing_PumpShotgun_end",
+      "frames": 45,
+      "source_fps": 30.0,
+      "duration": 1.4666666666666666,
+      "additive_base": null,
+      "upper_body_source": null
+    },
+    "fire_pistol": {
+      "source": "@Shoot_Standing_PISTOL",
+      "frames": 21,
+      "source_fps": 30.0,
+      "duration": 0.6666666666666666,
+      "additive_base": "@Idle_Standing_pistol",
+      "upper_body_source": null
+    },
+    "fire_shotgun": {
+      "source": "@Shoot_Standing_PumpShotgun",
+      "frames": 38,
+      "source_fps": 30.0,
+      "duration": 1.2333333333333334,
+      "additive_base": "@Idle_Standing_Shotgun",
+      "upper_body_source": null
+    }
+  },
+  "output_sha256": "3473877c6b81639c59610a5fdd10c586f50541dda91e6093ea991f13011a4e19",
+  "resource": "res://coop/local_reference/survivor_3473877c6b81.glb",
+  "source_preserved": true
+}

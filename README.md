@@ -1,8 +1,8 @@
 # 银行危机 · AI 游戏开发与测试框架
 
-新增 [独立主菜单与服务器连接流程](docs/bank-coop-combat.md)：EXE 启动先选择单人/多人，单人出生点附近已清理，多人支持创建、加入、失败重试和等候室。[本次验证画面与报告](project/evidence/bank-entry-20261017/gallery.html)。
+当前 [多人合作支持寻找服务器、随时加入和常驻 localhost WSL 服务](docs/bank-coop-combat.md)，人数实时显示，满 4 人拒绝加入；队友使用原生手枪/霰弹枪世界模型与骨骼动作。[46 项验证与动态画面](project/evidence/bank-open-coop-20261017/gallery.html)。
 
-新增 [当前银行 2–4 人合作会话与战斗](docs/bank-coop-combat.md)：创建/加入独立服务端、等待大厅、共享门与感染者、独立生命和弹药、队友救援及全队重开。[验证画面与报告](project/evidence/bank-coop-combat-20261017/gallery.html)。
+新增 [当前银行 2–4 人合作会话与战斗](docs/bank-coop-combat.md)：创建/加入独立服务端、实时人数、共享门与感染者、独立生命和弹药、队友救援及全队重开。[验证画面与报告](project/evidence/bank-coop-combat-20261017/gallery.html)。
 
 这是一套已经能运行的 **Godot 4.7.2 + Python** 开发框架。AI 可以启动游戏、读取实际渲染截图、发送键鼠事件、推进固定帧数、检查 UI 与游戏状态、复现错误并在修改后回归测试。
 

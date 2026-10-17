@@ -1,0 +1,64 @@
+{
+  "source_mismatches": {
+    "windows": [],
+    "linux": []
+  },
+  "packages": {
+    "windows": {
+      "path": "build/bank/combat-coop/20261017-172326/windows/bank-coop-windows.zip",
+      "sha256": "da7f133f84d845c7cc82bdfdb5c731214c8e71d9c6750bc15dfb31b11b72b9bb",
+      "bytes": 348984679
+    },
+    "linux": {
+      "path": "build/bank/combat-coop/20261017-172326/linux/bank-coop-linux.zip",
+      "sha256": "ad0f1a00120b870c5f62dfcbcbdb1671470f2b257f02449d02bf661717f0f989",
+      "bytes": 339333655
+    }
+  },
+  "bake": {
+    "windows": {
+      "manifest_sha256": "99ba9f469e3e2966543f00940d691a08d0dc597af7540ccebdbcac30ec0ccf80",
+      "verified_files": {
+        "res://addons/ai_engine/performance/static_boxes.gd": "b761287c01a493616510ca01f4441286db1fc89f327e46d2ecf3b5e20ad7a2f3",
+        "res://data/door_design.json": "cae4fbb9b514ff768b0adae920ab34f192c7564cb4e9d4bc6ecaa79b153e3fbe",
+        "res://data/dressing.json": "08425c04413f0b1b3290c3e86770eb2d6cf987a9513c2a9f8fff16a930570336",
+        "res://data/lighting.json": "57e4bd20382229acae90f02c87f0d99f1a99356d61cafc99c3d019a7ae99e0cb",
+        "res://data/lighting_bake.json": "39f4bf7229e7c8656ce2b1a6f3e9d403e66e8fb83f5360d38a3f79b99983f38f",
+        "res://data/origin_structure.json": "0408d5c0356af29f32778ea77a445d4c5d01d43b79da42c0409a94c1243abe87",
+        "res://data/pbr_textures.json": "aaec9d6bcad5aa5c0e6e195eabfad5e8a734f011cd5bc2c9d4a9f6ace310c7d1",
+        "res://data/review_views.json": "ec055f02e7126f99bd61733cf24cacce7ef808e843c43ced5c93af9d075f12e9",
+        "res://scripts/exploration.gd": "5f61d35394e5c91fe18d703a5ced17f5599301a24868079024601d6b363c9793",
+        "res://scripts/render_layers.gd": "6a2e3d3bc5291984858cf520f7ebd676ce960e2a1d36ff4e1076aa6d18f84fb3",
+        "res://scripts/static_render.gd": "048401ea1984e676b43f32e50d0f8431d0bf160e6fe1426b7aa9e0ed9ad37d18",
+        "res://scripts/surface_materials.gd": "f08e44c5b8425d0c975966993f17f4426b9c1a60364a9d96139ba59ed9dd4e7e",
+        "res://shaders/aged_wall.gdshader": "2d958870e094d4bf81f260a31e6ca3ddaccbf057a96e10396f9e678aebbb4632",
+        "res://generated/bank_lighting_v2/bank_indirect.exr": "570d366e47ad64a58fd1cf3b61e1c21a2986f637b84ea0f4649fb557f86480a8",
+        "res://generated/bank_lighting_v2/bank_indirect.lmbake": "7cfe1f279dc3d667d5320c7d3b1f22f7af70818b343018978583527ac8286ffa",
+        "res://generated/bank_lighting_v2/bank_static.tscn": "b6131e7ef8f44a8a77d6c15c6bfa0dc243f1928027896d88c0010197b6cd5d4f"
+      },
+      "meshes": 481.0
+    },
+    "linux": {
+      "manifest_sha256": "99ba9f469e3e2966543f00940d691a08d0dc597af7540ccebdbcac30ec0ccf80",
+      "verified_files": {
+        "res://addons/ai_engine/performance/static_boxes.gd": "b761287c01a493616510ca01f4441286db1fc89f327e46d2ecf3b5e20ad7a2f3",
+        "res://data/door_design.json": "cae4fbb9b514ff768b0adae920ab34f192c7564cb4e9d4bc6ecaa79b153e3fbe",
+        "res://data/dressing.json": "08425c04413f0b1b3290c3e86770eb2d6cf987a9513c2a9f8fff16a930570336",
+        "res://data/lighting.json": "57e4bd20382229acae90f02c87f0d99f1a99356d61cafc99c3d019a7ae99e0cb",
+        "res://data/lighting_bake.json": "39f4bf7229e7c8656ce2b1a6f3e9d403e66e8fb83f5360d38a3f79b99983f38f",
+        "res://data/origin_structure.json": "0408d5c0356af29f32778ea77a445d4c5d01d43b79da42c0409a94c1243abe87",
+        "res://data/pbr_textures.json": "aaec9d6bcad5aa5c0e6e195eabfad5e8a734f011cd5bc2c9d4a9f6ace310c7d1",
+        "res://data/review_views.json": "ec055f02e7126f99bd61733cf24cacce7ef808e843c43ced5c93af9d075f12e9",
+        "res://scripts/exploration.gd": "5f61d35394e5c91fe18d703a5ced17f5599301a24868079024601d6b363c9793",
+        "res://scripts/render_layers.gd": "6a2e3d3bc5291984858cf520f7ebd676ce960e2a1d36ff4e1076aa6d18f84fb3",
+        "res://scripts/static_render.gd": "048401ea1984e676b43f32e50d0f8431d0bf160e6fe1426b7aa9e0ed9ad37d18",
+        "res://scripts/surface_materials.gd": "f08e44c5b8425d0c975966993f17f4426b9c1a60364a9d96139ba59ed9dd4e7e",
+        "res://shaders/aged_wall.gdshader": "2d958870e094d4bf81f260a31e6ca3ddaccbf057a96e10396f9e678aebbb4632",
+        "res://generated/bank_lighting_v2/bank_indirect.exr": "570d366e47ad64a58fd1cf3b61e1c21a2986f637b84ea0f4649fb557f86480a8",
+        "res://generated/bank_lighting_v2/bank_indirect.lmbake": "7cfe1f279dc3d667d5320c7d3b1f22f7af70818b343018978583527ac8286ffa",
+        "res://generated/bank_lighting_v2/bank_static.tscn": "b6131e7ef8f44a8a77d6c15c6bfa0dc243f1928027896d88c0010197b6cd5d4f"
+      },
+      "meshes": 481.0
+    }
+  }
+}

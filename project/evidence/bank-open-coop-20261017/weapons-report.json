@@ -1,0 +1,96 @@
+{
+  "checks": [
+    {
+      "name": "teammate_native_pistol_grip_aim_walk_run",
+      "status": "pass",
+      "muzzle_height": [
+        1.49923014640808,
+        1.73448622226715,
+        1.2133355140686
+      ]
+    },
+    {
+      "name": "teammate_pistol_reload_and_fire",
+      "status": "pass"
+    },
+    {
+      "name": "teammate_native_shotgun_grip_walk_fire_reload",
+      "status": "pass"
+    },
+    {
+      "name": "teammate_weapon_switch_hides_stowed_gun",
+      "status": "pass"
+    }
+  ],
+  "sequences": [
+    {
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_walk.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_walk.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_walk.contact.jpg",
+      "count": 10,
+      "interval": 6,
+      "simulation_duration": 1.7,
+      "speed": 0.25
+    },
+    {
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_run.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_run.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_run.contact.jpg",
+      "count": 6,
+      "interval": 6,
+      "simulation_duration": 2.6,
+      "speed": 0.25
+    },
+    {
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_fire.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_fire.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_fire.contact.jpg",
+      "count": 6,
+      "interval": 3,
+      "simulation_duration": 4.2,
+      "speed": 0.25
+    },
+    {
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_reload.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_reload.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\pistol_reload.contact.jpg",
+      "count": 16,
+      "interval": 6,
+      "simulation_duration": 5.8,
+      "speed": 0.25
+    },
+    {
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\shotgun_walk.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\shotgun_walk.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\shotgun_walk.contact.jpg",
+      "count": 8,
+      "interval": 6,
+      "simulation_duration": 7.7,
+      "speed": 0.25
+    },
+    {
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\shotgun_fire.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\shotgun_fire.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\shotgun_fire.contact.jpg",
+      "count": 8,
+      "interval": 3,
+      "simulation_duration": 8.2,
+      "speed": 0.25
+    },
+    {
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\shotgun_reload.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\shotgun_reload.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\bank-armed-teammate-20261017-172326\\observer\\shotgun_reload.contact.jpg",
+      "count": 24,
+      "interval": 6,
+      "simulation_duration": 11.6,
+      "speed": 0.25
+    }
+  ],
+  "captures": [
+    "D:/AIGameEngine/logs/sessions/bank-armed-teammate-20261017-172326/observer/capture_18.png",
+    "D:/AIGameEngine/logs/sessions/bank-armed-teammate-20261017-172326/observer/capture_138.png",
+    "D:/AIGameEngine/logs/sessions/bank-armed-teammate-20261017-172326/observer/capture_148.png",
+    "D:/AIGameEngine/logs/sessions/bank-armed-teammate-20261017-172326/observer/capture_309.png"
+  ]
+}
