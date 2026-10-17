@@ -567,6 +567,25 @@
         "docs/bank-network-hardening.md"
       ],
       "notes": "40 technical checks and 16 network cases complete; 30 percent loss failed one of two stress cases, extreme RTT/jitter still corrects position. Matched Windows/Linux protocol 2 releases and local WSL verified. Actual VPS, long soak, native outside-window dragging and final user play feel remain unverified."
+    },
+    {
+      "id": "BANK-COOP-PERF-007",
+      "title": "多人室内大规模感染者战斗性能矩阵与瓶颈分析",
+      "status": "done",
+      "depends_on": [
+        "BANK-NETWORK-HARDENING-006"
+      ],
+      "acceptance": [
+        "BANK-COOP-PERF"
+      ],
+      "definition_of_done": "真实专用服务器与2/4客户端，在多个银行室内区域通过正常输入持续战斗；重复实时采样CPU/GPU、tick、网络、内存并保存布点检查、战斗结果、截图与原始数据；明确优化优先级与测量限制。",
+      "evidence": [
+        "project/evidence/bank-coop-performance-20261018/report.json",
+        "project/evidence/bank-coop-performance-20261018/gallery.html",
+        "project/evidence/bank-coop-performance-20261018/manifest.json",
+        "docs/bank-coop-performance.md"
+      ],
+      "notes": "22 final measurements across 5 interior areas, with actual reload validation; 15 normal co-op regression checks and 4 report semantics tests pass. 84-enemy hall misses the 60 Hz server/60 FPS client budgets. Windows local shared-host debug measurements only, not Ubuntu VPS capacity or long-soak certification. Production graphics/gameplay unchanged; optimization proposals are not implemented."
     }
   ],
   "known_limits": [

@@ -1,0 +1,15 @@
+{
+  "reviewer": "Codex",
+  "scope": "Technical inspection of actual final current-bank room captures; not final user art approval.",
+  "report_sha256": "8f21df861f4191671172efab55e0c71b3b82fd347d1d41dda89cce9b6976ba7b",
+  "inspected": [
+    "hall_4p_84-r1",
+    "cash_4p_32-r1",
+    "activity_4p_32-r1",
+    "conference_4p_32-r1",
+    "corridor_4p_24-r1",
+    "interiors.jpg"
+  ],
+  "observed": "Actual close-quarters team combat, normal ammo/reload states and existing lighting. Tight corridor view includes teammate face occlusion/model overlap; retained rather than hidden. Screenshot HUD FPS is post-window static value, not benchmark result.",
+  "user_art_acceptance": "not_inferred"
+}

@@ -1,0 +1,84 @@
+{
+  "checks": [
+    {
+      "name": "bank_session_ui_join_two",
+      "status": "pass",
+      "population": 84
+    },
+    {
+      "name": "bank_join_starts_immediately",
+      "status": "pass"
+    },
+    {
+      "name": "bank_team_movement",
+      "status": "pass",
+      "distance": 1.3999549013850892
+    },
+    {
+      "name": "bank_shared_damage_and_separate_ammo",
+      "status": "pass",
+      "hp": [
+        65.0,
+        51.0,
+        37.0
+      ]
+    },
+    {
+      "name": "bank_shared_kill_and_corpse",
+      "status": "pass"
+    },
+    {
+      "name": "bank_server_reload",
+      "status": "pass"
+    },
+    {
+      "name": "bank_local_menu_does_not_pause",
+      "status": "pass"
+    },
+    {
+      "name": "bank_wall_blocks_shot",
+      "status": "pass"
+    },
+    {
+      "name": "bank_shared_door_and_crossing",
+      "status": "pass",
+      "before": [
+        24.1499996185303,
+        -0.019309900701046,
+        6.75
+      ],
+      "after": [
+        26.5300216674805,
+        -0.0190932974219322,
+        6.75
+      ]
+    },
+    {
+      "name": "bank_teammate_rescues_grab",
+      "status": "pass"
+    },
+    {
+      "name": "bank_server_infected_damage",
+      "status": "pass"
+    },
+    {
+      "name": "bank_team_wipe_restart",
+      "status": "pass",
+      "fixture": "both players start with 5 HP; normal enemy attacks"
+    },
+    {
+      "name": "bank_late_join_existing_world",
+      "status": "pass",
+      "enemy_hp": 65.0
+    },
+    {
+      "name": "bank_empty_room_starts_fresh",
+      "status": "pass"
+    },
+    {
+      "name": "bank_server_loss_cleanup",
+      "status": "pass"
+    }
+  ],
+  "captures": []
+}

@@ -1,0 +1,43 @@
+<!doctype html><meta charset="utf-8"><title>银行多人室内战斗性能</title><style>body{max-width:1550px;margin:32px auto;padding:0 22px;background:#101817;color:#e5ebe7;font:17px/1.65 system-ui}a{color:#dab46c}table{border-collapse:collapse;width:100%;font-size:15px}td,th{border-bottom:1px solid #40564b;padding:9px;text-align:right}td:first-child,th:first-child{text-align:left}img{max-width:100%}details{padding:16px 0}h2{margin-top:38px}.note{color:#deb676}figure{margin:20px 0}</style>
+<h1>多人银行室内战斗性能 · 2026-10-18</h1><p>22 次有效采样，五种室内区域；2/4 玩家、24/32/64/84 名感染者。每例预热 3 秒、测量 16 秒、重复 2 次。一个渲染客户端、其他客户端与服务端无渲染，均在同一台 Windows 机器。</p>
+<p>i9-13900HX / RTX 5070 Ti Laptop，Godot 4.7.2 调试版，Forward+，默认 1080p 原生比例、原有吊灯/烘焙/MSAA，VSync 关闭。表中范围为两轮实测值，1% Low 为最慢 1% 帧平均耗时的倒数。</p>
+<p class="note">有效采样不等于性能达标。84 敌大厅客户端 53.8–65.7 FPS，服务器约 48.8–55.1Hz。单步预算为 16.67ms。关闭阴影诊断提升了画面帧率，但没有解决服务端更新过慢。</p>
+<p><a href="../../../docs/bank-coop-performance.md">瓶颈分析与优化顺序</a> · <a href="metrics.csv">逐轮 CSV</a> · <a href="report.json">汇总 JSON</a> · <a href="raw-evidence.zip">原始帧、tick、输入计划与失败记录</a></p>
+<table><tr><th>案例</th><th>平均 FPS</th><th>1% Low</th><th>帧 P95 ms</th><th>服务端步 P95 ms</th><th>实际 tick Hz</th><th>服务端发送 KiB/s</th></tr>
+<tr><td>一楼大厅 · 2人32敌</td><td>93.8–116.7</td><td>63.9–69.3</td><td>12.46–14.55</td><td>7.70–8.32</td><td>60.0–60.1</td><td>183.7–201.4</td></tr>
+<tr><td>一楼大厅 · 4人32敌</td><td>74.4–91.5</td><td>39.4–59.1</td><td>15.15–17.96</td><td>9.86–12.10</td><td>60.0–60.1</td><td>476.0–485.7</td></tr>
+<tr><td>一楼大厅 · 4人64敌</td><td>60.0–74.1</td><td>32.8–35.8</td><td>19.00–24.42</td><td>18.60–20.69</td><td>58.2–60.0</td><td>413.5–479.2</td></tr>
+<tr><td>一楼大厅 · 4人84敌</td><td>53.8–65.7</td><td>32.8–34.9</td><td>23.99–27.82</td><td>22.57–23.58</td><td>48.8–55.1</td><td>334.2–446.5</td></tr>
+<tr><td>一楼现金办公区 · 4人32敌</td><td>85.3–86.8</td><td>56.7–60.8</td><td>14.99–15.07</td><td>11.88–12.81</td><td>60.1–60.1</td><td>558.5–563.7</td></tr>
+<tr><td>三楼活动区 · 4人32敌</td><td>94.8–100.3</td><td>57.6–67.4</td><td>13.85–14.65</td><td>9.15–11.05</td><td>60.1–60.1</td><td>504.0–507.5</td></tr>
+<tr><td>四楼会议区 · 4人32敌</td><td>117.6–129.3</td><td>69.0–72.9</td><td>12.31–13.02</td><td>7.79–15.43</td><td>60.0–60.1</td><td>397.5–479.7</td></tr>
+<tr><td>三楼前楼梯走廊 · 4人24敌</td><td>76.5–79.7</td><td>58.8–59.8</td><td>15.57–15.66</td><td>6.40–15.52</td><td>60.0–60.1</td><td>411.1–499.8</td></tr>
+<tr><td>诊断：大厅84敌 · 原生1440p</td><td>50.8–52.7</td><td>34.1–34.1</td><td>27.10–27.61</td><td>16.09–23.59</td><td>52.2–60.0</td><td>373.0–440.3</td></tr>
+<tr><td>诊断：大厅84敌 · 半渲染比例</td><td>48.9–54.6</td><td>31.8–33.2</td><td>28.02–28.85</td><td>15.43–25.75</td><td>48.4–60.0</td><td>418.7–444.4</td></tr>
+<tr><td>诊断：大厅84敌 · 关闭阴影</td><td>109.2–111.0</td><td>58.3–63.6</td><td>14.27–14.78</td><td>15.05–23.34</td><td>53.2–60.0</td><td>437.6–463.8</td></tr>
+</table>
+<h2>主要结论</h2><p>客户端优先检查动态阴影提交和可见感染者呈现；服务端优先检查姿态/命中体、密集移动与布娃娃。84 敌大厅的感染者区段约占脚本耗时 94.1%，寻路约 0.046–0.056ms/步，快照发送平均约 0.396–0.411ms/步。网络流量和死亡角色状态仍值得优化，但不是本次服务端 CPU 的首要成本。</p>
+<p>诊断组同样可能掉服务器 tick；不能只看客户端 FPS 判断完整会话性能。物理接触、尸体、摄像机朝向和同机争用也不同，不能把诊断结果当成可交付优化的精确收益承诺。第一版路线会打断装填，已保留到过程归档；本页采用提前装填且检查实际弹匣增加的第二版路线。</p>
+<h2>当前室内实际画面</h2><p>下图来自每条路线结束后的真实渲染；所有高血量均为初始诊断夹具，非正式平衡调整。采样结束才截图，HUD FPS 是结束后的静止值，不代表上表测量窗口。</p><img src="interiors.jpg">
+<details><summary>一楼大厅 · 2人32敌 · 第 1 轮 · 116.7 FPS / 服务端 60.0Hz</summary><img loading="lazy" src="hall_2p_32-r1.webp"></details>
+<details><summary>一楼大厅 · 2人32敌 · 第 2 轮 · 93.8 FPS / 服务端 60.1Hz</summary><img loading="lazy" src="hall_2p_32-r2.webp"></details>
+<details><summary>一楼大厅 · 4人32敌 · 第 1 轮 · 91.5 FPS / 服务端 60.0Hz</summary><img loading="lazy" src="hall_4p_32-r1.webp"></details>
+<details><summary>一楼大厅 · 4人64敌 · 第 1 轮 · 74.1 FPS / 服务端 60.0Hz</summary><img loading="lazy" src="hall_4p_64-r1.webp"></details>
+<details><summary>一楼大厅 · 4人84敌 · 第 1 轮 · 65.7 FPS / 服务端 48.8Hz</summary><img loading="lazy" src="hall_4p_84-r1.webp"></details>
+<details><summary>一楼现金办公区 · 4人32敌 · 第 1 轮 · 86.8 FPS / 服务端 60.1Hz</summary><img loading="lazy" src="cash_4p_32-r1.webp"></details>
+<details><summary>三楼活动区 · 4人32敌 · 第 1 轮 · 100.3 FPS / 服务端 60.1Hz</summary><img loading="lazy" src="activity_4p_32-r1.webp"></details>
+<details><summary>四楼会议区 · 4人32敌 · 第 1 轮 · 129.3 FPS / 服务端 60.0Hz</summary><img loading="lazy" src="conference_4p_32-r1.webp"></details>
+<details><summary>三楼前楼梯走廊 · 4人24敌 · 第 1 轮 · 76.5 FPS / 服务端 60.0Hz</summary><img loading="lazy" src="corridor_4p_24-r1.webp"></details>
+<details><summary>诊断：大厅84敌 · 原生1440p · 第 1 轮 · 50.8 FPS / 服务端 52.2Hz</summary><img loading="lazy" src="hall_84_1440p-r1.webp"></details>
+<details><summary>诊断：大厅84敌 · 半渲染比例 · 第 1 轮 · 54.6 FPS / 服务端 48.4Hz</summary><img loading="lazy" src="hall_84_half_scale-r1.webp"></details>
+<details><summary>诊断：大厅84敌 · 关闭阴影 · 第 1 轮 · 111.0 FPS / 服务端 53.2Hz</summary><img loading="lazy" src="hall_84_no_shadows-r1.webp"></details>
+<details><summary>一楼大厅 · 4人32敌 · 第 2 轮 · 74.4 FPS / 服务端 60.1Hz</summary><img loading="lazy" src="hall_4p_32-r2.webp"></details>
+<details><summary>一楼大厅 · 4人64敌 · 第 2 轮 · 60.0 FPS / 服务端 58.2Hz</summary><img loading="lazy" src="hall_4p_64-r2.webp"></details>
+<details><summary>一楼大厅 · 4人84敌 · 第 2 轮 · 53.8 FPS / 服务端 55.1Hz</summary><img loading="lazy" src="hall_4p_84-r2.webp"></details>
+<details><summary>一楼现金办公区 · 4人32敌 · 第 2 轮 · 85.3 FPS / 服务端 60.1Hz</summary><img loading="lazy" src="cash_4p_32-r2.webp"></details>
+<details><summary>三楼活动区 · 4人32敌 · 第 2 轮 · 94.8 FPS / 服务端 60.1Hz</summary><img loading="lazy" src="activity_4p_32-r2.webp"></details>
+<details><summary>四楼会议区 · 4人32敌 · 第 2 轮 · 117.6 FPS / 服务端 60.1Hz</summary><img loading="lazy" src="conference_4p_32-r2.webp"></details>
+<details><summary>三楼前楼梯走廊 · 4人24敌 · 第 2 轮 · 79.7 FPS / 服务端 60.1Hz</summary><img loading="lazy" src="corridor_4p_24-r2.webp"></details>
+<details><summary>诊断：大厅84敌 · 原生1440p · 第 2 轮 · 52.7 FPS / 服务端 60.0Hz</summary><img loading="lazy" src="hall_84_1440p-r2.webp"></details>
+<details><summary>诊断：大厅84敌 · 半渲染比例 · 第 2 轮 · 48.9 FPS / 服务端 60.0Hz</summary><img loading="lazy" src="hall_84_half_scale-r2.webp"></details>
+<details><summary>诊断：大厅84敌 · 关闭阴影 · 第 2 轮 · 109.2 FPS / 服务端 60.0Hz</summary><img loading="lazy" src="hall_84_no_shadows-r2.webp"></details>

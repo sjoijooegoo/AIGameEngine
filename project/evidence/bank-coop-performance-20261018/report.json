@@ -1,0 +1,1221 @@
+{
+  "scope": "Performance measurement validity, not target-frame-rate or VPS certification.",
+  "checks": [
+    {
+      "name": "coop_perf_valid_placements",
+      "status": "pass",
+      "evidence": "measured-report.json"
+    },
+    {
+      "name": "coop_perf_real_combat",
+      "status": "pass",
+      "evidence": "measured-report.json"
+    },
+    {
+      "name": "coop_perf_multiple_interiors",
+      "status": "pass",
+      "evidence": "measured-report.json"
+    },
+    {
+      "name": "coop_perf_repeated_samples",
+      "status": "pass",
+      "evidence": "measured-report.json"
+    },
+    {
+      "name": "coop_perf_runtime_errors_absent",
+      "status": "pass",
+      "evidence": "measured-report.json"
+    },
+    {
+      "name": "bank_session_ui_join_two",
+      "status": "pass",
+      "population": 84
+    },
+    {
+      "name": "bank_join_starts_immediately",
+      "status": "pass"
+    },
+    {
+      "name": "bank_team_movement",
+      "status": "pass",
+      "distance": 1.3999549013850892
+    },
+    {
+      "name": "bank_shared_damage_and_separate_ammo",
+      "status": "pass",
+      "hp": [
+        65.0,
+        51.0,
+        37.0
+      ]
+    },
+    {
+      "name": "bank_shared_kill_and_corpse",
+      "status": "pass"
+    },
+    {
+      "name": "bank_server_reload",
+      "status": "pass"
+    },
+    {
+      "name": "bank_local_menu_does_not_pause",
+      "status": "pass"
+    },
+    {
+      "name": "bank_wall_blocks_shot",
+      "status": "pass"
+    },
+    {
+      "name": "bank_shared_door_and_crossing",
+      "status": "pass",
+      "before": [
+        24.1499996185303,
+        -0.019309900701046,
+        6.75
+      ],
+      "after": [
+        26.5300216674805,
+        -0.0190932974219322,
+        6.75
+      ]
+    },
+    {
+      "name": "bank_teammate_rescues_grab",
+      "status": "pass"
+    },
+    {
+      "name": "bank_server_infected_damage",
+      "status": "pass"
+    },
+    {
+      "name": "bank_team_wipe_restart",
+      "status": "pass",
+      "fixture": "both players start with 5 HP; normal enemy attacks"
+    },
+    {
+      "name": "bank_late_join_existing_world",
+      "status": "pass",
+      "enemy_hp": 65.0
+    },
+    {
+      "name": "bank_empty_room_starts_fresh",
+      "status": "pass"
+    },
+    {
+      "name": "bank_server_loss_cleanup",
+      "status": "pass"
+    },
+    {
+      "name": "coop_perf_report_semantics",
+      "status": "pass",
+      "tests": 4,
+      "evidence": "raw-evidence.zip/final/report-unit.log"
+    }
+  ],
+  "rows": [
+    {
+      "id": "hall_2p_32",
+      "repeat": 1,
+      "diagnostic": false,
+      "label": "一楼大厅 · 2人32敌",
+      "players": 2,
+      "population": 32,
+      "fps": 116.72777967105561,
+      "low1_fps": 69.32965521267784,
+      "frame_p95_ms": 12.458,
+      "frame_p99_ms": 13.174,
+      "server_p95_ms": 8.325,
+      "server_tick_hz": 60.03776750812308,
+      "client_script_mean_ms": 3.99151929092805,
+      "server_script_mean_ms": 5.235452083333334,
+      "gpu_world_mean_ms": 5.591487387848105,
+      "draw_calls_mean": 2659.8755364806866,
+      "render_cpu_mean_ms": 3.193594203159109,
+      "server_up_kib_s": 183.72672060971482,
+      "server_down_kib_s": 72.14035149298606,
+      "server_rss_mb": 627.58984375,
+      "server_cpu_one_core_pct": 50.25460426210978,
+      "kills": 10,
+      "living_end": 22,
+      "actually_loaded_rounds": 5,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "hall_2p_32-r1"
+    },
+    {
+      "id": "hall_2p_32",
+      "repeat": 2,
+      "diagnostic": false,
+      "label": "一楼大厅 · 2人32敌",
+      "players": 2,
+      "population": 32,
+      "fps": 93.81335376101369,
+      "low1_fps": 63.939981670538586,
+      "frame_p95_ms": 14.555,
+      "frame_p99_ms": 15.171,
+      "server_p95_ms": 7.704,
+      "server_tick_hz": 60.066685897173464,
+      "client_script_mean_ms": 4.164707596253902,
+      "server_script_mean_ms": 5.550379812695109,
+      "gpu_world_mean_ms": 5.554909875937234,
+      "draw_calls_mean": 4051.13217623498,
+      "render_cpu_mean_ms": 4.276845128418447,
+      "server_up_kib_s": 201.35497430758457,
+      "server_down_kib_s": 70.15863673859147,
+      "server_rss_mb": 628.77734375,
+      "server_cpu_one_core_pct": 54.58954450737699,
+      "kills": 11,
+      "living_end": 21,
+      "actually_loaded_rounds": 15,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "hall_2p_32-r2"
+    },
+    {
+      "id": "hall_4p_32",
+      "repeat": 1,
+      "diagnostic": false,
+      "label": "一楼大厅 · 4人32敌",
+      "players": 4,
+      "population": 32,
+      "fps": 91.51488049483636,
+      "low1_fps": 59.0939712330548,
+      "frame_p95_ms": 15.149,
+      "frame_p99_ms": 16.359,
+      "server_p95_ms": 9.864,
+      "server_tick_hz": 60.040874027686144,
+      "client_script_mean_ms": 5.6990364583333335,
+      "server_script_mean_ms": 6.426874089490115,
+      "gpu_world_mean_ms": 5.639315538908993,
+      "draw_calls_mean": 2121.519151846785,
+      "render_cpu_mean_ms": 3.0792156060536704,
+      "server_up_kib_s": 476.02495289509153,
+      "server_down_kib_s": 140.84312992842015,
+      "server_rss_mb": 627.87890625,
+      "server_cpu_one_core_pct": 56.69033252854998,
+      "kills": 16,
+      "living_end": 16,
+      "actually_loaded_rounds": 43,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "hall_4p_32-r1"
+    },
+    {
+      "id": "hall_4p_64",
+      "repeat": 1,
+      "diagnostic": false,
+      "label": "一楼大厅 · 4人64敌",
+      "players": 4,
+      "population": 64,
+      "fps": 74.10822116171522,
+      "low1_fps": 35.77241589010714,
+      "frame_p95_ms": 18.998,
+      "frame_p99_ms": 26.977,
+      "server_p95_ms": 18.602,
+      "server_tick_hz": 60.02758642768767,
+      "client_script_mean_ms": 6.176615625,
+      "server_script_mean_ms": 13.452844791666667,
+      "gpu_world_mean_ms": 4.884976347555986,
+      "draw_calls_mean": 2382.0388513513512,
+      "render_cpu_mean_ms": 3.442849663262432,
+      "server_up_kib_s": 413.5367256589857,
+      "server_down_kib_s": 138.1488762265246,
+      "server_rss_mb": 629.48828125,
+      "server_cpu_one_core_pct": 97.47001813429017,
+      "kills": 7,
+      "living_end": 57,
+      "actually_loaded_rounds": 24,
+      "server_60hz_step_budget": false,
+      "client_60fps_p95_budget": false,
+      "evidence": "hall_4p_64-r1"
+    },
+    {
+      "id": "hall_4p_84",
+      "repeat": 1,
+      "diagnostic": false,
+      "label": "一楼大厅 · 4人84敌",
+      "players": 4,
+      "population": 84,
+      "fps": 65.71420123354764,
+      "low1_fps": 34.897259296154004,
+      "frame_p95_ms": 23.993,
+      "frame_p99_ms": 28.191,
+      "server_p95_ms": 23.583,
+      "server_tick_hz": 48.813608012015,
+      "client_script_mean_ms": 6.650870967741936,
+      "server_script_mean_ms": 18.645906768837804,
+      "gpu_world_mean_ms": 4.695534791800951,
+      "draw_calls_mean": 2431.620591039085,
+      "render_cpu_mean_ms": 3.5485109660145895,
+      "server_up_kib_s": 334.15165806672303,
+      "server_down_kib_s": 145.21347038631762,
+      "server_rss_mb": 629.5,
+      "server_cpu_one_core_pct": 107.23590292544893,
+      "kills": 6,
+      "living_end": 78,
+      "actually_loaded_rounds": 24,
+      "server_60hz_step_budget": false,
+      "client_60fps_p95_budget": false,
+      "evidence": "hall_4p_84-r1"
+    },
+    {
+      "id": "cash_4p_32",
+      "repeat": 1,
+      "diagnostic": false,
+      "label": "一楼现金办公区 · 4人32敌",
+      "players": 4,
+      "population": 32,
+      "fps": 86.78974374248763,
+      "low1_fps": 60.832008064586205,
+      "frame_p95_ms": 14.991,
+      "frame_p99_ms": 16.035,
+      "server_p95_ms": 11.877,
+      "server_tick_hz": 60.05766911124086,
+      "client_script_mean_ms": 5.427198958333333,
+      "server_script_mean_ms": 7.424400624349635,
+      "gpu_world_mean_ms": 4.915621482818867,
+      "draw_calls_mean": 2809.7022350396537,
+      "render_cpu_mean_ms": 3.619240090927806,
+      "server_up_kib_s": 558.4960915956323,
+      "server_down_kib_s": 139.98153808659265,
+      "server_rss_mb": 629.9375,
+      "server_cpu_one_core_pct": 70.79357347904254,
+      "kills": 22,
+      "living_end": 10,
+      "actually_loaded_rounds": 42,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "cash_4p_32-r1"
+    },
+    {
+      "id": "activity_4p_32",
+      "repeat": 1,
+      "diagnostic": false,
+      "label": "三楼活动区 · 4人32敌",
+      "players": 4,
+      "population": 32,
+      "fps": 100.25512769597685,
+      "low1_fps": 67.4217907227616,
+      "frame_p95_ms": 13.848,
+      "frame_p99_ms": 14.552,
+      "server_p95_ms": 11.053,
+      "server_tick_hz": 60.06444834054305,
+      "client_script_mean_ms": 5.324431699687175,
+      "server_script_mean_ms": 6.687103017689906,
+      "gpu_world_mean_ms": 4.002128045161317,
+      "draw_calls_mean": 2177.7445346658337,
+      "render_cpu_mean_ms": 3.1576464725687385,
+      "server_up_kib_s": 504.00603375431365,
+      "server_down_kib_s": 140.74467771017072,
+      "server_rss_mb": 631.3984375,
+      "server_cpu_one_core_pct": 57.19920199732207,
+      "kills": 16,
+      "living_end": 16,
+      "actually_loaded_rounds": 39,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "activity_4p_32-r1"
+    },
+    {
+      "id": "conference_4p_32",
+      "repeat": 1,
+      "diagnostic": false,
+      "label": "四楼会议区 · 4人32敌",
+      "players": 4,
+      "population": 32,
+      "fps": 129.3179990311791,
+      "low1_fps": 72.93794023256784,
+      "frame_p95_ms": 12.313,
+      "frame_p99_ms": 13.23,
+      "server_p95_ms": 15.429,
+      "server_tick_hz": 60.04833515678026,
+      "client_script_mean_ms": 4.744797086368366,
+      "server_script_mean_ms": 10.518815625,
+      "gpu_world_mean_ms": 4.374631168304546,
+      "draw_calls_mean": 1384.4394966118102,
+      "render_cpu_mean_ms": 2.4953557605434136,
+      "server_up_kib_s": 479.6633817581977,
+      "server_down_kib_s": 141.9751820269891,
+      "server_rss_mb": 631.46875,
+      "server_cpu_one_core_pct": 87.80857478355499,
+      "kills": 17,
+      "living_end": 15,
+      "actually_loaded_rounds": 42,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "conference_4p_32-r1"
+    },
+    {
+      "id": "corridor_4p_24",
+      "repeat": 1,
+      "diagnostic": false,
+      "label": "三楼前楼梯走廊 · 4人24敌",
+      "players": 4,
+      "population": 24,
+      "fps": 76.54823180156545,
+      "low1_fps": 59.75198330621512,
+      "frame_p95_ms": 15.657,
+      "frame_p99_ms": 16.444,
+      "server_p95_ms": 15.524,
+      "server_tick_hz": 60.03932857162939,
+      "client_script_mean_ms": 4.427613943808533,
+      "server_script_mean_ms": 8.58316961498439,
+      "gpu_world_mean_ms": 6.496995096994246,
+      "draw_calls_mean": 4505.813573180703,
+      "render_cpu_mean_ms": 5.146274730014879,
+      "server_up_kib_s": 499.82180949305507,
+      "server_down_kib_s": 140.7609826754362,
+      "server_rss_mb": 631.46875,
+      "server_cpu_one_core_pct": 73.51330666713352,
+      "kills": 17,
+      "living_end": 7,
+      "actually_loaded_rounds": 41,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "corridor_4p_24-r1"
+    },
+    {
+      "id": "hall_84_1440p",
+      "repeat": 1,
+      "diagnostic": true,
+      "label": "诊断：大厅84敌 · 原生1440p",
+      "players": 4,
+      "population": 84,
+      "fps": 50.77611701822606,
+      "low1_fps": 34.11442737038413,
+      "frame_p95_ms": 27.606,
+      "frame_p99_ms": 28.849,
+      "server_p95_ms": 23.592,
+      "server_tick_hz": 52.22437281636841,
+      "client_script_mean_ms": 6.681351716961498,
+      "server_script_mean_ms": 17.343019047619048,
+      "gpu_world_mean_ms": 6.768473500535168,
+      "draw_calls_mean": 3395.039457459926,
+      "render_cpu_mean_ms": 4.860038219045035,
+      "server_up_kib_s": 373.01666287003764,
+      "server_down_kib_s": 143.0172852493378,
+      "server_rss_mb": 631.47265625,
+      "server_cpu_one_core_pct": 110.36675843643735,
+      "kills": 4,
+      "living_end": 80,
+      "actually_loaded_rounds": 36,
+      "server_60hz_step_budget": false,
+      "client_60fps_p95_budget": false,
+      "evidence": "hall_84_1440p-r1"
+    },
+    {
+      "id": "hall_84_half_scale",
+      "repeat": 1,
+      "diagnostic": true,
+      "label": "诊断：大厅84敌 · 半渲染比例",
+      "players": 4,
+      "population": 84,
+      "fps": 54.64779496147331,
+      "low1_fps": 33.212660666245974,
+      "frame_p95_ms": 28.019,
+      "frame_p99_ms": 29.423,
+      "server_p95_ms": 25.754,
+      "server_tick_hz": 48.43522930829352,
+      "client_script_mean_ms": 6.969485416666667,
+      "server_script_mean_ms": 18.821686700767263,
+      "gpu_world_mean_ms": 2.5303940452114686,
+      "draw_calls_mean": 3129.426116838488,
+      "render_cpu_mean_ms": 4.211065295362527,
+      "server_up_kib_s": 418.72598329554415,
+      "server_down_kib_s": 142.32941527993984,
+      "server_rss_mb": 631.48828125,
+      "server_cpu_one_core_pct": 106.14226432913169,
+      "kills": 12,
+      "living_end": 72,
+      "actually_loaded_rounds": 14,
+      "server_60hz_step_budget": false,
+      "client_60fps_p95_budget": false,
+      "evidence": "hall_84_half_scale-r1"
+    },
+    {
+      "id": "hall_84_no_shadows",
+      "repeat": 1,
+      "diagnostic": true,
+      "label": "诊断：大厅84敌 · 关闭阴影",
+      "players": 4,
+      "population": 84,
+      "fps": 111.04407547915707,
+      "low1_fps": 63.604015533514016,
+      "frame_p95_ms": 14.27,
+      "frame_p99_ms": 15.282,
+      "server_p95_ms": 23.341,
+      "server_tick_hz": 53.23450557536717,
+      "client_script_mean_ms": 6.64511157455683,
+      "server_script_mean_ms": 16.817805134189033,
+      "gpu_world_mean_ms": 2.2144906919552523,
+      "draw_calls_mean": 288.5922165820643,
+      "render_cpu_mean_ms": 1.7181573604636453,
+      "server_up_kib_s": 463.83164143473266,
+      "server_down_kib_s": 141.45565696520086,
+      "server_rss_mb": 631.484375,
+      "server_cpu_one_core_pct": 104.8260417768705,
+      "kills": 15,
+      "living_end": 69,
+      "actually_loaded_rounds": 38,
+      "server_60hz_step_budget": false,
+      "client_60fps_p95_budget": true,
+      "evidence": "hall_84_no_shadows-r1"
+    },
+    {
+      "id": "hall_4p_32",
+      "repeat": 2,
+      "diagnostic": false,
+      "label": "一楼大厅 · 4人32敌",
+      "players": 4,
+      "population": 32,
+      "fps": 74.37426079622529,
+      "low1_fps": 39.42867844927008,
+      "frame_p95_ms": 17.963,
+      "frame_p99_ms": 23.76,
+      "server_p95_ms": 12.101,
+      "server_tick_hz": 60.056317812028226,
+      "client_script_mean_ms": 5.78058125,
+      "server_script_mean_ms": 7.76085625,
+      "gpu_world_mean_ms": 5.493384681165419,
+      "draw_calls_mean": 3240.047138047138,
+      "render_cpu_mean_ms": 3.89529124394009,
+      "server_up_kib_s": 485.69826139618675,
+      "server_down_kib_s": 140.71135881501002,
+      "server_rss_mb": 631.65234375,
+      "server_cpu_one_core_pct": 69.38012523244106,
+      "kills": 14,
+      "living_end": 18,
+      "actually_loaded_rounds": 41,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": false,
+      "evidence": "hall_4p_32-r2"
+    },
+    {
+      "id": "hall_4p_64",
+      "repeat": 2,
+      "diagnostic": false,
+      "label": "一楼大厅 · 4人64敌",
+      "players": 4,
+      "population": 64,
+      "fps": 60.02104554408202,
+      "low1_fps": 32.780866463862374,
+      "frame_p95_ms": 24.421,
+      "frame_p99_ms": 27.51,
+      "server_p95_ms": 20.694,
+      "server_tick_hz": 58.1609713269535,
+      "client_script_mean_ms": 6.3369052083333335,
+      "server_script_mean_ms": 13.72085284640172,
+      "gpu_world_mean_ms": 4.977216890382817,
+      "draw_calls_mean": 3250.3733055265902,
+      "render_cpu_mean_ms": 4.288608969190197,
+      "server_up_kib_s": 479.2431361815405,
+      "server_down_kib_s": 135.63179949623603,
+      "server_rss_mb": 631.65234375,
+      "server_cpu_one_core_pct": 98.59625450470783,
+      "kills": 16,
+      "living_end": 48,
+      "actually_loaded_rounds": 42,
+      "server_60hz_step_budget": false,
+      "client_60fps_p95_budget": false,
+      "evidence": "hall_4p_64-r2"
+    },
+    {
+      "id": "hall_4p_84",
+      "repeat": 2,
+      "diagnostic": false,
+      "label": "一楼大厅 · 4人84敌",
+      "players": 4,
+      "population": 84,
+      "fps": 53.76546900846825,
+      "low1_fps": 32.77816828311597,
+      "frame_p95_ms": 27.822,
+      "frame_p99_ms": 29.791,
+      "server_p95_ms": 22.572,
+      "server_tick_hz": 55.10016096001617,
+      "client_script_mean_ms": 6.572233333333333,
+      "server_script_mean_ms": 16.447376844494894,
+      "gpu_world_mean_ms": 4.897608389665475,
+      "draw_calls_mean": 3263.448717948718,
+      "render_cpu_mean_ms": 4.366252912508024,
+      "server_up_kib_s": 446.5371417301225,
+      "server_down_kib_s": 145.33835243576485,
+      "server_rss_mb": 631.65234375,
+      "server_cpu_one_core_pct": 108.77098325874314,
+      "kills": 12,
+      "living_end": 72,
+      "actually_loaded_rounds": 16,
+      "server_60hz_step_budget": false,
+      "client_60fps_p95_budget": false,
+      "evidence": "hall_4p_84-r2"
+    },
+    {
+      "id": "cash_4p_32",
+      "repeat": 2,
+      "diagnostic": false,
+      "label": "一楼现金办公区 · 4人32敌",
+      "players": 4,
+      "population": 32,
+      "fps": 85.32389023854631,
+      "low1_fps": 56.676949484644595,
+      "frame_p95_ms": 15.072,
+      "frame_p99_ms": 15.982,
+      "server_p95_ms": 12.808,
+      "server_tick_hz": 60.05028836336129,
+      "client_script_mean_ms": 5.461401664932362,
+      "server_script_mean_ms": 8.543994791666666,
+      "gpu_world_mean_ms": 5.421391043519589,
+      "draw_calls_mean": 2700.7190022010273,
+      "render_cpu_mean_ms": 3.58659794482779,
+      "server_up_kib_s": 563.6876293309629,
+      "server_down_kib_s": 140.35637025422102,
+      "server_rss_mb": 631.65234375,
+      "server_cpu_one_core_pct": 70.88853680080571,
+      "kills": 22,
+      "living_end": 10,
+      "actually_loaded_rounds": 42,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "cash_4p_32-r2"
+    },
+    {
+      "id": "activity_4p_32",
+      "repeat": 2,
+      "diagnostic": false,
+      "label": "三楼活动区 · 4人32敌",
+      "players": 4,
+      "population": 32,
+      "fps": 94.79074489445473,
+      "low1_fps": 57.57901820576581,
+      "frame_p95_ms": 14.646,
+      "frame_p99_ms": 15.55,
+      "server_p95_ms": 9.152,
+      "server_tick_hz": 60.112821946071605,
+      "client_script_mean_ms": 5.542029136316337,
+      "server_script_mean_ms": 6.713442247658689,
+      "gpu_world_mean_ms": 3.961314852717686,
+      "draw_calls_mean": 2074.3214521452146,
+      "render_cpu_mean_ms": 3.1725570963554257,
+      "server_up_kib_s": 507.5110928994247,
+      "server_down_kib_s": 140.41020446663288,
+      "server_rss_mb": 631.65625,
+      "server_cpu_one_core_pct": 68.27550662634464,
+      "kills": 15,
+      "living_end": 17,
+      "actually_loaded_rounds": 40,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "activity_4p_32-r2"
+    },
+    {
+      "id": "conference_4p_32",
+      "repeat": 2,
+      "diagnostic": false,
+      "label": "四楼会议区 · 4人32敌",
+      "players": 4,
+      "population": 32,
+      "fps": 117.61738738213444,
+      "low1_fps": 69.01988135845657,
+      "frame_p95_ms": 13.015,
+      "frame_p99_ms": 14.108,
+      "server_p95_ms": 7.793,
+      "server_tick_hz": 60.055282105781906,
+      "client_script_mean_ms": 4.720633333333334,
+      "server_script_mean_ms": 5.842504682622269,
+      "gpu_world_mean_ms": 4.626507984944426,
+      "draw_calls_mean": 1587.8908413205538,
+      "render_cpu_mean_ms": 2.788764113435349,
+      "server_up_kib_s": 397.5450545264153,
+      "server_down_kib_s": 140.54097006028587,
+      "server_rss_mb": 631.62109375,
+      "server_cpu_one_core_pct": 55.185482605353286,
+      "kills": 10,
+      "living_end": 22,
+      "actually_loaded_rounds": 48,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "conference_4p_32-r2"
+    },
+    {
+      "id": "corridor_4p_24",
+      "repeat": 2,
+      "diagnostic": false,
+      "label": "三楼前楼梯走廊 · 4人24敌",
+      "players": 4,
+      "population": 24,
+      "fps": 79.68462665092086,
+      "low1_fps": 58.75865560195983,
+      "frame_p95_ms": 15.567,
+      "frame_p99_ms": 16.487,
+      "server_p95_ms": 6.401,
+      "server_tick_hz": 60.06273274308938,
+      "client_script_mean_ms": 4.3020875,
+      "server_script_mean_ms": 4.584629552549428,
+      "gpu_world_mean_ms": 6.197628436272105,
+      "draw_calls_mean": 4200.122545168892,
+      "render_cpu_mean_ms": 4.978439910338792,
+      "server_up_kib_s": 411.07623891651957,
+      "server_down_kib_s": 141.08648421012632,
+      "server_rss_mb": 631.62109375,
+      "server_cpu_one_core_pct": 47.8385821724137,
+      "kills": 9,
+      "living_end": 15,
+      "actually_loaded_rounds": 48,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "corridor_4p_24-r2"
+    },
+    {
+      "id": "hall_84_1440p",
+      "repeat": 2,
+      "diagnostic": true,
+      "label": "诊断：大厅84敌 · 原生1440p",
+      "players": 4,
+      "population": 84,
+      "fps": 52.723038490072284,
+      "low1_fps": 34.121023479055374,
+      "frame_p95_ms": 27.097,
+      "frame_p99_ms": 28.67,
+      "server_p95_ms": 16.087,
+      "server_tick_hz": 59.964251551723514,
+      "client_script_mean_ms": 6.759524453694069,
+      "server_script_mean_ms": 13.877303441084463,
+      "gpu_world_mean_ms": 7.361277921749124,
+      "draw_calls_mean": 2669.3610451306413,
+      "render_cpu_mean_ms": 4.397270788772656,
+      "server_up_kib_s": 440.31490472515173,
+      "server_down_kib_s": 141.56920003983652,
+      "server_rss_mb": 631.62109375,
+      "server_cpu_one_core_pct": 104.93193833477912,
+      "kills": 6,
+      "living_end": 78,
+      "actually_loaded_rounds": 12,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": false,
+      "evidence": "hall_84_1440p-r2"
+    },
+    {
+      "id": "hall_84_half_scale",
+      "repeat": 2,
+      "diagnostic": true,
+      "label": "诊断：大厅84敌 · 半渲染比例",
+      "players": 4,
+      "population": 84,
+      "fps": 48.94338308305135,
+      "low1_fps": 31.836107717470462,
+      "frame_p95_ms": 28.85,
+      "frame_p99_ms": 30.554,
+      "server_p95_ms": 15.43,
+      "server_tick_hz": 60.03797401856674,
+      "client_script_mean_ms": 6.582099895941727,
+      "server_script_mean_ms": 13.095880208333334,
+      "gpu_world_mean_ms": 2.709959079542428,
+      "draw_calls_mean": 3943.5089514066494,
+      "render_cpu_mean_ms": 5.169590799704842,
+      "server_up_kib_s": 444.36785466026015,
+      "server_down_kib_s": 140.93026388018546,
+      "server_rss_mb": 631.62109375,
+      "server_cpu_one_core_pct": 101.5213780470672,
+      "kills": 6,
+      "living_end": 78,
+      "actually_loaded_rounds": 12,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": false,
+      "evidence": "hall_84_half_scale-r2"
+    },
+    {
+      "id": "hall_84_no_shadows",
+      "repeat": 2,
+      "diagnostic": true,
+      "label": "诊断：大厅84敌 · 关闭阴影",
+      "players": 4,
+      "population": 84,
+      "fps": 109.23396318658943,
+      "low1_fps": 58.261100357982095,
+      "frame_p95_ms": 14.775,
+      "frame_p99_ms": 15.668,
+      "server_p95_ms": 15.048,
+      "server_tick_hz": 59.99213783953736,
+      "client_script_mean_ms": 6.792438541666667,
+      "server_script_mean_ms": 12.766422314911367,
+      "gpu_world_mean_ms": 2.123635529788654,
+      "draw_calls_mean": 237.810888252149,
+      "render_cpu_mean_ms": 1.5848653272093198,
+      "server_up_kib_s": 437.61743214664006,
+      "server_down_kib_s": 137.6332229929971,
+      "server_rss_mb": 631.62890625,
+      "server_cpu_one_core_pct": 91.44730647228961,
+      "kills": 7,
+      "living_end": 77,
+      "actually_loaded_rounds": 36,
+      "server_60hz_step_budget": true,
+      "client_60fps_p95_budget": true,
+      "evidence": "hall_84_no_shadows-r2"
+    }
+  ],
+  "groups": {
+    "hall_2p_32": {
+      "label": "一楼大厅 · 2人32敌",
+      "diagnostic": false,
+      "runs": 2,
+      "ranges": {
+        "fps": [
+          93.81335376101369,
+          116.72777967105561
+        ],
+        "low1_fps": [
+          63.939981670538586,
+          69.32965521267784
+        ],
+        "frame_p95_ms": [
+          12.458,
+          14.555
+        ],
+        "server_p95_ms": [
+          7.704,
+          8.325
+        ],
+        "server_tick_hz": [
+          60.03776750812308,
+          60.066685897173464
+        ],
+        "server_up_kib_s": [
+          183.72672060971482,
+          201.35497430758457
+        ]
+      },
+      "means": {
+        "fps": 105.27056671603465,
+        "frame_p95_ms": 13.506499999999999,
+        "gpu_world_mean_ms": 5.573198631892669,
+        "render_cpu_mean_ms": 3.735219665788778,
+        "draw_calls_mean": 3355.5038563578332,
+        "client_script_mean_ms": 4.078113443590976,
+        "server_script_mean_ms": 5.392915948014221,
+        "server_cpu_one_core_pct": 52.42207438474338
+      }
+    },
+    "hall_4p_32": {
+      "label": "一楼大厅 · 4人32敌",
+      "diagnostic": false,
+      "runs": 2,
+      "ranges": {
+        "fps": [
+          74.37426079622529,
+          91.51488049483636
+        ],
+        "low1_fps": [
+          39.42867844927008,
+          59.0939712330548
+        ],
+        "frame_p95_ms": [
+          15.149,
+          17.963
+        ],
+        "server_p95_ms": [
+          9.864,
+          12.101
+        ],
+        "server_tick_hz": [
+          60.040874027686144,
+          60.056317812028226
+        ],
+        "server_up_kib_s": [
+          476.02495289509153,
+          485.69826139618675
+        ]
+      },
+      "means": {
+        "fps": 82.94457064553083,
+        "frame_p95_ms": 16.556,
+        "gpu_world_mean_ms": 5.566350110037206,
+        "render_cpu_mean_ms": 3.4872534249968803,
+        "draw_calls_mean": 2680.7831449469613,
+        "client_script_mean_ms": 5.739808854166666,
+        "server_script_mean_ms": 7.093865169745057,
+        "server_cpu_one_core_pct": 63.035228880495524
+      }
+    },
+    "hall_4p_64": {
+      "label": "一楼大厅 · 4人64敌",
+      "diagnostic": false,
+      "runs": 2,
+      "ranges": {
+        "fps": [
+          60.02104554408202,
+          74.10822116171522
+        ],
+        "low1_fps": [
+          32.780866463862374,
+          35.77241589010714
+        ],
+        "frame_p95_ms": [
+          18.998,
+          24.421
+        ],
+        "server_p95_ms": [
+          18.602,
+          20.694
+        ],
+        "server_tick_hz": [
+          58.1609713269535,
+          60.02758642768767
+        ],
+        "server_up_kib_s": [
+          413.5367256589857,
+          479.2431361815405
+        ]
+      },
+      "means": {
+        "fps": 67.06463335289862,
+        "frame_p95_ms": 21.7095,
+        "gpu_world_mean_ms": 4.931096618969401,
+        "render_cpu_mean_ms": 3.8657293162263144,
+        "draw_calls_mean": 2816.2060784389705,
+        "client_script_mean_ms": 6.256760416666667,
+        "server_script_mean_ms": 13.586848819034193,
+        "server_cpu_one_core_pct": 98.033136319499
+      }
+    },
+    "hall_4p_84": {
+      "label": "一楼大厅 · 4人84敌",
+      "diagnostic": false,
+      "runs": 2,
+      "ranges": {
+        "fps": [
+          53.76546900846825,
+          65.71420123354764
+        ],
+        "low1_fps": [
+          32.77816828311597,
+          34.897259296154004
+        ],
+        "frame_p95_ms": [
+          23.993,
+          27.822
+        ],
+        "server_p95_ms": [
+          22.572,
+          23.583
+        ],
+        "server_tick_hz": [
+          48.813608012015,
+          55.10016096001617
+        ],
+        "server_up_kib_s": [
+          334.15165806672303,
+          446.5371417301225
+        ]
+      },
+      "means": {
+        "fps": 59.73983512100794,
+        "frame_p95_ms": 25.9075,
+        "gpu_world_mean_ms": 4.796571590733214,
+        "render_cpu_mean_ms": 3.9573819392613068,
+        "draw_calls_mean": 2847.534654493901,
+        "client_script_mean_ms": 6.6115521505376345,
+        "server_script_mean_ms": 17.54664180666635,
+        "server_cpu_one_core_pct": 108.00344309209603
+      }
+    },
+    "cash_4p_32": {
+      "label": "一楼现金办公区 · 4人32敌",
+      "diagnostic": false,
+      "runs": 2,
+      "ranges": {
+        "fps": [
+          85.32389023854631,
+          86.78974374248763
+        ],
+        "low1_fps": [
+          56.676949484644595,
+          60.832008064586205
+        ],
+        "frame_p95_ms": [
+          14.991,
+          15.072
+        ],
+        "server_p95_ms": [
+          11.877,
+          12.808
+        ],
+        "server_tick_hz": [
+          60.05028836336129,
+          60.05766911124086
+        ],
+        "server_up_kib_s": [
+          558.4960915956323,
+          563.6876293309629
+        ]
+      },
+      "means": {
+        "fps": 86.05681699051698,
+        "frame_p95_ms": 15.0315,
+        "gpu_world_mean_ms": 5.168506263169228,
+        "render_cpu_mean_ms": 3.602919017877798,
+        "draw_calls_mean": 2755.2106186203405,
+        "client_script_mean_ms": 5.444300311632848,
+        "server_script_mean_ms": 7.984197708008151,
+        "server_cpu_one_core_pct": 70.84105513992412
+      }
+    },
+    "activity_4p_32": {
+      "label": "三楼活动区 · 4人32敌",
+      "diagnostic": false,
+      "runs": 2,
+      "ranges": {
+        "fps": [
+          94.79074489445473,
+          100.25512769597685
+        ],
+        "low1_fps": [
+          57.57901820576581,
+          67.4217907227616
+        ],
+        "frame_p95_ms": [
+          13.848,
+          14.646
+        ],
+        "server_p95_ms": [
+          9.152,
+          11.053
+        ],
+        "server_tick_hz": [
+          60.06444834054305,
+          60.112821946071605
+        ],
+        "server_up_kib_s": [
+          504.00603375431365,
+          507.5110928994247
+        ]
+      },
+      "means": {
+        "fps": 97.5229362952158,
+        "frame_p95_ms": 14.247,
+        "gpu_world_mean_ms": 3.981721448939502,
+        "render_cpu_mean_ms": 3.165101784462082,
+        "draw_calls_mean": 2126.0329934055244,
+        "client_script_mean_ms": 5.433230418001756,
+        "server_script_mean_ms": 6.700272632674297,
+        "server_cpu_one_core_pct": 62.73735431183336
+      }
+    },
+    "conference_4p_32": {
+      "label": "四楼会议区 · 4人32敌",
+      "diagnostic": false,
+      "runs": 2,
+      "ranges": {
+        "fps": [
+          117.61738738213444,
+          129.3179990311791
+        ],
+        "low1_fps": [
+          69.01988135845657,
+          72.93794023256784
+        ],
+        "frame_p95_ms": [
+          12.313,
+          13.015
+        ],
+        "server_p95_ms": [
+          7.793,
+          15.429
+        ],
+        "server_tick_hz": [
+          60.04833515678026,
+          60.055282105781906
+        ],
+        "server_up_kib_s": [
+          397.5450545264153,
+          479.6633817581977
+        ]
+      },
+      "means": {
+        "fps": 123.46769320665678,
+        "frame_p95_ms": 12.664000000000001,
+        "gpu_world_mean_ms": 4.5005695766244855,
+        "render_cpu_mean_ms": 2.6420599369893814,
+        "draw_calls_mean": 1486.1651689661821,
+        "client_script_mean_ms": 4.73271520985085,
+        "server_script_mean_ms": 8.180660153811134,
+        "server_cpu_one_core_pct": 71.49702869445414
+      }
+    },
+    "corridor_4p_24": {
+      "label": "三楼前楼梯走廊 · 4人24敌",
+      "diagnostic": false,
+      "runs": 2,
+      "ranges": {
+        "fps": [
+          76.54823180156545,
+          79.68462665092086
+        ],
+        "low1_fps": [
+          58.75865560195983,
+          59.75198330621512
+        ],
+        "frame_p95_ms": [
+          15.567,
+          15.657
+        ],
+        "server_p95_ms": [
+          6.401,
+          15.524
+        ],
+        "server_tick_hz": [
+          60.03932857162939,
+          60.06273274308938
+        ],
+        "server_up_kib_s": [
+          411.07623891651957,
+          499.82180949305507
+        ]
+      },
+      "means": {
+        "fps": 78.11642922624316,
+        "frame_p95_ms": 15.612,
+        "gpu_world_mean_ms": 6.347311766633175,
+        "render_cpu_mean_ms": 5.062357320176835,
+        "draw_calls_mean": 4352.968059174798,
+        "client_script_mean_ms": 4.364850721904267,
+        "server_script_mean_ms": 6.583899583766909,
+        "server_cpu_one_core_pct": 60.675944419773614
+      }
+    },
+    "hall_84_1440p": {
+      "label": "诊断：大厅84敌 · 原生1440p",
+      "diagnostic": true,
+      "runs": 2,
+      "ranges": {
+        "fps": [
+          50.77611701822606,
+          52.723038490072284
+        ],
+        "low1_fps": [
+          34.11442737038413,
+          34.121023479055374
+        ],
+        "frame_p95_ms": [
+          27.097,
+          27.606
+        ],
+        "server_p95_ms": [
+          16.087,
+          23.592
+        ],
+        "server_tick_hz": [
+          52.22437281636841,
+          59.964251551723514
+        ],
+        "server_up_kib_s": [
+          373.01666287003764,
+          440.31490472515173
+        ]
+      },
+      "means": {
+        "fps": 51.74957775414917,
+        "frame_p95_ms": 27.3515,
+        "gpu_world_mean_ms": 7.064875711142147,
+        "render_cpu_mean_ms": 4.628654503908845,
+        "draw_calls_mean": 3032.2002512952836,
+        "client_script_mean_ms": 6.720438085327784,
+        "server_script_mean_ms": 15.610161244351755,
+        "server_cpu_one_core_pct": 107.64934838560823
+      }
+    },
+    "hall_84_half_scale": {
+      "label": "诊断：大厅84敌 · 半渲染比例",
+      "diagnostic": true,
+      "runs": 2,
+      "ranges": {
+        "fps": [
+          48.94338308305135,
+          54.64779496147331
+        ],
+        "low1_fps": [
+          31.836107717470462,
+          33.212660666245974
+        ],
+        "frame_p95_ms": [
+          28.019,
+          28.85
+        ],
+        "server_p95_ms": [
+          15.43,
+          25.754
+        ],
+        "server_tick_hz": [
+          48.43522930829352,
+          60.03797401856674
+        ],
+        "server_up_kib_s": [
+          418.72598329554415,
+          444.36785466026015
+        ]
+      },
+      "means": {
+        "fps": 51.795589022262334,
+        "frame_p95_ms": 28.4345,
+        "gpu_world_mean_ms": 2.6201765623769484,
+        "render_cpu_mean_ms": 4.690328047533685,
+        "draw_calls_mean": 3536.4675341225684,
+        "client_script_mean_ms": 6.775792656304198,
+        "server_script_mean_ms": 15.958783454550298,
+        "server_cpu_one_core_pct": 103.83182118809944
+      }
+    },
+    "hall_84_no_shadows": {
+      "label": "诊断：大厅84敌 · 关闭阴影",
+      "diagnostic": true,
+      "runs": 2,
+      "ranges": {
+        "fps": [
+          109.23396318658943,
+          111.04407547915707
+        ],
+        "low1_fps": [
+          58.261100357982095,
+          63.604015533514016
+        ],
+        "frame_p95_ms": [
+          14.27,
+          14.775
+        ],
+        "server_p95_ms": [
+          15.048,
+          23.341
+        ],
+        "server_tick_hz": [
+          53.23450557536717,
+          59.99213783953736
+        ],
+        "server_up_kib_s": [
+          437.61743214664006,
+          463.83164143473266
+        ]
+      },
+      "means": {
+        "fps": 110.13901933287326,
+        "frame_p95_ms": 14.5225,
+        "gpu_world_mean_ms": 2.169063110871953,
+        "render_cpu_mean_ms": 1.6515113438364826,
+        "draw_calls_mean": 263.20155241710665,
+        "client_script_mean_ms": 6.718775058111748,
+        "server_script_mean_ms": 14.7921137245502,
+        "server_cpu_one_core_pct": 98.13667412458005
+      }
+    }
+  },
+  "sample_seconds": 16,
+  "rendered_clients": 1,
+  "sources": "measured-sources.json",
+  "runtime_changes": "Opt-in profiling only in bank_game/bank_session; no gameplay/graphics/network setting changes.",
+  "limits": [
+    "Single Windows host shares CPU/memory/thermal budget across server and clients; not remote VPS measurement.",
+    "Script scopes inclusive, GPU delayed, process CPU 100% is one logical core. Frames include driver and OS work.",
+    "Diagnostic players start with 10000 HP; all damage and normal ammo/reload remain. Not a survivability test.",
+    "Enemies die; live/corpse counts and kills vary. Same policy is not identical frame-by-frame workload.",
+    "Some stress runs miss server tick budget. Higher client FPS in a diagnostic does not establish healthy server simulation.",
+    "Shutdown Texture RID warnings pre-exist; short measurements do not establish long-soak memory stability."
+  ],
+  "user_visual_acceptance": "not_requested_or_inferred"
+}

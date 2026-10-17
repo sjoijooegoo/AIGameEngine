@@ -1,0 +1,418 @@
+{
+  "suite": {
+    "project": "bank",
+    "warmup_seconds": 3,
+    "measure_seconds": 16,
+    "resolution": [
+      1920,
+      1080
+    ],
+    "cases": [
+      {
+        "id": "hall_2p_32",
+        "players": 2,
+        "population": 32,
+        "floor": 0.04,
+        "area": [
+          7,
+          11,
+          25,
+          21
+        ],
+        "player": [
+          18,
+          20
+        ],
+        "label": "一楼大厅 · 2人32敌"
+      },
+      {
+        "id": "hall_4p_32",
+        "players": 4,
+        "population": 32,
+        "floor": 0.04,
+        "area": [
+          7,
+          11,
+          25,
+          21
+        ],
+        "player": [
+          18,
+          20
+        ],
+        "label": "一楼大厅 · 4人32敌"
+      },
+      {
+        "id": "hall_4p_64",
+        "players": 4,
+        "population": 64,
+        "floor": 0.04,
+        "area": [
+          7,
+          11,
+          25,
+          21
+        ],
+        "player": [
+          18,
+          20
+        ],
+        "label": "一楼大厅 · 4人64敌"
+      },
+      {
+        "id": "hall_4p_84",
+        "players": 4,
+        "population": 84,
+        "floor": 0.04,
+        "area": [
+          7,
+          11,
+          25,
+          21
+        ],
+        "player": [
+          18,
+          20
+        ],
+        "label": "一楼大厅 · 4人84敌"
+      },
+      {
+        "id": "cash_4p_32",
+        "players": 4,
+        "population": 32,
+        "floor": 0.04,
+        "area": [
+          11,
+          1,
+          25,
+          9
+        ],
+        "player": [
+          23,
+          8.2
+        ],
+        "label": "一楼现金办公区 · 4人32敌"
+      },
+      {
+        "id": "activity_4p_32",
+        "players": 4,
+        "population": 32,
+        "floor": 7.24,
+        "area": [
+          18,
+          10,
+          33,
+          16
+        ],
+        "player": [
+          26,
+          14
+        ],
+        "label": "三楼活动区 · 4人32敌"
+      },
+      {
+        "id": "conference_4p_32",
+        "players": 4,
+        "population": 32,
+        "floor": 10.84,
+        "area": [
+          16,
+          1,
+          27,
+          9
+        ],
+        "player": [
+          24,
+          7
+        ],
+        "label": "四楼会议区 · 4人32敌"
+      },
+      {
+        "id": "corridor_4p_24",
+        "players": 4,
+        "population": 24,
+        "floor": 7.24,
+        "area": [
+          34,
+          6,
+          39,
+          16.5
+        ],
+        "player": [
+          35.5,
+          15.5
+        ],
+        "label": "三楼前楼梯走廊 · 4人24敌"
+      }
+    ],
+    "diagnostics": [
+      {
+        "id": "hall_84_1440p",
+        "base": "hall_4p_84",
+        "resolution": [
+          2560,
+          1440
+        ],
+        "label": "诊断：大厅84敌 · 原生1440p"
+      },
+      {
+        "id": "hall_84_half_scale",
+        "base": "hall_4p_84",
+        "render_scale": 0.5,
+        "label": "诊断：大厅84敌 · 半渲染比例"
+      },
+      {
+        "id": "hall_84_no_shadows",
+        "base": "hall_4p_84",
+        "no_shadows": true,
+        "label": "诊断：大厅84敌 · 关闭阴影"
+      }
+    ]
+  },
+  "selected": [
+    {
+      "id": "hall_2p_32",
+      "players": 2,
+      "population": 32,
+      "floor": 0.04,
+      "area": [
+        7,
+        11,
+        25,
+        21
+      ],
+      "player": [
+        18,
+        20
+      ],
+      "label": "一楼大厅 · 2人32敌",
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "id": "hall_4p_32",
+      "players": 4,
+      "population": 32,
+      "floor": 0.04,
+      "area": [
+        7,
+        11,
+        25,
+        21
+      ],
+      "player": [
+        18,
+        20
+      ],
+      "label": "一楼大厅 · 4人32敌",
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "id": "hall_4p_64",
+      "players": 4,
+      "population": 64,
+      "floor": 0.04,
+      "area": [
+        7,
+        11,
+        25,
+        21
+      ],
+      "player": [
+        18,
+        20
+      ],
+      "label": "一楼大厅 · 4人64敌",
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "id": "hall_4p_84",
+      "players": 4,
+      "population": 84,
+      "floor": 0.04,
+      "area": [
+        7,
+        11,
+        25,
+        21
+      ],
+      "player": [
+        18,
+        20
+      ],
+      "label": "一楼大厅 · 4人84敌",
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "id": "cash_4p_32",
+      "players": 4,
+      "population": 32,
+      "floor": 0.04,
+      "area": [
+        11,
+        1,
+        25,
+        9
+      ],
+      "player": [
+        23,
+        8.2
+      ],
+      "label": "一楼现金办公区 · 4人32敌",
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "id": "activity_4p_32",
+      "players": 4,
+      "population": 32,
+      "floor": 7.24,
+      "area": [
+        18,
+        10,
+        33,
+        16
+      ],
+      "player": [
+        26,
+        14
+      ],
+      "label": "三楼活动区 · 4人32敌",
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "id": "conference_4p_32",
+      "players": 4,
+      "population": 32,
+      "floor": 10.84,
+      "area": [
+        16,
+        1,
+        27,
+        9
+      ],
+      "player": [
+        24,
+        7
+      ],
+      "label": "四楼会议区 · 4人32敌",
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "id": "corridor_4p_24",
+      "players": 4,
+      "population": 24,
+      "floor": 7.24,
+      "area": [
+        34,
+        6,
+        39,
+        16.5
+      ],
+      "player": [
+        35.5,
+        15.5
+      ],
+      "label": "三楼前楼梯走廊 · 4人24敌",
+      "resolution": [
+        1920,
+        1080
+      ]
+    },
+    {
+      "id": "hall_84_1440p",
+      "players": 4,
+      "population": 84,
+      "floor": 0.04,
+      "area": [
+        7,
+        11,
+        25,
+        21
+      ],
+      "player": [
+        18,
+        20
+      ],
+      "label": "诊断：大厅84敌 · 原生1440p",
+      "resolution": [
+        2560,
+        1440
+      ],
+      "base": "hall_4p_84",
+      "diagnostic_only": true
+    },
+    {
+      "id": "hall_84_half_scale",
+      "players": 4,
+      "population": 84,
+      "floor": 0.04,
+      "area": [
+        7,
+        11,
+        25,
+        21
+      ],
+      "player": [
+        18,
+        20
+      ],
+      "label": "诊断：大厅84敌 · 半渲染比例",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "base": "hall_4p_84",
+      "render_scale": 0.5,
+      "diagnostic_only": true
+    },
+    {
+      "id": "hall_84_no_shadows",
+      "players": 4,
+      "population": 84,
+      "floor": 0.04,
+      "area": [
+        7,
+        11,
+        25,
+        21
+      ],
+      "player": [
+        18,
+        20
+      ],
+      "label": "诊断：大厅84敌 · 关闭阴影",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "base": "hall_4p_84",
+      "no_shadows": true,
+      "diagnostic_only": true
+    }
+  ],
+  "repeat": 2,
+  "warmup_seconds": 3,
+  "measure_seconds": 16,
+  "topology": "Dedicated headless server + one rendered client + remaining headless clients on one Windows host. No injected network impairment.",
+  "semantics": "Wall-time samples, no controller commands/capture/disk writes during measured interval. CPU scopes inclusive. Headless frame rate is not rendered FPS."
+}

@@ -742,6 +742,18 @@
         "gallery.html",
         "report.json"
       ]
+    },
+    {
+      "id": "BANK-COOP-PERF",
+      "kind": "automated",
+      "description": "Current bank real multiplayer indoor combat performance evidence, valid placements and bounded real-time sampling; not guaranteed target FPS.",
+      "checks": [
+        "coop_perf_valid_placements",
+        "coop_perf_real_combat",
+        "coop_perf_multiple_interiors",
+        "coop_perf_repeated_samples",
+        "coop_perf_runtime_errors_absent"
+      ]
     }
   ]
 }

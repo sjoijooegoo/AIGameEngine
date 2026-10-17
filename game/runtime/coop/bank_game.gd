@@ -15,7 +15,10 @@ func _ready() -> void:
 	AppFlow.bank_ready.call_deferred(self)
 
 func advance(dt: float) -> void:
-	if coop!=null and coop.active:coop.advance(dt)
+	if coop!=null and coop.active:
+		profiler.begin_tick()
+		coop.advance(dt)
+		profiler.end_tick()
 	else:super.advance(dt)
 	if room_lighting!=null:room_lighting.update_viewmodel()
 

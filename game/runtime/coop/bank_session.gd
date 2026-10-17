@@ -415,12 +415,16 @@ func advance(dt: float) -> void:
 		if owner_pid>0 and Time.get_unix_time_from_system()-FileAccess.get_modified_time("user://coop_owner_"+str(owner_pid)+".json")>15:
 			get_tree().quit();return
 		server_advance(dt);return
+	var profile_stage: int=world.profiler.mark()
 	super.advance(dt)
+	world.profiler.end_scope("client_prediction_players",profile_stage)
 	if not players.has(local_id):return
 	var action_ack: int=team.get(local_id,{}).get("action_ack",0)
 	while not pending_actions.is_empty() and (int(pending_actions[0][0])<=action_ack or latest_tick-int(pending_actions[0][6])>120):pending_actions.pop_front()
 	if sequence%3==0 and not pending_actions.is_empty():_action_bundle.rpc_id(1,pending_actions)
+	profile_stage=world.profiler.mark()
 	for id in equipment:equipment[id].advance(dt,players[id].aim_pitch)
+	world.profiler.end_scope("client_teammate_animation",profile_stage);profile_stage=world.profiler.mark()
 	restore_local()
 	var body=players[local_id]
 	world.camera_motion.begin_tick();world.tick_count+=1
@@ -443,11 +447,14 @@ func advance(dt: float) -> void:
 	world.firearms.update_view(body.motion!="idle",world.sample_weapon_wall_distance(),dt)
 	world.firearms.phase=saved_phase;world.firearms.phase_time=saved_time;world.firearms.duration=saved_duration
 	if world.firearms.selected=="torch":world.held_weapon.advance(world.tick_count,body.motion!="idle",world.sample_weapon_wall_distance())
+	world.profiler.end_scope("client_weapon_camera",profile_stage);profile_stage=world.profiler.mark()
 	presentation.advance(dt)
+	world.profiler.end_scope("client_world_presentation",profile_stage);profile_stage=world.profiler.mark()
 	world.infected_audio.advance(dt);world.update_combat_ui()
 	world.ui.hud.advance(dt);world.flashlight_lighting.advance(dt);world.door_lighting.advance();world.viewmodel_lighting.advance(dt)
 	world.camera_motion.commit_tick()
 	if panel:panel.refresh_hud()
+	world.profiler.end_scope("client_hud_lighting_audio",profile_stage)
 
 func server_advance(dt: float) -> void:
 	world.ensure_infected()
@@ -456,6 +463,7 @@ func server_advance(dt: float) -> void:
 		file.store_string(JSON.stringify({"pid":OS.get_process_id()}));file.close();ready_written=true
 	if contexts.is_empty():return
 	var tick_started_usec:=Time.get_ticks_usec()
+	var profile_stage: int=world.profiler.mark()
 	tick+=1;world.tick_count=tick;world.navigation.begin_frame()
 	var restart_requested:=false
 	var grabbed_hits: Dictionary={}
@@ -492,13 +500,16 @@ func server_advance(dt: float) -> void:
 		var context=contexts[id]
 		if context.feedback.is_grabbed() and context.feedback.grabber.hit_count>int(grabbed_hits[id]):
 			context.bind(world);context.feedback.release("teammate",true);context.save(world)
+	world.profiler.end_scope("server_players_combat",profile_stage);profile_stage=world.profiler.mark()
 	for door in world.doors.values():door.advance(dt)
 	world.navigation.update_doors();world.crowd.rebuild(world.infected)
+	world.profiler.end_scope("server_doors_crowd",profile_stage);profile_stage=world.profiler.mark()
 	for enemy in world.infected:
 		var target=choose_target(enemy)
 		if target==null:continue
 		target.bind(world);enemy.advance(dt);target.save(world)
 		if enemy.active and enemy.mode!="dead":world.crowd.update(enemy)
+	world.profiler.end_scope("server_infected",profile_stage);profile_stage=world.profiler.mark()
 	# A teammate's hit can release a grab owned by another player's context.
 	for context in contexts.values():
 		if context.feedback.is_grabbed() and context.feedback.grabber.mode!="grab":
@@ -507,9 +518,12 @@ func server_advance(dt: float) -> void:
 	for context in contexts.values():
 		if not context.dead:team_wiped=false
 	if restart_requested and team_wiped:restart_round()
+	world.profiler.end_scope("server_team_state",profile_stage);profile_stage=world.profiler.mark()
 	if tick%3==0:
 		for id in ready_ids():_receive_snapshot.rpc_id(id,tick,roster_revision,all_states(),round_id)
 	if tick%6==0:broadcast_bank()
+	world.profiler.end_scope("server_snapshot_send",profile_stage)
+	world.profiler.count("routes",world.navigation.queries_this_frame)
 	server_tick_usec=Time.get_ticks_usec()-tick_started_usec;server_peak_usec=maxi(server_peak_usec,server_tick_usec)
 
 func advance_player_commands(context,dt: float) -> void:
