@@ -1,0 +1,213 @@
+{
+  "revision": "v22-retail",
+  "events": {
+    "pistol": {
+      "files": [
+        "res://audio/firearms/retail-v22/pistol_01.wav"
+      ],
+      "group": "shot",
+      "gain_db": -4.5,
+      "pitch": [
+        1.0,
+        1.0
+      ],
+      "origin": "l4d2_retail"
+    },
+    "pistol_room": {
+      "files": [
+        "res://audio/firearms/retail-v22/pistol_room_01.wav"
+      ],
+      "group": "room",
+      "gain_db": -19,
+      "pitch": [
+        1.0,
+        1.0
+      ],
+      "origin": "l4d2_retail"
+    },
+    "shotgun": {
+      "files": [
+        "res://audio/firearms/retail-v22/shotgun_01.wav"
+      ],
+      "group": "shot",
+      "gain_db": -3.5,
+      "pitch": [
+        1.0,
+        1.0
+      ],
+      "origin": "l4d2_retail"
+    },
+    "shotgun_room": {
+      "files": [
+        "res://audio/firearms/retail-v22/shotgun_room_01.wav"
+      ],
+      "group": "room",
+      "gain_db": -17,
+      "pitch": [
+        1.0,
+        1.0
+      ],
+      "origin": "l4d2_retail"
+    },
+    "slide": {
+      "files": [
+        "res://audio/firearms/retail-v22/slide_01.wav"
+      ],
+      "group": "mechanical",
+      "gain_db": -11,
+      "pitch": [
+        1.0,
+        1.0
+      ],
+      "origin": "l4d2_retail"
+    },
+    "mag_in": {
+      "files": [
+        "res://audio/firearms/retail-v22/mag_in_01.wav"
+      ],
+      "group": "mechanical",
+      "gain_db": -10,
+      "pitch": [
+        1.0,
+        1.0
+      ],
+      "origin": "l4d2_retail"
+    },
+    "mag_out": {
+      "files": [
+        "res://audio/firearms/retail-v22/mag_out_01.wav"
+      ],
+      "group": "mechanical",
+      "gain_db": -12,
+      "pitch": [
+        1.0,
+        1.0
+      ],
+      "origin": "l4d2_retail"
+    },
+    "pump": {
+      "files": [
+        "res://audio/firearms/retail-v22/pump_01.wav"
+      ],
+      "group": "mechanical",
+      "gain_db": -9,
+      "pitch": [
+        1.0,
+        1.0
+      ],
+      "origin": "l4d2_retail"
+    },
+    "shell": {
+      "files": [
+        "res://audio/firearms/retail-v22/shell_01.wav",
+        "res://audio/firearms/retail-v22/shell_02.wav"
+      ],
+      "group": "mechanical",
+      "gain_db": -12,
+      "pitch": [
+        1.0,
+        1.0
+      ],
+      "origin": "l4d2_retail"
+    },
+    "dry": {
+      "files": [
+        "res://audio/firearms/dry.wav"
+      ],
+      "group": "mechanical",
+      "gain_db": -13,
+      "pitch": [
+        0.97,
+        1.03
+      ]
+    },
+    "hit": {
+      "files": [
+        "res://audio/firearms/hit.wav"
+      ],
+      "group": "impact",
+      "gain_db": -16,
+      "pitch": [
+        0.97,
+        1.03
+      ]
+    },
+    "hit_flesh": {
+      "files": [
+        "res://audio/firearms/hit_flesh.wav"
+      ],
+      "group": "impact",
+      "gain_db": -16,
+      "pitch": [
+        0.97,
+        1.03
+      ]
+    },
+    "hit_head": {
+      "files": [
+        "res://audio/firearms/hit_head.wav"
+      ],
+      "group": "impact",
+      "gain_db": -16,
+      "pitch": [
+        0.97,
+        1.03
+      ]
+    },
+    "corpse_hit": {
+      "files": [
+        "res://audio/firearms/corpse_hit.wav"
+      ],
+      "group": "impact",
+      "gain_db": -13,
+      "pitch": [
+        0.97,
+        1.03
+      ]
+    },
+    "corpse_land": {
+      "files": [
+        "res://audio/firearms/corpse_land.wav"
+      ],
+      "group": "impact",
+      "gain_db": -13,
+      "pitch": [
+        0.97,
+        1.03
+      ]
+    },
+    "baton_swing": {
+      "files": [
+        "res://audio/firearms/baton_swing.wav"
+      ],
+      "group": "impact",
+      "gain_db": -13,
+      "pitch": [
+        0.97,
+        1.03
+      ]
+    },
+    "baton_hit": {
+      "files": [
+        "res://audio/firearms/baton_hit.wav"
+      ],
+      "group": "impact",
+      "gain_db": -13,
+      "pitch": [
+        0.97,
+        1.03
+      ]
+    },
+    "baton_wall": {
+      "files": [
+        "res://audio/firearms/baton_wall.wav"
+      ],
+      "group": "impact",
+      "gain_db": -13,
+      "pitch": [
+        0.97,
+        1.03
+      ]
+    }
+  }
+}

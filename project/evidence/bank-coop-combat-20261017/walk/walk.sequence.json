@@ -1,0 +1,397 @@
+{
+  "name": "walk",
+  "fps": 10,
+  "interval": 6,
+  "frames": [
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\walk\\capture_21.png",
+      "simulation_time": 0.7,
+      "state": {
+        "ack": 42,
+        "avatar": {
+          "bones": 85,
+          "clips": [
+            "idle",
+            "run",
+            "walk"
+          ],
+          "leg_rotation": [
+            0.684722781181335,
+            -0.490801215171814,
+            0.411309003829956,
+            -0.347985446453094
+          ],
+          "motion": "walk",
+          "source": "local_l4d2_reference",
+          "time": 0.0499999991485051
+        },
+        "id": 1784334457,
+        "motion": "walk",
+        "name": "Alpha",
+        "position": [
+          20.0,
+          -0.0191814377903938,
+          -7.08308076858521
+        ],
+        "slot": 0,
+        "target": [
+          20.0,
+          -0.0190933384001255,
+          -7.28000211715698
+        ],
+        "yaw": 0.0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\walk\\capture_26.png",
+      "simulation_time": 0.8,
+      "state": {
+        "ack": 48,
+        "avatar": {
+          "bones": 85,
+          "clips": [
+            "idle",
+            "run",
+            "walk"
+          ],
+          "leg_rotation": [
+            0.559781730175018,
+            -0.564713656902313,
+            0.440332770347595,
+            -0.41695311665535
+          ],
+          "motion": "walk",
+          "source": "local_l4d2_reference",
+          "time": 0.149999997445515
+        },
+        "id": 1784334457,
+        "motion": "walk",
+        "name": "Alpha",
+        "position": [
+          20.0,
+          -0.0191079247742891,
+          -7.33053112030029
+        ],
+        "slot": 0,
+        "target": [
+          20.0,
+          -0.0190933980047703,
+          -7.56000328063965
+        ],
+        "yaw": 0.0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\walk\\capture_31.png",
+      "simulation_time": 0.9,
+      "state": {
+        "ack": 54,
+        "avatar": {
+          "bones": 85,
+          "clips": [
+            "idle",
+            "run",
+            "walk"
+          ],
+          "leg_rotation": [
+            0.462874382734299,
+            -0.58714485168457,
+            0.436913669109344,
+            -0.500114619731903
+          ],
+          "motion": "walk",
+          "source": "local_l4d2_reference",
+          "time": 0.249999995742525
+        },
+        "id": 1784334457,
+        "motion": "walk",
+        "name": "Alpha",
+        "position": [
+          20.0,
+          -0.0190957821905613,
+          -7.60515260696411
+        ],
+        "slot": 0,
+        "target": [
+          20.0,
+          -0.0190933886915445,
+          -7.84000539779663
+        ],
+        "yaw": 0.0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\walk\\capture_36.png",
+      "simulation_time": 1.0,
+      "state": {
+        "ack": 60,
+        "avatar": {
+          "bones": 85,
+          "clips": [
+            "idle",
+            "run",
+            "walk"
+          ],
+          "leg_rotation": [
+            0.449191153049469,
+            -0.611516952514648,
+            0.375049352645874,
+            -0.532552659511566
+          ],
+          "motion": "walk",
+          "source": "local_l4d2_reference",
+          "time": 0.349999994039536
+        },
+        "id": 1784334457,
+        "motion": "walk",
+        "name": "Alpha",
+        "position": [
+          20.0,
+          -0.0190937723964453,
+          -7.88426494598389
+        ],
+        "slot": 0,
+        "target": [
+          20.0,
+          -0.0191420111805201,
+          -8.12000560760498
+        ],
+        "yaw": 0.0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\walk\\capture_41.png",
+      "simulation_time": 1.1,
+      "state": {
+        "ack": 66,
+        "avatar": {
+          "bones": 85,
+          "clips": [
+            "idle",
+            "run",
+            "walk"
+          ],
+          "leg_rotation": [
+            0.583043932914734,
+            -0.533352315425873,
+            0.408567756414413,
+            -0.456801265478134
+          ],
+          "motion": "walk",
+          "source": "local_l4d2_reference",
+          "time": 0.449999992336546
+        },
+        "id": 1784334457,
+        "motion": "walk",
+        "name": "Alpha",
+        "position": [
+          20.0,
+          -0.0191051866859198,
+          -8.16411685943604
+        ],
+        "slot": 0,
+        "target": [
+          20.0,
+          -0.019093357026577,
+          -8.40000247955322
+        ],
+        "yaw": 0.0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\walk\\capture_46.png",
+      "simulation_time": 1.2,
+      "state": {
+        "ack": 72,
+        "avatar": {
+          "bones": 85,
+          "clips": [
+            "idle",
+            "run",
+            "walk"
+          ],
+          "leg_rotation": [
+            0.686910331249237,
+            -0.437720984220505,
+            0.488714605569839,
+            -0.312590092420578
+          ],
+          "motion": "walk",
+          "source": "local_l4d2_reference",
+          "time": 0.549999990633556
+        },
+        "id": 1784334457,
+        "motion": "walk",
+        "name": "Alpha",
+        "position": [
+          20.0,
+          -0.0190953090786934,
+          -8.44408988952637
+        ],
+        "slot": 0,
+        "target": [
+          20.0,
+          -0.019093370065093,
+          -8.67999935150146
+        ],
+        "yaw": 0.0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\walk\\capture_51.png",
+      "simulation_time": 1.3,
+      "state": {
+        "ack": 78,
+        "avatar": {
+          "bones": 85,
+          "clips": [
+            "idle",
+            "run",
+            "walk"
+          ],
+          "leg_rotation": [
+            0.745727896690369,
+            -0.381437331438065,
+            0.480999916791916,
+            -0.258910477161407
+          ],
+          "motion": "walk",
+          "source": "local_l4d2_reference",
+          "time": 0.649999988930566
+        },
+        "id": 1784334457,
+        "motion": "walk",
+        "name": "Alpha",
+        "position": [
+          20.0,
+          -0.0190936978906393,
+          -8.72408294677734
+        ],
+        "slot": 0,
+        "target": [
+          20.0,
+          -0.019093319773674,
+          -8.95999622344971
+        ],
+        "yaw": 0.0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\walk\\capture_56.png",
+      "simulation_time": 1.4,
+      "state": {
+        "ack": 84,
+        "avatar": {
+          "bones": 85,
+          "clips": [
+            "idle",
+            "run",
+            "walk"
+          ],
+          "leg_rotation": [
+            0.758304715156555,
+            -0.301393359899521,
+            0.474071383476257,
+            -0.330745130777359
+          ],
+          "motion": "walk",
+          "source": "local_l4d2_reference",
+          "time": 0.749999987227576
+        },
+        "id": 1784334457,
+        "motion": "walk",
+        "name": "Alpha",
+        "position": [
+          20.0,
+          -0.0190933905541897,
+          -9.00407981872559
+        ],
+        "slot": 0,
+        "target": [
+          20.0,
+          -0.0190933831036091,
+          -9.23999309539795
+        ],
+        "yaw": 0.0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\walk\\capture_61.png",
+      "simulation_time": 1.5,
+      "state": {
+        "ack": 90,
+        "avatar": {
+          "bones": 85,
+          "clips": [
+            "idle",
+            "run",
+            "walk"
+          ],
+          "leg_rotation": [
+            0.734792172908783,
+            -0.336779326200485,
+            0.522007882595062,
+            -0.272337943315506
+          ],
+          "motion": "walk",
+          "source": "local_l4d2_reference",
+          "time": 0.849999985524586
+        },
+        "id": 1784334457,
+        "motion": "walk",
+        "name": "Alpha",
+        "position": [
+          20.0,
+          -0.0190934240818024,
+          -9.28407669067383
+        ],
+        "slot": 0,
+        "target": [
+          20.0,
+          -0.0190933234989643,
+          -9.51998996734619
+        ],
+        "yaw": 0.0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\walk\\capture_66.png",
+      "simulation_time": 1.6,
+      "state": {
+        "ack": 96,
+        "avatar": {
+          "bones": 85,
+          "clips": [
+            "idle",
+            "run",
+            "walk"
+          ],
+          "leg_rotation": [
+            0.676920294761658,
+            -0.455410897731781,
+            0.504563450813293,
+            -0.282481282949448
+          ],
+          "motion": "walk",
+          "source": "local_l4d2_reference",
+          "time": 0.949999983821596
+        },
+        "id": 1784334457,
+        "motion": "walk",
+        "name": "Alpha",
+        "position": [
+          20.0,
+          -0.0190933905541897,
+          -9.56407356262207
+        ],
+        "slot": 0,
+        "target": [
+          20.0,
+          -0.0190933458507061,
+          -9.79998683929443
+        ],
+        "yaw": 0.0
+      }
+    }
+  ]
+}

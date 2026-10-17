@@ -1,0 +1,171 @@
+{
+  "pins": {
+    "pistol": {
+      "asset_id": "l4d2.viewmodel.pistol",
+      "preparation_key": "205d0e3f368d6174",
+      "source_revision": "e6e565ceee5815d6",
+      "resource": "res://assets/library/l4d2.viewmodel.pistol/205d0e3f368d6174/prepared.tscn",
+      "artifacts": {
+        "l4d2.viewmodel.pistol.glb": "517e5d8b5a310a58bd1814e634131eb317d8e7fe2ede077107d8462107cd1ec7",
+        "l4d2.viewmodel_l4d2.bank.png": "d233b73f29b3641347ae29287efd88df41beb0ead5b78090c5cbde38f7be5907",
+        "l4d2.viewmodel_louis_color.png": "dd436747c07d9cc69cc23672856c7864fbf85fe701dafe74b381c1535e3b6c00",
+        "l4d2.viewmodel_v_4pistols.png": "313c0c8ee05308e36a10bab0eed920c201691d6fa7009da10ce169bf69b04ffd",
+        "prepared.tscn": "8046c2e2b2438d22b8501da8f2cb6fb065a6789d91a1db08eda110fed756cf11"
+      },
+      "clips": {
+        "idle": 2.0416666666666665,
+        "fire": 1.0416666666666667,
+        "deploy": 1.0083333651224773,
+        "reload": 1.7083333333333333,
+        "shove": 0.9507575829823812,
+        "fire_last": 1.0416666666666667,
+        "reload_empty": 2.0416666666666665
+      },
+      "skins": [
+        65,
+        63
+      ]
+    },
+    "shotgun": {
+      "asset_id": "l4d2.viewmodel.shotgun",
+      "preparation_key": "78f0b5d1efe3ff14",
+      "source_revision": "061ec730c17b6182",
+      "resource": "res://assets/library/l4d2.viewmodel.shotgun/78f0b5d1efe3ff14/prepared.tscn",
+      "artifacts": {
+        "l4d2.viewmodel.shotgun.glb": "e4b0995c5f0ead85abae1a8d906af686d69a773db584819fe0232e8298779e94",
+        "l4d2.viewmodel_l4d2.bank.png": "d233b73f29b3641347ae29287efd88df41beb0ead5b78090c5cbde38f7be5907",
+        "l4d2.viewmodel_louis_color.png": "dd436747c07d9cc69cc23672856c7864fbf85fe701dafe74b381c1535e3b6c00",
+        "l4d2.viewmodel_V_shotgun_wood.png": "3bdbe90f394f961a8649b151335710d237ff0fdbafa97c64f346bd979196a1d1",
+        "prepared.tscn": "654cd2cb3a7cc27f92161157da339ceca25c772e8a361ecca987dca0bdb43a62"
+      },
+      "clips": {
+        "idle": 2.0416666666666665,
+        "fire": 0.9890350500742594,
+        "deploy": 1.0083333651224773,
+        "reload": 0.5166666905085245,
+        "shove": 0.7416667143503824,
+        "insert_shell": 0.7083333333333334,
+        "reload_end": 0.6416666905085245
+      },
+      "skins": [
+        65,
+        63
+      ]
+    },
+    "baton": {
+      "asset_id": "l4d2.viewmodel.baton",
+      "preparation_key": "0a84168d6e2b8dff",
+      "source_revision": "180271a5e2e9c0dc",
+      "resource": "res://assets/library/l4d2.viewmodel.baton/0a84168d6e2b8dff/prepared.tscn",
+      "artifacts": {
+        "l4d2.viewmodel.baton.glb": "81a908bc4fa74de823006687f1a8449273efc8dc3fd0b6847481514323e23704",
+        "l4d2.viewmodel_l4d2.bank.png": "d233b73f29b3641347ae29287efd88df41beb0ead5b78090c5cbde38f7be5907",
+        "l4d2.viewmodel_louis_color.png": "dd436747c07d9cc69cc23672856c7864fbf85fe701dafe74b381c1535e3b6c00",
+        "l4d2.viewmodel_tonfa.png": "e871bf8eb3e9d63334fd94b39131cdc48120b2821293b4d24cafa8d1c11142a1",
+        "prepared.tscn": "1b1f5e9d7e57ec69676f191d51fc7bfa6e28afed287062265988cf0907ba9a27"
+      },
+      "clips": {
+        "idle": 1.3333333333333333,
+        "deploy": 1.25,
+        "shove": 0.7416667143503824,
+        "swing_a": 0.7666667302449545,
+        "swing_b": 0.6416666905085245,
+        "swing_c": 0.7666667302449545
+      },
+      "skins": [
+        65,
+        63
+      ],
+      "source_batch": "outerasset\\converted\\left-4-dead-2\\firearms-20261006-085508\\batch.json",
+      "animation_origin": "native_l4d2_bonemerged"
+    }
+  },
+  "source_batch": "outerasset/converted/left-4-dead-2/firearms-20261005-043023/batch.json",
+  "reference_scripts": [
+    "https://raw.githubusercontent.com/akatakun/l4d2-scripts/master/weapon_pistol.txt",
+    "https://raw.githubusercontent.com/akatakun/l4d2-scripts/master/weapon_pumpshotgun.txt"
+  ],
+  "tuning_note": "v26: landed pistol headshots deal 37 within 5 m, 28 beyond 5 m throughout weapon range; ordinary/runner 2 near, 3 far. Body damage/cadence, shotgun and calibrated native audio unchanged.",
+  "weapons": {
+    "pistol": {
+      "label": "P220 手枪",
+      "capacity": 15,
+      "reserve": -1,
+      "damage": 14,
+      "pellets": 1,
+      "cycle": 0.175,
+      "range": 63.5,
+      "range_modifier": 0.75,
+      "punch": 2.0,
+      "standing_spread": 1.5,
+      "moving_spread": 3.0,
+      "max_bloom": 12,
+      "deploy": 0.5,
+      "reload": 1.75,
+      "reload_empty": 2.1,
+      "head_multiplier": 2.0,
+      "falloff_start": 12.7,
+      "head_near_distance": 5.0,
+      "head_damage_near": 37,
+      "head_damage_far": 28
+    },
+    "shotgun": {
+      "label": "泵动霰弹枪",
+      "capacity": 8,
+      "reserve": 72,
+      "damage": 25,
+      "pellets": 10,
+      "cycle": 0.83,
+      "range": 76.2,
+      "range_modifier": 0.7,
+      "punch": 5.0,
+      "standing_spread": 0.8,
+      "moving_spread": 1.5,
+      "max_bloom": 5,
+      "scatter_pitch": 5.0,
+      "scatter_yaw": 7.5,
+      "deploy": 0.5,
+      "reload_start": 0.5,
+      "reload_loop": 0.473,
+      "reload_end": 0.5,
+      "head_multiplier": 2.5
+    },
+    "baton": {
+      "label": "警棍",
+      "capacity": 0,
+      "reserve": 0,
+      "deploy": 0.55,
+      "range": 1.75,
+      "combo_reset": 1.0,
+      "clips": [
+        "swing_a",
+        "swing_b",
+        "swing_c"
+      ],
+      "durations": [
+        0.68,
+        0.62,
+        0.76
+      ],
+      "damage": [
+        38,
+        38,
+        56
+      ],
+      "active_windows": [
+        [
+          0.18,
+          0.34
+        ],
+        [
+          0.16,
+          0.31
+        ],
+        [
+          0.2,
+          0.39
+        ]
+      ]
+    }
+  }
+}

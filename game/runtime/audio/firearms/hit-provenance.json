@@ -1,0 +1,14 @@
+{
+  "origin": "project_authored_procedural_placeholder",
+  "generator": "game/tools/generate_hit_audio.py",
+  "files": {
+    "hit_flesh": {
+      "sha256": "e7ccd3ab8ca572aa3e025ba58b27472309caccf2cca7b75a63b3e3e33e093128",
+      "seconds": 0.17
+    },
+    "hit_head": {
+      "sha256": "0a9d2b135fdf5d6a96188b893a921258bb0fcae1d3bb074c78b26cd04e338de7",
+      "seconds": 0.17
+    }
+  }
+}

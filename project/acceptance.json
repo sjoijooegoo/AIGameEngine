@@ -480,6 +480,50 @@
         "gallery.html"
       ],
       "scope_note": "Not complete bank art or gameplay; local L4D2 model is reference-only."
+    },
+    {
+      "id": "BANK-COOP-COMBAT",
+      "kind": "automated",
+      "description": "Current bank dedicated server, session UI and two-player authoritative combat with local Linux interoperability.",
+      "checks": [
+        "bank_session_ui_join_two",
+        "bank_lobby_world_waits",
+        "bank_lobby_start_ui",
+        "bank_team_movement",
+        "bank_shared_damage_and_separate_ammo",
+        "bank_shared_kill_and_corpse",
+        "bank_server_reload",
+        "bank_local_menu_does_not_pause",
+        "bank_wall_blocks_shot",
+        "bank_shared_door_and_crossing",
+        "bank_teammate_rescues_grab",
+        "bank_server_infected_damage",
+        "bank_team_wipe_restart",
+        "bank_late_join_existing_world",
+        "bank_empty_room_starts_fresh",
+        "bank_server_loss_cleanup",
+        "bank_ui_create_dedicated_process",
+        "bank_ui_start_real_time_two_clients",
+        "bank_ui_host_closes_owned_server",
+        "bank_ui_navigation",
+        "bank_ui_settings",
+        "bank_ui_gameplay_feedback",
+        "bank_release_two_clients",
+        "bank_release_debug_bridge_disabled",
+        "bank_linux_four_clients_and_movement",
+        "bank_linux_authoritative_weapon_state",
+        "bank_linux_leave_cleanup",
+        "bank_linux_cli_address_rejoin"
+      ]
+    },
+    {
+      "id": "BANK-COOP-COMBAT-ART",
+      "kind": "review",
+      "description": "Current bank teammate and combat sequences. Final user art approval pending.",
+      "evidence": [
+        "gallery.html",
+        "technical-review.json"
+      ]
     }
   ]
 }

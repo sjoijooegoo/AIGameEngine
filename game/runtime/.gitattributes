@@ -1,0 +1,5 @@
+# The bank's existing bake manifest verifies exact source bytes.
+# Preserve its local CRLF/LF choice on Windows and Linux checkouts.
+scripts/** -text whitespace=cr-at-eol
+data/** -text whitespace=cr-at-eol
+shaders/** -text whitespace=cr-at-eol

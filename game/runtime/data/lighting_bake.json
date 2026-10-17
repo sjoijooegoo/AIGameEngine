@@ -1,0 +1,19 @@
+{
+  "version": 2,
+  "output": "res://generated/bank_lighting_v2",
+  "texel_size": 0.10,
+  "quality": 2,
+  "bounces": 6,
+  "indirect_energy": 1.0,
+  "light_indirect_energy": 1.0,
+  "environment_energy": 0.25,
+  "probe_subdivision": 3,
+  "max_texture_size": 2048,
+  "directional": true,
+  "bake_mode": "indirect_only",
+  "use_texture_for_bounces": false,
+  "use_denoiser": true,
+  "denoiser_range": 2,
+  "supersampling": true,
+  "supersampling_factor": 2.0
+}

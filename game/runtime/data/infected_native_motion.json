@@ -1,0 +1,6074 @@
+{
+  "models": {
+    "female_formal": {
+      "clips": {
+        "attack_0": {
+          "additive": false,
+          "contact": 0.326530605554581,
+          "events": [
+            {
+              "cycle": 0.326530605554581,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            },
+            {
+              "cycle": 0.714285731315613,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 51.0,
+          "length": 1.66666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving01_Layer"
+        },
+        "attack_1": {
+          "additive": false,
+          "contact": 0.612903237342834,
+          "events": [
+            {
+              "cycle": 0.612903237342834,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 33.0,
+          "length": 1.06666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving02_Layer"
+        },
+        "attack_2": {
+          "additive": false,
+          "contact": 0.553191483020782,
+          "events": [
+            {
+              "cycle": 0.553191483020782,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 49.0,
+          "length": 1.6,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving03_Layer"
+        },
+        "flinch_0": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_01"
+        },
+        "flinch_1": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_02"
+        },
+        "idle_0": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 146.0,
+          "length": 4.83333333333333,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_03"
+        },
+        "idle_1": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 201.0,
+          "length": 6.66666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_03a"
+        },
+        "run_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.172413796186447,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.413793116807938,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.655172407627106,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.896551728248596,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 28.0,
+          "gait": {
+            "ankle_height": {
+              "L": 2.56006526947021,
+              "R": 2.29016017913818
+            },
+            "ankle_height_m": {
+              "L": 0.0622390204533484,
+              "R": 0.0556772235187279
+            },
+            "contacts": {
+              "L": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "R": [
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+              ]
+            },
+            "source_distance": 225.981626050659,
+            "steps": 4.0,
+            "stride_m": 5.49395174161264
+          },
+          "length": 0.9,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_01"
+        },
+        "run_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.206896558403969,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.482758611440659,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.75862067937851,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 1.0,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 33.0,
+          "gait": {
+            "ankle_height": {
+              "L": 2.48967742919922,
+              "R": 2.7902250289917
+            },
+            "ankle_height_m": {
+              "L": 0.0605277866490634,
+              "R": 0.0678345488764811
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 293.782564684326,
+            "steps": 4.0,
+            "stride_m": 7.14229409315364
+          },
+          "length": 1.06666666666667,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_03"
+        },
+        "run_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.206896558403969,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.448275864124298,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.75862067937851,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 1.0,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 2.78383827209473,
+              "R": 2.83470916748047
+            },
+            "ankle_height_m": {
+              "L": 0.0676792772520105,
+              "R": 0.0689160248990924
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 284.291746054999,
+            "steps": 4.0,
+            "stride_m": 6.9115580795707
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_04"
+        },
+        "shove_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.28571429848671,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.523809552192688,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.730158746242523,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.238095238804817,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.428571432828903,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.634920656681061,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 64.0,
+          "length": 2.1,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Backward_01"
+        },
+        "shove_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.220779225230217,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.480519473552704,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.75324672460556,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 1.0,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.103896103799343,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.350649356842041,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.623376607894897,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.896103918552399,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 33.0,
+          "frames": 78.0,
+          "length": 2.33333333333333,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Forward_01"
+        },
+        "shove_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.134615391492844,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.288461536169052,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.490384608507156,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.682692289352417,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.192307695746422,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.384615391492844,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.586538434028625,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 33.0,
+          "frames": 105.0,
+          "length": 3.15151515151515,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Leftward_01"
+        },
+        "shove_3": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.235294118523598,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.431372553110123,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637254893779755,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.911764681339264,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.16666667163372,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.343137264251709,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.529411792755127,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.7843137383461,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 33.0,
+          "frames": 103.0,
+          "length": 3.09090909090909,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Rightward_01"
+        },
+        "walk_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.120689652860165,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.379310339689255,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637931048870087,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.879310369491577,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 59.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.70315456390381,
+              "R": 3.66926383972168
+            },
+            "ankle_height_m": {
+              "L": 0.0900292330017101,
+              "R": 0.0892052987447578
+            },
+            "contacts": {
+              "L": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 157.878098989774,
+            "steps": 4.0,
+            "stride_m": 3.83825301227331
+          },
+          "length": 1.93333333333333,
+          "loop": true,
+          "role": "walk",
+          "source": "a_WalkN"
+        }
+      },
+      "resource": "res://assets/infected_motion/7c7b4f4271d62b0a/female_formal.res",
+      "sha256": "555bbb123aea17bd043bf460d6aab72ae8e68a7bca56d4328590fe782b122da3",
+      "source_group": "anim_common_female"
+    },
+    "hulk": {
+      "clips": {
+        "attack_0": {
+          "additive": false,
+          "contact": 0.51111114025116,
+          "events": [
+            {
+              "cycle": 0.51111114025116,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 46.0,
+          "length": 1.5,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee01_layer"
+        },
+        "flinch_0": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 20.0,
+          "frames": 26.0,
+          "length": 1.25,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_chest"
+        },
+        "flinch_1": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 20.0,
+          "frames": 26.0,
+          "length": 1.25,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_stomach"
+        },
+        "idle_0": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 83.0,
+          "length": 2.73333333333333,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle"
+        },
+        "idle_1": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 57.0,
+          "length": 1.86666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Yell_short"
+        },
+        "run_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.1875,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.375,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.625,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.875,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 17.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.89435386657715,
+              "R": 3.89246153831482
+            },
+            "ankle_height_m": {
+              "L": 0.0792131433441526,
+              "R": 0.0791746524224147
+            },
+            "contacts": {
+              "L": [
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 133.333331705729,
+            "steps": 2.0,
+            "stride_m": 2.71206795242837
+          },
+          "length": 0.533333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_RunN"
+        },
+        "run_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.1875,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.375,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.625,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.875,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            }
+          ],
+          "fps": 27.0,
+          "frames": 25.0,
+          "gait": {
+            "ankle_height": {
+              "L": 6.0651969909668,
+              "R": 3.97778296470642
+            },
+            "ankle_height_m": {
+              "L": 0.123369199388717,
+              "R": 0.0809101337398909
+            },
+            "contacts": {
+              "L": [
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true
+              ]
+            },
+            "source_distance": 200.0,
+            "steps": 2.0,
+            "stride_m": 4.068101978302
+          },
+          "length": 0.888888888888889,
+          "loop": true,
+          "role": "run",
+          "source": "a_RunN_2b"
+        },
+        "shove_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.0561797767877579,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.112359553575516,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.202247187495232,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.280898869037628,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.348314613103867,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.449438214302063,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.550561785697937,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.662921369075775,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.797752797603607,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 90.0,
+          "length": 2.96666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Backward"
+        },
+        "shove_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.103896103799343,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.207792207598686,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.350649356842041,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.480519473552704,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.623376607894897,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.75324672460556,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.909090936183929,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 1.0,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 78.0,
+          "length": 2.56666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Forward"
+        },
+        "shove_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.0769230797886848,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.134615391492844,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.192307695746422,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.278846144676209,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.384615391492844,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.490384608507156,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.586538434028625,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.682692289352417,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 105.0,
+          "length": 3.46666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Leftward"
+        },
+        "shove_3": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.156862750649452,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.235294118523598,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.333333343267441,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.431372553110123,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.529411792755127,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637254893779755,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.7843137383461,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.921568632125854,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 103.0,
+          "length": 3.4,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Rightward"
+        },
+        "walk_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.433333337306976,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.5,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.899999976158142,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.966666638851166,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 31.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.87755012512207,
+              "R": 3.8759458065033
+            },
+            "ankle_height_m": {
+              "L": 0.0788713466748712,
+              "R": 0.0788387140161369
+            },
+            "contacts": {
+              "L": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "R": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ]
+            },
+            "source_distance": 100.0,
+            "steps": 2.0,
+            "stride_m": 2.034050989151
+          },
+          "length": 1.0,
+          "loop": true,
+          "role": "walk",
+          "source": "a_WalkN"
+        }
+      },
+      "resource": "res://assets/infected_motion/7c7b4f4271d62b0a/hulk.res",
+      "sha256": "9ac89fb4456e060d3a1b21e9ed5946cb5d14a557fca8959a87f815996b5ac460",
+      "source_group": "anim_hulk"
+    },
+    "hunter": {
+      "clips": {
+        "attack_0": {
+          "additive": false,
+          "contact": 0.422222226858139,
+          "events": [
+            {
+              "cycle": 0.422222226858139,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 47.0,
+          "length": 1.53333333333333,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_01_Layer"
+        },
+        "attack_1": {
+          "additive": false,
+          "contact": 0.454545468091965,
+          "events": [
+            {
+              "cycle": 0.454545468091965,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 46.0,
+          "length": 1.5,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_02_Layer"
+        },
+        "attack_2": {
+          "additive": false,
+          "contact": 0.463414639234543,
+          "events": [
+            {
+              "cycle": 0.463414639234543,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 43.0,
+          "length": 1.4,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_03_Layer"
+        },
+        "flinch_0": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 26.0,
+          "length": 0.833333333333333,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_chest"
+        },
+        "flinch_1": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 26.0,
+          "length": 0.833333333333333,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_head"
+        },
+        "flinch_2": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 26.0,
+          "length": 0.833333333333333,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_leftleg"
+        },
+        "flinch_3": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 26.0,
+          "length": 0.833333333333333,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_back"
+        },
+        "idle_0": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 104.0,
+          "length": 3.43333333333333,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Standing_01"
+        },
+        "idle_1": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 81.0,
+          "length": 2.66666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Standing_02"
+        },
+        "idle_2": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 83.0,
+          "length": 2.73333333333333,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Standing_03"
+        },
+        "run_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.193548381328583,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.419354826211929,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.677419364452362,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.935483872890472,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 4.38185596466064,
+              "R": 4.10557556152344
+            },
+            "ankle_height_m": {
+              "L": 0.105462861351482,
+              "R": 0.0988133224151997
+            },
+            "contacts": {
+              "L": [
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 233.099521060748,
+            "steps": 4.0,
+            "stride_m": 5.61025799775012
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_RunN"
+        },
+        "shove_0": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 70.0,
+          "length": 2.3,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Backward_01"
+        },
+        "shove_1": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 78.0,
+          "length": 2.56666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Forward"
+        },
+        "shove_2": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 105.0,
+          "length": 3.46666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Leftward"
+        },
+        "shove_3": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 103.0,
+          "length": 3.4,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Rightward"
+        },
+        "walk_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.155172407627106,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.379310339689255,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.620689630508423,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.879310369491577,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 26.75,
+          "frames": 57.0,
+          "gait": {
+            "ankle_height": {
+              "L": 4.40195465087891,
+              "R": 4.46500587463379
+            },
+            "ankle_height_m": {
+              "L": 0.105946598145908,
+              "R": 0.107464120064139
+            },
+            "contacts": {
+              "L": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 178.237535723049,
+            "steps": 4.0,
+            "stride_m": 4.28983532758485
+          },
+          "length": 2.09345794392523,
+          "loop": true,
+          "role": "walk",
+          "source": "a_Walk_Upper_KnifeN"
+        }
+      },
+      "resource": "res://assets/infected_motion/7c7b4f4271d62b0a/hunter.res",
+      "sha256": "93db17e69f1fa37aa11d7ee03240af5d146e8078410b47341bd4ab00c455c388",
+      "source_group": "anim_hunter"
+    },
+    "male_formal": {
+      "clips": {
+        "attack_0": {
+          "additive": false,
+          "contact": 0.47826087474823,
+          "events": [
+            {
+              "cycle": 0.47826087474823,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 48.0,
+          "length": 1.56666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving01_Layer"
+        },
+        "attack_1": {
+          "additive": false,
+          "contact": 0.441860467195511,
+          "events": [
+            {
+              "cycle": 0.441860467195511,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 45.0,
+          "length": 1.46666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving02_Layer"
+        },
+        "attack_2": {
+          "additive": false,
+          "contact": 0.533333361148834,
+          "events": [
+            {
+              "cycle": 0.533333361148834,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 47.0,
+          "length": 1.53333333333333,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving03_Layer"
+        },
+        "flinch_0": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_01"
+        },
+        "flinch_1": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_02"
+        },
+        "idle_0": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 138.0,
+          "length": 4.56666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_01a"
+        },
+        "idle_1": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 303.0,
+          "length": 10.0666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_02a"
+        },
+        "idle_2": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 236.0,
+          "length": 7.83333333333333,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_03"
+        },
+        "run_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.193548381328583,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.419354826211929,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.677419364452362,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.935483872890472,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.32568454742432,
+              "R": 3.70524978637695
+            },
+            "ankle_height_m": {
+              "L": 0.0808626429228331,
+              "R": 0.0900916145663156
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 284.005611740332,
+            "steps": 4.0,
+            "stride_m": 6.90547886991433
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_01"
+        },
+        "run_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.161290317773819,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.451612889766693,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.677419364452362,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.935483872890472,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.39523792266846,
+              "R": 3.40563011169434
+            },
+            "ankle_height_m": {
+              "L": 0.0825538044464961,
+              "R": 0.0828064862202492
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 284.421685728251,
+            "steps": 4.0,
+            "stride_m": 6.91559553667415
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_03"
+        },
+        "run_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.193548381328583,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.451612889766693,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.709677398204803,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.967741906642914,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 39.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.47282981872559,
+              "R": 3.55671381950378
+            },
+            "ankle_height_m": {
+              "L": 0.0844404192757446,
+              "R": 0.0864800240263273
+            },
+            "contacts": {
+              "L": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "R": [
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+              ]
+            },
+            "source_distance": 322.907869503826,
+            "steps": 6.0,
+            "stride_m": 7.85137116173069
+          },
+          "length": 1.26666666666667,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_05"
+        },
+        "shove_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.100000001490116,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.300000011920929,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.5,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.725000023841858,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.1875,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.400000005960464,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.612500011920929,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.850000023841858,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 81.0,
+          "length": 2.66666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Backward_01"
+        },
+        "shove_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.220779225230217,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.480519473552704,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.75324672460556,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 1.0,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.103896103799343,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.350649356842041,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.623376607894897,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.896103918552399,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 78.0,
+          "length": 2.56666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Forward_01"
+        },
+        "shove_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.134615391492844,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.288461536169052,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.490384608507156,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.682692289352417,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.192307695746422,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.384615391492844,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.586538434028625,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 105.0,
+          "length": 3.46666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Leftward_01"
+        },
+        "shove_3": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.235294118523598,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.431372553110123,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637254893779755,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.911764681339264,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.16666667163372,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.343137264251709,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.529411792755127,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.7843137383461,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 103.0,
+          "length": 3.4,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Rightward_01"
+        },
+        "walk_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.120689652860165,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.379310339689255,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637931048870087,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.879310369491577,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 59.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.69713592529297,
+              "R": 3.61693572998047
+            },
+            "ankle_height_m": {
+              "L": 0.0898943293932321,
+              "R": 0.0879442948474364
+            },
+            "contacts": {
+              "L": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 157.878098989774,
+            "steps": 4.0,
+            "stride_m": 3.83874061472042
+          },
+          "length": 1.93333333333333,
+          "loop": true,
+          "role": "walk",
+          "source": "a_WalkN"
+        }
+      },
+      "resource": "res://assets/infected_motion/7c7b4f4271d62b0a/male_formal.res",
+      "sha256": "fafc732c39ad6b09a14bdbc5119c5e64d518210b46e88d13cabba0479ea0dcb2",
+      "source_group": "anim_common"
+    },
+    "male_polo_jeans": {
+      "clips": {
+        "attack_0": {
+          "additive": false,
+          "contact": 0.47826087474823,
+          "events": [
+            {
+              "cycle": 0.47826087474823,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 48.0,
+          "length": 1.56666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving01_Layer"
+        },
+        "attack_1": {
+          "additive": false,
+          "contact": 0.441860467195511,
+          "events": [
+            {
+              "cycle": 0.441860467195511,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 45.0,
+          "length": 1.46666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving02_Layer"
+        },
+        "attack_2": {
+          "additive": false,
+          "contact": 0.533333361148834,
+          "events": [
+            {
+              "cycle": 0.533333361148834,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 47.0,
+          "length": 1.53333333333333,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving03_Layer"
+        },
+        "flinch_0": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_01"
+        },
+        "flinch_1": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_02"
+        },
+        "idle_0": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 138.0,
+          "length": 4.56666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_01a"
+        },
+        "idle_1": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 303.0,
+          "length": 10.0666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_02a"
+        },
+        "idle_2": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 236.0,
+          "length": 7.83333333333333,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_03"
+        },
+        "run_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.193548381328583,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.419354826211929,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.677419364452362,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.935483872890472,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.32568454742432,
+              "R": 3.70524978637695
+            },
+            "ankle_height_m": {
+              "L": 0.0807854571906802,
+              "R": 0.0900056195137204
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 284.005611740332,
+            "steps": 4.0,
+            "stride_m": 6.89888739054667
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_01"
+        },
+        "run_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.161290317773819,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.451612889766693,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.677419364452362,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.935483872890472,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.39523792266846,
+              "R": 3.40563011169434
+            },
+            "ankle_height_m": {
+              "L": 0.082475004451741,
+              "R": 0.0827274450334305
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 284.421685728251,
+            "steps": 4.0,
+            "stride_m": 6.90899440065538
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_03"
+        },
+        "run_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.193548381328583,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.451612889766693,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.709677398204803,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.967741906642914,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 39.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.47282981872559,
+              "R": 3.55671381950378
+            },
+            "ankle_height_m": {
+              "L": 0.0843598184525522,
+              "R": 0.0863974763413915
+            },
+            "contacts": {
+              "L": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "R": [
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+              ]
+            },
+            "source_distance": 322.907869503826,
+            "steps": 6.0,
+            "stride_m": 7.84387680080435
+          },
+          "length": 1.26666666666667,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_05"
+        },
+        "shove_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.100000001490116,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.300000011920929,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.5,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.725000023841858,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.1875,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.400000005960464,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.612500011920929,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.850000023841858,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 81.0,
+          "length": 2.66666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Backward_01"
+        },
+        "shove_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.220779225230217,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.480519473552704,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.75324672460556,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 1.0,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.103896103799343,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.350649356842041,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.623376607894897,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.896103918552399,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 78.0,
+          "length": 2.56666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Forward_01"
+        },
+        "shove_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.134615391492844,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.288461536169052,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.490384608507156,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.682692289352417,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.192307695746422,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.384615391492844,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.586538434028625,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 105.0,
+          "length": 3.46666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Leftward_01"
+        },
+        "shove_3": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.235294118523598,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.431372553110123,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637254893779755,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.911764681339264,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.16666667163372,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.343137264251709,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.529411792755127,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.7843137383461,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 103.0,
+          "length": 3.4,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Rightward_01"
+        },
+        "walk_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.120689652860165,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.379310339689255,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637931048870087,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.879310369491577,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 59.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.69713592529297,
+              "R": 3.61693572998047
+            },
+            "ankle_height_m": {
+              "L": 0.0898085226550424,
+              "R": 0.0878603494736383
+            },
+            "contacts": {
+              "L": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 157.878098989774,
+            "steps": 4.0,
+            "stride_m": 3.83507642574289
+          },
+          "length": 1.93333333333333,
+          "loop": true,
+          "role": "walk",
+          "source": "a_WalkN"
+        }
+      },
+      "resource": "res://assets/infected_motion/7c7b4f4271d62b0a/male_polo_jeans.res",
+      "sha256": "3c4aff7920c2867161a9576e4f599e463ade150746640c3e70c1429b48565e4c",
+      "source_group": "anim_common"
+    },
+    "male_riot": {
+      "clips": {
+        "attack_0": {
+          "additive": false,
+          "contact": 0.47826087474823,
+          "events": [
+            {
+              "cycle": 0.47826087474823,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 48.0,
+          "length": 1.56666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving01_Layer"
+        },
+        "attack_1": {
+          "additive": false,
+          "contact": 0.441860467195511,
+          "events": [
+            {
+              "cycle": 0.441860467195511,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 45.0,
+          "length": 1.46666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving02_Layer"
+        },
+        "attack_2": {
+          "additive": false,
+          "contact": 0.533333361148834,
+          "events": [
+            {
+              "cycle": 0.533333361148834,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 47.0,
+          "length": 1.53333333333333,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving03_Layer"
+        },
+        "flinch_0": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_01"
+        },
+        "flinch_1": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_02"
+        },
+        "idle_0": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 138.0,
+          "length": 4.56666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_01a"
+        },
+        "idle_1": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 303.0,
+          "length": 10.0666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_02a"
+        },
+        "idle_2": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 236.0,
+          "length": 7.83333333333333,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_03"
+        },
+        "run_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.193548381328583,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.419354826211929,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.677419364452362,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.935483872890472,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.32568454742432,
+              "R": 3.70524978637695
+            },
+            "ankle_height_m": {
+              "L": 0.0799457187184101,
+              "R": 0.0890700404620628
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 284.005611740332,
+            "steps": 4.0,
+            "stride_m": 6.82717570679612
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_01"
+        },
+        "run_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.161290317773819,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.451612889766693,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.677419364452362,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.935483872890472,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.39523792266846,
+              "R": 3.40563011169434
+            },
+            "ankle_height_m": {
+              "L": 0.0816177036868854,
+              "R": 0.0818675202310838
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 284.421685728251,
+            "steps": 4.0,
+            "stride_m": 6.83717765783204
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_03"
+        },
+        "run_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.193548381328583,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.451612889766693,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.709677398204803,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.967741906642914,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 39.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.47282981872559,
+              "R": 3.55671381950378
+            },
+            "ankle_height_m": {
+              "L": 0.0834829256610548,
+              "R": 0.0854994027608996
+            },
+            "contacts": {
+              "L": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "R": [
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+              ]
+            },
+            "source_distance": 322.907869503826,
+            "steps": 6.0,
+            "stride_m": 7.76234226042494
+          },
+          "length": 1.26666666666667,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_05"
+        },
+        "shove_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.100000001490116,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.300000011920929,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.5,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.725000023841858,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.1875,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.400000005960464,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.612500011920929,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.850000023841858,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 81.0,
+          "length": 2.66666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Backward_01"
+        },
+        "shove_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.220779225230217,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.480519473552704,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.75324672460556,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 1.0,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.103896103799343,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.350649356842041,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.623376607894897,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.896103918552399,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 78.0,
+          "length": 2.56666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Forward_01"
+        },
+        "shove_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.134615391492844,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.288461536169052,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.490384608507156,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.682692289352417,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.192307695746422,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.384615391492844,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.586538434028625,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 105.0,
+          "length": 3.46666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Leftward_01"
+        },
+        "shove_3": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.235294118523598,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.431372553110123,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637254893779755,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.911764681339264,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.16666667163372,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.343137264251709,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.529411792755127,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.7843137383461,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 103.0,
+          "length": 3.4,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Rightward_01"
+        },
+        "walk_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.120689652860165,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.379310339689255,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637931048870087,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.879310369491577,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 59.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.69713592529297,
+              "R": 3.61693572998047
+            },
+            "ankle_height_m": {
+              "L": 0.0888749923609305,
+              "R": 0.0869470698041803
+            },
+            "contacts": {
+              "L": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 157.878098989774,
+            "steps": 4.0,
+            "stride_m": 3.79521205744215
+          },
+          "length": 1.93333333333333,
+          "loop": true,
+          "role": "walk",
+          "source": "a_WalkN"
+        }
+      },
+      "resource": "res://assets/infected_motion/7c7b4f4271d62b0a/male_riot.res",
+      "sha256": "df23f2590ba8159cff046d99189da6a9c8e25b3072bd2b37a9c9bdd98cd7fdf7",
+      "source_group": "anim_common"
+    },
+    "male_suit": {
+      "clips": {
+        "attack_0": {
+          "additive": false,
+          "contact": 0.47826087474823,
+          "events": [
+            {
+              "cycle": 0.47826087474823,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 48.0,
+          "length": 1.56666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving01_Layer"
+        },
+        "attack_1": {
+          "additive": false,
+          "contact": 0.441860467195511,
+          "events": [
+            {
+              "cycle": 0.441860467195511,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 45.0,
+          "length": 1.46666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving02_Layer"
+        },
+        "attack_2": {
+          "additive": false,
+          "contact": 0.533333361148834,
+          "events": [
+            {
+              "cycle": 0.533333361148834,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 47.0,
+          "length": 1.53333333333333,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving03_Layer"
+        },
+        "flinch_0": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_01"
+        },
+        "flinch_1": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_02"
+        },
+        "idle_0": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 138.0,
+          "length": 4.56666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_01a"
+        },
+        "idle_1": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 303.0,
+          "length": 10.0666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_02a"
+        },
+        "idle_2": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 236.0,
+          "length": 7.83333333333333,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_03"
+        },
+        "run_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.193548381328583,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.419354826211929,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.677419364452362,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.935483872890472,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.32568454742432,
+              "R": 3.70524978637695
+            },
+            "ankle_height_m": {
+              "L": 0.0811780470858628,
+              "R": 0.0904430162675363
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 284.005611740332,
+            "steps": 4.0,
+            "stride_m": 6.9324136410838
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_01"
+        },
+        "run_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.161290317773819,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.451612889766693,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.677419364452362,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.935483872890472,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.39523792266846,
+              "R": 3.40563011169434
+            },
+            "ankle_height_m": {
+              "L": 0.0828758049730089,
+              "R": 0.0831294723302216
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 284.421685728251,
+            "steps": 4.0,
+            "stride_m": 6.9425697678303
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_03"
+        },
+        "run_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.193548381328583,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.451612889766693,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.709677398204803,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.967741906642914,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 39.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.47282981872559,
+              "R": 3.55671381950378
+            },
+            "ankle_height_m": {
+              "L": 0.0847697785299674,
+              "R": 0.086817338744359
+            },
+            "contacts": {
+              "L": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "R": [
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+              ]
+            },
+            "source_distance": 322.907869503826,
+            "steps": 6.0,
+            "stride_m": 7.88199537905024
+          },
+          "length": 1.26666666666667,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_05"
+        },
+        "shove_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.100000001490116,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.300000011920929,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.5,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.725000023841858,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.1875,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.400000005960464,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.612500011920929,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.850000023841858,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 81.0,
+          "length": 2.66666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Backward_01"
+        },
+        "shove_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.220779225230217,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.480519473552704,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.75324672460556,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 1.0,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.103896103799343,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.350649356842041,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.623376607894897,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.896103918552399,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 78.0,
+          "length": 2.56666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Forward_01"
+        },
+        "shove_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.134615391492844,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.288461536169052,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.490384608507156,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.682692289352417,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.192307695746422,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.384615391492844,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.586538434028625,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 105.0,
+          "length": 3.46666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Leftward_01"
+        },
+        "shove_3": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.235294118523598,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.431372553110123,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637254893779755,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.911764681339264,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.16666667163372,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.343137264251709,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.529411792755127,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.7843137383461,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 103.0,
+          "length": 3.4,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Rightward_01"
+        },
+        "walk_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.120689652860165,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.379310339689255,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637931048870087,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.879310369491577,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 59.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.69713592529297,
+              "R": 3.61693572998047
+            },
+            "ankle_height_m": {
+              "L": 0.0902449615850397,
+              "R": 0.0882873209433812
+            },
+            "contacts": {
+              "L": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 157.878098989774,
+            "steps": 4.0,
+            "stride_m": 3.85371359515874
+          },
+          "length": 1.93333333333333,
+          "loop": true,
+          "role": "walk",
+          "source": "a_WalkN"
+        }
+      },
+      "resource": "res://assets/infected_motion/7c7b4f4271d62b0a/male_suit.res",
+      "sha256": "f5f7a7e3fba733cedbd800b41bfd29aa73d4a04c57e4f3ca56b85a1b799dc0d8",
+      "source_group": "anim_common"
+    },
+    "police_male01": {
+      "clips": {
+        "attack_0": {
+          "additive": false,
+          "contact": 0.47826087474823,
+          "events": [
+            {
+              "cycle": 0.47826087474823,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 48.0,
+          "length": 1.56666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving01_Layer"
+        },
+        "attack_1": {
+          "additive": false,
+          "contact": 0.441860467195511,
+          "events": [
+            {
+              "cycle": 0.441860467195511,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 45.0,
+          "length": 1.46666666666667,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving02_Layer"
+        },
+        "attack_2": {
+          "additive": false,
+          "contact": 0.533333361148834,
+          "events": [
+            {
+              "cycle": 0.533333361148834,
+              "name": "AE_ATTACK_HIT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 47.0,
+          "length": 1.53333333333333,
+          "loop": false,
+          "role": "attack",
+          "source": "@Melee_Moving03_Layer"
+        },
+        "flinch_0": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_01"
+        },
+        "flinch_1": {
+          "additive": true,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 21.0,
+          "length": 0.666666666666667,
+          "loop": false,
+          "role": "flinch",
+          "source": "@Flinch_02"
+        },
+        "idle_0": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 138.0,
+          "length": 4.56666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_01a"
+        },
+        "idle_1": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 303.0,
+          "length": 10.0666666666667,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_02a"
+        },
+        "idle_2": {
+          "additive": false,
+          "contact": null,
+          "events": [],
+          "fps": 30.0,
+          "frames": 236.0,
+          "length": 7.83333333333333,
+          "loop": true,
+          "role": "idle",
+          "source": "@Idle_Alert_03"
+        },
+        "run_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.193548381328583,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.419354826211929,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.677419364452362,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.935483872890472,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.32568454742432,
+              "R": 3.70524978637695
+            },
+            "ankle_height_m": {
+              "L": 0.0813906174985022,
+              "R": 0.09067984765211
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 284.005611740332,
+            "steps": 4.0,
+            "stride_m": 6.9505666526574
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_01"
+        },
+        "run_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.161290317773819,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.451612889766693,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.677419364452362,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.935483872890472,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 32.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.39523792266846,
+              "R": 3.40563011169434
+            },
+            "ankle_height_m": {
+              "L": 0.0830928210838092,
+              "R": 0.0833471526867967
+            },
+            "contacts": {
+              "L": [
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 284.421685728251,
+            "steps": 4.0,
+            "stride_m": 6.96074937393445
+          },
+          "length": 1.03333333333333,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_03"
+        },
+        "run_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.193548381328583,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.451612889766693,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.709677398204803,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.967741906642914,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 39.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.47282981872559,
+              "R": 3.55671381950378
+            },
+            "ankle_height_m": {
+              "L": 0.0849917541434285,
+              "R": 0.0870446760379209
+            },
+            "contacts": {
+              "L": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false
+              ],
+              "R": [
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true
+              ]
+            },
+            "source_distance": 322.907869503826,
+            "steps": 6.0,
+            "stride_m": 7.90263493703781
+          },
+          "length": 1.26666666666667,
+          "loop": true,
+          "role": "run",
+          "source": "a_Run_05"
+        },
+        "shove_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.100000001490116,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.300000011920929,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.5,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.725000023841858,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.1875,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.400000005960464,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.612500011920929,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.850000023841858,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 81.0,
+          "length": 2.66666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Backward_01"
+        },
+        "shove_1": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.220779225230217,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.480519473552704,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.75324672460556,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 1.0,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.103896103799343,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.350649356842041,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.623376607894897,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.896103918552399,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 78.0,
+          "length": 2.56666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Forward_01"
+        },
+        "shove_2": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.134615391492844,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.288461536169052,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.490384608507156,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.682692289352417,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.192307695746422,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.384615391492844,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.586538434028625,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 105.0,
+          "length": 3.46666666666667,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Leftward_01"
+        },
+        "shove_3": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.235294118523598,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.431372553110123,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637254893779755,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.911764681339264,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.16666667163372,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.343137264251709,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.529411792755127,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.7843137383461,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 103.0,
+          "length": 3.4,
+          "loop": false,
+          "role": "shove",
+          "source": "@Shoved_Rightward_01"
+        },
+        "walk_0": {
+          "additive": false,
+          "contact": null,
+          "events": [
+            {
+              "cycle": 0.120689652860165,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.379310339689255,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            },
+            {
+              "cycle": 0.637931048870087,
+              "name": "AE_FOOTSTEP_RIGHT",
+              "options": ""
+            },
+            {
+              "cycle": 0.879310369491577,
+              "name": "AE_FOOTSTEP_LEFT",
+              "options": ""
+            }
+          ],
+          "fps": 30.0,
+          "frames": 59.0,
+          "gait": {
+            "ankle_height": {
+              "L": 3.69713592529297,
+              "R": 3.61693572998047
+            },
+            "ankle_height_m": {
+              "L": 0.0904812743495297,
+              "R": 0.0885185074884814
+            },
+            "contacts": {
+              "L": [
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true
+              ],
+              "R": [
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                true,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false,
+                false
+              ]
+            },
+            "source_distance": 157.878098989774,
+            "steps": 4.0,
+            "stride_m": 3.86380481462661
+          },
+          "length": 1.93333333333333,
+          "loop": true,
+          "role": "walk",
+          "source": "a_WalkN"
+        }
+      },
+      "resource": "res://assets/infected_motion/7c7b4f4271d62b0a/police_male01.res",
+      "sha256": "653e0395bd6d7d04057043881f1daee1ec9d4be3a0195e339b13e8054a6e372a",
+      "source_group": "anim_common"
+    }
+  },
+  "revision": "7c7b4f4271d62b0a",
+  "source_manifest": "outerasset/converted/left-4-dead-2/retail-motion-v22-20261008/manifest.json",
+  "source_sha256": "05f4024b7e245295c1b73b2bdfcd18d994bf99efeb115ebaaca7dfc29d9a1641"
+}

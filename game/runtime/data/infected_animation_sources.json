@@ -1,0 +1,253 @@
+{
+  "status": "retail_native_selected_clips_imported",
+  "scan_scope": "Previous blend archive audit retained below; current native source is the user-provided local Steam installation, four shared MDL/ANI libraries.",
+  "native_locomotion_imported": true,
+  "existing_fallback": "Six project-authored clips on four native L4D2 skins",
+  "sources": {
+    "outerasset\\left-4-dead-2\\_actions\\bunny.blend": {
+      "sha256": "bc494ac373715bc0b75942955228a007e6a0245e2b2ec934355345a826565cb8",
+      "actions": 21
+    },
+    "outerasset\\left-4-dead-2\\_actions\\c1_chargerexit.blend": {
+      "sha256": "31589e35e1b30fd7779d9a5264773d534e7dbc7583500f77c685c7cc2bf0a7f4",
+      "actions": 36
+    },
+    "outerasset\\left-4-dead-2\\_actions\\c3_plantation.blend": {
+      "sha256": "f24d816050538f792272434b5c24c2a769150b33420d3a6ad3ce4d52a333f8fa",
+      "actions": 6
+    },
+    "outerasset\\left-4-dead-2\\_actions\\c5_bridge_destruction.blend": {
+      "sha256": "fa17d8ef16cb98d3715e9ccd1694fe9bd8ce8ca24f657ba2cf0eab20cc5b8e41",
+      "actions": 48
+    },
+    "outerasset\\left-4-dead-2\\_actions\\c5m3_bridge_overpass_debris.blend": {
+      "sha256": "d179d743c39e13eb2f69e173a43854516cdd75f4f9b2f594ba1ef72c42d9757a",
+      "actions": 13
+    },
+    "outerasset\\left-4-dead-2\\_actions\\deadbodies.blend": {
+      "sha256": "efbd79db4acaa680da9c9acf301f56d60694294354f910972e363156c31b6fd4",
+      "actions": 24
+    },
+    "outerasset\\left-4-dead-2\\_actions\\destruction_tanker.blend": {
+      "sha256": "038edb64d4f044dcb8049cefceeeaf3af26e218ce98194db43302651a9f211dd",
+      "actions": 26
+    },
+    "outerasset\\left-4-dead-2\\_actions\\editor.blend": {
+      "sha256": "588d3823e40291b8ad6bafefde3b5801ab489e597f863b5bdd1dba75036e9dcd",
+      "actions": 15
+    },
+    "outerasset\\left-4-dead-2\\_actions\\extras.blend": {
+      "sha256": "f2915d2b8c1e4c2c45e6a76f375848a4f39d81bee2d07110906a98ddbb2598e2",
+      "actions": 2
+    },
+    "outerasset\\left-4-dead-2\\_actions\\f18.blend": {
+      "sha256": "55996c3c1c1aea42e98e336482b1b74a1804ead02591bb6b8fc80e8875826d26",
+      "actions": 40
+    },
+    "outerasset\\left-4-dead-2\\_actions\\generic.blend": {
+      "sha256": "7ab189ca0a5edb670a1160a55fae20483de892e1b3b2ca9f501e6286c8b138a2",
+      "actions": 3
+    },
+    "outerasset\\left-4-dead-2\\_actions\\ghostanim.blend": {
+      "sha256": "d82908897cf350f9971f1cac328c3a36049218fb89f80fc6dc5fd4f461ff8524",
+      "actions": 21
+    },
+    "outerasset\\left-4-dead-2\\_actions\\hybridphysx.blend": {
+      "sha256": "03d827f35ad51fc923769573e802577c366dc0760e21fd22c5a64e55933f93e6",
+      "actions": 71
+    },
+    "outerasset\\left-4-dead-2\\_actions\\infected.blend": {
+      "sha256": "69c3f9abc0ff44d6f2c5609ca5b14614b698a11755df28e12ecdfbdf0f5b3233",
+      "actions": 273
+    },
+    "outerasset\\left-4-dead-2\\_actions\\infected_-_limbs.blend": {
+      "sha256": "e0a05f02aa72854e55efa9725d684b85555998da1c1adb273c6b55fcd683d8dc",
+      "actions": 80
+    },
+    "outerasset\\left-4-dead-2\\_actions\\lighthouse.blend": {
+      "sha256": "854d88b56c227811dd6269f44f629c7ff9bc3d7fdfab366abe38ddeb60c83fef",
+      "actions": 22
+    },
+    "outerasset\\left-4-dead-2\\_actions\\missiles.blend": {
+      "sha256": "1a9c89514173570b45d7a79ccce30afbe49d4538eb1e62662e05876fd3dd39f5",
+      "actions": 2
+    },
+    "outerasset\\left-4-dead-2\\_actions\\npcs.blend": {
+      "sha256": "e4d6901e646990aeb6b5fa204ca5a3831b4a178737d0bd4b9f06da4d5bc70428",
+      "actions": 2
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_-_cs_assault.blend": {
+      "sha256": "be64c234d7eccb0033ed2696866be414f50c71c03b062a175e81320ec621b455",
+      "actions": 4
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_-_cs_office.blend": {
+      "sha256": "aed02250112cfb91e54b85c8065a8432d2286d4a02a843c67bfac598527c7d60",
+      "actions": 6
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_buildables.blend": {
+      "sha256": "bf0be2741de01461fc8c25c409c42e68c689b8a68d2f0c7b0c05cd2424bb794d",
+      "actions": 26
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_cemetery_-_gibs.blend": {
+      "sha256": "1097cb55f5d18f24988bd92544bf1159e964bf3c2a5ca81348e55c60ed158b9e",
+      "actions": 34
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_collectables.blend": {
+      "sha256": "649beca341d1ce98e9c1e6dcd1b53e7869df3e9ed009553e28b68dba0e336686",
+      "actions": 12
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_critters.blend": {
+      "sha256": "f96ce9d37c358e8060513fde9d0d1a52bfb1677c3265d2d22f8393079aca215c",
+      "actions": 2
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_debris.blend": {
+      "sha256": "83dd60601a1aac0a3ee18624dba398fbd0ca616f3d5ecdb73801eef159ad2cc9",
+      "actions": 6
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_destruction.blend": {
+      "sha256": "97aee5f3f340f1444433e82b7f382557d7ea843d3b9389870fc6783994f4cb07",
+      "actions": 32
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_doors.blend": {
+      "sha256": "64a5a8427fa0be7558eb6e344523043992a6053419897f32013e2446b7cb58f8",
+      "actions": 632
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_downtown.blend": {
+      "sha256": "39de7c2a493a7bdfcef4934873ff2e7b9bba49849b25535a68df08e6e428d126",
+      "actions": 22
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_equipment.blend": {
+      "sha256": "a515c782dd346b94cd93e5369a9ac61c39b5e6126ce4dc66a546edec58ad4fdc",
+      "actions": 20
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_exteriors.blend": {
+      "sha256": "fb7030b4cd41b30805f3427dc1d6bfadf78d0f0270b701edf424a91c6c1742a8",
+      "actions": 6
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_fairgrounds.blend": {
+      "sha256": "9b05f628e1173208c77291c351b4d7f6ec657e762a424a4d6f1691c5fda1efd3",
+      "actions": 46
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_foliage.blend": {
+      "sha256": "6daa73c9462e3390719d43daf07fb144f34b53dae3f73b589d3f23e669913050",
+      "actions": 2
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_fortifications.blend": {
+      "sha256": "8a95d6d76695ebe3d776a2d0fe10711d5f5b0c8ac1e6169c8e23c09eaf0e9fca",
+      "actions": 3
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_highway.blend": {
+      "sha256": "a3212cdf04bd5e11306845e689225a35167593060502aa86e42085aae01dab8f",
+      "actions": 23
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_industrial.blend": {
+      "sha256": "5233f6aa3cfd7dbc74f8d2c3183ef85b98d17b1b2e12e70b775fdee3e9732ef4",
+      "actions": 9
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_interiors.blend": {
+      "sha256": "ae3b8dc6235a2d1b4e50445b024a6f32f460e9acbe2a1dc804045034763c7f3e",
+      "actions": 6
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_junk.blend": {
+      "sha256": "da3b0dab0ec658f8ffc1bb4319daa8cdcdadacceadb8211b45a779ff83e9c7b0",
+      "actions": 47
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_lighting.blend": {
+      "sha256": "865217d91282c1aefea0b40361d72b3f77587637d5618a86ebd9fe11c4389e6f",
+      "actions": 2
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_mall.blend": {
+      "sha256": "2329597e056391e698962ce7fec34bb9be852778860059b18e48b0925d71c377",
+      "actions": 18
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_mill.blend": {
+      "sha256": "1e109715346e20f373963c679587edb2ff54d8c91bbdb33a064ccb62276b85c8",
+      "actions": 12
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_placeable.blend": {
+      "sha256": "6408078e838a1425ff668ffe3e629d12fefa5101b9e974d1d7f4fd80875961d9",
+      "actions": 20
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_shacks.blend": {
+      "sha256": "ca67eee2b6cb57d9c59871c25da7d4ee62cda65733730d2651374570c95197db",
+      "actions": 6
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_signs.blend": {
+      "sha256": "9c5d15bfe6e820a8c64120b8b33a15becb896b7b09772a99aa488b2efd59ae47",
+      "actions": 12
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_skybox.blend": {
+      "sha256": "c99e4346d2ae0559c350fc7c4160efd7ab1ff7e244a00a689d88cc0aa8aa668e",
+      "actions": 15
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_street.blend": {
+      "sha256": "2a42ef1a4320854e8d3909bc4b876ede7dfa9bb4860cee3465080e01b4e1b4b1",
+      "actions": 17
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_swamp.blend": {
+      "sha256": "cc51203d58d7a306fea534e26252387a83aad5302503ba818cbfa88d25ecb603",
+      "actions": 4
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_trainstation.blend": {
+      "sha256": "98f6fc274309effb080bbe3d4214f1c566b6986091c3502d0451385d985b4843",
+      "actions": 3
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_unique.blend": {
+      "sha256": "cf5f6a70ed1f30cc130ef39c8f55b4e996c1796353a16d0684ddcba932d19971",
+      "actions": 16
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_urban.blend": {
+      "sha256": "491813fa82f3003f825e5d29982cbb53a19822c32ca5b7e26ffca4d5d69ea96e",
+      "actions": 4
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_vehicles.blend": {
+      "sha256": "5afe0339ea280c024d2aa30a8bbca7c8c8c4f185fda69120d73f6e7abb412235",
+      "actions": 137
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_waterfront.blend": {
+      "sha256": "58e0825248253863382db28d72b587bc5129f4201a9750bc7d90d294b43c7063",
+      "actions": 4
+    },
+    "outerasset\\left-4-dead-2\\_actions\\props_windows.blend": {
+      "sha256": "3546d3949a2f6f74ddc917408641ce746be85998c5745ad780064307ad3d5710",
+      "actions": 24
+    },
+    "outerasset\\left-4-dead-2\\_actions\\rollercoaster.blend": {
+      "sha256": "a63918cc051d613328646cdc64bc39cce531925e4a809c31ce467e65f28f4dd7",
+      "actions": 3
+    },
+    "outerasset\\left-4-dead-2\\_actions\\survivors.blend": {
+      "sha256": "d90def2ce23ff79eab5246ae1731bc97606ed78add8ea2ddbebdc0beb37df2fd",
+      "actions": 115
+    },
+    "outerasset\\left-4-dead-2\\_actions\\v_models.blend": {
+      "sha256": "a37ba49b34e9bc3e649ec121d30cccc9b35f6248dadc7a4164bd893c8dcd490c",
+      "actions": 699
+    },
+    "outerasset\\left-4-dead-2\\_actions\\w_models_-_weapons.blend": {
+      "sha256": "15b9fff9df0516d9dc37acde072b443e94d41ee4fdf77f13f7cd5a11ff183f93",
+      "actions": 70
+    },
+    "outerasset\\left-4-dead-2\\_actions\\weapons_-_arms.blend": {
+      "sha256": "b4d7d1215067b2b6667472241fae6a47b519cd6b5d72402c13405ac0cbb7c561",
+      "actions": 49
+    },
+    "outerasset\\left-4-dead-2\\_actions\\weapons_-_melee.blend": {
+      "sha256": "2c2681b72f6021c6440d2703971d9e5e707631c5e80548a03890206ec9547ad1",
+      "actions": 423
+    }
+  },
+  "index_sha256": "d61e63e7db0321bbbadc18cca12b4a1a8cc4778b844554c4dae7df76318ad0fd",
+  "request": "Need original common infected shared animation MDL/VPK or an exported skeletal animation library with provenance. Static @ragdoll poses are not locomotion/death animations.",
+  "previous_scan_scope": "All local _actions/*.blend libraries; names read directly from Blender datablocks. No retail game archive supplied.",
+  "retail": {
+    "installation": "D:/dev/Steam/steamapps/common/Left 4 Dead 2",
+    "snapshot_manifest": "outerasset/source-snapshots/l4d2-retail-20261008/manifest.json",
+    "index": "logs/l4d2-native-animation-index.json",
+    "native_records": 1529,
+    "selected_native_clips": 59,
+    "runtime_motion_manifest": "game/runtime/data/infected_native_motion.json",
+    "audio_provenance": "game/runtime/audio/infected/retail-provenance.json",
+    "scope": "selected original clips plus bank IK/feedback/intact ragdolls; not the complete Source animation state machine"
+  }
+}

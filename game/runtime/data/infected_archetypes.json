@@ -1,0 +1,8 @@
+{
+  "z": {"label":"普通感染者","style":"grab","visual_scale":1.0,"contact":0.42,"duration":1.0,"cooldown":0.30,"gait_rate":1.0,"reaction_gain":1.0,"push_gain":1.0,"head_radius":0.14,"body_radius":0.22},
+  "runner": {"label":"奔跑感染者","style":"swipe","visual_scale":0.98,"contact":0.30,"duration":0.85,"cooldown":0.30,"gait_rate":1.12,"reaction_gain":1.0,"push_gain":1.0,"head_radius":0.14,"body_radius":0.22},
+  "elite": {"label":"重型精英·防暴","style":"overhead","visual_scale":1.14,"contact":0.62,"duration":1.40,"cooldown":0.45,"gait_rate":1.0,"reaction_gain":0.85,"push_gain":0.72,"head_radius":0.15,"body_radius":0.25},
+  "fastElite": {"label":"快速精英·猎手","style":"swipe","visual_scale":1.06,"contact":0.30,"duration":0.80,"cooldown":0.25,"gait_rate":1.1,"reaction_gain":1.15,"push_gain":0.95,"head_radius":0.14,"body_radius":0.22},
+  "sup": {"label":"主管感染者","style":"grab","visual_scale":1.08,"contact":0.50,"duration":1.15,"cooldown":0.35,"gait_rate":0.92,"reaction_gain":0.9,"push_gain":0.85,"head_radius":0.14,"body_radius":0.22},
+  "boss": {"label":"首领·巨型感染者","style":"double_slam","visual_scale":1.28,"contact":0.82,"duration":1.85,"cooldown":0.60,"gait_rate":0.9,"reaction_gain":0.6,"push_gain":0.45,"head_radius":0.18,"body_radius":0.32}
+}

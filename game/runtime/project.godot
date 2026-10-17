@@ -1,0 +1,46 @@
+; Engine configuration file.
+; It's best edited using the editor UI and not directly,
+; since the parameters that go here are not all obvious.
+;
+; Format:
+;   [section] ; section goes between []
+;   param=value ; assign values to parameters
+
+config_version=5
+
+[application]
+
+run/flush_stdout_on_print=true
+
+config/name="银行危机 · 枪械与警棍试玩"
+run/main_scene="res://scenes/main.tscn"
+run/main_scene.bank_line_luminaires_preview="res://scenes/line_luminaire_preview.tscn"
+config/features=PackedStringArray("4.7", "Forward Plus")
+
+[display]
+
+window/size/viewport_width=1280
+window/size/viewport_height=720
+window/size/window_width_override=1280
+window/size/window_height_override=720
+window/stretch/mode="canvas_items"
+window/stretch/aspect="expand"
+
+[importer_defaults]
+
+texture={
+"mipmaps/generate": true
+}
+
+[physics]
+
+3d/physics_engine="Jolt Physics"
+
+[rendering]
+
+renderer/rendering_method.mobile="gl_compatibility"
+lights_and_shadows/positional_shadow/soft_shadow_filter_quality=4
+textures/default_filters/anisotropic_filtering_level=4
+anti_aliasing/quality/msaa_3d=1
+environment/defaults/default_clear_color=Color(0.015, 0.02, 0.025, 1)
+lights_and_shadows/positional_shadow/atlas_size=8192

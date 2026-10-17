@@ -1,0 +1,161 @@
+{
+  "checks": [
+    {
+      "name": "bank_session_ui_join_two",
+      "status": "pass",
+      "population": 84
+    },
+    {
+      "name": "bank_lobby_world_waits",
+      "status": "pass"
+    },
+    {
+      "name": "bank_lobby_start_ui",
+      "status": "pass"
+    },
+    {
+      "name": "bank_team_movement",
+      "status": "pass",
+      "distance": 1.3999549013850892
+    },
+    {
+      "name": "bank_shared_damage_and_separate_ammo",
+      "status": "pass",
+      "hp": [
+        65.0,
+        51.0,
+        37.0
+      ]
+    },
+    {
+      "name": "bank_shared_kill_and_corpse",
+      "status": "pass"
+    },
+    {
+      "name": "bank_server_reload",
+      "status": "pass"
+    },
+    {
+      "name": "bank_local_menu_does_not_pause",
+      "status": "pass"
+    },
+    {
+      "name": "bank_wall_blocks_shot",
+      "status": "pass"
+    },
+    {
+      "name": "bank_shared_door_and_crossing",
+      "status": "pass",
+      "before": [
+        24.1499996185303,
+        -0.019309900701046,
+        6.75
+      ],
+      "after": [
+        26.5300216674805,
+        -0.0190932974219322,
+        6.75
+      ]
+    },
+    {
+      "name": "bank_teammate_rescues_grab",
+      "status": "pass"
+    },
+    {
+      "name": "bank_server_infected_damage",
+      "status": "pass"
+    },
+    {
+      "name": "bank_team_wipe_restart",
+      "status": "pass",
+      "fixture": "both players start with 5 HP; normal enemy attacks"
+    },
+    {
+      "name": "bank_late_join_existing_world",
+      "status": "pass",
+      "enemy_hp": 65.0
+    },
+    {
+      "name": "bank_empty_room_starts_fresh",
+      "status": "pass"
+    },
+    {
+      "name": "bank_server_loss_cleanup",
+      "status": "pass"
+    },
+    {
+      "name": "bank_ui_create_dedicated_process",
+      "status": "pass",
+      "pid": 45320
+    },
+    {
+      "name": "bank_ui_start_real_time_two_clients",
+      "status": "pass"
+    },
+    {
+      "name": "bank_ui_host_closes_owned_server",
+      "status": "pass"
+    },
+    {
+      "name": "bank_ui_navigation",
+      "status": "pass",
+      "pause_freezes_world": true,
+      "no_click_through": true,
+      "native_buttons": true,
+      "keyboard": true,
+      "equipment": true
+    },
+    {
+      "name": "bank_ui_settings",
+      "status": "pass",
+      "volume_and_sensitivity": true,
+      "large_text": true,
+      "tests_do_not_write_preferences": true
+    },
+    {
+      "name": "bank_ui_gameplay_feedback",
+      "status": "pass",
+      "ammo": true,
+      "reload": true,
+      "door": true,
+      "grab": true,
+      "death_restart": true
+    },
+    {
+      "name": "bank_release_two_clients",
+      "status": "pass"
+    },
+    {
+      "name": "bank_release_debug_bridge_disabled",
+      "status": "pass"
+    },
+    {
+      "name": "bank_linux_four_clients_and_movement",
+      "status": "pass",
+      "metres": 2.0532459640495437
+    },
+    {
+      "name": "bank_linux_authoritative_weapon_state",
+      "status": "pass"
+    },
+    {
+      "name": "bank_linux_leave_cleanup",
+      "status": "pass"
+    },
+    {
+      "name": "bank_linux_cli_address_rejoin",
+      "status": "pass"
+    }
+  ],
+  "scope": "current bank co-op, actual UDP, isolated input, WSL release interop",
+  "sources": {
+    "headless": "logs\\sessions\\bank-combat-coop-20261017-121835",
+    "rendered": "logs\\sessions\\bank-combat-coop-20261017-120107",
+    "session-ui": "logs\\sessions\\bank-session-ui-20261017-121715",
+    "linux": "logs\\sessions\\bank-combat-linux-20261017-122408",
+    "singleplayer": "logs\\sessions\\20261017-120140-cfa17f57",
+    "teammate": "logs\\sessions\\bank-teammate-20261017-121911",
+    "release": "logs\\sessions\\bank-coop-release-20261017-122243"
+  },
+  "user_art_acceptance": "pending"
+}

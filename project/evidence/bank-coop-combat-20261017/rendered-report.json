@@ -1,0 +1,113 @@
+{
+  "checks": [
+    {
+      "name": "bank_session_ui_join_two",
+      "status": "pass",
+      "population": 84
+    },
+    {
+      "name": "bank_lobby_start_ui",
+      "status": "pass"
+    },
+    {
+      "name": "bank_team_movement",
+      "status": "pass",
+      "distance": 1.3999549013850892
+    },
+    {
+      "name": "bank_shared_damage_and_separate_ammo",
+      "status": "pass",
+      "hp": [
+        65.0,
+        51.0,
+        37.0
+      ]
+    },
+    {
+      "name": "bank_shared_kill_and_corpse",
+      "status": "pass"
+    },
+    {
+      "name": "bank_server_reload",
+      "status": "pass"
+    },
+    {
+      "name": "bank_local_menu_does_not_pause",
+      "status": "pass"
+    },
+    {
+      "name": "bank_wall_blocks_shot",
+      "status": "pass"
+    },
+    {
+      "name": "bank_shared_door_and_crossing",
+      "status": "pass",
+      "before": [
+        24.1499996185303,
+        -0.019309900701046,
+        6.75
+      ],
+      "after": [
+        26.5300216674805,
+        -0.0190932974219322,
+        6.75
+      ]
+    },
+    {
+      "name": "bank_teammate_rescues_grab",
+      "status": "pass"
+    },
+    {
+      "name": "bank_server_infected_damage",
+      "status": "pass"
+    },
+    {
+      "name": "bank_team_wipe_restart",
+      "status": "pass",
+      "fixture": "both players start with 5 HP; normal enemy attacks"
+    },
+    {
+      "name": "bank_late_join_existing_world",
+      "status": "pass",
+      "enemy_hp": 65.0
+    },
+    {
+      "name": "bank_server_loss_cleanup",
+      "status": "pass"
+    }
+  ],
+  "captures": [
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/alpha/capture_1.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/alpha/capture_18.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_47.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_50.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_53.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_56.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_61.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_64.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_67.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_70.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_71.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_74.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_77.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_80.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_83.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_86.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_89.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_92.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_95.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_98.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_101.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_104.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_107.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_114.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_180.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_183.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_186.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_189.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_228.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/bravo/capture_270.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/alpha/capture_315.png",
+    "D:/AIGameEngine/logs/sessions/bank-combat-coop-20261017-120107/alpha/capture_417.png"
+  ]
+}

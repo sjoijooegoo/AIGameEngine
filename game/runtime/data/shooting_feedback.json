@@ -1,0 +1,47 @@
+{
+  "revision": "v26-02",
+  "pistol": {
+    "head_push_speed": 1.7,
+    "body_push_speed": 0.0,
+    "head_stagger": 0.36,
+    "body_stagger": 0.0,
+    "head_reaction": 1.1,
+    "body_reaction": 0.07,
+    "death_speed": 2.8,
+    "death_lift": 0.65,
+    "death_spin": 4.5,
+    "recovery_blend": 0.24
+  },
+  "shotgun": {
+    "full_force_distance": 3.0,
+    "falloff_distance": 8.0,
+    "full_force_pellets": 6,
+    "live_push_speed": 6.5,
+    "live_stagger": 0.85,
+    "launch_speed": 13.5,
+    "launch_lift": 5.8,
+    "launch_spin": 3.0,
+    "launch_time": 1.25,
+    "launch_speed_cap": 17.0,
+    "head_burst_distance": 3.0,
+    "head_burst_pellets": 2,
+    "air_drag": 0.6,
+    "corpse_launch_gain": 1.0
+  },
+  "blood": {
+    "head_strength": 1.35,
+    "head_drops": 34,
+    "head_clouds": 6,
+    "head_burst_strength": 2.8,
+    "head_burst_drops": 104,
+    "head_burst_clouds": 14,
+    "head_burst_mark_scale": 1.35
+  },
+  "body_collision": {
+    "minimum_speed": 3.2,
+    "maximum_push": 4.8,
+    "transfer": 0.55,
+    "retained_velocity": 0.5,
+    "maximum_targets": 3
+  }
+}

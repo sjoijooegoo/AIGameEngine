@@ -1,0 +1,126 @@
+{
+  "origin": "Valve Left 4 Dead 2 local installation",
+  "usage": "local_reference_only_rights_unverified",
+  "generator_sha256": "385a294f5e859b19442ecee68a3e9e1fe2b03bb814294f3dab6efcbfe668f7af",
+  "processing": "stereo PCM16 48 kHz; DC removal, <= 0.86 peak, 1ms edge fades; original pitch/transient/tail preserved; indoor return uses only native tail",
+  "files": {
+    "pistol": [
+      {
+        "resource": "res://audio/firearms/retail-v22/pistol_01.wav",
+        "sha256": "8a75f204b7f10bc60bf750febdc04c6abe877f118860056790c243fb97c75b24",
+        "source": {
+          "path": "outerasset\\source-snapshots\\l4d2-weapons-v22\\pistol\\gunfire\\pistol_fire.wav",
+          "source_sha256": "ff06a6d12e6b5077373963de7ce3ec2bfbea184c02c27742d1b22d2e298d7275",
+          "installed_path": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\weapons\\pistol\\gunfire\\pistol_fire.wav"
+        },
+        "seconds": 1.0038541666666667
+      }
+    ],
+    "pistol_room": [
+      {
+        "resource": "res://audio/firearms/retail-v22/pistol_room_01.wav",
+        "sha256": "4f7125514dd1f011165c2304e7b801a8938638a7f777125dd942881f4c4a84bf",
+        "source": {
+          "path": "outerasset\\source-snapshots\\l4d2-weapons-v22\\pistol\\gunfire\\pistol_fire.wav",
+          "source_sha256": "ff06a6d12e6b5077373963de7ce3ec2bfbea184c02c27742d1b22d2e298d7275",
+          "installed_path": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\weapons\\pistol\\gunfire\\pistol_fire.wav"
+        },
+        "seconds": 1.0538541666666668
+      }
+    ],
+    "shotgun": [
+      {
+        "resource": "res://audio/firearms/retail-v22/shotgun_01.wav",
+        "sha256": "d35e792003b1343ea268075a034e71b2e2159e1fa7e5f21e258832c946b944aa",
+        "source": {
+          "path": "outerasset\\source-snapshots\\l4d2-weapons-v22\\shotgun\\gunfire\\shotgun_fire_1.wav",
+          "source_sha256": "c53fc692b8be9d93e58c3548d096666c02c4cbeed965d1d9c815bd1c97149833",
+          "installed_path": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\weapons\\shotgun\\gunfire\\shotgun_fire_1.wav"
+        },
+        "seconds": 1.6863541666666666
+      }
+    ],
+    "shotgun_room": [
+      {
+        "resource": "res://audio/firearms/retail-v22/shotgun_room_01.wav",
+        "sha256": "11ca966a5e5a813ab2e0cc46098e4c225ed9fabcaa7913a76af37e3f171ed7c1",
+        "source": {
+          "path": "outerasset\\source-snapshots\\l4d2-weapons-v22\\shotgun\\gunfire\\shotgun_fire_1.wav",
+          "source_sha256": "c53fc692b8be9d93e58c3548d096666c02c4cbeed965d1d9c815bd1c97149833",
+          "installed_path": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\weapons\\shotgun\\gunfire\\shotgun_fire_1.wav"
+        },
+        "seconds": 1.7363541666666666
+      }
+    ],
+    "slide": [
+      {
+        "resource": "res://audio/firearms/retail-v22/slide_01.wav",
+        "sha256": "c23127c04daf6ed5ba43f1fc633f9ea9102fe61ec5885d1c121311b7e31d5dc8",
+        "source": {
+          "path": "outerasset\\source-snapshots\\l4d2-weapons-v22\\pistol\\gunother\\pistol_slideforward_1.wav",
+          "source_sha256": "d23519d6939f4bc0b0161547b4736c557444b28a5d88ca44d3143b753ecc8326",
+          "installed_path": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\weapons\\pistol\\gunother\\pistol_slideforward_1.wav"
+        },
+        "seconds": 0.2618958333333333
+      }
+    ],
+    "mag_in": [
+      {
+        "resource": "res://audio/firearms/retail-v22/mag_in_01.wav",
+        "sha256": "f158691cc975ec5f7d2bac0a5f5eafcff707d311d062db26d64d62db16bff4c1",
+        "source": {
+          "path": "outerasset\\source-snapshots\\l4d2-weapons-v22\\pistol\\gunother\\pistol_clip_in_1.wav",
+          "source_sha256": "671d265c58b28d72ef734e828fe1000667a13c3f2cf20ac29bbc0afc6feeb411",
+          "installed_path": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\weapons\\pistol\\gunother\\pistol_clip_in_1.wav"
+        },
+        "seconds": 0.29283333333333333
+      }
+    ],
+    "mag_out": [
+      {
+        "resource": "res://audio/firearms/retail-v22/mag_out_01.wav",
+        "sha256": "9fff71b9d362ced723e694e288365ef8e7f9212b1513aef356fcaf004a1970bb",
+        "source": {
+          "path": "outerasset\\source-snapshots\\l4d2-weapons-v22\\pistol\\gunother\\pistol_clip_out_1.wav",
+          "source_sha256": "0cb1616318c06ec91e02618cadfa56fc97a37cdebf9b7722f00d4975b4c23feb",
+          "installed_path": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\weapons\\pistol\\gunother\\pistol_clip_out_1.wav"
+        },
+        "seconds": 0.34522916666666664
+      }
+    ],
+    "pump": [
+      {
+        "resource": "res://audio/firearms/retail-v22/pump_01.wav",
+        "sha256": "14383ec96bfee68d0d4371037bc18ce30e92525064397fe2f86d922014e152fb",
+        "source": {
+          "path": "outerasset\\source-snapshots\\l4d2-weapons-v22\\shotgun\\gunother\\shotgun_pump_1.wav",
+          "source_sha256": "05f976ba6cdc0a6c74f92126c68d353879aeb79117aaa6474af2e535c55d6283",
+          "installed_path": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\weapons\\shotgun\\gunother\\shotgun_pump_1.wav"
+        },
+        "seconds": 0.7865833333333333
+      }
+    ],
+    "shell": [
+      {
+        "resource": "res://audio/firearms/retail-v22/shell_01.wav",
+        "sha256": "547c5621ca802fdc7ac38f9caf08c37e6b7d3adc78af995f0995b2ceb1363a6a",
+        "source": {
+          "path": "outerasset\\source-snapshots\\l4d2-weapons-v22\\shotgun\\gunother\\shotgun_load_shell_2.wav",
+          "source_sha256": "392e670dcbc9146f4a4036c144da98934122f06af331346b23fa04d5ea073728",
+          "installed_path": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\weapons\\shotgun\\gunother\\shotgun_load_shell_2.wav"
+        },
+        "seconds": 0.5311666666666667
+      },
+      {
+        "resource": "res://audio/firearms/retail-v22/shell_02.wav",
+        "sha256": "174a74f19ad236d0674e8584e3aef72703cb91fd42ad8de8f96b19caa664922a",
+        "source": {
+          "path": "outerasset\\source-snapshots\\l4d2-weapons-v22\\shotgun\\gunother\\shotgun_load_shell_4.wav",
+          "source_sha256": "d69f4e473c0f9413a59cd0f58b1b3ed5c5c5f85ca7c92ef83c9d8630e285c224",
+          "installed_path": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\weapons\\shotgun\\gunother\\shotgun_load_shell_4.wav"
+        },
+        "seconds": 0.5630833333333334
+      }
+    ]
+  }
+}

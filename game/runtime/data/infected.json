@@ -1,0 +1,2660 @@
+{
+  "version": 1,
+  "source": "OriginGame.html",
+  "source_sha256": "41b0969b5be4dbf094aef0b13fc8077ba7ca68ebbaf7e3186f88cdc29e5b7f10",
+  "initial_flags": {
+    "cabinetPushed": false
+  },
+  "random_policy": "Fixed midpoint for source rand calls; no random source mutation.",
+  "types": {
+    "z": {
+      "hp": 65,
+      "speed": [
+        0.72,
+        1.05
+      ],
+      "notice": 9,
+      "dmg": 22,
+      "r": 0.34,
+      "scale": 1,
+      "poise": 9,
+      "grab": true,
+      "reach": 1.05
+    },
+    "runner": {
+      "hp": 60,
+      "speed": [
+        4.1,
+        4.5
+      ],
+      "notice": 13,
+      "dmg": 13,
+      "r": 0.3,
+      "scale": 0.98,
+      "poise": 12,
+      "grab": false,
+      "reach": 1.3
+    },
+    "elite": {
+      "hp": 330,
+      "speed": [
+        2.5,
+        2.7
+      ],
+      "notice": 12,
+      "dmg": 32,
+      "r": 0.42,
+      "scale": 1.28,
+      "poise": 40,
+      "grab": false,
+      "reach": 1.65,
+      "heavy": true
+    },
+    "sup": {
+      "hp": 150,
+      "speed": [
+        1.7,
+        1.9
+      ],
+      "notice": 11,
+      "dmg": 28,
+      "r": 0.33,
+      "scale": 1.08,
+      "poise": 22,
+      "grab": true,
+      "reach": 1.1
+    },
+    "fastElite": {
+      "hp": 120,
+      "speed": [
+        3.5,
+        3.8
+      ],
+      "notice": 12,
+      "dmg": 24,
+      "r": 0.36,
+      "scale": 1.12,
+      "poise": 20,
+      "grab": false,
+      "reach": 1.45,
+      "heavy": true
+    },
+    "boss": {
+      "hp": 660,
+      "speed": [
+        1.25,
+        1.35
+      ],
+      "notice": 20,
+      "dmg": 38,
+      "r": 0.6,
+      "scale": 1.72,
+      "poise": 70,
+      "grab": false,
+      "reach": 2.3,
+      "heavy": true
+    }
+  },
+  "enemies": [
+    {
+      "id": "G_mon",
+      "floor": "G",
+      "type": "z",
+      "x": 35.5,
+      "z": 3.2,
+      "yaw": 1.2,
+      "options": {
+        "look": "guard"
+      },
+      "zone": null,
+      "position": [
+        35.5,
+        0,
+        3.2
+      ],
+      "model": "police_male01"
+    },
+    {
+      "id": "G_hall0",
+      "floor": "G",
+      "type": "z",
+      "x": 8,
+      "z": 12.8,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        8,
+        0,
+        12.8
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "G_hall1",
+      "floor": "G",
+      "type": "z",
+      "x": 10,
+      "z": 16,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        10,
+        0,
+        16
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_hall2",
+      "floor": "G",
+      "type": "z",
+      "x": 13,
+      "z": 12.5,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        13,
+        0,
+        12.5
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "G_hall3",
+      "floor": "G",
+      "type": "z",
+      "x": 16,
+      "z": 16,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        16,
+        0,
+        16
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_hall4",
+      "floor": "G",
+      "type": "z",
+      "x": 19,
+      "z": 20,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        19,
+        0,
+        20
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "G_hall5",
+      "floor": "G",
+      "type": "z",
+      "x": 22,
+      "z": 13.8,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        22,
+        0,
+        13.8
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "G_hall6",
+      "floor": "G",
+      "type": "z",
+      "x": 24,
+      "z": 19.2,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        24,
+        0,
+        19.2
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_hall7",
+      "floor": "G",
+      "type": "z",
+      "x": 7.6,
+      "z": 18.2,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        7.6,
+        0,
+        18.2
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_hall8",
+      "floor": "G",
+      "type": "z",
+      "x": 14,
+      "z": 20.5,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        14,
+        0,
+        20.5
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "G_hall9",
+      "floor": "G",
+      "type": "z",
+      "x": 20,
+      "z": 11.5,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        20,
+        0,
+        11.5
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_hall10",
+      "floor": "G",
+      "type": "z",
+      "x": 25,
+      "z": 12,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        25,
+        0,
+        12
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_hall11",
+      "floor": "G",
+      "type": "z",
+      "x": 17,
+      "z": 18.8,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "dark": true
+      },
+      "zone": null,
+      "position": [
+        17,
+        0,
+        18.8
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "G_run0",
+      "floor": "G",
+      "type": "runner",
+      "x": 12,
+      "z": 19.6,
+      "yaw": 0,
+      "options": {
+        "dark": true,
+        "roam": true
+      },
+      "zone": null,
+      "position": [
+        12,
+        0,
+        19.6
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_run1",
+      "floor": "G",
+      "type": "runner",
+      "x": 22.5,
+      "z": 16.05,
+      "yaw": 0,
+      "options": {
+        "dark": true,
+        "roam": true
+      },
+      "zone": null,
+      "position": [
+        22.5,
+        0,
+        16.05
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_run2",
+      "floor": "G",
+      "type": "runner",
+      "x": 9,
+      "z": 14.4,
+      "yaw": 0,
+      "options": {
+        "dark": true,
+        "roam": true
+      },
+      "zone": null,
+      "position": [
+        9,
+        0,
+        14.4
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "G_fe0",
+      "floor": "G",
+      "type": "fastElite",
+      "x": 23,
+      "z": 20.5,
+      "yaw": 0,
+      "options": {
+        "dark": true,
+        "roam": true
+      },
+      "zone": null,
+      "position": [
+        23,
+        0,
+        20.5
+      ],
+      "model": "hunter"
+    },
+    {
+      "id": "G_fe1",
+      "floor": "G",
+      "type": "fastElite",
+      "x": 9,
+      "z": 17.5,
+      "yaw": 0,
+      "options": {
+        "dark": true,
+        "roam": true
+      },
+      "zone": null,
+      "position": [
+        9,
+        0,
+        17.5
+      ],
+      "model": "hunter"
+    },
+    {
+      "id": "G_fe2",
+      "floor": "G",
+      "type": "fastElite",
+      "x": 19,
+      "z": 13,
+      "yaw": 0,
+      "options": {
+        "dark": true,
+        "roam": true
+      },
+      "zone": null,
+      "position": [
+        19,
+        0,
+        13
+      ],
+      "model": "hunter"
+    },
+    {
+      "id": "G_elite",
+      "floor": "G",
+      "type": "elite",
+      "x": 16,
+      "z": 13.5,
+      "yaw": 0.5,
+      "options": {
+        "dark": true,
+        "roam": true
+      },
+      "zone": null,
+      "position": [
+        16,
+        0,
+        13.5
+      ],
+      "model": "male_riot"
+    },
+    {
+      "id": "G_out0",
+      "floor": "G",
+      "type": "z",
+      "x": 16.5,
+      "z": 23.2,
+      "yaw": 3.141592653589793,
+      "options": {
+        "look": "customer",
+        "zone": "street",
+        "outside": true
+      },
+      "zone": {
+        "x0": 15.5,
+        "z0": 22.4,
+        "x1": 20.5,
+        "z1": 24
+      },
+      "position": [
+        16.5,
+        0,
+        23.2
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_out1",
+      "floor": "G",
+      "type": "z",
+      "x": 18,
+      "z": 23.4,
+      "yaw": 3.141592653589793,
+      "options": {
+        "look": "customer",
+        "zone": "street",
+        "outside": true
+      },
+      "zone": {
+        "x0": 15.5,
+        "z0": 22.4,
+        "x1": 20.5,
+        "z1": 24
+      },
+      "position": [
+        18,
+        0,
+        23.4
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "G_out2",
+      "floor": "G",
+      "type": "z",
+      "x": 19.6,
+      "z": 23.2,
+      "yaw": 3.141592653589793,
+      "options": {
+        "look": "customer",
+        "zone": "street",
+        "outside": true
+      },
+      "zone": {
+        "x0": 15.5,
+        "z0": 22.4,
+        "x1": 20.5,
+        "z1": 24
+      },
+      "position": [
+        19.6,
+        0,
+        23.2
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_cow0",
+      "floor": "G",
+      "type": "z",
+      "x": 12,
+      "z": 3,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "wake": 3
+      },
+      "zone": null,
+      "position": [
+        12,
+        0,
+        3
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "G_cow1",
+      "floor": "G",
+      "type": "z",
+      "x": 16,
+      "z": 7.5,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "wake": 4.2
+      },
+      "zone": null,
+      "position": [
+        16,
+        0,
+        7.5
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "G_cow2",
+      "floor": "G",
+      "type": "z",
+      "x": 21,
+      "z": 2.6,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "wake": 5.4
+      },
+      "zone": null,
+      "position": [
+        21,
+        0,
+        2.6
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "G_y0",
+      "floor": "G",
+      "type": "z",
+      "x": 12,
+      "z": -3.5,
+      "yaw": 1,
+      "options": {
+        "look": "customer"
+      },
+      "zone": null,
+      "position": [
+        12,
+        0,
+        -3.5
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_y1",
+      "floor": "G",
+      "type": "z",
+      "x": 24,
+      "z": -11,
+      "yaw": -1,
+      "options": {
+        "look": "guard"
+      },
+      "zone": null,
+      "position": [
+        24,
+        0,
+        -11
+      ],
+      "model": "police_male01"
+    },
+    {
+      "id": "G_y2",
+      "floor": "G",
+      "type": "z",
+      "x": 47.5,
+      "z": -3.2,
+      "yaw": 2,
+      "options": {
+        "look": "customer"
+      },
+      "zone": null,
+      "position": [
+        47.5,
+        0,
+        -3.2
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "G_pe",
+      "floor": "G",
+      "type": "fastElite",
+      "x": 22,
+      "z": -12.2,
+      "yaw": 3.141592653589793,
+      "options": {
+        "guardIdle": true
+      },
+      "zone": null,
+      "position": [
+        22,
+        0,
+        -12.2
+      ],
+      "model": "hunter"
+    },
+    {
+      "id": "F2_boss",
+      "floor": "F2",
+      "type": "boss",
+      "x": 9.5,
+      "z": 17.5,
+      "yaw": 0,
+      "options": {
+        "sleep": true
+      },
+      "zone": null,
+      "position": [
+        9.5,
+        3.6,
+        17.5
+      ],
+      "model": "hulk"
+    },
+    {
+      "id": "ST3",
+      "floor": "F3",
+      "type": "z",
+      "x": 35.8,
+      "z": 21.2,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.8
+      },
+      "zone": null,
+      "position": [
+        35.8,
+        5.4,
+        21.2
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "F3_sup",
+      "floor": "F3",
+      "type": "sup",
+      "x": 11.5,
+      "z": 6.4,
+      "yaw": 1.5707963267948966,
+      "options": {
+        "sleep": true
+      },
+      "zone": null,
+      "position": [
+        11.5,
+        7.2,
+        6.4
+      ],
+      "model": "male_formal"
+    },
+    {
+      "id": "F3_e0",
+      "floor": "F3",
+      "type": "z",
+      "x": 18,
+      "z": 4.5,
+      "yaw": 0,
+      "options": {
+        "look": "teller"
+      },
+      "zone": null,
+      "position": [
+        18,
+        7.2,
+        4.5
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "F3_e1",
+      "floor": "F3",
+      "type": "z",
+      "x": 24,
+      "z": 13.5,
+      "yaw": 0,
+      "options": {
+        "look": "teller"
+      },
+      "zone": null,
+      "position": [
+        24,
+        7.2,
+        13.5
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "F3_e2",
+      "floor": "F3",
+      "type": "z",
+      "x": 18,
+      "z": 19.5,
+      "yaw": 0,
+      "options": {
+        "look": "teller"
+      },
+      "zone": null,
+      "position": [
+        18,
+        7.2,
+        19.5
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "F3_e3",
+      "floor": "F3",
+      "type": "z",
+      "x": 31,
+      "z": 4.8,
+      "yaw": 0,
+      "options": {
+        "look": "teller"
+      },
+      "zone": null,
+      "position": [
+        31,
+        7.2,
+        4.8
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "F4_cook",
+      "floor": "F4",
+      "type": "z",
+      "x": 30,
+      "z": 4,
+      "yaw": 3.141592653589793,
+      "options": {
+        "look": "cook",
+        "sleep": true
+      },
+      "zone": null,
+      "position": [
+        30,
+        10.8,
+        4
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "F4_bil",
+      "floor": "F4",
+      "type": "z",
+      "x": 17,
+      "z": 20,
+      "yaw": 1,
+      "options": {
+        "look": "customer"
+      },
+      "zone": null,
+      "position": [
+        17,
+        10.8,
+        20
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "ST4",
+      "floor": "F4",
+      "type": "z",
+      "x": 38.4,
+      "z": 21.2,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": -1.8
+      },
+      "zone": null,
+      "position": [
+        38.4,
+        9,
+        21.2
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "F4_c0",
+      "floor": "F4",
+      "type": "z",
+      "x": 16.3,
+      "z": 1.6,
+      "yaw": 0,
+      "options": {
+        "look": "customer"
+      },
+      "zone": null,
+      "position": [
+        16.3,
+        10.8,
+        1.6
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "F4_c1",
+      "floor": "F4",
+      "type": "z",
+      "x": 23.8,
+      "z": 2,
+      "yaw": 0,
+      "options": {
+        "look": "teller"
+      },
+      "zone": null,
+      "position": [
+        23.8,
+        10.8,
+        2
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "F4_c2",
+      "floor": "F4",
+      "type": "z",
+      "x": 22.5,
+      "z": 6.9,
+      "yaw": 0,
+      "options": {
+        "look": "customer"
+      },
+      "zone": null,
+      "position": [
+        22.5,
+        10.8,
+        6.9
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "F4_l0",
+      "floor": "F4",
+      "type": "z",
+      "x": 8.2,
+      "z": 6.6,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "zone": "lounge"
+      },
+      "zone": {
+        "x0": 6.4,
+        "z0": 0.4,
+        "x1": 13.6,
+        "z1": 7.6
+      },
+      "position": [
+        8.2,
+        10.8,
+        6.6
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "F4_l1",
+      "floor": "F4",
+      "type": "z",
+      "x": 12.2,
+      "z": 1.6,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "zone": "lounge"
+      },
+      "zone": {
+        "x0": 6.4,
+        "z0": 0.4,
+        "x1": 13.6,
+        "z1": 7.6
+      },
+      "position": [
+        12.2,
+        10.8,
+        1.6
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "F4_elite",
+      "floor": "F4",
+      "type": "elite",
+      "x": 10,
+      "z": 5.8,
+      "yaw": 3.141592653589793,
+      "options": {
+        "look": "eliteStaff",
+        "zone": "lounge",
+        "hpMul": 0.6
+      },
+      "zone": {
+        "x0": 6.4,
+        "z0": 0.4,
+        "x1": 13.6,
+        "z1": 7.6
+      },
+      "position": [
+        10,
+        10.8,
+        5.8
+      ],
+      "model": "male_riot"
+    },
+    {
+      "id": "F4_wc",
+      "floor": "F4",
+      "type": "z",
+      "x": 8.1,
+      "z": 15.3,
+      "yaw": 3.141592653589793,
+      "options": {
+        "look": "teller",
+        "sleep": true
+      },
+      "zone": null,
+      "position": [
+        8.1,
+        10.8,
+        15.3
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC0_0",
+      "floor": "F2",
+      "type": "z",
+      "x": 34.900000000000006,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": -1.8,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        34.900000000000006,
+        1.8,
+        21.220000000000002
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC0_1",
+      "floor": "F2",
+      "type": "z",
+      "x": 36.300000000000004,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.8,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        36.300000000000004,
+        1.8,
+        21.220000000000002
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC0_2",
+      "floor": "F2",
+      "type": "z",
+      "x": 37.7,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.8,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        37.7,
+        1.8,
+        21.220000000000002
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "SC0_3",
+      "floor": "F2",
+      "type": "z",
+      "x": 39.10000000000001,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": -1.8,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        39.10000000000001,
+        1.8,
+        21.220000000000002
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC0_4",
+      "floor": "F2",
+      "type": "z",
+      "x": 37.75,
+      "z": 19.900000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.4500000000000006,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        37.75,
+        2.1499999999999995,
+        19.900000000000002
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC0_5",
+      "floor": "F2",
+      "type": "z",
+      "x": 39.15,
+      "z": 19.400000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.2000000000000006,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        39.15,
+        2.3999999999999995,
+        19.400000000000002
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "SC0_6",
+      "floor": "F2",
+      "type": "z",
+      "x": 37.75,
+      "z": 18.85,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": -0.9250000000000003,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        37.75,
+        2.675,
+        18.85
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC0_7",
+      "floor": "F2",
+      "type": "z",
+      "x": 39.15,
+      "z": 18.35,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -0.6750000000000003,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        39.15,
+        2.925,
+        18.35
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC0_8",
+      "floor": "F2",
+      "type": "z",
+      "x": 37.75,
+      "z": 17.8,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -0.40000000000000036,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        37.75,
+        3.1999999999999997,
+        17.8
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "SC1_0",
+      "floor": "F2",
+      "type": "z",
+      "x": 34.75,
+      "z": 17.7,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": 0.34999999999999964,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        34.75,
+        3.9499999999999997,
+        17.7
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC1_1",
+      "floor": "F2",
+      "type": "z",
+      "x": 36.15,
+      "z": 18.2,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": 0.5999999999999992,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        36.15,
+        4.199999999999999,
+        18.2
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC1_2",
+      "floor": "F2",
+      "type": "z",
+      "x": 34.75,
+      "z": 18.75,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": 0.8749999999999996,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        34.75,
+        4.475,
+        18.75
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "SC1_3",
+      "floor": "F2",
+      "type": "z",
+      "x": 36.15,
+      "z": 19.25,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": 1.1249999999999996,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        36.15,
+        4.725,
+        19.25
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC1_4",
+      "floor": "F2",
+      "type": "z",
+      "x": 34.75,
+      "z": 19.8,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": 1.4,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        34.75,
+        5,
+        19.8
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC1_5",
+      "floor": "F3",
+      "type": "z",
+      "x": 34.900000000000006,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.7999999999999998,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        34.900000000000006,
+        5.4,
+        21.220000000000002
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "SC1_6",
+      "floor": "F3",
+      "type": "z",
+      "x": 36.300000000000004,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": -1.7999999999999998,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        36.300000000000004,
+        5.4,
+        21.220000000000002
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC1_7",
+      "floor": "F3",
+      "type": "z",
+      "x": 37.7,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.7999999999999998,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        37.7,
+        5.4,
+        21.220000000000002
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC1_8",
+      "floor": "F3",
+      "type": "z",
+      "x": 39.10000000000001,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.7999999999999998,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        39.10000000000001,
+        5.4,
+        21.220000000000002
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "SC1_9",
+      "floor": "F3",
+      "type": "z",
+      "x": 37.75,
+      "z": 19.900000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": -1.4500000000000002,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        37.75,
+        5.75,
+        19.900000000000002
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC1_10",
+      "floor": "F3",
+      "type": "z",
+      "x": 39.15,
+      "z": 19.400000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.2000000000000002,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        39.15,
+        6,
+        19.400000000000002
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC1_11",
+      "floor": "F3",
+      "type": "z",
+      "x": 37.75,
+      "z": 18.85,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -0.9249999999999998,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        37.75,
+        6.275,
+        18.85
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "SC1_12",
+      "floor": "F3",
+      "type": "z",
+      "x": 39.15,
+      "z": 18.35,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": -0.6749999999999998,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        39.15,
+        6.525,
+        18.35
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC1_13",
+      "floor": "F3",
+      "type": "z",
+      "x": 37.75,
+      "z": 17.8,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -0.40000000000000036,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        37.75,
+        6.8,
+        17.8
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC2_0",
+      "floor": "F3",
+      "type": "z",
+      "x": 34.75,
+      "z": 17.7,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": 0.34999999999999964,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        34.75,
+        7.55,
+        17.7
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC2_1",
+      "floor": "F3",
+      "type": "z",
+      "x": 36.15,
+      "z": 18.2,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": 0.5999999999999996,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        36.15,
+        7.8,
+        18.2
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "SC2_2",
+      "floor": "F3",
+      "type": "z",
+      "x": 34.75,
+      "z": 18.75,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": 0.8749999999999991,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        34.75,
+        8.075,
+        18.75
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC2_3",
+      "floor": "F3",
+      "type": "z",
+      "x": 36.15,
+      "z": 19.25,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": 1.1249999999999991,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        36.15,
+        8.325,
+        19.25
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC2_4",
+      "floor": "F3",
+      "type": "z",
+      "x": 34.75,
+      "z": 19.8,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": 1.3999999999999995,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 17.35,
+        "x1": 36.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        34.75,
+        8.6,
+        19.8
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "SC2_5",
+      "floor": "F4",
+      "type": "z",
+      "x": 34.900000000000006,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.8000000000000007,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        34.900000000000006,
+        9,
+        21.220000000000002
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC2_6",
+      "floor": "F4",
+      "type": "z",
+      "x": 36.300000000000004,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": -1.8000000000000007,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        36.300000000000004,
+        9,
+        21.220000000000002
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC2_7",
+      "floor": "F4",
+      "type": "z",
+      "x": 37.7,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.8000000000000007,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        37.7,
+        9,
+        21.220000000000002
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "SC2_8",
+      "floor": "F4",
+      "type": "z",
+      "x": 39.10000000000001,
+      "z": 21.220000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.8000000000000007,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "homeZone": {
+        "x0": 34.550000000000004,
+        "z0": 20.900000000000002,
+        "x1": 39.449999999999996,
+        "z1": 21.599999999999998
+      },
+      "position": [
+        39.10000000000001,
+        9,
+        21.220000000000002
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC2_9",
+      "floor": "F4",
+      "type": "z",
+      "x": 37.75,
+      "z": 19.900000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": -1.450000000000001,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        37.75,
+        9.35,
+        19.900000000000002
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC2_10",
+      "floor": "F4",
+      "type": "z",
+      "x": 39.15,
+      "z": 19.400000000000002,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -1.200000000000001,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        39.15,
+        9.6,
+        19.400000000000002
+      ],
+      "model": "male_polo_jeans"
+    },
+    {
+      "id": "SC2_11",
+      "floor": "F4",
+      "type": "z",
+      "x": 37.75,
+      "z": 18.85,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -0.9250000000000007,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        37.75,
+        9.875,
+        18.85
+      ],
+      "model": "female_formal"
+    },
+    {
+      "id": "SC2_12",
+      "floor": "F4",
+      "type": "z",
+      "x": 39.15,
+      "z": 18.35,
+      "yaw": 0,
+      "options": {
+        "look": "teller",
+        "y": -0.6750000000000007,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        39.15,
+        10.125,
+        18.35
+      ],
+      "model": "male_suit"
+    },
+    {
+      "id": "SC2_13",
+      "floor": "F4",
+      "type": "z",
+      "x": 37.75,
+      "z": 17.8,
+      "yaw": 0,
+      "options": {
+        "look": "customer",
+        "y": -0.40000000000000036,
+        "stairCrowd": true,
+        "horde": {
+          "group": "stairs",
+          "see": false
+        }
+      },
+      "zone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "homeZone": {
+        "x0": 37.550000000000004,
+        "z0": 17.35,
+        "x1": 39.449999999999996,
+        "z1": 20.5
+      },
+      "position": [
+        37.75,
+        10.4,
+        17.8
+      ],
+      "model": "male_polo_jeans"
+    }
+  ],
+  "notes": [
+    "Initial constructor population and initial front stair crowds. Scripted reinforcements and quest-triggered waves are not initial spawns.",
+    "Special enemy type attributes retained; model/ability mapping is a separate implementation."
+  ],
+  "pins": {
+    "male_polo_jeans": {
+      "asset_id": "l4d2.infected.segmented.male_polo_jeans",
+      "preparation_key": "c63d8c006654632a",
+      "source_revision": "0b671df8fd661a1e",
+      "resource": "res://assets/library/l4d2.infected.segmented.male_polo_jeans/c63d8c006654632a/prepared.tscn",
+      "artifacts": {
+        "l4d2.infected.segmented.male_polo_jeans.glb": "dbb9ec241b1745d2607f7bdda2fff541a8fc8f17b5f32c522d12c77b3c797c00",
+        "l4d2.infected.segmented_palette_0_common_male_polo_jeans.png": "1828a898aa0e90cebef9cfddfa5850dd71f23505e3caeda40b4118234e23cc04",
+        "l4d2.infected.segmented_palette_1_common_male_polo_jeans.png": "6213ade9fe679a4188d5087045ed700066cf4d5c7b773d0cb442d3bf345d3291",
+        "prepared.tscn": "647908d6dfb0a548357fb8b86860a91e6c703e9240ae856a2d8f69c8675b7433"
+      },
+      "bones": 33,
+      "clips": [
+        "idle",
+        "walk",
+        "run",
+        "attack",
+        "hurt",
+        "death"
+      ],
+      "animation_origin": "project_authored",
+      "parts": [
+        {
+          "region": "Body",
+          "vertices": 551,
+          "polygons": 902,
+          "closed_faces": 8
+        },
+        {
+          "region": "Head",
+          "vertices": 714,
+          "polygons": 1389,
+          "closed_faces": 9
+        },
+        {
+          "region": "ArmL",
+          "vertices": 429,
+          "polygons": 786,
+          "closed_faces": 2
+        },
+        {
+          "region": "ArmR",
+          "vertices": 429,
+          "polygons": 785,
+          "closed_faces": 2
+        },
+        {
+          "region": "LegL",
+          "vertices": 313,
+          "polygons": 596,
+          "closed_faces": 1
+        },
+        {
+          "region": "LegR",
+          "vertices": 318,
+          "polygons": 602,
+          "closed_faces": 1
+        }
+      ]
+    },
+    "male_suit": {
+      "asset_id": "l4d2.infected.segmented.male_suit",
+      "preparation_key": "e857f04bcdc6c982",
+      "source_revision": "900bf55ebb6a84a2",
+      "resource": "res://assets/library/l4d2.infected.segmented.male_suit/e857f04bcdc6c982/prepared.tscn",
+      "artifacts": {
+        "l4d2.infected.segmented.male_suit.glb": "ca57f091849e2c064ec3c642fcef1ee9795cbaf24b23005785de4e498a89547a",
+        "l4d2.infected.segmented_common_male_suit_01_head_01.png": "2bb3dec9ea71308117730da10077cccc29ef0fcd4a00ff6247c86f35ebba9c7d",
+        "l4d2.infected.segmented_common_male_suit_01_lower_01.png": "d6c7f8e7c0557539931e2391a0f6dfa09aabdd785017ceb63b4efe4d11508303",
+        "l4d2.infected.segmented_common_male_suit_01_upper_01.png": "987ccc5d3810e5d5ab72e92f9e6dfe28f498a9ee5eb67c03c6783656292fc6a1",
+        "prepared.tscn": "00ccae849231cdc8fbc91bab2057f7679a36474e1b228dc6cb28667c932fc1ec"
+      },
+      "bones": 37,
+      "clips": [
+        "idle",
+        "walk",
+        "run",
+        "attack",
+        "hurt",
+        "death"
+      ],
+      "animation_origin": "project_authored",
+      "parts": [
+        {
+          "region": "Body",
+          "vertices": 797,
+          "polygons": 1339,
+          "closed_faces": 7
+        },
+        {
+          "region": "Head",
+          "vertices": 664,
+          "polygons": 1299,
+          "closed_faces": 4
+        },
+        {
+          "region": "ArmL",
+          "vertices": 386,
+          "polygons": 710,
+          "closed_faces": 2
+        },
+        {
+          "region": "ArmR",
+          "vertices": 389,
+          "polygons": 725,
+          "closed_faces": 1
+        },
+        {
+          "region": "LegL",
+          "vertices": 235,
+          "polygons": 396,
+          "closed_faces": 2
+        },
+        {
+          "region": "LegR",
+          "vertices": 213,
+          "polygons": 364,
+          "closed_faces": 2
+        }
+      ]
+    },
+    "police_male01": {
+      "asset_id": "l4d2.infected.segmented.police_male01",
+      "preparation_key": "a74fb1ab75a0d9ab",
+      "source_revision": "d8ff3cf99e906325",
+      "resource": "res://assets/library/l4d2.infected.segmented.police_male01/a74fb1ab75a0d9ab/prepared.tscn",
+      "artifacts": {
+        "l4d2.infected.segmented.police_male01.glb": "20b5af8b76018f58c31608f4c6fca5b12e9d7773dd3a43637ab30244c3bd9ae4",
+        "l4d2.infected.segmented_common_police_male_head_01.png": "5f76c5395ad573fa4f99aa4f5fb41514f050c61c5db990660df433cb8a7d37c5",
+        "l4d2.infected.segmented_common_police_male_lower_01.png": "f7486db1801a5ea0f29e818e99bda2d1863bcf8368faac0a3bd28afc875a9bdb",
+        "l4d2.infected.segmented_common_police_male_upper_01.png": "bdc8531a86ba9a8cfbc378248be8a8a90b024b8089f01bd91f15fe1d556fe8e4",
+        "prepared.tscn": "4d8d56f3fd808275652fc6e6eb4f6831d7675e6a39196c6121d0ebf729a91605"
+      },
+      "bones": 33,
+      "clips": [
+        "idle",
+        "walk",
+        "run",
+        "attack",
+        "hurt",
+        "death"
+      ],
+      "animation_origin": "project_authored",
+      "parts": [
+        {
+          "region": "Body",
+          "vertices": 1017,
+          "polygons": 1716,
+          "closed_faces": 17
+        },
+        {
+          "region": "Head",
+          "vertices": 714,
+          "polygons": 1398,
+          "closed_faces": 3
+        },
+        {
+          "region": "ArmL",
+          "vertices": 404,
+          "polygons": 755,
+          "closed_faces": 1
+        },
+        {
+          "region": "ArmR",
+          "vertices": 403,
+          "polygons": 751,
+          "closed_faces": 1
+        },
+        {
+          "region": "LegL",
+          "vertices": 212,
+          "polygons": 389,
+          "closed_faces": 1
+        },
+        {
+          "region": "LegR",
+          "vertices": 221,
+          "polygons": 402,
+          "closed_faces": 2
+        }
+      ]
+    },
+    "female_formal": {
+      "asset_id": "l4d2.infected.segmented.female_formal",
+      "preparation_key": "6362f3f3e593dbb5",
+      "source_revision": "1ec38ee5a5639a58",
+      "resource": "res://assets/library/l4d2.infected.segmented.female_formal/6362f3f3e593dbb5/prepared.tscn",
+      "artifacts": {
+        "l4d2.infected.segmented.female_formal.glb": "463c5a6de8ac273b9175ef385f20d5642aeca1600dbed8496f3fb033c94180ec",
+        "l4d2.infected.segmented_palette_0_common_female_formal.png": "4e9cfafff6a70fbaedc480428b012709f390b261cfe8d42c5154b621e58ab8f5",
+        "l4d2.infected.segmented_palette_1_common_female_formal.png": "e6bda06a5e599facaff8ba7803d111a5fc754857d090591fded9f21b703a9a52",
+        "prepared.tscn": "00b44b7fae3e594e9485315d6fffba1598319540538817a17e2e331b295f3a08"
+      },
+      "bones": 33,
+      "clips": [
+        "idle",
+        "walk",
+        "run",
+        "attack",
+        "hurt",
+        "death"
+      ],
+      "animation_origin": "project_authored",
+      "parts": [
+        {
+          "region": "Body",
+          "vertices": 782,
+          "polygons": 1352,
+          "closed_faces": 8
+        },
+        {
+          "region": "Head",
+          "vertices": 857,
+          "polygons": 1647,
+          "closed_faces": 3
+        },
+        {
+          "region": "ArmL",
+          "vertices": 367,
+          "polygons": 663,
+          "closed_faces": 1
+        },
+        {
+          "region": "ArmR",
+          "vertices": 367,
+          "polygons": 663,
+          "closed_faces": 1
+        },
+        {
+          "region": "LegL",
+          "vertices": 332,
+          "polygons": 600,
+          "closed_faces": 1
+        },
+        {
+          "region": "LegR",
+          "vertices": 331,
+          "polygons": 578,
+          "closed_faces": 1
+        }
+      ]
+    },
+    "male_riot": {
+      "asset_id": "l4d2.infected.archetype.male_riot",
+      "preparation_key": "db8d52ad33a1eff5",
+      "source_revision": "eaf6b5365639d546",
+      "resource": "res://assets/library/l4d2.infected.archetype.male_riot/db8d52ad33a1eff5/prepared.tscn",
+      "artifacts": {
+        "l4d2.infected.archetype.male_riot.glb": "dba94da2bc0616da0c2e459f8d94abf9269707c5672142457d7c06484e9e0c40",
+        "l4d2.infected.archetype_palette_0_common_male_riot.png": "2fcfe631391676f65abfd3f04d5f8700fcb9dbbf227445097036f55ca3ca03ef",
+        "l4d2.infected.archetype_palette_1_common_male_riot.png": "c3784c5e83b62048b0810c166910e8902168239670928d5f9c581b3128042b11",
+        "prepared.tscn": "3f74aa792f02c3db2492bf279d9b28da25a6e65a31b21921f3e7a47d4fae4b61"
+      },
+      "bones": 33,
+      "clips": [
+        "idle",
+        "walk",
+        "run",
+        "attack",
+        "hurt",
+        "death"
+      ],
+      "animation_origin": "project_authored",
+      "bone_aliases": {},
+      "intact": true
+    },
+    "hunter": {
+      "asset_id": "l4d2.infected.archetype.hunter",
+      "preparation_key": "727fc4c19d311569",
+      "source_revision": "531f07e82d6fce09",
+      "resource": "res://assets/library/l4d2.infected.archetype.hunter/727fc4c19d311569/prepared.tscn",
+      "artifacts": {
+        "l4d2.infected.archetype.hunter.glb": "cf7b6bcd646ddb523f337868789e82651d347b93af3239850597481af3c83aa5",
+        "l4d2.infected.archetype_hunter_01.png": "6bb3f7d29cb1f91aae30b9b33ff62cb1999a217c5c1eb1776be678de3b25860f",
+        "prepared.tscn": "8399ed2294324dea9fe9a50b8823b9d3c0b1272af11a8cf278f9f09eccb19274"
+      },
+      "bones": 53,
+      "clips": [
+        "idle",
+        "walk",
+        "run",
+        "attack",
+        "hurt",
+        "death"
+      ],
+      "animation_origin": "project_authored",
+      "bone_aliases": {},
+      "intact": true
+    },
+    "hulk": {
+      "asset_id": "l4d2.infected.archetype.hulk",
+      "preparation_key": "8f37494fdcc38940",
+      "source_revision": "f26127fc711407ad",
+      "resource": "res://assets/library/l4d2.infected.archetype.hulk/8f37494fdcc38940/prepared.tscn",
+      "artifacts": {
+        "l4d2.infected.archetype.hulk.glb": "93eef5c40b712e66c09106c80b0991731db1ef6d150c713443f011959ad7b62e",
+        "l4d2.infected.archetype_tank_color.png": "3584822f39b17b29cee7612987e2c12c02d8e33f37ba70ccd7639cc6b15dc18f",
+        "prepared.tscn": "58283b005ce2147230a759163b9da922235290ac4d7144f88addc937b4d05c06"
+      },
+      "bones": 56,
+      "clips": [
+        "idle",
+        "walk",
+        "run",
+        "attack",
+        "hurt",
+        "death"
+      ],
+      "animation_origin": "project_authored",
+      "bone_aliases": {
+        "Spine0": "Spine",
+        "Spine3": "Spine4",
+        "Neck0": "Neck1",
+        "Head": "Head1",
+        "L_Toe": "L_Toe0",
+        "R_Toe": "R_Toe0"
+      },
+      "intact": true
+    },
+    "male_formal": {
+      "asset_id": "l4d2.infected.archetype.male_formal",
+      "preparation_key": "fe0fcf48f9eef53e",
+      "source_revision": "0006aa48d3cf1f6b",
+      "resource": "res://assets/library/l4d2.infected.archetype.male_formal/fe0fcf48f9eef53e/prepared.tscn",
+      "artifacts": {
+        "l4d2.infected.archetype.male_formal.glb": "7c626b08eff161d8d550ceb723f483aaaa0d8d5b3d07b0e73dc0ebf33dd0ed38",
+        "l4d2.infected.archetype_palette_0_common_male_formal.png": "9a35dd3d261756eb19ebe30cf7362446224544829d93cf12e215e6e9283c24cb",
+        "l4d2.infected.archetype_palette_1_common_male_formal.png": "25649c1b95545bdf38e5a41107d387cacf66b0fc0d2b38b1e7c61d92701733a0",
+        "prepared.tscn": "84b2b4824b71aa3ff3d6b6c0fe68e97a9f2fac8eb29464f5659297bf5ccc82ad"
+      },
+      "bones": 33,
+      "clips": [
+        "idle",
+        "walk",
+        "run",
+        "attack",
+        "hurt",
+        "death"
+      ],
+      "animation_origin": "project_authored",
+      "bone_aliases": {},
+      "intact": true
+    }
+  },
+  "animation_origin": "project_authored_on_native_skin",
+  "source_batch": "outerasset\\converted\\left-4-dead-2\\infected-parts-20261006-012344\\batch.json",
+  "dismemberment_origin": "project_segmented_native_skin",
+  "archetype_batch": "outerasset\\converted\\left-4-dead-2\\infected-rig-20261007-020021\\batch.json"
+}

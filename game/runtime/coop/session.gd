@@ -138,8 +138,12 @@ func _connected(id: int) -> void:
 	var body=PlayerBody.new();add_child(body);body.configure(id,slot,pending[id],false)
 	body.position=Vector3(21.0+float(slot)*1.0,.05,16.0);body.rotation.y=PI
 	players[id]=body;pending.erase(id);roster_revision+=1
+	prepare_player(body)
 	_receive_roster.rpc(roster_revision,all_states())
 	print("COOP_JOIN ",id," slot=",slot," players=",players.size())
+
+func prepare_player(_body: CharacterBody3D) -> void:
+	pass
 
 func _disconnected(id: int) -> void:
 	pending.erase(id)

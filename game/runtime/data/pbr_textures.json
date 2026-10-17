@@ -1,0 +1,446 @@
+{
+  "version": 1,
+  "pins": {
+    "wood": {
+      "normal": {
+        "asset_id": "bank.pbr.wood.normal",
+        "preparation_key": "a315ac89b0011e17",
+        "source_revision": "e5dc7d4985fb337c",
+        "resource": "res://assets/library/bank.pbr.wood.normal/a315ac89b0011e17/texture.png",
+        "role": "normal",
+        "colorspace": "Non-Color",
+        "source_material": "wood/woodfloor001a",
+        "artifact_hashes": {
+          "texture.png": "83bb0973d370bb95aae8874be424613abe8391b6d4b13570cf3c884c13c4ae5c",
+          "wood_normal.png": "1cf271c9c484e92832aff5ddc05f72e8c310fc5b2e182725564fdd74a38b0c0d"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      },
+      "orm": {
+        "asset_id": "bank.pbr.wood.orm",
+        "preparation_key": "bd78da6d45c14884",
+        "resource": "res://assets/library/bank.pbr.wood.orm/bd78da6d45c14884/texture.png",
+        "source_revision": "4be170de602fcb69",
+        "role": "orm",
+        "colorspace": "Non-Color",
+        "channels": {
+          "R": "unoccluded=1",
+          "G": "authored roughness",
+          "B": "authored metal/rust mask"
+        },
+        "base_resource": "res://assets/library/hl2.bank.surface.wood/1c7d046a9f5e5bd1/texture.png",
+        "base_sha256": "89eefd9137957cfd9e679b77b6f6157800040c64a6c5d4aa90dda0953bda4048",
+        "roughness_bounds": [
+          0.58,
+          0.84
+        ],
+        "artifact_hashes": {
+          "texture.png": "2be78ecd392e8068f4355cd54e7154956d8fc75d26242e010dd6acb46f00bfcf",
+          "wood_orm.png": "4d351c43c18322fae50107a89740c40f3dd393c6753dd32b8e2bcef31e959a33"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      }
+    },
+    "floor": {
+      "normal": {
+        "asset_id": "bank.pbr.floor.normal",
+        "preparation_key": "80b563e5b3f99275",
+        "source_revision": "ed0e1bf6944089bc",
+        "resource": "res://assets/library/bank.pbr.floor.normal/80b563e5b3f99275/texture.png",
+        "role": "normal",
+        "colorspace": "Non-Color",
+        "source_material": "concrete/concretefloor001a",
+        "artifact_hashes": {
+          "floor_normal.png": "3234f1d29a56e199bdf298007fc125926050d3a1cf5125d6a7cb978cd7415892",
+          "texture.png": "f7bbe34cc9f8cb6f8e11c2ecb4a91bc40081741c3e10ba393397c83bd07c5a16"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      },
+      "detail": {
+        "asset_id": "bank.pbr.floor.detail",
+        "preparation_key": "23cceed4d77699e3",
+        "source_revision": "bfe0679fc7459c02",
+        "resource": "res://assets/library/bank.pbr.floor.detail/23cceed4d77699e3/texture.png",
+        "role": "detail",
+        "colorspace": "Non-Color",
+        "source_material": "concrete/concretefloor001a",
+        "artifact_hashes": {
+          "floor_detail.png": "f41f386eb7272ba18996f6548ee8e3717e976043df8e73b60a16f8a738d08fcf",
+          "texture.png": "5494ba3c937c655d53f92bc97347eb808229f533f604e374171a60e040ee3ce2"
+        },
+        "size_px": [
+          256,
+          256
+        ]
+      },
+      "orm": {
+        "asset_id": "bank.pbr.floor.orm",
+        "preparation_key": "a070188d8631fbfd",
+        "resource": "res://assets/library/bank.pbr.floor.orm/a070188d8631fbfd/texture.png",
+        "source_revision": "1cfdb52bc78fc6f6",
+        "role": "orm",
+        "colorspace": "Non-Color",
+        "channels": {
+          "R": "unoccluded=1",
+          "G": "authored roughness",
+          "B": "authored metal/rust mask"
+        },
+        "base_resource": "res://assets/library/hl2.bank.surface.floor/9e40ce82efb4a089/texture.png",
+        "base_sha256": "319df4892423e63a81187c3798f98f2793bfec9bab6006e7f445e2135bde6c8f",
+        "roughness_bounds": [
+          0.75,
+          0.94
+        ],
+        "artifact_hashes": {
+          "floor_orm.png": "252afafb0e02e28efedad7921a5702e288e7ca83d7eb527e6515a3a09b77529a",
+          "texture.png": "3106fcb6f4eb9936aa1469e2a4a21bcd7de043b3b53549a65ae202c49213d3ab"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      }
+    },
+    "steel_panels": {
+      "normal": {
+        "asset_id": "bank.pbr.steel_panels.normal",
+        "preparation_key": "18e9fb9126b35da3",
+        "source_revision": "9e09bb05fe90c6fe",
+        "resource": "res://assets/library/bank.pbr.steel_panels.normal/18e9fb9126b35da3/texture.png",
+        "role": "normal",
+        "colorspace": "Non-Color",
+        "source_material": "metal/metalwall048a",
+        "artifact_hashes": {
+          "steel_panels_normal.png": "f228fdf59b478b14461869db2559483c2c55b4f35922581e56e67023001f31b3",
+          "texture.png": "559a181faa1d54ca4a1b527a9eb805f48c1a28bad2317c643364653b249437bf"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      },
+      "detail": {
+        "asset_id": "bank.pbr.steel_panels.detail",
+        "preparation_key": "430d0d79b296c4ab",
+        "source_revision": "3b6f8c7d9f5f55ea",
+        "resource": "res://assets/library/bank.pbr.steel_panels.detail/430d0d79b296c4ab/texture.png",
+        "role": "detail",
+        "colorspace": "Non-Color",
+        "source_material": "metal/metalwall048a",
+        "artifact_hashes": {
+          "steel_panels_detail.png": "48856a4a4215ccbad4e6a020d2b90bf9812e9cb380e868f980f6d6302decec71",
+          "texture.png": "9c9ad7bf895cfe62d9db8150904d87212eb41ee011e7199c5e969569fa89c0b3"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      },
+      "orm": {
+        "asset_id": "bank.pbr.steel_panels.orm",
+        "preparation_key": "b3a35ece4ba13b2c",
+        "resource": "res://assets/library/bank.pbr.steel_panels.orm/b3a35ece4ba13b2c/texture.png",
+        "source_revision": "0dc827bf972b0e3d",
+        "role": "orm",
+        "colorspace": "Non-Color",
+        "channels": {
+          "R": "unoccluded=1",
+          "G": "authored roughness",
+          "B": "authored metal/rust mask"
+        },
+        "base_resource": "res://assets/library/hl2.bank.surface.steel_panels/03ccaa78d826f409/texture.png",
+        "base_sha256": "009489b4e14eb5bcdb157c096bc6d855d04e51e07a13a8e9873c32c58161d8eb",
+        "roughness_bounds": [
+          0.4,
+          0.9
+        ],
+        "artifact_hashes": {
+          "steel_panels_orm.png": "9a5940908e4ed419db4945a221c5216b27154b829b0f0b2ab7b656d7f7c27f8e",
+          "texture.png": "2d2737dbb8919d3ffdb8c3d1493c15fa2876b178810df99d736c9ddf4fa2002d"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      }
+    },
+    "plaster": {
+      "detail": {
+        "asset_id": "bank.pbr.plaster.detail",
+        "preparation_key": "bd67fdbab96c00da",
+        "source_revision": "22de00117a352cdf",
+        "resource": "res://assets/library/bank.pbr.plaster.detail/bd67fdbab96c00da/texture.png",
+        "role": "detail",
+        "colorspace": "Non-Color",
+        "source_material": "plaster/plasterwall045a",
+        "artifact_hashes": {
+          "plaster_detail.png": "19a8171b48e4c311f206ada27f1b87b64e4611da5ca1ded6ace3fccd43657a7e",
+          "texture.png": "19582801c793bc31824bb3cd4b78dfd51d2f12e5e3945ea94d1f2a214f38afd8"
+        },
+        "size_px": [
+          256,
+          256
+        ]
+      }
+    },
+    "concrete": {
+      "detail": {
+        "asset_id": "bank.pbr.concrete.detail",
+        "preparation_key": "1e6546e959cd20ce",
+        "source_revision": "c6379f9549289fe1",
+        "resource": "res://assets/library/bank.pbr.concrete.detail/1e6546e959cd20ce/texture.png",
+        "role": "detail",
+        "colorspace": "Non-Color",
+        "source_material": "concrete/concretewall001a",
+        "artifact_hashes": {
+          "concrete_detail.png": "f41f386eb7272ba18996f6548ee8e3717e976043df8e73b60a16f8a738d08fcf",
+          "texture.png": "5494ba3c937c655d53f92bc97347eb808229f533f604e374171a60e040ee3ce2"
+        },
+        "size_px": [
+          256,
+          256
+        ]
+      }
+    },
+    "office_wall": {
+      "albedo": {
+        "asset_id": "bank.pbr.office_wall.albedo",
+        "preparation_key": "c1f53c2688a37d34",
+        "source_revision": "3e36cc475de6f1bb",
+        "resource": "res://assets/library/bank.pbr.office_wall.albedo/c1f53c2688a37d34/texture.png",
+        "role": "albedo",
+        "colorspace": "sRGB",
+        "source_material": "agency/plaster/plasterwall01a",
+        "artifact_hashes": {
+          "office_wall_albedo.png": "e269b2c8c842ce0cc018c973f24cd999e736653ef1bd4a4eabb2aa0a9185bc22",
+          "texture.png": "ad3033c1246ea4ddd4fc1835ea18853c6c6b143d8f75669e547dc3bb91c13d1a"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      },
+      "normal": {
+        "asset_id": "bank.pbr.office_wall.normal",
+        "preparation_key": "d6d259702af5dea5",
+        "source_revision": "42dc0a13d82129f3",
+        "resource": "res://assets/library/bank.pbr.office_wall.normal/d6d259702af5dea5/texture.png",
+        "role": "normal",
+        "colorspace": "Non-Color",
+        "source_material": "agency/plaster/plasterwall01a",
+        "artifact_hashes": {
+          "office_wall_normal.png": "ce9ca8d6143bb340763094d01e4b21ebb5c80c046ba4efbfb5ab945776e6c411",
+          "texture.png": "95671db64117a5380d7be54defa57582d2373f41b04db656546e11779b0d13b7"
+        },
+        "size_px": [
+          1024,
+          1024
+        ]
+      }
+    },
+    "ceiling": {
+      "albedo": {
+        "asset_id": "bank.pbr.ceiling.albedo",
+        "preparation_key": "8e29058b12e3533c",
+        "source_revision": "23cc757680236830",
+        "resource": "res://assets/library/bank.pbr.ceiling.albedo/8e29058b12e3533c/texture.png",
+        "role": "albedo",
+        "colorspace": "sRGB",
+        "source_material": "agency/ceiling/ceilingtile",
+        "artifact_hashes": {
+          "ceiling_albedo.png": "bc72bf2023c87205c2f7661b78fb0fb46f5eb5a0eb004573343e4b1e86f5856b",
+          "texture.png": "d52c227b938c3b28a2948c4a1dba8fcc91a5e4f12b6f7ee1d32a7359e05ad597"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      },
+      "normal": {
+        "asset_id": "bank.pbr.ceiling.normal",
+        "preparation_key": "7dcf4c8e8d85a023",
+        "source_revision": "c692b6711209271c",
+        "resource": "res://assets/library/bank.pbr.ceiling.normal/7dcf4c8e8d85a023/texture.png",
+        "role": "normal",
+        "colorspace": "Non-Color",
+        "source_material": "agency/ceiling/ceilingtile",
+        "artifact_hashes": {
+          "ceiling_normal.png": "f83e16b90cc3b445e493e894efcfa8ae9578f282292124eabab1221119cb305d",
+          "texture.png": "ccdbbe0cfbf8fc184a7ede61bc96b836707a80243feb8ce5be68fdc79e5c5222"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      }
+    },
+    "office_carpet": {
+      "albedo": {
+        "asset_id": "bank.pbr.office_carpet.albedo",
+        "preparation_key": "8f17da797461f2b0",
+        "source_revision": "447b62b3083c02c1",
+        "resource": "res://assets/library/bank.pbr.office_carpet.albedo/8f17da797461f2b0/texture.png",
+        "role": "albedo",
+        "colorspace": "sRGB",
+        "source_material": "agency/carpet/carpet_brown01",
+        "artifact_hashes": {
+          "office_carpet_albedo.png": "9b61452d532e0736e93c3801548db718a2788097995791efdcc22692df931bb1",
+          "texture.png": "09a0a73fb01dc187779e4d4776fccf708fca326138c82c9f6dfe956aa75d8e18"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      },
+      "normal": {
+        "asset_id": "bank.pbr.office_carpet.normal",
+        "preparation_key": "474ad28cdf7ebef5",
+        "source_revision": "518e8cad79ef4707",
+        "resource": "res://assets/library/bank.pbr.office_carpet.normal/474ad28cdf7ebef5/texture.png",
+        "role": "normal",
+        "colorspace": "Non-Color",
+        "source_material": "agency/carpet/carpet_brown01",
+        "artifact_hashes": {
+          "office_carpet_normal.png": "f8a706981d421832cb24e3f191f8556be7ba3b9173185de45a41322d8773772e",
+          "texture.png": "57675ac02c900c199af851550112d5a5383112f443ee42a2ec41d5e145557d59"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      }
+    },
+    "marble": {
+      "albedo": {
+        "asset_id": "bank.pbr.marble.albedo",
+        "preparation_key": "5f7e88de4fbf7dd5",
+        "source_revision": "091debfd9be33497",
+        "resource": "res://assets/library/bank.pbr.marble.albedo/5f7e88de4fbf7dd5/texture.png",
+        "role": "albedo",
+        "colorspace": "sRGB",
+        "source_material": "agency/floor/marble01",
+        "artifact_hashes": {
+          "marble_albedo.png": "9967f82bffb94e696ff7ba5809859c7f4fe0c2ccfe5dc9e2d5d0c9642fb4da7d",
+          "texture.png": "f262861bb1a86fe141839baeb728967e5060316350e07c5201885c7ffd54f122"
+        },
+        "size_px": [
+          1024,
+          1024
+        ]
+      },
+      "normal": {
+        "asset_id": "bank.pbr.marble.normal",
+        "preparation_key": "0ef545653215a1be",
+        "source_revision": "45b4a5d48b22200a",
+        "resource": "res://assets/library/bank.pbr.marble.normal/0ef545653215a1be/texture.png",
+        "role": "normal",
+        "colorspace": "Non-Color",
+        "source_material": "agency/floor/marble01",
+        "artifact_hashes": {
+          "marble_normal.png": "5dbd1765b214d2a45028b339ec2a384bce0d541c0fe07430f759d7664824e29a",
+          "texture.png": "8291033950c834f4d9ee5e11a70849fb8c6f8030ecf940c8549ae2ba9d30c0e9"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      },
+      "orm": {
+        "asset_id": "bank.pbr.marble.orm",
+        "preparation_key": "ea70ca30665f709e",
+        "resource": "res://assets/library/bank.pbr.marble.orm/ea70ca30665f709e/texture.png",
+        "source_revision": "7c7ddec244343382",
+        "role": "orm",
+        "colorspace": "Non-Color",
+        "channels": {
+          "R": "unoccluded=1",
+          "G": "authored roughness",
+          "B": "authored metal/rust mask"
+        },
+        "base_resource": "res://assets/library/bank.pbr.marble.albedo/5f7e88de4fbf7dd5/texture.png",
+        "base_sha256": "f262861bb1a86fe141839baeb728967e5060316350e07c5201885c7ffd54f122",
+        "roughness_bounds": [
+          0.3,
+          0.58
+        ],
+        "artifact_hashes": {
+          "marble_orm.png": "89b74bcd59f3abeab41fcf9cc6c4a1d1056831ec9a913e9470f95679a01e8dfe",
+          "texture.png": "99cbb79eb9292b0299fa99690ad121647a122116fe222646e26ced66954cde93"
+        },
+        "size_px": [
+          1024,
+          1024
+        ]
+      }
+    },
+    "tile": {
+      "orm": {
+        "asset_id": "bank.pbr.tile.orm",
+        "preparation_key": "88739dfc23303695",
+        "resource": "res://assets/library/bank.pbr.tile.orm/88739dfc23303695/texture.png",
+        "source_revision": "62e1c8a060e86cab",
+        "role": "orm",
+        "colorspace": "Non-Color",
+        "channels": {
+          "R": "unoccluded=1",
+          "G": "authored roughness",
+          "B": "authored metal/rust mask"
+        },
+        "base_resource": "res://assets/library/hl2.bank.surface.tile/ad6600c5e191cda1/texture.png",
+        "base_sha256": "7c06a1c4fa57beb6457be9d910daa1480f2ff60c4ead4c2252a6d7473df2f3cd",
+        "roughness_bounds": [
+          0.38,
+          0.8
+        ],
+        "artifact_hashes": {
+          "texture.png": "93d098575ff5912b2f89cec802084d9ee5cb064b13f1bd39d8ddd572e8b4ef97",
+          "tile_orm.png": "3644b92b1e99cf7ec66f3f89f121bb9237879842e789470852d6d0e34fc830cb"
+        },
+        "size_px": [
+          512,
+          512
+        ]
+      }
+    },
+    "kitchen": {
+      "orm": {
+        "asset_id": "bank.pbr.kitchen.orm",
+        "preparation_key": "7a804b42862498cb",
+        "resource": "res://assets/library/bank.pbr.kitchen.orm/7a804b42862498cb/texture.png",
+        "source_revision": "41c10df0ed33b24a",
+        "role": "orm",
+        "colorspace": "Non-Color",
+        "channels": {
+          "R": "unoccluded=1",
+          "G": "authored roughness",
+          "B": "authored metal/rust mask"
+        },
+        "base_resource": "res://assets/library/hl2.bank.surface.kitchen/c487c76ff3c4497b/texture.png",
+        "base_sha256": "c3c639f403b2cab1cb85fa6dd989328b7369b960c29de769d5df788e41166bec",
+        "roughness_bounds": [
+          0.42,
+          0.76
+        ],
+        "artifact_hashes": {
+          "kitchen_orm.png": "7c4ba1fa236def42954992de7812b1aa115ee070a9c13cfc55bf45cec79d9518",
+          "texture.png": "a2ac397bf49e207e6f460f734416d61ee7a091ef632325541395602a963ccee5"
+        },
+        "size_px": [
+          256,
+          256
+        ]
+      }
+    }
+  },
+  "extraction_report": "D:\\AIGameEngine\\outerasset\\converted\\bank-pbr\\20261010-203016\\textures.json",
+  "mask_report": "D:\\AIGameEngine\\outerasset\\converted\\bank-pbr\\orm-20261010-203305\\masks.json"
+}

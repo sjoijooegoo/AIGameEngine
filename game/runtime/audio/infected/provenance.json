@@ -1,0 +1,402 @@
+{
+  "sources": [
+    "game\\source_assets\\audio\\artisticdude-zombies\\source.json",
+    "game\\source_assets\\audio\\ianzazz-zombies\\source.json"
+  ],
+  "generator": "game/tools/prepare_infected_audio.py",
+  "generator_sha256": "ed5db57751cbcd920843cdc3557865e2a3145803d4795ef64863d1fe9c7eaf96",
+  "processing": "trim silence, mono 48 kHz PCM16, band limiting, gentle saturation, peak trim and fades; semantic roles assigned by this project",
+  "files": {
+    "idle": [
+      {
+        "resource": "res://audio/infected/idle_01.wav",
+        "sha256": "29f31cd3ee3b54d33f06c0a6709d439432ba67cac927fa1519bb50f6eb8e0029",
+        "seconds": 2.1168541666666667,
+        "peak": 0.72,
+        "rms": 0.060254673785886406
+      },
+      {
+        "resource": "res://audio/infected/idle_02.wav",
+        "sha256": "b908d05c106cb30b18c21ff1b8e7c0b29b385d7b8678d2b60318930565b68304",
+        "seconds": 1.918,
+        "peak": 0.72,
+        "rms": 0.07705709625297595
+      }
+    ],
+    "chase": [
+      {
+        "resource": "res://audio/infected/chase_01.wav",
+        "sha256": "d992836b14da1b2629ada3c038ede49d1a62cd1b9313cf331d88c9281d29cd80",
+        "seconds": 0.9258541666666666,
+        "peak": 0.72,
+        "rms": 0.16697758586084255
+      },
+      {
+        "resource": "res://audio/infected/chase_02.wav",
+        "sha256": "c39d7c0ade35e00ea251c4a022741566fe621b40cde2d0c7cf9fee7a5d2b8570",
+        "seconds": 0.768375,
+        "peak": 0.72,
+        "rms": 0.16424750922715986
+      },
+      {
+        "resource": "res://audio/infected/chase_03.wav",
+        "sha256": "eb59582f7088f5b0ce06ad6c3d0449b562543d638536fd1c17062de32cb7048e",
+        "seconds": 0.6545416666666667,
+        "peak": 0.72,
+        "rms": 0.23977490529158438
+      }
+    ],
+    "alert": [
+      {
+        "resource": "res://audio/infected/alert_01.wav",
+        "sha256": "720d893e63a4f1cefdac5ab7319e5309319b3a23ba31b3067152e0e09091eac0",
+        "seconds": 0.8281041666666666,
+        "peak": 0.72,
+        "rms": 0.13665166920165084
+      },
+      {
+        "resource": "res://audio/infected/alert_02.wav",
+        "sha256": "45f6d00c76622a69e3674beacd39fda277bfa3827ec3e19419afc599621a2ffa",
+        "seconds": 0.8402083333333333,
+        "peak": 0.72,
+        "rms": 0.20763893302455766
+      },
+      {
+        "resource": "res://audio/infected/alert_03.wav",
+        "sha256": "6cd0d791d9c4501ab0d2aea96c7e981a8b70300e7009bbdd9e5e17c071dc13a2",
+        "seconds": 0.6708125,
+        "peak": 0.72,
+        "rms": 0.07326306925626373
+      }
+    ],
+    "attack": [
+      {
+        "resource": "res://audio/infected/attack_01.wav",
+        "sha256": "e7df725268db921d04a3d228e32f7e30e52223555721891239428609ba9f1b6d",
+        "seconds": 0.8001875,
+        "peak": 0.72,
+        "rms": 0.15776908030568482
+      },
+      {
+        "resource": "res://audio/infected/attack_02.wav",
+        "sha256": "d46d2b512dc6f0aa350c28a8bba60fdb90d6cab322f5c63e11fbbedd72b01407",
+        "seconds": 0.6796041666666667,
+        "peak": 0.72,
+        "rms": 0.1905246782705728
+      },
+      {
+        "resource": "res://audio/infected/attack_03.wav",
+        "sha256": "777e12144f1fb055fbc23b950a90c3b51df10a79267d8ac700b0d9a754f6d364",
+        "seconds": 0.799125,
+        "peak": 0.72,
+        "rms": 0.20505958420079154
+      }
+    ],
+    "grab": [
+      {
+        "resource": "res://audio/infected/grab_01.wav",
+        "sha256": "d1ef69003b007d54586b334c8f6110a057d01344f0f71cf8262f8a34cab442b5",
+        "seconds": 0.9541041666666666,
+        "peak": 0.72,
+        "rms": 0.15102002357878472
+      },
+      {
+        "resource": "res://audio/infected/grab_02.wav",
+        "sha256": "c90feb67a9c19c36f162eb4955d9795326b53ecf0e722153a6e61ef03150873b",
+        "seconds": 1.0716041666666667,
+        "peak": 0.72,
+        "rms": 0.20624252727674833
+      }
+    ],
+    "hurt": [
+      {
+        "resource": "res://audio/infected/hurt_01.wav",
+        "sha256": "50b9084f0c860e4aaf0db5b309899f2a4ed3b794715685732b65a5a31eebd163",
+        "seconds": 0.4733541666666667,
+        "peak": 0.72,
+        "rms": 0.21450547391714064
+      },
+      {
+        "resource": "res://audio/infected/hurt_02.wav",
+        "sha256": "ac4d384a83bbd5c79a754c6e61834e64e7b869593461bdab7a24184317c6c953",
+        "seconds": 0.5135,
+        "peak": 0.72,
+        "rms": 0.23103905484647735
+      },
+      {
+        "resource": "res://audio/infected/hurt_03.wav",
+        "sha256": "1e4b88d9ab095f442cb080127a8ad428b2497f009a38ce9ba074a1a7e39dab65",
+        "seconds": 0.49404166666666666,
+        "peak": 0.72,
+        "rms": 0.18013207598750822
+      },
+      {
+        "resource": "res://audio/infected/hurt_04.wav",
+        "sha256": "9cdd5b3e1d48cd4565dc9ff791512f9dfd40f22f6abd187261f3cfc483fb4fa6",
+        "seconds": 0.33670833333333333,
+        "peak": 0.72,
+        "rms": 0.10147069567962289
+      }
+    ],
+    "death": [
+      {
+        "resource": "res://audio/infected/death_01.wav",
+        "sha256": "27bed79ca54d94c4550528126f63fda1dba3b06164b027b37b64100a7069b45d",
+        "seconds": 1.4023333333333334,
+        "peak": 0.72,
+        "rms": 0.16067312905204004
+      },
+      {
+        "resource": "res://audio/infected/death_02.wav",
+        "sha256": "aaf1065e38ce58df7783abbdbd54fc0a693422ad937213e1ef76b518a1946e90",
+        "seconds": 1.5389583333333334,
+        "peak": 0.72,
+        "rms": 0.19127555795665727
+      },
+      {
+        "resource": "res://audio/infected/death_03.wav",
+        "sha256": "8e02d1a0cc9f6e024a95323377def49f343e7ba06c3fae6aaac2811d72527870",
+        "seconds": 1.0921041666666667,
+        "peak": 0.72,
+        "rms": 0.20172024096579272
+      }
+    ],
+    "step": [
+      {
+        "resource": "res://audio/infected/step_01.wav",
+        "sha256": "024ffd5a831eceae94524544c0b398b26648849d0d3bd5ad8664800cfbc67b9c",
+        "seconds": 0.19,
+        "peak": 0.72,
+        "rms": 0.11293668633424422
+      },
+      {
+        "resource": "res://audio/infected/step_02.wav",
+        "sha256": "589b5d2a7850a8708b1067d28be6ebbbf9cf1365619fa0ba445391b8e6e4aaa4",
+        "seconds": 0.19,
+        "peak": 0.72,
+        "rms": 0.1300577516402767
+      },
+      {
+        "resource": "res://audio/infected/step_03.wav",
+        "sha256": "364af06471d56528c30e08d43ee636a4bdc2a7ed636fdb521a98478492ba378e",
+        "seconds": 0.19,
+        "peak": 0.72,
+        "rms": 0.09813998538090662
+      }
+    ],
+    "bite": [
+      {
+        "resource": "res://audio/infected/bite_01.wav",
+        "sha256": "cdba3c4183ed04173fbca31474ce17ed5babb321cf94f0bc6212ed037ff29ffb",
+        "seconds": 0.225,
+        "peak": 0.72,
+        "rms": 0.12893420834568206
+      },
+      {
+        "resource": "res://audio/infected/bite_02.wav",
+        "sha256": "49d6ec1bf061ac77dd199f4d4561c0676b39e12561e3fcc5c380054c4be42ed3",
+        "seconds": 0.225,
+        "peak": 0.72,
+        "rms": 0.12523041157021417
+      }
+    ],
+    "impact": [
+      {
+        "resource": "res://audio/infected/impact_01.wav",
+        "sha256": "53f00aa7dd682ad473c3db83f0917d539cf3fb03add2fac0c5181843c865522b",
+        "seconds": 0.225,
+        "peak": 0.72,
+        "rms": 0.11070902608214221
+      },
+      {
+        "resource": "res://audio/infected/impact_02.wav",
+        "sha256": "a93cac7e1e1ddcbb533b23180c986f5c22645ea8d8ebf9379833f47a8ffffe75",
+        "seconds": 0.225,
+        "peak": 0.72,
+        "rms": 0.11404592631880674
+      }
+    ]
+  },
+  "edits": {
+    "idle": [
+      {
+        "source": "game/source_assets/audio/ianzazz-zombies/zombienoise1.ogg",
+        "source_sha256": "e3105f5259ad8b17bd1134c5a5cee79fc7f2f3662466d348bc05944cb92f16ae",
+        "trim_seconds": [
+          0.0,
+          2.1168541666666667
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/ianzazz-zombies/zombienoise2.ogg",
+        "source_sha256": "f9e23d6545f64798d29f2b7ac767da6208c1dc43b6d0928dc037fae4bca13b13",
+        "trim_seconds": [
+          0.0,
+          1.918
+        ]
+      }
+    ],
+    "chase": [
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-20.wav",
+        "source_sha256": "3a962ea1d8517ad4c2fea8221e6a0e622dcad3ba34bae5a436d4f0971774b56d",
+        "trim_seconds": [
+          0.03247916666666667,
+          0.9583333333333334
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-23.wav",
+        "source_sha256": "d467553c380b0c2fb04cd5e5583ec53d0d3620902cf3b90e6aa64438f3e5e84c",
+        "trim_seconds": [
+          0.044125,
+          0.8125
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-10.wav",
+        "source_sha256": "be9223a5c65ad1c1444e6e2153918d8c2a2a1dee59efeb36fa5bbb060c2bfed8",
+        "trim_seconds": [
+          0.032979166666666664,
+          0.6875208333333334
+        ]
+      }
+    ],
+    "alert": [
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-9.wav",
+        "source_sha256": "938c9a75828cda0ec78482e7a969cebc8f989968dcde15326e8c5a2f437fd468",
+        "trim_seconds": [
+          0.04689583333333333,
+          0.875
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-15.wav",
+        "source_sha256": "19d0955dfcca86939dbce76388dad5d3ad4dd8ed70bf7ce457d9a46b555e220b",
+        "trim_seconds": [
+          0.034791666666666665,
+          0.875
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/ianzazz-zombies/zombienoise3.ogg",
+        "source_sha256": "968b48b14a83a17b387e7373c83d3b9553bf21d2b0e03a67909ead4fc21f38b1",
+        "trim_seconds": [
+          0.0,
+          0.6708125
+        ]
+      }
+    ],
+    "attack": [
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-1.wav",
+        "source_sha256": "dad8280256985cadc5745f407c53ebdcf428d55e6369a70847e5b83d60e98c17",
+        "trim_seconds": [
+          0.054,
+          0.8541875
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-2.wav",
+        "source_sha256": "b8833b90e2f929cb28ce067e10dacc6e807f47f92393b8f2e6fd17d34f207efe",
+        "trim_seconds": [
+          0.028729166666666667,
+          0.7083333333333334
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-8.wav",
+        "source_sha256": "98dadef79f3cdbf120277e24e95919dfc2e853a45a7d72273a1d3c2cbc1ea823",
+        "trim_seconds": [
+          0.034208333333333334,
+          0.8333333333333334
+        ]
+      }
+    ],
+    "grab": [
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-19.wav",
+        "source_sha256": "79fa7bb077c0b5c46837a63299a1df3269a2310f25b6a3055dd27a4700c74789",
+        "trim_seconds": [
+          0.0250625,
+          0.9791666666666666
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-21.wav",
+        "source_sha256": "d58c26ae8df808238becc3434cf46778fca4582e9fcda138bdc01f720ecbbefc",
+        "trim_seconds": [
+          0.011729166666666667,
+          1.0833333333333333
+        ]
+      }
+    ],
+    "hurt": [
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-5.wav",
+        "source_sha256": "6920b559f953d19737f65a9da5b31f7bb3e1421c48552f52d7a57399d507574b",
+        "trim_seconds": [
+          0.026645833333333334,
+          0.5
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-6.wav",
+        "source_sha256": "2ad9acaccc9bc29f77f89581767699c3ed8d9630c19a11a8bbf6332ce89686a2",
+        "trim_seconds": [
+          0.028166666666666666,
+          0.5416666666666666
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-11.wav",
+        "source_sha256": "edbe930f09f61f034c90b80a6f5b06757fbea2a8f2b9ccdc263ed9246b33a400",
+        "trim_seconds": [
+          0.005958333333333334,
+          0.5
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/ianzazz-zombies/fastzombie1.ogg",
+        "source_sha256": "21b7fb4bd7c588ad67fafcb1d72bdd65312ff22ae60660d552e7477c569111fe",
+        "trim_seconds": [
+          0.0,
+          0.33670833333333333
+        ]
+      }
+    ],
+    "death": [
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-16.wav",
+        "source_sha256": "637f8d26b186005246a279fb19def56c81eebcf144c2346460ac1e4fc0075fc7",
+        "trim_seconds": [
+          0.0351875,
+          1.4375208333333334
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-17.wav",
+        "source_sha256": "c954b6173399ed574c1c1350b8da4a5b465e0454cc810d6e49779fe121fafa34",
+        "trim_seconds": [
+          0.044375,
+          1.5833333333333333
+        ]
+      },
+      {
+        "source": "game/source_assets/audio/artisticdude-zombies/zombie-18.wav",
+        "source_sha256": "91c33adaf9efa32d87c364eb2a679833a24ac5586c52f675f3e9cf8cedfde199",
+        "trim_seconds": [
+          0.0120625,
+          1.1041666666666667
+        ]
+      }
+    ],
+    "body": {
+      "origin": "project_authored",
+      "step": "seeded noise, low thump and scuff; not recorded footsteps",
+      "bite_impact": "derived from project hit_flesh.wav with EQ and short secondary transient",
+      "hit_source_sha256": "e7ccd3ab8ca572aa3e025ba58b27472309caccf2cca7b75a63b3e3e33e093128"
+    }
+  }
+}

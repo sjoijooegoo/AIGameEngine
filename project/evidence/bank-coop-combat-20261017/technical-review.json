@@ -1,0 +1,18 @@
+{
+  "review": "AI technical inspection, not user art acceptance",
+  "viewed": [
+    "session.png",
+    "lobby.png",
+    "combat.png",
+    "walk/walk.contact.jpg",
+    "death/death.contact.jpg"
+  ],
+  "observed": "Real bank materials and lighting retained; native full-body teammate walks; synchronized enemy falls on death. Third-person gun remains a simple placeholder; no final aim IK or death animation for players.",
+  "limitations": [
+    "No public VPS/WAN validation",
+    "No revive/checkpoint/mission completion",
+    "No client prediction/lag compensation",
+    "No account/password service",
+    "Local asset rights unchanged"
+  ]
+}

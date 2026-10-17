@@ -1,0 +1,14 @@
+{
+  "origin": "project_authored_procedural_placeholder",
+  "generator": "game/tools/generate_corpse_audio.py",
+  "files": {
+    "corpse_hit": {
+      "sha256": "ed8f58a03688672b4c0008f48a35831812d18d7fbaf28448625d8d569af65147",
+      "seconds": 0.16
+    },
+    "corpse_land": {
+      "sha256": "24a0a5c9466fb47be9d3cb814b63b4a168501d8eca5d6703f60146fb91bbac30",
+      "seconds": 0.22
+    }
+  }
+}

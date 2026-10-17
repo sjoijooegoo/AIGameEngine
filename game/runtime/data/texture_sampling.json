@@ -1,0 +1,15 @@
+{
+  "role": "surface_albedo",
+  "mipmaps": true,
+  "resources": [
+    "res://assets/library/hl2.bank.surface.plaster/7bc857fb91ea16d8/texture.png",
+    "res://assets/library/hl2.bank.surface.tile/ad6600c5e191cda1/texture.png",
+    "res://assets/library/hl2.bank.surface.kitchen/c487c76ff3c4497b/texture.png",
+    "res://assets/library/hl2.bank.surface.concrete/79ade60ea55cd328/texture.png",
+    "res://assets/library/hl2.bank.surface.floor/9e40ce82efb4a089/texture.png",
+    "res://assets/library/hl2.bank.surface.wood/1c7d046a9f5e5bd1/texture.png",
+    "res://assets/library/hl2.bank.surface.carpet/d1ca4167a2f1ef61/texture.png",
+    "res://assets/library/hl2.bank.surface.steel_panels/03ccaa78d826f409/texture.png",
+    "res://assets/library/hl2.bank.surface.glass_dirt/96dd1674bf675ce0/texture.png"
+  ]
+}

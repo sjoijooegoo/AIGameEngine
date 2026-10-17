@@ -1,0 +1,7016 @@
+{
+  "version": 1,
+  "pins": {
+    "desk": {
+      "asset_id": "l4d2.static.interiors.desk_metal",
+      "preparation_key": "15e17e73160fabc4",
+      "source_revision": "13a436b02b7344f2",
+      "resource": "res://assets/library/l4d2.static.interiors.desk_metal/15e17e73160fabc4/prepared.tscn",
+      "size": [
+        0.607792377471924,
+        0.614718616008759,
+        1.46410822868347
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.desk_metal.glb": "de7d9c9dc0ce525ec7981cf4f0740a9db3b21435df16dba9ebfacc2e1c378c21",
+        "l4d2.static.interiors_desk_metal.png": "732a1be0748be5ce700947e6200820fd3ce2f9825e73eba4a6f3e39961492dca",
+        "prepared.tscn": "65d95dd5d23578089b09e6edbb895f5e5566120014a15bcb82fef549a6119eeb"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "chair": {
+      "asset_id": "l4d2.static.interiors.chair_office2",
+      "preparation_key": "629d4869ef2e6198",
+      "source_revision": "702a26ac545f83e2",
+      "resource": "res://assets/library/l4d2.static.interiors.chair_office2/629d4869ef2e6198/prepared.tscn",
+      "size": [
+        0.507126808166504,
+        0.782801687717438,
+        0.484796106815338
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.chair_office2.glb": "44a6dc003096badb680d2a59d78415f35ba13b87e7be33729e19f6aa8c5495c7",
+        "l4d2.static.interiors_chair_office2.png": "bfb55b25b3d85ce75b567264544ed62a9bf8d3200a9736ee4534582711722f9a",
+        "prepared.tscn": "177f871a8016a943df822b91361cfbbde828deb9475e4f9936ee24a33a254579"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "sofa": {
+      "asset_id": "l4d2.static.interiors.sofa01",
+      "preparation_key": "7a32a0ddaa07bc4e",
+      "source_revision": "82a40c7597dcd9b4",
+      "resource": "res://assets/library/l4d2.static.interiors.sofa01/7a32a0ddaa07bc4e/prepared.tscn",
+      "size": [
+        0.803925514221191,
+        0.736602187156677,
+        2.07631945610046
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.sofa01.glb": "023836ee15806fe5f19531a99f8b589063777ebe69baa53f119dbb365fb3857b",
+        "l4d2.static.interiors_sofa01.png": "aaa278c2124592cdb6424993da8a758e7c2501d3b40ffcd8f5dafdad1c2282d3",
+        "prepared.tscn": "1cdac028e068294ad109fa34afc458ea66bf08dca8fe278a0b054911569bbc40"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "shelf": {
+      "asset_id": "l4d2.static.furniture.shelf1",
+      "preparation_key": "7edac829e58f085e",
+      "source_revision": "825b153eca4cc671",
+      "resource": "res://assets/library/l4d2.static.furniture.shelf1/7edac829e58f085e/prepared.tscn",
+      "size": [
+        0.359593033790588,
+        1.6523003578186,
+        0.918370544910431
+      ],
+      "artifacts": {
+        "l4d2.static.furniture.shelf1.glb": "ba04c81f34bd449d547c6e9dbeb337feebb7d4e3d6238d68fb21bf0eef3eb744",
+        "l4d2.static.furniture_furniture_shelf01a.png": "30f8aa697a9515a91f64dd6f357f448ebd3af5a74b9409f9ce3a36f811c11ae2",
+        "prepared.tscn": "5dec6303062b2998234209c6ea78a66426ab5432951f2dd57a935f0f0613231b"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "bed": {
+      "asset_id": "l4d2.static.unique_hospital.hospital_bed",
+      "preparation_key": "22439b464401f6ca",
+      "source_revision": "a3c992592f68e436",
+      "resource": "res://assets/library/l4d2.static.unique_hospital.hospital_bed/22439b464401f6ca/prepared.tscn",
+      "size": [
+        0.901455163955688,
+        0.506760776042938,
+        1.84966909885406
+      ],
+      "artifacts": {
+        "l4d2.static.unique_hospital.hospital_bed.glb": "5b40011b54ed42f69d341ecd70a10dbbb5c847a3cba0967208ba0f4c38a38662",
+        "l4d2.static.unique_hospital_hospital_bed.png": "aa6ea9b23f2ce5ad8604b638a16789e3eb5018d6eef93250c84e1ee581f68742",
+        "prepared.tscn": "fc002e0afcbef710850fe995b8ab04e473c7eb114fe9758b60705198199c5ca9"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "locker": {
+      "asset_id": "hl2.static.lab.lockers",
+      "preparation_key": "368ac5d6877ca3aa",
+      "source_revision": "30099827b1c0809b",
+      "resource": "res://assets/library/hl2.static.lab.lockers/368ac5d6877ca3aa/prepared.tscn",
+      "size": [
+        0.419100105762482,
+        1.33350002765656,
+        0.914399981498718
+      ],
+      "artifacts": {
+        "hl2.static.lab.lockers.glb": "e127c9637b574e636e563edcc247685291c46201973dd6a0a4b4f4a8a645b0ae",
+        "hl2.static.lab_lockers_sheet.png": "19a790977659c190c0ff013459de036f6556bf1de054e3883dafdc1ffc040955",
+        "prepared.tscn": "edfde502e60c5ffaaf56788a791869d497bd89904ecf151086adac6419a8138d"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "monitor": {
+      "asset_id": "hl2.static.lab.monitor01a",
+      "preparation_key": "83ab3ce49da4b612",
+      "source_revision": "2180b98209f74dc3",
+      "resource": "res://assets/library/hl2.static.lab.monitor01a/83ab3ce49da4b612/prepared.tscn",
+      "size": [
+        0.520335555076599,
+        0.482102155685425,
+        0.439411163330078
+      ],
+      "artifacts": {
+        "hl2.static.lab.monitor01a.glb": "a9b3745d86b7f727437fd7e7d63c03ab84a9901fd28ce87722db3d0942db39b5",
+        "hl2.static.lab_06e3a806ccbc862364fe.png": "48299b72731e4a08d5095209d35b6dc33bc2a45daff09f1ee0872c24cb0983f0",
+        "hl2.static.lab_lab_objects02.png": "09bc65a2d92d12a4faedcb521ede1c3a466888f5e365848f6e08e720d19077ae",
+        "prepared.tscn": "681b84cdb230d82e381d77bd14f2398df169f9c37e6d697881be0e623aab5eeb"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "bench": {
+      "asset_id": "hl2.static.trainstation.bench_indoor001a",
+      "preparation_key": "306533cd0d338ea4",
+      "source_revision": "5c6e74b88361e2b4",
+      "resource": "res://assets/library/hl2.static.trainstation.bench_indoor001a/306533cd0d338ea4/prepared.tscn",
+      "size": [
+        0.590947270393372,
+        0.687026023864746,
+        1.63830006122589
+      ],
+      "artifacts": {
+        "hl2.static.trainstation.bench_indoor001a.glb": "e91f15c7045b0daed73a840a5d414364c81adaf702cb98786510b53a88ed9250",
+        "hl2.static.trainstation_trainstation_bench001.png": "fb34180a0dec56e3937e0cb794492d1603a29aace8d73c9794086f8b5317721f",
+        "prepared.tscn": "8e7cafbf7bd7c4b5b75547600875abc81452e8f8ad814450d498d9537be7e157"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "fridge": {
+      "asset_id": "hl2.static.wasteland.kitchen_fridge001a",
+      "preparation_key": "95740858e6d1d8da",
+      "source_revision": "05392962f82f4df8",
+      "resource": "res://assets/library/hl2.static.wasteland.kitchen_fridge001a/95740858e6d1d8da/prepared.tscn",
+      "size": [
+        0.925824701786041,
+        2.13359999656677,
+        1.26266074180603
+      ],
+      "artifacts": {
+        "hl2.static.wasteland.kitchen_fridge001a.glb": "c5f655dece6d6299d72932688fc1bdb130ed67a8589a2d6628d582f8d94bf06c",
+        "hl2.static.wasteland_prisonkitchen01.png": "9b0078585da51fcdc88526b3457dc862aa1e16f69e18a36c2a495e389f3fccd5",
+        "prepared.tscn": "13b1962fb054ba1eaf3cf0eaa6665d917d4c75cf07eab2e4ded47b41d1f4e363"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "stove": {
+      "asset_id": "hl2.static.wasteland.kitchen_stove001a",
+      "preparation_key": "01bd5813ae08db2d",
+      "source_revision": "4a67c7e41ced28d4",
+      "resource": "res://assets/library/hl2.static.wasteland.kitchen_stove001a/01bd5813ae08db2d/prepared.tscn",
+      "size": [
+        0.692783772945404,
+        0.894304156303406,
+        1.2344057559967
+      ],
+      "artifacts": {
+        "hl2.static.wasteland.kitchen_stove001a.glb": "39dcc9c045e2991c461c80419e95236d56ee15d0f5147c18c107a5849f96b4f3",
+        "hl2.static.wasteland_prisonkitchen02.png": "45806d53486c177f0630619cd28ddb70c501f15ac70355e7f2927dc3e0c9eeb7",
+        "prepared.tscn": "89a7c3680d3a03d501d1d32f8fcc4b5eac540071a420244cedb57b12b0b54f3a"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "vending": {
+      "asset_id": "hl2.static.interiors.vendingmachinesoda01a",
+      "preparation_key": "246e3dd80bdd590b",
+      "source_revision": "ec109163f2b99b80",
+      "resource": "res://assets/library/hl2.static.interiors.vendingmachinesoda01a/246e3dd80bdd590b/prepared.tscn",
+      "size": [
+        0.816231608390808,
+        1.82848000526428,
+        0.992916524410248
+      ],
+      "artifacts": {
+        "hl2.static.interiors.vendingmachinesoda01a.glb": "8d284d3cfb50158ef22bf323c06b7c48eccea68d3e0538bb79e7a5760541d9b0",
+        "hl2.static.interiors_SodaMachine01a.png": "0cdcb6d7453eeb77b7707cba7e67c9274aa5684c5bee415b92a80df51ec4937f",
+        "prepared.tscn": "73b59167431466fd84729de4a2f0be77eb4c38b62ae621f19b4ab510a3d11291"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "box": {
+      "asset_id": "hl2.static.junk.cardboard_box001a",
+      "preparation_key": "bb964a42a9b262eb",
+      "source_revision": "317b1bacb1e396c0",
+      "resource": "res://assets/library/hl2.static.junk.cardboard_box001a/bb964a42a9b262eb/prepared.tscn",
+      "size": [
+        0.615192592144012,
+        0.456710636615753,
+        0.737532079219818
+      ],
+      "artifacts": {
+        "hl2.static.junk.cardboard_box001a.glb": "f1c5d45e2bbcfed90c7ecec6baa559bd771088d3c63c082b6220ae03863ed558",
+        "hl2.static.junk_Cardboard_boxes001a.png": "af0e2172f9942673046db3464de8f6ef0d9a9f6071c4584f9d686a93a0fb5f86",
+        "prepared.tscn": "1792985ff2eb1286466fce27628463daf8266055edfe92f9e5ae7e985626abf3"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "door": {
+      "asset_id": "hl2.static.borealis.borealis_door001a",
+      "preparation_key": "3c32ae7829e0cae5",
+      "source_revision": "d57f58de35571e1b",
+      "resource": "res://assets/library/hl2.static.borealis.borealis_door001a/3c32ae7829e0cae5/prepared.tscn",
+      "size": [
+        0.0559613034129143,
+        1.98145151138306,
+        0.910285234451294
+      ],
+      "artifacts": {
+        "hl2.static.borealis.borealis_door001a.glb": "83d6bda7340b4224fceb1d96f77c1b537f26e362e277b82fd2ac021a6131ae20",
+        "hl2.static.borealis_borealis_door001a.png": "e14eafdf89e1d367732e6d49e6b44f6fa77b07f62f6e6c4d366faccd853f22c7",
+        "prepared.tscn": "2992fc5ff6976c5e12a1291cb11ca5eb2a37dbd415cadecb147eff0c617436ec"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "wood_door": {
+      "asset_id": "l4d2.bank.doormain01_static",
+      "preparation_key": "ffcedeabada80bde",
+      "source_revision": "1374a8c2221843d2",
+      "resource": "res://assets/library/l4d2.bank.doormain01_static/ffcedeabada80bde/prepared.tscn",
+      "size": [
+        0.171670451760292,
+        1.9811999797821,
+        1.06272399425507
+      ],
+      "artifacts": {
+        "l4d2.bank.doormain01_static.glb": "86823ee1738692c06c86407e68d01ade8c5a046481e1e53b96e0f20992b3e9d3",
+        "l4d2.bank_doorknob.png": "2680af3a60fdab92793f49b0b17cda37bd28e806fa3fb11868ec631d8c548721",
+        "l4d2.bank_DoorKnobRound.png": "dd092ffbb0e5fb7c72b7c0b8d055f791b2edefbf0967b48e4853977354bd7b95",
+        "l4d2.bank_offdra.png": "8760c10f16a634fff5b32979b4179678298c729f732350e97a0f3fed67b0fce6",
+        "prepared.tscn": "17b51562b48e7441875bce98d9243f7bdd631e582ccebcd05dfe45a5e3437b66"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "glass_door": {
+      "asset_id": "l4d2.bank.doorglassmain01_static",
+      "preparation_key": "626ecfd920b160e2",
+      "source_revision": "0a02b6db0ef20b58",
+      "resource": "res://assets/library/l4d2.bank.doorglassmain01_static/626ecfd920b160e2/prepared.tscn",
+      "size": [
+        0.130247563123703,
+        1.9811999797821,
+        1.06272399425507
+      ],
+      "artifacts": {
+        "l4d2.bank.doorglassmain01_static.glb": "694fb750d1a6b74d1ceca0578682500aac647bfeaa1abcc4a08aa0b5b784e332",
+        "l4d2.bank_DoorGlassMain.png": "2f56594e9cb6b4e7aa077f74dd5ba4514d3327b27994d776e06b66800293b375",
+        "prepared.tscn": "fd8f8548d49fc5a6280f5588acf23191501a29c840fe0bfea4803480a7ab27dd"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "shutter": {
+      "asset_id": "l4d2.bank.roll-up_door_full",
+      "preparation_key": "624e0c0360f4ae04",
+      "source_revision": "c407cc898ca93da2",
+      "resource": "res://assets/library/l4d2.bank.roll-up_door_full/624e0c0360f4ae04/prepared.tscn",
+      "size": [
+        0.438771069049835,
+        2.74972057342529,
+        2.60195779800415
+      ],
+      "artifacts": {
+        "l4d2.bank.roll-up_door_full.glb": "25bd7c619cedf78af46c6e2bfdf0307b1da4f5e664d90220c05503d75ef123a7",
+        "l4d2.bank_Roll-up_door.png": "13cd84b9eb8f47e79e4b9a10927e187df025651b89e4f14ec87688643a4f5410",
+        "prepared.tscn": "c68efba1b950ba527e746c1fd819621e3be9ff60b9df3da4e155ddcc42503763"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "pool": {
+      "asset_id": "l4d2.bank.pooltable",
+      "preparation_key": "881d50bcb81e590b",
+      "source_revision": "7c8da29875743826",
+      "resource": "res://assets/library/l4d2.bank.pooltable/881d50bcb81e590b/prepared.tscn",
+      "size": [
+        1.23825001716614,
+        0.685800015926361,
+        2.47650003433228
+      ],
+      "artifacts": {
+        "l4d2.bank.pooltable.glb": "aaebcfd73b1c1110f1c45333cc36012e7b07b108aa2cb00da8ed7bb841c1e8db",
+        "l4d2.bank_pooltable.png": "d563ebdbdf9ea755cdb8a80f485b44aba5209fcd40ff823289672f821d0b55d7",
+        "prepared.tscn": "c2026a04d497b37148232f4da6ff15761e8b51e45a0ee1fc24fe4b16cc3ea02b"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "atm": {
+      "asset_id": "l4d2.bank.atm",
+      "preparation_key": "3621595ea735a4d4",
+      "source_revision": "6743a67c2f5eea47",
+      "resource": "res://assets/library/l4d2.bank.atm/3621595ea735a4d4/prepared.tscn",
+      "size": [
+        0.351465821266174,
+        1.02116346359253,
+        0.368574976921082
+      ],
+      "artifacts": {
+        "l4d2.bank.atm.glb": "5db79c5a33316eec386b5a646ba67bbaa985c81faf8ac259ab7d26fb11301232",
+        "l4d2.bank_atm_cigarettemachine.png": "e1c5656a66309215a91865e63a087406ff29a4fc49f37b7b96c5acdf46f0eaab",
+        "prepared.tscn": "a450d7f0d0585a72577d24967c33994320db4e91d084b93a43f8608cd81a73c8"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "plant": {
+      "asset_id": "l4d2.bank.urban_pot_bigplant01",
+      "preparation_key": "f3d7829e3052e4df",
+      "source_revision": "66d900b1064d211a",
+      "resource": "res://assets/library/l4d2.bank.urban_pot_bigplant01/f3d7829e3052e4df/prepared.tscn",
+      "size": [
+        1.10627222061157,
+        1.75383472442627,
+        1.42115044593811
+      ],
+      "artifacts": {
+        "l4d2.bank.urban_pot_bigplant01.glb": "8f6761ad8a3e01d8f245095dff47184c7eddab3db25760da116222da168fb7ed",
+        "l4d2.bank_Urban_Trees_barks01.png": "fd8c1a70ed34e751c7ac0929ebecfa272599c434762b05e2a4449e29e7e9a12b",
+        "l4d2.bank_Urban_Trees_branches03_mip0.png": "2473f94497ace48ad99fd7e4074d28f0f7ba3268abdb5e8633b15c14b1d0af06",
+        "prepared.tscn": "42f1d08b3bcc05c59742b5cc09b69097fc6742a8bbe33f3a033476feb594e702"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "car": {
+      "asset_id": "l4d2.bank.car003a",
+      "preparation_key": "85cf145ea706b354",
+      "source_revision": "48d117029601175f",
+      "resource": "res://assets/library/l4d2.bank.car003a/85cf145ea706b354/prepared.tscn",
+      "size": [
+        3.45931529998779,
+        1.15819263458252,
+        1.55628085136414
+      ],
+      "artifacts": {
+        "l4d2.bank.car003a.glb": "16d941fda7df0cc4fdd24435d7b0598ba4e1f2cd79f2ef30a46f6ad22cfdfef5",
+        "l4d2.bank_car003a_01.png": "41845c740fe51a648d8ec077e9b77c43f5f8f99edc37dfbad3c1472ff2352298",
+        "prepared.tscn": "51d3294f99064b7d5b977803cb2f410f755162ba777028a4f9419b98a0505485"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "vanity": {
+      "asset_id": "l4d2.bank.bathroom_vanity01",
+      "preparation_key": "d356dacd72d0dda5",
+      "source_revision": "a0848e8c27ca921e",
+      "resource": "res://assets/library/l4d2.bank.bathroom_vanity01/d356dacd72d0dda5/prepared.tscn",
+      "size": [
+        0.466131091117859,
+        0.716419458389282,
+        1.21766531467438
+      ],
+      "artifacts": {
+        "l4d2.bank.bathroom_vanity01.glb": "1966dfe738640d6d5512df9aa4c59e031a7565c0b880892cc94bb2e44e56ec22",
+        "l4d2.bank_bathroom_vanity01.png": "425112af8d7ee97444c1e1460df0c660a1f5bff042ba56087b78b79a30bed4c1",
+        "prepared.tscn": "eaf180ce8a79731bc723cddfa2e922d83a7f87b42a0abddea16e0a01f1af3df4"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "fluorescent": {
+      "asset_id": "l4d2.bank.light_shop",
+      "preparation_key": "423c3cabe065119b",
+      "source_revision": "ecdcb1ff088418e3",
+      "resource": "res://assets/library/l4d2.bank.light_shop/423c3cabe065119b/prepared.tscn",
+      "size": [
+        1.24337089061737,
+        0.438401579856873,
+        0.293611615896225
+      ],
+      "artifacts": {
+        "l4d2.bank.light_shop.glb": "6081b5bb1d76533c31ba87ed8f74f5d187ae69b21038f9ec145401b1010cbded",
+        "l4d2.bank_515c8327773aefc2853c.png": "c85ecf418ea3bdcad0c05a29d58fbe3ca509344e40f09a3b81982b9018d8a5be",
+        "l4d2.bank_light_shop.png": "d87ef395488ff80521af7ce495dd1061b7f48fa711065963e5846261eef503aa",
+        "prepared.tscn": "d4e2ebf8f582953043c39d35d8c3a0d08874422def10e34eb3ed9e7affd42a58"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "toilet": {
+      "asset_id": "l4d2.bank.toilet",
+      "preparation_key": "ca882a1f04f82753",
+      "source_revision": "ca255ae2606f8e2f",
+      "resource": "res://assets/library/l4d2.bank.toilet/ca882a1f04f82753/prepared.tscn",
+      "size": [
+        0.780280768871307,
+        0.688725650310516,
+        0.556126654148102
+      ],
+      "artifacts": {
+        "l4d2.bank.toilet.glb": "1e6b4560a923b5be5679ae9d81d553775c5aaf55e6f3a40c83babdcc7daae363",
+        "l4d2.bank_toilet.png": "23b0044159fe5ac72e7afa7a39057e0115362535ff225232a8f72e11a2afb58a",
+        "prepared.tscn": "1ecd7bed95b87ecf6238087f85441856cc9c1997b846bf38283af0bc87ce2146"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "tv": {
+      "asset_id": "l4d2.bank.tv",
+      "preparation_key": "8639fe4df1a359c7",
+      "source_revision": "40bf6f111c031e20",
+      "resource": "res://assets/library/l4d2.bank.tv/8639fe4df1a359c7/prepared.tscn",
+      "size": [
+        0.602213323116302,
+        0.548495411872864,
+        0.480816662311554
+      ],
+      "artifacts": {
+        "l4d2.bank.tv.glb": "74265ad464aed9871dbcf0255424a2bd65312df2dfcd41cd9be53638a99b6c5f",
+        "l4d2.bank_TV.png": "df22bc8203bbb87b588deae6394b226dae225a54e76ed58fd50611e62e5bb527",
+        "l4d2.bank_TVstatic.png": "065cf61e3b68a7e6fd0e9f83b83abbaeca85d2012873096dd56f96fc205f1a7a",
+        "prepared.tscn": "bbfcbdb142b44449dc9a311d9e69725fb495349269aeb6d8d93a275e1c055efb"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "van": {
+      "asset_id": "l4d2.bank.van",
+      "preparation_key": "58eba2b9cf08aeeb",
+      "source_revision": "fcd59d243620994d",
+      "resource": "res://assets/library/l4d2.bank.van/58eba2b9cf08aeeb/prepared.tscn",
+      "size": [
+        1.86215162277222,
+        1.72407674789429,
+        4.42897796630859
+      ],
+      "artifacts": {
+        "l4d2.bank.van.glb": "a8bab260e7aed6316e82729be51ed4b17cfd2e9bdd67206f7d470657418d3588",
+        "l4d2.bank_van1.png": "50efdacb1d28ffddd3e29c2abb1b2ca50074311bae4497bd89ac11328d737677",
+        "prepared.tscn": "18bc412b44b26fb2efa2a72c28263b9f1bcf6faa585391f2b7ac315f23964e63"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "torch_hand": {
+      "asset_id": "l4d2.bank.hold.rigged_left_torch",
+      "preparation_key": "09405093e31d7b9d",
+      "source_revision": "2a6c48f92eba2407",
+      "resource": "res://assets/library/l4d2.bank.hold.rigged_left_torch/09405093e31d7b9d/prepared.tscn",
+      "size": [
+        0.478075265884399,
+        0.496982097625732,
+        0.586980402469635
+      ],
+      "artifacts": {
+        "l4d2.bank.hold.rigged_left_torch.glb": "b0a3ff2331f0edc041e7441d6de28ba17bf95178e0ba62132cdc7b62808f09a9",
+        "l4d2.bank.hold_l4d2.bank.png": "d233b73f29b3641347ae29287efd88df41beb0ead5b78090c5cbde38f7be5907",
+        "l4d2.bank.hold_l4d2.bank_1.png": "dd436747c07d9cc69cc23672856c7864fbf85fe701dafe74b381c1535e3b6c00",
+        "prepared.tscn": "2827807fa15a586844bc44dc48a0bc0c5fdc877eb0b332fb57b4b7911f57ca9f"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "flashlight": {
+      "asset_id": "csgo.bank.flashlight",
+      "preparation_key": "834976e774d2f26a",
+      "source_revision": "4ae115f2756a58b1",
+      "resource": "res://assets/library/csgo.bank.flashlight/834976e774d2f26a/prepared.tscn",
+      "size": [
+        0.0564583316445351,
+        0.0564582683146,
+        0.235446095466614
+      ],
+      "artifacts": {
+        "csgo.bank.flashlight.glb": "e5fd85b438a287d5e507ed5c8fc281dd555c361c8b69507c23abeacc426c18c3",
+        "csgo.bank_autumn_flashlight_off.png": "be80d813d83dd9af019eeee61f99c58d6f23b09ca825e2348d57df0622180a4b",
+        "prepared.tscn": "33bab1786f0a8f45c50db6bbd1833c2ccfb74e8064faa655254a45f0e471c98a"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "reception": {
+      "asset_id": "csgo.bank.prop_bank_counter",
+      "preparation_key": "c59cf3f342b9489d",
+      "source_revision": "03fcbd139d8c2556",
+      "resource": "res://assets/library/csgo.bank.prop_bank_counter/c59cf3f342b9489d/prepared.tscn",
+      "size": [
+        3.00990009307861,
+        0.776287496089935,
+        0.587337613105774
+      ],
+      "artifacts": {
+        "csgo.bank.prop_bank_counter.glb": "32534fd646207d9b6326eb303e64582f42092c69a50d1153a554a4edf722b3d6",
+        "csgo.bank_prop_bank_teller_counter.png": "c1e59db5dc78dc1931ab6c0840f5904e9a4dc03c0e9eab55ee5b5f719ca5556f",
+        "prepared.tscn": "5c0f4bce040cb86b53a34d48d1953c1d9217a51360750d1f447432fecf106bf3"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "keyboard": {
+      "asset_id": "l4d2.static.interiors.computer_keyboard",
+      "preparation_key": "90b50b935e793b1c",
+      "source_revision": "4b39afb7f879eaa9",
+      "resource": "res://assets/library/l4d2.static.interiors.computer_keyboard/90b50b935e793b1c/prepared.tscn",
+      "size": [
+        0.209938645362854,
+        0.0261785108596087,
+        0.439814984798431
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.computer_keyboard.glb": "f61843e0a91b44f02af4ace5502c5411a363de4fb0b1b38313e30dc63082f7d5",
+        "l4d2.static.interiors_computer.png": "1f24df66c4e3b14a23397315e9543689c27c719cadef44b4f075ccd1788f3c1f",
+        "prepared.tscn": "9f2ea65a6fe0c60447d9ecf9158dc825058552c1cc224b2a4b6d55906f6f205e"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "printer": {
+      "asset_id": "l4d2.static.interiors.printer",
+      "preparation_key": "d769689948b922ff",
+      "source_revision": "7e19bc8e0db4053e",
+      "resource": "res://assets/library/l4d2.static.interiors.printer/d769689948b922ff/prepared.tscn",
+      "size": [
+        0.542642891407013,
+        0.309127688407898,
+        0.519402503967285
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.printer.glb": "711181a2002f25bb628309185bb30e194eb70dc3b7c6090b3329b4bd0ffd07dc",
+        "l4d2.static.interiors_printer.png": "867631ec8a6b0bc6cabf3ad7296ddc65eb8e2f8636dc2e67799e7e110e21dd08",
+        "prepared.tscn": "9313691fce7ab40edfe94134d39978c9e9310cd87275c8605736a087c6c807f7"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "water": {
+      "asset_id": "l4d2.static.interiors.water_cooler",
+      "preparation_key": "49b33d4d89290a09",
+      "source_revision": "5a35f6182c9ab984",
+      "resource": "res://assets/library/l4d2.static.interiors.water_cooler/49b33d4d89290a09/prepared.tscn",
+      "size": [
+        0.345029056072235,
+        1.25459277629852,
+        0.28316605091095
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.water_cooler.glb": "02eff5d684efd032914c713ec45efbbe133e1485fdcde8dfe4e767a7fff022d3",
+        "l4d2.static.interiors_water_cooler.png": "453a757b5d15767a491e8876f2ab76c0e81093554f23beaad6688f771f94f7f4",
+        "prepared.tscn": "9a69099ed9401e5fdd4a02aff08eb4199532e29089afbbe02b2acc478abefd1d"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "coffee": {
+      "asset_id": "l4d2.static.interiors.coffee_maker",
+      "preparation_key": "f2083fc6b4fbe124",
+      "source_revision": "9479bb26906072a7",
+      "resource": "res://assets/library/l4d2.static.interiors.coffee_maker/f2083fc6b4fbe124/prepared.tscn",
+      "size": [
+        0.316795110702515,
+        0.34884649515152,
+        0.209527745842934
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.coffee_maker.glb": "c4e6723fd5d5865fdce3e3ea7ee55529b14b28f483a9374a83e08fa054e1d581",
+        "l4d2.static.interiors_coffee_maker.png": "57506a70eb75396edc009d164897789059e4baf71c34966af7838cbadcd91894",
+        "prepared.tscn": "27ff41d0962aed5a9da28df47c72d9bb56db7dc5c664c141de1def59f7fd60d9"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "papers": {
+      "asset_id": "l4d2.static.interiors.paper_tray",
+      "preparation_key": "47b55114927b235d",
+      "source_revision": "a2995b382ec409c8",
+      "resource": "res://assets/library/l4d2.static.interiors.paper_tray/47b55114927b235d/prepared.tscn",
+      "size": [
+        0.38068762421608,
+        0.136239677667618,
+        0.27754008769989
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.paper_tray.glb": "33556ead0f91c24ca94ea8d422cfb90c91f56d0241f6546028ae73b1f61bd181",
+        "l4d2.static.interiors_paper_tray.png": "0b688c93396b6e07c4142b0dd833c693d95f89eacdcb29ace2b900e481517f77",
+        "prepared.tscn": "6fbb1729c22642072852a51b8969d4bf7fa7221ba871f8824970c3880bb92235"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "books": {
+      "asset_id": "l4d2.static.interiors.books01",
+      "preparation_key": "e3e8a94aab690f49",
+      "source_revision": "109868d419027c44",
+      "resource": "res://assets/library/l4d2.static.interiors.books01/e3e8a94aab690f49/prepared.tscn",
+      "size": [
+        0.351609617471695,
+        0.257900238037109,
+        0.211581438779831
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.books01.glb": "9f7bd33848a974d73b0e700d9df76c26bf7ef7a4e458ecd31e860f76185229bb",
+        "l4d2.static.interiors_books.png": "a687dab60d1058c6804b121376cdc6049767076bdfc405b3fffb460f47341f5e",
+        "prepared.tscn": "b0c39993a78fa986c5a23facce821401e77a968642e1f1d6df1fc83c4f7430d4"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "table": {
+      "asset_id": "l4d2.static.interiors.table_folding",
+      "preparation_key": "f5105fe2926ee456",
+      "source_revision": "91e4927bb08ca329",
+      "resource": "res://assets/library/l4d2.static.interiors.table_folding/f5105fe2926ee456/prepared.tscn",
+      "size": [
+        0.692026972770691,
+        0.570361852645874,
+        1.65846157073975
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.table_folding.glb": "88681eb170f48042394c5e697d37cc27404442b9edac634149297314d7cc2d22",
+        "l4d2.static.interiors_table_folding.png": "2a4902fb4802f2be775a3485dcecff858caad5699b51024f49a6316d9b9eff7e",
+        "prepared.tscn": "3bd56b67240933abfd0fccb70ad667986f80c571921b81a2436521d9c9dabb5f"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "meeting_table": {
+      "asset_id": "l4d2.static.furniture.heavy_table",
+      "preparation_key": "229a103d9fbf9b5e",
+      "source_revision": "685149efdcf321b3",
+      "resource": "res://assets/library/l4d2.static.furniture.heavy_table/229a103d9fbf9b5e/prepared.tscn",
+      "size": [
+        0.784873068332672,
+        0.758840501308441,
+        1.79037427902222
+      ],
+      "artifacts": {
+        "l4d2.static.furniture.heavy_table.glb": "5fd6ae172f1e71a159aa031e4968c5c7ac59efb2513c6a9a6f16f4ef9f81e174",
+        "l4d2.static.furniture_heavy_table.png": "036dabe20b89e1e460cf1ce33f9b6c56df81a4a849b9a63cc27b9d142cdad2ed",
+        "prepared.tscn": "7852aa129723c3616ebf409afdd834fdb09ff286445e1ad372479009090b5aa2"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "cash_case": {
+      "asset_id": "hl2.static.forest.footlocker01_closed",
+      "preparation_key": "facfb7f89e5a9680",
+      "source_revision": "c70c700d72c4dd10",
+      "resource": "res://assets/library/hl2.static.forest.footlocker01_closed/facfb7f89e5a9680/prepared.tscn",
+      "size": [
+        0.497957229614258,
+        0.468108177185059,
+        0.923842191696167
+      ],
+      "artifacts": {
+        "hl2.static.forest.footlocker01_closed.glb": "0eaf35da83de47728341336096bd70eae9dbb1eb5b0e5a6c837ae7939f6b9be1",
+        "hl2.static.forest_FootLocker01_Open.png": "ac7438e5f1f087a8832ce79823c44fa1a35560144b529c75216d11c3cb410d82",
+        "prepared.tscn": "321f1796b8acc003875102e39fdaf43b942e2beb4ac31d676421a35ff40a787a"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "gate_panel": {
+      "asset_id": "hl2.static.trainstation.traincar_bars002",
+      "preparation_key": "3908aced8f593934",
+      "source_revision": "35037e8f620334d9",
+      "resource": "res://assets/library/hl2.static.trainstation.traincar_bars002/3908aced8f593934/prepared.tscn",
+      "size": [
+        0.19049996137619,
+        2.55270004272461,
+        4.87680006027222
+      ],
+      "artifacts": {
+        "hl2.static.trainstation.traincar_bars002.glb": "16db7ee267fd4d6bb9ca3a92c28a572fba0d028797a7b25b0e909a4ebec2cc91",
+        "hl2.static.trainstation_Traincar_bars002.png": "732b2a3697955637850be2de6f39da98441aa9d9b573d0990f8bffcadece1386",
+        "prepared.tscn": "7a0b6a55111309ce326025e6423372830465fa2e91fd1a05292a377f16c656ff"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "kitchen_unit": {
+      "asset_id": "hl2.bank.kitchen_counter001a",
+      "preparation_key": "f6f35d723381ee86",
+      "source_revision": "8632af69e2136f8e",
+      "resource": "res://assets/library/hl2.bank.kitchen_counter001a/f6f35d723381ee86/prepared.tscn",
+      "size": [
+        1.2140566110611,
+        0.76143616437912,
+        1.2132431268692
+      ],
+      "artifacts": {
+        "hl2.bank.kitchen_counter001a.glb": "5b64086c2398ee4cf50b77e0cea2ec48dee24a2ca51df06191a802a793d6688c",
+        "hl2.bank_prison_objects005.png": "2260a1aa0856183f7ddc3425132e2c572256ee07cf850e50b83dbc77105d6203",
+        "prepared.tscn": "7e59835afea215243d8199e54ac499d8614936c359e39c31039326b7205b9217"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "server": {
+      "asset_id": "hl2.static.lab.servers",
+      "preparation_key": "91c4f5964b5e71b7",
+      "source_revision": "0202df5ad206b9e9",
+      "resource": "res://assets/library/hl2.static.lab.servers/91c4f5964b5e71b7/prepared.tscn",
+      "size": [
+        0.551208138465881,
+        1.92772591114044,
+        1.76450562477112
+      ],
+      "artifacts": {
+        "hl2.static.lab.servers.glb": "f647ea274218c829d5364c8c9084c7448b77aa68f838de6309214c0a2d424f41",
+        "hl2.static.lab_8724d4e13276dcac4cc5.png": "d5fe2579cac0af9b0fa2a12bc08440f284d3fce676623ce745799c00bb77cde7",
+        "hl2.static.lab_servers_disp.png": "1c8e1182de5a47628337809ef0090d1fc98919348be86f595d9fb55530bf5e9b",
+        "hl2.static.lab_servers_sheet.png": "3a18f6748e737d0a12836569072683204899976d4183115b30e813de03932872",
+        "hl2.static.lab_server_wires.png": "a8f9e6d5961e333853565ee965f9f1bf306942880e1beb79b9120d7abcf90f61",
+        "prepared.tscn": "cdfb4eed915af82650d980c39639a7e05044d9f2779572e9e187a99d4c249971"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "wall_lamp": {
+      "asset_id": "l4d2.bank.lightfixture04",
+      "preparation_key": "4b6e56f32bc24ada",
+      "source_revision": "4a65f491dc74f052",
+      "resource": "res://assets/library/l4d2.bank.lightfixture04/4b6e56f32bc24ada/prepared.tscn",
+      "size": [
+        0.637008726596832,
+        0.406300604343414,
+        0.367387592792511
+      ],
+      "artifacts": {
+        "l4d2.bank.lightfixture04.glb": "96054f5b1ce7f9a19ff5ceca9e35eef0cbcb7b16d2576b90b20c2516c8f0f394",
+        "l4d2.bank_LightFixture04off.png": "f1bb7296017943c19b1989b2af5b4b77ef62a2aba4bd00a1ab306421195d8457",
+        "prepared.tscn": "ab4eb3b357cef89b8199739664b4101da3ffdafae0078bab0dcb496bef4bb3ce"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "floor_lamp": {
+      "asset_id": "l4d2.static.interiors.lamp_floor",
+      "preparation_key": "ff3cbb705cd1b7b7",
+      "source_revision": "b4e247076848d01f",
+      "resource": "res://assets/library/l4d2.static.interiors.lamp_floor/ff3cbb705cd1b7b7/prepared.tscn",
+      "size": [
+        0.460229635238647,
+        1.63830006122589,
+        0.460229754447937
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.lamp_floor.glb": "f87669d81195c3f2905472cc936816e82131ebd00e9f318ec2ddaa58ddf394e5",
+        "l4d2.static.interiors_lamps_off.png": "43b87695859085187b639835c6c9a8fd3dd435b30a26ce973e3b52016cb780af",
+        "prepared.tscn": "94d82b6c52c5d0c73c48e2e826b58c980b5c5ee918cf12556b81a204a6a13ecc"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "safe_face": {
+      "asset_id": "csgo.bank.wall_safe",
+      "preparation_key": "0fc55382af99999e",
+      "source_revision": "2e746841ceb16316",
+      "resource": "res://assets/library/csgo.bank.wall_safe/0fc55382af99999e/prepared.tscn",
+      "size": [
+        0.083103746175766,
+        0.405384004116058,
+        0.608075976371765
+      ],
+      "artifacts": {
+        "csgo.bank.wall_safe.glb": "d5ce10124d97d2fe887dd49d91d24357b25be09b77e34010049c83f90d8759b5",
+        "csgo.bank_wall_safe.png": "a7dc56dfb2918065aed3625321d00d2272bf5e19f568f91c1442c4fea8d3a524",
+        "prepared.tscn": "af774b49db9c75e26dc413b5c370601d0cc09841bcc78313ba7ba9c7b815c28c"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "power_panel": {
+      "asset_id": "l4d2.bank.powerbox01a",
+      "preparation_key": "d9480096a331ef39",
+      "source_revision": "266a65e363ceae77",
+      "resource": "res://assets/library/l4d2.bank.powerbox01a/d9480096a331ef39/prepared.tscn",
+      "size": [
+        0.493090271949768,
+        0.95667576789856,
+        0.589227914810181
+      ],
+      "artifacts": {
+        "l4d2.bank.powerbox01a.glb": "75d1f403f8e0d7ab21eac7c1c375219f13872bffcbde94d6d51372382f98084d",
+        "l4d2.bank_powerbox001.png": "269f82fe5ee580300fac43e01bd647f396cdb327ea39d0e8bb3cae8922c6588e",
+        "prepared.tscn": "dfe0fa973f7df237911afa82247b219d98c093e48af54d693a1f81932db581f9"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "coffee_table": {
+      "asset_id": "l4d2.static.interiors.coffee_table_rectangular",
+      "preparation_key": "37fcdf049708acbb",
+      "source_revision": "ddbc47fd1a083417",
+      "resource": "res://assets/library/l4d2.static.interiors.coffee_table_rectangular/37fcdf049708acbb/prepared.tscn",
+      "size": [
+        0.573503375053406,
+        0.382671654224396,
+        1.14299988746643
+      ],
+      "artifacts": {
+        "l4d2.static.interiors.coffee_table_rectangular.glb": "3d3c23e9c5f2eba483d4dce4987f37c2c0d5d4b464836fbe4a9a33c2b898c11d",
+        "l4d2.static.interiors_furniture_wood01.png": "4b6e3c25e3ba0425111d8b1b4ca85bb6bbcc1d0564aa2f64b81e7df29f644e6e",
+        "prepared.tscn": "fc2b21eb840a136ec86d1fc305625df2d473d0388329472431df7122c9c489f7"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "fire_door": {
+      "asset_id": "l4d2.bank.doormainmetalsmall01_baked",
+      "preparation_key": "269a77c30e5ebcb2",
+      "source_revision": "99ab89fa675f13e8",
+      "resource": "res://assets/library/l4d2.bank.doormainmetalsmall01_baked/269a77c30e5ebcb2/prepared.tscn",
+      "size": [
+        0.913278341293335,
+        1.9811999797821,
+        0.17195425927639
+      ],
+      "artifacts": {
+        "l4d2.bank.doormainmetalsmall01_baked.glb": "6277942acd72a2abffaad0b97ebb8ab2d0451054ab88446ae8e42675c042a256",
+        "l4d2.bank_doorknob.png": "2680af3a60fdab92793f49b0b17cda37bd28e806fa3fb11868ec631d8c548721",
+        "l4d2.bank_DoorKnobRound.png": "dd092ffbb0e5fb7c72b7c0b8d055f791b2edefbf0967b48e4853977354bd7b95",
+        "l4d2.bank_DoorMainMetal01.png": "069d2f686d44a8673479ecfd27eaaec660e9cb5ea3f82a2696ce53b8847fbb77",
+        "prepared.tscn": "4d8e46663cacf88570a5387f50bf59d98132d9f7d468a8ea3ab019b29ade8a2b"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "vision_door": {
+      "asset_id": "l4d2.bank.refine.doormainmetalwindow01",
+      "preparation_key": "e596982429902351",
+      "source_revision": "802b8c89868cfaa7",
+      "resource": "res://assets/library/l4d2.bank.refine.doormainmetalwindow01/e596982429902351/prepared.tscn",
+      "size": [
+        1.06272399425507,
+        1.9811999797821,
+        0.171670466661453
+      ],
+      "artifacts": {
+        "l4d2.bank.refine.doormainmetalwindow01.glb": "c79da1bffd53ef8aafc2127f70e13112e5481e1f20ca228814f975040f05e2f9",
+        "l4d2.bank.refine_doorknob.png": "2680af3a60fdab92793f49b0b17cda37bd28e806fa3fb11868ec631d8c548721",
+        "l4d2.bank.refine_DoorKnobRound.png": "dd092ffbb0e5fb7c72b7c0b8d055f791b2edefbf0967b48e4853977354bd7b95",
+        "l4d2.bank.refine_DoorMainMetalWindow01.png": "d34b932838040e05e1f2e1f7fb04d5044fb1e5545abb75c754abcab793837dfd",
+        "prepared.tscn": "6697e2a2e9a34c21515ed3453e7b25623a11eddd26fce04694bdbc806d6a897b"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "garden_gate": {
+      "asset_id": "l4d2.bank.refine.gate_wall_gate003_64",
+      "preparation_key": "7684c63fe0269077",
+      "source_revision": "ab63550eed2bbf6b",
+      "resource": "res://assets/library/l4d2.bank.refine.gate_wall_gate003_64/7684c63fe0269077/prepared.tscn",
+      "size": [
+        0.042862668633461,
+        3.04800009727478,
+        1.21920001506805
+      ],
+      "artifacts": {
+        "l4d2.bank.refine.gate_wall_gate003_64.glb": "caface3769623b2015276edb1c02df8e1bbb5473fc10db4cdcb92d4235f31145",
+        "l4d2.bank.refine_gates002.png": "5e4109c8a38b908c60ef17a50028cd375b9edbb62488c05c614e9e0a65fb77fa",
+        "prepared.tscn": "035838e8df533545ca56dc244cfbf600ce33758a24fe6968f0ec42d47b548f2e"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "elevator_trim": {
+      "asset_id": "l4d2.bank.refine.elevator_interior",
+      "preparation_key": "6a8906cbe9347f60",
+      "source_revision": "62cfc11de7930e30",
+      "resource": "res://assets/library/l4d2.bank.refine.elevator_interior/6a8906cbe9347f60/prepared.tscn",
+      "size": [
+        4.22910308837891,
+        2.17002534866333,
+        4.22910118103027
+      ],
+      "artifacts": {
+        "l4d2.bank.refine.elevator_interior.glb": "d14f5a3d43079e9d0fdb67cfbe3693f622a3a9ac2460b91b71d93f643d51bc01",
+        "l4d2.bank.refine_ebd9e07cf20d0ed29a15.png": "3550994d8b644d5d5ac314cc5e9808f34b872777d8faf6bb10a283442d4fd850",
+        "l4d2.bank.refine_elevator_interior.png": "2338072d454c6762ac54c40f0fc936fbe68b464dbe9d39b9d664364ac5311f20",
+        "l4d2.bank.refine_flat_normal.png": "ee145ca10fe61c9fc7b80ec0133d1abb3112db96a03c875f4c23fcb6881de651",
+        "prepared.tscn": "66b60acc1123f95b8456cc7cd5f65ecca1e406a43c0a745758199a00da934526"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "elevator_panel": {
+      "asset_id": "l4d2.bank.refine.elevator_panel",
+      "preparation_key": "4ebf84ae14788c33",
+      "source_revision": "54035557f2664c8b",
+      "resource": "res://assets/library/l4d2.bank.refine.elevator_panel/4ebf84ae14788c33/prepared.tscn",
+      "size": [
+        0.00983281992375851,
+        0.690215170383453,
+        0.343819558620453
+      ],
+      "artifacts": {
+        "l4d2.bank.refine.elevator_panel.glb": "98ad80201f6d02b62c84cf47562413d283015dd60c826efddde2646d24b06b61",
+        "l4d2.bank.refine_elevator_arrows.png": "95e78ea061f2b9fdf31f5c5635d2a67c83db045102f72cf713f5001fe0d7a4d6",
+        "prepared.tscn": "4b3bb749c51cb2cc5ba7fc0f295094dadfa5523d950111fd81ab754b08af4f9b"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "mouse": {
+      "asset_id": "l4d2.bank.refine.computer_mouse",
+      "preparation_key": "9ba6fe1506ba42db",
+      "source_revision": "7a76bc18db275316",
+      "resource": "res://assets/library/l4d2.bank.refine.computer_mouse/9ba6fe1506ba42db/prepared.tscn",
+      "size": [
+        0.120232179760933,
+        0.0284892749041319,
+        0.060163713991642
+      ],
+      "artifacts": {
+        "l4d2.bank.refine.computer_mouse.glb": "e1f168ed82965b2276fef9b9a2b80cc32aaee1a09de325401baba616279dc2e7",
+        "l4d2.bank.refine_computer.png": "1f24df66c4e3b14a23397315e9543689c27c719cadef44b4f075ccd1788f3c1f",
+        "prepared.tscn": "09db073c1861aebb8bd9847cf0c28e8619a166c269c639a404c14f9fab2c4981"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "shutter_curtain": {
+      "asset_id": "l4d2.bank.refine.shutter_curtain",
+      "preparation_key": "a1b17966eab47005",
+      "source_revision": "0212c2608e4faa0f",
+      "resource": "res://assets/library/l4d2.bank.refine.shutter_curtain/a1b17966eab47005/prepared.tscn",
+      "size": [
+        0.1208560988307,
+        2.50364708900452,
+        2.40673685073853
+      ],
+      "artifacts": {
+        "l4d2.bank.refine.shutter_curtain.glb": "c17666151833167c7aa442fdf61ec94b8bc4346728724b119067ff89dbdb9969",
+        "l4d2.bank.refine_Roll-up_door.png": "13cd84b9eb8f47e79e4b9a10927e187df025651b89e4f14ec87688643a4f5410",
+        "prepared.tscn": "3ec210a58c3b8232386c79c78e7e0dad509dcf53441968a519aaeffe5c41187f"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "shutter_housing": {
+      "asset_id": "l4d2.bank.refine.shutter_housing",
+      "preparation_key": "3039416b1c4061c5",
+      "source_revision": "a7c1963029ba0cdf",
+      "resource": "res://assets/library/l4d2.bank.refine.shutter_housing/3039416b1c4061c5/prepared.tscn",
+      "size": [
+        0.438771069049835,
+        2.74844765663147,
+        2.60195779800415
+      ],
+      "artifacts": {
+        "l4d2.bank.refine.shutter_housing.glb": "821b7cc82db985df0aa6782f97eef565097407f476f0a3c820d67b2c5def2745",
+        "l4d2.bank.refine_Roll-up_door.png": "13cd84b9eb8f47e79e4b9a10927e187df025651b89e4f14ec87688643a4f5410",
+        "prepared.tscn": "075be174153a2618491e2baca7f58f47085c3e80b104725b77548f36329fb518"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "camera": {
+      "asset_id": "bank.pbr.camera",
+      "preparation_key": "9c50915e662701a1",
+      "source_revision": "4874a30e5b38a04b",
+      "resource": "res://assets/library/bank.pbr.camera/9c50915e662701a1/prepared.tscn",
+      "size": [
+        0.623960077762604,
+        0.445098161697388,
+        0.756726443767548
+      ],
+      "artifacts": {
+        "bank.pbr.camera.glb": "e7b0e79a498e86ca5da4767ae02592510356b6576d34c2c95ed246d496541272",
+        "bank.pbr_camera.png": "7bab71c4eac1db8132948f57678fb5285a9a900cf61681d967773e8b00d9ecd8",
+        "prepared.tscn": "4a49153bbb783b49836605cd92fb301aa650df39e8c6dfe1cdc88e5e04a682e8"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    },
+    "agency_desk": {
+      "asset_id": "bank.pbr.office_desk",
+      "preparation_key": "62b58720902d2fc0",
+      "source_revision": "b9afe13e5c865576",
+      "resource": "res://assets/library/bank.pbr.office_desk/62b58720902d2fc0/prepared.tscn",
+      "size": [
+        1.82879996299744,
+        0.723900020122528,
+        0.914400100708008
+      ],
+      "artifacts": {
+        "bank.pbr.office_desk.glb": "4b335c18fa782c869bf1e8e96ff92e4d94e6cedaa33ab7240f9b4b986f05bd6a",
+        "bank.pbr_officedesk01.png": "056938d151d4b049787aa1a08b2193a675a056df46eebad9a22d57d351578006",
+        "bank.pbr_officedesk01_n.png": "d19857d4e6b486b165c3f80fc9b920f638dfd0fb898cec31c0c435fb9157a45b",
+        "prepared.tscn": "9249654a7a837897643f9399d6700760700965d90abf515beac33c54375e6c4c"
+      },
+      "usage": "local_reference_only_rights_unverified"
+    }
+  },
+  "surfaces": {
+    "plaster": {
+      "asset_id": "hl2.bank.surface.plaster",
+      "preparation_key": "7bc857fb91ea16d8",
+      "source_revision": "b0775da7e89094f2",
+      "resource": "res://assets/library/hl2.bank.surface.plaster/7bc857fb91ea16d8/texture.png",
+      "texture_role": "albedo",
+      "source_report": "D:\\AIGameEngine\\outerasset\\converted\\half-life-2\\bank_arch_surfaces-20261003-075648\\textures.json"
+    },
+    "tile": {
+      "asset_id": "hl2.bank.surface.tile",
+      "preparation_key": "ad6600c5e191cda1",
+      "source_revision": "76a91f5a4bb28331",
+      "resource": "res://assets/library/hl2.bank.surface.tile/ad6600c5e191cda1/texture.png",
+      "texture_role": "albedo",
+      "source_report": "D:\\AIGameEngine\\outerasset\\converted\\half-life-2\\bank_arch_surfaces-20261003-075648\\textures.json"
+    },
+    "kitchen": {
+      "asset_id": "hl2.bank.surface.kitchen",
+      "preparation_key": "c487c76ff3c4497b",
+      "source_revision": "767cbadf2d333e13",
+      "resource": "res://assets/library/hl2.bank.surface.kitchen/c487c76ff3c4497b/texture.png",
+      "texture_role": "albedo",
+      "source_report": "D:\\AIGameEngine\\outerasset\\converted\\half-life-2\\bank_arch_surfaces-20261003-075648\\textures.json"
+    },
+    "concrete": {
+      "asset_id": "hl2.bank.surface.concrete",
+      "preparation_key": "79ade60ea55cd328",
+      "source_revision": "5fa0f2346a288a2d",
+      "resource": "res://assets/library/hl2.bank.surface.concrete/79ade60ea55cd328/texture.png",
+      "texture_role": "albedo",
+      "source_report": "D:\\AIGameEngine\\outerasset\\converted\\half-life-2\\bank_arch_surfaces-20261003-075648\\textures.json"
+    },
+    "floor": {
+      "asset_id": "hl2.bank.surface.floor",
+      "preparation_key": "9e40ce82efb4a089",
+      "source_revision": "152f71655f891785",
+      "resource": "res://assets/library/hl2.bank.surface.floor/9e40ce82efb4a089/texture.png",
+      "texture_role": "albedo",
+      "source_report": "D:\\AIGameEngine\\outerasset\\converted\\half-life-2\\bank_arch_surfaces-20261003-075648\\textures.json"
+    },
+    "wood": {
+      "asset_id": "hl2.bank.surface.wood",
+      "preparation_key": "1c7d046a9f5e5bd1",
+      "source_revision": "19a049933bb97e9f",
+      "resource": "res://assets/library/hl2.bank.surface.wood/1c7d046a9f5e5bd1/texture.png",
+      "texture_role": "albedo",
+      "source_report": "D:\\AIGameEngine\\outerasset\\converted\\half-life-2\\bank_additional_surfaces-20261003-110648\\textures.json"
+    },
+    "carpet": {
+      "asset_id": "hl2.bank.surface.carpet",
+      "preparation_key": "d1ca4167a2f1ef61",
+      "source_revision": "08b6ad3315560662",
+      "resource": "res://assets/library/hl2.bank.surface.carpet/d1ca4167a2f1ef61/texture.png",
+      "texture_role": "albedo",
+      "source_report": "D:\\AIGameEngine\\outerasset\\converted\\half-life-2\\bank_additional_surfaces-20261003-110648\\textures.json"
+    },
+    "steel_panels": {
+      "asset_id": "hl2.bank.surface.steel_panels",
+      "preparation_key": "03ccaa78d826f409",
+      "source_revision": "f7fd8eea32a09e42",
+      "resource": "res://assets/library/hl2.bank.surface.steel_panels/03ccaa78d826f409/texture.png",
+      "texture_role": "albedo",
+      "source_report": "D:\\AIGameEngine\\outerasset\\converted\\half-life-2\\bank_finish_surfaces-20261003-133023\\textures.json"
+    },
+    "glass_dirt": {
+      "asset_id": "hl2.bank.surface.glass_dirt",
+      "preparation_key": "96dd1674bf675ce0",
+      "source_revision": "fc6e5022da673448",
+      "resource": "res://assets/library/hl2.bank.surface.glass_dirt/96dd1674bf675ce0/texture.png",
+      "texture_role": "albedo",
+      "source_report": "D:\\AIGameEngine\\outerasset\\converted\\half-life-2\\bank_finish_surfaces-20261003-133023\\textures.json"
+    }
+  },
+  "props": [
+    {
+      "id": "G_mkDesk_1",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        11,
+        0,
+        9.35
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        1.1611163482966314
+      ],
+      "target_size": [
+        1.7,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 1,
+      "use_direction": [
+        -6.123233995736766e-17,
+        -1.0
+      ]
+    },
+    {
+      "id": "G_mkCRT_2",
+      "floor": "G",
+      "model": "monitor",
+      "position": [
+        11.0,
+        0.806,
+        9.482999999999999
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8071714413945276,
+        0.788214687527663,
+        1.046855515717647
+      ],
+      "target_size": [
+        0.42,
+        0.38,
+        0.46
+      ],
+      "collision": false,
+      "source_index": 2,
+      "support": "G_mkDesk_1"
+    },
+    {
+      "id": "G_mkChair_3",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        11,
+        0,
+        8.45
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 3
+    },
+    {
+      "id": "G_mkDesk_4",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        15,
+        0,
+        9.35
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        1.1611163482966314
+      ],
+      "target_size": [
+        1.7,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 4,
+      "use_direction": [
+        -6.123233995736766e-17,
+        -1.0
+      ]
+    },
+    {
+      "id": "G_mkCRT_5",
+      "floor": "G",
+      "model": "monitor",
+      "position": [
+        15.0,
+        0.806,
+        9.482999999999999
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8071714413945276,
+        0.788214687527663,
+        1.046855515717647
+      ],
+      "target_size": [
+        0.42,
+        0.38,
+        0.46
+      ],
+      "collision": false,
+      "source_index": 5,
+      "support": "G_mkDesk_4"
+    },
+    {
+      "id": "G_mkChair_6",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        15,
+        0,
+        8.45
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 6
+    },
+    {
+      "id": "G_mkDesk_7",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        19,
+        0,
+        9.35
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        1.1611163482966314
+      ],
+      "target_size": [
+        1.7,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 7,
+      "use_direction": [
+        -6.123233995736766e-17,
+        -1.0
+      ]
+    },
+    {
+      "id": "G_mkCRT_8",
+      "floor": "G",
+      "model": "monitor",
+      "position": [
+        19.0,
+        0.806,
+        9.482999999999999
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8071714413945276,
+        0.788214687527663,
+        1.046855515717647
+      ],
+      "target_size": [
+        0.42,
+        0.38,
+        0.46
+      ],
+      "collision": false,
+      "source_index": 8,
+      "support": "G_mkDesk_7"
+    },
+    {
+      "id": "G_mkChair_9",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        19,
+        0,
+        8.45
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 9
+    },
+    {
+      "id": "G_mkDesk_10",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        23,
+        0,
+        9.35
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        1.1611163482966314
+      ],
+      "target_size": [
+        1.7,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 10,
+      "use_direction": [
+        -6.123233995736766e-17,
+        -1.0
+      ]
+    },
+    {
+      "id": "G_mkCRT_11",
+      "floor": "G",
+      "model": "monitor",
+      "position": [
+        23.0,
+        0.806,
+        9.482999999999999
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8071714413945276,
+        0.788214687527663,
+        1.046855515717647
+      ],
+      "target_size": [
+        0.42,
+        0.38,
+        0.46
+      ],
+      "collision": false,
+      "source_index": 11,
+      "support": "G_mkDesk_10"
+    },
+    {
+      "id": "G_mkChair_12",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        22.2,
+        0,
+        7.6
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 12
+    },
+    {
+      "id": "G_mkLocker_15",
+      "floor": "G",
+      "model": "locker",
+      "position": [
+        16.6,
+        0,
+        0.35
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.1930323880265652,
+        1.4,
+        1.6404199806975859
+      ],
+      "target_size": [
+        1.5,
+        1.8669000387191839,
+        0.5
+      ],
+      "collision": true,
+      "source_index": 15
+    },
+    {
+      "id": "G_mkDesk_18",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        23.6,
+        0,
+        2.3
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.316238948779766,
+        1.301408447972887,
+        1.6392230799481855
+      ],
+      "target_size": [
+        2.4,
+        0.8,
+        0.8
+      ],
+      "collision": true,
+      "source_index": 18
+    },
+    {
+      "id": "G_mkDesk_22",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        12.5,
+        0,
+        3.6
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.316238948779766,
+        1.301408447972887,
+        1.0928153866321237
+      ],
+      "target_size": [
+        1.6,
+        0.8,
+        0.8
+      ],
+      "collision": true,
+      "source_index": 22,
+      "use_direction": [
+        -6.123233995736766e-17,
+        -1.0
+      ]
+    },
+    {
+      "id": "G_mkCRT_23",
+      "floor": "G",
+      "model": "monitor",
+      "position": [
+        12.5,
+        0.806,
+        3.7520000000000002
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8071714413945276,
+        0.788214687527663,
+        1.046855515717647
+      ],
+      "target_size": [
+        0.42,
+        0.38,
+        0.46
+      ],
+      "collision": false,
+      "source_index": 23,
+      "support": "G_mkDesk_22"
+    },
+    {
+      "id": "G_mkChair_24",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        12.5,
+        0,
+        2.8
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 24
+    },
+    {
+      "id": "G_mkDesk_25",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        17,
+        0,
+        4.2
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.316238948779766,
+        1.301408447972887,
+        1.0928153866321237
+      ],
+      "target_size": [
+        1.6,
+        0.8,
+        0.8
+      ],
+      "collision": true,
+      "source_index": 25,
+      "use_direction": [
+        -6.123233995736766e-17,
+        -1.0
+      ]
+    },
+    {
+      "id": "G_mkCRT_26",
+      "floor": "G",
+      "model": "monitor",
+      "position": [
+        17.0,
+        0.806,
+        4.352
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8071714413945276,
+        0.788214687527663,
+        1.046855515717647
+      ],
+      "target_size": [
+        0.42,
+        0.38,
+        0.46
+      ],
+      "collision": false,
+      "source_index": 26,
+      "support": "G_mkDesk_25"
+    },
+    {
+      "id": "G_mkPlant_27",
+      "floor": "G",
+      "model": "plant",
+      "position": [
+        25.4,
+        0,
+        0.6
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 27
+    },
+    {
+      "id": "G_mkDesk_32",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        36,
+        0,
+        1
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.316238948779766,
+        1.301408447972887,
+        2.3222326965932627
+      ],
+      "target_size": [
+        3.4,
+        0.8,
+        0.8
+      ],
+      "collision": true,
+      "source_index": 32,
+      "use_direction": [
+        6.123233995736766e-17,
+        1.0
+      ]
+    },
+    {
+      "id": "G_mkChair_33",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        35.5,
+        0,
+        1.9
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 33
+    },
+    {
+      "id": "G_mkVending_35",
+      "floor": "G",
+      "model": "vending",
+      "position": [
+        29.5,
+        0,
+        11.7
+      ],
+      "yaw": -180.0,
+      "scale": [
+        0.9801139673789301,
+        1.0938046870853966,
+        0.9567773087110835
+      ],
+      "target_size": [
+        0.95,
+        2,
+        0.8
+      ],
+      "collision": true,
+      "source_index": 35
+    },
+    {
+      "id": "G_mkBench_38",
+      "floor": "G",
+      "model": "bench",
+      "position": [
+        11,
+        0,
+        14
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.8460991784718258,
+        1.3099940449667478,
+        1.4649331076775722
+      ],
+      "target_size": [
+        2.4,
+        0.9,
+        0.5
+      ],
+      "collision": true,
+      "source_index": 38
+    },
+    {
+      "id": "G_mkBench_39",
+      "floor": "G",
+      "model": "bench",
+      "position": [
+        11,
+        0,
+        18
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.8460991784718258,
+        1.3099940449667478,
+        1.4649331076775722
+      ],
+      "target_size": [
+        2.4,
+        0.9,
+        0.5
+      ],
+      "collision": true,
+      "source_index": 39
+    },
+    {
+      "id": "G_mkBench_40",
+      "floor": "G",
+      "model": "bench",
+      "position": [
+        18,
+        0,
+        14
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.8460991784718258,
+        1.3099940449667478,
+        1.4649331076775722
+      ],
+      "target_size": [
+        2.4,
+        0.9,
+        0.5
+      ],
+      "collision": true,
+      "source_index": 40
+    },
+    {
+      "id": "G_mkBench_41",
+      "floor": "G",
+      "model": "bench",
+      "position": [
+        18,
+        0,
+        18
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.8460991784718258,
+        1.3099940449667478,
+        1.4649331076775722
+      ],
+      "target_size": [
+        2.4,
+        0.9,
+        0.5
+      ],
+      "collision": true,
+      "source_index": 41
+    },
+    {
+      "id": "G_anonymous_42",
+      "floor": "G",
+      "model": "reception",
+      "position": [
+        9.2,
+        0,
+        20.3
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.1296055998065984,
+        1.3525916690513777,
+        1.1918187842567753
+      ],
+      "target_size": [
+        3.4,
+        1.05,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 42,
+      "use_direction": [
+        0,
+        1
+      ]
+    },
+    {
+      "id": "G_mkCRT_43",
+      "floor": "G",
+      "model": "monitor",
+      "position": [
+        9.2,
+        0.806,
+        20.7265
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.8071714413945276,
+        0.788214687527663,
+        1.046855515717647
+      ],
+      "target_size": [
+        0.42,
+        0.38,
+        0.46
+      ],
+      "collision": false,
+      "source_index": 43,
+      "support": "G_reception_workdesk"
+    },
+    {
+      "id": "G_mkChair_44",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        9.2,
+        0,
+        21.6
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 44
+    },
+    {
+      "id": "G_mkChair_45",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        21.2,
+        0,
+        15.2
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 45
+    },
+    {
+      "id": "G_mkChair_46",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        22,
+        0,
+        15.2
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 46
+    },
+    {
+      "id": "G_mkChair_47",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        22.8,
+        0,
+        15.2
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 47
+    },
+    {
+      "id": "G_mkChair_48",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        23.6,
+        0,
+        15.2
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 48
+    },
+    {
+      "id": "G_mkChair_49",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        24.4,
+        0,
+        15.2
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 49
+    },
+    {
+      "id": "G_mkChair_50",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        21.2,
+        0,
+        16.9
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 50
+    },
+    {
+      "id": "G_mkChair_51",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        22,
+        0,
+        16.9
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 51
+    },
+    {
+      "id": "G_mkChair_52",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        22.8,
+        0,
+        16.9
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 52
+    },
+    {
+      "id": "G_mkChair_53",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        23.6,
+        0,
+        16.9
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 53
+    },
+    {
+      "id": "G_mkChair_54",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        24.4,
+        0,
+        16.9
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 54
+    },
+    {
+      "id": "G_mkPlant_56",
+      "floor": "G",
+      "model": "plant",
+      "position": [
+        12.7,
+        0,
+        21.3
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 56
+    },
+    {
+      "id": "G_mkShelf_57",
+      "floor": "G",
+      "model": "shelf",
+      "position": [
+        6.5,
+        0,
+        19
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "target_size": [
+        0.918370544910431,
+        1.6523003578186,
+        0.359593033790588
+      ],
+      "collision": true,
+      "source_index": 57
+    },
+    {
+      "id": "G_mkPlant_58",
+      "floor": "G",
+      "model": "plant",
+      "position": [
+        7,
+        0,
+        12.6
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 58
+    },
+    {
+      "id": "G_mkPlant_59",
+      "floor": "G",
+      "model": "plant",
+      "position": [
+        25.5,
+        0,
+        21.2
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 59
+    },
+    {
+      "id": "G_mkPlant_60",
+      "floor": "G",
+      "model": "plant",
+      "position": [
+        7,
+        0,
+        21.2
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 60
+    },
+    {
+      "id": "G_mkSedan_63",
+      "floor": "G",
+      "model": "car",
+      "position": [
+        9,
+        0,
+        -8
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.2719280026355304,
+        1.2087799198486886,
+        1.156603577318471
+      ],
+      "target_size": [
+        1.8,
+        1.4,
+        4.4
+      ],
+      "collision": true,
+      "source_index": 63
+    },
+    {
+      "id": "G_mkSedan_64",
+      "floor": "G",
+      "model": "car",
+      "position": [
+        16,
+        0,
+        -8
+      ],
+      "yaw": 5.729577951308244,
+      "scale": [
+        1.2719280026355304,
+        1.2087799198486886,
+        1.156603577318471
+      ],
+      "target_size": [
+        1.8,
+        1.4,
+        4.4
+      ],
+      "collision": true,
+      "source_index": 64
+    },
+    {
+      "id": "G_mkSedan_65",
+      "floor": "G",
+      "model": "car",
+      "position": [
+        30,
+        0,
+        -9
+      ],
+      "yaw": -180.0,
+      "scale": [
+        1.2719280026355304,
+        1.2087799198486886,
+        1.156603577318471
+      ],
+      "target_size": [
+        1.8,
+        1.4,
+        4.4
+      ],
+      "collision": true,
+      "source_index": 65
+    },
+    {
+      "id": "G_mkTruck_66",
+      "floor": "G",
+      "model": "van",
+      "position": [
+        44.5,
+        0,
+        5
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.1814290378378636,
+        1.4,
+        1.354714348466449
+      ],
+      "target_size": [
+        2.2,
+        2.4137074470520057,
+        6
+      ],
+      "collision": true,
+      "source_index": 66
+    },
+    {
+      "id": "G_mkSedan_69",
+      "floor": "G",
+      "model": "car",
+      "position": [
+        48.9,
+        0,
+        16
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2719280026355304,
+        1.2087799198486886,
+        1.156603577318471
+      ],
+      "target_size": [
+        1.8,
+        1.4,
+        4.4
+      ],
+      "collision": true,
+      "source_index": 69
+    },
+    {
+      "id": "G_mkBed_70",
+      "floor": "G",
+      "model": "bed",
+      "position": [
+        48.8,
+        0,
+        -11.5
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.109317512378415,
+        1.1839906093070665,
+        1.0812744837652721
+      ],
+      "target_size": [
+        1,
+        0.6,
+        2
+      ],
+      "collision": true,
+      "source_index": 70
+    },
+    {
+      "id": "G_mkDesk_71",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        43.2,
+        0,
+        -12.5
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        0.9562134633031082
+      ],
+      "target_size": [
+        1.4,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 71
+    },
+    {
+      "id": "G_mkLocker_72",
+      "floor": "G",
+      "model": "locker",
+      "position": [
+        46,
+        0,
+        -13.6
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.1930323880265652,
+        1.4,
+        1.0936133204650573
+      ],
+      "target_size": [
+        1,
+        1.8669000387191839,
+        0.5
+      ],
+      "collision": true,
+      "source_index": 72
+    },
+    {
+      "id": "F2_mkShelf_0",
+      "floor": "F2",
+      "model": "shelf",
+      "position": [
+        7.4,
+        3.6,
+        5.5
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.2514146763534393,
+        1.2104336784387313,
+        2.177770194268437
+      ],
+      "target_size": [
+        2,
+        2,
+        0.45
+      ],
+      "collision": true,
+      "source_index": 0
+    },
+    {
+      "id": "F2_mkShelf_1",
+      "floor": "F2",
+      "model": "shelf",
+      "position": [
+        12.6,
+        3.6,
+        6
+      ],
+      "yaw": -180.0,
+      "scale": [
+        1.2514146763534393,
+        1.2104336784387313,
+        2.177770194268437
+      ],
+      "target_size": [
+        2,
+        2,
+        0.45
+      ],
+      "collision": true,
+      "source_index": 1
+    },
+    {
+      "id": "F2_mkBoxes_2",
+      "floor": "F2",
+      "model": "box",
+      "position": [
+        10,
+        3.6,
+        8
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.1988637194889487,
+        1.0,
+        0.834123164913423
+      ],
+      "target_size": [
+        0.737532079219818,
+        0.456710636615753,
+        0.615192592144012
+      ],
+      "collision": true,
+      "source_index": 2
+    },
+    {
+      "id": "F2_mkDesk_4",
+      "floor": "F2",
+      "model": "desk",
+      "position": [
+        22,
+        3.6,
+        6.5
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        1.2294173099611392
+      ],
+      "target_size": [
+        1.8,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 4,
+      "use_direction": [
+        6.123233995736766e-17,
+        1.0
+      ]
+    },
+    {
+      "id": "F2_mkCRT_5",
+      "floor": "F2",
+      "model": "monitor",
+      "position": [
+        22.0,
+        4.406000000000001,
+        6.367
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.8071714413945276,
+        0.788214687527663,
+        1.046855515717647
+      ],
+      "target_size": [
+        0.42,
+        0.38,
+        0.46
+      ],
+      "collision": false,
+      "source_index": 5,
+      "support": "F2_mkDesk_4"
+    },
+    {
+      "id": "F2_mkLocker_7",
+      "floor": "F2",
+      "model": "locker",
+      "position": [
+        18,
+        3.6,
+        8.6
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.1930323880265652,
+        1.4,
+        1.0936133204650573
+      ],
+      "target_size": [
+        1,
+        1.8669000387191839,
+        0.5
+      ],
+      "collision": true,
+      "source_index": 7
+    },
+    {
+      "id": "F2_mkDesk_8",
+      "floor": "F2",
+      "model": "desk",
+      "position": [
+        27.5,
+        3.6,
+        4.6
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.316238948779766,
+        1.301408447972887,
+        1.0928153866321237
+      ],
+      "target_size": [
+        1.6,
+        0.8,
+        0.8
+      ],
+      "collision": true,
+      "source_index": 8,
+      "use_direction": [
+        -6.123233995736766e-17,
+        -1.0
+      ]
+    },
+    {
+      "id": "F2_mkCRT_9",
+      "floor": "F2",
+      "model": "monitor",
+      "position": [
+        27.5,
+        4.406000000000001,
+        4.752
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8071714413945276,
+        0.788214687527663,
+        1.046855515717647
+      ],
+      "target_size": [
+        0.42,
+        0.38,
+        0.46
+      ],
+      "collision": false,
+      "source_index": 9,
+      "support": "F2_mkDesk_8"
+    },
+    {
+      "id": "F2_mkChair_10",
+      "floor": "F2",
+      "model": "chair",
+      "position": [
+        27.5,
+        3.6,
+        3.9
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 10
+    },
+    {
+      "id": "F2_mkPlant_11",
+      "floor": "F2",
+      "model": "plant",
+      "position": [
+        29.4,
+        3.6,
+        8.4
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 11
+    },
+    {
+      "id": "F2_anonymous_12",
+      "floor": "F2",
+      "model": "toilet",
+      "position": [
+        31.916666666666668,
+        3.6,
+        0.5
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 12
+    },
+    {
+      "id": "F2_anonymous_13",
+      "floor": "F2",
+      "model": "toilet",
+      "position": [
+        33.75,
+        3.6,
+        0.5
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 13
+    },
+    {
+      "id": "F2_anonymous_14",
+      "floor": "F2",
+      "model": "toilet",
+      "position": [
+        35.583333333333336,
+        3.6,
+        0.5
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 14
+    },
+    {
+      "id": "F2_mkSofa_15",
+      "floor": "F2",
+      "model": "sofa",
+      "position": [
+        20,
+        3.6,
+        13
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.0573118839541298,
+        1.2218264019470906,
+        1.1558914948990775
+      ],
+      "target_size": [
+        2.4,
+        0.9,
+        0.85
+      ],
+      "collision": true,
+      "source_index": 15
+    },
+    {
+      "id": "F2_mkSofa_16",
+      "floor": "F2",
+      "model": "sofa",
+      "position": [
+        20,
+        3.6,
+        17.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.0573118839541298,
+        1.2218264019470906,
+        1.1558914948990775
+      ],
+      "target_size": [
+        2.4,
+        0.9,
+        0.85
+      ],
+      "collision": true,
+      "source_index": 16
+    },
+    {
+      "id": "F2_mkSofa_17",
+      "floor": "F2",
+      "model": "sofa",
+      "position": [
+        27,
+        3.6,
+        13
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.0573118839541298,
+        1.2218264019470906,
+        1.1558914948990775
+      ],
+      "target_size": [
+        2.4,
+        0.9,
+        0.85
+      ],
+      "collision": true,
+      "source_index": 17
+    },
+    {
+      "id": "F2_mkSofa_18",
+      "floor": "F2",
+      "model": "sofa",
+      "position": [
+        27,
+        3.6,
+        17.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.0573118839541298,
+        1.2218264019470906,
+        1.1558914948990775
+      ],
+      "target_size": [
+        2.4,
+        0.9,
+        0.85
+      ],
+      "collision": true,
+      "source_index": 18
+    },
+    {
+      "id": "F2_mkDesk_19",
+      "floor": "F2",
+      "model": "agency_desk",
+      "position": [
+        20,
+        3.6,
+        15.2
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.7655293243255384,
+        1.1051249865479922,
+        0.8748905423135569
+      ],
+      "target_size": [
+        1.4,
+        0.8,
+        0.8
+      ],
+      "collision": true,
+      "source_index": 19,
+      "pbr_original": {
+        "model": "desk",
+        "scale": [
+          1.316238948779766,
+          1.301408447972887,
+          0.9562134633031082
+        ],
+        "yaw": -90.0
+      }
+    },
+    {
+      "id": "F2_mkDesk_20",
+      "floor": "F2",
+      "model": "agency_desk",
+      "position": [
+        27,
+        3.6,
+        15.2
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.7655293243255384,
+        1.1051249865479922,
+        0.8748905423135569
+      ],
+      "target_size": [
+        1.4,
+        0.8,
+        0.8
+      ],
+      "collision": true,
+      "source_index": 20,
+      "pbr_original": {
+        "model": "desk",
+        "scale": [
+          1.316238948779766,
+          1.301408447972887,
+          0.9562134633031082
+        ],
+        "yaw": -90.0
+      }
+    },
+    {
+      "id": "F2_mkTV_21",
+      "floor": "F2",
+      "model": "tv",
+      "position": [
+        24,
+        4.4,
+        9.7
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.9963246859022502,
+        1.0027431188931892,
+        0.9983015099609321
+      ],
+      "target_size": [
+        0.6,
+        0.55,
+        0.48
+      ],
+      "collision": true,
+      "source_index": 21
+    },
+    {
+      "id": "F2_mkDesk_22",
+      "floor": "F2",
+      "model": "desk",
+      "position": [
+        17.3,
+        3.6,
+        21.4
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        1.7758250032772012
+      ],
+      "target_size": [
+        2.6,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 22
+    },
+    {
+      "id": "F2_mkDesk_23",
+      "floor": "F2",
+      "model": "desk",
+      "position": [
+        20.3,
+        3.6,
+        21.4
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        1.7758250032772012
+      ],
+      "target_size": [
+        2.6,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 23
+    },
+    {
+      "id": "F2_mkDesk_24",
+      "floor": "F2",
+      "model": "desk",
+      "position": [
+        23.3,
+        3.6,
+        21.4
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        1.7758250032772012
+      ],
+      "target_size": [
+        2.6,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 24
+    },
+    {
+      "id": "F2_mkDesk_25",
+      "floor": "F2",
+      "model": "desk",
+      "position": [
+        26.3,
+        3.6,
+        21.4
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        1.7758250032772012
+      ],
+      "target_size": [
+        2.6,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 25
+    },
+    {
+      "id": "F2_mkPlant_26",
+      "floor": "F2",
+      "model": "plant",
+      "position": [
+        15,
+        3.6,
+        10
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 26
+    },
+    {
+      "id": "F2_mkPlant_27",
+      "floor": "F2",
+      "model": "plant",
+      "position": [
+        33,
+        3.6,
+        21
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 27
+    },
+    {
+      "id": "F2_mkPlant_28",
+      "floor": "F2",
+      "model": "plant",
+      "position": [
+        15,
+        3.6,
+        21
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 28
+    },
+    {
+      "id": "F2_mkDesk_29",
+      "floor": "F2",
+      "model": "desk",
+      "position": [
+        9,
+        3.6,
+        12
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.8098285545721784,
+        1.301408447972887,
+        1.6392230799481855
+      ],
+      "target_size": [
+        2.4,
+        0.8,
+        1.1
+      ],
+      "collision": true,
+      "source_index": 29,
+      "use_direction": [
+        -6.123233995736766e-17,
+        -1.0
+      ]
+    },
+    {
+      "id": "F2_mkChair_30",
+      "floor": "F2",
+      "model": "chair",
+      "position": [
+        9,
+        3.6,
+        11
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 30
+    },
+    {
+      "id": "F2_mkCRT_31",
+      "floor": "F2",
+      "model": "monitor",
+      "position": [
+        9.0,
+        4.406000000000001,
+        12.209
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8071714413945276,
+        0.788214687527663,
+        1.046855515717647
+      ],
+      "target_size": [
+        0.42,
+        0.38,
+        0.46
+      ],
+      "collision": false,
+      "source_index": 31,
+      "support": "F2_mkDesk_29"
+    },
+    {
+      "id": "F2_mkShelf_32",
+      "floor": "F2",
+      "model": "shelf",
+      "position": [
+        6.4,
+        3.6,
+        17
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.2514146763534393,
+        1.2104336784387313,
+        2.395547213695281
+      ],
+      "target_size": [
+        2.2,
+        2,
+        0.45
+      ],
+      "collision": true,
+      "source_index": 32
+    },
+    {
+      "id": "F2_mkShelf_33",
+      "floor": "F2",
+      "model": "shelf",
+      "position": [
+        6.4,
+        3.6,
+        20
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.2514146763534393,
+        1.2104336784387313,
+        2.395547213695281
+      ],
+      "target_size": [
+        2.2,
+        2,
+        0.45
+      ],
+      "collision": true,
+      "source_index": 33
+    },
+    {
+      "id": "F2_mkSofa_34",
+      "floor": "F2",
+      "model": "sofa",
+      "position": [
+        11,
+        3.6,
+        21
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.0573118839541298,
+        1.2218264019470906,
+        1.0595672036574877
+      ],
+      "target_size": [
+        2.2,
+        0.9,
+        0.85
+      ],
+      "collision": true,
+      "source_index": 34
+    },
+    {
+      "id": "F2_mkPlant_35",
+      "floor": "F2",
+      "model": "plant",
+      "position": [
+        13.3,
+        3.6,
+        9.7
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 35
+    },
+    {
+      "id": "F3_mkWardrobe_0",
+      "floor": "F3",
+      "model": "locker",
+      "position": [
+        32.3,
+        7.2,
+        11.2
+      ],
+      "yaw": -67.08168819476707,
+      "scale": [
+        1.0,
+        1.0,
+        1.0
+      ],
+      "target_size": [
+        0.914399981498718,
+        1.33350002765656,
+        0.419100105762482
+      ],
+      "collision": true,
+      "source_index": 0
+    },
+    {
+      "id": "F3_mkBed_1",
+      "floor": "F3",
+      "model": "bed",
+      "position": [
+        7,
+        7.2,
+        6.2
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.109317512378415,
+        1.1839906093070665,
+        1.0812744837652721
+      ],
+      "target_size": [
+        1,
+        0.6,
+        2
+      ],
+      "collision": true,
+      "source_index": 1
+    },
+    {
+      "id": "F3_mkWardrobe_2",
+      "floor": "F3",
+      "model": "locker",
+      "position": [
+        12.5,
+        7.2,
+        3.45
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.4316388656318784,
+        1.4,
+        1.0936133204650573
+      ],
+      "target_size": [
+        1,
+        1.8669000387191839,
+        0.6
+      ],
+      "collision": true,
+      "source_index": 2
+    },
+    {
+      "id": "F3_mkDesk_3",
+      "floor": "F3",
+      "model": "desk",
+      "position": [
+        9.8,
+        7.2,
+        8.9
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        0.9562134633031082
+      ],
+      "target_size": [
+        1.4,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 3,
+      "use_direction": [
+        6.123233995736766e-17,
+        -1.0
+      ]
+    },
+    {
+      "id": "F3_mkChair_4",
+      "floor": "F3",
+      "model": "chair",
+      "position": [
+        9.8,
+        7.2,
+        8.1
+      ],
+      "yaw": -90.00000000000001,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 4
+    },
+    {
+      "id": "F3_mkBed_5",
+      "floor": "F3",
+      "model": "bed",
+      "position": [
+        7,
+        7.2,
+        12.5
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.109317512378415,
+        1.1839906093070665,
+        1.0812744837652721
+      ],
+      "target_size": [
+        1,
+        0.6,
+        2
+      ],
+      "collision": true,
+      "source_index": 5
+    },
+    {
+      "id": "F3_mkWardrobe_6",
+      "floor": "F3",
+      "model": "locker",
+      "position": [
+        12.5,
+        7.2,
+        10
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.4316388656318784,
+        1.4,
+        1.0936133204650573
+      ],
+      "target_size": [
+        1,
+        1.8669000387191839,
+        0.6
+      ],
+      "collision": true,
+      "source_index": 6
+    },
+    {
+      "id": "F3_mkDesk_7",
+      "floor": "F3",
+      "model": "desk",
+      "position": [
+        10,
+        7.2,
+        15
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9871792115848244,
+        1.301408447972887,
+        0.8196115399740928
+      ],
+      "target_size": [
+        1.2,
+        0.8,
+        0.6
+      ],
+      "collision": true,
+      "source_index": 7
+    },
+    {
+      "id": "F3_mkBed_8",
+      "floor": "F3",
+      "model": "bed",
+      "position": [
+        7,
+        7.2,
+        18.7
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.109317512378415,
+        1.1839906093070665,
+        1.0812744837652721
+      ],
+      "target_size": [
+        1,
+        0.6,
+        2
+      ],
+      "collision": true,
+      "source_index": 8
+    },
+    {
+      "id": "F3_mkWardrobe_9",
+      "floor": "F3",
+      "model": "locker",
+      "position": [
+        12.5,
+        7.2,
+        21.4
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.4316388656318784,
+        1.4,
+        1.0936133204650573
+      ],
+      "target_size": [
+        1,
+        1.8669000387191839,
+        0.6
+      ],
+      "collision": true,
+      "source_index": 9
+    },
+    {
+      "id": "F3_mkDesk_10",
+      "floor": "F3",
+      "model": "desk",
+      "position": [
+        10,
+        7.2,
+        16
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.1517090801822951,
+        1.301408447972887,
+        0.8879125016386006
+      ],
+      "target_size": [
+        1.3,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 10
+    },
+    {
+      "id": "F3_mkBed_11",
+      "floor": "F3",
+      "model": "bed",
+      "position": [
+        26,
+        7.2,
+        2
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.109317512378415,
+        1.1839906093070665,
+        1.0812744837652721
+      ],
+      "target_size": [
+        1,
+        0.6,
+        2
+      ],
+      "collision": true,
+      "source_index": 11
+    },
+    {
+      "id": "F3_mkWardrobe_12",
+      "floor": "F3",
+      "model": "locker",
+      "position": [
+        21,
+        7.2,
+        0.45
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.4316388656318784,
+        1.4,
+        1.0936133204650573
+      ],
+      "target_size": [
+        1,
+        1.8669000387191839,
+        0.6
+      ],
+      "collision": true,
+      "source_index": 12
+    },
+    {
+      "id": "F3_mkDesk_13",
+      "floor": "F3",
+      "model": "desk",
+      "position": [
+        23.5,
+        7.2,
+        7.4
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9871792115848244,
+        1.301408447972887,
+        0.8196115399740928
+      ],
+      "target_size": [
+        1.2,
+        0.8,
+        0.6
+      ],
+      "collision": true,
+      "source_index": 13
+    },
+    {
+      "id": "F3_mkShelf_14",
+      "floor": "F3",
+      "model": "shelf",
+      "position": [
+        28.5,
+        7.2,
+        1
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2514146763534393,
+        1.2104336784387313,
+        2.6133242331221247
+      ],
+      "target_size": [
+        2.4,
+        2,
+        0.45
+      ],
+      "collision": true,
+      "source_index": 14
+    },
+    {
+      "id": "F3_mkShelf_15",
+      "floor": "F3",
+      "model": "shelf",
+      "position": [
+        32,
+        7.2,
+        1
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2514146763534393,
+        1.2104336784387313,
+        2.6133242331221247
+      ],
+      "target_size": [
+        2.4,
+        2,
+        0.45
+      ],
+      "collision": true,
+      "source_index": 15
+    },
+    {
+      "id": "F3_mkBoxes_16",
+      "floor": "F3",
+      "model": "box",
+      "position": [
+        33,
+        7.2,
+        6
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.1988637194889487,
+        1.0,
+        0.834123164913423
+      ],
+      "target_size": [
+        0.737532079219818,
+        0.456710636615753,
+        0.615192592144012
+      ],
+      "collision": true,
+      "source_index": 16
+    },
+    {
+      "id": "F3_mkSofa_18",
+      "floor": "F3",
+      "model": "sofa",
+      "position": [
+        32.2,
+        7.2,
+        14.8
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.0573118839541298,
+        1.2218264019470906,
+        1.0595672036574877
+      ],
+      "target_size": [
+        2.2,
+        0.9,
+        0.85
+      ],
+      "collision": true,
+      "source_index": 18
+    },
+    {
+      "id": "F3_mkTV_19",
+      "floor": "F3",
+      "model": "tv",
+      "position": [
+        33,
+        8.0,
+        9.2
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.9963246859022502,
+        1.0027431188931892,
+        0.9983015099609321
+      ],
+      "target_size": [
+        0.6,
+        0.55,
+        0.48
+      ],
+      "collision": true,
+      "source_index": 19
+    },
+    {
+      "id": "F3_mkLocker_20",
+      "floor": "F3",
+      "model": "locker",
+      "position": [
+        22,
+        7.2,
+        8.4
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.1930323880265652,
+        1.4,
+        1.6404199806975859
+      ],
+      "target_size": [
+        1.5,
+        1.8669000387191839,
+        0.5
+      ],
+      "collision": true,
+      "source_index": 20
+    },
+    {
+      "id": "F3_anonymous_21",
+      "floor": "F3",
+      "model": "toilet",
+      "position": [
+        21.5,
+        7.2,
+        21.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 21
+    },
+    {
+      "id": "F3_anonymous_22",
+      "floor": "F3",
+      "model": "toilet",
+      "position": [
+        23.5,
+        7.2,
+        21.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 22
+    },
+    {
+      "id": "F3_anonymous_23",
+      "floor": "F3",
+      "model": "toilet",
+      "position": [
+        25.5,
+        7.2,
+        21.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 23
+    },
+    {
+      "id": "F3_anonymous_24",
+      "floor": "F3",
+      "model": "toilet",
+      "position": [
+        28.5,
+        7.2,
+        21.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 24
+    },
+    {
+      "id": "F3_anonymous_25",
+      "floor": "F3",
+      "model": "toilet",
+      "position": [
+        30.5,
+        7.2,
+        21.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 25
+    },
+    {
+      "id": "F3_anonymous_26",
+      "floor": "F3",
+      "model": "toilet",
+      "position": [
+        32.5,
+        7.2,
+        21.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 26
+    },
+    {
+      "id": "F4_mkSofa_2",
+      "floor": "F4",
+      "model": "sofa",
+      "position": [
+        7,
+        10.8,
+        4
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0573118839541298,
+        1.2218264019470906,
+        1.0595672036574877
+      ],
+      "target_size": [
+        2.2,
+        0.9,
+        0.85
+      ],
+      "collision": true,
+      "source_index": 2
+    },
+    {
+      "id": "F4_mkSofa_3",
+      "floor": "F4",
+      "model": "sofa",
+      "position": [
+        13,
+        10.8,
+        4
+      ],
+      "yaw": -180.0,
+      "scale": [
+        1.0573118839541298,
+        1.2218264019470906,
+        1.0595672036574877
+      ],
+      "target_size": [
+        2.2,
+        0.9,
+        0.85
+      ],
+      "collision": true,
+      "source_index": 3
+    },
+    {
+      "id": "F4_mkSofa_4",
+      "floor": "F4",
+      "model": "sofa",
+      "position": [
+        10,
+        10.8,
+        0.8
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.0573118839541298,
+        1.2218264019470906,
+        1.1558914948990775
+      ],
+      "target_size": [
+        2.4,
+        0.9,
+        0.85
+      ],
+      "collision": true,
+      "source_index": 4
+    },
+    {
+      "id": "F4_mkDesk_5",
+      "floor": "F4",
+      "model": "coffee_table",
+      "position": [
+        10,
+        10.8,
+        4
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.394935121219648,
+        1.3066031792017798,
+        1.0498688697685843
+      ],
+      "target_size": [
+        1.2,
+        0.5,
+        0.8
+      ],
+      "collision": true,
+      "source_index": 5
+    },
+    {
+      "id": "F4_mkTV_6",
+      "floor": "F4",
+      "model": "tv",
+      "position": [
+        10,
+        11.600000000000001,
+        7.32
+      ],
+      "yaw": 180.0,
+      "scale": [
+        0.9963246859022502,
+        1.0027431188931892,
+        0.9983015099609321
+      ],
+      "target_size": [
+        0.6,
+        0.55,
+        0.48
+      ],
+      "collision": true,
+      "source_index": 6
+    },
+    {
+      "id": "F4_mkPlant_7",
+      "floor": "F4",
+      "model": "plant",
+      "position": [
+        6.7,
+        10.8,
+        7.3
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 7
+    },
+    {
+      "id": "F4_anonymous_8",
+      "floor": "F4",
+      "model": "toilet",
+      "position": [
+        7.1000000000000005,
+        10.8,
+        21.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 8
+    },
+    {
+      "id": "F4_anonymous_9",
+      "floor": "F4",
+      "model": "toilet",
+      "position": [
+        8.9,
+        10.8,
+        21.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 9
+    },
+    {
+      "id": "F4_anonymous_10",
+      "floor": "F4",
+      "model": "toilet",
+      "position": [
+        11.1,
+        10.8,
+        21.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 10
+    },
+    {
+      "id": "F4_anonymous_11",
+      "floor": "F4",
+      "model": "toilet",
+      "position": [
+        12.9,
+        10.8,
+        21.5
+      ],
+      "yaw": 90.0,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.56,
+        0.69,
+        0.78
+      ],
+      "collision": true,
+      "source_index": 11
+    },
+    {
+      "id": "F4_anonymous_12",
+      "floor": "F4",
+      "model": "water",
+      "position": [
+        13.6,
+        10.8,
+        13.4
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.1593226511226242,
+        1.1557535061520108,
+        1.4125987162415594
+      ],
+      "target_size": [
+        0.4,
+        1.45,
+        0.4
+      ],
+      "collision": true,
+      "source_index": 12
+    },
+    {
+      "id": "F4_mkChair_14",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        17.6,
+        10.8,
+        3.2
+      ],
+      "yaw": -90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 14
+    },
+    {
+      "id": "F4_mkChair_15",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        17.6,
+        10.8,
+        5.6
+      ],
+      "yaw": 90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 15
+    },
+    {
+      "id": "F4_mkChair_16",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        18.8,
+        10.8,
+        3.2
+      ],
+      "yaw": -90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 16
+    },
+    {
+      "id": "F4_mkChair_17",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        18.8,
+        10.8,
+        5.6
+      ],
+      "yaw": 90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 17
+    },
+    {
+      "id": "F4_mkChair_18",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        20,
+        10.8,
+        3.2
+      ],
+      "yaw": -90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 18
+    },
+    {
+      "id": "F4_mkChair_19",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        20,
+        10.8,
+        5.6
+      ],
+      "yaw": 90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 19
+    },
+    {
+      "id": "F4_mkChair_20",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        21.200000000000003,
+        10.8,
+        3.2
+      ],
+      "yaw": -90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 20
+    },
+    {
+      "id": "F4_mkChair_21",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        21.200000000000003,
+        10.8,
+        5.6
+      ],
+      "yaw": 90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 21
+    },
+    {
+      "id": "F4_mkChair_22",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        22.400000000000002,
+        10.8,
+        3.2
+      ],
+      "yaw": -90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 22
+    },
+    {
+      "id": "F4_mkChair_23",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        22.400000000000002,
+        10.8,
+        5.6
+      ],
+      "yaw": 90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 23
+    },
+    {
+      "id": "F4_mkBilliard_24",
+      "floor": "F4",
+      "model": "pool",
+      "position": [
+        20,
+        10.8,
+        16
+      ],
+      "yaw": 0.0,
+      "scale": [
+        2.180496638456927,
+        1.3123359275288193,
+        0.6056935106824797
+      ],
+      "target_size": [
+        2.7,
+        0.9,
+        1.5
+      ],
+      "collision": true,
+      "source_index": 24
+    },
+    {
+      "id": "F4_mkSofa_25",
+      "floor": "F4",
+      "model": "sofa",
+      "position": [
+        15,
+        10.8,
+        19
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0573118839541298,
+        1.2218264019470906,
+        1.0595672036574877
+      ],
+      "target_size": [
+        2.2,
+        0.9,
+        0.85
+      ],
+      "collision": true,
+      "source_index": 25
+    },
+    {
+      "id": "F4_mkPlant_26",
+      "floor": "F4",
+      "model": "plant",
+      "position": [
+        25.3,
+        10.8,
+        21.3
+      ],
+      "yaw": 0.0,
+      "scale": [
+        0.6146769188727184,
+        0.7412329006231004,
+        0.4784855832424751
+      ],
+      "target_size": [
+        0.68,
+        1.3,
+        0.68
+      ],
+      "collision": true,
+      "source_index": 26
+    },
+    {
+      "id": "F4_mkStove_28",
+      "floor": "F4",
+      "model": "stove",
+      "position": [
+        27.5,
+        10.8,
+        3.5
+      ],
+      "yaw": 0.0,
+      "scale": [
+        1.0104162760971085,
+        1.0622784131148535,
+        0.9721276769574686
+      ],
+      "target_size": [
+        1.2,
+        0.95,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 28
+    },
+    {
+      "id": "F4_mkFridge_29",
+      "floor": "F4",
+      "model": "fridge",
+      "position": [
+        33.5,
+        10.8,
+        5
+      ],
+      "yaw": -180.0,
+      "scale": [
+        0.7560826565219153,
+        0.9373828286549734,
+        0.6335826984338886
+      ],
+      "target_size": [
+        0.8,
+        2,
+        0.7
+      ],
+      "collision": true,
+      "source_index": 29
+    },
+    {
+      "id": "F4_mkDesk_30",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        28.5,
+        10.8,
+        11
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.146682229665359,
+        1.0542399866909966,
+        1.0053763735832024
+      ],
+      "target_size": [
+        1.8,
+        0.8,
+        0.9
+      ],
+      "collision": true,
+      "source_index": 30
+    },
+    {
+      "id": "F4_mkChair_31",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        28.1,
+        10.8,
+        10.2
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 31
+    },
+    {
+      "id": "F4_mkChair_32",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        28.9,
+        10.8,
+        11.8
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 32
+    },
+    {
+      "id": "F4_mkDesk_33",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        31.5,
+        10.8,
+        11
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.146682229665359,
+        1.0542399866909966,
+        1.0053763735832024
+      ],
+      "target_size": [
+        1.8,
+        0.8,
+        0.9
+      ],
+      "collision": true,
+      "source_index": 33
+    },
+    {
+      "id": "F4_mkChair_34",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        31.1,
+        10.8,
+        10.2
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 34
+    },
+    {
+      "id": "F4_mkChair_35",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        31.9,
+        10.8,
+        11.8
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 35
+    },
+    {
+      "id": "F4_mkDesk_36",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        28.5,
+        10.8,
+        15.5
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.146682229665359,
+        1.0542399866909966,
+        1.0053763735832024
+      ],
+      "target_size": [
+        1.8,
+        0.8,
+        0.9
+      ],
+      "collision": true,
+      "source_index": 36
+    },
+    {
+      "id": "F4_mkChair_37",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        28.1,
+        10.8,
+        14.7
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 37
+    },
+    {
+      "id": "F4_mkChair_38",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        28.9,
+        10.8,
+        16.3
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 38
+    },
+    {
+      "id": "F4_mkDesk_39",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        31.5,
+        10.8,
+        15.5
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.146682229665359,
+        1.0542399866909966,
+        1.0053763735832024
+      ],
+      "target_size": [
+        1.8,
+        0.8,
+        0.9
+      ],
+      "collision": true,
+      "source_index": 39
+    },
+    {
+      "id": "F4_mkChair_40",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        31.1,
+        10.8,
+        14.7
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 40
+    },
+    {
+      "id": "F4_mkChair_41",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        31.9,
+        10.8,
+        16.3
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 41
+    },
+    {
+      "id": "F4_mkDesk_42",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        28.5,
+        10.8,
+        19.5
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.146682229665359,
+        1.0542399866909966,
+        1.0053763735832024
+      ],
+      "target_size": [
+        1.8,
+        0.8,
+        0.9
+      ],
+      "collision": true,
+      "source_index": 42
+    },
+    {
+      "id": "F4_mkChair_43",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        28.1,
+        10.8,
+        18.7
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 43
+    },
+    {
+      "id": "F4_mkChair_44",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        28.9,
+        10.8,
+        20.3
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 44
+    },
+    {
+      "id": "F4_mkDesk_45",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        31.5,
+        10.8,
+        19.5
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.146682229665359,
+        1.0542399866909966,
+        1.0053763735832024
+      ],
+      "target_size": [
+        1.8,
+        0.8,
+        0.9
+      ],
+      "collision": true,
+      "source_index": 45
+    },
+    {
+      "id": "F4_mkChair_46",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        31.1,
+        10.8,
+        18.7
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 46
+    },
+    {
+      "id": "F4_mkChair_47",
+      "floor": "F4",
+      "model": "chair",
+      "position": [
+        31.9,
+        10.8,
+        20.3
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "source_index": 47
+    },
+    {
+      "id": "F2_mkTV_21_stand",
+      "floor": "F2",
+      "model": "table",
+      "position": [
+        24,
+        3.6000000000000005,
+        9.7
+      ],
+      "yaw": 90,
+      "scale": [
+        0.7947667094505682,
+        1.4026183488409132,
+        0.4220779138631279
+      ],
+      "target_size": [
+        0.55,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F3_mkTV_19_stand",
+      "floor": "F3",
+      "model": "table",
+      "position": [
+        33,
+        7.2,
+        9.2
+      ],
+      "yaw": 90,
+      "scale": [
+        0.7947667094505682,
+        1.4026183488409132,
+        0.4220779138631279
+      ],
+      "target_size": [
+        0.55,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_mkTV_6_stand",
+      "floor": "F4",
+      "model": "table",
+      "position": [
+        10,
+        10.8,
+        7.32
+      ],
+      "yaw": 90,
+      "scale": [
+        0.7947667094505682,
+        1.4026183488409132,
+        0.4220779138631279
+      ],
+      "target_size": [
+        0.55,
+        0.8,
+        0.7
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_meeting_0_0",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        18,
+        10.8,
+        3.98
+      ],
+      "yaw": 90,
+      "scale": [
+        1.0702367476876684,
+        1.0015279873564467,
+        1.1170848595368916
+      ],
+      "target_size": [
+        0.84,
+        0.76,
+        2.0
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_meeting_0_1",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        18,
+        10.8,
+        4.82
+      ],
+      "yaw": 90,
+      "scale": [
+        1.0702367476876684,
+        1.0015279873564467,
+        1.1170848595368916
+      ],
+      "target_size": [
+        0.84,
+        0.76,
+        2.0
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_meeting_1_0",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        20,
+        10.8,
+        3.98
+      ],
+      "yaw": 90,
+      "scale": [
+        1.0702367476876684,
+        1.0015279873564467,
+        1.1170848595368916
+      ],
+      "target_size": [
+        0.84,
+        0.76,
+        2.0
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_meeting_1_1",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        20,
+        10.8,
+        4.82
+      ],
+      "yaw": 90,
+      "scale": [
+        1.0702367476876684,
+        1.0015279873564467,
+        1.1170848595368916
+      ],
+      "target_size": [
+        0.84,
+        0.76,
+        2.0
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_meeting_2_0",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        22,
+        10.8,
+        3.98
+      ],
+      "yaw": 90,
+      "scale": [
+        1.0702367476876684,
+        1.0015279873564467,
+        1.1170848595368916
+      ],
+      "target_size": [
+        0.84,
+        0.76,
+        2.0
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_meeting_2_1",
+      "floor": "F4",
+      "model": "meeting_table",
+      "position": [
+        22,
+        10.8,
+        4.82
+      ],
+      "yaw": 90,
+      "scale": [
+        1.0702367476876684,
+        1.0015279873564467,
+        1.1170848595368916
+      ],
+      "target_size": [
+        0.84,
+        0.76,
+        2.0
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_kitchen_unit_0",
+      "floor": "F4",
+      "model": "kitchen_unit",
+      "position": [
+        28.125,
+        10.8,
+        0.65
+      ],
+      "yaw": -90,
+      "scale": [
+        0.6177636142885389,
+        1.1294446471441892,
+        1.0302963786208719
+      ],
+      "target_size": [
+        0.75,
+        0.86,
+        1.25
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_kitchen_unit_1",
+      "floor": "F4",
+      "model": "kitchen_unit",
+      "position": [
+        29.375,
+        10.8,
+        0.65
+      ],
+      "yaw": -90,
+      "scale": [
+        0.6177636142885389,
+        1.1294446471441892,
+        1.0302963786208719
+      ],
+      "target_size": [
+        0.75,
+        0.86,
+        1.25
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_kitchen_unit_2",
+      "floor": "F4",
+      "model": "kitchen_unit",
+      "position": [
+        30.625,
+        10.8,
+        0.65
+      ],
+      "yaw": -90,
+      "scale": [
+        0.6177636142885389,
+        1.1294446471441892,
+        1.0302963786208719
+      ],
+      "target_size": [
+        0.75,
+        0.86,
+        1.25
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_kitchen_unit_3",
+      "floor": "F4",
+      "model": "kitchen_unit",
+      "position": [
+        31.875,
+        10.8,
+        0.65
+      ],
+      "yaw": -90,
+      "scale": [
+        0.6177636142885389,
+        1.1294446471441892,
+        1.0302963786208719
+      ],
+      "target_size": [
+        0.75,
+        0.86,
+        1.25
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_cash_case_0",
+      "floor": "G",
+      "model": "cash_case",
+      "position": [
+        22.8,
+        0.806,
+        2.3
+      ],
+      "yaw": 90,
+      "scale": [
+        0.7028716106223161,
+        0.5340645863171207,
+        0.6494615697280557
+      ],
+      "target_size": [
+        0.35,
+        0.25,
+        0.6
+      ],
+      "collision": false,
+      "support": "G_mkDesk_18"
+    },
+    {
+      "id": "G_cash_case_1",
+      "floor": "G",
+      "model": "cash_case",
+      "position": [
+        23.6,
+        0.806,
+        2.3
+      ],
+      "yaw": 90,
+      "scale": [
+        0.7028716106223161,
+        0.5340645863171207,
+        0.6494615697280557
+      ],
+      "target_size": [
+        0.35,
+        0.25,
+        0.6
+      ],
+      "collision": false,
+      "support": "G_mkDesk_18"
+    },
+    {
+      "id": "G_cash_case_2",
+      "floor": "G",
+      "model": "cash_case",
+      "position": [
+        24.4,
+        0.806,
+        2.3
+      ],
+      "yaw": 90,
+      "scale": [
+        0.7028716106223161,
+        0.5340645863171207,
+        0.6494615697280557
+      ],
+      "target_size": [
+        0.35,
+        0.25,
+        0.6
+      ],
+      "collision": false,
+      "support": "G_mkDesk_18"
+    },
+    {
+      "id": "G_ATM_0",
+      "floor": "G",
+      "model": "atm",
+      "position": [
+        0.52,
+        0,
+        13
+      ],
+      "yaw": 0,
+      "scale": [
+        1.99165881188166,
+        1.517876476452637,
+        1.8992065219606094
+      ],
+      "target_size": [
+        0.7,
+        1.55,
+        0.7
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_ATM_1",
+      "floor": "G",
+      "model": "atm",
+      "position": [
+        0.52,
+        0,
+        16
+      ],
+      "yaw": 0,
+      "scale": [
+        1.99165881188166,
+        1.517876476452637,
+        1.8992065219606094
+      ],
+      "target_size": [
+        0.7,
+        1.55,
+        0.7
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_ATM_2",
+      "floor": "G",
+      "model": "atm",
+      "position": [
+        0.52,
+        0,
+        19
+      ],
+      "yaw": 0,
+      "scale": [
+        1.99165881188166,
+        1.517876476452637,
+        1.8992065219606094
+      ],
+      "target_size": [
+        0.7,
+        1.55,
+        0.7
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_washbasin_7.8",
+      "floor": "G",
+      "model": "vanity",
+      "position": [
+        7.8,
+        0,
+        5.53
+      ],
+      "yaw": -90,
+      "scale": [
+        1.1155660068779247,
+        1.1864557697958757,
+        0.903368098560116
+      ],
+      "target_size": [
+        0.52,
+        0.85,
+        1.1
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F2_washbasin_36.57",
+      "floor": "F2",
+      "model": "vanity",
+      "position": [
+        36.57,
+        3.6,
+        6.5
+      ],
+      "yaw": 180,
+      "scale": [
+        1.1155660068779247,
+        1.1864557697958757,
+        0.903368098560116
+      ],
+      "target_size": [
+        0.52,
+        0.85,
+        1.1
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F3_washbasin_20.42",
+      "floor": "F3",
+      "model": "vanity",
+      "position": [
+        20.42,
+        7.2,
+        18.5
+      ],
+      "yaw": 0,
+      "scale": [
+        1.1155660068779247,
+        1.1864557697958757,
+        0.903368098560116
+      ],
+      "target_size": [
+        0.52,
+        0.85,
+        1.1
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F3_washbasin_27.42",
+      "floor": "F3",
+      "model": "vanity",
+      "position": [
+        27.42,
+        7.2,
+        18.5
+      ],
+      "yaw": 0,
+      "scale": [
+        1.1155660068779247,
+        1.1864557697958757,
+        0.903368098560116
+      ],
+      "target_size": [
+        0.52,
+        0.85,
+        1.1
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F4_washbasin_9.58",
+      "floor": "F4",
+      "model": "vanity",
+      "position": [
+        9.58,
+        10.8,
+        16.5
+      ],
+      "yaw": 180,
+      "scale": [
+        1.1155660068779247,
+        1.1864557697958757,
+        0.903368098560116
+      ],
+      "target_size": [
+        0.52,
+        0.85,
+        1.1
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_wc_toilet",
+      "floor": "G",
+      "model": "toilet",
+      "position": [
+        7.15,
+        0,
+        0.62
+      ],
+      "yaw": -90,
+      "scale": [
+        0.9996401694332244,
+        1.0018503008983466,
+        1.0069648628113885
+      ],
+      "target_size": [
+        0.78,
+        0.69,
+        0.56
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_manager_desk",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        32,
+        0,
+        10.75
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2339740144810305,
+        1.301408447972887,
+        1.0928153866321237
+      ],
+      "target_size": [
+        0.75,
+        0.8,
+        1.6
+      ],
+      "collision": true,
+      "support": null,
+      "use_direction": [
+        6.123233995736766e-17,
+        1.0
+      ]
+    },
+    {
+      "id": "G_manager_chair",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        32,
+        0,
+        12
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_manager_monitor",
+      "floor": "G",
+      "model": "monitor",
+      "position": [
+        32.0,
+        0.806,
+        10.6075
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.8071714413945276,
+        0.788214687527663,
+        1.046855515717647
+      ],
+      "target_size": [
+        0.42,
+        0.38,
+        0.46
+      ],
+      "collision": false,
+      "support": "G_manager_desk"
+    },
+    {
+      "id": "G_finance_desk",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        32,
+        0,
+        19.4
+      ],
+      "yaw": 90.0,
+      "scale": [
+        1.316238948779766,
+        1.301408447972887,
+        1.2294173099611392
+      ],
+      "target_size": [
+        0.8,
+        0.8,
+        1.8
+      ],
+      "collision": true,
+      "support": null,
+      "use_direction": [
+        6.123233995736766e-17,
+        -1.0
+      ]
+    },
+    {
+      "id": "G_finance_client_0",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        31.3,
+        0,
+        20.45
+      ],
+      "yaw": 90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_finance_client_1",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        32.7,
+        0,
+        20.45
+      ],
+      "yaw": 90,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_finance_staff",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        32,
+        0,
+        18.25
+      ],
+      "yaw": -90.00000000000001,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_server_rack_0",
+      "floor": "G",
+      "model": "server",
+      "position": [
+        26.55,
+        0,
+        1.4
+      ],
+      "yaw": 0,
+      "scale": [
+        1.0885180354374233,
+        1.0115545932805265,
+        0.9974465228629099
+      ],
+      "target_size": [
+        0.6,
+        1.95,
+        1.76
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_server_rack_1",
+      "floor": "G",
+      "model": "server",
+      "position": [
+        26.55,
+        0,
+        3.4
+      ],
+      "yaw": 0,
+      "scale": [
+        1.0885180354374233,
+        1.0115545932805265,
+        0.9974465228629099
+      ],
+      "target_size": [
+        0.6,
+        1.95,
+        1.76
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_security_display_0",
+      "floor": "G",
+      "model": "tv",
+      "position": [
+        34.85,
+        0.806,
+        1.0
+      ],
+      "yaw": 0,
+      "scale": [
+        0.9963246859022502,
+        1.0027431188931892,
+        0.9983015099609321
+      ],
+      "target_size": [
+        0.6,
+        0.55,
+        0.48
+      ],
+      "collision": false,
+      "support": "G_mkDesk_32"
+    },
+    {
+      "id": "G_security_display_1",
+      "floor": "G",
+      "model": "tv",
+      "position": [
+        35.95,
+        0.806,
+        1.0
+      ],
+      "yaw": 0,
+      "scale": [
+        0.9963246859022502,
+        1.0027431188931892,
+        0.9983015099609321
+      ],
+      "target_size": [
+        0.6,
+        0.55,
+        0.48
+      ],
+      "collision": false,
+      "support": "G_mkDesk_32"
+    },
+    {
+      "id": "G_security_display_2",
+      "floor": "G",
+      "model": "tv",
+      "position": [
+        37.05,
+        0.806,
+        1.0
+      ],
+      "yaw": 0,
+      "scale": [
+        0.9963246859022502,
+        1.0027431188931892,
+        0.9983015099609321
+      ],
+      "target_size": [
+        0.6,
+        0.55,
+        0.48
+      ],
+      "collision": false,
+      "support": "G_mkDesk_32"
+    },
+    {
+      "id": "G_strongbox",
+      "floor": "G",
+      "model": "cash_case",
+      "position": [
+        21.3,
+        0,
+        0.8
+      ],
+      "yaw": 90,
+      "scale": [
+        1.004102300889023,
+        1.0681291726342415,
+        0.7577051646827316
+      ],
+      "target_size": [
+        0.5,
+        0.5,
+        0.7
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_distribution_cabinet",
+      "floor": "G",
+      "model": "power_panel",
+      "position": [
+        39.72,
+        0,
+        3.2
+      ],
+      "yaw": 180,
+      "scale": [
+        0.6084078657924964,
+        1.881515201282762,
+        1.3577089270417866
+      ],
+      "target_size": [
+        0.3,
+        1.8,
+        0.8
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_queue_terminal",
+      "floor": "G",
+      "model": "atm",
+      "position": [
+        7.0,
+        0,
+        11.2
+      ],
+      "yaw": 0,
+      "scale": [
+        1.138090749646663,
+        1.2730576899280182,
+        1.356576087114721
+      ],
+      "target_size": [
+        0.4,
+        1.3,
+        0.5
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_elevator_roof_and_rails",
+      "floor": "G",
+      "model": "elevator_trim",
+      "position": [
+        38.5,
+        0.85,
+        7.05
+      ],
+      "yaw": -90,
+      "scale": [
+        0.8559734592300067,
+        1.0138130420251237,
+        0.6431626682758556
+      ],
+      "target_size": [
+        3.62,
+        2.2,
+        2.72
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "G_elevator_buttons",
+      "floor": "G",
+      "model": "elevator_panel",
+      "position": [
+        39.86,
+        1.05,
+        8.35
+      ],
+      "yaw": 180,
+      "scale": [
+        2.2374049530636264,
+        0.8692941357209905,
+        0.814380662704229
+      ],
+      "target_size": [
+        0.022,
+        0.6,
+        0.28
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "F2_elevator_roof_and_rails",
+      "floor": "F2",
+      "model": "elevator_trim",
+      "position": [
+        38.5,
+        4.45,
+        7.3
+      ],
+      "yaw": -90,
+      "scale": [
+        0.7377450808833207,
+        1.0138130420251237,
+        0.6431626682758556
+      ],
+      "target_size": [
+        3.12,
+        2.2,
+        2.72
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "F2_elevator_buttons",
+      "floor": "F2",
+      "model": "elevator_panel",
+      "position": [
+        39.86,
+        4.65,
+        8.35
+      ],
+      "yaw": 180,
+      "scale": [
+        2.2374049530636264,
+        0.8692941357209905,
+        0.814380662704229
+      ],
+      "target_size": [
+        0.022,
+        0.6,
+        0.28
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "F3_elevator_roof_and_rails",
+      "floor": "F3",
+      "model": "elevator_trim",
+      "position": [
+        38.5,
+        8.05,
+        7.3
+      ],
+      "yaw": -90,
+      "scale": [
+        0.7377450808833207,
+        1.0138130420251237,
+        0.6431626682758556
+      ],
+      "target_size": [
+        3.12,
+        2.2,
+        2.72
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "F3_elevator_buttons",
+      "floor": "F3",
+      "model": "elevator_panel",
+      "position": [
+        39.86,
+        8.25,
+        8.35
+      ],
+      "yaw": 180,
+      "scale": [
+        2.2374049530636264,
+        0.8692941357209905,
+        0.814380662704229
+      ],
+      "target_size": [
+        0.022,
+        0.6,
+        0.28
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "F4_elevator_roof_and_rails",
+      "floor": "F4",
+      "model": "elevator_trim",
+      "position": [
+        38.5,
+        11.65,
+        7.3
+      ],
+      "yaw": -90,
+      "scale": [
+        0.7377450808833207,
+        1.0138130420251237,
+        0.6431626682758556
+      ],
+      "target_size": [
+        3.12,
+        2.2,
+        2.72
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "F4_elevator_buttons",
+      "floor": "F4",
+      "model": "elevator_panel",
+      "position": [
+        39.86,
+        11.850000000000001,
+        8.35
+      ],
+      "yaw": 180,
+      "scale": [
+        2.2374049530636264,
+        0.8692941357209905,
+        0.814380662704229
+      ],
+      "target_size": [
+        0.022,
+        0.6,
+        0.28
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "G_safe_face_12",
+      "floor": "G",
+      "model": "safe_face",
+      "position": [
+        12,
+        0.1,
+        0.745
+      ],
+      "yaw": -90,
+      "scale": [
+        0.9626521508524836,
+        1.8254296974878768,
+        0.9373828635708407
+      ],
+      "target_size": [
+        0.08,
+        0.74,
+        0.57
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "G_safe_face_14",
+      "floor": "G",
+      "model": "safe_face",
+      "position": [
+        14,
+        0.1,
+        0.745
+      ],
+      "yaw": -90,
+      "scale": [
+        0.9626521508524836,
+        1.8254296974878768,
+        0.9373828635708407
+      ],
+      "target_size": [
+        0.08,
+        0.74,
+        0.57
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "F2_safe_face_24.3",
+      "floor": "F2",
+      "model": "safe_face",
+      "position": [
+        24.3,
+        3.7,
+        3.795
+      ],
+      "yaw": -90,
+      "scale": [
+        0.9626521508524836,
+        1.8254296974878768,
+        0.9373828635708407
+      ],
+      "target_size": [
+        0.08,
+        0.74,
+        0.57
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "G_service_hatch",
+      "floor": "G",
+      "model": "shutter",
+      "position": [
+        19.5,
+        0.7,
+        0.18
+      ],
+      "yaw": -90,
+      "scale": [
+        0.18232742685893386,
+        0.43640797963160893,
+        0.34589338869767655
+      ],
+      "target_size": [
+        0.08,
+        1.2,
+        0.9
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "F2_service_hatch",
+      "floor": "F2",
+      "model": "shutter",
+      "position": [
+        19.3,
+        4.3,
+        3.18
+      ],
+      "yaw": -90,
+      "scale": [
+        0.18232742685893386,
+        0.43640797963160893,
+        0.34589338869767655
+      ],
+      "target_size": [
+        0.08,
+        1.2,
+        0.9
+      ],
+      "collision": false,
+      "support": null
+    },
+    {
+      "id": "G_reception_workdesk",
+      "floor": "G",
+      "model": "desk",
+      "position": [
+        9.2,
+        0,
+        20.85
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.06944414588356,
+        1.301408447972887,
+        0.9903639441353621
+      ],
+      "target_size": [
+        0.65,
+        0.8,
+        1.45
+      ],
+      "collision": true,
+      "support": null,
+      "use_direction": [
+        6.123233995736766e-17,
+        1.0
+      ]
+    },
+    {
+      "id": "G_backoffice_chair",
+      "floor": "G",
+      "model": "chair",
+      "position": [
+        17,
+        0,
+        3.2
+      ],
+      "yaw": -90.0,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "F2_cash_office_chair",
+      "floor": "F2",
+      "model": "chair",
+      "position": [
+        22,
+        3.6,
+        7.1
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        1.2225739006809446,
+        1.1113925961718638,
+        1.278888157895546
+      ],
+      "target_size": [
+        0.62,
+        0.87,
+        0.62
+      ],
+      "collision": true,
+      "support": null
+    },
+    {
+      "id": "G_mkDesk_1_keyboard",
+      "floor": "G",
+      "model": "keyboard",
+      "position": [
+        11.0,
+        0.805,
+        9.161
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8097603931195003,
+        1.336974443951361,
+        1.000420665979932
+      ],
+      "target_size": [
+        0.17,
+        0.035,
+        0.44
+      ],
+      "collision": false,
+      "support": "G_mkDesk_1"
+    },
+    {
+      "id": "G_mkDesk_1_mouse",
+      "floor": "G",
+      "model": "mouse",
+      "position": [
+        10.66,
+        0.804,
+        9.174999999999999
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.9148964962518483,
+        0.9477250681478065,
+        0.9141722867647541
+      ],
+      "target_size": [
+        0.11,
+        0.027,
+        0.055
+      ],
+      "collision": false,
+      "support": "G_mkDesk_1"
+    },
+    {
+      "id": "G_mkDesk_4_keyboard",
+      "floor": "G",
+      "model": "keyboard",
+      "position": [
+        15.0,
+        0.805,
+        9.161
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8097603931195003,
+        1.336974443951361,
+        1.000420665979932
+      ],
+      "target_size": [
+        0.17,
+        0.035,
+        0.44
+      ],
+      "collision": false,
+      "support": "G_mkDesk_4"
+    },
+    {
+      "id": "G_mkDesk_4_mouse",
+      "floor": "G",
+      "model": "mouse",
+      "position": [
+        14.66,
+        0.804,
+        9.174999999999999
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.9148964962518483,
+        0.9477250681478065,
+        0.9141722867647541
+      ],
+      "target_size": [
+        0.11,
+        0.027,
+        0.055
+      ],
+      "collision": false,
+      "support": "G_mkDesk_4"
+    },
+    {
+      "id": "G_mkDesk_7_keyboard",
+      "floor": "G",
+      "model": "keyboard",
+      "position": [
+        19.0,
+        0.805,
+        9.161
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8097603931195003,
+        1.336974443951361,
+        1.000420665979932
+      ],
+      "target_size": [
+        0.17,
+        0.035,
+        0.44
+      ],
+      "collision": false,
+      "support": "G_mkDesk_7"
+    },
+    {
+      "id": "G_mkDesk_7_mouse",
+      "floor": "G",
+      "model": "mouse",
+      "position": [
+        18.66,
+        0.804,
+        9.174999999999999
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.9148964962518483,
+        0.9477250681478065,
+        0.9141722867647541
+      ],
+      "target_size": [
+        0.11,
+        0.027,
+        0.055
+      ],
+      "collision": false,
+      "support": "G_mkDesk_7"
+    },
+    {
+      "id": "G_mkDesk_10_keyboard",
+      "floor": "G",
+      "model": "keyboard",
+      "position": [
+        23.0,
+        0.805,
+        9.161
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8097603931195003,
+        1.336974443951361,
+        1.000420665979932
+      ],
+      "target_size": [
+        0.17,
+        0.035,
+        0.44
+      ],
+      "collision": false,
+      "support": "G_mkDesk_10"
+    },
+    {
+      "id": "G_mkDesk_10_mouse",
+      "floor": "G",
+      "model": "mouse",
+      "position": [
+        22.66,
+        0.804,
+        9.174999999999999
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.9148964962518483,
+        0.9477250681478065,
+        0.9141722867647541
+      ],
+      "target_size": [
+        0.11,
+        0.027,
+        0.055
+      ],
+      "collision": false,
+      "support": "G_mkDesk_10"
+    },
+    {
+      "id": "G_mkDesk_22_keyboard",
+      "floor": "G",
+      "model": "keyboard",
+      "position": [
+        12.5,
+        0.805,
+        3.384
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8097603931195003,
+        1.336974443951361,
+        1.000420665979932
+      ],
+      "target_size": [
+        0.17,
+        0.035,
+        0.44
+      ],
+      "collision": false,
+      "support": "G_mkDesk_22"
+    },
+    {
+      "id": "G_mkDesk_22_mouse",
+      "floor": "G",
+      "model": "mouse",
+      "position": [
+        12.16,
+        0.804,
+        3.4
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.9148964962518483,
+        0.9477250681478065,
+        0.9141722867647541
+      ],
+      "target_size": [
+        0.11,
+        0.027,
+        0.055
+      ],
+      "collision": false,
+      "support": "G_mkDesk_22"
+    },
+    {
+      "id": "G_mkDesk_25_keyboard",
+      "floor": "G",
+      "model": "keyboard",
+      "position": [
+        17.0,
+        0.805,
+        3.984
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8097603931195003,
+        1.336974443951361,
+        1.000420665979932
+      ],
+      "target_size": [
+        0.17,
+        0.035,
+        0.44
+      ],
+      "collision": false,
+      "support": "G_mkDesk_25"
+    },
+    {
+      "id": "G_mkDesk_25_mouse",
+      "floor": "G",
+      "model": "mouse",
+      "position": [
+        16.66,
+        0.804,
+        4.0
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.9148964962518483,
+        0.9477250681478065,
+        0.9141722867647541
+      ],
+      "target_size": [
+        0.11,
+        0.027,
+        0.055
+      ],
+      "collision": false,
+      "support": "G_mkDesk_25"
+    },
+    {
+      "id": "F2_mkDesk_4_keyboard",
+      "floor": "F2",
+      "model": "keyboard",
+      "position": [
+        22.0,
+        4.405,
+        6.689
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.8097603931195003,
+        1.336974443951361,
+        1.000420665979932
+      ],
+      "target_size": [
+        0.17,
+        0.035,
+        0.44
+      ],
+      "collision": false,
+      "support": "F2_mkDesk_4"
+    },
+    {
+      "id": "F2_mkDesk_4_mouse",
+      "floor": "F2",
+      "model": "mouse",
+      "position": [
+        22.34,
+        4.404,
+        6.675
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.9148964962518483,
+        0.9477250681478065,
+        0.9141722867647541
+      ],
+      "target_size": [
+        0.11,
+        0.027,
+        0.055
+      ],
+      "collision": false,
+      "support": "F2_mkDesk_4"
+    },
+    {
+      "id": "F2_mkDesk_8_keyboard",
+      "floor": "F2",
+      "model": "keyboard",
+      "position": [
+        27.5,
+        4.405,
+        4.3839999999999995
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8097603931195003,
+        1.336974443951361,
+        1.000420665979932
+      ],
+      "target_size": [
+        0.17,
+        0.035,
+        0.44
+      ],
+      "collision": false,
+      "support": "F2_mkDesk_8"
+    },
+    {
+      "id": "F2_mkDesk_8_mouse",
+      "floor": "F2",
+      "model": "mouse",
+      "position": [
+        27.16,
+        4.404,
+        4.3999999999999995
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.9148964962518483,
+        0.9477250681478065,
+        0.9141722867647541
+      ],
+      "target_size": [
+        0.11,
+        0.027,
+        0.055
+      ],
+      "collision": false,
+      "support": "F2_mkDesk_8"
+    },
+    {
+      "id": "F2_mkDesk_29_keyboard",
+      "floor": "F2",
+      "model": "keyboard",
+      "position": [
+        9.0,
+        4.405,
+        11.703
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.8097603931195003,
+        1.336974443951361,
+        1.000420665979932
+      ],
+      "target_size": [
+        0.17,
+        0.035,
+        0.44
+      ],
+      "collision": false,
+      "support": "F2_mkDesk_29"
+    },
+    {
+      "id": "F2_mkDesk_29_mouse",
+      "floor": "F2",
+      "model": "mouse",
+      "position": [
+        8.66,
+        4.404,
+        11.725
+      ],
+      "yaw": 90.00000000000001,
+      "scale": [
+        0.9148964962518483,
+        0.9477250681478065,
+        0.9141722867647541
+      ],
+      "target_size": [
+        0.11,
+        0.027,
+        0.055
+      ],
+      "collision": false,
+      "support": "F2_mkDesk_29"
+    },
+    {
+      "id": "G_manager_desk_keyboard",
+      "floor": "G",
+      "model": "keyboard",
+      "position": [
+        32.0,
+        0.805,
+        10.9525
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.8097603931195003,
+        1.336974443951361,
+        1.000420665979932
+      ],
+      "target_size": [
+        0.17,
+        0.035,
+        0.44
+      ],
+      "collision": false,
+      "support": "G_manager_desk"
+    },
+    {
+      "id": "G_manager_desk_mouse",
+      "floor": "G",
+      "model": "mouse",
+      "position": [
+        32.34,
+        0.804,
+        10.9375
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.9148964962518483,
+        0.9477250681478065,
+        0.9141722867647541
+      ],
+      "target_size": [
+        0.11,
+        0.027,
+        0.055
+      ],
+      "collision": false,
+      "support": "G_manager_desk"
+    },
+    {
+      "id": "G_reception_workdesk_keyboard",
+      "floor": "G",
+      "model": "keyboard",
+      "position": [
+        9.2,
+        0.805,
+        21.0255
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.8097603931195003,
+        1.336974443951361,
+        1.000420665979932
+      ],
+      "target_size": [
+        0.17,
+        0.035,
+        0.44
+      ],
+      "collision": false,
+      "support": "G_reception_workdesk"
+    },
+    {
+      "id": "G_reception_workdesk_mouse",
+      "floor": "G",
+      "model": "mouse",
+      "position": [
+        9.54,
+        0.804,
+        21.012500000000003
+      ],
+      "yaw": -90.0,
+      "scale": [
+        0.9148964962518483,
+        0.9477250681478065,
+        0.9141722867647541
+      ],
+      "target_size": [
+        0.11,
+        0.027,
+        0.055
+      ],
+      "collision": false,
+      "support": "G_reception_workdesk"
+    },
+    {
+      "id": "G_pbr_camera_hall",
+      "model": "camera",
+      "position": [
+        6.23,
+        2.55,
+        20.8
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw": 90,
+      "collision": false
+    },
+    {
+      "id": "G_pbr_camera_front",
+      "model": "camera",
+      "position": [
+        39.77,
+        2.55,
+        14.3
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw": -90,
+      "collision": false
+    },
+    {
+      "id": "F2_pbr_camera_hall",
+      "model": "camera",
+      "position": [
+        6.23,
+        6.15,
+        20.8
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw": 90,
+      "collision": false
+    },
+    {
+      "id": "F2_pbr_camera_front",
+      "model": "camera",
+      "position": [
+        39.77,
+        6.15,
+        14.3
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw": -90,
+      "collision": false
+    },
+    {
+      "id": "F3_pbr_camera_hall",
+      "model": "camera",
+      "position": [
+        6.23,
+        9.75,
+        20.8
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw": 90,
+      "collision": false
+    },
+    {
+      "id": "F3_pbr_camera_front",
+      "model": "camera",
+      "position": [
+        39.77,
+        9.75,
+        14.3
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw": -90,
+      "collision": false
+    },
+    {
+      "id": "F4_pbr_camera_hall",
+      "model": "camera",
+      "position": [
+        6.23,
+        13.350000000000001,
+        20.8
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw": 90,
+      "collision": false
+    },
+    {
+      "id": "F4_pbr_camera_front",
+      "model": "camera",
+      "position": [
+        39.77,
+        13.350000000000001,
+        14.3
+      ],
+      "scale": [
+        0.5,
+        0.5,
+        0.5
+      ],
+      "yaw": -90,
+      "collision": false
+    }
+  ],
+  "millwork": [
+    {
+      "id": "F3_table_tennis",
+      "floor": "F3",
+      "position": [
+        25,
+        7.2,
+        11
+      ],
+      "size": [
+        2.7,
+        0.76,
+        1.5
+      ]
+    },
+    {
+      "kind": "safe_cabinet",
+      "id": "G_safe_cabinet_12",
+      "position": [
+        12,
+        0,
+        0.45
+      ],
+      "size": [
+        0.62,
+        0.9,
+        0.55
+      ]
+    },
+    {
+      "kind": "safe_cabinet",
+      "id": "G_safe_cabinet_14",
+      "position": [
+        14,
+        0,
+        0.45
+      ],
+      "size": [
+        0.62,
+        0.9,
+        0.55
+      ]
+    },
+    {
+      "kind": "safe_cabinet",
+      "id": "F2_safe_cabinet_24.3",
+      "position": [
+        24.3,
+        3.6,
+        3.5
+      ],
+      "size": [
+        0.62,
+        0.9,
+        0.55
+      ]
+    }
+  ],
+  "omitted": [],
+  "exclusions": [
+    {
+      "floor": "G",
+      "index": 0,
+      "maker": "mkCorpse",
+      "position": [
+        1.1,
+        0,
+        2.1
+      ],
+      "reason": "No enemies or bodies in this exploration build"
+    },
+    {
+      "floor": "G",
+      "index": 36,
+      "maker": "mkCorpse",
+      "position": [
+        38.3,
+        0,
+        13.1
+      ],
+      "reason": "No enemies or bodies in this exploration build"
+    },
+    {
+      "floor": "G",
+      "index": 37,
+      "maker": "mkCorpse",
+      "position": [
+        36.8,
+        0,
+        14.7
+      ],
+      "reason": "No enemies or bodies in this exploration build"
+    },
+    {
+      "floor": "G",
+      "index": 61,
+      "maker": "mkCorpse",
+      "position": [
+        14.5,
+        0,
+        16
+      ],
+      "reason": "No enemies or bodies in this exploration build"
+    },
+    {
+      "floor": "G",
+      "index": 62,
+      "maker": "mkCorpse",
+      "position": [
+        22,
+        0,
+        20
+      ],
+      "reason": "No enemies or bodies in this exploration build"
+    },
+    {
+      "floor": "G",
+      "index": 67,
+      "maker": "mkCorpse",
+      "position": [
+        42.3,
+        0,
+        8.4
+      ],
+      "reason": "No enemies or bodies in this exploration build"
+    },
+    {
+      "floor": "G",
+      "index": 68,
+      "maker": "mkCorpse",
+      "position": [
+        43.4,
+        0,
+        9.8
+      ],
+      "reason": "No enemies or bodies in this exploration build"
+    },
+    {
+      "floor": "F4",
+      "index": 0,
+      "maker": "mkDebris",
+      "position": [
+        4.5,
+        0.3,
+        5.7
+      ],
+      "reason": "Keep both stair routes continuously passable"
+    },
+    {
+      "floor": "F4",
+      "index": 1,
+      "maker": "mkDebris",
+      "position": [
+        35.5,
+        0.3,
+        18.3
+      ],
+      "reason": "Keep both stair routes continuously passable"
+    }
+  ],
+  "replacements": [
+    {
+      "floor": "G",
+      "index": 13,
+      "maker": "mkSafe",
+      "position": [
+        12,
+        0,
+        0.45
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 14,
+      "maker": "mkSafe",
+      "position": [
+        14,
+        0,
+        0.45
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 16,
+      "maker": "mkDumbwaiter",
+      "position": [
+        19.5,
+        0,
+        0.12
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 17,
+      "maker": "anonymous",
+      "position": [
+        21.3,
+        0,
+        0.8
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 19,
+      "maker": "mkCashbox",
+      "position": [
+        22.8,
+        0.76,
+        2.3
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 20,
+      "maker": "mkCashbox",
+      "position": [
+        23.6,
+        0.76,
+        2.3
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 21,
+      "maker": "mkCashbox",
+      "position": [
+        24.400000000000002,
+        0.76,
+        2.3
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 28,
+      "maker": "box",
+      "position": [
+        25.86,
+        2.35,
+        6.75
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 29,
+      "maker": "box",
+      "position": [
+        26.14,
+        2.35,
+        6.75
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 30,
+      "maker": "box",
+      "position": [
+        28.86,
+        2.35,
+        6.75
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 31,
+      "maker": "box",
+      "position": [
+        29.14,
+        2.35,
+        6.75
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 34,
+      "maker": "anonymous",
+      "position": [
+        39.6,
+        0,
+        3.2
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "G",
+      "index": 55,
+      "maker": "anonymous",
+      "position": [
+        7,
+        0,
+        11.2
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "F2",
+      "index": 3,
+      "maker": "mkDumbwaiter",
+      "position": [
+        19.3,
+        0,
+        3.12
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "F2",
+      "index": 6,
+      "maker": "mkSafe",
+      "position": [
+        24.3,
+        0,
+        3.5
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "F3",
+      "index": 17,
+      "maker": "anonymous",
+      "position": [
+        25,
+        0,
+        11
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "F4",
+      "index": 13,
+      "maker": "anonymous",
+      "position": [
+        20,
+        0,
+        4.4
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    },
+    {
+      "floor": "F4",
+      "index": 27,
+      "maker": "mkCounterK",
+      "position": [
+        30,
+        0,
+        0.4
+      ],
+      "reason": "Native asset or explicit architectural fixture replacement"
+    }
+  ],
+  "grip_socket": "FlashlightSocket",
+  "grip_source_report": "outerasset/converted/left-4-dead-2/bank_rigged_torch-20261004-105553/rig-export.json"
+}

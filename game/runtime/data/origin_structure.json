@@ -1,0 +1,7048 @@
+{
+  "version": 1,
+  "source": "OriginGame.html",
+  "source_sha256": "41b0969b5be4dbf094aef0b13fc8077ba7ca68ebbaf7e3186f88cdc29e5b7f10",
+  "floor_height": 3.6,
+  "ceiling_height": 3.2,
+  "shafts": [
+    {
+      "id": "back",
+      "x0": 0.2,
+      "x1": 5.8,
+      "z0": 4.4,
+      "zm": 8,
+      "z1": 9.8,
+      "ax": [
+        3.2,
+        5.8
+      ],
+      "bx": [
+        0.2,
+        2.8
+      ],
+      "wallX": 3
+    },
+    {
+      "id": "front",
+      "x0": 34.2,
+      "x1": 39.8,
+      "z0": 17,
+      "zm": 20.6,
+      "z1": 21.9,
+      "ax": [
+        34.2,
+        36.8
+      ],
+      "bx": [
+        37.2,
+        39.8
+      ],
+      "wallX": 37
+    }
+  ],
+  "notes": [
+    "Constructor recording with gameplay callbacks and enemies omitted.",
+    "Geometry uses original coordinates/metres; all locks ignored in exploration.",
+    "Props record intended source location, not final imported mesh placement."
+  ],
+  "levels": [
+    {
+      "id": "G",
+      "name": "一楼",
+      "base": 0,
+      "bounds": {
+        "x0": -2,
+        "z0": -14,
+        "x1": 50,
+        "z1": 29
+      },
+      "floors": [
+        {
+          "x0": 6,
+          "z0": 0,
+          "x1": 26,
+          "z1": 10,
+          "material": "office",
+          "y": 0
+        },
+        {
+          "x0": 6,
+          "z0": 10,
+          "x1": 26,
+          "z1": 22,
+          "material": "tile",
+          "y": 0
+        },
+        {
+          "x0": 26,
+          "z0": 8.5,
+          "x1": 29,
+          "z1": 22,
+          "material": "tile",
+          "y": 0
+        },
+        {
+          "x0": 26,
+          "z0": 5,
+          "x1": 29,
+          "z1": 8.5,
+          "material": "grate",
+          "y": 0
+        },
+        {
+          "x0": 26,
+          "z0": 0,
+          "x1": 33,
+          "z1": 5,
+          "material": "office",
+          "y": 0
+        },
+        {
+          "x0": 33,
+          "z0": 0,
+          "x1": 40,
+          "z1": 5,
+          "material": "office",
+          "y": 0
+        },
+        {
+          "x0": 29,
+          "z0": 5,
+          "x1": 37,
+          "z1": 9,
+          "material": "tile",
+          "y": 0
+        },
+        {
+          "x0": 29,
+          "z0": 9,
+          "x1": 40,
+          "z1": 22,
+          "material": "tile",
+          "y": 0
+        },
+        {
+          "x0": 37,
+          "z0": 5,
+          "x1": 40,
+          "z1": 9,
+          "material": "grate",
+          "y": 0
+        },
+        {
+          "x0": -2,
+          "z0": -14,
+          "x1": 50,
+          "z1": 0,
+          "material": "asphalt",
+          "y": 0
+        },
+        {
+          "x0": 40,
+          "z0": 0,
+          "x1": 50,
+          "z1": 29,
+          "material": "asphalt",
+          "y": 0
+        },
+        {
+          "x0": 6,
+          "z0": 22,
+          "x1": 40,
+          "z1": 29,
+          "material": "asphalt",
+          "y": 0
+        },
+        {
+          "x0": 40,
+          "z0": 29,
+          "x1": 50,
+          "z1": 32,
+          "material": "asphalt",
+          "y": 0
+        },
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 6,
+          "z1": 10,
+          "material": "concrete",
+          "y": 0
+        },
+        {
+          "x0": 46,
+          "z0": 12,
+          "x1": 50,
+          "z1": 20,
+          "material": "concrete",
+          "y": 0.005
+        },
+        {
+          "x0": 42,
+          "z0": -14,
+          "x1": 50,
+          "z1": -7,
+          "material": "lino",
+          "y": 0.005
+        },
+        {
+          "x0": 0,
+          "z0": 10,
+          "x1": 6,
+          "z1": 22,
+          "y": 0,
+          "material": "tile"
+        }
+      ],
+      "ceilings": [
+        {
+          "x0": 6,
+          "z0": 0,
+          "x1": 34,
+          "z1": 22,
+          "material": "ceil",
+          "h": 3.2
+        },
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 6,
+          "z1": 4.4,
+          "material": "ceil",
+          "h": 3.2
+        },
+        {
+          "x0": 0,
+          "z0": 10,
+          "x1": 6,
+          "z1": 22,
+          "material": "ceil",
+          "h": 3.2
+        },
+        {
+          "x0": 34,
+          "z0": 0,
+          "x1": 40,
+          "z1": 17,
+          "material": "ceil",
+          "h": 3.2
+        }
+      ],
+      "walls": [
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 40,
+          "z1": 0,
+          "gaps": [
+            [
+              2,
+              3.6
+            ]
+          ],
+          "m": "wallgreen"
+        },
+        {
+          "x0": 40,
+          "z0": 0,
+          "x1": 40,
+          "z1": 22,
+          "gaps": [
+            [
+              11,
+              15
+            ]
+          ],
+          "m": "wallgreen"
+        },
+        {
+          "x0": 0,
+          "z0": 22,
+          "x1": 40,
+          "z1": 22,
+          "gaps": [
+            [
+              16,
+              20
+            ]
+          ],
+          "m": "wallgreen"
+        },
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 0,
+          "z1": 22,
+          "m": "wallgreen"
+        },
+        {
+          "x0": -2,
+          "z0": -14,
+          "x1": 50,
+          "z1": -14,
+          "m": "concrete",
+          "h": 3.6
+        },
+        {
+          "x0": -2,
+          "z0": -14,
+          "x1": -2,
+          "z1": 0,
+          "m": "concrete",
+          "h": 3.6
+        },
+        {
+          "x0": -2,
+          "z0": 0,
+          "x1": 0,
+          "z1": 0,
+          "m": "concrete",
+          "h": 3.6
+        },
+        {
+          "x0": 50,
+          "z0": -14,
+          "x1": 50,
+          "z1": 29,
+          "m": "concrete",
+          "h": 3.6
+        },
+        {
+          "x0": 40,
+          "z0": 22,
+          "x1": 40,
+          "z1": 29,
+          "m": "concrete",
+          "h": 3.6
+        },
+        {
+          "x0": 6,
+          "z0": 29,
+          "x1": 40,
+          "z1": 29,
+          "m": "concrete",
+          "h": 3.6
+        },
+        {
+          "x0": 6,
+          "z0": 22,
+          "x1": 6,
+          "z1": 29,
+          "m": "concrete",
+          "h": 3.6
+        },
+        {
+          "x0": 6,
+          "z0": 0,
+          "x1": 6,
+          "z1": 22,
+          "m": "wall",
+          "gaps": [
+            [
+              16,
+              17.6
+            ]
+          ]
+        },
+        {
+          "x0": 0,
+          "z0": 10,
+          "x1": 6,
+          "z1": 10,
+          "m": "concrete"
+        },
+        {
+          "x0": 10,
+          "z0": 0,
+          "x1": 10,
+          "z1": 6,
+          "gaps": [
+            [
+              3.5,
+              4.9
+            ]
+          ]
+        },
+        {
+          "x0": 6,
+          "z0": 6,
+          "x1": 10,
+          "z1": 6
+        },
+        {
+          "x0": 6,
+          "z0": 10,
+          "x1": 26,
+          "z1": 10,
+          "glass": true
+        },
+        {
+          "x0": 26,
+          "z0": 0,
+          "x1": 26,
+          "z1": 10,
+          "gaps": [
+            [
+              6,
+              7.5
+            ]
+          ]
+        },
+        {
+          "x0": 26,
+          "z0": 5,
+          "x1": 40,
+          "z1": 5,
+          "gaps": [
+            [
+              30.3,
+              31.7
+            ],
+            [
+              33.6,
+              35
+            ]
+          ]
+        },
+        {
+          "x0": 26,
+          "z0": 8.5,
+          "x1": 29,
+          "z1": 8.5
+        },
+        {
+          "x0": 29,
+          "z0": 5,
+          "x1": 29,
+          "z1": 8.5,
+          "gaps": [
+            [
+              6,
+              7.5
+            ]
+          ]
+        },
+        {
+          "x0": 33,
+          "z0": 0,
+          "x1": 33,
+          "z1": 5
+        },
+        {
+          "x0": 37,
+          "z0": 5,
+          "x1": 37,
+          "z1": 9,
+          "m": "metal"
+        },
+        {
+          "x0": 37,
+          "z0": 9,
+          "x1": 40,
+          "z1": 9,
+          "gaps": [
+            [
+              37.7,
+              39.3
+            ]
+          ]
+        },
+        {
+          "x0": 30,
+          "z0": 9.5,
+          "x1": 35,
+          "z1": 9.5
+        },
+        {
+          "x0": 30,
+          "z0": 9.5,
+          "x1": 30,
+          "z1": 14
+        },
+        {
+          "x0": 30,
+          "z0": 14,
+          "x1": 35,
+          "z1": 14
+        },
+        {
+          "x0": 35,
+          "z0": 9.5,
+          "x1": 35,
+          "z1": 14,
+          "gaps": [
+            [
+              11,
+              12.4
+            ]
+          ]
+        },
+        {
+          "x0": 30,
+          "z0": 16,
+          "x1": 34,
+          "z1": 16,
+          "gaps": [
+            [
+              31,
+              32.4
+            ]
+          ]
+        },
+        {
+          "x0": 34,
+          "z0": 16,
+          "x1": 34,
+          "z1": 22
+        },
+        {
+          "x0": 46,
+          "z0": 12,
+          "x1": 50,
+          "z1": 12,
+          "m": "concrete",
+          "h": 3.6
+        },
+        {
+          "x0": 46,
+          "z0": 20,
+          "x1": 50,
+          "z1": 20,
+          "m": "concrete",
+          "h": 3.6
+        },
+        {
+          "x0": 46,
+          "z0": 12,
+          "x1": 46,
+          "z1": 20,
+          "gaps": [
+            [
+              15,
+              17
+            ]
+          ],
+          "m": "concrete",
+          "h": 3.6
+        },
+        {
+          "x0": 42,
+          "z0": -7,
+          "x1": 50,
+          "z1": -7,
+          "gaps": [
+            [
+              44,
+              45.4
+            ]
+          ],
+          "m": "concrete"
+        },
+        {
+          "x0": 42,
+          "z0": -14,
+          "x1": 42,
+          "z1": -7,
+          "m": "concrete"
+        }
+      ],
+      "boxes": [
+        {
+          "x0": 4,
+          "z0": -5.1,
+          "x1": 7,
+          "z1": -4.9,
+          "y0": 0.01,
+          "y1": 0.02,
+          "material": {
+            "color": 14209184
+          },
+          "collision": false
+        },
+        {
+          "x0": 10,
+          "z0": -5.1,
+          "x1": 13,
+          "z1": -4.9,
+          "y0": 0.01,
+          "y1": 0.02,
+          "material": {
+            "color": 14209184
+          },
+          "collision": false
+        },
+        {
+          "x0": 16,
+          "z0": -5.1,
+          "x1": 19,
+          "z1": -4.9,
+          "y0": 0.01,
+          "y1": 0.02,
+          "material": {
+            "color": 14209184
+          },
+          "collision": false
+        },
+        {
+          "x0": 22,
+          "z0": -5.1,
+          "x1": 25,
+          "z1": -4.9,
+          "y0": 0.01,
+          "y1": 0.02,
+          "material": {
+            "color": 14209184
+          },
+          "collision": false
+        },
+        {
+          "x0": 28,
+          "z0": -5.1,
+          "x1": 31,
+          "z1": -4.9,
+          "y0": 0.01,
+          "y1": 0.02,
+          "material": {
+            "color": 14209184
+          },
+          "collision": false
+        },
+        {
+          "x0": 34,
+          "z0": -5.1,
+          "x1": 37,
+          "z1": -4.9,
+          "y0": 0.01,
+          "y1": 0.02,
+          "material": {
+            "color": 14209184
+          },
+          "collision": false
+        },
+        {
+          "x0": 2.9,
+          "z0": 4.4,
+          "x1": 3.1,
+          "z1": 8,
+          "y0": 0,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": true
+        },
+        {
+          "x0": 0.2,
+          "z0": 8,
+          "x1": 5.8,
+          "z1": 9.8,
+          "y0": 1.55,
+          "y1": 1.8,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 0,
+          "z0": 4.340000000000001,
+          "x1": 6,
+          "z1": 4.44,
+          "y0": 3.2,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 0.2,
+          "z0": 4.45,
+          "x1": 2.8,
+          "z1": 8,
+          "y0": 0,
+          "y1": 1.75,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 0.2,
+          "z0": 8.3,
+          "x1": 5.8,
+          "z1": 9.8,
+          "y0": 0,
+          "y1": 1.3,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 36.9,
+          "z0": 17,
+          "x1": 37.1,
+          "z1": 20.6,
+          "y0": 0,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": true
+        },
+        {
+          "x0": 34.2,
+          "z0": 20.6,
+          "x1": 39.8,
+          "z1": 21.9,
+          "y0": 1.55,
+          "y1": 1.8,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 34,
+          "z0": 16.94,
+          "x1": 40,
+          "z1": 17.04,
+          "y0": 3.2,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 37.2,
+          "z0": 17.05,
+          "x1": 39.8,
+          "z1": 20.6,
+          "y0": 0,
+          "y1": 1.75,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 34.2,
+          "z0": 20.900000000000002,
+          "x1": 39.8,
+          "z1": 21.9,
+          "y0": 0,
+          "y1": 1.3,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 42,
+          "z0": -14,
+          "x1": 50,
+          "z1": -7,
+          "y0": 3.1,
+          "y1": 3.15,
+          "material": "ceil",
+          "collision": false
+        }
+      ],
+      "stairs": [
+        {
+          "xa": 3.2,
+          "xb": 5.8,
+          "za": 4.4,
+          "zb": 8,
+          "y0": 0,
+          "y1": 1.8
+        },
+        {
+          "xa": 0.2,
+          "xb": 2.8,
+          "za": 8,
+          "zb": 4.4,
+          "y0": 1.8,
+          "y1": 3.6
+        },
+        {
+          "xa": 34.2,
+          "xb": 36.8,
+          "za": 17,
+          "zb": 20.6,
+          "y0": 0,
+          "y1": 1.8
+        },
+        {
+          "xa": 37.2,
+          "xb": 39.8,
+          "za": 20.6,
+          "zb": 17,
+          "y0": 1.8,
+          "y1": 3.6
+        }
+      ],
+      "doors": [
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "iron",
+          "id": "g_iron",
+          "x": 2.8,
+          "z": 0,
+          "axis": "x",
+          "autoClose": true,
+          "label": "铁门"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "g_wc",
+          "x": 10,
+          "z": 4.2,
+          "axis": "z",
+          "label": "卫生间"
+        },
+        {
+          "w": 1.5,
+          "h": 2.25,
+          "type": "steel",
+          "id": "g_inner",
+          "x": 26,
+          "z": 6.75,
+          "axis": "z",
+          "label": "二道门（内门）",
+          "slideDir": -1,
+          "speed": 1
+        },
+        {
+          "w": 1.5,
+          "h": 2.25,
+          "type": "steel",
+          "id": "g_outer",
+          "x": 29,
+          "z": 6.75,
+          "axis": "z",
+          "label": "二道门（外门）",
+          "slideDir": -1,
+          "speed": 1
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "g_comp",
+          "x": 31,
+          "z": 5,
+          "axis": "x",
+          "label": "电脑机房"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "iron",
+          "id": "g_monitor",
+          "x": 34.3,
+          "z": 5,
+          "axis": "x",
+          "label": "监控机房"
+        },
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "elevator",
+          "id": "G_elev",
+          "x": 38.5,
+          "z": 9,
+          "axis": "x",
+          "label": "电梯",
+          "slideDir": 1
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "g_mgr",
+          "x": 35,
+          "z": 11.7,
+          "axis": "z",
+          "label": "经理室"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "g_fin",
+          "x": 31.7,
+          "z": 16,
+          "axis": "x",
+          "label": "理财室"
+        },
+        {
+          "w": 4,
+          "h": 2.25,
+          "type": "shutter",
+          "id": "g_shutter",
+          "x": 40,
+          "z": 13,
+          "axis": "z",
+          "label": "卷帘门"
+        },
+        {
+          "w": 4,
+          "h": 2.25,
+          "type": "glass",
+          "id": "g_main",
+          "x": 18,
+          "z": 22,
+          "axis": "x",
+          "label": "银行大门"
+        },
+        {
+          "w": 2,
+          "h": 2.25,
+          "type": "bars",
+          "id": "g_garage",
+          "x": 46,
+          "z": 16,
+          "axis": "z",
+          "label": "车库铁门"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "g_secu",
+          "x": 44.7,
+          "z": -7,
+          "axis": "x",
+          "label": "保安宿舍"
+        },
+        {
+          "w": 9.6,
+          "h": 3.4,
+          "type": "bars",
+          "id": "g_gate",
+          "x": 45,
+          "z": 29,
+          "axis": "x",
+          "label": "铁闸门"
+        }
+      ],
+      "labels": [
+        {
+          "text": "后楼梯",
+          "x": 3,
+          "z": 6.5
+        },
+        {
+          "text": "现金柜台",
+          "x": 16,
+          "z": 5
+        },
+        {
+          "text": "大厅",
+          "x": 16,
+          "z": 16
+        },
+        {
+          "text": "二道门",
+          "x": 27.5,
+          "z": 6.8
+        },
+        {
+          "text": "监控机房",
+          "x": 36.5,
+          "z": 2.5
+        },
+        {
+          "text": "电脑机房",
+          "x": 29.5,
+          "z": 2.5
+        },
+        {
+          "text": "电梯",
+          "x": 38.5,
+          "z": 7
+        },
+        {
+          "text": "经理室",
+          "x": 32.5,
+          "z": 11.7
+        },
+        {
+          "text": "理财室",
+          "x": 32,
+          "z": 19
+        },
+        {
+          "text": "前楼梯",
+          "x": 37,
+          "z": 19.5
+        },
+        {
+          "text": "停车场",
+          "x": 20,
+          "z": -7
+        },
+        {
+          "text": "押钞车道",
+          "x": 45,
+          "z": 4
+        },
+        {
+          "text": "保安宿舍",
+          "x": 46,
+          "z": -10.5
+        },
+        {
+          "text": "车库",
+          "x": 48,
+          "z": 16
+        }
+      ],
+      "spawns": {
+        "elev": {
+          "x": 38.5,
+          "z": 7,
+          "yaw": 0
+        },
+        "landing": {
+          "x": 36,
+          "z": 13,
+          "yaw": 3.141592653589793
+        },
+        "start": {
+          "x": 23,
+          "z": 8.2,
+          "yaw": 0
+        },
+        "shutterIn": {
+          "x": 38.5,
+          "z": 11.5,
+          "yaw": 1.5707963267948966
+        }
+      },
+      "lights": [
+        {
+          "x": 3,
+          "y": 2.9,
+          "z": 8.9,
+          "color": 14214399,
+          "energy": 0.7,
+          "range": 7,
+          "flicker": 0.2,
+          "fixture": false
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "z": 2.2,
+          "color": 13689087,
+          "energy": 0.8,
+          "range": 9,
+          "flicker": 0.3,
+          "fixture": true
+        },
+        {
+          "x": 38.5,
+          "y": 2.8,
+          "z": 7.2,
+          "color": 14543103,
+          "energy": 0.5,
+          "range": 4,
+          "flicker": 0,
+          "fixture": false
+        },
+        {
+          "x": 28.9,
+          "y": 1.5,
+          "z": 11.7,
+          "color": 16737877,
+          "energy": 0.5,
+          "range": 3.5,
+          "flicker": 0,
+          "fixture": false
+        },
+        {
+          "x": 37,
+          "y": 2.9,
+          "z": 21.25,
+          "color": 14214399,
+          "energy": 0.7,
+          "range": 7,
+          "flicker": 0.2,
+          "fixture": false
+        },
+        {
+          "x": 12,
+          "y": 3,
+          "z": 3,
+          "color": 16773328,
+          "energy": 1,
+          "range": 10,
+          "flicker": 0.2,
+          "fixture": true
+        },
+        {
+          "x": 20,
+          "y": 3,
+          "z": 6.5,
+          "color": 16773328,
+          "energy": 1,
+          "range": 10,
+          "flicker": 0.1,
+          "fixture": true
+        },
+        {
+          "x": 33,
+          "y": 3,
+          "z": 7.3,
+          "color": 16773328,
+          "energy": 1,
+          "range": 10,
+          "flicker": 0.1,
+          "fixture": true
+        },
+        {
+          "x": 33,
+          "y": 3,
+          "z": 13,
+          "color": 16773328,
+          "energy": 1,
+          "range": 10,
+          "flicker": 0.2,
+          "fixture": true
+        },
+        {
+          "x": 33,
+          "y": 3,
+          "z": 19.5,
+          "color": 16773328,
+          "energy": 0.8,
+          "range": 10,
+          "flicker": 0.4,
+          "fixture": true
+        },
+        {
+          "x": 38,
+          "y": 3,
+          "z": 12.5,
+          "color": 16773328,
+          "energy": 0.9,
+          "range": 9,
+          "flicker": 0.2,
+          "fixture": true
+        },
+        {
+          "x": 36.5,
+          "y": 3,
+          "z": 2.5,
+          "color": 14741759,
+          "energy": 0.9,
+          "range": 8,
+          "flicker": 0.1,
+          "fixture": true
+        },
+        {
+          "x": 27.5,
+          "y": 3,
+          "z": 6.8,
+          "color": 16732224,
+          "energy": 0.7,
+          "range": 5,
+          "flicker": 0,
+          "fixture": true
+        },
+        {
+          "x": 20,
+          "y": 4,
+          "z": -12,
+          "color": 16752720,
+          "energy": 1.1,
+          "range": 14,
+          "flicker": 0.1,
+          "fixture": false
+        },
+        {
+          "x": 34,
+          "y": 4,
+          "z": -2,
+          "color": 16752720,
+          "energy": 0.9,
+          "range": 12,
+          "flicker": 0.3,
+          "fixture": false
+        },
+        {
+          "x": 44,
+          "y": 4,
+          "z": -2,
+          "color": 16752720,
+          "energy": 1,
+          "range": 12,
+          "flicker": 0,
+          "fixture": false
+        },
+        {
+          "x": 44,
+          "y": 4,
+          "z": 18,
+          "color": 16752720,
+          "energy": 1,
+          "range": 13,
+          "flicker": 0.2,
+          "fixture": false
+        },
+        {
+          "x": 8,
+          "y": 4,
+          "z": -6,
+          "color": 16752720,
+          "energy": 0.7,
+          "range": 12,
+          "flicker": 0.6,
+          "fixture": false
+        },
+        {
+          "x": 48,
+          "y": 3,
+          "z": 16,
+          "color": 16773328,
+          "energy": 0.6,
+          "range": 6,
+          "flicker": 0.3,
+          "fixture": false
+        },
+        {
+          "x": 46,
+          "y": 2.9,
+          "z": -10.5,
+          "color": 16771264,
+          "energy": 0.8,
+          "range": 7,
+          "flicker": 0.4,
+          "fixture": true
+        }
+      ],
+      "props": [
+        {
+          "maker": "mkCorpse",
+          "args": [
+            {}
+          ],
+          "position": [
+            1.1,
+            0,
+            2.1
+          ],
+          "yaw": 0.25,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.7,
+            0.7
+          ],
+          "position": [
+            11,
+            0,
+            9.35
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.7,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkCRT",
+          "args": [],
+          "position": [
+            10.7,
+            0.76,
+            9.35
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            11,
+            0,
+            8.45
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.7,
+            0.7
+          ],
+          "position": [
+            15,
+            0,
+            9.35
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.7,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkCRT",
+          "args": [],
+          "position": [
+            14.7,
+            0.76,
+            9.35
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            15,
+            0,
+            8.45
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.7,
+            0.7
+          ],
+          "position": [
+            19,
+            0,
+            9.35
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.7,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkCRT",
+          "args": [],
+          "position": [
+            18.7,
+            0.76,
+            9.35
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            19,
+            0,
+            8.45
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.7,
+            0.7
+          ],
+          "position": [
+            23,
+            0,
+            9.35
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.7,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkCRT",
+          "args": [],
+          "position": [
+            22.7,
+            0.76,
+            9.35
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            22.2,
+            0,
+            7.6
+          ],
+          "yaw": 2.2,
+          "parts": []
+        },
+        {
+          "maker": "mkSafe",
+          "args": [],
+          "position": [
+            12,
+            0,
+            0.45
+          ],
+          "yaw": 0,
+          "footprint": [
+            0.62,
+            1,
+            0.55
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkSafe",
+          "args": [],
+          "position": [
+            14,
+            0,
+            0.45
+          ],
+          "yaw": 0,
+          "footprint": [
+            0.62,
+            1,
+            0.55
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkLocker",
+          "args": [
+            3
+          ],
+          "position": [
+            16.6,
+            0,
+            0.35
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.5,
+            2,
+            0.5
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDumbwaiter",
+          "args": [],
+          "position": [
+            19.5,
+            0,
+            0.12
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            21.3,
+            0,
+            0.8
+          ],
+          "yaw": 0,
+          "footprint": [
+            0.7,
+            0.6,
+            0.5
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.7,
+                0.5,
+                0.5,
+                {
+                  "material": "darkmetal"
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.16,
+                0.08,
+                0.04,
+                {
+                  "color": 13214522
+                }
+              ],
+              "position": [
+                0,
+                0.3,
+                0.26
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            2.4,
+            0.8,
+            {
+              "material": "metal"
+            }
+          ],
+          "position": [
+            23.6,
+            0,
+            2.3
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.4,
+            0.8,
+            0.8
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkCashbox",
+          "args": [],
+          "position": [
+            22.8,
+            0.76,
+            2.3
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkCashbox",
+          "args": [],
+          "position": [
+            23.6,
+            0.76,
+            2.3
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkCashbox",
+          "args": [],
+          "position": [
+            24.400000000000002,
+            0.76,
+            2.3
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.6,
+            0.8
+          ],
+          "position": [
+            12.5,
+            0,
+            3.6
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.6,
+            0.8,
+            0.8
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkCRT",
+          "args": [],
+          "position": [
+            12.5,
+            0.76,
+            3.5
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            12.5,
+            0,
+            2.8
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.6,
+            0.8
+          ],
+          "position": [
+            17,
+            0,
+            4.2
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.6,
+            0.8,
+            0.8
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkCRT",
+          "args": [],
+          "position": [
+            17,
+            0.76,
+            4.1
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            25.4,
+            0,
+            0.6
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "box",
+          "args": [
+            0.05,
+            0.12,
+            0.12,
+            {
+              "material": "ledR"
+            }
+          ],
+          "position": [
+            25.86,
+            2.35,
+            6.75
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "box",
+          "args": [
+            0.05,
+            0.12,
+            0.12,
+            {
+              "material": "ledR"
+            }
+          ],
+          "position": [
+            26.14,
+            2.35,
+            6.75
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "box",
+          "args": [
+            0.05,
+            0.12,
+            0.12,
+            {
+              "material": "ledR"
+            }
+          ],
+          "position": [
+            28.86,
+            2.35,
+            6.75
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "box",
+          "args": [
+            0.05,
+            0.12,
+            0.12,
+            {
+              "material": "ledR"
+            }
+          ],
+          "position": [
+            29.14,
+            2.35,
+            6.75
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            3.4,
+            0.8
+          ],
+          "position": [
+            36,
+            0,
+            1
+          ],
+          "yaw": 0,
+          "footprint": [
+            3.4,
+            0.8,
+            0.8
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            35.5,
+            0,
+            1.9
+          ],
+          "yaw": 0.4,
+          "parts": []
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            39.6,
+            0,
+            3.2
+          ],
+          "yaw": -1.5707963267948966,
+          "footprint": [
+            0.3,
+            1.8,
+            0.8
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.8,
+                1.2,
+                0.3,
+                {
+                  "color": 5925466
+                }
+              ],
+              "position": [
+                0,
+                0.6,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.1,
+                0.25,
+                0.05,
+                {
+                  "color": 10493984
+                }
+              ],
+              "position": [
+                0.2,
+                1.3,
+                0.16
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "mkVending",
+          "args": [],
+          "position": [
+            29.5,
+            0,
+            11.7
+          ],
+          "yaw": -1.5707963267948966,
+          "footprint": [
+            0.95,
+            2,
+            0.8
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkCorpse",
+          "args": [
+            {}
+          ],
+          "position": [
+            38.3,
+            0,
+            13.1
+          ],
+          "yaw": 2.1,
+          "parts": []
+        },
+        {
+          "maker": "mkCorpse",
+          "args": [
+            {}
+          ],
+          "position": [
+            36.8,
+            0,
+            14.7
+          ],
+          "yaw": -0.6,
+          "parts": []
+        },
+        {
+          "maker": "mkBench",
+          "args": [
+            2.4
+          ],
+          "position": [
+            11,
+            0,
+            14
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.4,
+            0.9,
+            0.5
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkBench",
+          "args": [
+            2.4
+          ],
+          "position": [
+            11,
+            0,
+            18
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.4,
+            0.9,
+            0.5
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkBench",
+          "args": [
+            2.4
+          ],
+          "position": [
+            18,
+            0,
+            14
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.4,
+            0.9,
+            0.5
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkBench",
+          "args": [
+            2.4
+          ],
+          "position": [
+            18,
+            0,
+            18
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.4,
+            0.9,
+            0.5
+          ],
+          "parts": []
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            9.2,
+            0,
+            20.3
+          ],
+          "yaw": 0,
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                3.4,
+                1.05,
+                0.7,
+                {
+                  "material": "woodlight"
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                3.5,
+                0.05,
+                0.8,
+                {
+                  "material": "wood"
+                }
+              ],
+              "position": [
+                0,
+                1.05,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.7,
+                1.05,
+                1.5,
+                {
+                  "material": "woodlight"
+                }
+              ],
+              "position": [
+                1.35,
+                0,
+                -1.1
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.8,
+                0.05,
+                1.6,
+                {
+                  "material": "wood"
+                }
+              ],
+              "position": [
+                1.35,
+                1.05,
+                -1.1
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "mkCRT",
+          "args": [],
+          "position": [
+            8.6,
+            1.1,
+            20.3
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            9,
+            0,
+            21.3
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            21.2,
+            0,
+            15.2
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            22,
+            0,
+            15.2
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            22.8,
+            0,
+            15.2
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            23.6,
+            0,
+            15.2
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            24.4,
+            0,
+            15.2
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            21.2,
+            0,
+            16.9
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            22,
+            0,
+            16.9
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            22.8,
+            0,
+            16.9
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            23.6,
+            0,
+            16.9
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            24.4,
+            0,
+            16.9
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            7,
+            0,
+            11.2
+          ],
+          "yaw": 1.5707963267948966,
+          "footprint": [
+            0.5,
+            1.3,
+            0.4
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.5,
+                1.3,
+                0.4,
+                {
+                  "color": 13619924
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.36,
+                0.28,
+                0.02,
+                {
+                  "color": 1723002
+                }
+              ],
+              "position": [
+                0,
+                0.9,
+                0.21
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            12.7,
+            0,
+            21.3
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkShelf",
+          "args": [
+            1.2
+          ],
+          "position": [
+            6.5,
+            0,
+            16.5
+          ],
+          "yaw": 1.5707963267948966,
+          "parts": []
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            7,
+            0,
+            11
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            25.5,
+            0,
+            21.2
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            7,
+            0,
+            21.2
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkCorpse",
+          "args": [
+            {}
+          ],
+          "position": [
+            14.5,
+            0,
+            16
+          ],
+          "yaw": 1,
+          "parts": []
+        },
+        {
+          "maker": "mkCorpse",
+          "args": [
+            {}
+          ],
+          "position": [
+            22,
+            0,
+            20
+          ],
+          "yaw": -2,
+          "parts": []
+        },
+        {
+          "maker": "mkSedan",
+          "args": [
+            {
+              "material": "carwhite"
+            }
+          ],
+          "position": [
+            9,
+            0,
+            -8
+          ],
+          "yaw": 1.5707963267948966,
+          "footprint": [
+            1.8,
+            1.4,
+            4.4
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkSedan",
+          "args": [
+            {
+              "material": "carwhite"
+            }
+          ],
+          "position": [
+            16,
+            0,
+            -8
+          ],
+          "yaw": 1.6707963267948966,
+          "footprint": [
+            1.8,
+            1.4,
+            4.4
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkSedan",
+          "args": [
+            {
+              "material": "carwhite"
+            }
+          ],
+          "position": [
+            30,
+            0,
+            -9
+          ],
+          "yaw": -1.5707963267948966,
+          "footprint": [
+            1.8,
+            1.4,
+            4.4
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkTruck",
+          "args": [],
+          "position": [
+            44.5,
+            0,
+            5
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.2,
+            2.6,
+            6
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkCorpse",
+          "args": [
+            {}
+          ],
+          "position": [
+            42.3,
+            0,
+            8.4
+          ],
+          "yaw": 0.5,
+          "parts": []
+        },
+        {
+          "maker": "mkCorpse",
+          "args": [
+            {}
+          ],
+          "position": [
+            43.4,
+            0,
+            9.8
+          ],
+          "yaw": 2.5,
+          "parts": []
+        },
+        {
+          "maker": "mkSedan",
+          "args": [],
+          "position": [
+            48,
+            0,
+            16
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.8,
+            1.4,
+            4.4
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkBed",
+          "args": [],
+          "position": [
+            48.8,
+            0,
+            -11.5
+          ],
+          "yaw": 0,
+          "footprint": [
+            1,
+            0.6,
+            2
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.4,
+            0.7
+          ],
+          "position": [
+            43.2,
+            0,
+            -12.5
+          ],
+          "yaw": 1.5707963267948966,
+          "footprint": [
+            1.4,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkLocker",
+          "args": [
+            2
+          ],
+          "position": [
+            46,
+            0,
+            -13.6
+          ],
+          "yaw": 0,
+          "footprint": [
+            1,
+            2,
+            0.5
+          ],
+          "parts": []
+        }
+      ]
+    },
+    {
+      "id": "F2",
+      "name": "二楼",
+      "base": 3.6,
+      "bounds": {
+        "x0": 0,
+        "z0": 0,
+        "x1": 40,
+        "z1": 22
+      },
+      "floors": [
+        {
+          "x0": 6,
+          "z0": 0,
+          "x1": 30,
+          "z1": 3,
+          "material": "office",
+          "y": 0
+        },
+        {
+          "x0": 6,
+          "z0": 3,
+          "x1": 14,
+          "z1": 9,
+          "material": "concrete",
+          "y": 0
+        },
+        {
+          "x0": 14,
+          "z0": 3,
+          "x1": 30,
+          "z1": 9,
+          "material": "office",
+          "y": 0
+        },
+        {
+          "x0": 30,
+          "z0": 0,
+          "x1": 37,
+          "z1": 9,
+          "material": "kitchen",
+          "y": 0
+        },
+        {
+          "x0": 37,
+          "z0": 0,
+          "x1": 40,
+          "z1": 5.5,
+          "material": "kitchen",
+          "y": 0
+        },
+        {
+          "x0": 14,
+          "z0": 9,
+          "x1": 34,
+          "z1": 22,
+          "material": "tile",
+          "y": 0
+        },
+        {
+          "x0": 6,
+          "z0": 9,
+          "x1": 14,
+          "z1": 22,
+          "material": "wood",
+          "y": 0
+        },
+        {
+          "x0": 0,
+          "z0": 10,
+          "x1": 6,
+          "z1": 22,
+          "material": "wood",
+          "y": 0
+        },
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 6,
+          "z1": 4.4,
+          "material": "concrete",
+          "y": 0
+        },
+        {
+          "x0": 34,
+          "z0": 9,
+          "x1": 40,
+          "z1": 17,
+          "material": "tile",
+          "y": 0
+        },
+        {
+          "x0": 37,
+          "z0": 5.5,
+          "x1": 40,
+          "z1": 9,
+          "material": "grate",
+          "y": 0
+        }
+      ],
+      "ceilings": [
+        {
+          "x0": 6,
+          "z0": 0,
+          "x1": 34,
+          "z1": 22,
+          "material": "ceil",
+          "h": 3.2
+        },
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 6,
+          "z1": 4.4,
+          "material": "ceil",
+          "h": 3.2
+        },
+        {
+          "x0": 0,
+          "z0": 10,
+          "x1": 6,
+          "z1": 22,
+          "material": "ceil",
+          "h": 3.2
+        },
+        {
+          "x0": 34,
+          "z0": 0,
+          "x1": 40,
+          "z1": 17,
+          "material": "ceil",
+          "h": 3.2
+        }
+      ],
+      "walls": [
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 40,
+          "z1": 0,
+          "m": "wall"
+        },
+        {
+          "x0": 40,
+          "z0": 0,
+          "x1": 40,
+          "z1": 22,
+          "m": "wall"
+        },
+        {
+          "x0": 0,
+          "z0": 22,
+          "x1": 40,
+          "z1": 22,
+          "m": "wall"
+        },
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 0,
+          "z1": 22,
+          "m": "wall"
+        },
+        {
+          "x0": 6,
+          "z0": 0,
+          "x1": 6,
+          "z1": 10,
+          "gaps": [
+            [
+              1,
+              2.6
+            ]
+          ],
+          "m": "concrete"
+        },
+        {
+          "x0": 0,
+          "z0": 10,
+          "x1": 6,
+          "z1": 10,
+          "m": "concrete"
+        },
+        {
+          "x0": 6,
+          "z0": 3,
+          "x1": 30,
+          "z1": 3,
+          "gaps": [
+            [
+              9,
+              10.4
+            ],
+            [
+              14,
+              17
+            ]
+          ]
+        },
+        {
+          "x0": 14,
+          "z0": 3,
+          "x1": 14,
+          "z1": 9
+        },
+        {
+          "x0": 17,
+          "z0": 3,
+          "x1": 17,
+          "z1": 9
+        },
+        {
+          "x0": 6,
+          "z0": 9,
+          "x1": 14,
+          "z1": 9,
+          "m": "wallwood"
+        },
+        {
+          "x0": 17,
+          "z0": 9,
+          "x1": 25,
+          "z1": 9,
+          "gaps": [
+            [
+              22,
+              23.4
+            ]
+          ]
+        },
+        {
+          "x0": 25,
+          "z0": 3,
+          "x1": 25,
+          "z1": 9
+        },
+        {
+          "x0": 25,
+          "z0": 9,
+          "x1": 30,
+          "z1": 9,
+          "gaps": [
+            [
+              27,
+              28.4
+            ]
+          ]
+        },
+        {
+          "x0": 30,
+          "z0": 0,
+          "x1": 30,
+          "z1": 9,
+          "gaps": [
+            [
+              1,
+              2.4
+            ]
+          ]
+        },
+        {
+          "x0": 30,
+          "z0": 9,
+          "x1": 34,
+          "z1": 9
+        },
+        {
+          "x0": 34,
+          "z0": 9,
+          "x1": 34,
+          "z1": 22,
+          "gaps": [
+            [
+              12,
+              13.6
+            ]
+          ]
+        },
+        {
+          "x0": 14,
+          "z0": 9,
+          "x1": 14,
+          "z1": 22,
+          "gaps": [
+            [
+              15,
+              16.6
+            ]
+          ],
+          "m": "wallwood"
+        },
+        {
+          "x0": 34,
+          "z0": 9,
+          "x1": 37,
+          "z1": 9
+        },
+        {
+          "x0": 37,
+          "z0": 5.5,
+          "x1": 37,
+          "z1": 9,
+          "m": "metal"
+        },
+        {
+          "x0": 37,
+          "z0": 5.5,
+          "x1": 40,
+          "z1": 5.5,
+          "m": "metal"
+        },
+        {
+          "x0": 37,
+          "z0": 9,
+          "x1": 40,
+          "z1": 9,
+          "gaps": [
+            [
+              37.7,
+              39.3
+            ]
+          ]
+        }
+      ],
+      "boxes": [
+        {
+          "x0": 2.9,
+          "z0": 4.4,
+          "x1": 3.1,
+          "z1": 8,
+          "y0": 0,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": true
+        },
+        {
+          "x0": 0.2,
+          "z0": 8,
+          "x1": 5.8,
+          "z1": 9.8,
+          "y0": 1.55,
+          "y1": 1.8,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 0,
+          "z0": 4.340000000000001,
+          "x1": 6,
+          "z1": 4.44,
+          "y0": 3.2,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 36.9,
+          "z0": 17,
+          "x1": 37.1,
+          "z1": 20.6,
+          "y0": 0,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": true
+        },
+        {
+          "x0": 34.2,
+          "z0": 20.6,
+          "x1": 39.8,
+          "z1": 21.9,
+          "y0": 1.55,
+          "y1": 1.8,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 34,
+          "z0": 16.94,
+          "x1": 40,
+          "z1": 17.04,
+          "y0": 3.2,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 32.803333333333335,
+          "z0": 0.1,
+          "x1": 32.86333333333334,
+          "z1": 1.6,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        },
+        {
+          "x0": 34.63666666666666,
+          "z0": 0.1,
+          "x1": 34.696666666666665,
+          "z1": 1.6,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        },
+        {
+          "x0": 36.47,
+          "z0": 0.1,
+          "x1": 36.53,
+          "z1": 1.6,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        }
+      ],
+      "stairs": [
+        {
+          "xa": 3.2,
+          "xb": 5.8,
+          "za": 4.4,
+          "zb": 8,
+          "y0": 0,
+          "y1": 1.8
+        },
+        {
+          "xa": 0.2,
+          "xb": 2.8,
+          "za": 8,
+          "zb": 4.4,
+          "y0": 1.8,
+          "y1": 3.6
+        },
+        {
+          "xa": 34.2,
+          "xb": 36.8,
+          "za": 17,
+          "zb": 20.6,
+          "y0": 0,
+          "y1": 1.8
+        },
+        {
+          "xa": 37.2,
+          "xb": 39.8,
+          "za": 20.6,
+          "zb": 17,
+          "y0": 1.8,
+          "y1": 3.6
+        }
+      ],
+      "doors": [
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "elevator",
+          "id": "F2_elev",
+          "x": 38.5,
+          "z": 9,
+          "axis": "x",
+          "label": "电梯",
+          "slideDir": 1
+        },
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f2_back",
+          "x": 6,
+          "z": 1.8,
+          "axis": "z",
+          "label": "二楼后门"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f2_storage",
+          "x": 9.7,
+          "z": 3,
+          "axis": "x",
+          "label": "杂物房"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "iron",
+          "id": "f2_counter",
+          "x": 22.7,
+          "z": 9,
+          "axis": "x",
+          "label": "二楼现金柜台"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f2_mgr",
+          "x": 27.7,
+          "z": 9,
+          "axis": "x",
+          "label": "客户经理办公室"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f2_toilet",
+          "x": 30,
+          "z": 1.7,
+          "axis": "z",
+          "label": "厕所"
+        },
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "iron",
+          "id": "f2_front",
+          "x": 34,
+          "z": 12.8,
+          "axis": "z",
+          "label": "二楼正门"
+        },
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f2_pres",
+          "x": 14,
+          "z": 15.8,
+          "axis": "z",
+          "label": "行长办公室"
+        }
+      ],
+      "labels": [
+        {
+          "text": "后楼梯",
+          "x": 3,
+          "z": 6.5
+        },
+        {
+          "text": "楼梯口",
+          "x": 37,
+          "z": 13
+        },
+        {
+          "text": "电梯",
+          "x": 38.5,
+          "z": 7.2
+        },
+        {
+          "text": "前楼梯",
+          "x": 37,
+          "z": 19.5
+        },
+        {
+          "text": "后走廊",
+          "x": 18,
+          "z": 1.5
+        },
+        {
+          "text": "杂物房",
+          "x": 10,
+          "z": 6
+        },
+        {
+          "text": "二楼现金柜台",
+          "x": 21,
+          "z": 6
+        },
+        {
+          "text": "客户经理办公室",
+          "x": 27.5,
+          "z": 6
+        },
+        {
+          "text": "厕所",
+          "x": 34,
+          "z": 3
+        },
+        {
+          "text": "客户休息区",
+          "x": 24,
+          "z": 15
+        },
+        {
+          "text": "行长办公室",
+          "x": 10,
+          "z": 15.5
+        }
+      ],
+      "spawns": {
+        "elev": {
+          "x": 38.5,
+          "z": 7,
+          "yaw": 0
+        },
+        "landing": {
+          "x": 37,
+          "z": 13,
+          "yaw": 3.141592653589793
+        }
+      },
+      "lights": [
+        {
+          "x": 3,
+          "y": 2.9,
+          "z": 8.9,
+          "color": 14214399,
+          "energy": 0.7,
+          "range": 7,
+          "flicker": 0.2,
+          "fixture": false
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "z": 2.2,
+          "color": 13689087,
+          "energy": 0.8,
+          "range": 9,
+          "flicker": 0.3,
+          "fixture": true
+        },
+        {
+          "x": 38.5,
+          "y": 2.8,
+          "z": 7.2,
+          "color": 14543103,
+          "energy": 0.5,
+          "range": 4,
+          "flicker": 0,
+          "fixture": false
+        },
+        {
+          "x": 37,
+          "y": 2.9,
+          "z": 21.25,
+          "color": 14214399,
+          "energy": 0.7,
+          "range": 7,
+          "flicker": 0.2,
+          "fixture": false
+        },
+        {
+          "x": 37,
+          "y": 3,
+          "z": 12.5,
+          "color": 16773328,
+          "energy": 1,
+          "range": 11,
+          "flicker": 0.15,
+          "fixture": true
+        },
+        {
+          "x": 10,
+          "y": 3,
+          "z": 6,
+          "color": 16771264,
+          "energy": 0.6,
+          "range": 7,
+          "flicker": 0.6,
+          "fixture": true
+        },
+        {
+          "x": 21,
+          "y": 3,
+          "z": 6,
+          "color": 16773328,
+          "energy": 0.8,
+          "range": 8,
+          "flicker": 0.2,
+          "fixture": true
+        },
+        {
+          "x": 27.5,
+          "y": 3,
+          "z": 6,
+          "color": 16773328,
+          "energy": 0.7,
+          "range": 7,
+          "flicker": 0.4,
+          "fixture": true
+        },
+        {
+          "x": 34,
+          "y": 3,
+          "z": 5,
+          "color": 14741759,
+          "energy": 0.6,
+          "range": 7,
+          "flicker": 0.7,
+          "fixture": true
+        },
+        {
+          "x": 18,
+          "y": 3,
+          "z": 12,
+          "color": 16773328,
+          "energy": 1,
+          "range": 11,
+          "flicker": 0.2,
+          "fixture": true
+        },
+        {
+          "x": 28,
+          "y": 3,
+          "z": 12,
+          "color": 16773328,
+          "energy": 1,
+          "range": 11,
+          "flicker": 0.5,
+          "fixture": true
+        },
+        {
+          "x": 20,
+          "y": 3,
+          "z": 19,
+          "color": 16773328,
+          "energy": 0.9,
+          "range": 11,
+          "flicker": 0.1,
+          "fixture": true
+        },
+        {
+          "x": 29,
+          "y": 3,
+          "z": 19,
+          "color": 16773328,
+          "energy": 0.9,
+          "range": 11,
+          "flicker": 0.3,
+          "fixture": true
+        },
+        {
+          "x": 10,
+          "y": 3,
+          "z": 15,
+          "color": 16767136,
+          "energy": 0.9,
+          "range": 11,
+          "flicker": 0.6,
+          "fixture": true
+        }
+      ],
+      "props": [
+        {
+          "maker": "mkShelf",
+          "args": [
+            2
+          ],
+          "position": [
+            7.4,
+            0,
+            5.5
+          ],
+          "yaw": 1.5707963267948966,
+          "footprint": [
+            2,
+            2,
+            0.45
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkShelf",
+          "args": [
+            2
+          ],
+          "position": [
+            12.6,
+            0,
+            6
+          ],
+          "yaw": -1.5707963267948966,
+          "footprint": [
+            2,
+            2,
+            0.45
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkBoxes",
+          "args": [],
+          "position": [
+            10,
+            0,
+            8
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkDumbwaiter",
+          "args": [],
+          "position": [
+            19.3,
+            0,
+            3.12
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.8,
+            0.7
+          ],
+          "position": [
+            22,
+            0,
+            7.8
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.8,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkCRT",
+          "args": [],
+          "position": [
+            22,
+            0.76,
+            7.8
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkSafe",
+          "args": [],
+          "position": [
+            24.3,
+            0,
+            3.5
+          ],
+          "yaw": 0,
+          "footprint": [
+            0.62,
+            1,
+            0.55
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkLocker",
+          "args": [
+            2
+          ],
+          "position": [
+            18,
+            0,
+            8.6
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            1,
+            2,
+            0.5
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.6,
+            0.8
+          ],
+          "position": [
+            27.5,
+            0,
+            4.6
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.6,
+            0.8,
+            0.8
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkCRT",
+          "args": [],
+          "position": [
+            27.1,
+            0.76,
+            4.5
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            27.5,
+            0,
+            3.9
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            29.4,
+            0,
+            8.4
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            31.916666666666668,
+            0,
+            0.5
+          ],
+          "yaw": 0,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                -0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            33.75,
+            0,
+            0.5
+          ],
+          "yaw": 0,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                -0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            35.583333333333336,
+            0,
+            0.5
+          ],
+          "yaw": 0,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                -0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "mkSofa",
+          "args": [
+            2.4,
+            {
+              "material": "sofa2"
+            }
+          ],
+          "position": [
+            20,
+            0,
+            13
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.4,
+            0.9,
+            0.85
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkSofa",
+          "args": [
+            2.4,
+            {
+              "material": "sofa2"
+            }
+          ],
+          "position": [
+            20,
+            0,
+            17.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            2.4,
+            0.9,
+            0.85
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkSofa",
+          "args": [
+            2.4,
+            {
+              "material": "sofa2"
+            }
+          ],
+          "position": [
+            27,
+            0,
+            13
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.4,
+            0.9,
+            0.85
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkSofa",
+          "args": [
+            2.4,
+            {
+              "material": "sofa2"
+            }
+          ],
+          "position": [
+            27,
+            0,
+            17.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            2.4,
+            0.9,
+            0.85
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.4,
+            0.8,
+            {
+              "material": "wood"
+            }
+          ],
+          "position": [
+            20,
+            0,
+            15.2
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.4,
+            0.8,
+            0.8
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.4,
+            0.8,
+            {
+              "material": "wood"
+            }
+          ],
+          "position": [
+            27,
+            0,
+            15.2
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.4,
+            0.8,
+            0.8
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkTV",
+          "args": [
+            1.4
+          ],
+          "position": [
+            24,
+            1.6,
+            9.2
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            2.6,
+            0.7
+          ],
+          "position": [
+            17.3,
+            0,
+            21.4
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            2.6,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            2.6,
+            0.7
+          ],
+          "position": [
+            20.3,
+            0,
+            21.4
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            2.6,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            2.6,
+            0.7
+          ],
+          "position": [
+            23.3,
+            0,
+            21.4
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            2.6,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            2.6,
+            0.7
+          ],
+          "position": [
+            26.3,
+            0,
+            21.4
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            2.6,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            15,
+            0,
+            10
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            33,
+            0,
+            21
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            15,
+            0,
+            21
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            2.4,
+            1.1,
+            {
+              "material": "wood"
+            }
+          ],
+          "position": [
+            9,
+            0,
+            12
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.4,
+            0.8,
+            1.1
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            9,
+            0,
+            11
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkCRT",
+          "args": [],
+          "position": [
+            8.4,
+            0.76,
+            12
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkShelf",
+          "args": [
+            2.2
+          ],
+          "position": [
+            6.4,
+            0,
+            17
+          ],
+          "yaw": 1.5707963267948966,
+          "footprint": [
+            2.2,
+            2,
+            0.45
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkShelf",
+          "args": [
+            2.2
+          ],
+          "position": [
+            6.4,
+            0,
+            20
+          ],
+          "yaw": 1.5707963267948966,
+          "footprint": [
+            2.2,
+            2,
+            0.45
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkSofa",
+          "args": [
+            2.2
+          ],
+          "position": [
+            11,
+            0,
+            21
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            2.2,
+            0.9,
+            0.85
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            13.3,
+            0,
+            9.7
+          ],
+          "yaw": 0,
+          "parts": []
+        }
+      ]
+    },
+    {
+      "id": "F3",
+      "name": "三楼",
+      "base": 7.2,
+      "bounds": {
+        "x0": 0,
+        "z0": 0,
+        "x1": 40,
+        "z1": 22
+      },
+      "floors": [
+        {
+          "x0": 6,
+          "z0": 0,
+          "x1": 20,
+          "z1": 3,
+          "material": "lino",
+          "y": 0
+        },
+        {
+          "x0": 16,
+          "z0": 3,
+          "x1": 20,
+          "z1": 22,
+          "material": "lino",
+          "y": 0
+        },
+        {
+          "x0": 6,
+          "z0": 3,
+          "x1": 16,
+          "z1": 22,
+          "material": "lino",
+          "y": 0
+        },
+        {
+          "x0": 0,
+          "z0": 10,
+          "x1": 6,
+          "z1": 22,
+          "material": "lino",
+          "y": 0
+        },
+        {
+          "x0": 20,
+          "z0": 0,
+          "x1": 34,
+          "z1": 8,
+          "material": "lino",
+          "y": 0
+        },
+        {
+          "x0": 20,
+          "z0": 8,
+          "x1": 34,
+          "z1": 16,
+          "material": "office",
+          "y": 0
+        },
+        {
+          "x0": 20,
+          "z0": 16,
+          "x1": 34,
+          "z1": 22,
+          "material": "kitchen",
+          "y": 0
+        },
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 6,
+          "z1": 4.4,
+          "material": "concrete",
+          "y": 0
+        },
+        {
+          "x0": 34,
+          "z0": 9,
+          "x1": 40,
+          "z1": 17,
+          "material": "tile",
+          "y": 0
+        },
+        {
+          "x0": 37,
+          "z0": 5.5,
+          "x1": 40,
+          "z1": 9,
+          "material": "grate",
+          "y": 0
+        },
+        {
+          "x0": 34,
+          "z0": 0,
+          "x1": 40,
+          "z1": 5.5,
+          "y": 0,
+          "material": "tile"
+        },
+        {
+          "x0": 34,
+          "z0": 5.5,
+          "x1": 37,
+          "z1": 9,
+          "y": 0,
+          "material": "tile"
+        }
+      ],
+      "ceilings": [
+        {
+          "x0": 6,
+          "z0": 0,
+          "x1": 34,
+          "z1": 22,
+          "material": "ceil",
+          "h": 3.2
+        },
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 6,
+          "z1": 4.4,
+          "material": "ceil",
+          "h": 3.2
+        },
+        {
+          "x0": 0,
+          "z0": 10,
+          "x1": 6,
+          "z1": 22,
+          "material": "ceil",
+          "h": 3.2
+        },
+        {
+          "x0": 34,
+          "z0": 0,
+          "x1": 40,
+          "z1": 17,
+          "material": "ceil",
+          "h": 3.2
+        }
+      ],
+      "walls": [
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 40,
+          "z1": 0,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 40,
+          "z0": 0,
+          "x1": 40,
+          "z1": 22,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 0,
+          "z0": 22,
+          "x1": 40,
+          "z1": 22,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 0,
+          "z1": 22,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 6,
+          "z0": 0,
+          "x1": 6,
+          "z1": 10,
+          "gaps": [
+            [
+              1,
+              2.6
+            ]
+          ],
+          "m": "concrete"
+        },
+        {
+          "x0": 0,
+          "z0": 10,
+          "x1": 6,
+          "z1": 10,
+          "m": "concrete"
+        },
+        {
+          "x0": 6,
+          "z0": 3,
+          "x1": 16,
+          "z1": 3,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 16,
+          "z0": 3,
+          "x1": 16,
+          "z1": 22,
+          "gaps": [
+            [
+              6,
+              7.4
+            ],
+            [
+              12,
+              13.4
+            ],
+            [
+              18,
+              19.4
+            ]
+          ],
+          "m": "wallgreen"
+        },
+        {
+          "x0": 6,
+          "z0": 9.5,
+          "x1": 16,
+          "z1": 9.5,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 0,
+          "z0": 15.5,
+          "x1": 16,
+          "z1": 15.5,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 20,
+          "z0": 0,
+          "x1": 20,
+          "z1": 8,
+          "gaps": [
+            [
+              5,
+              6.4
+            ]
+          ],
+          "m": "wallgreen"
+        },
+        {
+          "x0": 20,
+          "z0": 8,
+          "x1": 27,
+          "z1": 8,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 27,
+          "z0": 0,
+          "x1": 27,
+          "z1": 8,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 27,
+          "z0": 8,
+          "x1": 34,
+          "z1": 8,
+          "gaps": [
+            [
+              30,
+              31.4
+            ]
+          ],
+          "m": "wallgreen"
+        },
+        {
+          "x0": 34,
+          "z0": 0,
+          "x1": 34,
+          "z1": 9,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 20,
+          "z0": 8,
+          "x1": 20,
+          "z1": 16,
+          "gaps": [
+            [
+              9,
+              15
+            ]
+          ],
+          "m": "wallgreen"
+        },
+        {
+          "x0": 20,
+          "z0": 16,
+          "x1": 34,
+          "z1": 16,
+          "gaps": [
+            [
+              22.5,
+              23.9
+            ],
+            [
+              29.5,
+              30.9
+            ]
+          ],
+          "m": "wallgreen"
+        },
+        {
+          "x0": 27,
+          "z0": 16,
+          "x1": 27,
+          "z1": 22,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 20,
+          "z0": 16,
+          "x1": 20,
+          "z1": 22,
+          "m": "wallgreen"
+        },
+        {
+          "x0": 34,
+          "z0": 9,
+          "x1": 34,
+          "z1": 22,
+          "gaps": [
+            [
+              12,
+              13.6
+            ]
+          ],
+          "m": "wallgreen"
+        },
+        {
+          "x0": 34,
+          "z0": 9,
+          "x1": 37,
+          "z1": 9
+        },
+        {
+          "x0": 37,
+          "z0": 5.5,
+          "x1": 37,
+          "z1": 9,
+          "m": "metal"
+        },
+        {
+          "x0": 37,
+          "z0": 5.5,
+          "x1": 40,
+          "z1": 5.5,
+          "m": "metal"
+        },
+        {
+          "x0": 37,
+          "z0": 9,
+          "x1": 40,
+          "z1": 9,
+          "gaps": [
+            [
+              37.7,
+              39.3
+            ]
+          ]
+        }
+      ],
+      "boxes": [
+        {
+          "x0": 2.9,
+          "z0": 4.4,
+          "x1": 3.1,
+          "z1": 8,
+          "y0": 0,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": true
+        },
+        {
+          "x0": 0.2,
+          "z0": 8,
+          "x1": 5.8,
+          "z1": 9.8,
+          "y0": 1.55,
+          "y1": 1.8,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 0,
+          "z0": 4.340000000000001,
+          "x1": 6,
+          "z1": 4.44,
+          "y0": 3.2,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 36.9,
+          "z0": 17,
+          "x1": 37.1,
+          "z1": 20.6,
+          "y0": 0,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": true
+        },
+        {
+          "x0": 34.2,
+          "z0": 20.6,
+          "x1": 39.8,
+          "z1": 21.9,
+          "y0": 1.55,
+          "y1": 1.8,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 34,
+          "z0": 16.94,
+          "x1": 40,
+          "z1": 17.04,
+          "y0": 3.2,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": false
+        },
+        {
+          "x0": 22.47,
+          "z0": 21.9,
+          "x1": 22.53,
+          "z1": 20.4,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        },
+        {
+          "x0": 24.47,
+          "z0": 21.9,
+          "x1": 24.53,
+          "z1": 20.4,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        },
+        {
+          "x0": 26.47,
+          "z0": 21.9,
+          "x1": 26.53,
+          "z1": 20.4,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        },
+        {
+          "x0": 29.47,
+          "z0": 21.9,
+          "x1": 29.53,
+          "z1": 20.4,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        },
+        {
+          "x0": 31.47,
+          "z0": 21.9,
+          "x1": 31.53,
+          "z1": 20.4,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        },
+        {
+          "x0": 33.47,
+          "z0": 21.9,
+          "x1": 33.53,
+          "z1": 20.4,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        }
+      ],
+      "stairs": [
+        {
+          "xa": 3.2,
+          "xb": 5.8,
+          "za": 4.4,
+          "zb": 8,
+          "y0": 0,
+          "y1": 1.8
+        },
+        {
+          "xa": 0.2,
+          "xb": 2.8,
+          "za": 8,
+          "zb": 4.4,
+          "y0": 1.8,
+          "y1": 3.6
+        },
+        {
+          "xa": 34.2,
+          "xb": 36.8,
+          "za": 17,
+          "zb": 20.6,
+          "y0": 0,
+          "y1": 1.8
+        },
+        {
+          "xa": 37.2,
+          "xb": 39.8,
+          "za": 20.6,
+          "zb": 17,
+          "y0": 1.8,
+          "y1": 3.6
+        }
+      ],
+      "doors": [
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "elevator",
+          "id": "F3_elev",
+          "x": 38.5,
+          "z": 9,
+          "axis": "x",
+          "label": "电梯",
+          "slideDir": 1
+        },
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f3_back",
+          "x": 6,
+          "z": 1.8,
+          "axis": "z",
+          "label": "三楼后门"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f3_sup",
+          "x": 16,
+          "z": 6.7,
+          "axis": "z",
+          "label": "主管宿舍"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f3_dA",
+          "x": 16,
+          "z": 12.7,
+          "axis": "z",
+          "label": "员工宿舍A（王）"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f3_safe",
+          "x": 16,
+          "z": 18.7,
+          "axis": "z",
+          "label": "我的宿舍"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f3_dB",
+          "x": 20,
+          "z": 5.7,
+          "axis": "z",
+          "label": "员工宿舍B（李）"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f3_store",
+          "x": 30.7,
+          "z": 8,
+          "axis": "x",
+          "label": "储物间"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f3_t1",
+          "x": 23.2,
+          "z": 16,
+          "axis": "x",
+          "label": "厕所"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f3_t2",
+          "x": 30.2,
+          "z": 16,
+          "axis": "x",
+          "label": "厕所"
+        },
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f3_front",
+          "x": 34,
+          "z": 12.8,
+          "axis": "z",
+          "label": "三楼正门"
+        }
+      ],
+      "labels": [
+        {
+          "text": "后楼梯",
+          "x": 3,
+          "z": 6.5
+        },
+        {
+          "text": "楼梯口",
+          "x": 37,
+          "z": 13
+        },
+        {
+          "text": "电梯",
+          "x": 38.5,
+          "z": 7.2
+        },
+        {
+          "text": "前楼梯",
+          "x": 37,
+          "z": 19.5
+        },
+        {
+          "text": "后走廊",
+          "x": 12,
+          "z": 1.5
+        },
+        {
+          "text": "主管宿舍",
+          "x": 11,
+          "z": 6.3
+        },
+        {
+          "text": "员工宿舍A",
+          "x": 11,
+          "z": 12.5
+        },
+        {
+          "text": "我的宿舍",
+          "x": 11,
+          "z": 18.7
+        },
+        {
+          "text": "员工宿舍B",
+          "x": 23.5,
+          "z": 4
+        },
+        {
+          "text": "储物间",
+          "x": 30.5,
+          "z": 4
+        },
+        {
+          "text": "活动室",
+          "x": 27,
+          "z": 12
+        },
+        {
+          "text": "厕所",
+          "x": 27,
+          "z": 19
+        }
+      ],
+      "spawns": {
+        "elev": {
+          "x": 38.5,
+          "z": 7,
+          "yaw": 0
+        },
+        "landing": {
+          "x": 37,
+          "z": 13,
+          "yaw": 3.141592653589793
+        }
+      },
+      "lights": [
+        {
+          "x": 3,
+          "y": 2.9,
+          "z": 8.9,
+          "color": 14214399,
+          "energy": 0.7,
+          "range": 7,
+          "flicker": 0.2,
+          "fixture": false
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "z": 2.2,
+          "color": 13689087,
+          "energy": 0.8,
+          "range": 9,
+          "flicker": 0.3,
+          "fixture": true
+        },
+        {
+          "x": 38.5,
+          "y": 2.8,
+          "z": 7.2,
+          "color": 14543103,
+          "energy": 0.5,
+          "range": 4,
+          "flicker": 0,
+          "fixture": false
+        },
+        {
+          "x": 37,
+          "y": 2.9,
+          "z": 21.25,
+          "color": 14214399,
+          "energy": 0.7,
+          "range": 7,
+          "flicker": 0.2,
+          "fixture": false
+        },
+        {
+          "x": 37,
+          "y": 3,
+          "z": 12.5,
+          "color": 16773328,
+          "energy": 1,
+          "range": 11,
+          "flicker": 0.15,
+          "fixture": true
+        },
+        {
+          "x": 11,
+          "y": 3,
+          "z": 6.3,
+          "color": 16771264,
+          "energy": 0.7,
+          "range": 7,
+          "flicker": 0.3,
+          "fixture": true
+        },
+        {
+          "x": 11,
+          "y": 3,
+          "z": 12.5,
+          "color": 16771264,
+          "energy": 0.6,
+          "range": 7,
+          "flicker": 0.7,
+          "fixture": true
+        },
+        {
+          "x": 10,
+          "y": 2.4,
+          "z": 18.5,
+          "color": 16763008,
+          "energy": 1.2,
+          "range": 8,
+          "flicker": 0,
+          "fixture": false
+        },
+        {
+          "x": 23.5,
+          "y": 3,
+          "z": 4,
+          "color": 16771264,
+          "energy": 0.6,
+          "range": 7,
+          "flicker": 0.5,
+          "fixture": true
+        },
+        {
+          "x": 30.5,
+          "y": 3,
+          "z": 4,
+          "color": 16771264,
+          "energy": 0.6,
+          "range": 7,
+          "flicker": 0.4,
+          "fixture": true
+        },
+        {
+          "x": 24,
+          "y": 3,
+          "z": 12,
+          "color": 16773328,
+          "energy": 0.9,
+          "range": 10,
+          "flicker": 0.3,
+          "fixture": true
+        },
+        {
+          "x": 31,
+          "y": 3,
+          "z": 12,
+          "color": 16773328,
+          "energy": 0.9,
+          "range": 10,
+          "flicker": 0.2,
+          "fixture": true
+        },
+        {
+          "x": 18,
+          "y": 3,
+          "z": 6,
+          "color": 16773328,
+          "energy": 0.7,
+          "range": 9,
+          "flicker": 0.5,
+          "fixture": true
+        },
+        {
+          "x": 18,
+          "y": 3,
+          "z": 17,
+          "color": 16773328,
+          "energy": 0.7,
+          "range": 9,
+          "flicker": 0.2,
+          "fixture": true
+        },
+        {
+          "x": 11,
+          "y": 3,
+          "z": 1.5,
+          "color": 16773328,
+          "energy": 0.6,
+          "range": 8,
+          "flicker": 0.4,
+          "fixture": true
+        },
+        {
+          "x": 27,
+          "y": 3,
+          "z": 19,
+          "color": 14741759,
+          "energy": 0.5,
+          "range": 8,
+          "flicker": 0.7,
+          "fixture": true
+        }
+      ],
+      "props": [
+        {
+          "maker": "mkWardrobe",
+          "args": [],
+          "position": [
+            32.3,
+            0,
+            11.2
+          ],
+          "yaw": 0.4,
+          "parts": []
+        },
+        {
+          "maker": "mkBed",
+          "args": [],
+          "position": [
+            7,
+            0,
+            6.2
+          ],
+          "yaw": 0,
+          "footprint": [
+            1,
+            0.6,
+            2
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkWardrobe",
+          "args": [],
+          "position": [
+            12.5,
+            0,
+            3.45
+          ],
+          "yaw": 0,
+          "footprint": [
+            1,
+            2,
+            0.6
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.4,
+            0.7
+          ],
+          "position": [
+            9.8,
+            0,
+            8.9
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            1.4,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            9.8,
+            0,
+            8.1
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkBed",
+          "args": [],
+          "position": [
+            7,
+            0,
+            12.5
+          ],
+          "yaw": 0,
+          "footprint": [
+            1,
+            0.6,
+            2
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkWardrobe",
+          "args": [],
+          "position": [
+            12.5,
+            0,
+            10
+          ],
+          "yaw": 0,
+          "footprint": [
+            1,
+            2,
+            0.6
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.2,
+            0.6
+          ],
+          "position": [
+            10,
+            0,
+            15
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            1.2,
+            0.8,
+            0.6
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkBed",
+          "args": [],
+          "position": [
+            7,
+            0,
+            18.7
+          ],
+          "yaw": 0,
+          "footprint": [
+            1,
+            0.6,
+            2
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkWardrobe",
+          "args": [],
+          "position": [
+            12.5,
+            0,
+            21.4
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            1,
+            2,
+            0.6
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.3,
+            0.7
+          ],
+          "position": [
+            10,
+            0,
+            16
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.3,
+            0.8,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkBed",
+          "args": [],
+          "position": [
+            26,
+            0,
+            2
+          ],
+          "yaw": 0,
+          "footprint": [
+            1,
+            0.6,
+            2
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkWardrobe",
+          "args": [],
+          "position": [
+            21,
+            0,
+            0.45
+          ],
+          "yaw": 0,
+          "footprint": [
+            1,
+            2,
+            0.6
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.2,
+            0.6
+          ],
+          "position": [
+            23.5,
+            0,
+            7.4
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            1.2,
+            0.8,
+            0.6
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkShelf",
+          "args": [
+            2.4
+          ],
+          "position": [
+            28.5,
+            0,
+            1
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.4,
+            2,
+            0.45
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkShelf",
+          "args": [
+            2.4
+          ],
+          "position": [
+            32,
+            0,
+            1
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.4,
+            2,
+            0.45
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkBoxes",
+          "args": [],
+          "position": [
+            33,
+            0,
+            6
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            25,
+            0,
+            11
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.7,
+            0.8,
+            1.5
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                2.7,
+                0.06,
+                1.5,
+                {
+                  "color": 2050682
+                }
+              ],
+              "position": [
+                0,
+                0.72,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.03,
+                0.15,
+                1.5,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.78,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.08,
+                0.72,
+                0.08,
+                {
+                  "material": "darkmetal"
+                }
+              ],
+              "position": [
+                -1.1,
+                0,
+                -0.6
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.08,
+                0.72,
+                0.08,
+                {
+                  "material": "darkmetal"
+                }
+              ],
+              "position": [
+                1.1,
+                0,
+                -0.6
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.08,
+                0.72,
+                0.08,
+                {
+                  "material": "darkmetal"
+                }
+              ],
+              "position": [
+                -1.1,
+                0,
+                0.6
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.08,
+                0.72,
+                0.08,
+                {
+                  "material": "darkmetal"
+                }
+              ],
+              "position": [
+                1.1,
+                0,
+                0.6
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "mkSofa",
+          "args": [
+            2.2
+          ],
+          "position": [
+            31,
+            0,
+            15.3
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            2.2,
+            0.9,
+            0.85
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkTV",
+          "args": [
+            1.2
+          ],
+          "position": [
+            30,
+            1.5,
+            8.2
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkLocker",
+          "args": [
+            3
+          ],
+          "position": [
+            22,
+            0,
+            8.4
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.5,
+            2,
+            0.5
+          ],
+          "parts": []
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            21.5,
+            0,
+            21.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            23.5,
+            0,
+            21.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            25.5,
+            0,
+            21.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            28.5,
+            0,
+            21.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            30.5,
+            0,
+            21.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            32.5,
+            0,
+            21.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                0.22
+              ]
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "id": "F4",
+      "name": "四楼",
+      "base": 10.8,
+      "bounds": {
+        "x0": 0,
+        "z0": 0,
+        "x1": 40,
+        "z1": 22
+      },
+      "floors": [
+        {
+          "x0": 6,
+          "z0": 0,
+          "x1": 14,
+          "z1": 8,
+          "material": "office",
+          "y": 0
+        },
+        {
+          "x0": 6,
+          "z0": 8,
+          "x1": 14,
+          "z1": 14,
+          "material": "tile",
+          "y": 0
+        },
+        {
+          "x0": 6,
+          "z0": 14,
+          "x1": 14,
+          "z1": 22,
+          "material": "kitchen",
+          "y": 0
+        },
+        {
+          "x0": 0,
+          "z0": 10,
+          "x1": 6,
+          "z1": 14,
+          "material": "tile",
+          "y": 0
+        },
+        {
+          "x0": 0,
+          "z0": 14,
+          "x1": 6,
+          "z1": 22,
+          "material": "kitchen",
+          "y": 0
+        },
+        {
+          "x0": 14,
+          "z0": 0,
+          "x1": 26,
+          "z1": 8,
+          "material": "office",
+          "y": 0
+        },
+        {
+          "x0": 14,
+          "z0": 8,
+          "x1": 26,
+          "z1": 22,
+          "material": "wood",
+          "y": 0
+        },
+        {
+          "x0": 26,
+          "z0": 0,
+          "x1": 34,
+          "z1": 8,
+          "material": "kitchen",
+          "y": 0
+        },
+        {
+          "x0": 26,
+          "z0": 8,
+          "x1": 34,
+          "z1": 22,
+          "material": "lino",
+          "y": 0
+        },
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 6,
+          "z1": 4.4,
+          "material": "concrete",
+          "y": 0
+        },
+        {
+          "x0": 34,
+          "z0": 9,
+          "x1": 40,
+          "z1": 17,
+          "material": "tile",
+          "y": 0
+        },
+        {
+          "x0": 37,
+          "z0": 5.5,
+          "x1": 40,
+          "z1": 9,
+          "material": "grate",
+          "y": 0
+        },
+        {
+          "x0": 34,
+          "z0": 0,
+          "x1": 40,
+          "z1": 5.5,
+          "y": 0,
+          "material": "tile"
+        },
+        {
+          "x0": 34,
+          "z0": 5.5,
+          "x1": 37,
+          "z1": 9,
+          "y": 0,
+          "material": "tile"
+        }
+      ],
+      "ceilings": [
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 40,
+          "z1": 22,
+          "material": "ceil",
+          "h": 3.2
+        }
+      ],
+      "walls": [
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 40,
+          "z1": 0,
+          "m": "wall"
+        },
+        {
+          "x0": 40,
+          "z0": 0,
+          "x1": 40,
+          "z1": 22,
+          "m": "wall"
+        },
+        {
+          "x0": 0,
+          "z0": 22,
+          "x1": 40,
+          "z1": 22,
+          "m": "wall"
+        },
+        {
+          "x0": 0,
+          "z0": 0,
+          "x1": 0,
+          "z1": 22,
+          "m": "wall"
+        },
+        {
+          "x0": 6,
+          "z0": 0,
+          "x1": 6,
+          "z1": 10,
+          "gaps": [
+            [
+              1,
+              2.6
+            ]
+          ],
+          "m": "concrete"
+        },
+        {
+          "x0": 0,
+          "z0": 10,
+          "x1": 6,
+          "z1": 10,
+          "m": "concrete"
+        },
+        {
+          "x0": 14,
+          "z0": 0,
+          "x1": 14,
+          "z1": 8,
+          "m": "wallwood"
+        },
+        {
+          "x0": 6,
+          "z0": 8,
+          "x1": 14,
+          "z1": 8,
+          "m": "wallwood",
+          "gaps": [
+            [
+              12,
+              13.4
+            ]
+          ]
+        },
+        {
+          "x0": 0,
+          "z0": 14,
+          "x1": 14,
+          "z1": 14,
+          "gaps": [
+            [
+              7.3,
+              8.7
+            ],
+            [
+              11.3,
+              12.7
+            ]
+          ]
+        },
+        {
+          "x0": 10,
+          "z0": 14,
+          "x1": 10,
+          "z1": 22
+        },
+        {
+          "x0": 14,
+          "z0": 8,
+          "x1": 14,
+          "z1": 22,
+          "gaps": [
+            [
+              8.2,
+              13.8
+            ]
+          ]
+        },
+        {
+          "x0": 14,
+          "z0": 8,
+          "x1": 26,
+          "z1": 8,
+          "gaps": [
+            [
+              19,
+              20.4
+            ]
+          ],
+          "m": "wallwood"
+        },
+        {
+          "x0": 26,
+          "z0": 0,
+          "x1": 26,
+          "z1": 8
+        },
+        {
+          "x0": 26,
+          "z0": 8,
+          "x1": 34,
+          "z1": 8,
+          "gaps": [
+            [
+              29,
+              30.4
+            ]
+          ],
+          "m": "kitchen"
+        },
+        {
+          "x0": 34,
+          "z0": 0,
+          "x1": 34,
+          "z1": 9
+        },
+        {
+          "x0": 26,
+          "z0": 8,
+          "x1": 26,
+          "z1": 22,
+          "gaps": [
+            [
+              11,
+              13
+            ]
+          ]
+        },
+        {
+          "x0": 34,
+          "z0": 9,
+          "x1": 34,
+          "z1": 22,
+          "gaps": [
+            [
+              12,
+              13.6
+            ]
+          ]
+        },
+        {
+          "x0": 34,
+          "z0": 9,
+          "x1": 37,
+          "z1": 9
+        },
+        {
+          "x0": 37,
+          "z0": 5.5,
+          "x1": 37,
+          "z1": 9,
+          "m": "metal"
+        },
+        {
+          "x0": 37,
+          "z0": 5.5,
+          "x1": 40,
+          "z1": 5.5,
+          "m": "metal"
+        },
+        {
+          "x0": 37,
+          "z0": 9,
+          "x1": 40,
+          "z1": 9,
+          "gaps": [
+            [
+              37.7,
+              39.3
+            ]
+          ]
+        }
+      ],
+      "boxes": [
+        {
+          "x0": 2.9,
+          "z0": 4.4,
+          "x1": 3.1,
+          "z1": 8,
+          "y0": 0,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": true
+        },
+        {
+          "x0": 36.9,
+          "z0": 17,
+          "x1": 37.1,
+          "z1": 20.6,
+          "y0": 0,
+          "y1": 3.6,
+          "material": "concrete",
+          "collision": true
+        },
+        {
+          "x0": 7.970000000000001,
+          "z0": 21.9,
+          "x1": 8.030000000000001,
+          "z1": 20.4,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        },
+        {
+          "x0": 9.770000000000001,
+          "z0": 21.9,
+          "x1": 9.83,
+          "z1": 20.4,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        },
+        {
+          "x0": 11.97,
+          "z0": 21.9,
+          "x1": 12.03,
+          "z1": 20.4,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        },
+        {
+          "x0": 13.770000000000001,
+          "z0": 21.9,
+          "x1": 13.83,
+          "z1": 20.4,
+          "y0": 0,
+          "y1": 2,
+          "material": "metal",
+          "collision": true
+        }
+      ],
+      "stairs": [
+        {
+          "xa": 3.2,
+          "xb": 5.8,
+          "za": 4.4,
+          "zb": 8,
+          "y0": 0,
+          "y1": 1.8
+        },
+        {
+          "xa": 34.2,
+          "xb": 36.8,
+          "za": 17,
+          "zb": 20.6,
+          "y0": 0,
+          "y1": 1.8
+        }
+      ],
+      "doors": [
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "elevator",
+          "id": "F4_elev",
+          "x": 38.5,
+          "z": 9,
+          "axis": "x",
+          "label": "电梯",
+          "slideDir": 1
+        },
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "iron",
+          "id": "f4_code",
+          "x": 6,
+          "z": 1.8,
+          "axis": "z",
+          "label": "四楼后门"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f4_t1",
+          "x": 8,
+          "z": 14,
+          "axis": "x",
+          "label": "厕所"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f4_t2",
+          "x": 12,
+          "z": 14,
+          "axis": "x",
+          "label": "厕所"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "iron",
+          "id": "f4_conf",
+          "x": 19.7,
+          "z": 8,
+          "axis": "x",
+          "label": "会议室"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f4_kitchen",
+          "x": 29.7,
+          "z": 8,
+          "axis": "x",
+          "label": "厨房"
+        },
+        {
+          "w": 2,
+          "h": 2.25,
+          "type": "bars",
+          "id": "f4_gate",
+          "x": 26,
+          "z": 12,
+          "axis": "z",
+          "label": "铁门"
+        },
+        {
+          "w": 1.6,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f4_front",
+          "x": 34,
+          "z": 12.8,
+          "axis": "z",
+          "label": "四楼正门"
+        },
+        {
+          "w": 1.4,
+          "h": 2.25,
+          "type": "wood",
+          "id": "f4_lounge",
+          "x": 12.7,
+          "z": 8,
+          "axis": "x",
+          "label": "休息区的门"
+        }
+      ],
+      "labels": [
+        {
+          "text": "后楼梯",
+          "x": 3,
+          "z": 6.5
+        },
+        {
+          "text": "楼梯口",
+          "x": 37,
+          "z": 13
+        },
+        {
+          "text": "电梯",
+          "x": 38.5,
+          "z": 7.2
+        },
+        {
+          "text": "前楼梯",
+          "x": 37,
+          "z": 19.5
+        },
+        {
+          "text": "休息区",
+          "x": 10,
+          "z": 4
+        },
+        {
+          "text": "西走廊",
+          "x": 10,
+          "z": 11
+        },
+        {
+          "text": "厕所",
+          "x": 10,
+          "z": 18
+        },
+        {
+          "text": "会议室",
+          "x": 20,
+          "z": 4
+        },
+        {
+          "text": "台球区",
+          "x": 20,
+          "z": 15
+        },
+        {
+          "text": "厨房",
+          "x": 30,
+          "z": 4
+        },
+        {
+          "text": "食堂",
+          "x": 30,
+          "z": 16
+        }
+      ],
+      "spawns": {
+        "elev": {
+          "x": 38.5,
+          "z": 7,
+          "yaw": 0
+        },
+        "landing": {
+          "x": 37,
+          "z": 13,
+          "yaw": 3.141592653589793
+        }
+      },
+      "lights": [
+        {
+          "x": 3,
+          "y": 2.9,
+          "z": 8.9,
+          "color": 14214399,
+          "energy": 0.7,
+          "range": 7,
+          "flicker": 0.2,
+          "fixture": false
+        },
+        {
+          "x": 3,
+          "y": 3,
+          "z": 2.2,
+          "color": 13689087,
+          "energy": 0.8,
+          "range": 9,
+          "flicker": 0.3,
+          "fixture": true
+        },
+        {
+          "x": 38.5,
+          "y": 2.8,
+          "z": 7.2,
+          "color": 14543103,
+          "energy": 0.5,
+          "range": 4,
+          "flicker": 0,
+          "fixture": false
+        },
+        {
+          "x": 37,
+          "y": 2.9,
+          "z": 21.25,
+          "color": 14214399,
+          "energy": 0.7,
+          "range": 7,
+          "flicker": 0.2,
+          "fixture": false
+        },
+        {
+          "x": 37,
+          "y": 3,
+          "z": 12.5,
+          "color": 16773328,
+          "energy": 1,
+          "range": 11,
+          "flicker": 0.15,
+          "fixture": true
+        },
+        {
+          "x": 10,
+          "y": 3,
+          "z": 4,
+          "color": 16769200,
+          "energy": 0.7,
+          "range": 8,
+          "flicker": 0.4,
+          "fixture": true
+        },
+        {
+          "x": 10,
+          "y": 3,
+          "z": 11,
+          "color": 16773328,
+          "energy": 0.7,
+          "range": 8,
+          "flicker": 0.5,
+          "fixture": true
+        },
+        {
+          "x": 10,
+          "y": 3,
+          "z": 18,
+          "color": 14741759,
+          "energy": 0.4,
+          "range": 7,
+          "flicker": 0.8,
+          "fixture": true
+        },
+        {
+          "x": 17,
+          "y": 3,
+          "z": 4,
+          "color": 16773328,
+          "energy": 0.8,
+          "range": 9,
+          "flicker": 0.2,
+          "fixture": true
+        },
+        {
+          "x": 23,
+          "y": 3,
+          "z": 4,
+          "color": 16773328,
+          "energy": 0.8,
+          "range": 9,
+          "flicker": 0.6,
+          "fixture": true
+        },
+        {
+          "x": 18,
+          "y": 3,
+          "z": 16,
+          "color": 16773328,
+          "energy": 1,
+          "range": 10,
+          "flicker": 0.3,
+          "fixture": true
+        },
+        {
+          "x": 22,
+          "y": 3,
+          "z": 11,
+          "color": 16773328,
+          "energy": 0.8,
+          "range": 9,
+          "flicker": 0.1,
+          "fixture": true
+        },
+        {
+          "x": 30,
+          "y": 3,
+          "z": 4,
+          "color": 15266016,
+          "energy": 0.8,
+          "range": 8,
+          "flicker": 0.6,
+          "fixture": true
+        },
+        {
+          "x": 30,
+          "y": 3,
+          "z": 11,
+          "color": 16773328,
+          "energy": 0.9,
+          "range": 10,
+          "flicker": 0.2,
+          "fixture": true
+        },
+        {
+          "x": 30,
+          "y": 3,
+          "z": 18,
+          "color": 16773328,
+          "energy": 0.9,
+          "range": 10,
+          "flicker": 0.4,
+          "fixture": true
+        }
+      ],
+      "props": [
+        {
+          "maker": "mkDebris",
+          "args": [
+            2.5999999999999996,
+            1.6,
+            2.6
+          ],
+          "position": [
+            4.5,
+            0.3,
+            5.7
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkDebris",
+          "args": [
+            2.5999999999999943,
+            1.6,
+            2.6
+          ],
+          "position": [
+            35.5,
+            0.3,
+            18.3
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkSofa",
+          "args": [
+            2.2
+          ],
+          "position": [
+            7,
+            0,
+            4
+          ],
+          "yaw": 1.5707963267948966,
+          "footprint": [
+            2.2,
+            0.9,
+            0.85
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkSofa",
+          "args": [
+            2.2
+          ],
+          "position": [
+            13,
+            0,
+            4
+          ],
+          "yaw": -1.5707963267948966,
+          "footprint": [
+            2.2,
+            0.9,
+            0.85
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkSofa",
+          "args": [
+            2.4
+          ],
+          "position": [
+            10,
+            0,
+            0.8
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.4,
+            0.9,
+            0.85
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.2,
+            0.8,
+            {
+              "material": "wood"
+            }
+          ],
+          "position": [
+            10,
+            0,
+            4
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.2,
+            0.5,
+            0.8
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkTV",
+          "args": [
+            1.3
+          ],
+          "position": [
+            10,
+            1.5,
+            7.82
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            6.7,
+            0,
+            7.3
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            7.1000000000000005,
+            0,
+            21.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            8.9,
+            0,
+            21.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            11.1,
+            0,
+            21.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            12.9,
+            0,
+            21.5
+          ],
+          "yaw": 3.141592653589793,
+          "footprint": [
+            0.4,
+            0.5,
+            0.55
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.4,
+                0.42,
+                0.55,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                0.42,
+                0.4,
+                0.15,
+                {
+                  "color": 15658734
+                }
+              ],
+              "position": [
+                0,
+                0.4,
+                0.22
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            13.6,
+            0,
+            13.4
+          ],
+          "yaw": 0,
+          "footprint": [
+            0.35,
+            1.5,
+            0.35
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                0.35,
+                1.1,
+                0.35,
+                {
+                  "color": 14540253
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "anonymous",
+          "args": [],
+          "position": [
+            20,
+            0,
+            4.4
+          ],
+          "yaw": 0,
+          "footprint": [
+            6,
+            0.8,
+            1.6
+          ],
+          "parts": [
+            {
+              "maker": "box",
+              "args": [
+                6,
+                0.06,
+                1.6,
+                {
+                  "material": "wood"
+                }
+              ],
+              "position": [
+                0,
+                0.72,
+                0
+              ]
+            },
+            {
+              "maker": "box",
+              "args": [
+                5.6,
+                0.7,
+                0.4,
+                {
+                  "material": "wood"
+                }
+              ],
+              "position": [
+                0,
+                0,
+                0
+              ]
+            }
+          ]
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            17.6,
+            0,
+            3.2
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            17.6,
+            0,
+            5.6
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            18.8,
+            0,
+            3.2
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            18.8,
+            0,
+            5.6
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            20,
+            0,
+            3.2
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            20,
+            0,
+            5.6
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            21.200000000000003,
+            0,
+            3.2
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            21.200000000000003,
+            0,
+            5.6
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            22.400000000000002,
+            0,
+            3.2
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            22.400000000000002,
+            0,
+            5.6
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkBilliard",
+          "args": [],
+          "position": [
+            20,
+            0,
+            16
+          ],
+          "yaw": 0,
+          "footprint": [
+            2.7,
+            0.9,
+            1.5
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkSofa",
+          "args": [
+            2.2,
+            {
+              "material": "sofa2"
+            }
+          ],
+          "position": [
+            15,
+            0,
+            19
+          ],
+          "yaw": 1.5707963267948966,
+          "footprint": [
+            2.2,
+            0.9,
+            0.85
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkPlant",
+          "args": [],
+          "position": [
+            25.3,
+            0,
+            21.3
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkCounterK",
+          "args": [
+            5
+          ],
+          "position": [
+            30,
+            0,
+            0.4
+          ],
+          "yaw": 0,
+          "footprint": [
+            5,
+            0.95,
+            0.66
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkStove",
+          "args": [],
+          "position": [
+            27.5,
+            0,
+            3.5
+          ],
+          "yaw": 1.5707963267948966,
+          "footprint": [
+            1.2,
+            0.95,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkFridge",
+          "args": [],
+          "position": [
+            33.5,
+            0,
+            5
+          ],
+          "yaw": -1.5707963267948966,
+          "footprint": [
+            0.8,
+            2,
+            0.7
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.8,
+            0.9,
+            {
+              "material": "woodlight"
+            }
+          ],
+          "position": [
+            28.5,
+            0,
+            11
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.8,
+            0.8,
+            0.9
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            28.1,
+            0,
+            10.2
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            28.9,
+            0,
+            11.8
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.8,
+            0.9,
+            {
+              "material": "woodlight"
+            }
+          ],
+          "position": [
+            31.5,
+            0,
+            11
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.8,
+            0.8,
+            0.9
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            31.1,
+            0,
+            10.2
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            31.9,
+            0,
+            11.8
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.8,
+            0.9,
+            {
+              "material": "woodlight"
+            }
+          ],
+          "position": [
+            28.5,
+            0,
+            15.5
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.8,
+            0.8,
+            0.9
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            28.1,
+            0,
+            14.7
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            28.9,
+            0,
+            16.3
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.8,
+            0.9,
+            {
+              "material": "woodlight"
+            }
+          ],
+          "position": [
+            31.5,
+            0,
+            15.5
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.8,
+            0.8,
+            0.9
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            31.1,
+            0,
+            14.7
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            31.9,
+            0,
+            16.3
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.8,
+            0.9,
+            {
+              "material": "woodlight"
+            }
+          ],
+          "position": [
+            28.5,
+            0,
+            19.5
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.8,
+            0.8,
+            0.9
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            28.1,
+            0,
+            18.7
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            28.9,
+            0,
+            20.3
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        },
+        {
+          "maker": "mkDesk",
+          "args": [
+            1.8,
+            0.9,
+            {
+              "material": "woodlight"
+            }
+          ],
+          "position": [
+            31.5,
+            0,
+            19.5
+          ],
+          "yaw": 0,
+          "footprint": [
+            1.8,
+            0.8,
+            0.9
+          ],
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            31.1,
+            0,
+            18.7
+          ],
+          "yaw": 0,
+          "parts": []
+        },
+        {
+          "maker": "mkChair",
+          "args": [],
+          "position": [
+            31.9,
+            0,
+            20.3
+          ],
+          "yaw": 3.141592653589793,
+          "parts": []
+        }
+      ]
+    }
+  ]
+}

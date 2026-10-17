@@ -1,0 +1,40 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "bank_ui_navigation",
+      "status": "pass",
+      "pause_freezes_world": true,
+      "no_click_through": true,
+      "native_buttons": true,
+      "keyboard": true,
+      "equipment": true
+    },
+    {
+      "name": "bank_ui_settings",
+      "status": "pass",
+      "volume_and_sensitivity": true,
+      "large_text": true,
+      "tests_do_not_write_preferences": true
+    },
+    {
+      "name": "bank_ui_gameplay_feedback",
+      "status": "pass",
+      "ammo": true,
+      "reload": true,
+      "door": true,
+      "grab": true,
+      "death_restart": true
+    },
+    {
+      "name": "bank_ui_layouts",
+      "status": "not_run",
+      "reason": "Rendered layouts require a rendered run."
+    }
+  ],
+  "captures": [],
+  "sequences": [],
+  "layouts": [],
+  "headless": true,
+  "scope": "All gameplay proof uses act/click through normal handlers. Reset only arranges existing fixtures."
+}

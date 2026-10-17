@@ -436,6 +436,24 @@
       ],
       "completion_scope": "Movement/connection framework only. 13 real-UDP checks, release Linux + Windows clients and clean checkout pass. Native and original body motion inspected. User art acceptance and actual VPS/WAN validation remain pending.",
       "depends_on": []
+    },
+    {
+      "id": "BANK-COOP-002",
+      "status": "done",
+      "title": "当前银行场景合作战斗与会话 UI",
+      "depends_on": [
+        "BANK-COOP-001"
+      ],
+      "acceptance": [
+        "BANK-COOP-COMBAT",
+        "BANK-COOP-COMBAT-ART"
+      ],
+      "definition_of_done": "真实银行 2–4 人会话、独立服务端、共享门/敌人/战斗、独立玩家状态、正常输入闭环和本地 Ubuntu 互通；公网与最终美术另验。",
+      "evidence": [
+        "project/evidence/bank-coop-combat-20261017/report.json",
+        "project/evidence/bank-coop-combat-20261017/gallery.html"
+      ],
+      "notes": "真实会话创建/加入、全队阵亡重开、空房间清理已验证；无扶起、任务通关、预测/延迟补偿和公网容量结论。"
     }
   ],
   "known_limits": [

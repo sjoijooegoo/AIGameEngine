@@ -1,0 +1,166 @@
+{
+  "g_iron": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_wc": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_inner": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_outer": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_comp": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_monitor": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "G_elev": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_mgr": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_fin": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_shutter": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_main": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_garage": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_secu": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "g_gate": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "F2_elev": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f2_back": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f2_storage": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f2_counter": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f2_mgr": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f2_toilet": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f2_front": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f2_pres": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "F3_elev": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f3_back": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f3_sup": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f3_dA": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f3_safe": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f3_dB": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f3_store": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f3_t1": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f3_t2": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f3_front": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "F4_elev": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f4_code": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f4_t1": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f4_t2": {
+    "hinge_swing": -1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f4_conf": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f4_kitchen": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f4_gate": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f4_front": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  },
+  "f4_lounge": {
+    "hinge_swing": 1,
+    "rationale": "Fixed hinge direction into its room, stair landing or outside the bank main entrance; opposite approach pulls the same leaf."
+  }
+}

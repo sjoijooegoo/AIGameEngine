@@ -1,0 +1,265 @@
+{
+  "version": 14,
+  "sources": [
+    "game\\source_assets\\audio\\free-firearm-library\\beb2f4041f3d\\source.json",
+    "game\\source_assets\\audio\\zer0-sol-shotgun\\source.json"
+  ],
+  "generator": "game/tools/prepare_weapon_audio.py",
+  "generator_sha256": "b6929734ab451b3f764942140227ae05f35f30182dfff8fb3b846772ffd3fd05",
+  "files": {
+    "pistol": [
+      {
+        "resource": "res://audio/firearms/v14/pistol_01.wav",
+        "sha256": "1a3b0fbf6259835447f257f05a501218704784e588d473383c978e71c5c6e6b2",
+        "seconds": 0.3995625,
+        "peak": 0.87,
+        "rms": 0.0701747225657713,
+        "dc": 0.00015403194610199208
+      },
+      {
+        "resource": "res://audio/firearms/v14/pistol_02.wav",
+        "sha256": "64829df96d768e733569f7f23fe515b3714731d7eff21bb1debf896a05f5e1e7",
+        "seconds": 0.39945833333333336,
+        "peak": 0.87,
+        "rms": 0.06679837911057841,
+        "dc": 0.00010275756078884079
+      }
+    ],
+    "pistol_room": [
+      {
+        "resource": "res://audio/firearms/v14/pistol_room_01.wav",
+        "sha256": "98997b86b675cca12a7128ca7da9d2fa4988d7698599ade03942d18e9f764b87",
+        "seconds": 0.68,
+        "peak": 0.75,
+        "rms": 0.05569557028986721,
+        "dc": -1.005230707816785e-05
+      },
+      {
+        "resource": "res://audio/firearms/v14/pistol_room_02.wav",
+        "sha256": "515363e04fe69c89a47090fb62ec759c3dccb5f052d36584d5acce6685e812ae",
+        "seconds": 0.68,
+        "peak": 0.75,
+        "rms": 0.05475958126099344,
+        "dc": -1.5836644433433573e-05
+      }
+    ],
+    "shotgun": [
+      {
+        "resource": "res://audio/firearms/v14/shotgun_01.wav",
+        "sha256": "961ec161a58b6cdfe13bdb6522bd60b9db8164c562ae09566a6123754523ef9c",
+        "seconds": 0.6000625,
+        "peak": 0.87,
+        "rms": 0.05756538484187346,
+        "dc": 7.527595808516066e-05
+      },
+      {
+        "resource": "res://audio/firearms/v14/shotgun_02.wav",
+        "sha256": "d87bfc27b95269de7d9ee6e611731c5d028f2d7fa8193218e81e3ed8782a6dba",
+        "seconds": 0.5957708333333334,
+        "peak": 0.87,
+        "rms": 0.055410354701666616,
+        "dc": 0.00010831924163154633
+      }
+    ],
+    "shotgun_room": [
+      {
+        "resource": "res://audio/firearms/v14/shotgun_room_01.wav",
+        "sha256": "9645be3c697d752364d64479bd299450cc3b79c252a7d4aa8fcb1b3b384379a4",
+        "seconds": 0.68,
+        "peak": 0.75,
+        "rms": 0.059039250722670945,
+        "dc": 0.0001274640180441247
+      },
+      {
+        "resource": "res://audio/firearms/v14/shotgun_room_02.wav",
+        "sha256": "f5ce08d2f72623b1f4349841084ff8f73335c6ff3dc2ce8174548ca1c2b17acc",
+        "seconds": 0.68,
+        "peak": 0.75,
+        "rms": 0.05341401184767385,
+        "dc": 0.0001329835302586067
+      }
+    ],
+    "slide": [
+      {
+        "resource": "res://audio/firearms/v14/slide_01.wav",
+        "sha256": "9a68adcaac7e3f9d935433a7fa8016c6b7923623f6e7d7f693bcf10086f804c4",
+        "seconds": 0.10675,
+        "peak": 0.72,
+        "rms": 0.03005563592968827,
+        "dc": 3.1601256709688475e-06
+      },
+      {
+        "resource": "res://audio/firearms/v14/slide_02.wav",
+        "sha256": "debbeb9f0472069916ebbdf94769760b337ae93282a38a961bdf7ed65aa53617",
+        "seconds": 0.10079166666666667,
+        "peak": 0.72,
+        "rms": 0.050615597114556446,
+        "dc": 5.587079259198034e-06
+      }
+    ],
+    "mag_in": [
+      {
+        "resource": "res://audio/firearms/v14/mag_in_01.wav",
+        "sha256": "55e07a6940eeeeafd562fabcf21b3c67fd1f83690ff99045e8861e69032a8045",
+        "seconds": 0.21902083333333333,
+        "peak": 0.72,
+        "rms": 0.03463261174513146,
+        "dc": -5.908440437684558e-06
+      },
+      {
+        "resource": "res://audio/firearms/v14/mag_in_02.wav",
+        "sha256": "63b821d340027c14a5c09689639d9f49b36749e5c61a1fcca76a8bfddac78a7a",
+        "seconds": 0.2118125,
+        "peak": 0.72,
+        "rms": 0.05200135333518364,
+        "dc": -2.552221620554909e-06
+      }
+    ],
+    "mag_out": [
+      {
+        "resource": "res://audio/firearms/v14/mag_out_01.wav",
+        "sha256": "70511443ccf5ae03cc9377612da7759deca8a06794d1992101283b00c5d29884",
+        "seconds": 0.21954166666666666,
+        "peak": 0.7200000000000001,
+        "rms": 0.03970958044740573,
+        "dc": -6.3633327580451555e-06
+      }
+    ],
+    "pump": [
+      {
+        "resource": "res://audio/firearms/v14/pump_01.wav",
+        "sha256": "6064e9a2f8308dc0dfee64efb9dd3fe7a6f25f658eb57a80cdf7aba4055d02f7",
+        "seconds": 0.42614583333333333,
+        "peak": 0.72,
+        "rms": 0.14571384927483538,
+        "dc": 1.923379185268564e-06
+      }
+    ],
+    "shell": [
+      {
+        "resource": "res://audio/firearms/v14/shell_01.wav",
+        "sha256": "7c31f3d812c85bd781324f7b619849d0d2f8b358fdabdf6c1e42c72e6c6bddf0",
+        "seconds": 0.2469375,
+        "peak": 0.72,
+        "rms": 0.08145231515516108,
+        "dc": 2.8321146971059276e-06
+      },
+      {
+        "resource": "res://audio/firearms/v14/shell_02.wav",
+        "sha256": "fdb24c9b39517e0fb098e146f993e2bb283557c292b1baf2ffae201e532a4649",
+        "seconds": 0.31779166666666664,
+        "peak": 0.72,
+        "rms": 0.08083316292881179,
+        "dc": -3.491554059594903e-06
+      },
+      {
+        "resource": "res://audio/firearms/v14/shell_03.wav",
+        "sha256": "89b596c49ec0e24d5a6d29a544280b2b155177f04256066235bc85e0517b3ffb",
+        "seconds": 0.31127083333333333,
+        "peak": 0.72,
+        "rms": 0.08099104795998054,
+        "dc": -3.5716849697478573e-06
+      }
+    ]
+  },
+  "edits": {
+    "pistol": {
+      "source": "game/source_assets/audio/free-firearm-library/beb2f4041f3d/Prepared SFX/1911/A_42P.wav",
+      "cuts_seconds": [
+        [
+          0.927,
+          1.34
+        ],
+        [
+          4.987,
+          5.4
+        ]
+      ],
+      "takes": "two separate recorded shots",
+      "processing": "onset trim; high-pass; high rolloff; gentle bass EQ; tanh transient compression; peak trim; 48k stereo PCM16",
+      "room": "quiet synthetic early reflections from recorded impulse; not original recorded room acoustics"
+    },
+    "shotgun": {
+      "source": "game/source_assets/audio/free-firearm-library/beb2f4041f3d/Prepared SFX/Nova/O_21P.wav",
+      "cuts_seconds": [
+        [
+          0.417,
+          1.03
+        ],
+        [
+          3.447,
+          4.06
+        ]
+      ],
+      "takes": "two separate recorded shots",
+      "processing": "onset trim; high-pass; high rolloff; gentle bass EQ; tanh transient compression; peak trim; 48k stereo PCM16",
+      "room": "quiet synthetic early reflections from recorded impulse; not original recorded room acoustics"
+    },
+    "slide": {
+      "source": "game/source_assets/audio/free-firearm-library/beb2f4041f3d/Master Tracks/1911/A_24.wav",
+      "cuts_seconds": [
+        [
+          0.183,
+          0.31
+        ],
+        [
+          0.413,
+          0.52
+        ]
+      ],
+      "processing": "onset trim, rumble removal, peak matching, short end fades"
+    },
+    "mag_in": {
+      "source": "game/source_assets/audio/free-firearm-library/beb2f4041f3d/Master Tracks/1911/A_2.wav",
+      "cuts_seconds": [
+        [
+          0.878,
+          1.1
+        ],
+        [
+          2.258,
+          2.47
+        ]
+      ],
+      "processing": "onset trim, rumble removal, peak matching, short end fades"
+    },
+    "mag_out": {
+      "source": "game/source_assets/audio/free-firearm-library/beb2f4041f3d/Master Tracks/1911/A_5.wav",
+      "cuts_seconds": [
+        [
+          0.17,
+          0.42
+        ]
+      ],
+      "processing": "onset trim, rumble removal, peak matching, short end fades"
+    },
+    "pump": {
+      "source": "game/source_assets/audio/zer0-sol-shotgun/Rack.mp3",
+      "cuts_seconds": [
+        [
+          0.6,
+          1.04
+        ]
+      ],
+      "processing": "onset trim, rumble removal, peak matching, short end fades"
+    },
+    "shell": {
+      "source": "game/source_assets/audio/zer0-sol-shotgun/4 Shell Reload.mp3",
+      "cuts_seconds": [
+        [
+          0.055,
+          0.32
+        ],
+        [
+          1.135,
+          1.47
+        ],
+        [
+          2.195,
+          2.52
+        ]
+      ],
+      "processing": "onset trim, rumble removal, peak matching, short end fades"
+    }
+  }
+}

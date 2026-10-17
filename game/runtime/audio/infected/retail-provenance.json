@@ -1,0 +1,1218 @@
+{
+  "origin": "Valve Left 4 Dead 2, user-provided local installation",
+  "usage": "local_reference_only_rights_unverified",
+  "processing": "mono PCM16 48kHz; DC removal, 5ms edge fades, peak <= .72; no pitch fabrication",
+  "generator_sha256": "d8903e16316d27962b1bf432ee38d874f81651852421354007196215267b8ae7",
+  "files": [
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\female\\been_shot_30.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\female\\been_shot_30.wav",
+      "source_sha256": "5b1e23f2ee228fc39881f02784a18c8cc1c70b5b4a0ee9a8fa0d05ad88a4640c",
+      "resource": "res://audio/infected/retail/5b1e23f2ee_been_shot_30.wav",
+      "sha256": "def61b7245da19bc6695c21507356a262a956a42e15630a4f4d054f02d85100c",
+      "seconds": 0.4787708333333333,
+      "peak": 0.72,
+      "rms": 0.22380760037625175
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\female\\been_shot_31.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\female\\been_shot_31.wav",
+      "source_sha256": "0d4622f2f67fd614bd1c4e3620d4efa3d5625c3b12565345c63118ae7b371be3",
+      "resource": "res://audio/infected/retail/0d4622f2f6_been_shot_31.wav",
+      "sha256": "f12f7158f1bca91e62bedbaada728dde2926a840b01e7c3085bcd5f3fc8bafd8",
+      "seconds": 1.0044375,
+      "peak": 0.72,
+      "rms": 0.16087632257530984
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\female\\been_shot_32.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\female\\been_shot_32.wav",
+      "source_sha256": "8d5bb0e12595d3ff47f033f87cb77b7145ae64e76a12b7c70fa730dafb85b3ef",
+      "resource": "res://audio/infected/retail/8d5bb0e125_been_shot_32.wav",
+      "sha256": "676c6831abe4647721c16c2a1f69dd77093391feb4b4f739f122ea522f48b57d",
+      "seconds": 2.3478541666666666,
+      "peak": 0.72,
+      "rms": 0.09254932677761304
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\female\\been_shot_33.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\female\\been_shot_33.wav",
+      "source_sha256": "54e525907cdecc92aec926a7ef1a843931155dc93821a7423a5fb3503ba550f6",
+      "resource": "res://audio/infected/retail/54e525907c_been_shot_33.wav",
+      "sha256": "2b47a3eec764e28a06c3c1eec000ac8dc6b2d0c2406e328217e52e9bf1a5a5df",
+      "seconds": 1.5260833333333332,
+      "peak": 0.72,
+      "rms": 0.10576073264224797
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\female\\been_shot_34.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\female\\been_shot_34.wav",
+      "source_sha256": "84d60b8c795dea2869ad043be68b994c280bc0895e8cc7a531f565808a73958e",
+      "resource": "res://audio/infected/retail/84d60b8c79_been_shot_34.wav",
+      "sha256": "6b0b5998fc9c9ce5b523cf0e21d6f0948b6472684c38a67deb2cc8be18ffdfbc",
+      "seconds": 1.5070833333333333,
+      "peak": 0.72,
+      "rms": 0.08803697176195582
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\female\\been_shot_35.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\female\\been_shot_35.wav",
+      "source_sha256": "e211255cb8a5f8f1e03861fb2c1dfa7967d10eadb2af96805ef2811d7181e125",
+      "resource": "res://audio/infected/retail/e211255cb8_been_shot_35.wav",
+      "sha256": "c9796cf58d1f6343340a80f68094a95ac003eb7159f1f4976cf6e4a5e4c71094",
+      "seconds": 0.403,
+      "peak": 0.72,
+      "rms": 0.12797295725465654
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\male\\been_shot_30.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\male\\been_shot_30.wav",
+      "source_sha256": "2af7c4ebf603c093acf3b85c4b676f113b3ced5bc1edaff7892aa834fdb16907",
+      "resource": "res://audio/infected/retail/2af7c4ebf6_been_shot_30.wav",
+      "sha256": "db7746a78b58f641b26a1e5ad0d8067b2261f172a9227c15a118f34624ea0ced",
+      "seconds": 1.3135833333333333,
+      "peak": 0.72,
+      "rms": 0.11438423309512995
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\male\\been_shot_31.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\male\\been_shot_31.wav",
+      "source_sha256": "0837459f7af9a90c825f3844a646cdb5f404f119b8a2edb116b727b07eb92a9a",
+      "resource": "res://audio/infected/retail/0837459f7a_been_shot_31.wav",
+      "sha256": "d49ec68323caee7267a35fc4806e6d13bd24867b2840fbfe031c45511062a22d",
+      "seconds": 0.34160416666666665,
+      "peak": 0.72,
+      "rms": 0.2570055436551534
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\male\\been_shot_32.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\male\\been_shot_32.wav",
+      "source_sha256": "e927e88ceeeb7ea34bf33b81130097acaa26d5b734456497b936444e08c64a1e",
+      "resource": "res://audio/infected/retail/e927e88cee_been_shot_32.wav",
+      "sha256": "a1af83347d115988c8ab1044ffb74c6953cbb010c48baaa64ad549a377a25eea",
+      "seconds": 0.24270833333333333,
+      "peak": 0.72,
+      "rms": 0.2605441812643432
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\male\\been_shot_33.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\male\\been_shot_33.wav",
+      "source_sha256": "f62ffcdca679370a483b228f296190f271252bbfcc5bc16301dee1f7d5d57b1c",
+      "resource": "res://audio/infected/retail/f62ffcdca6_been_shot_33.wav",
+      "sha256": "0dc38dc4ef42b982a5eda851ea304e1a1a5b7de97bc8ab27e85f4c9c717b239e",
+      "seconds": 0.35491666666666666,
+      "peak": 0.72,
+      "rms": 0.19291676253401846
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\male\\been_shot_34.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\male\\been_shot_34.wav",
+      "source_sha256": "ea13bffbc3ffdf21730fdf3b7fdb00bf6d037e6f88cbde0ee387150e4ba11181",
+      "resource": "res://audio/infected/retail/ea13bffbc3_been_shot_34.wav",
+      "sha256": "0ff02ee259d719af90bcba3d0b69418a785838b722643bdc72971d178ac058fa",
+      "seconds": 0.23520833333333332,
+      "peak": 0.72,
+      "rms": 0.26783355164980766
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\been_shot\\male\\been_shot_35.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\been_shot\\male\\been_shot_35.wav",
+      "source_sha256": "2916f6680b2f9ed4a0d865692cbfc54d97a76c6262b0100dedfa6d217762c005",
+      "resource": "res://audio/infected/retail/2916f6680b_been_shot_35.wav",
+      "sha256": "c296fee5117beb33b93b80c61fd7f58e89a42bb6b9581df4bf091055cdcc8bd2",
+      "seconds": 0.2514375,
+      "peak": 0.72,
+      "rms": 0.26913075659016306
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\die\\female\\death_40.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\die\\female\\death_40.wav",
+      "source_sha256": "f93edb98d86e4248049e5297aa9def47a1fb886a453c81decf77526ba550924e",
+      "resource": "res://audio/infected/retail/f93edb98d8_death_40.wav",
+      "sha256": "f02314de62cd46706c41ec6eb52ba3a5cf3640810a1cda90cb3c5aef598e8fa2",
+      "seconds": 0.7544166666666666,
+      "peak": 0.72,
+      "rms": 0.17679769347218724
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\die\\female\\death_41.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\die\\female\\death_41.wav",
+      "source_sha256": "5e5ce8769eb2c84c669e2f539c1c6a26890a2dff49bc7b79849ad6c756f36b6f",
+      "resource": "res://audio/infected/retail/5e5ce8769e_death_41.wav",
+      "sha256": "0e029eec468f2593c94f953f78d4925aeb9fa45d5fd5514ef421a3341981f306",
+      "seconds": 1.7855833333333333,
+      "peak": 0.72,
+      "rms": 0.22120239228036825
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\die\\female\\death_42.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\die\\female\\death_42.wav",
+      "source_sha256": "e26822a9cfe2cbd978d759368cf513daa5ef546ec735cd0c98fcf70258d1df46",
+      "resource": "res://audio/infected/retail/e26822a9cf_death_42.wav",
+      "sha256": "d120d4d8de6d649f5a8fe3d33a57ca9519f87d5972a2c18490dc6c78aa32e784",
+      "seconds": 2.8499375,
+      "peak": 0.72,
+      "rms": 0.13341337051825794
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\die\\female\\death_43.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\die\\female\\death_43.wav",
+      "source_sha256": "41a3c722bcb70c5da3136379d2cd7f6998fa301d313a37e2d6525c3b3443459b",
+      "resource": "res://audio/infected/retail/41a3c722bc_death_43.wav",
+      "sha256": "6e42df5777d9e04443a2951ab5627abf475160eada49019c115d187c807a2c7d",
+      "seconds": 1.5427291666666667,
+      "peak": 0.72,
+      "rms": 0.1399897717114757
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\die\\female\\death_44.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\die\\female\\death_44.wav",
+      "source_sha256": "0ffcedc65cde9e05aec7d05adbcca5ed5a4696192a94caceb329bbbdba0362d1",
+      "resource": "res://audio/infected/retail/0ffcedc65c_death_44.wav",
+      "sha256": "62751dcad2151581113a5ceabafb75a07fa4a5d9cc5a4359b86692f7e9054495",
+      "seconds": 2.3164166666666666,
+      "peak": 0.72,
+      "rms": 0.08938193045778295
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\die\\male\\death_40.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\die\\male\\death_40.wav",
+      "source_sha256": "16531746863b896acf4d3a38c76962043957f69865aae2ce7f67875f376ff8c1",
+      "resource": "res://audio/infected/retail/1653174686_death_40.wav",
+      "sha256": "9af88b93fdd4ea9db55466ccce9fc9327a5985e8e9c594755e5189b04eb8536d",
+      "seconds": 2.411208333333333,
+      "peak": 0.72,
+      "rms": 0.20216158231777398
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\die\\male\\death_41.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\die\\male\\death_41.wav",
+      "source_sha256": "33ce7a39961c04a98f54f5f3c1c778be044d07d27861507054e5184516536f6c",
+      "resource": "res://audio/infected/retail/33ce7a3996_death_41.wav",
+      "sha256": "7f8edcd252c53756e7596373a09a4ce6ecd27c63d77354a788803eafd62140f5",
+      "seconds": 1.305125,
+      "peak": 0.72,
+      "rms": 0.13600191510850143
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\die\\male\\death_42.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\die\\male\\death_42.wav",
+      "source_sha256": "c7da7ed2dc036a585f32fccade75bc79d5a9eacf9502b6b31a4e2d0bdba4af2b",
+      "resource": "res://audio/infected/retail/c7da7ed2dc_death_42.wav",
+      "sha256": "953924af0cc50dbb722e680c7632edbdf81440452e58b2b0923003e1fa136ca3",
+      "seconds": 0.9912291666666667,
+      "peak": 0.72,
+      "rms": 0.27371007732857405
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\die\\male\\death_43.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\die\\male\\death_43.wav",
+      "source_sha256": "bdc27af2e3649c6431772d61522a5da165a507253fbb14073fe6d53c034217a2",
+      "resource": "res://audio/infected/retail/bdc27af2e3_death_43.wav",
+      "sha256": "6ab0ebc635b4527f481b89b288d0e321dbbcbc1a8a5dfd9b02149be62570b821",
+      "seconds": 1.6878958333333334,
+      "peak": 0.72,
+      "rms": 0.11992652182622773
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\die\\male\\death_44.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\die\\male\\death_44.wav",
+      "source_sha256": "0973cc2417739ef3adc9d8fd2e76aee0d970da54f230b2471c2594ae0bcdadb3",
+      "resource": "res://audio/infected/retail/0973cc2417_death_44.wav",
+      "sha256": "7d12d535ee40eb8d470b507c4fc855b005f518c40decc58f70d4bd6771f60ef4",
+      "seconds": 2.2638125,
+      "peak": 0.72,
+      "rms": 0.13592722063820867
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rage\\female\\rage_50.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rage\\female\\rage_50.wav",
+      "source_sha256": "a656211879152a51bd7f726cdd6c1d91ad01ba5e830525df1188a4f9b35ea55f",
+      "resource": "res://audio/infected/retail/a656211879_rage_50.wav",
+      "sha256": "3e62c14c73cd16a5cc4f66916b3608285aa3ae718a0209eed65029850520038a",
+      "seconds": 1.4294375,
+      "peak": 0.72,
+      "rms": 0.21611163457593174
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rage\\female\\rage_51.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rage\\female\\rage_51.wav",
+      "source_sha256": "e78baf521a4c71fc18c0b110ee4ae1bd7a0832a42d8f1a1ee74bbaa580985cdc",
+      "resource": "res://audio/infected/retail/e78baf521a_rage_51.wav",
+      "sha256": "a1bea36e1783eaca15d16686859c0f2e637004fc6a41ad7352aae6724001f264",
+      "seconds": 1.7591875,
+      "peak": 0.72,
+      "rms": 0.15282388080425727
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rage\\female\\rage_52.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rage\\female\\rage_52.wav",
+      "source_sha256": "e49c8b2842eebf7544edecd901944b2f3b33dd70a6f3f827f44b42a4717704fa",
+      "resource": "res://audio/infected/retail/e49c8b2842_rage_52.wav",
+      "sha256": "e948fbba1aaa7af3f778d950169416615196920fe92686eb404218bd57e9d3c4",
+      "seconds": 1.8552916666666666,
+      "peak": 0.72,
+      "rms": 0.10541992839309511
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rage\\female\\rage_53.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rage\\female\\rage_53.wav",
+      "source_sha256": "5e3d88fec2afeb6f7c94616d22167968993884956b88baf7a63ee88ff0e1d001",
+      "resource": "res://audio/infected/retail/5e3d88fec2_rage_53.wav",
+      "sha256": "89c46590e5dde7289f330a8fc5a04abad3199323b020d93519b51f3e397b2b0f",
+      "seconds": 1.0187291666666667,
+      "peak": 0.72,
+      "rms": 0.21435889021745466
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rage\\female\\rage_54.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rage\\female\\rage_54.wav",
+      "source_sha256": "60b4b419e7cbfa1dca7335a4d5e990b6407fc49dbd257859c1127696cd857d8a",
+      "resource": "res://audio/infected/retail/60b4b419e7_rage_54.wav",
+      "sha256": "ef48175cdb5b4e8c5cd5e2edcfffeb469b48649c7150c08c99f35d3362350b83",
+      "seconds": 1.1250416666666667,
+      "peak": 0.72,
+      "rms": 0.20563098419850462
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rage\\male\\rage_50.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rage\\male\\rage_50.wav",
+      "source_sha256": "696d0526a380923e94e5333b5e05c71c4cef12b0701ff3047d2fd1f5e2ae96bd",
+      "resource": "res://audio/infected/retail/696d0526a3_rage_50.wav",
+      "sha256": "eb1cf4773c2de75bdf54306cbb76677358f98d4557ecdd1d6b1c763e111be35d",
+      "seconds": 2.38675,
+      "peak": 0.72,
+      "rms": 0.1739337271520975
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rage\\male\\rage_51.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rage\\male\\rage_51.wav",
+      "source_sha256": "5af472151d4220c1c4a9c7bd0941d7dfc694c69f745079af0c5c90ef08bb32ff",
+      "resource": "res://audio/infected/retail/5af472151d_rage_51.wav",
+      "sha256": "f344c88fc89d4e97b012159225f2b6795085b00d41cfebd8f486d4c3c88d81de",
+      "seconds": 1.3328541666666667,
+      "peak": 0.72,
+      "rms": 0.2741795997463542
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rage\\male\\rage_52.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rage\\male\\rage_52.wav",
+      "source_sha256": "52c8248805e2a82fd07bb87a343bb70710a1db9ce4dbd90ac3ff0f22a0c95f45",
+      "resource": "res://audio/infected/retail/52c8248805_rage_52.wav",
+      "sha256": "fa08b13ab7f749a992a2d0a2ab50e63cc4472b6bbb977d7d9a456956b5907684",
+      "seconds": 0.521125,
+      "peak": 0.72,
+      "rms": 0.18089799798247017
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rage\\male\\rage_53.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rage\\male\\rage_53.wav",
+      "source_sha256": "626c2e6b2ec8d6cff83197b7c674138e781428f2a3873bbad85290f9422224a1",
+      "resource": "res://audio/infected/retail/626c2e6b2e_rage_53.wav",
+      "sha256": "80295f006111ef29c711b5581c814f1cda2042088da22a07c18b81ea9523f527",
+      "seconds": 0.8542916666666667,
+      "peak": 0.72,
+      "rms": 0.19151584597881513
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rage\\male\\rage_54.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rage\\male\\rage_54.wav",
+      "source_sha256": "ea0ef7e4dadb98313467c423a8a70d8ab020478e9c61aa5b972b2915ab71610a",
+      "resource": "res://audio/infected/retail/ea0ef7e4da_rage_54.wav",
+      "sha256": "b9200f4d53d4095c3244c90c4315510305dbb7970659170eb7b02ee5c1910e90",
+      "seconds": 0.42766666666666664,
+      "peak": 0.72,
+      "rms": 0.27393105678328195
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rageat\\female\\rage_at_victim20.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rageat\\female\\rage_at_victim20.wav",
+      "source_sha256": "91748d15d4ab0291220243f381fd814dcfa5d84437c619346b3106747776c95d",
+      "resource": "res://audio/infected/retail/91748d15d4_rage_at_victim20.wav",
+      "sha256": "b80df90e1f6551aebe32244d9b0b2c733ed146a4984fad264b71d3bcfc78f508",
+      "seconds": 0.5935208333333334,
+      "peak": 0.72,
+      "rms": 0.0773378861601104
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rageat\\female\\rage_at_victim21.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rageat\\female\\rage_at_victim21.wav",
+      "source_sha256": "9855dd1d22ba1935b7e8a2804a72188cb94dfd219f66d49de1f5d5790e90d53e",
+      "resource": "res://audio/infected/retail/9855dd1d22_rage_at_victim21.wav",
+      "sha256": "32ba669c3037269ce8ae28164394c0af970b00c44d718acbed9296a7678aa4ca",
+      "seconds": 0.8808541666666667,
+      "peak": 0.72,
+      "rms": 0.11671878358129877
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rageat\\female\\rage_at_victim22.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rageat\\female\\rage_at_victim22.wav",
+      "source_sha256": "e614768d4e2275e512c1e6ba1e132eb22016324e77c89d2e618cc87f803654c6",
+      "resource": "res://audio/infected/retail/e614768d4e_rage_at_victim22.wav",
+      "sha256": "dc15241c103d6d57e8ff0b2bd0ac016748a815cb4f3dca1334d5a6561fa0e767",
+      "seconds": 0.8450833333333333,
+      "peak": 0.72,
+      "rms": 0.1653222607814662
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rageat\\female\\rage_at_victim23.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rageat\\female\\rage_at_victim23.wav",
+      "source_sha256": "ba35a438e880481495e31b519f165f74a113e2abf35b0faed4d428f0b8598102",
+      "resource": "res://audio/infected/retail/ba35a438e8_rage_at_victim23.wav",
+      "sha256": "82fd78245b3fff7a57bc5edd8c2bb7cb3134ec748b6e738c03b3286dcdbd3f2b",
+      "seconds": 1.5987708333333333,
+      "peak": 0.72,
+      "rms": 0.15144287286658692
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rageat\\female\\rage_at_victim24.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rageat\\female\\rage_at_victim24.wav",
+      "source_sha256": "07e4454a26f2a2dad70dd6a9db6b5ec8c02e5c896613e65361594b6ab952a6c5",
+      "resource": "res://audio/infected/retail/07e4454a26_rage_at_victim24.wav",
+      "sha256": "b016a1ece7e8f37fcc564f23393e9274083517d757a6ae483ad5e68f0d477954",
+      "seconds": 1.0348333333333333,
+      "peak": 0.72,
+      "rms": 0.22746367683525195
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rageat\\male\\rage_at_victim20.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rageat\\male\\rage_at_victim20.wav",
+      "source_sha256": "3d8df4a13f381a668c645f4050356f9686e026011ad6c26569ecbc75650f6b55",
+      "resource": "res://audio/infected/retail/3d8df4a13f_rage_at_victim20.wav",
+      "sha256": "b3d26cd2c6e544635591c520d407dbbc938e13a4f5f8ff1388baf0de5cbe8a54",
+      "seconds": 1.3392916666666668,
+      "peak": 0.72,
+      "rms": 0.17526336248617566
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rageat\\male\\rage_at_victim21.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rageat\\male\\rage_at_victim21.wav",
+      "source_sha256": "056b08ded5d65d68e27722447a1c69ed63369f7ac080dbc1087f1b0b05360bd3",
+      "resource": "res://audio/infected/retail/056b08ded5_rage_at_victim21.wav",
+      "sha256": "7db12305aa5c7b3b3fd4b0d1008575529c77b74c9411560faa0e9c24decf34a4",
+      "seconds": 1.22225,
+      "peak": 0.72,
+      "rms": 0.17762902654137083
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rageat\\male\\rage_at_victim22.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rageat\\male\\rage_at_victim22.wav",
+      "source_sha256": "47bffb4c7a3d6518cb0e5114d74559c2be27670a4051607b44a59d8c9634911d",
+      "resource": "res://audio/infected/retail/47bffb4c7a_rage_at_victim22.wav",
+      "sha256": "abd62f36640ac28faef3ac493caf6ef71e0a94f186e72580dbf22cfcf1fe51e5",
+      "seconds": 0.7979583333333333,
+      "peak": 0.72,
+      "rms": 0.2548789247420508
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rageat\\male\\rage_at_victim23.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rageat\\male\\rage_at_victim23.wav",
+      "source_sha256": "0fed81b546458b1576fcc53f974b29cc5b05106aaf243ecdee773c33445e393d",
+      "resource": "res://audio/infected/retail/0fed81b546_rage_at_victim23.wav",
+      "sha256": "f1d0dfbbffb538ecaa8abd3366d9192a1a80031709a128d19e18bd4c6e328050",
+      "seconds": 1.2419583333333333,
+      "peak": 0.72,
+      "rms": 0.23240911793179125
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\action\\rageat\\male\\rage_at_victim24.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\action\\rageat\\male\\rage_at_victim24.wav",
+      "source_sha256": "c5b6fd298486953d8121fb511b88535c2832e3db80b29e53baacdb6eadf664a4",
+      "resource": "res://audio/infected/retail/c5b6fd2984_rage_at_victim24.wav",
+      "sha256": "d0b3d8a9ebba5379ad385eb96547002834a88c8c4c15028108f67c25ea9dc59f",
+      "seconds": 0.8615833333333334,
+      "peak": 0.72,
+      "rms": 0.2612740336609772
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\alert\\becomealert\\female\\become_alert60.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\alert\\becomealert\\female\\become_alert60.wav",
+      "source_sha256": "2d7137b37b6ba18ffd0cbc1c6b4cf33045108e1db1f7d15723b7b00baed2a6e3",
+      "resource": "res://audio/infected/retail/2d7137b37b_become_alert60.wav",
+      "sha256": "84c46b0b65bddb4f5761a2f09812d3fbe58ce56614ed3b883949a0976fad4727",
+      "seconds": 0.755375,
+      "peak": 0.72,
+      "rms": 0.128420603487044
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\alert\\becomealert\\female\\become_alert61.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\alert\\becomealert\\female\\become_alert61.wav",
+      "source_sha256": "b81b368997c6ff59b808931292b68a15e7c3e2aab9c3a31c82a33438b49c642a",
+      "resource": "res://audio/infected/retail/b81b368997_become_alert61.wav",
+      "sha256": "8f8ef1968dae58a9efcb63360ae0c3ce4dd37ab1e98634a14ec267a845a75ad0",
+      "seconds": 1.107625,
+      "peak": 0.72,
+      "rms": 0.09203487260932706
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\alert\\becomealert\\female\\become_alert62.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\alert\\becomealert\\female\\become_alert62.wav",
+      "source_sha256": "090c465d607e89796a41e8df99c77b5bc8e137f76221b22cb23917ff42cdea15",
+      "resource": "res://audio/infected/retail/090c465d60_become_alert62.wav",
+      "sha256": "25664b46978a18a09e711745915b23129938d4b186bd7724c0d2298025b349b4",
+      "seconds": 0.5243958333333333,
+      "peak": 0.72,
+      "rms": 0.23921681817694834
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\alert\\becomealert\\female\\become_alert63.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\alert\\becomealert\\female\\become_alert63.wav",
+      "source_sha256": "744b5420dac25c338311cf6aadbc30efa31db119f58a33faadd7315cbd29d50a",
+      "resource": "res://audio/infected/retail/744b5420da_become_alert63.wav",
+      "sha256": "b08b976dccfc607bfeb4b5aa29314927d908762b411f23095bb7d8c8efb1d049",
+      "seconds": 0.41460416666666666,
+      "peak": 0.72,
+      "rms": 0.1309462137967404
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\alert\\becomealert\\male\\become_alert60.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\alert\\becomealert\\male\\become_alert60.wav",
+      "source_sha256": "0047869fcfee13c70ea7170531f2a482d0008636bf1d1d579beb13688520af48",
+      "resource": "res://audio/infected/retail/0047869fcf_become_alert60.wav",
+      "sha256": "f51fe18f28a090fe44ba06133c059d22763f87348dace65b7e05f1bfaff9d8f2",
+      "seconds": 0.8019375,
+      "peak": 0.72,
+      "rms": 0.12800835535303443
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\alert\\becomealert\\male\\become_alert61.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\alert\\becomealert\\male\\become_alert61.wav",
+      "source_sha256": "9dc9b93055d71c70981796be667803a646469421c00725cf468cfda6213e620c",
+      "resource": "res://audio/infected/retail/9dc9b93055_become_alert61.wav",
+      "sha256": "ff0204db21bed15729ed5f29f49f02a45b0fbf6efdd49a30721836dc6ba14add",
+      "seconds": 0.6600833333333334,
+      "peak": 0.72,
+      "rms": 0.1464957851973711
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\alert\\becomealert\\male\\become_alert62.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\alert\\becomealert\\male\\become_alert62.wav",
+      "source_sha256": "0be06552aa0d6a851d6ca2854be3e6edc3e96550b14e37dea62bcfe693d88cd9",
+      "resource": "res://audio/infected/retail/0be06552aa_become_alert62.wav",
+      "sha256": "a1cf6286b4d6cf483df2904a372447b631e67946893df96526c022da83cb9bfd",
+      "seconds": 0.4354375,
+      "peak": 0.72,
+      "rms": 0.17585883422337623
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\alert\\becomealert\\male\\become_alert63.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\alert\\becomealert\\male\\become_alert63.wav",
+      "source_sha256": "df8d33f66feb53d17f36d715c650fd2f762593e37d4546a9da1321d5c7152961",
+      "resource": "res://audio/infected/retail/df8d33f66f_become_alert63.wav",
+      "sha256": "b6a133a30a3941ab6ffb66388ffda3cf4c7823034a77a395bd80549c476a7e05",
+      "seconds": 1.0071666666666668,
+      "peak": 0.72,
+      "rms": 0.1604676436496639
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\hit\\claw_scrape_1.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\hit\\claw_scrape_1.wav",
+      "source_sha256": "bee9f506d1eb59c30aad5febc57f0e4a97f8101ce528d83c539ce634da17adce",
+      "resource": "res://audio/infected/retail/bee9f506d1_claw_scrape_1.wav",
+      "sha256": "ddcdb1dbe8e92c4c0fb79cd19fa6bab4a0f9cb5834c3d5bb761b79fdd9c8ee8e",
+      "seconds": 0.3867291666666667,
+      "peak": 0.72,
+      "rms": 0.23628236490500545
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\hit\\claw_scrape_2.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\hit\\claw_scrape_2.wav",
+      "source_sha256": "d6972994a2e4b6db3640e6b78ac2e7e565bea6b4e680afeec0da7d7a4f48141c",
+      "resource": "res://audio/infected/retail/d6972994a2_claw_scrape_2.wav",
+      "sha256": "98a94757009ebc22961c33e9dc9e40477404452f25307e714d7259e151229472",
+      "seconds": 0.3277291666666667,
+      "peak": 0.72,
+      "rms": 0.23934828000809913
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\hit\\claw_scrape_3.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\hit\\claw_scrape_3.wav",
+      "source_sha256": "acf0fb34fe6ab9a9a61b0497514ba48d4672b0efb99ac8ac94f4eeee85133ade",
+      "resource": "res://audio/infected/retail/acf0fb34fe_claw_scrape_3.wav",
+      "sha256": "0138d7981c821c95b8dd78c8ed014630a19dba62710cb62a40cbdfa7f7e8bf39",
+      "seconds": 0.38666666666666666,
+      "peak": 0.72,
+      "rms": 0.23466115077226868
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\hit\\hit_punch_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\hit\\hit_punch_01.wav",
+      "source_sha256": "2de46ad9a9555887f3eb61187a58eb3f53cd78b9fd00713b2bc8bc3fa79760df",
+      "resource": "res://audio/infected/retail/2de46ad9a9_hit_punch_01.wav",
+      "sha256": "95a9898b9e26c1be8b298f0ac492c4b0467836dc656f84b2a80a6bb9b6818223",
+      "seconds": 0.40847916666666667,
+      "peak": 0.72,
+      "rms": 0.14721983624668739
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\hit\\hit_punch_02.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\hit\\hit_punch_02.wav",
+      "source_sha256": "479032d65ed24bfd440b403f2103e41a7dcc669b92fc5ce6b294c2b7b4856169",
+      "resource": "res://audio/infected/retail/479032d65e_hit_punch_02.wav",
+      "sha256": "83c24908f77927a4ef66dc7d659a089d7ae865030ef0021dd8cd459d2cfd9bb5",
+      "seconds": 0.3652708333333333,
+      "peak": 0.72,
+      "rms": 0.17839042576466693
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\hit\\hit_punch_03.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\hit\\hit_punch_03.wav",
+      "source_sha256": "7bcfdee528969817f89124e6ae51d6253e9a6806a685a5993156379c15bd9eb8",
+      "resource": "res://audio/infected/retail/7bcfdee528_hit_punch_03.wav",
+      "sha256": "3fa679ab2b53254d4679fa382aaf0417e6daaaeb9d552c98dac36848fa699ae7",
+      "seconds": 0.3628125,
+      "peak": 0.72,
+      "rms": 0.22231838288361183
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\hit\\hit_punch_04.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\hit\\hit_punch_04.wav",
+      "source_sha256": "3ad743d6e3fe01ba862751ac9293522f0c9b8ae7e2ba594fc7d6ad3725491ee3",
+      "resource": "res://audio/infected/retail/3ad743d6e3_hit_punch_04.wav",
+      "sha256": "2fa46a53a32f75b0fa918fcf1e71966837600a0bbd25ff0b72460b92f95d1d9e",
+      "seconds": 0.4044375,
+      "peak": 0.72,
+      "rms": 0.2223984131538281
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\hit\\hit_punch_05.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\hit\\hit_punch_05.wav",
+      "source_sha256": "b553947859d3492db81ad8ede3b18d353be07f0ea183a93a6e49f8730664bb90",
+      "resource": "res://audio/infected/retail/b553947859_hit_punch_05.wav",
+      "sha256": "3b929785b395f26584b7fdcf707485f93c76c34bb2f5c069bb7c8030c81cdd1b",
+      "seconds": 0.40239583333333334,
+      "peak": 0.72,
+      "rms": 0.20270235735863434
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\idle\\breathing\\breathing01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\idle\\breathing\\breathing01.wav",
+      "source_sha256": "abb1214be6a6bc3413cf709dded55ad88d8fc7b6c70b6188fa511ce14a93e583",
+      "resource": "res://audio/infected/retail/abb1214be6_breathing01.wav",
+      "sha256": "fa7614e5d5e94f7a8db535107b9a057671410245fe13c77a5e9346e96b21110f",
+      "seconds": 1.8376041666666667,
+      "peak": 0.72,
+      "rms": 0.09519197374186086
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\idle\\breathing\\breathing08.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\idle\\breathing\\breathing08.wav",
+      "source_sha256": "2dbbd3d02e598a5e9e5dcd33881c9bfe5af25f9d5ec4cde41fe6f639a563d028",
+      "resource": "res://audio/infected/retail/2dbbd3d02e_breathing08.wav",
+      "sha256": "12ea7947174c558446e1770075d8b48a3e408e50049d1122c9d940fd9457c69a",
+      "seconds": 5.766041666666666,
+      "peak": 0.72,
+      "rms": 0.07222430681197585
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\idle\\breathing\\breathing09.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\idle\\breathing\\breathing09.wav",
+      "source_sha256": "7569a27b9055c1b21c2e8fd1601c7b44f8cabb3cc25479dac18e572389f86aab",
+      "resource": "res://audio/infected/retail/7569a27b90_breathing09.wav",
+      "sha256": "3cd5e66ec80a9a2b55abe3ae4171155b7aa24773a7c62c8266d754370f26d9da",
+      "seconds": 2.823916666666667,
+      "peak": 0.72,
+      "rms": 0.07516667421436564
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\idle\\breathing\\breathing10.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\idle\\breathing\\breathing10.wav",
+      "source_sha256": "47b8aa9dd438687222a9368c7cdaa39350ccbe35135d1517a61ebad1c9c4e345",
+      "resource": "res://audio/infected/retail/47b8aa9dd4_breathing10.wav",
+      "sha256": "a564acdcdfb89e2526874a1b1b8dba8a93123f47516c6e0011f91f5ff80f7ebe",
+      "seconds": 3.2,
+      "peak": 0.72,
+      "rms": 0.05982745704471942
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\miss\\claw_miss_1.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\miss\\claw_miss_1.wav",
+      "source_sha256": "1c56f3b82726d29e44e67e7982d308d3ec3d8144fe7a9770c783947531d92df5",
+      "resource": "res://audio/infected/retail/1c56f3b827_claw_miss_1.wav",
+      "sha256": "6fc0328b155fd37df6107b31f10a5a369f439f4ab3eb18d2844a776caf0506ba",
+      "seconds": 0.4765625,
+      "peak": 0.72,
+      "rms": 0.08060828233255703
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\npc\\infected\\miss\\claw_miss_2.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\npc\\infected\\miss\\claw_miss_2.wav",
+      "source_sha256": "882f7e6bd997d6cb5a69229d9b3c695fd071a584d763273dc268cfd6c6841343",
+      "resource": "res://audio/infected/retail/882f7e6bd9_claw_miss_2.wav",
+      "sha256": "59c31dc78f8ae1427264b3bcbf856e82764826850a4b4f601a67c5d3a5c853e8",
+      "seconds": 0.5430416666666666,
+      "peak": 0.72,
+      "rms": 0.08190770166263851
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\footsteps\\infected\\walk\\cardboard1.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\footsteps\\infected\\walk\\cardboard1.wav",
+      "source_sha256": "41b5fd621b2f57334ff5aa4a6996a9cc21e1d49db8d3b4f5a100749dedee866c",
+      "resource": "res://audio/infected/retail/41b5fd621b_cardboard1.wav",
+      "sha256": "c794cd1d5f996056b429c9a9862ca7f646d1f53ad8e3b200f062cf58a6894d5c",
+      "seconds": 0.45495833333333335,
+      "peak": 0.72,
+      "rms": 0.1533837401820024
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\footsteps\\infected\\walk\\cardboard2.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\footsteps\\infected\\walk\\cardboard2.wav",
+      "source_sha256": "013768e3270064cbc6896c0eda1b5ee9babdbbe1a0890eb301a5c2be47f83ad2",
+      "resource": "res://audio/infected/retail/013768e327_cardboard2.wav",
+      "sha256": "b54c23f8dbaf2809abb7713b79b3bc967b400d52bcb14944262c0f9a0fbff6c0",
+      "seconds": 0.27179166666666665,
+      "peak": 0.72,
+      "rms": 0.1319762763322964
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\footsteps\\infected\\walk\\cardboard3.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\footsteps\\infected\\walk\\cardboard3.wav",
+      "source_sha256": "cb740d73b6b14b5f83b7a39a30a18627f1a7ba8fab5818d2af8d730012ada4f1",
+      "resource": "res://audio/infected/retail/cb740d73b6_cardboard3.wav",
+      "sha256": "852f724765ee5f58d318932bd77999cac961037667c985147288071e18b7c057",
+      "seconds": 0.2655625,
+      "peak": 0.7200000000000001,
+      "rms": 0.14874286988250865
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\footsteps\\infected\\walk\\cardboard4.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\footsteps\\infected\\walk\\cardboard4.wav",
+      "source_sha256": "9536767325792017f85d46c088d9cd3e6ea29f3174cb8830b68dc3cd2ac101d0",
+      "resource": "res://audio/infected/retail/9536767325_cardboard4.wav",
+      "sha256": "9bea5c20e1d1f311884a1b99681d9d3a7612e78cc6ef4f3f395caf665cc400cd",
+      "seconds": 0.26466666666666666,
+      "peak": 0.72,
+      "rms": 0.12642580833957343
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\alert\\hunter_alert_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\alert\\hunter_alert_01.wav",
+      "source_sha256": "011f1ddde1fb50f815feefe0ac7b9c5489fb3604d5a79d0f2c5bc18f3f2fcb5b",
+      "resource": "res://audio/infected/retail/011f1ddde1_hunter_alert_01.wav",
+      "sha256": "0677bfe10fcbe874e56f5cce81d015e336b049f056dfdf47a5d4aa3d392352f5",
+      "seconds": 1.0489583333333334,
+      "peak": 0.72,
+      "rms": 0.17465278405733367
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\alert\\hunter_alert_02.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\alert\\hunter_alert_02.wav",
+      "source_sha256": "36c561acbf4657d3eb48e69993bd695c9309aae0eccd858248ba60ae1668c8a9",
+      "resource": "res://audio/infected/retail/36c561acbf_hunter_alert_02.wav",
+      "sha256": "fe35926ff3bd6c6b3862a17d58daa6e7d9ef31c98d65f8381a8da795c426b65e",
+      "seconds": 1.6134375,
+      "peak": 0.72,
+      "rms": 0.1362887180807996
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\alert\\hunter_alert_03.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\alert\\hunter_alert_03.wav",
+      "source_sha256": "f1801c55793fffc3d374a882d6178674e811d5a5824f7aa5c5fb6b2012680670",
+      "resource": "res://audio/infected/retail/f1801c5579_hunter_alert_03.wav",
+      "sha256": "5e4ad9f860d0a121a2976382d8aa4761d458070f219dc223f42a2ea2c898d502",
+      "seconds": 2.230625,
+      "peak": 0.72,
+      "rms": 0.11324142549667937
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\alert\\hunter_alert_04.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\alert\\hunter_alert_04.wav",
+      "source_sha256": "62ac25190c4ff82c93a237df78cae79b67d68de4b0c53d170b6aa4b597171c99",
+      "resource": "res://audio/infected/retail/62ac25190c_hunter_alert_04.wav",
+      "sha256": "94e020c3e5f9647a7c98fa12fd98369accb9477a8669c29296db1a9dc3cf8ebc",
+      "seconds": 1.7041875,
+      "peak": 0.72,
+      "rms": 0.13789563386174572
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\update\\sound\\player\\hunter\\voice\\attack\\hunter_attackmix_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\attack\\hunter_attackmix_01.wav",
+      "source_sha256": "d55e3b7924ddd4f2951037ab5e9892117cbd058399362e936b9bb413bd6bb563",
+      "resource": "res://audio/infected/retail/d55e3b7924_hunter_attackmix_01.wav",
+      "sha256": "3167442332e8e9b23e06a567957a41c68ec819eb40d9f82238e7c45f477518ea",
+      "seconds": 3.238166666666667,
+      "peak": 0.72,
+      "rms": 0.22304928845329655
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\update\\sound\\player\\hunter\\voice\\attack\\hunter_attackmix_02.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\attack\\hunter_attackmix_02.wav",
+      "source_sha256": "0e33c66419520af75f8fb4d5a3d6517248b7a78ac26bff514556829c9c2ae012",
+      "resource": "res://audio/infected/retail/0e33c66419_hunter_attackmix_02.wav",
+      "sha256": "37810f5da053cfa85923715036ade041035a1a426c2d5f2121de43afc15b98a8",
+      "seconds": 3.238166666666667,
+      "peak": 0.72,
+      "rms": 0.27968102751998736
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\update\\sound\\player\\hunter\\voice\\attack\\hunter_attackmix_03.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\attack\\hunter_attackmix_03.wav",
+      "source_sha256": "4ba97137ec3b7251e3cc2cd33d10f79e8d498da179414729de0ca838189e3e47",
+      "resource": "res://audio/infected/retail/4ba97137ec_hunter_attackmix_03.wav",
+      "sha256": "ef4d0d1b028ab5a5704c61aa14d5ca42026838f2ec68a15e3e303608fcc62983",
+      "seconds": 3.238166666666667,
+      "peak": 0.72,
+      "rms": 0.28227707846736266
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\attack\\hunter_shred_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\attack\\hunter_shred_01.wav",
+      "source_sha256": "bee96452f5bbe12a5bd5327e72034c4ce72f5bab426565a5064f0eb522adf10f",
+      "resource": "res://audio/infected/retail/bee96452f5_hunter_shred_01.wav",
+      "sha256": "9a7e3df8ee8420e6a654f9c4653b4d61e63115d155ca3dd6bf01bb0c83fe18c9",
+      "seconds": 0.6362083333333334,
+      "peak": 0.72,
+      "rms": 0.2221174308675157
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\attack\\hunter_shred_02.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\attack\\hunter_shred_02.wav",
+      "source_sha256": "6f473388e2282a0b224e6d7217a1fb938894a632073b1b4f8ac46c44fd6426b9",
+      "resource": "res://audio/infected/retail/6f473388e2_hunter_shred_02.wav",
+      "sha256": "26b41382c070e1dac9c0c3a9495f4ba4c356dace656678e9d06638b4b61a9013",
+      "seconds": 0.6396666666666667,
+      "peak": 0.72,
+      "rms": 0.1974927530972606
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\attack\\hunter_shred_03.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\attack\\hunter_shred_03.wav",
+      "source_sha256": "3d38f4ff60caa62071fc8cb2319f169a2b568c7ff5bd9fd4e679b44ddda4825a",
+      "resource": "res://audio/infected/retail/3d38f4ff60_hunter_shred_03.wav",
+      "sha256": "43631035a67828c510f103ddad28a63f837b0afc7120f4fb7ba75451b1cdd37a",
+      "seconds": 0.5680416666666667,
+      "peak": 0.72,
+      "rms": 0.23515698951670727
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\death\\hunter_death_02.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\death\\hunter_death_02.wav",
+      "source_sha256": "085e04c3f239241e2968f27632752d78650b1f6610ec480608c9d8c7fe343d01",
+      "resource": "res://audio/infected/retail/085e04c3f2_hunter_death_02.wav",
+      "sha256": "5b9cab591cd5d76cfec8c99eb6067e1559a0933061f3716f068456a0992d3de3",
+      "seconds": 0.9308125,
+      "peak": 0.72,
+      "rms": 0.15487377149249643
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\death\\hunter_death_04.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\death\\hunter_death_04.wav",
+      "source_sha256": "868ec592ac4122ba3e81ff13f00bbafb5019a4245ba369a98a2f9813755acd67",
+      "resource": "res://audio/infected/retail/868ec592ac_hunter_death_04.wav",
+      "sha256": "fa9ef743795f5ce0296bbb003d53a50cf6fc2b6e099980fdd13c59b7c6635299",
+      "seconds": 0.7320416666666667,
+      "peak": 0.72,
+      "rms": 0.1670155698098751
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\death\\hunter_death_06.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\death\\hunter_death_06.wav",
+      "source_sha256": "34e518dfe8f75d7c0a2b4aac60ba63e414d3ce95b74d7f6674039a0736358c14",
+      "resource": "res://audio/infected/retail/34e518dfe8_hunter_death_06.wav",
+      "sha256": "b5293b805a024bc53f5d0ae2454c22dfda9602c9d17a9c271a716fcdffece356",
+      "seconds": 0.48541666666666666,
+      "peak": 0.72,
+      "rms": 0.18967063691569427
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\death\\hunter_death_07.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\death\\hunter_death_07.wav",
+      "source_sha256": "6e8a9ce76d5984560e335013cde711bfe61a45bb85e368eaac8110ed59036abf",
+      "resource": "res://audio/infected/retail/6e8a9ce76d_hunter_death_07.wav",
+      "sha256": "01fd478bf5e7a10d8163622383a75994ea8a2cd6d1fd6ad143ce9518f5955b2c",
+      "seconds": 0.7223541666666666,
+      "peak": 0.72,
+      "rms": 0.21576760798062228
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\idle\\hunter_stalk_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\idle\\hunter_stalk_01.wav",
+      "source_sha256": "c60a1267cedc3e36a8bb03682848674ba16491d36eb31679c0af9a27647c56ad",
+      "resource": "res://audio/infected/retail/c60a1267ce_hunter_stalk_01.wav",
+      "sha256": "8262939081b3a7bb31b2ce79af66c5ffef3c5c70a901edabe0e41dc95d3a0f68",
+      "seconds": 2.1831666666666667,
+      "peak": 0.72,
+      "rms": 0.03955437163019222
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\idle\\hunter_stalk_04.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\idle\\hunter_stalk_04.wav",
+      "source_sha256": "20fdce4d73f89f0e14eb9cf213e182bb442ee629696a9d0e2bb1bb1936717ef5",
+      "resource": "res://audio/infected/retail/20fdce4d73_hunter_stalk_04.wav",
+      "sha256": "4c0df238e8128bbcdf427fe3611fa276323a398c42357c2694a4b03e986813dc",
+      "seconds": 3.2307083333333333,
+      "peak": 0.72,
+      "rms": 0.12603661780393385
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\idle\\hunter_stalk_05.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\idle\\hunter_stalk_05.wav",
+      "source_sha256": "26ecf982759e899ac1b18fd11b6a61bde3ebeff515abf624815d079612a63127",
+      "resource": "res://audio/infected/retail/26ecf98275_hunter_stalk_05.wav",
+      "sha256": "a178b2ea9d68b34531ef7387750221d0d9255f4302bd640a7ddd8d1558299f6c",
+      "seconds": 2.205395833333333,
+      "peak": 0.72,
+      "rms": 0.16410050043475932
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\idle\\hunter_stalk_06.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\idle\\hunter_stalk_06.wav",
+      "source_sha256": "8bead08559f00ea07ad24fa8df793ba12f297a04f05b988332796417907abece",
+      "resource": "res://audio/infected/retail/8bead08559_hunter_stalk_06.wav",
+      "sha256": "11d5307381ae4cd8ca3f261a8d71d403b09add832cc55bd8d8049ea00395b3ae",
+      "seconds": 2.7216875,
+      "peak": 0.72,
+      "rms": 0.08133812980770905
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\pain\\hunter_painshort_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\pain\\hunter_painshort_01.wav",
+      "source_sha256": "bf176b2d9475214cea656e4ce0429e243f1099b3de1597b44b910894478bdfe3",
+      "resource": "res://audio/infected/retail/bf176b2d94_hunter_painshort_01.wav",
+      "sha256": "388969e73e1781e61144a64778626108e223b7be58e66a0c752ca2876950b28e",
+      "seconds": 0.5850416666666667,
+      "peak": 0.72,
+      "rms": 0.15791767259059877
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\pain\\hunter_painshort_03.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\pain\\hunter_painshort_03.wav",
+      "source_sha256": "fead0682af3761193687a20d4a595aabb8cf706048363ca88b3d354a2756970f",
+      "resource": "res://audio/infected/retail/fead0682af_hunter_painshort_03.wav",
+      "sha256": "bdbaae7449691e1da3486b0ad055fdfcdf1adffda5dfa649dcc8ddc4c829f3c5",
+      "seconds": 0.5742708333333333,
+      "peak": 0.72,
+      "rms": 0.25396790060550556
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2_dlc3\\sound\\player\\hunter\\voice\\pain\\hunter_painshort_04.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\pain\\hunter_painshort_04.wav",
+      "source_sha256": "e007f09b6c7e51290b1c162f1bdc0e8d17e5a8168f36d99832e8d55436ce2025",
+      "resource": "res://audio/infected/retail/e007f09b6c_hunter_painshort_04.wav",
+      "sha256": "a4d812c9868181bf823c377fae780b2a17303cbff93c7e362cf25aafea91c0fb",
+      "seconds": 0.52825,
+      "peak": 0.72,
+      "rms": 0.15405584130487723
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\pain\\hunter_painshort_05.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\pain\\hunter_painshort_05.wav",
+      "source_sha256": "41392b9e728d523011ccd942834c142ac23d041d41320124b15fd7ceb6993d50",
+      "resource": "res://audio/infected/retail/41392b9e72_hunter_painshort_05.wav",
+      "sha256": "105295c5e2fb37f78d17d08c8fd4b189cc5bd713a9f6a5f8b9312f110e62570d",
+      "seconds": 0.4099791666666667,
+      "peak": 0.72,
+      "rms": 0.1791252404801393
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2_dlc3\\sound\\player\\hunter\\voice\\pain\\hunter_painshort_07.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\pain\\hunter_painshort_07.wav",
+      "source_sha256": "138ede5409c762207a51352d020d1553b3a3e10687318e6629ce05166cd1c365",
+      "resource": "res://audio/infected/retail/138ede5409_hunter_painshort_07.wav",
+      "sha256": "8c6d2ff535ee4d60ccff442595d3d5534b2901d7242d5e3598bb4fdc2c7dc322",
+      "seconds": 0.37433333333333335,
+      "peak": 0.72,
+      "rms": 0.2210784473060367
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\warn\\hunter_warn_10.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\warn\\hunter_warn_10.wav",
+      "source_sha256": "76323cc7ac514ad7a34ad7f465be0ce74c968be653847c952ccb29a70adde88e",
+      "resource": "res://audio/infected/retail/76323cc7ac_hunter_warn_10.wav",
+      "sha256": "3c3dfde661b64def8a77aa8cbfdd1106e8048a0ee75ab9eb90e20849ccab4044",
+      "seconds": 1.648625,
+      "peak": 0.72,
+      "rms": 0.2422297125597822
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\warn\\hunter_warn_14.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\warn\\hunter_warn_14.wav",
+      "source_sha256": "2025df9aeb61d0cb677595477063c39f92c8c2be5477bfed85afc4a99e4184d4",
+      "resource": "res://audio/infected/retail/2025df9aeb_hunter_warn_14.wav",
+      "sha256": "1417907a92a655dc49a976ef4f9ef6fbcc6688a626d9b18c46562ab59a1cc392",
+      "seconds": 1.3351458333333333,
+      "peak": 0.72,
+      "rms": 0.304816155202309
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\warn\\hunter_warn_16.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\warn\\hunter_warn_16.wav",
+      "source_sha256": "0010992a7920d391c408a16425a1cf3e8c73757fe61b4b20c63b7e1989c814d3",
+      "resource": "res://audio/infected/retail/0010992a79_hunter_warn_16.wav",
+      "sha256": "bb244cbe493ed4b9165efe7b06a409897a96de46c353edd159c0f1cf8b3fb792",
+      "seconds": 1.9190416666666668,
+      "peak": 0.72,
+      "rms": 0.2284334871439892
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\hunter\\voice\\warn\\hunter_warn_17.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\hunter\\voice\\warn\\hunter_warn_17.wav",
+      "source_sha256": "36bfcd6300ebe1becdc5601a6a2a00eb41e835762820086c10de560eb41b517f",
+      "resource": "res://audio/infected/retail/36bfcd6300_hunter_warn_17.wav",
+      "sha256": "b6d2a21423e4b55a0cb8d09269b1aaaabd6747e2522ab9634660d699983dba6e",
+      "seconds": 2.1095208333333333,
+      "peak": 0.72,
+      "rms": 0.22788832777912124
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\attack\\tank_attack_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\attack\\tank_attack_01.wav",
+      "source_sha256": "885a5aa027f3f52e6310dcc993e8cd996f9f2992d010d7137003fff754b0bb68",
+      "resource": "res://audio/infected/retail/885a5aa027_tank_attack_01.wav",
+      "sha256": "d50fe015483ec31bba262f3fd6954a3e4de2db518744bd6d1098aa2276174263",
+      "seconds": 1.3776458333333332,
+      "peak": 0.72,
+      "rms": 0.24015586987677648
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\attack\\tank_attack_02.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\attack\\tank_attack_02.wav",
+      "source_sha256": "66cca2f0c7bf26e5d9e144d37ded5a3a7d973ad650ed8995597cc440ff51fa53",
+      "resource": "res://audio/infected/retail/66cca2f0c7_tank_attack_02.wav",
+      "sha256": "c1b30311e4ba6fc7156065d15f608e8181da641c636a4fe8fab26d211e900c1c",
+      "seconds": 1.3604583333333333,
+      "peak": 0.72,
+      "rms": 0.24825193929824085
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\attack\\tank_attack_03.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\attack\\tank_attack_03.wav",
+      "source_sha256": "52f99f54f66f4c29e130853d3ead0aaf7259d4c236afd313e9d7605499c90f7d",
+      "resource": "res://audio/infected/retail/52f99f54f6_tank_attack_03.wav",
+      "sha256": "5af324d3384158f321fd6ab55d925890db4c94afbb3b27e923abf2dccd0ebb61",
+      "seconds": 1.357125,
+      "peak": 0.72,
+      "rms": 0.22223788026683153
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\attack\\tank_attack_04.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\attack\\tank_attack_04.wav",
+      "source_sha256": "5f9f588ce561af5d74511dab64542795ac0ef9abb5a6c981130008f6d7907e97",
+      "resource": "res://audio/infected/retail/5f9f588ce5_tank_attack_04.wav",
+      "sha256": "83a6e1c983a19c22217d90a504cbc5b0edb26860519e508540c2d1356a962578",
+      "seconds": 1.19175,
+      "peak": 0.72,
+      "rms": 0.24685014489608856
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\attack\\tank_attack_05.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\attack\\tank_attack_05.wav",
+      "source_sha256": "b31246c3a51d5095a724affc14da5b32440a47af2e0d5e83d94b2cb5d8c10c18",
+      "resource": "res://audio/infected/retail/b31246c3a5_tank_attack_05.wav",
+      "sha256": "0418ecb49fcfc2e185f62e86e2c9f8c1e2d63d5b06d0260c18441f881f8f998a",
+      "seconds": 1.6092291666666667,
+      "peak": 0.72,
+      "rms": 0.21968276912777765
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\die\\tank_death_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\die\\tank_death_01.wav",
+      "source_sha256": "a58eb31de1bfc915ab4fed5174f1c984f972091085719c3765cf6e369927fa49",
+      "resource": "res://audio/infected/retail/a58eb31de1_tank_death_01.wav",
+      "sha256": "656578a5af11f92dfdbe2e98905e43061fe91cb5cc3eebc31d8a83d0e1e8e6f3",
+      "seconds": 3.0808541666666667,
+      "peak": 0.72,
+      "rms": 0.2413280622767558
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\die\\tank_death_02.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\die\\tank_death_02.wav",
+      "source_sha256": "d2bf0f4fbffca95294a015ecda13e189dd79b76211b5dbd7107a92945e302431",
+      "resource": "res://audio/infected/retail/d2bf0f4fbf_tank_death_02.wav",
+      "sha256": "64ced783cd4aa92df1d68218fddc295db93c076c8b5c58b418b6cd891928758a",
+      "seconds": 2.754958333333333,
+      "peak": 0.72,
+      "rms": 0.2627313177656285
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\die\\tank_death_03.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\die\\tank_death_03.wav",
+      "source_sha256": "14d557cbb08d1347215b7e51b2a68578a3eebe371b4fc002298d737c151a31e4",
+      "resource": "res://audio/infected/retail/14d557cbb0_tank_death_03.wav",
+      "sha256": "b5cf33262aadcd9124824ce6c74a76292f73cbc9cf89d939016cc314e2f8cff6",
+      "seconds": 2.8463125,
+      "peak": 0.72,
+      "rms": 0.23337672049060262
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\die\\tank_death_04.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\die\\tank_death_04.wav",
+      "source_sha256": "f3d3041aeb96de11272b7b2fe6ecea895b790b25ed953bda8977c4ec94777662",
+      "resource": "res://audio/infected/retail/f3d3041aeb_tank_death_04.wav",
+      "sha256": "a307bcffcb2bc83d04f5d06b4233bc5d7f135a82bfc5c15eea2c2a4abd8f71c8",
+      "seconds": 2.1822708333333334,
+      "peak": 0.72,
+      "rms": 0.1952571902762215
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\growl\\tank_climb_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\growl\\tank_climb_01.wav",
+      "source_sha256": "0ad451f4ddd77505fcce02b6bd44ff006b9a0c34b8a77bb48ef892f28bbf69b6",
+      "resource": "res://audio/infected/retail/0ad451f4dd_tank_climb_01.wav",
+      "sha256": "b6595506e29f1c45601b7d39c54517248225007e62912ec9e4edbb36aef542f4",
+      "seconds": 1.8327708333333332,
+      "peak": 0.72,
+      "rms": 0.22776471072341473
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\growl\\tank_climb_02.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\growl\\tank_climb_02.wav",
+      "source_sha256": "1c8f65869e87c77fd1d1b72b80aaef52f2e3584c77fea1a42deeb6a05406fe8c",
+      "resource": "res://audio/infected/retail/1c8f65869e_tank_climb_02.wav",
+      "sha256": "98be600b923318ebb5d99f5e3339ae24183479b0ca03d68fcf71dc5df2f041ca",
+      "seconds": 2.7725625,
+      "peak": 0.72,
+      "rms": 0.2160419674182818
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\growl\\tank_climb_03.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\growl\\tank_climb_03.wav",
+      "source_sha256": "aa9fffae83e188b176529d1de3d29ba6b5c0a92817c01cf03d5e3e7757984143",
+      "resource": "res://audio/infected/retail/aa9fffae83_tank_climb_03.wav",
+      "sha256": "9d41ac53c436ed0d6200a1bb1b13dabe6826da46e4153cd54f0cc2daa6af4e25",
+      "seconds": 1.9074791666666666,
+      "peak": 0.72,
+      "rms": 0.1910871116217343
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\growl\\tank_climb_04.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\growl\\tank_climb_04.wav",
+      "source_sha256": "de2e386e28247d894b52ea26425fd4b2e61d582f4ef375e9d5b9c336391e1600",
+      "resource": "res://audio/infected/retail/de2e386e28_tank_climb_04.wav",
+      "sha256": "a633e49f0d5805260402a0302604ecdb1cad61544f5ed09c03cb220bd66001a4",
+      "seconds": 1.0950833333333334,
+      "peak": 0.72,
+      "rms": 0.2280518087168528
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\idle\\tank_breathe_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\idle\\tank_breathe_01.wav",
+      "source_sha256": "fcec8dce8d08721f0c2bea42047a3b15457bdb801f0b2b8ab9bd20a2f103b40c",
+      "resource": "res://audio/infected/retail/fcec8dce8d_tank_breathe_01.wav",
+      "sha256": "916163bd25c9d4a3f9587d191d58910c7e816abaeafa7013ecf7601edf799ede",
+      "seconds": 3.1952291666666666,
+      "peak": 0.6503746483438644,
+      "rms": 0.09114010732050262
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\idle\\tank_breathe_02.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\idle\\tank_breathe_02.wav",
+      "source_sha256": "9276f57aed299a79420e7bf7343f97700d9d63a9648ea65df44aa5a0a866a9dc",
+      "resource": "res://audio/infected/retail/9276f57aed_tank_breathe_02.wav",
+      "sha256": "d286bf38d2618b9fed51641747cc5d6e3807a3e1e62c1eb9a2b4e1910e32603f",
+      "seconds": 1.2580416666666667,
+      "peak": 0.72,
+      "rms": 0.10711273442985635
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\idle\\tank_breathe_03.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\idle\\tank_breathe_03.wav",
+      "source_sha256": "d72a98a1b34cca1e558e594933a2763f017155419df16691e96b243d6eb5556d",
+      "resource": "res://audio/infected/retail/d72a98a1b3_tank_breathe_03.wav",
+      "sha256": "f92a4662c37860826fd70e501f441704caebe9a773120552e872bfe724c5d70a",
+      "seconds": 3.0968541666666667,
+      "peak": 0.72,
+      "rms": 0.10962839569944988
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\idle\\tank_breathe_04.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\idle\\tank_breathe_04.wav",
+      "source_sha256": "8a7832cce6996f420ce4e3afeaf10aeac36365aabcb2fe8c6d441d51e8d18d52",
+      "resource": "res://audio/infected/retail/8a7832cce6_tank_breathe_04.wav",
+      "sha256": "6299bb4321604857204d40781b8822cf28ac307d41a83d374dd481f6a25d5715",
+      "seconds": 1.4751458333333334,
+      "peak": 0.72,
+      "rms": 0.20263463080160826
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\pain\\tank_pain_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\pain\\tank_pain_01.wav",
+      "source_sha256": "a776d15ff79910ee909c88036394ab7f8ddf47db45cee8d6a2e45454552fe66e",
+      "resource": "res://audio/infected/retail/a776d15ff7_tank_pain_01.wav",
+      "sha256": "8b3adb4e98bafbcb8d538cb7411aa8d611f0628c3f563b119fb1a98c18d96493",
+      "seconds": 0.9222083333333333,
+      "peak": 0.72,
+      "rms": 0.22259477760903804
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\pain\\tank_pain_02.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\pain\\tank_pain_02.wav",
+      "source_sha256": "8eadc10bcce86c60098eac20d819649f7d14d567b34e708d95c3a2a0dc99dc5e",
+      "resource": "res://audio/infected/retail/8eadc10bcc_tank_pain_02.wav",
+      "sha256": "2ecb2e5e0368e3f403825df97ce1fa7f71d906e7ae52a74d4dbe082336cf7632",
+      "seconds": 0.9555,
+      "peak": 0.72,
+      "rms": 0.18670631953818168
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\pain\\tank_pain_03.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\pain\\tank_pain_03.wav",
+      "source_sha256": "89ad44c31c51076e26047da5652f49393f66bbe77a91a0f83f26662b973f6444",
+      "resource": "res://audio/infected/retail/89ad44c31c_tank_pain_03.wav",
+      "sha256": "9f3416d2656536f3edd52f084672dd9001dda8d0ad8bda055bd947f0acfce77d",
+      "seconds": 1.1950416666666666,
+      "peak": 0.72,
+      "rms": 0.23798622958425286
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\pain\\tank_pain_04.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\pain\\tank_pain_04.wav",
+      "source_sha256": "bb73b6b2ee13b9b74164d7f4946e728feca8a4b9e6671c044c8684cd71c01f93",
+      "resource": "res://audio/infected/retail/bb73b6b2ee_tank_pain_04.wav",
+      "sha256": "c681f90a647a7faef054ef0623fac3391ca1bbfc803aeac17cc9c9942f10b83d",
+      "seconds": 1.0594791666666667,
+      "peak": 0.72,
+      "rms": 0.24989634779164907
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\pain\\tank_pain_05.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\pain\\tank_pain_05.wav",
+      "source_sha256": "24de771ba7428fcc34894432ca384d456b115d28d4c807257ee1f86cd062269b",
+      "resource": "res://audio/infected/retail/24de771ba7_tank_pain_05.wav",
+      "sha256": "b470f7ca97f55c24c720519792ad463298aff411723101cad3b677f4d3f70f8e",
+      "seconds": 0.8303541666666666,
+      "peak": 0.72,
+      "rms": 0.1957899370600927
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\yell\\tank_yell_01.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\yell\\tank_yell_01.wav",
+      "source_sha256": "cf54929b661009e233129760bdf27e6478ace649fd6d4421fcddc512accf8996",
+      "resource": "res://audio/infected/retail/cf54929b66_tank_yell_01.wav",
+      "sha256": "7b7f7f1684408aeb3907841a6fcbb8489b0b7bf53e0273d81923b8cdba4d6030",
+      "seconds": 1.2460416666666667,
+      "peak": 0.72,
+      "rms": 0.202688390964027
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\yell\\tank_yell_02.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\yell\\tank_yell_02.wav",
+      "source_sha256": "5a83eae02cc5571983a820ecb635f1856b6e7f3678d96bf42c9f888c11f09de4",
+      "resource": "res://audio/infected/retail/5a83eae02c_tank_yell_02.wav",
+      "sha256": "a8e74c31d6a04e8dcc573a86eda7ed550eec9af439229175a45fc09c6fe7baf7",
+      "seconds": 2.0595208333333335,
+      "peak": 0.72,
+      "rms": 0.19341785035360282
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\yell\\tank_yell_03.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\yell\\tank_yell_03.wav",
+      "source_sha256": "603ef6231605ab46c56ab6626c26cfb1aa5dbb6001fca001905c37cf42167f40",
+      "resource": "res://audio/infected/retail/603ef62316_tank_yell_03.wav",
+      "sha256": "03a9e370e2b93376148b6fba8c936bf72cdbcae6aae2aa77042a43fdf4fa93f6",
+      "seconds": 1.58,
+      "peak": 0.72,
+      "rms": 0.24051412940299602
+    },
+    {
+      "source": "D:\\dev\\Steam\\steamapps\\common\\Left 4 Dead 2\\left4dead2\\sound\\player\\tank\\voice\\yell\\tank_yell_04.wav",
+      "snapshot": "outerasset\\source-snapshots\\l4d2-retail-20261008\\audio\\player\\tank\\voice\\yell\\tank_yell_04.wav",
+      "source_sha256": "6f0dbd7f536eeb5e5718ee54824ba7e1c3675cb0bd2fd394b3072b0420b69ad2",
+      "resource": "res://audio/infected/retail/6f0dbd7f53_tank_yell_04.wav",
+      "sha256": "7877a068a76b2ef71458efc092b1dafac0607444db21a8e6b42091ee04121a26",
+      "seconds": 1.5008541666666666,
+      "peak": 0.72,
+      "rms": 0.21367046098460082
+    }
+  ]
+}

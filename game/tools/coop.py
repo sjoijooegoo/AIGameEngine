@@ -33,7 +33,7 @@ def stage(destination: Path | None = None, reference: bool = False) -> Path:
     destination.mkdir(parents=True, exist_ok=False)
     (destination / 'coop').mkdir()
     for path in SOURCE.iterdir():
-        if path.is_file() and path.suffix in ('.gd', '.tscn', '.json'):
+        if path.name in {'main.gd','main.tscn','world.gd','session.gd','player.gd','avatar.gd','ui.gd','bank_layout.json'}:
             shutil.copy2(path, destination / 'coop' / path.name)
     if reference:
         folder=SOURCE/'local_reference'

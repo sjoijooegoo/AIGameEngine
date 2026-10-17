@@ -1,0 +1,437 @@
+{
+  "revision": "v21-retail",
+  "events": {
+    "idle": {
+      "files": [
+        "res://audio/infected/retail/abb1214be6_breathing01.wav",
+        "res://audio/infected/retail/2dbbd3d02e_breathing08.wav",
+        "res://audio/infected/retail/7569a27b90_breathing09.wav",
+        "res://audio/infected/retail/47b8aa9dd4_breathing10.wav"
+      ],
+      "group": "vocal",
+      "priority": 0,
+      "cooldown": 4,
+      "range": 15,
+      "gain_db": -15
+    },
+    "chase": {
+      "files": [
+        "res://audio/infected/retail/696d0526a3_rage_50.wav",
+        "res://audio/infected/retail/5af472151d_rage_51.wav",
+        "res://audio/infected/retail/52c8248805_rage_52.wav",
+        "res://audio/infected/retail/626c2e6b2e_rage_53.wav",
+        "res://audio/infected/retail/ea0ef7e4da_rage_54.wav"
+      ],
+      "group": "vocal",
+      "priority": 1,
+      "cooldown": 2,
+      "range": 18,
+      "gain_db": -12
+    },
+    "alert": {
+      "files": [
+        "res://audio/infected/retail/0047869fcf_become_alert60.wav",
+        "res://audio/infected/retail/9dc9b93055_become_alert61.wav",
+        "res://audio/infected/retail/0be06552aa_become_alert62.wav",
+        "res://audio/infected/retail/df8d33f66f_become_alert63.wav"
+      ],
+      "group": "vocal",
+      "priority": 3,
+      "cooldown": 5,
+      "range": 20,
+      "gain_db": -8.5
+    },
+    "attack": {
+      "files": [
+        "res://audio/infected/retail/3d8df4a13f_rage_at_victim20.wav",
+        "res://audio/infected/retail/056b08ded5_rage_at_victim21.wav",
+        "res://audio/infected/retail/47bffb4c7a_rage_at_victim22.wav",
+        "res://audio/infected/retail/0fed81b546_rage_at_victim23.wav",
+        "res://audio/infected/retail/c5b6fd2984_rage_at_victim24.wav"
+      ],
+      "group": "vocal",
+      "priority": 4,
+      "cooldown": 0.8,
+      "range": 16,
+      "gain_db": -8
+    },
+    "grab": {
+      "files": [
+        "res://audio/infected/retail/696d0526a3_rage_50.wav",
+        "res://audio/infected/retail/5af472151d_rage_51.wav",
+        "res://audio/infected/retail/52c8248805_rage_52.wav",
+        "res://audio/infected/retail/626c2e6b2e_rage_53.wav"
+      ],
+      "group": "vocal",
+      "priority": 5,
+      "cooldown": 0.9,
+      "range": 6,
+      "gain_db": -6
+    },
+    "hurt": {
+      "files": [
+        "res://audio/infected/retail/2af7c4ebf6_been_shot_30.wav",
+        "res://audio/infected/retail/0837459f7a_been_shot_31.wav",
+        "res://audio/infected/retail/e927e88cee_been_shot_32.wav",
+        "res://audio/infected/retail/f62ffcdca6_been_shot_33.wav",
+        "res://audio/infected/retail/ea13bffbc3_been_shot_34.wav",
+        "res://audio/infected/retail/2916f6680b_been_shot_35.wav"
+      ],
+      "group": "vocal",
+      "priority": 5,
+      "cooldown": 0.32,
+      "range": 18,
+      "gain_db": -9
+    },
+    "death": {
+      "files": [
+        "res://audio/infected/retail/1653174686_death_40.wav",
+        "res://audio/infected/retail/33ce7a3996_death_41.wav",
+        "res://audio/infected/retail/c7da7ed2dc_death_42.wav",
+        "res://audio/infected/retail/bdc27af2e3_death_43.wav",
+        "res://audio/infected/retail/0973cc2417_death_44.wav"
+      ],
+      "group": "vocal",
+      "priority": 6,
+      "cooldown": 30,
+      "range": 18,
+      "gain_db": -9
+    },
+    "step": {
+      "files": [
+        "res://audio/infected/retail/41b5fd621b_cardboard1.wav",
+        "res://audio/infected/retail/013768e327_cardboard2.wav",
+        "res://audio/infected/retail/cb740d73b6_cardboard3.wav",
+        "res://audio/infected/retail/9536767325_cardboard4.wav"
+      ],
+      "group": "body",
+      "priority": 1,
+      "cooldown": 0.18,
+      "range": 9,
+      "gain_db": -16
+    },
+    "bite": {
+      "files": [
+        "res://audio/infected/retail/bee9f506d1_claw_scrape_1.wav",
+        "res://audio/infected/retail/d6972994a2_claw_scrape_2.wav",
+        "res://audio/infected/retail/acf0fb34fe_claw_scrape_3.wav"
+      ],
+      "group": "body",
+      "priority": 6,
+      "cooldown": 0.4,
+      "range": 6,
+      "gain_db": -8.5
+    },
+    "impact": {
+      "files": [
+        "res://audio/infected/retail/2de46ad9a9_hit_punch_01.wav",
+        "res://audio/infected/retail/479032d65e_hit_punch_02.wav",
+        "res://audio/infected/retail/7bcfdee528_hit_punch_03.wav",
+        "res://audio/infected/retail/3ad743d6e3_hit_punch_04.wav",
+        "res://audio/infected/retail/b553947859_hit_punch_05.wav"
+      ],
+      "group": "body",
+      "priority": 5,
+      "cooldown": 0.3,
+      "range": 7,
+      "gain_db": -11
+    },
+    "miss": {
+      "files": [
+        "res://audio/infected/retail/1c56f3b827_claw_miss_1.wav",
+        "res://audio/infected/retail/882f7e6bd9_claw_miss_2.wav"
+      ],
+      "group": "body",
+      "priority": 3,
+      "cooldown": 0.25,
+      "range": 7,
+      "gain_db": -13
+    }
+  },
+  "profiles": {
+    "common": {
+      "idle": [
+        "res://audio/infected/retail/abb1214be6_breathing01.wav",
+        "res://audio/infected/retail/2dbbd3d02e_breathing08.wav",
+        "res://audio/infected/retail/7569a27b90_breathing09.wav",
+        "res://audio/infected/retail/47b8aa9dd4_breathing10.wav"
+      ],
+      "chase": [
+        "res://audio/infected/retail/696d0526a3_rage_50.wav",
+        "res://audio/infected/retail/5af472151d_rage_51.wav",
+        "res://audio/infected/retail/52c8248805_rage_52.wav",
+        "res://audio/infected/retail/626c2e6b2e_rage_53.wav",
+        "res://audio/infected/retail/ea0ef7e4da_rage_54.wav"
+      ],
+      "alert": [
+        "res://audio/infected/retail/0047869fcf_become_alert60.wav",
+        "res://audio/infected/retail/9dc9b93055_become_alert61.wav",
+        "res://audio/infected/retail/0be06552aa_become_alert62.wav",
+        "res://audio/infected/retail/df8d33f66f_become_alert63.wav"
+      ],
+      "attack": [
+        "res://audio/infected/retail/3d8df4a13f_rage_at_victim20.wav",
+        "res://audio/infected/retail/056b08ded5_rage_at_victim21.wav",
+        "res://audio/infected/retail/47bffb4c7a_rage_at_victim22.wav",
+        "res://audio/infected/retail/0fed81b546_rage_at_victim23.wav",
+        "res://audio/infected/retail/c5b6fd2984_rage_at_victim24.wav"
+      ],
+      "grab": [
+        "res://audio/infected/retail/696d0526a3_rage_50.wav",
+        "res://audio/infected/retail/5af472151d_rage_51.wav",
+        "res://audio/infected/retail/52c8248805_rage_52.wav",
+        "res://audio/infected/retail/626c2e6b2e_rage_53.wav"
+      ],
+      "hurt": [
+        "res://audio/infected/retail/2af7c4ebf6_been_shot_30.wav",
+        "res://audio/infected/retail/0837459f7a_been_shot_31.wav",
+        "res://audio/infected/retail/e927e88cee_been_shot_32.wav",
+        "res://audio/infected/retail/f62ffcdca6_been_shot_33.wav",
+        "res://audio/infected/retail/ea13bffbc3_been_shot_34.wav",
+        "res://audio/infected/retail/2916f6680b_been_shot_35.wav"
+      ],
+      "death": [
+        "res://audio/infected/retail/1653174686_death_40.wav",
+        "res://audio/infected/retail/33ce7a3996_death_41.wav",
+        "res://audio/infected/retail/c7da7ed2dc_death_42.wav",
+        "res://audio/infected/retail/bdc27af2e3_death_43.wav",
+        "res://audio/infected/retail/0973cc2417_death_44.wav"
+      ]
+    },
+    "higher": {
+      "idle": [
+        "res://audio/infected/retail/abb1214be6_breathing01.wav",
+        "res://audio/infected/retail/2dbbd3d02e_breathing08.wav",
+        "res://audio/infected/retail/7569a27b90_breathing09.wav",
+        "res://audio/infected/retail/47b8aa9dd4_breathing10.wav"
+      ],
+      "chase": [
+        "res://audio/infected/retail/a656211879_rage_50.wav",
+        "res://audio/infected/retail/e78baf521a_rage_51.wav",
+        "res://audio/infected/retail/e49c8b2842_rage_52.wav",
+        "res://audio/infected/retail/5e3d88fec2_rage_53.wav",
+        "res://audio/infected/retail/60b4b419e7_rage_54.wav"
+      ],
+      "alert": [
+        "res://audio/infected/retail/2d7137b37b_become_alert60.wav",
+        "res://audio/infected/retail/b81b368997_become_alert61.wav",
+        "res://audio/infected/retail/090c465d60_become_alert62.wav",
+        "res://audio/infected/retail/744b5420da_become_alert63.wav"
+      ],
+      "attack": [
+        "res://audio/infected/retail/91748d15d4_rage_at_victim20.wav",
+        "res://audio/infected/retail/9855dd1d22_rage_at_victim21.wav",
+        "res://audio/infected/retail/e614768d4e_rage_at_victim22.wav",
+        "res://audio/infected/retail/ba35a438e8_rage_at_victim23.wav",
+        "res://audio/infected/retail/07e4454a26_rage_at_victim24.wav"
+      ],
+      "grab": [
+        "res://audio/infected/retail/a656211879_rage_50.wav",
+        "res://audio/infected/retail/e78baf521a_rage_51.wav",
+        "res://audio/infected/retail/e49c8b2842_rage_52.wav",
+        "res://audio/infected/retail/5e3d88fec2_rage_53.wav"
+      ],
+      "hurt": [
+        "res://audio/infected/retail/5b1e23f2ee_been_shot_30.wav",
+        "res://audio/infected/retail/0d4622f2f6_been_shot_31.wav",
+        "res://audio/infected/retail/8d5bb0e125_been_shot_32.wav",
+        "res://audio/infected/retail/54e525907c_been_shot_33.wav",
+        "res://audio/infected/retail/84d60b8c79_been_shot_34.wav",
+        "res://audio/infected/retail/e211255cb8_been_shot_35.wav"
+      ],
+      "death": [
+        "res://audio/infected/retail/f93edb98d8_death_40.wav",
+        "res://audio/infected/retail/5e5ce8769e_death_41.wav",
+        "res://audio/infected/retail/e26822a9cf_death_42.wav",
+        "res://audio/infected/retail/41a3c722bc_death_43.wav",
+        "res://audio/infected/retail/0ffcedc65c_death_44.wav"
+      ]
+    },
+    "hunter": {
+      "idle": [
+        "res://audio/infected/retail/c60a1267ce_hunter_stalk_01.wav",
+        "res://audio/infected/retail/20fdce4d73_hunter_stalk_04.wav",
+        "res://audio/infected/retail/26ecf98275_hunter_stalk_05.wav",
+        "res://audio/infected/retail/8bead08559_hunter_stalk_06.wav"
+      ],
+      "chase": [
+        "res://audio/infected/retail/76323cc7ac_hunter_warn_10.wav",
+        "res://audio/infected/retail/2025df9aeb_hunter_warn_14.wav",
+        "res://audio/infected/retail/0010992a79_hunter_warn_16.wav",
+        "res://audio/infected/retail/36bfcd6300_hunter_warn_17.wav"
+      ],
+      "alert": [
+        "res://audio/infected/retail/011f1ddde1_hunter_alert_01.wav",
+        "res://audio/infected/retail/36c561acbf_hunter_alert_02.wav",
+        "res://audio/infected/retail/f1801c5579_hunter_alert_03.wav",
+        "res://audio/infected/retail/62ac25190c_hunter_alert_04.wav"
+      ],
+      "attack": [
+        "res://audio/infected/retail/d55e3b7924_hunter_attackmix_01.wav",
+        "res://audio/infected/retail/0e33c66419_hunter_attackmix_02.wav",
+        "res://audio/infected/retail/4ba97137ec_hunter_attackmix_03.wav"
+      ],
+      "grab": [
+        "res://audio/infected/retail/bee96452f5_hunter_shred_01.wav",
+        "res://audio/infected/retail/6f473388e2_hunter_shred_02.wav",
+        "res://audio/infected/retail/3d38f4ff60_hunter_shred_03.wav"
+      ],
+      "hurt": [
+        "res://audio/infected/retail/bf176b2d94_hunter_painshort_01.wav",
+        "res://audio/infected/retail/fead0682af_hunter_painshort_03.wav",
+        "res://audio/infected/retail/e007f09b6c_hunter_painshort_04.wav",
+        "res://audio/infected/retail/41392b9e72_hunter_painshort_05.wav",
+        "res://audio/infected/retail/138ede5409_hunter_painshort_07.wav"
+      ],
+      "death": [
+        "res://audio/infected/retail/085e04c3f2_hunter_death_02.wav",
+        "res://audio/infected/retail/868ec592ac_hunter_death_04.wav",
+        "res://audio/infected/retail/34e518dfe8_hunter_death_06.wav",
+        "res://audio/infected/retail/6e8a9ce76d_hunter_death_07.wav"
+      ]
+    },
+    "tank": {
+      "idle": [
+        "res://audio/infected/retail/fcec8dce8d_tank_breathe_01.wav",
+        "res://audio/infected/retail/9276f57aed_tank_breathe_02.wav",
+        "res://audio/infected/retail/d72a98a1b3_tank_breathe_03.wav",
+        "res://audio/infected/retail/8a7832cce6_tank_breathe_04.wav"
+      ],
+      "chase": [
+        "res://audio/infected/retail/0ad451f4dd_tank_climb_01.wav",
+        "res://audio/infected/retail/1c8f65869e_tank_climb_02.wav",
+        "res://audio/infected/retail/aa9fffae83_tank_climb_03.wav",
+        "res://audio/infected/retail/de2e386e28_tank_climb_04.wav"
+      ],
+      "alert": [
+        "res://audio/infected/retail/cf54929b66_tank_yell_01.wav",
+        "res://audio/infected/retail/5a83eae02c_tank_yell_02.wav",
+        "res://audio/infected/retail/603ef62316_tank_yell_03.wav",
+        "res://audio/infected/retail/6f0dbd7f53_tank_yell_04.wav"
+      ],
+      "attack": [
+        "res://audio/infected/retail/885a5aa027_tank_attack_01.wav",
+        "res://audio/infected/retail/66cca2f0c7_tank_attack_02.wav",
+        "res://audio/infected/retail/52f99f54f6_tank_attack_03.wav",
+        "res://audio/infected/retail/5f9f588ce5_tank_attack_04.wav",
+        "res://audio/infected/retail/b31246c3a5_tank_attack_05.wav"
+      ],
+      "grab": [
+        "res://audio/infected/retail/885a5aa027_tank_attack_01.wav",
+        "res://audio/infected/retail/66cca2f0c7_tank_attack_02.wav",
+        "res://audio/infected/retail/52f99f54f6_tank_attack_03.wav"
+      ],
+      "hurt": [
+        "res://audio/infected/retail/a776d15ff7_tank_pain_01.wav",
+        "res://audio/infected/retail/8eadc10bcc_tank_pain_02.wav",
+        "res://audio/infected/retail/89ad44c31c_tank_pain_03.wav",
+        "res://audio/infected/retail/bb73b6b2ee_tank_pain_04.wav",
+        "res://audio/infected/retail/24de771ba7_tank_pain_05.wav"
+      ],
+      "death": [
+        "res://audio/infected/retail/a58eb31de1_tank_death_01.wav",
+        "res://audio/infected/retail/d2bf0f4fbf_tank_death_02.wav",
+        "res://audio/infected/retail/14d557cbb0_tank_death_03.wav",
+        "res://audio/infected/retail/f3d3041aeb_tank_death_04.wav"
+      ]
+    },
+    "heavy": {
+      "idle": [
+        "res://audio/infected/retail/abb1214be6_breathing01.wav",
+        "res://audio/infected/retail/2dbbd3d02e_breathing08.wav",
+        "res://audio/infected/retail/7569a27b90_breathing09.wav",
+        "res://audio/infected/retail/47b8aa9dd4_breathing10.wav"
+      ],
+      "chase": [
+        "res://audio/infected/retail/696d0526a3_rage_50.wav",
+        "res://audio/infected/retail/5af472151d_rage_51.wav",
+        "res://audio/infected/retail/52c8248805_rage_52.wav",
+        "res://audio/infected/retail/626c2e6b2e_rage_53.wav",
+        "res://audio/infected/retail/ea0ef7e4da_rage_54.wav"
+      ],
+      "alert": [
+        "res://audio/infected/retail/0047869fcf_become_alert60.wav",
+        "res://audio/infected/retail/9dc9b93055_become_alert61.wav",
+        "res://audio/infected/retail/0be06552aa_become_alert62.wav",
+        "res://audio/infected/retail/df8d33f66f_become_alert63.wav"
+      ],
+      "attack": [
+        "res://audio/infected/retail/3d8df4a13f_rage_at_victim20.wav",
+        "res://audio/infected/retail/056b08ded5_rage_at_victim21.wav",
+        "res://audio/infected/retail/47bffb4c7a_rage_at_victim22.wav",
+        "res://audio/infected/retail/0fed81b546_rage_at_victim23.wav",
+        "res://audio/infected/retail/c5b6fd2984_rage_at_victim24.wav"
+      ],
+      "grab": [
+        "res://audio/infected/retail/696d0526a3_rage_50.wav",
+        "res://audio/infected/retail/5af472151d_rage_51.wav",
+        "res://audio/infected/retail/52c8248805_rage_52.wav",
+        "res://audio/infected/retail/626c2e6b2e_rage_53.wav"
+      ],
+      "hurt": [
+        "res://audio/infected/retail/2af7c4ebf6_been_shot_30.wav",
+        "res://audio/infected/retail/0837459f7a_been_shot_31.wav",
+        "res://audio/infected/retail/e927e88cee_been_shot_32.wav",
+        "res://audio/infected/retail/f62ffcdca6_been_shot_33.wav",
+        "res://audio/infected/retail/ea13bffbc3_been_shot_34.wav",
+        "res://audio/infected/retail/2916f6680b_been_shot_35.wav"
+      ],
+      "death": [
+        "res://audio/infected/retail/1653174686_death_40.wav",
+        "res://audio/infected/retail/33ce7a3996_death_41.wav",
+        "res://audio/infected/retail/c7da7ed2dc_death_42.wav",
+        "res://audio/infected/retail/bdc27af2e3_death_43.wav",
+        "res://audio/infected/retail/0973cc2417_death_44.wav"
+      ]
+    },
+    "runner": {
+      "idle": [
+        "res://audio/infected/retail/abb1214be6_breathing01.wav",
+        "res://audio/infected/retail/2dbbd3d02e_breathing08.wav",
+        "res://audio/infected/retail/7569a27b90_breathing09.wav",
+        "res://audio/infected/retail/47b8aa9dd4_breathing10.wav"
+      ],
+      "chase": [
+        "res://audio/infected/retail/696d0526a3_rage_50.wav",
+        "res://audio/infected/retail/5af472151d_rage_51.wav",
+        "res://audio/infected/retail/52c8248805_rage_52.wav",
+        "res://audio/infected/retail/626c2e6b2e_rage_53.wav",
+        "res://audio/infected/retail/ea0ef7e4da_rage_54.wav"
+      ],
+      "alert": [
+        "res://audio/infected/retail/0047869fcf_become_alert60.wav",
+        "res://audio/infected/retail/9dc9b93055_become_alert61.wav",
+        "res://audio/infected/retail/0be06552aa_become_alert62.wav",
+        "res://audio/infected/retail/df8d33f66f_become_alert63.wav"
+      ],
+      "attack": [
+        "res://audio/infected/retail/3d8df4a13f_rage_at_victim20.wav",
+        "res://audio/infected/retail/056b08ded5_rage_at_victim21.wav",
+        "res://audio/infected/retail/47bffb4c7a_rage_at_victim22.wav",
+        "res://audio/infected/retail/0fed81b546_rage_at_victim23.wav",
+        "res://audio/infected/retail/c5b6fd2984_rage_at_victim24.wav"
+      ],
+      "grab": [
+        "res://audio/infected/retail/696d0526a3_rage_50.wav",
+        "res://audio/infected/retail/5af472151d_rage_51.wav",
+        "res://audio/infected/retail/52c8248805_rage_52.wav",
+        "res://audio/infected/retail/626c2e6b2e_rage_53.wav"
+      ],
+      "hurt": [
+        "res://audio/infected/retail/2af7c4ebf6_been_shot_30.wav",
+        "res://audio/infected/retail/0837459f7a_been_shot_31.wav",
+        "res://audio/infected/retail/e927e88cee_been_shot_32.wav",
+        "res://audio/infected/retail/f62ffcdca6_been_shot_33.wav",
+        "res://audio/infected/retail/ea13bffbc3_been_shot_34.wav",
+        "res://audio/infected/retail/2916f6680b_been_shot_35.wav"
+      ],
+      "death": [
+        "res://audio/infected/retail/1653174686_death_40.wav",
+        "res://audio/infected/retail/33ce7a3996_death_41.wav",
+        "res://audio/infected/retail/c7da7ed2dc_death_42.wav",
+        "res://audio/infected/retail/bdc27af2e3_death_43.wav",
+        "res://audio/infected/retail/0973cc2417_death_44.wav"
+      ]
+    }
+  }
+}

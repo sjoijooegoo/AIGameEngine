@@ -1,0 +1,18 @@
+{
+  "origin": "project_authored_procedural_placeholder",
+  "generator": "game/tools/generate_baton_audio.py",
+  "files": {
+    "baton_swing": {
+      "sha256": "e75fe07df4cd77b1f015a49bfef28640a6cdc3bfef1b89b6083b17f4c2183757",
+      "seconds": 0.32
+    },
+    "baton_hit": {
+      "sha256": "7dd0d468e7d437f293618bcac1d6b71526d87dc14fa6c72dc6b2580f396eec3f",
+      "seconds": 0.18
+    },
+    "baton_wall": {
+      "sha256": "23a0c3c18a393c3b6398b9d66d9d15eed161c138dc1304104d23d64a03e0916e",
+      "seconds": 0.22
+    }
+  }
+}

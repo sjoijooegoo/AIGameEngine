@@ -1,0 +1,39 @@
+{
+  "revision": "v23-comfort-01",
+  "scope": "Project mix targets, not a broadcast delivery standard or physical speaker SPL calibration. Static attenuation only; no automatic gain riding.",
+  "measurement": {"rms_window_ms": 400, "rms_hop_ms": 10, "short_clip_padding": "zero-pad to 400 ms", "stereo_rms": "mean channel energy", "true_peak": "FFmpeg ebur128 oversampled true peak", "gain_random_headroom_db": 0.6},
+  "buses": {
+    "GameSFX": {"send": "Master", "limiter_db": -4.0},
+    "WeaponSFX": {"send": "GameSFX", "limiter_db": -8.0},
+    "InfectedSFX": {"send": "GameSFX", "limiter_db": -9.0}
+  },
+  "categories": {
+    "gunshot": {"rms_400ms_max_dbfs": -23.0, "true_peak_max_dbtp": -9.0},
+    "room_tail": {"rms_400ms_max_dbfs": -37.0, "true_peak_max_dbtp": -23.0},
+    "mechanical": {"rms_400ms_max_dbfs": -32.0, "true_peak_max_dbtp": -17.0},
+    "impact": {"rms_400ms_max_dbfs": -30.0, "true_peak_max_dbtp": -15.0},
+    "melee": {"rms_400ms_max_dbfs": -28.0, "true_peak_max_dbtp": -13.0},
+    "infected_threat": {"rms_400ms_max_dbfs": -25.0, "true_peak_max_dbtp": -11.0},
+    "infected_vocal": {"rms_400ms_max_dbfs": -28.0, "true_peak_max_dbtp": -14.0},
+    "infected_idle": {"rms_400ms_max_dbfs": -35.0, "true_peak_max_dbtp": -24.0},
+    "footstep": {"rms_400ms_max_dbfs": -36.0, "true_peak_max_dbtp": -22.0}
+  },
+  "banks": {
+    "firearms": {"resource": "res://audio/firearms/bank.json", "max_instance_gain_db": {"corpse_land": 1.0}, "events": {
+      "pistol": "gunshot", "shotgun": "gunshot", "pistol_room": "room_tail", "shotgun_room": "room_tail",
+      "slide": "mechanical", "mag_in": "mechanical", "mag_out": "mechanical", "pump": "mechanical", "shell": "mechanical", "dry": "mechanical",
+      "hit": "impact", "hit_flesh": "impact", "hit_head": "impact", "corpse_hit": "impact", "corpse_land": "impact",
+      "baton_swing": "melee", "baton_hit": "melee", "baton_wall": "melee"
+    }},
+    "infected": {"resource": "res://audio/infected/bank.json", "events": {
+      "idle": "infected_idle", "chase": "infected_vocal", "alert": "infected_threat", "attack": "infected_threat", "grab": "infected_threat",
+      "hurt": "infected_vocal", "death": "infected_vocal", "step": "footstep", "bite": "infected_threat", "impact": "impact", "miss": "melee"
+    }}
+  },
+  "recording_acceptance": {
+    "gunfire_reduction_min_db": 6.0,
+    "weapon_true_peak_max_dbtp": -7.0,
+    "combined_true_peak_max_dbtp": -3.0,
+    "sustained_fire_lufs_range": [-26.0, -18.0]
+  }
+}

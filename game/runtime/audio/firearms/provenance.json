@@ -1,0 +1,60 @@
+{
+  "origin": "project_authored_procedural_placeholder_not_original_L4D2_audio",
+  "generator": "game\\tools\\prepare_firearms.py",
+  "files": {
+    "pistol": {
+      "path": "game\\runtime\\audio\\firearms\\pistol.wav",
+      "sha256": "510dc735e0cd61e81928d62410e14a32089b8f394455786c61bc9c1dcbe00aa6",
+      "peak": 0.6781517990661337,
+      "seconds": 0.42
+    },
+    "shotgun": {
+      "path": "game\\runtime\\audio\\firearms\\shotgun.wav",
+      "sha256": "01b342699e2d2f4c1d5f504aed61463f1c80d24787d05957d806c4fd72a80d27",
+      "peak": 0.6893520920438245,
+      "seconds": 0.7
+    },
+    "pump": {
+      "path": "game\\runtime\\audio\\firearms\\pump.wav",
+      "sha256": "2b5344b1e03b918fb345c8153d1ae2eeba75cae537573edaea5bac0606ed954a",
+      "peak": 0.43684194463942383,
+      "seconds": 0.24
+    },
+    "shell": {
+      "path": "game\\runtime\\audio\\firearms\\shell.wav",
+      "sha256": "6c0a04665562eb3e054f8421f4f5ecadc9f1a2833bf5d628be52698ebee08f92",
+      "peak": 0.4184698019348735,
+      "seconds": 0.15
+    },
+    "mag_out": {
+      "path": "game\\runtime\\audio\\firearms\\mag_out.wav",
+      "sha256": "e3f5a1861ab32640bf90457c9b66dfabb4559e54e772c55d23b08acbb452bacc",
+      "peak": 0.37528611102633747,
+      "seconds": 0.2
+    },
+    "mag_in": {
+      "path": "game\\runtime\\audio\\firearms\\mag_in.wav",
+      "sha256": "ad888882e184eccd17aee84736f14f3b1421fb2e36afdde0bd14a7b112a520f6",
+      "peak": 0.4014404736472671,
+      "seconds": 0.18
+    },
+    "slide": {
+      "path": "game\\runtime\\audio\\firearms\\slide.wav",
+      "sha256": "cf8a4576dab805ec092a7f003a895248ffcc200011ec730c7a6d44d6054f3dd9",
+      "peak": 0.42768639179662465,
+      "seconds": 0.22
+    },
+    "dry": {
+      "path": "game\\runtime\\audio\\firearms\\dry.wav",
+      "sha256": "68820241efc186e9cb606daa4b8e5fa4b5fda141894a43ad78ca3ab8e090a710",
+      "peak": 0.4160588396862697,
+      "seconds": 0.07
+    },
+    "hit": {
+      "path": "game\\runtime\\audio\\firearms\\hit.wav",
+      "sha256": "fb86e057330b7f814fdd8f0aeb9e3405a7203f384fc54f5d65dd81cf5f79bb9c",
+      "peak": 0.41706595049897766,
+      "seconds": 0.09
+    }
+  }
+}

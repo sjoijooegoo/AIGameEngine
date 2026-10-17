@@ -1,0 +1,26 @@
+{
+  "checks": [
+    {
+      "name": "bank_ui_create_dedicated_process",
+      "status": "pass",
+      "pid": 45320
+    },
+    {
+      "name": "bank_ui_start_real_time_two_clients",
+      "status": "pass"
+    },
+    {
+      "name": "bank_ui_host_closes_owned_server",
+      "status": "pass"
+    }
+  ],
+  "captures": [
+    "D:/AIGameEngine/logs/sessions/bank-session-ui-20261017-121715/host/capture_2.png",
+    "D:/AIGameEngine/logs/sessions/bank-session-ui-20261017-121715/host/capture_56.png",
+    "D:/AIGameEngine/logs/sessions/bank-session-ui-20261017-121715/host/capture_66.png",
+    "D:/AIGameEngine/logs/sessions/bank-session-ui-20261017-121715/host/capture_74.png",
+    "D:/AIGameEngine/logs/sessions/bank-session-ui-20261017-121715/host/capture_82.png",
+    "D:/AIGameEngine/logs/sessions/bank-session-ui-20261017-121715/host/capture_90.png",
+    "D:/AIGameEngine/logs/sessions/bank-session-ui-20261017-121715/host/capture_97.png"
+  ]
+}

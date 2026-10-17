@@ -1,0 +1,97 @@
+{
+  "name": "death",
+  "fps": 10,
+  "interval": 6,
+  "frames": [
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\death\\capture_95.png",
+      "simulation_time": 3.4,
+      "state": {
+        "kills": 0,
+        "target": {
+          "active": true,
+          "hp": 9.0,
+          "id": "G_mon",
+          "mode": "idle",
+          "position": [
+            20.0,
+            -0.0097395833581686,
+            -10.0
+          ]
+        }
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\death\\capture_98.png",
+      "simulation_time": 3.5,
+      "state": {
+        "kills": 1,
+        "target": {
+          "active": true,
+          "hp": 0.0,
+          "id": "G_mon",
+          "mode": "dead",
+          "position": [
+            20.0,
+            -0.0097395833581686,
+            -10.0
+          ]
+        }
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\death\\capture_101.png",
+      "simulation_time": 3.6,
+      "state": {
+        "kills": 1,
+        "target": {
+          "active": true,
+          "hp": 0.0,
+          "id": "G_mon",
+          "mode": "dead",
+          "position": [
+            20.0,
+            -0.0097395833581686,
+            -10.0
+          ]
+        }
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\death\\capture_104.png",
+      "simulation_time": 3.7,
+      "state": {
+        "kills": 1,
+        "target": {
+          "active": true,
+          "hp": 0.0,
+          "id": "G_mon",
+          "mode": "dead",
+          "position": [
+            20.0,
+            -0.0097395833581686,
+            -10.0
+          ]
+        }
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-combat-20261017\\death\\capture_107.png",
+      "simulation_time": 3.8,
+      "state": {
+        "kills": 1,
+        "target": {
+          "active": true,
+          "hp": 0.0,
+          "id": "G_mon",
+          "mode": "dead",
+          "position": [
+            20.0,
+            -0.0097395833581686,
+            -10.0
+          ]
+        }
+      }
+    }
+  ]
+}
