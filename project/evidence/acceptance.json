@@ -1,0 +1,202 @@
+{
+  "report": "D:\\AIGameEngine\\project\\evidence\\godot-addons-expansion.json",
+  "reviewer": null,
+  "scope": null,
+  "criteria": [
+    {
+      "id": "FW-ADAPTER",
+      "status": "not_run",
+      "detail": "adapter_contract"
+    },
+    {
+      "id": "FW-RESTORE",
+      "status": "not_run",
+      "detail": "snapshot_restore_replay, invalid_checkpoint_is_atomic, save_load_continuity"
+    },
+    {
+      "id": "FW-INPUT",
+      "status": "not_run",
+      "detail": "key_door_objective, pause_and_ui_hit_test, inventory_blocks_movement, mouse_look"
+    },
+    {
+      "id": "FW-ANIMATION",
+      "status": "not_run",
+      "detail": "animation_time_control, animation_sequence, movement_sequence"
+    },
+    {
+      "id": "ART-CRATE",
+      "status": "not_run",
+      "detail": "Missing evidence: model.png, model_90.png, model_180.png, model_270.png"
+    },
+    {
+      "id": "ART-UI",
+      "status": "not_run",
+      "detail": "Missing evidence: ui_pause_800x600.png, ui_gameplay_1920x1080.png"
+    },
+    {
+      "id": "ART-MOTION",
+      "status": "not_run",
+      "detail": "Missing evidence: walk_cycle.sequence.json, walk_cycle.contact.jpg, walk_cycle.webp"
+    },
+    {
+      "id": "ASSET-IMPORT",
+      "status": "not_run",
+      "detail": "test_glb_png_measurements_and_cache, test_fbx_import_matches_glb_dimensions, test_explicit_scale_rotation_and_texture_role, test_missing_texture_blocks_preparation"
+    },
+    {
+      "id": "ASSET-SPACE",
+      "status": "not_run",
+      "detail": "test_reject_float_wall_overlap_support_and_door_sweep, test_unreachable_route_and_invalid_build_preserve_scene, test_tabletop_anchor_and_reject_cycles"
+    },
+    {
+      "id": "ASSET-PLAY",
+      "status": "not_run",
+      "detail": "test_real_input_door_collision_and_exit"
+    },
+    {
+      "id": "PORT-SPEC",
+      "status": "not_run",
+      "detail": "port_source_inventory_complete, port_rule_conflicts_resolved"
+    },
+    {
+      "id": "PORT-SLICE",
+      "status": "not_run",
+      "detail": "port_cashier_to_hall, port_mantrap_overlap_alarm, port_mantrap_return_requires_key, port_interaction_occlusion"
+    },
+    {
+      "id": "PORT-PLAYER",
+      "status": "not_run",
+      "detail": "port_player_controls, port_camera_clearance, port_input_pause_focus"
+    },
+    {
+      "id": "PORT-ITEMS",
+      "status": "not_run",
+      "detail": "port_inventory_item_use, port_pickup_idempotence, port_heal_vending_currency"
+    },
+    {
+      "id": "PORT-COMBAT",
+      "status": "not_run",
+      "detail": "port_weapon_damage_ammo, port_melee_occlusion_durability, port_grab_death_regen, port_dull_knife_progression"
+    },
+    {
+      "id": "PORT-AI",
+      "status": "not_run",
+      "detail": "port_enemy_sight_noise, port_enemy_attack_return, port_safe_room_and_hedge"
+    },
+    {
+      "id": "PORT-NAV",
+      "status": "not_run",
+      "detail": "port_stairs_player_enemy, port_navigation_door_changes, port_cross_floor_return, port_enemy_crowding"
+    },
+    {
+      "id": "PORT-SAVE",
+      "status": "not_run",
+      "detail": "port_save_slots_and_continue, port_save_resets_living_only, port_autosave_safe_conditions, port_checkpoint_atomic_complete"
+    },
+    {
+      "id": "PORT-WORLD",
+      "status": "not_run",
+      "detail": "port_floor_layout_inventory, port_floor_routes_collision, port_elevator_space"
+    },
+    {
+      "id": "PORT-SUPERVISOR",
+      "status": "not_run",
+      "detail": "port_knife_cue_supervisor_route, port_supervisor_unique_drops, port_safe_room_typewriter"
+    },
+    {
+      "id": "PORT-POWER",
+      "status": "not_run",
+      "detail": "port_power_elevator_access, port_shutter_timing_occupancy, port_yard_gate_sided_access, port_shutter_lure_hedge"
+    },
+    {
+      "id": "PORT-HORDE",
+      "status": "not_run",
+      "detail": "port_front_back_horde_triggers, port_horde_entity_continuity, port_horde_passage_rules, port_horde_save_reload"
+    },
+    {
+      "id": "PORT-PUZZLES",
+      "status": "not_run",
+      "detail": "port_world_clocks_reward, port_lounge_card_power, port_safe_0121_and_staff_keys, port_puzzle_repeat_cancel"
+    },
+    {
+      "id": "PORT-LOGISTICS",
+      "status": "not_run",
+      "detail": "port_cashbox_dual_locks, port_dumbwaiter_strongbox_chain, port_truck_rewards_once, port_logistics_save_reload"
+    },
+    {
+      "id": "PORT-ENDING",
+      "status": "not_run",
+      "detail": "port_boss_door_fight_follow, port_boss_keys_garage_car, port_ending_rank_restart, port_new_game_to_ending"
+    },
+    {
+      "id": "PORT-UI",
+      "status": "not_run",
+      "detail": "port_title_death_continue_flow, port_ui_resolution_input_matrix, port_floor_map_door_status, port_opening_state_cleanup"
+    },
+    {
+      "id": "PORT-ASSETS",
+      "status": "not_run",
+      "detail": "port_asset_provenance_and_units, port_asset_material_audit, port_animation_sequence_timing"
+    },
+    {
+      "id": "PORT-AUDIO",
+      "status": "not_run",
+      "detail": "port_audio_event_routing, port_audio_pause_volume_floor"
+    },
+    {
+      "id": "PORT-E2E",
+      "status": "not_run",
+      "detail": "port_e2e_easy, port_e2e_normal, port_e2e_hard, port_e2e_no_softlocks, port_real_time_performance"
+    },
+    {
+      "id": "PORT-RELEASE",
+      "status": "not_run",
+      "detail": "port_release_bank_entry, port_release_offline_assets, port_release_bridge_disabled, port_release_save_restart"
+    },
+    {
+      "id": "PORT-ART-MOTION",
+      "status": "not_run",
+      "detail": "Missing evidence: bank_camera.sequence.json, bank_camera.contact.jpg"
+    },
+    {
+      "id": "PORT-ART-WORLD",
+      "status": "not_run",
+      "detail": "Missing evidence: bank_g_overview.png, bank_f2_overview.png, bank_f3_overview.png, bank_f4_overview.png, bank_yard_overview.png"
+    },
+    {
+      "id": "PORT-ART-UI",
+      "status": "not_run",
+      "detail": "Missing evidence: bank_ui_800x600.png, bank_ui_1024x768.png, bank_ui_1280x720.png, bank_ui_1920x1080.png, bank_ui_review_matrix.json"
+    },
+    {
+      "id": "PORT-ART-STYLE",
+      "status": "not_run",
+      "detail": "Missing evidence: bank_style_reference.png, bank_style_godot.png, bank_style_review_matrix.json, bank_combat.sequence.json, bank_combat.contact.jpg"
+    },
+    {
+      "id": "PORT-AUDIO-REVIEW",
+      "status": "not_run",
+      "detail": "Missing evidence: bank_audio_review.json, bank_audio_sync.mp4"
+    },
+    {
+      "id": "REPO-LAYOUT",
+      "status": "not_run",
+      "detail": "layout_boundaries, runtime_sync_integrity, entrypoint_compatibility, migration_provenance, migration_regression"
+    },
+    {
+      "id": "ADDON-COMPAT",
+      "status": "not_run",
+      "detail": "addon_package_integrity, addon_headless, addon_rendered, addon_fixed_step, addon_release, addon_regression, addon_deployment_negative_tests"
+    },
+    {
+      "id": "ADDON-EXTENDED",
+      "status": "pass",
+      "detail": "addon_expansion_lock, addon_systems_headless, addon_systems_rendered, addon_puzzle_editor, addon_systems_release, addon_expansion_regression, addon_expansion_units"
+    },
+    {
+      "id": "ADDON-PRODUCTION",
+      "status": "not_run",
+      "detail": "bank_plugin_checkpoint, bank_plugin_lifecycle, bank_plugin_input_flow, bank_plugin_release"
+    }
+  ]
+}

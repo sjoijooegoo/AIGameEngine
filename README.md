@@ -1,10 +1,18 @@
 # 银行危机 · AI 游戏开发与测试框架
 
+新增 [2–4 人 ENet 合作联机框架与 Ubuntu 部署](docs/bank-coop.md)：独立专用服务端、移动/加入退出同步、完整骨骼队友。当前为银行结构切片，尚未接入合作战斗。
+
 这是一套已经能运行的 **Godot 4.7.2 + Python** 开发框架。AI 可以启动游戏、读取实际渲染截图、发送键鼠事件、推进固定帧数、检查 UI 与游戏状态、复现错误并在修改后回归测试。
 
 当前附带的是开发试验场。`OriginGame.html` 保留为后续移植参考，原游戏尚未整体移植。试验场的方块人物、木箱和材质球用于验证工具，不代表最终美术效果。
 
-第二版已加入通用 `GameAdapter`、独立场景契约测试、完整游戏状态检查点、固定时间动画采样、连续帧证据，以及可校验的任务/验收清单。接手前先运行 `python tools/project.py`；当前进度与下一项任务以 `project/tasks.json` 为准。
+第二版已加入通用 `GameAdapter`、独立场景契约测试、完整游戏状态检查点、固定时间动画采样、连续帧证据，以及可校验的任务/验收清单。接手前先运行 `python engine/run.py project`；当前进度与下一项任务以 `project/tasks.json` 为准。
+
+完整移植规划见 [Godot 移植 TODO](docs/porting-todo.md)：从原作规格、一楼可玩切片，到四层主线、表现与发行，共 20 项待办。银行专属验收项目前是计划，尚未实现或运行，不能用试验场通过结果替代。
+
+当前目录与维护规则见 [项目分层说明](docs/repository-layers.md)。默认使用 [项目开发 Skill](.agents/skills/aigameengine-dev/SKILL.md) 调用本地脚本；游戏 MCP 为可选兼容入口，不自动注册。
+
+独立插件试验场已提供相机、调试绘图、文本分支、行为树和谜题编辑工具，版本锁、启动命令与接入边界见 [插件使用说明](docs/godot-addons-expansion.md)。默认 lab 和正式银行工程的职责保持独立。
 
 ## 现在可以做什么
 
@@ -24,27 +32,28 @@
 在 PowerShell 中进入本目录：
 
 ```powershell
-cd D:\RemakeGame
+cd D:\AIGameEngine
 # 本机已安装；新机器上执行：官方归档 + SHA512 校验，不修改系统 PATH。
-.\tools\setup.ps1
+.\engine\tools\setup.ps1
+.\.venv\Scripts\Activate.ps1
 
 # 普通游戏窗口 / Godot 编辑器
-python tools/lab.py play
-python tools/lab.py editor
+python engine/run.py lab play
+python engine/run.py lab editor
 
 # 逻辑与操作测试，不需要 GPU
-python tools/qa.py --headless
+python engine/run.py qa --headless
 
 # 包含实际渲染、UI 分辨率矩阵和视觉回归，需要可用的 GPU/桌面会话
-python tools/qa.py
+python engine/run.py qa
 
 # 测试框架自身：含“故意制造画面差异应该失败”等负例
-python -m unittest discover -s tests -p 'test_*.py' -v
+python -m unittest discover -s engine/tests -p 'test_*.py' -v
 ```
 
 普通游戏：WASD 移动，Shift 奔跑；点击画面后鼠标控制视角；E 拾取/开门；左键近战；Tab 背包；Esc 暂停。门卡在中央矮台上，门在前方。NPC 的追击、遮挡与战斗通过独立测试场景运行。
 
-`artifacts/latest-report.json` 指向最近的 HTML/JSON 报告。每次运行创建独立目录，保存原图、截图时的状态、输入回放、资产审计、源码摘要、日志和失败用例。
+`logs/latest/report.json` 指向最近的 HTML/JSON 报告。每次运行创建独立目录，保存原图、截图时的状态、输入回放、资产审计、源码摘要、日志和失败用例。
 
 退出码：`0` 已请求的检查通过；`1` 存在失败；`2` 存在待审阅视觉项。首次无基准时，可用 `--allow-unreviewed` 允许退出 0，但报告仍保留待审阅。无窗口测试明确跳过视觉检查。
 
@@ -53,14 +62,14 @@ python -m unittest discover -s tests -p 'test_*.py' -v
 无需额外插件，任何可以调用 Python 并查看本地图片的代码助手都可以使用：
 
 ```powershell
-python tools/lab.py start
+python engine/run.py lab start
 # 使用上一步打印的真实 session 路径，勿复用已退出的会话。
-$session = 'D:\RemakeGame\artifacts\sessions\这里替换为实际目录'
-python tools/lab.py call state --session $session
-python tools/lab.py call act --session $session --args '{"keys":["W"],"frames":30}'
-python tools/lab.py call capture --session $session --args '{"name":"after_walk"}'
-python tools/lab.py call ui --session $session
-python tools/lab.py call quit --session $session
+$session = 'D:\AIGameEngine\logs\sessions\这里替换为实际目录'
+python engine/run.py lab call state --session $session
+python engine/run.py lab call act --session $session --args '{"keys":["W"],"frames":30}'
+python engine/run.py lab call capture --session $session --args '{"name":"after_walk"}'
+python engine/run.py lab call ui --session $session
+python engine/run.py lab call quit --session $session
 ```
 
 截图命令返回 PNG 的绝对路径；AI 应实际打开该图片。键盘通过 `Input.parse_input_event` 进入 InputMap 与游戏处理函数；UI 点击通过控件位置生成鼠标按下/抬起，走 GUI 命中测试，不直接调用按钮回调。坐标转换覆盖窗口缩放。
@@ -89,18 +98,18 @@ python tools/lab.py call quit --session $session
 
 所有参数也可以用 `--args-file path.json` 传递，避免 shell 引号问题。测试在命令之间停止玩法推进，渲染继续；一次只允许一个客户端写入。超时会话应关闭并重新启动，不应重发有副作用的命令。输入桥是引擎内操作，不能证明 Windows 原生设备链路。
 
-重放：`python tools/lab.py replay artifacts/sessions/<运行目录>/trace.jsonl`。第二版会话具有 `context.json`；默认校验源码/资源指纹，代码变化时仅在有意回归验证时使用 `--allow-source-change`。历史版本不会自动恢复。可加 `--headless` 重放不含截图/序列的轨迹；第一版旧轨迹缺少 context，需要在第二版重新采集。
+重放：`python engine/run.py lab replay logs/sessions/<运行目录>/trace.jsonl`。第二版会话具有 `context.json`；默认校验源码/资源指纹，代码变化时仅在有意回归验证时使用 `--allow-source-change`。历史版本不会自动恢复。可加 `--headless` 重放不含截图/序列的轨迹；第一版旧轨迹缺少 context，需要在第二版重新采集。
 
 ## 连续帧、慢放和状态恢复
 
 ```powershell
-python tools/lab.py call reset --session $session --args '{"fixture":"gallery","seed":12345}'
-python tools/lab.py call view --session $session --args '{"name":"npc","hud":false}'
-python tools/lab.py call animation --session $session --args '{"entity":"npc","clip":"walk","time":0}'
-python tools/lab.py call checkpoint --session $session --args '{"name":"start_pose"}'
-python tools/lab.py call sequence --session $session --args '{"name":"walk_cycle","count":13,"interval":5}'
-python tools/sequence.py "$session/walk_cycle.sequence.json" --speed 0.25
-python tools/lab.py call restore --session $session --args '{"name":"start_pose"}'
+python engine/run.py lab call reset --session $session --args '{"fixture":"gallery","seed":12345}'
+python engine/run.py lab call view --session $session --args '{"name":"npc","hud":false}'
+python engine/run.py lab call animation --session $session --args '{"entity":"npc","clip":"walk","time":0}'
+python engine/run.py lab call checkpoint --session $session --args '{"name":"start_pose"}'
+python engine/run.py lab call sequence --session $session --args '{"name":"walk_cycle","count":13,"interval":5}'
+python engine/run.py sequence "$session/walk_cycle.sequence.json" --speed 0.25
+python engine/run.py lab call restore --session $session --args '{"name":"start_pose"}'
 ```
 
 序列生成原始 PNG、逐帧状态、HTML 查看页、联系表与无损 WebP 动画。13 张、间隔 5 帧覆盖 1 秒模拟时间。HTML 可前后逐帧、拖动和切换播放速度；WebP 可由支持动画的图片查看器打开。PNG 写入时玩法停止推进，因此慢机器不会造成采样时间漂移。序列最多 120 张、1200 个逻辑步；不录制声音，也不用于测量实际 FPS。
@@ -113,27 +122,27 @@ python tools/lab.py call restore --session $session --args '{"name":"start_pose"
 
 ## 模型、材质、纹理开发
 
-1. 将自有或已获授权的 GLB/glTF/纹理放入 `game/assets/`；在 Godot 中导入或运行 `python tools/lab.py import`。
+1. 将自有或已获授权的 GLB/glTF/纹理放入 `engine/sandbox/runtime/assets/`；在 Godot 中导入或运行 `python engine/run.py lab import`。
 2. 启动测试会话，使用 `asset` 加载目标资源，再用 `view` / `capture` / `audit` 检查。
-3. 目前转台按约 1.3 米大小的样例模型布置；大模型需要调整 `lab.gd` 中相机与检查台位置。场景资源属于可信项目代码，加载 `.tscn` 也会运行其脚本。
+3. 目前转台按约 1.3 米大小的样例模型布置；大模型需要调整 `engine/sandbox/runtime/scripts/lab.gd` 中相机与检查台位置。场景资源属于可信项目代码，加载 `.tscn` 也会运行其脚本。
 4. 检查轮廓、比例、表面朝向、UV 拉伸、纹理方向、光照、阴影、透明排序等。对于骨骼动画，新增固定动画时间点的场景和断言，不应沿用静态模型结论。
-5. 样例资产可由 `python tools/make_sample_assets.py` 重建，无外部资产下载。1 Godot 单位约定为 1 米。
+5. 样例资产可由 `python engine/run.py make_sample_assets` 重建，无外部资产下载。1 Godot 单位约定为 1 米。
 
 ## 视觉基准与迭代纪律
 
-`tests/baselines/` 存放经 AI 查看确认的**试验场初始基准**；这不表示用户批准了最终画风。`manifest.json` 记录引擎、渲染器、GPU 和审阅来源。`tests/visual_policy.json` 定义差异阈值，默认不屏蔽区域。
+`engine/tests/baselines/` 存放经 AI 查看确认的**试验场初始基准**；这不表示用户批准了最终画风。`manifest.json` 记录引擎、渲染器、GPU 和审阅来源。`engine/tests/visual_policy.json` 定义差异阈值，默认不屏蔽区域。
 
 当变化符合需求并经过实际看图后，才更新基准：
 
 ```powershell
-python tools/visual.py artifacts/sessions/<运行目录>/report.json --reviewer '审阅者与变更原因'
-python tools/qa.py
+python engine/run.py visual logs/sessions/<运行目录>/report.json --reviewer '审阅者与变更原因'
+python engine/run.py qa
 ```
 
 若报告中的失败来自**预期的画面改动**，而所有执行检查通过，可明确选择审阅过的图：
 
 ```powershell
-python tools/visual.py artifacts/sessions/<运行目录>/report.json --reviewer 'AI' --names model model_90 --accept-visual-changes --reason '按需求修改木箱纹理，已查看原图及差异'
+python engine/run.py visual logs/sessions/<运行目录>/report.json --reviewer 'AI' --names model model_90 --accept-visual-changes --reason '按需求修改木箱纹理，已查看原图及差异'
 ```
 
 该参数不能绕过玩法、采集或 UI 检查失败。更新会检查原图哈希、记录审阅原因，并保留未选择的旧基准。更换显卡/渲染器时必须重新审阅所有既有基准，避免混合环境。回归会核对基准图与审阅清单中的哈希。
@@ -143,64 +152,57 @@ python tools/visual.py artifacts/sessions/<运行目录>/report.json --reviewer 
 ## 扩展玩法与移植原游戏
 
 ```text
-game/scripts/player.gd     玩家运动
-game/scripts/npc.gd        示例 NPC 状态机
-game/scripts/hud.gd        UI 与可检查控件注册
-game/scripts/lab.gd        示例世界、交互、存档、场景重置
-game/testing/bridge.gd     本地测试桥
-tests/scenarios.json       可读的操作步骤与预期断言
-tools/lab.py               启动、协议、回放
-tools/qa.py                测试编排与报告
-tools/visual.py            图片差异与显式基准提升
-tools/mcp_server.py        可选 MCP stdio 适配器
+engine/godot/fixtures/player.gd     玩家运动
+engine/sandbox/runtime/scripts/npc.gd        示例 NPC 状态机
+engine/sandbox/runtime/scripts/hud.gd        UI 与可检查控件注册
+engine/sandbox/runtime/scripts/lab.gd        示例世界、交互、存档、场景重置
+engine/godot/testing/bridge.gd     本地测试桥
+engine/tests/scenarios.json       可读的操作步骤与预期断言
+engine/run.py lab               启动、协议、回放
+engine/run.py qa                测试编排与报告
+engine/run.py visual            图片差异与显式基准提升
+engine/mcp/server.py        可选 MCP stdio 适配器
 ```
 
-新增游戏/关卡通过 `game/testing/game_adapter.gd` 接入。`lab_adapter.gd` 封装银行的特定逻辑，`probe_adapter.gd` 用独立计数场景证明桥不依赖玩家/背包/NPC。桥不再直接访问银行字段。接口说明见 [适配契约](docs/adapter-contract.md)，新能力应在适配器中实现，别把完整关卡塞进测试桥。
+新增游戏/关卡通过 `engine/godot/testing/game_adapter.gd` 接入。`lab_adapter.gd` 封装银行的特定逻辑，`probe_adapter.gd` 用独立计数场景证明桥不依赖玩家/背包/NPC。桥不再直接访问银行字段。接口说明见 [适配契约](docs/adapter-contract.md)，新能力应在适配器中实现，别把完整关卡塞进测试桥。
 
-可直接验证独立场景：`python tools/lab.py start --headless --scene probe`，然后调用 `describe`、`reset`、`act {"keys":["SPACE"],"frames":2}`、`checkpoint`/`restore`。它有不同的按键映射和随机计数逻辑，不支持美术观察命令。
+可直接验证独立场景：`python engine/run.py lab start --headless --scene probe`，然后调用 `describe`、`reset`、`act {"keys":["SPACE"],"frames":2}`、`checkpoint`/`restore`。它有不同的按键映射和随机计数逻辑，不支持美术观察命令。
 
-将成功标准写入 `tests/scenarios.json`。支持 `eq`、`near`、`gte`、`lt`、`contains`、`length`，路径支持字典键和数组下标。用 fixture 准备起点，用 `act`/`click` 证明真实流程；禁止通过改状态直接伪造通关。
+将成功标准写入 `engine/tests/scenarios.json`。支持 `eq`、`near`、`gte`、`lt`、`contains`、`length`，路径支持字典键和数组下标。用 fixture 准备起点，用 `act`/`click` 证明真实流程；禁止通过改状态直接伪造通关。
 
 建议移植顺序：一楼场景与角色 → 调查/背包/门锁 → 单 NPC 战斗 → 存档 → 多楼层与解谜。每加入一个系统，增加对应的成功、失败和边界场景，再进行渲染回归。
 
 ## 资产管理与场景装配
 
-执行 `python tools/assets.py demo` 可注册原创 GLB/PNG 样例并搭建可玩的房间，再运行 `python tools/lab.py play --scene assembly:bank_room`。支持 GLB/glTF/FBX 与常见纹理，提供内容版本、几何/材质分析、锚点摆放、空间检查、真实引擎预览和 MCP 后台作业。完整命令、参数与第一版范围见 [资产工具链](docs/assets.md)。`python tools/asset_qa.py` 运行故障案例和真实输入测试并生成预览证据。
+执行 `python engine/run.py assets demo` 可注册原创 GLB/PNG 样例并搭建可玩的房间，再运行 `python engine/run.py lab play --scene assembly:bank_room`。支持 GLB/glTF/FBX 与常见纹理，提供内容版本、几何/材质分析、锚点摆放、空间检查、真实引擎预览和 MCP 后台作业。完整命令、参数与第一版范围见 [资产工具链](docs/assets.md)。`python engine/run.py asset_qa` 运行故障案例和真实输入测试并生成预览证据。
 
 ## 任务与验收
 
-`project/tasks.json` 保存里程碑、下一项任务、依赖、状态与完成证据。`project/acceptance.json` 保存机器检查和视觉评审的明确标准。`python tools/project.py` 会检查 ID、依赖环和缺失验收项；它是接手与验收工具，不会自行启动无限开发循环。
+`project/tasks.json` 保存里程碑、下一项任务、依赖、状态与完成证据。`project/acceptance.json` 保存机器检查和视觉评审的明确标准。`python engine/run.py project` 会检查 ID、依赖环和缺失验收项；它是接手与验收工具，不会自行启动无限开发循环。
 
-`python tools/project.py --report <report.json>` 会生成该次运行的 `acceptance.json`。没有执行的测试是 `not_run`，没有视觉评审的是 `needs_review`，不能从测试通过推断用户美术认可。添加 `--review <review.json>` 可附上具名、说明范围、绑定报告及证据 SHA256 的视觉评审；具体格式见 [适配契约](docs/adapter-contract.md)。
+`python engine/run.py project --report <report.json>` 会生成该次运行的 `acceptance.json`。没有执行的测试是 `not_run`，没有视觉评审的是 `needs_review`，不能从测试通过推断用户美术认可。添加 `--review <review.json>` 可附上具名、说明范围、绑定报告及证据 SHA256 的视觉评审；具体格式见 [适配契约](docs/adapter-contract.md)。
 
-## Codex 项目级 MCP 接入
+## AI 开发入口
 
-本地 stdio 服务提供 13 个工具：原有游戏操作，加上资产检索、导入、准备、预览、场景装配和异步作业管理。资产用法见 [资产工具链](docs/assets.md)。`capture` 会将 PNG 像素作为 MCP 图像返回，便于支持视觉工具的 AI 直接查看。服务在标准输出上只发送 JSON-RPC；退出时关闭它拥有的游戏会话。
+默认使用项目 Skill [aigameengine-dev](.agents/skills/aigameengine-dev/SKILL.md) 和 `python engine/run.py <命令>`。Skill 描述如何定位、复现、修复和验证，工具实现集中在 `engine/`；修改 Python 脚本后下次调用直接使用新代码。
 
-仓库已包含 `.codex/config.toml`，注册名为 `aigameengine`，启动本地 `tools/mcp_server.py`。`cwd = ".."` 相对于 `.codex/` 指向仓库根目录，不绑定 `D:\RemakeGame`，克隆到其他路径仍然可用。需要先运行 `tools/setup.ps1`，确保 `python` 在 PATH 中；可通过环境变量 `GODOT_BIN` 使用指定引擎。
+`workspace.json` 集中定义项目和路径。默认 `sandbox` 指向 `engine/sandbox/runtime`，包含 lab/probe 和装配示例；`bank` 指向预留的 `game/runtime`，尚未实现，选择它运行会明确报错。
 
-Codex 仅为已信任的项目加载项目级配置。首次打开克隆的仓库时，按客户端提示确认项目可信；如果当前会话没有显示该 MCP，重启客户端或重新打开项目，再检查 `/mcp`。本配置不修改用户级配置或权限策略。参见 [官方项目配置说明](https://developers.openai.com/codex/config-advanced/)。
+修改共享 Godot 脚本后执行 `python engine/run.py sync`，再执行 `python engine/run.py lab import`。部署副本位于目标工程的 `addons/ai_engine`；不要在那里修改维护源。同步前核验旧副本，发现手动改动会拒绝覆盖。
 
-其他支持 MCP 的客户端可配置以下启动信息，具体配置位置由客户端决定。CLI 仍可独立使用：
+日志入口：`logs/calls` 记录 CLI、游戏命令和可选 MCP 调用；`logs/sessions` 保存回放、状态、截图与游戏日志；`logs/jobs` 保存资产作业；`logs/runs` 保存导入和普通游戏/编辑器输出。历史 `artifacts` 保持原样，新索引位于 `logs/latest`。旧 `tools/*.py` 命令和 `tests` 测试发现入口保留为转发器，实际实现位于 engine。
 
-```json
-{
-  "command": "python",
-  "args": ["D:/RemakeGame/tools/mcp_server.py"]
-}
-```
-
-确保客户端可找到带 Pillow 的同一 Python；必要时把 `command` 换成 Python 的绝对路径。该服务不托管模型、不包含自主无限循环，也不需要模型 API 密钥。AI 负责分析/修改/调度，这个框架提供观察、操作和可核验结果。
+可选 MCP 适配器在 `engine/mcp`，需其他客户端接入时手动运行 `python engine/run.py mcp`。它与 CLI 使用同一实现，但当前项目不默认注册游戏 MCP；已有 Blender 配置独立保留。本工具链无需模型 API 密钥。
 
 ## Windows 导出与持续集成
 
 ```powershell
-.\tools\setup.ps1 -ExportTemplates
-.\tools\build.ps1
-python tools/smoke_release.py
+.\engine\tools\setup.ps1 -ExportTemplates
+.\engine\tools\build.ps1
+python engine/run.py smoke_release
 ```
 
-输出 `build/BankCrisisLab.exe`。发布构建不激活测试桥，即使传入 `--ai-session`。模板固定版本且校验 SHA512。当前 EXE 未签名，仅是试验场演示程序。
+输出 `build/sandbox/windows/release/<版本>/BankCrisisLab.exe`。构建包附带 `manifest.json` 和文件哈希；`logs/latest/build-sandbox-release.json` 指向最近发布构建，构建日志和启动检查保存在 `logs/builds/`。发布构建不激活测试桥，即使传入 `--ai-session`。模板固定版本且校验 SHA512。当前 EXE 未签名，仅是试验场演示程序。
 
 `.github/workflows/qa.yml` 是可用的 Windows headless CI 配置，推送到 GitHub 仓库后运行。每次推送会在干净环境执行框架、资产管线及 headless 玩法检查，结果以对应 GitHub Actions 运行记录为准。渲染回归需要带 GPU 的环境；`audit` 中计数是诊断信息，固定帧率测试不代表真实性能基准。
 

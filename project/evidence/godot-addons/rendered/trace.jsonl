@@ -1,0 +1,28 @@
+{"id": "1790944060226306300", "command": "step", "args": {"frames": 45}}
+{"id": "1790944060519630900", "command": "state", "args": {}}
+{"id": "1790944060532846100", "command": "capture", "args": {"name": "idle_before"}}
+{"id": "1790944061387985600", "command": "state", "args": {}}
+{"id": "1790944061411678500", "command": "capture", "args": {"name": "idle_after"}}
+{"id": "1790944061478183800", "command": "act", "args": {"keys": ["S"], "frames": 55}}
+{"id": "1790944061826986100", "command": "step", "args": {"frames": 45}}
+{"id": "1790944062112636900", "command": "capture", "args": {"name": "rear_wall"}}
+{"id": "1790944062166191400", "command": "act", "args": {"keys": ["W"], "frames": 85}}
+{"id": "1790944062696218400", "command": "sequence", "args": {"name": "ramp_follow", "count": 15, "interval": 10, "keys": ["W"]}}
+{"id": "1790944063822022800", "command": "state", "args": {}}
+{"id": "1790944064334763900", "command": "state", "args": {}}
+{"id": "1790944064349204900", "command": "capture", "args": {"name": "moving_damping_before"}}
+{"id": "1790944065195834000", "command": "state", "args": {}}
+{"id": "1790944065209503700", "command": "capture", "args": {"name": "moving_damping_after"}}
+{"id": "1790944065264038700", "command": "act", "args": {"keys": ["F"], "frames": 1}}
+{"id": "1790944065280109900", "command": "state", "args": {}}
+{"id": "1790944065294783000", "command": "capture", "args": {"name": "mid_tween_before"}}
+{"id": "1790944066131001900", "command": "state", "args": {}}
+{"id": "1790944066158797600", "command": "capture", "args": {"name": "mid_tween_after"}}
+{"id": "1790944066215073600", "command": "sequence", "args": {"name": "aim_transition", "count": 13, "interval": 2}}
+{"id": "1790944067144929400", "command": "state", "args": {}}
+{"id": "1790944067158258300", "command": "act", "args": {"mouse": [170, -35], "frames": 20}}
+{"id": "1790944067299265900", "command": "capture", "args": {"name": "overlay_on"}}
+{"id": "1790944067346779600", "command": "act", "args": {"keys": ["G"], "frames": 1}}
+{"id": "1790944067370166400", "command": "capture", "args": {"name": "overlay_off"}}
+{"id": "1790944067408382300", "command": "checkpoint", "args": {"name": "unsupported"}}
+{"id": "1790944067423499500", "command": "quit", "args": {}}

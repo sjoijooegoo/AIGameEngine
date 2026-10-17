@@ -1,0 +1,28 @@
+{"id": "1790945209862807900", "command": "step", "args": {"frames": 30}}
+{"id": "1790945210056417000", "command": "act", "args": {"keys": ["E"], "frames": 1}}
+{"id": "1790945210080794000", "command": "state", "args": {}}
+{"id": "1790945210095556800", "command": "state", "args": {}}
+{"id": "1790945210108964800", "command": "capture", "args": {"name": "dialogue_before"}}
+{"id": "1790945210755658400", "command": "state", "args": {}}
+{"id": "1790945210768435000", "command": "capture", "args": {"name": "dialogue_after"}}
+{"id": "1790945210822152300", "command": "ui", "args": {}}
+{"id": "1790945210837128400", "command": "click", "args": {"control": "choice_1"}}
+{"id": "1790945210859753500", "command": "state", "args": {}}
+{"id": "1790945210876443200", "command": "act", "args": {"keys": ["E"], "frames": 1}}
+{"id": "1790945210891194300", "command": "state", "args": {}}
+{"id": "1790945210906100800", "command": "act", "args": {"keys": ["K"], "frames": 1}}
+{"id": "1790945210922093800", "command": "act", "args": {"keys": ["E"], "frames": 1}}
+{"id": "1790945210939191600", "command": "state", "args": {}}
+{"id": "1790945210963728500", "command": "capture", "args": {"name": "unlocked_dialogue"}}
+{"id": "1790945211002660900", "command": "act", "args": {"keys": ["2"], "frames": 1}}
+{"id": "1790945211017940300", "command": "state", "args": {}}
+{"id": "1790945211034632100", "command": "act", "args": {"keys": ["F"], "frames": 30}}
+{"id": "1790945211225043400", "command": "state", "args": {}}
+{"id": "1790945211240556100", "command": "capture", "args": {"name": "ai_before"}}
+{"id": "1790945211882162200", "command": "state", "args": {}}
+{"id": "1790945211895204700", "command": "capture", "args": {"name": "ai_after"}}
+{"id": "1790945211939702200", "command": "sequence", "args": {"name": "ai_progress", "count": 9, "interval": 6}}
+{"id": "1790945212543812900", "command": "act", "args": {"keys": ["SPACE"], "frames": 1}}
+{"id": "1790945212557952300", "command": "step", "args": {"frames": 60}}
+{"id": "1790945212935809900", "command": "act", "args": {"keys": ["SPACE"], "frames": 10}}
+{"id": "1790945213020742900", "command": "quit", "args": {}}

@@ -1,0 +1,2 @@
+# Evidence hashes bind exact bytes, including JSON/HTML line endings.
+* -text

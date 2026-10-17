@@ -1,0 +1,101 @@
+{
+  "session": "D:\\AIGameEngine\\logs\\sessions\\20261002-204413-8893f4bb",
+  "headless": true,
+  "checks": [
+    {
+      "name": "limboai_manual_steps",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "dialogue_locked_branch",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "dialogue_state_frozen",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "controls_inside_viewport",
+      "status": "fail",
+      "detail": null
+    },
+    {
+      "name": "real_click_selects_response",
+      "status": "fail",
+      "detail": {
+        "ai_mode": "巡逻",
+        "ai_progress": 0.0775,
+        "ai_ticks": 31,
+        "alert": false,
+        "busy": false,
+        "dialogue_id": "bddhsjqf0dhk2@4",
+        "has_keycard": false,
+        "manual_ai": true,
+        "paused": false,
+        "responses": 2,
+        "text": "终端：门禁锁定，请先寻找门卡。",
+        "tick": 31
+      }
+    },
+    {
+      "name": "dialogue_ends",
+      "status": "fail",
+      "detail": null
+    },
+    {
+      "name": "game_owned_state_changes_branch",
+      "status": "fail",
+      "detail": {
+        "ai_mode": "巡逻",
+        "ai_progress": 0.085,
+        "ai_ticks": 34,
+        "alert": false,
+        "busy": false,
+        "dialogue_id": "bddhsjqf0dhk2@4",
+        "has_keycard": true,
+        "manual_ai": true,
+        "paused": false,
+        "responses": 2,
+        "text": "终端：门禁锁定，请先寻找门卡。",
+        "tick": 34
+      }
+    },
+    {
+      "name": "keyboard_selects_response",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "blackboard_drives_action",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "ai_state_frozen",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "pause_stops_ai",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "resume_advances_ai",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "engine_log_clean",
+      "status": "fail",
+      "detail": null
+    }
+  ],
+  "limits": [
+    "Fixture only, no production navigation or complete checkpoints"
+  ],
+  "passed": false
+}

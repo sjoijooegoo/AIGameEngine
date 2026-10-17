@@ -1,5 +1,7 @@
-name: Game logic and test framework
-on: [push, pull_request, workflow_dispatch]
+name: Legacy sandbox QA (manual only)
+# The user retired automatic legacy-world testing on 2026-10-07.
+# Current bank work uses targeted game/tests checks, not this legacy suite.
+on: [workflow_dispatch]
 jobs:
   logic:
     runs-on: windows-latest
@@ -10,13 +12,13 @@ jobs:
           python-version: '3.11'
       - name: Install pinned engine and Python dependency
         shell: pwsh
-        run: ./tools/setup.ps1
-      - run: python -m unittest discover -s tests -p "test_*.py" -v
-      - run: python tools/project.py
-      - run: python tools/qa.py --headless
+        run: ./engine/tools/setup.ps1
+      - run: ./.venv/Scripts/python.exe -m unittest discover -s engine/tests -p "test_*.py" -v
+      - run: ./.venv/Scripts/python.exe engine/run.py project
+      - run: ./.venv/Scripts/python.exe engine/run.py qa --headless
       - uses: actions/upload-artifact@v4
         if: always()
         with:
           name: game-qa-evidence
-          path: artifacts/
+          path: logs/
   # Run rendered QA on a GPU-equipped workstation. Headless CI is not visual validation.

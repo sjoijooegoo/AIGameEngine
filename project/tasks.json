@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "current_milestone": "assets-v1",
+  "current_milestone": "bank-port-planning",
   "next_task": "PORT-001",
   "tasks": [
     {
@@ -48,27 +48,394 @@
     {
       "id": "PORT-001",
       "status": "planned",
-      "title": "从 OriginGame.html 提取一楼布局、交互与门锁规则，建立移植验收说明",
+      "title": "提取原作布局、实体、主线规则与实玩基线",
+      "milestone": "spec",
       "acceptance": [
-        "FW-INPUT"
+        "PORT-SPEC"
       ],
       "depends_on": [
-        "FRAMEWORK-002"
+        "FRAMEWORK-002",
+        "REPO-001"
       ],
-      "definition_of_done": "产出一楼布局与实体清单、原作规则对应关系、可复现玩法测试方案；实现前补充专属验收项"
+      "definition_of_done": "四层实体及规则可追溯；一楼精确清单、实玩参照、主线依赖和冲突决议齐备。",
+      "plan": "docs/porting-todo.md"
     },
     {
       "id": "PORT-002",
       "status": "planned",
-      "title": "迁移现金区与大厅，实现一条可玩的真实流程",
+      "title": "一楼现金区、双门与大厅可玩切片",
+      "milestone": "slice",
       "acceptance": [
-        "FW-INPUT",
-        "FW-RESTORE"
+        "PORT-SLICE"
       ],
       "depends_on": [
         "PORT-001"
       ],
-      "definition_of_done": "使用原作空间布局与门锁规则，并验证画面、操作和存档；不能用现有试验场代替"
+      "definition_of_done": "原作出生点到大厅由真实输入完成；双门误开警报、回程钥匙、自动关闭与占用保护有证据，独立 bank 适配器和 QA 入口可用。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-003",
+      "status": "planned",
+      "title": "完整玩家控制、相机与输入状态",
+      "milestone": "systems",
+      "acceptance": [
+        "PORT-PLAYER",
+        "PORT-ART-MOTION"
+      ],
+      "depends_on": [
+        "PORT-002"
+      ],
+      "definition_of_done": "移动、伤势速度、瞄准、快转、灌木蹲伏及焦点恢复匹配规格，连续镜头证据无穿墙跳变。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-004",
+      "status": "planned",
+      "title": "物品、显式选物使用与经济系统",
+      "milestone": "systems",
+      "acceptance": [
+        "PORT-ITEMS"
+      ],
+      "depends_on": [
+        "PORT-002"
+      ],
+      "definition_of_done": "钥匙武器文件与回复品完整；错用、取消、重复拾取、余额不足不改变不应改变的状态。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-005",
+      "status": "planned",
+      "title": "五类武器、伤害、耐久与抓取挣扎",
+      "milestone": "systems",
+      "acceptance": [
+        "PORT-COMBAT"
+      ],
+      "depends_on": [
+        "PORT-003",
+        "PORT-004"
+      ],
+      "definition_of_done": "五武器按原作参数工作，弹药耐久与命中时刻准确，变钝菜刀不阻断破锁主线。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-006",
+      "status": "planned",
+      "title": "六类敌人数据与基础感知状态机",
+      "milestone": "systems",
+      "acceptance": [
+        "PORT-AI"
+      ],
+      "depends_on": [
+        "PORT-003",
+        "PORT-005"
+      ],
+      "definition_of_done": "单敌人感知、攻击、死亡、返回与安全区规则实测；六类数据及个体覆盖值可追溯。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-007",
+      "status": "planned",
+      "title": "双层楼梯、动态门与多敌人导航原型",
+      "milestone": "systems",
+      "acceptance": [
+        "PORT-NAV"
+      ],
+      "depends_on": [
+        "PORT-002",
+        "PORT-006"
+      ],
+      "definition_of_done": "前后楼梯与平台连续可走；跨层追击归位、门阻路重寻路、窄门多敌人及隔层命中均有实测。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-008",
+      "status": "planned",
+      "title": "正式进度存档与完整开发检查点",
+      "milestone": "systems",
+      "acceptance": [
+        "PORT-SAVE"
+      ],
+      "depends_on": [
+        "PORT-004",
+        "PORT-006"
+      ],
+      "definition_of_done": "三个手动槽与自动档可恢复进度；原作敌人归位语义和完整开发恢复分开验证；新增系统必须同步扩展覆盖。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-009",
+      "status": "planned",
+      "title": "四层银行、后院与前后楼梯空间重建",
+      "milestone": "world",
+      "acceptance": [
+        "PORT-WORLD",
+        "PORT-ART-WORLD"
+      ],
+      "depends_on": [
+        "PORT-007"
+      ],
+      "definition_of_done": "按原始实体清单建成四层及后院；出生点、门洞、交通连接和关键路线准确，固定视角可对照。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-010",
+      "status": "planned",
+      "title": "四楼工具路线、三楼主管与安全屋",
+      "milestone": "first-half",
+      "acceptance": [
+        "PORT-SUPERVISOR"
+      ],
+      "depends_on": [
+        "PORT-004",
+        "PORT-005",
+        "PORT-006",
+        "PORT-008",
+        "PORT-009"
+      ],
+      "definition_of_done": "真实输入完成菜刀破锁、台球杆推柜、主管战及钥匙拾取；安全屋存档和死亡重试可用。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-011",
+      "status": "planned",
+      "title": "恢复供电、电梯、卷帘门与后院权限",
+      "milestone": "first-half",
+      "acceptance": [
+        "PORT-POWER"
+      ],
+      "depends_on": [
+        "PORT-010"
+      ],
+      "definition_of_done": "供电状态驱动电梯/读卡器等设备；卷帘门时间与占用保护、内外侧权限和诱敌隐藏规则跨层保持正确。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-012",
+      "status": "planned",
+      "title": "主管之后的尸群与跨层追赶事件",
+      "milestone": "first-half",
+      "acceptance": [
+        "PORT-HORDE"
+      ],
+      "depends_on": [
+        "PORT-007",
+        "PORT-008",
+        "PORT-010",
+        "PORT-011"
+      ],
+      "definition_of_done": "前后楼梯事件、分波及驻守均使用稳定个体；回头换层存读档不重复刷怪，特殊穿群规则实测。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-013",
+      "status": "planned",
+      "title": "世界钟、门卡、保险柜与员工钥匙",
+      "milestone": "puzzles",
+      "acceptance": [
+        "PORT-PUZZLES"
+      ],
+      "depends_on": [
+        "PORT-011",
+        "PORT-012"
+      ],
+      "definition_of_done": "通过世界钟获得白色门卡、进入休息区、读取0121线索并获得C钥匙；A/B钥匙与主管钥匙串齐备。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-014",
+      "status": "planned",
+      "title": "三现金箱、货品电梯与运钞车补给",
+      "milestone": "puzzles",
+      "acceptance": [
+        "PORT-LOGISTICS"
+      ],
+      "depends_on": [
+        "PORT-008",
+        "PORT-013"
+      ],
+      "definition_of_done": "双锁任意顺序、供电运箱和车钥匙链可真实完成；运钞车只给物资，不冒充结局，无重复奖励。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-015",
+      "status": "planned",
+      "title": "行长Boss、车库逃生与结算",
+      "milestone": "complete-route",
+      "acceptance": [
+        "PORT-ENDING"
+      ],
+      "depends_on": [
+        "PORT-005",
+        "PORT-007",
+        "PORT-008",
+        "PORT-014"
+      ],
+      "definition_of_done": "从新游戏到轿车逃生的真实输入证据完整，Boss追击/掉落、评级与返回标题正确。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-016",
+      "status": "planned",
+      "title": "完整原生UI、地图、开场及叙事",
+      "milestone": "presentation",
+      "acceptance": [
+        "PORT-UI",
+        "PORT-ART-UI"
+      ],
+      "depends_on": [
+        "PORT-008",
+        "PORT-015"
+      ],
+      "definition_of_done": "全部菜单、机关与叙事可真实点击；四种分辨率中文可读，地图门状态正确，过时提示已按规格修正。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-017",
+      "status": "planned",
+      "title": "原作风格、正式资产、照明与动画",
+      "milestone": "presentation",
+      "acceptance": [
+        "PORT-ASSETS",
+        "PORT-ART-STYLE"
+      ],
+      "depends_on": [
+        "ASSETS-001",
+        "PORT-009",
+        "PORT-015"
+      ],
+      "definition_of_done": "正式资源可追溯，低多边形风格、雾、照明、后处理与动画有实拍对照及连续帧评审；不自动推断用户美术批准。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-018",
+      "status": "planned",
+      "title": "合成音效、环境音乐与音画同步",
+      "milestone": "presentation",
+      "acceptance": [
+        "PORT-AUDIO",
+        "PORT-AUDIO-REVIEW"
+      ],
+      "depends_on": [
+        "PORT-011",
+        "PORT-015",
+        "PORT-016"
+      ],
+      "definition_of_done": "事件路由、音量、暂停和跨层衰减实测；实际试听与音画同步录像经过具名评审。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-019",
+      "status": "planned",
+      "title": "完整主线、三难度与性能回归",
+      "milestone": "validation",
+      "acceptance": [
+        "PORT-E2E"
+      ],
+      "depends_on": [
+        "PORT-015",
+        "PORT-016",
+        "PORT-017",
+        "PORT-018"
+      ],
+      "definition_of_done": "三难度完整路线、资源耗尽和中途读档不软锁；在明确设备及预算下记录真实性能，人工核验画面声音与操作。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "PORT-020",
+      "status": "planned",
+      "title": "正式银行Windows构建与交付",
+      "milestone": "release",
+      "acceptance": [
+        "PORT-RELEASE"
+      ],
+      "depends_on": [
+        "PORT-019"
+      ],
+      "definition_of_done": "正式银行入口导出，干净环境无需Python/Godot也能离线运行，发行桥关闭，存读档与报告及授权清单齐备。",
+      "plan": "docs/porting-todo.md"
+    },
+    {
+      "id": "REPO-001",
+      "status": "done",
+      "title": "工具链、游戏、日志与构建产物分层迁移",
+      "acceptance": [
+        "REPO-LAYOUT"
+      ],
+      "depends_on": [
+        "FRAMEWORK-002",
+        "ASSETS-001"
+      ],
+      "definition_of_done": "统一路径与 Skill/CLI 主入口；共享运行时唯一来源且拒绝改坏副本；lab/probe、资产、实拍和发行回归通过；历史来源与证据保留；游戏 MCP 可选且不默认注册。",
+      "evidence": [
+        "project/evidence/repository-layers-validation.json"
+      ]
+    },
+    {
+      "id": "ADDONS-001",
+      "status": "done",
+      "title": "Phantom Camera 与 Debug Draw 3D 独立兼容性试验",
+      "acceptance": [
+        "ADDON-COMPAT"
+      ],
+      "depends_on": [
+        "REPO-001"
+      ],
+      "definition_of_done": "固定原包与哈希，独立试验场真实输入、冻结截图、连续帧、发行及既有回归有证据；记录限制及失败原因，不将完整检查点或银行接入标为已完成。",
+      "evidence": [
+        "project/evidence/godot-addons-validation.json",
+        "project/evidence/godot-addons/visual-review.json"
+      ],
+      "plan": "docs/godot-addons-validation.md"
+    },
+    {
+      "id": "ADDONS-002",
+      "status": "done",
+      "title": "接入文本、行为树与谜题编辑器的独立示例",
+      "acceptance": [
+        "ADDON-EXTENDED"
+      ],
+      "depends_on": [
+        "ADDONS-001"
+      ],
+      "definition_of_done": "三插件锁定并部署，有实际输入、编辑器截图、固定帧和发行证据；问题修复可追溯，正式银行接入限制明确。",
+      "evidence": [
+        "project/evidence/godot-addons-expansion.json",
+        "project/evidence/godot-addons-expansion/visual-review.json"
+      ],
+      "plan": "docs/godot-addons-expansion.md"
+    },
+    {
+      "id": "ADDONS-003",
+      "status": "planned",
+      "title": "按正式玩法需要接入插件并补齐完整状态恢复",
+      "acceptance": [
+        "ADDON-PRODUCTION"
+      ],
+      "depends_on": [
+        "ADDONS-002",
+        "PORT-002"
+      ],
+      "definition_of_done": "按实际场景选择插件；对话、相机与行为树的全部自有状态可校验恢复；真实银行流程、资源生命周期及发行边界有独立证据。",
+      "plan": "docs/godot-addons-expansion.md"
+    },
+    {
+      "id": "BANK-COOP-001",
+      "title": "ENet dedicated server, 2–4 clients and full-body avatars",
+      "status": "done",
+      "acceptance": [
+        "BANK-COOP-NET",
+        "BANK-COOP-VISUAL"
+      ],
+      "definition_of_done": "Local real-UDP peers verify authoritative movement, collision, capacity, late join, leave/rejoin, disconnect and version rejection; inspect rendered avatar motion; reproducible client/server build, Ubuntu guide and Git push. Combat/door interaction is out of scope.",
+      "evidence": [
+        "project/evidence/bank-coop-20261017/report.json",
+        "project/evidence/bank-coop-20261017/gallery.html",
+        "project/evidence/bank-coop-20261017/manifest.json",
+        "docs/bank-coop.md"
+      ],
+      "completion_scope": "Movement/connection framework only. 13 real-UDP checks, release Linux + Windows clients and clean checkout pass. Native and original body motion inspected. User art acceptance and actual VPS/WAN validation remain pending.",
+      "depends_on": []
     }
   ],
   "known_limits": [
@@ -78,5 +445,6 @@
     "美术验收与像素回归分开，用户尚未批准最终画风",
     "试验场存档升级为版本 2，版本 1 明确拒绝，不做隐式数据迁移",
     "资产工具链第一版仅静态道具与矩形单层场景；二进制 FBX 外链预检不完整，未实现其他游戏解包器"
-  ]
+  ],
+  "plan_document": "docs/porting-todo.md"
 }

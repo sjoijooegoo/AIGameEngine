@@ -1,0 +1,22 @@
+[Unit]
+Description=Bank Crisis ENet co-op server
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=bankcoop
+Group=bankcoop
+WorkingDirectory=/opt/bank-coop
+ExecStart=/opt/bank-coop/bank-coop-server.x86_64 --headless -- --server --port=24567 --max-players=4
+Restart=on-failure
+RestartSec=3
+NoNewPrivileges=true
+PrivateTmp=true
+ProtectSystem=strict
+ProtectHome=true
+StateDirectory=bank-coop
+Environment=HOME=/var/lib/bank-coop
+
+[Install]
+WantedBy=multi-user.target

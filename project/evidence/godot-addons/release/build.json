@@ -1,0 +1,25 @@
+{
+  "project": "addon_probe",
+  "configuration": "release",
+  "version": "20261002-202946-0091ea7f",
+  "build_id": "d90e89eb021cb9368bc924032bc1cc88c5971748e4bddb827a1c88f068c1d21c",
+  "command": [
+    "D:\\AIGameEngine\\.tools\\Godot_v4.7.2-stable_win64_console.exe",
+    "--headless",
+    "--path",
+    "D:\\AIGameEngine\\engine\\sandbox\\addon_probe",
+    "--export-release",
+    "Windows Desktop",
+    "D:\\AIGameEngine\\build\\addon_probe\\windows\\release\\20261002-202946-0091ea7f\\AddonProbe.exe"
+  ],
+  "directory": "D:\\AIGameEngine\\build\\addon_probe\\windows\\release\\20261002-202946-0091ea7f",
+  "executable": "D:\\AIGameEngine\\build\\addon_probe\\windows\\release\\20261002-202946-0091ea7f\\AddonProbe.exe",
+  "log": "D:\\AIGameEngine\\logs\\builds\\addon_probe-release-20261002-202946-0091ea7f\\engine.log",
+  "status": "completed",
+  "exit_code": 0,
+  "files": {
+    "AddonProbe.exe": "310100c7db18c21fac6bb348468dfbca4073de2fcd3ab0febf3b5b1d982ec54a",
+    "GODOT-LICENSE.txt": "0cc27400b8da8c06bb35350422c14715647cd2632c138921fd49caa6610a1ef6",
+    "libdd3d.windows.template_release.x86_64.dll": "619e6558f4a3745d4e193f313b625c557a6787d8d2fff44c3cdbe46fb5a57fbe"
+  }
+}

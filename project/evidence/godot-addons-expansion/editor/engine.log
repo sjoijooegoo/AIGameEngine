@@ -1,0 +1,5 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+OpenGL API 3.3.0 NVIDIA 610.47 - Compatibility - Using Device: NVIDIA - NVIDIA GeForce RTX 5070 Ti Laptop GPU
+
+WARNING: Debug Draw 3D sends anonymous data about the library usage time. This is done so that the developer knows that the time spent on library development is not wasted. But you can opt out of this in the editor settings 'debug_draw_3d/settings/telemetry_state'.
+   at: _setup_settings (src/editor/dst_modules/GDExtension/usage_time_reporter.cpp:586)

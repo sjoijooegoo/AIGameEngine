@@ -1,0 +1,24 @@
+{
+  "project": "sandbox",
+  "configuration": "release",
+  "version": "20261002-195116-3a1691fc",
+  "build_id": "d6cc905855eae1b171e929bda906f9911c021f87fa018ca0b86ba80540fd4e77",
+  "command": [
+    "D:\\AIGameEngine\\.tools\\Godot_v4.7.2-stable_win64_console.exe",
+    "--headless",
+    "--path",
+    "D:\\AIGameEngine\\engine\\sandbox\\runtime",
+    "--export-release",
+    "Windows Desktop",
+    "D:\\AIGameEngine\\build\\sandbox\\windows\\release\\20261002-195116-3a1691fc\\BankCrisisLab.exe"
+  ],
+  "directory": "D:\\AIGameEngine\\build\\sandbox\\windows\\release\\20261002-195116-3a1691fc",
+  "executable": "D:\\AIGameEngine\\build\\sandbox\\windows\\release\\20261002-195116-3a1691fc\\BankCrisisLab.exe",
+  "log": "D:\\AIGameEngine\\logs\\builds\\sandbox-release-20261002-195116-3a1691fc\\engine.log",
+  "status": "completed",
+  "exit_code": 0,
+  "files": {
+    "BankCrisisLab.exe": "063b0a9832884ee3a16163cb420832772a5743e02befedd3d146acc493a1af69",
+    "GODOT-LICENSE.txt": "0cc27400b8da8c06bb35350422c14715647cd2632c138921fd49caa6610a1ef6"
+  }
+}

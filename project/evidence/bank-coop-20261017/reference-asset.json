@@ -1,0 +1,37 @@
+{
+  "source": "Left 4 Dead 2 / survivor_gambler (Nick)",
+  "rights": "local_reference_only_rights_unverified",
+  "source_manifest": "D:\\AIGameEngine\\outerasset\\source-snapshots\\coop-gambler-v2\\manifest.json",
+  "sourceio_commit": "472e81542a6750cf3c282daac41af96a2f5d4fd3",
+  "converter_sha256": "d947b6ede5edc0ad498355ccb9f2cd11ceba81e496e06d7e5d32753ac31a4470",
+  "units": "0.0254 metre per Source unit",
+  "forward": "Godot -Z",
+  "texture_roles": [
+    "albedo (sRGB)"
+  ],
+  "root_motion": "horizontal mean removed; gameplay owns translation",
+  "bones": 85,
+  "clips": {
+    "idle": {
+      "source": "@Idle_Calm_Pistol",
+      "frames": 48,
+      "source_fps": 30.0,
+      "duration": 1.5666666666666667
+    },
+    "walk": {
+      "source": "a_WalkN_Rifle",
+      "frames": 58,
+      "source_fps": 30.0,
+      "duration": 1.9
+    },
+    "run": {
+      "source": "a_RunN_Rifle",
+      "frames": 43,
+      "source_fps": 30.0,
+      "duration": 1.4
+    }
+  },
+  "output_sha256": "dfd96a16f0d1c63e4125ef1b6faefd14554da97764aa4a8e1999deca19cf7ac4",
+  "resource": "res://coop/local_reference/survivor_dfd96a16f0d1.glb",
+  "source_preserved": true
+}

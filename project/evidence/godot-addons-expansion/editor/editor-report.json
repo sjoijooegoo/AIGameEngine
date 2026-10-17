@@ -1,0 +1,11 @@
+{
+  "board_id": "bank_starter",
+  "capture_error": 0,
+  "connections": 2,
+  "dialogue_editor_enabled": true,
+  "limboai_loaded": true,
+  "puzzle_view_loaded": true,
+  "things": 3,
+  "engine_log_clean": true,
+  "passed": true
+}

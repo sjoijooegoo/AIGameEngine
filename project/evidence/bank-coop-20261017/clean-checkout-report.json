@@ -1,0 +1,7 @@
+{
+  "passed": true,
+  "scope": "final index-only clean checkout, no original working-tree assets; stage/import and headless dedicated server boot",
+  "stdout": "D:\\AIGameEngine\\build\\bank\\coop-clean-final-20261017\\build\\bank\\coop\\20261017-110619-362c78\\project\n",
+  "stderr": "",
+  "root": "D:\\AIGameEngine\\build\\bank\\coop-clean-final-20261017"
+}

@@ -1,0 +1,1002 @@
+{
+  "engine": {
+    "adapter": {
+      "adapter_version": 1,
+      "capabilities": [
+        "view",
+        "asset",
+        "animation",
+        "checkpoint"
+      ],
+      "entities": [
+        "player",
+        "npc"
+      ],
+      "fixtures": [
+        "default",
+        "door_locked",
+        "npc_chase",
+        "npc_occluded",
+        "combat",
+        "gallery"
+      ],
+      "game_id": "bank_lab",
+      "state_version": 2,
+      "views": [
+        "player",
+        "overview",
+        "materials",
+        "model",
+        "npc"
+      ]
+    },
+    "commands": [
+      "describe",
+      "state",
+      "ui",
+      "reset",
+      "act",
+      "step",
+      "click",
+      "capture",
+      "sequence",
+      "checkpoint",
+      "restore",
+      "animation",
+      "view",
+      "resize",
+      "audit",
+      "asset",
+      "quit"
+    ],
+    "godot": "4.7.2-stable (official)",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "inputs": [
+      "W",
+      "A",
+      "S",
+      "D",
+      "E",
+      "TAB",
+      "ESC",
+      "SHIFT"
+    ],
+    "pid": 37912,
+    "protocol": 2,
+    "rendered": true,
+    "renderer": "gl_compatibility"
+  },
+  "session": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf",
+  "checks": [
+    {
+      "name": "movement_and_release",
+      "status": "pass",
+      "detail": "W moves 1.5 m / 30 ticks; releasing W stops movement",
+      "seconds": 0.4220000000204891
+    },
+    {
+      "name": "run_speed",
+      "status": "pass",
+      "detail": "Shift + W uses the configured run speed",
+      "seconds": 0.21799999999348074
+    },
+    {
+      "name": "locked_door_collision",
+      "status": "pass",
+      "detail": "No key: E reports locked, W cannot pass through the door",
+      "seconds": 0.4220000000204891
+    },
+    {
+      "name": "key_door_objective",
+      "status": "pass",
+      "detail": "Complete the entire pickup -> unlock -> exit loop using input events",
+      "seconds": 1.4690000000409782
+    },
+    {
+      "name": "inventory_blocks_movement",
+      "status": "pass",
+      "detail": "Tab opens inventory; game movement is suspended until closed",
+      "seconds": 0.4529999999795109
+    },
+    {
+      "name": "pause_and_ui_hit_test",
+      "status": "pass",
+      "detail": "Esc pauses simulation; clicking the actual resume control resumes",
+      "seconds": 0.640999999945052
+    },
+    {
+      "name": "mouse_look",
+      "status": "pass",
+      "detail": "Relative mouse motion reaches the same camera input handler",
+      "seconds": 0.0470000000204891
+    },
+    {
+      "name": "npc_line_of_sight",
+      "status": "pass",
+      "detail": "The opaque partition blocks NPC detection and attacks",
+      "seconds": 1.125
+    },
+    {
+      "name": "npc_chase_attack",
+      "status": "pass",
+      "detail": "NPC detects, approaches, then damages a visible player",
+      "seconds": 1.1560000000754371
+    },
+    {
+      "name": "combat_and_death",
+      "status": "pass",
+      "detail": "Four valid player attacks kill the NPC; dead NPC no longer attacks",
+      "seconds": 1.2339999999385327
+    },
+    {
+      "name": "save_load_ui",
+      "status": "pass",
+      "detail": "Save/load buttons preserve player position and inventory",
+      "seconds": 0.6410000000614673
+    },
+    {
+      "name": "repeatability",
+      "status": "pass",
+      "detail": "",
+      "seconds": 1.5469999999040738
+    },
+    {
+      "name": "adapter_contract",
+      "status": "pass",
+      "detail": "Second independent world; alternate key mapping; seeded RNG restore and unsupported capabilities verified",
+      "seconds": 0.7190000000409782
+    },
+    {
+      "name": "snapshot_restore_replay",
+      "status": "pass",
+      "detail": "Cooldown, home/target, velocity, animation and subsequent damage match after restore",
+      "seconds": 2.280999999959022
+    },
+    {
+      "name": "save_load_continuity",
+      "status": "pass",
+      "detail": "Actual save/load GUI preserves NPC cooldown and future combat, using atomic save replacement",
+      "seconds": 2.172000000020489
+    },
+    {
+      "name": "invalid_checkpoint_is_atomic",
+      "status": "pass",
+      "detail": "Corrupt/mismatched checkpoints are rejected before mutation",
+      "seconds": 0.1720000000204891
+    },
+    {
+      "name": "animation_time_control",
+      "status": "pass",
+      "detail": "AnimationPlayer seek, manual advance and pose restore verified",
+      "seconds": 0.2809999999590218
+    },
+    {
+      "name": "model_material_texture_audit",
+      "status": "pass",
+      "detail": "{'meshes': 31, 'textured_surfaces': 2}",
+      "seconds": 0.0
+    },
+    {
+      "name": "bridge_validation",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.06299999996554106
+    },
+    {
+      "name": "capture_overview",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.07900000002700835
+    },
+    {
+      "name": "capture_materials",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.062000000034458935
+    },
+    {
+      "name": "capture_model",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.06199999991804361
+    },
+    {
+      "name": "capture_npc",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.06299999996554106
+    },
+    {
+      "name": "model_orbit_90",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.06299999996554106
+    },
+    {
+      "name": "model_orbit_180",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.06299999996554106
+    },
+    {
+      "name": "model_orbit_270",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.07900000002700835
+    },
+    {
+      "name": "ui_gameplay_1280x720_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.015999999945051968
+    },
+    {
+      "name": "ui_gameplay_1280x720",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.062000000034458935
+    },
+    {
+      "name": "ui_inventory_1280x720_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.015999999945051968
+    },
+    {
+      "name": "ui_inventory_1280x720",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.0470000000204891
+    },
+    {
+      "name": "ui_pause_1280x720_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.01600000006146729
+    },
+    {
+      "name": "ui_pause_1280x720",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.06299999996554106
+    },
+    {
+      "name": "ui_gameplay_1024x768_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.01600000006146729
+    },
+    {
+      "name": "ui_gameplay_1024x768",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.06299999996554106
+    },
+    {
+      "name": "ui_inventory_1024x768_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.015000000013969839
+    },
+    {
+      "name": "ui_inventory_1024x768",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.06300000008195639
+    },
+    {
+      "name": "ui_pause_1024x768_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.015000000013969839
+    },
+    {
+      "name": "ui_pause_1024x768",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.0470000000204891
+    },
+    {
+      "name": "ui_gameplay_1920x1080_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.015000000013969839
+    },
+    {
+      "name": "ui_gameplay_1920x1080",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.0940000000409782
+    },
+    {
+      "name": "ui_inventory_1920x1080_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.015999999945051968
+    },
+    {
+      "name": "ui_inventory_1920x1080",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.09299999999348074
+    },
+    {
+      "name": "ui_pause_1920x1080_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.01600000006146729
+    },
+    {
+      "name": "ui_pause_1920x1080",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.09399999992456287
+    },
+    {
+      "name": "ui_gameplay_800x600_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.015000000013969839
+    },
+    {
+      "name": "ui_gameplay_800x600",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.0470000000204891
+    },
+    {
+      "name": "ui_inventory_800x600_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.01600000006146729
+    },
+    {
+      "name": "ui_inventory_800x600",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.046999999904073775
+    },
+    {
+      "name": "ui_pause_800x600_bounds",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.015000000013969839
+    },
+    {
+      "name": "ui_pause_800x600",
+      "status": "pass",
+      "detail": "",
+      "seconds": 0.03200000000651926
+    },
+    {
+      "name": "animation_sequence",
+      "status": "pass",
+      "detail": "13 real renders, 60 simulation ticks, varied poses; quarter-speed review generated",
+      "seconds": 1.2809999999590218
+    },
+    {
+      "name": "movement_sequence",
+      "status": "pass",
+      "detail": "Held input drives real movement during capture and is released afterwards",
+      "seconds": 0.7650000000139698
+    },
+    {
+      "name": "engine_errors",
+      "status": "pass",
+      "detail": ""
+    }
+  ],
+  "visuals": [
+    {
+      "name": "overview",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\overview.png",
+      "image": {
+        "size": [
+          1280,
+          720
+        ],
+        "mean": [
+          99.16729383680556,
+          129.89623697916667,
+          148.63952907986112
+        ],
+        "stddev": [
+          52.51977513820205,
+          59.83474460228709,
+          61.83842344449889
+        ],
+        "nonblank": true,
+        "sha256": "a7b2c46e339f2df85f713334ca3d4ba2121838fb193387a3bb32c32ba93ac7c9"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\overview_baseline.png"
+    },
+    {
+      "name": "materials",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\materials.png",
+      "image": {
+        "size": [
+          1280,
+          720
+        ],
+        "mean": [
+          104.8821875,
+          128.88797743055557,
+          139.00549045138888
+        ],
+        "stddev": [
+          63.462182615987786,
+          63.779441278231495,
+          64.63690340603358
+        ],
+        "nonblank": true,
+        "sha256": "89a1d05f761c27ffa4f90451cb52836823511679ada4c57b69b0249e2fc3c37c"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\materials_baseline.png"
+    },
+    {
+      "name": "model",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\model.png",
+      "image": {
+        "size": [
+          1280,
+          720
+        ],
+        "mean": [
+          108.729453125,
+          138.99606879340277,
+          153.98412000868055
+        ],
+        "stddev": [
+          59.19039630992454,
+          65.31266948041906,
+          68.2424387425122
+        ],
+        "nonblank": true,
+        "sha256": "0dee23c7f13813f03d9b75f10cbe3fa8a9eed5402467421ca9af07bffb215ccd"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\model_baseline.png"
+    },
+    {
+      "name": "npc",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\npc.png",
+      "image": {
+        "size": [
+          1280,
+          720
+        ],
+        "mean": [
+          114.1266970486111,
+          143.597890625,
+          161.82002821180555
+        ],
+        "stddev": [
+          47.73628186937101,
+          53.446572052161834,
+          56.13644948560516
+        ],
+        "nonblank": true,
+        "sha256": "bde03fcc6c34713f28ed644f9c6156fa836fdf897ce898b26fcc550b0f16bf36"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\npc_baseline.png"
+    },
+    {
+      "name": "model_90",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\model_90.png",
+      "image": {
+        "size": [
+          1280,
+          720
+        ],
+        "mean": [
+          92.49447699652778,
+          118.68606770833334,
+          130.95144639756944
+        ],
+        "stddev": [
+          59.96104976589122,
+          66.34398820668702,
+          68.50226147210387
+        ],
+        "nonblank": true,
+        "sha256": "5766b7e6ccd1afa429accb7370983aedbbfc83977fd33d3a7d20cb0f6cacf880"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\model_90_baseline.png"
+    },
+    {
+      "name": "model_180",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\model_180.png",
+      "image": {
+        "size": [
+          1280,
+          720
+        ],
+        "mean": [
+          89.6400390625,
+          113.91461371527778,
+          125.497060546875
+        ],
+        "stddev": [
+          58.10345371035521,
+          64.12065413296503,
+          66.75814004443914
+        ],
+        "nonblank": true,
+        "sha256": "21ba3ea2579665768419b6c5dbd88c9b8038ca07522a7f61b03ad50c416c0f60"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\model_180_baseline.png"
+    },
+    {
+      "name": "model_270",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\model_270.png",
+      "image": {
+        "size": [
+          1280,
+          720
+        ],
+        "mean": [
+          131.31044379340278,
+          159.27907986111111,
+          168.80703884548612
+        ],
+        "stddev": [
+          61.98507173794135,
+          63.2460927429009,
+          67.256018035239
+        ],
+        "nonblank": true,
+        "sha256": "822b62ec8849b73b2e791e6747f162ec2f076e1e7cf349e297e0368f79bf5c36"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\model_270_baseline.png"
+    },
+    {
+      "name": "ui_gameplay_1280x720",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_gameplay_1280x720.png",
+      "image": {
+        "size": [
+          1280,
+          720
+        ],
+        "mean": [
+          94.95937934027778,
+          125.0590234375,
+          142.17106987847222
+        ],
+        "stddev": [
+          63.558196153703875,
+          70.96283879132868,
+          73.07655799510984
+        ],
+        "nonblank": true,
+        "sha256": "273c9a6144075c08a8d86db7e375e988b1d3bfa66bca2a657784f3c2af1228b2"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_gameplay_1280x720_baseline.png"
+    },
+    {
+      "name": "ui_inventory_1280x720",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_inventory_1280x720.png",
+      "image": {
+        "size": [
+          1280,
+          720
+        ],
+        "mean": [
+          81.19863932291666,
+          110.09410481770833,
+          127.29686631944445
+        ],
+        "stddev": [
+          64.04543790313338,
+          71.07434499800988,
+          72.57644471465677
+        ],
+        "nonblank": true,
+        "sha256": "5beb4ef05884d56b5cbf7e534cb19461e1f44d61568c4c10eb580f99c0e94f39"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_inventory_1280x720_baseline.png"
+    },
+    {
+      "name": "ui_pause_1280x720",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_pause_1280x720.png",
+      "image": {
+        "size": [
+          1280,
+          720
+        ],
+        "mean": [
+          81.33964735243056,
+          109.12568033854167,
+          125.638203125
+        ],
+        "stddev": [
+          64.0468662573978,
+          72.02180115345816,
+          74.22574846641638
+        ],
+        "nonblank": true,
+        "sha256": "37e3c73dd183a8c21a06b4b9bf0f446acbe2aa09b14db20924d961decae3a7ff"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_pause_1280x720_baseline.png"
+    },
+    {
+      "name": "ui_gameplay_1024x768",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_gameplay_1024x768.png",
+      "image": {
+        "size": [
+          1024,
+          768
+        ],
+        "mean": [
+          97.3953488667806,
+          128.7364590962728,
+          146.5959587097168
+        ],
+        "stddev": [
+          62.295207031486136,
+          70.5126850115415,
+          72.87262331085199
+        ],
+        "nonblank": true,
+        "sha256": "692b17e91fb1ab10289aea1c56ed81962f2e1528807fb008ea593b82d2870acb"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_gameplay_1024x768_baseline.png"
+    },
+    {
+      "name": "ui_inventory_1024x768",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_inventory_1024x768.png",
+      "image": {
+        "size": [
+          1024,
+          768
+        ],
+        "mean": [
+          86.16058731079102,
+          116.34707260131836,
+          134.57630157470703
+        ],
+        "stddev": [
+          63.40357667266566,
+          71.93098845680494,
+          73.74612148838821
+        ],
+        "nonblank": true,
+        "sha256": "b6b54838e84a737657781402ac8f981357be3e376c150381fc1f3dbebd674b1b"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_inventory_1024x768_baseline.png"
+    },
+    {
+      "name": "ui_pause_1024x768",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_pause_1024x768.png",
+      "image": {
+        "size": [
+          1024,
+          768
+        ],
+        "mean": [
+          86.2841682434082,
+          115.63668060302734,
+          133.3481534322103
+        ],
+        "stddev": [
+          63.37429417289355,
+          72.67136843401326,
+          75.05889881346451
+        ],
+        "nonblank": true,
+        "sha256": "3b899ba299dfad9c33e18001b5bd0d2c9b053744557c713416e973f56a2b6b76"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_pause_1024x768_baseline.png"
+    },
+    {
+      "name": "ui_gameplay_1920x1080",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_gameplay_1920x1080.png",
+      "image": {
+        "size": [
+          1920,
+          1080
+        ],
+        "mean": [
+          94.92592447916667,
+          125.03127748842593,
+          142.15020109953704
+        ],
+        "stddev": [
+          63.559541864812864,
+          70.95725838539241,
+          73.06455192487202
+        ],
+        "nonblank": true,
+        "sha256": "c7923bddf0be2bdcd6dec8766b1656a67508c4bc6e87195bb96db88c6b931144"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_gameplay_1920x1080_baseline.png"
+    },
+    {
+      "name": "ui_inventory_1920x1080",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_inventory_1920x1080.png",
+      "image": {
+        "size": [
+          1920,
+          1080
+        ],
+        "mean": [
+          81.20086033950618,
+          110.09955922067901,
+          127.3047014853395
+        ],
+        "stddev": [
+          64.06328048630684,
+          71.08089897891973,
+          72.57537418545206
+        ],
+        "nonblank": true,
+        "sha256": "8b703af414132fe9b8cabf85ae3af2ba06dd21270ab633a31ff7d0fa4d227d02"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_inventory_1920x1080_baseline.png"
+    },
+    {
+      "name": "ui_pause_1920x1080",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_pause_1920x1080.png",
+      "image": {
+        "size": [
+          1920,
+          1080
+        ],
+        "mean": [
+          81.34130353009259,
+          109.13065731095679,
+          125.64572193287037
+        ],
+        "stddev": [
+          64.04730268880418,
+          72.01616885348032,
+          74.21490128536013
+        ],
+        "nonblank": true,
+        "sha256": "d14664ffed6d96ca9468ae5b1827732c7f9b19ed0cb1bba09227d9b039702eab"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_pause_1920x1080_baseline.png"
+    },
+    {
+      "name": "ui_gameplay_800x600",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_gameplay_800x600.png",
+      "image": {
+        "size": [
+          800,
+          600
+        ],
+        "mean": [
+          97.43306875,
+          128.77906875,
+          146.6407625
+        ],
+        "stddev": [
+          62.129616959555655,
+          70.3769549743814,
+          72.74775774380903
+        ],
+        "nonblank": true,
+        "sha256": "8f82072163694d536b8ddd685a273f03924c118e74e36ad24b3f969966ea10e1"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_gameplay_800x600_baseline.png"
+    },
+    {
+      "name": "ui_inventory_800x600",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_inventory_800x600.png",
+      "image": {
+        "size": [
+          800,
+          600
+        ],
+        "mean": [
+          86.19492916666667,
+          116.38609791666667,
+          134.61531875
+        ],
+        "stddev": [
+          63.24058611197914,
+          71.79939668141657,
+          73.62892149660053
+        ],
+        "nonblank": true,
+        "sha256": "6d6ccbb77bca477d249010b48b77c306627c90e889c6d904680d11c1b2acef3a"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_inventory_800x600_baseline.png"
+    },
+    {
+      "name": "ui_pause_800x600",
+      "path": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_pause_800x600.png",
+      "image": {
+        "size": [
+          800,
+          600
+        ],
+        "mean": [
+          86.31255416666667,
+          115.67057291666667,
+          133.38416041666667
+        ],
+        "stddev": [
+          63.17259071960112,
+          72.51221897524192,
+          74.9158981371173
+        ],
+        "nonblank": true,
+        "sha256": "11b347c3425f27af27a51ca2b6c6b0381469baa265976a5a96a558b2e215b0bd"
+      },
+      "comparison": {
+        "status": "needs_review",
+        "reason": "Engine/GPU/renderer differs from approved baseline"
+      },
+      "baseline": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\ui_pause_800x600_baseline.png"
+    }
+  ],
+  "source": {
+    "engine\\sandbox\\runtime\\addons\\ai_engine\\asset_pipeline\\scene_adapter.gd": "2549d92b348fd9e66a8c72f0d287bc2c5d3277e97f1c44efcfa3d0c02aebabfb",
+    "engine\\sandbox\\runtime\\addons\\ai_engine\\asset_pipeline\\scene_runtime.gd": "2ab99729cf5c9a481c4b5471873747dddf7db62abafdf1d5f71ee7cc6bbf2606",
+    "engine\\sandbox\\runtime\\addons\\ai_engine\\asset_pipeline\\worker.gd": "5759cc8beb2b03bf734f3f7fe42cbb09a57d8538754a91357c5d691e3d6b6e79",
+    "engine\\sandbox\\runtime\\addons\\ai_engine\\fixtures\\player.gd": "861c8d244b28b2ee4c2f793e49713410124b2d8877f5b5e4b26760527703f672",
+    "engine\\sandbox\\runtime\\addons\\ai_engine\\fixtures\\props.gd": "516b05bf7a0b050515e7fb5ef426d1316e5e1be421084edf91f18302a1e6ed1e",
+    "engine\\sandbox\\runtime\\addons\\ai_engine\\testing\\bridge.gd": "e8e3a9e654ad34dec217d74f2951aee627d6b157a09fa611bf82c7fde64e831b",
+    "engine\\sandbox\\runtime\\addons\\ai_engine\\testing\\game_adapter.gd": "164c26d86af770c429546653332ed015969c38ba92b1cdd8a4f869fb7537f17d",
+    "engine\\sandbox\\runtime\\addons\\ai_engine\\testing\\state_codec.gd": "ef879305e9bfefaead403261f8184e1ed27fcda56b6f11571eac7ea3df5de947",
+    "engine\\sandbox\\runtime\\assets\\checker.png": "823d48a91cd84d4739984a13a838886003fde96928a167b4c495389aac18c386",
+    "engine\\sandbox\\runtime\\assets\\crate_albedo.png": "3cd06068714b982d136c6f2d2f738939d9f5345621077f8d4d6749163cbcd36b",
+    "engine\\sandbox\\runtime\\assets\\inspection_crate.glb": "e4d9aaa65521d5b8f8852f4fc4c7b1f7304abae9adb351ffbe2e62506c010200",
+    "engine\\sandbox\\runtime\\assets\\inspection_crate_0.png": "3cd06068714b982d136c6f2d2f738939d9f5345621077f8d4d6749163cbcd36b",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.chair\\1783364f233adefb\\chair.glb": "211fa7e5653c03cd48432f88743eb743e5ef3734338e6844c65cf131976a1da8",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.chair\\1783364f233adefb\\chair_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.chair\\1783364f233adefb\\prepared.tscn": "d9df66a4dfebb630efa9d133da58712c5b9e596451730afafa8a670e156f0107",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.chair\\1c225028f4a6b897\\chair.glb": "211fa7e5653c03cd48432f88743eb743e5ef3734338e6844c65cf131976a1da8",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.chair\\1c225028f4a6b897\\chair_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.chair\\1c225028f4a6b897\\prepared.tscn": "81bcf3df3411316beeca46d684be2e3b50c1ab3a82fed0bac8a9dde58baa2b29",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.counter\\06f14cc1a5e290fd\\counter.glb": "591905c7451995c4a63c31642a5763c02c57643224132a110608161bb8549df4",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.counter\\06f14cc1a5e290fd\\counter_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.counter\\06f14cc1a5e290fd\\prepared.tscn": "b39e2bc0ac716310a055326dd67debf843ab782e934e9b07f78669e3c3236ba9",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.counter\\6179b0c9057384f8\\counter.glb": "591905c7451995c4a63c31642a5763c02c57643224132a110608161bb8549df4",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.counter\\6179b0c9057384f8\\counter_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.counter\\6179b0c9057384f8\\prepared.tscn": "a817ced36f82db82c102e3e09384965708884116fb2463f568f1ba543c73f4ac",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.door\\1c6972ca699306ef\\door.glb": "64d4368cd1bedb565859620a5c0e922df51a08d9f93d3c82dd010421ca66bdf3",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.door\\1c6972ca699306ef\\door_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.door\\1c6972ca699306ef\\prepared.tscn": "e342adf3dc9940065dfbcd124c6206efecbb1be580a7c2d7e9becb38eef48312",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.door\\29b504bf497f9703\\door.glb": "64d4368cd1bedb565859620a5c0e922df51a08d9f93d3c82dd010421ca66bdf3",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.door\\29b504bf497f9703\\door_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.door\\29b504bf497f9703\\prepared.tscn": "39070ea84fa834747c51b7719f036d02c05f618fe5d97fa7c51d1273cd49f459",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.terminal\\b01cf5e86ce9f63d\\prepared.tscn": "6ada3a5d2b4fc496ebac27f604eb85de6ed56450e94f8a158f1125c10ee33f71",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.terminal\\b01cf5e86ce9f63d\\terminal.glb": "4a47ac8650bb844808bd7ad9ba4e5c6b17bee2ff6814210c27bda3e3afdfecf7",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.terminal\\b01cf5e86ce9f63d\\terminal_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.terminal\\e53bbee7e6522df3\\prepared.tscn": "6ca44c1c4578f24021b2354f07f6bf459f7be9510edcfc4560b34c23282b8596",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.terminal\\e53bbee7e6522df3\\terminal.glb": "4a47ac8650bb844808bd7ad9ba4e5c6b17bee2ff6814210c27bda3e3afdfecf7",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.terminal\\e53bbee7e6522df3\\terminal_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.wood\\3ad550d2e2cfe35c\\texture.png": "dfe21f5ffb3296f60776b7e8fb2d2bb4fa90688f2fe47a35f347366846df633a",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.wood\\3ad550d2e2cfe35c\\wood.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.wood\\90f75d4b403aaa1b\\texture.png": "dfe21f5ffb3296f60776b7e8fb2d2bb4fa90688f2fe47a35f347366846df633a",
+    "engine\\sandbox\\runtime\\assets\\library\\demo.wood\\90f75d4b403aaa1b\\wood.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.chair_fbx\\15d9b7a4b691b2da\\prepared.tscn": "b323cbaff145cb0c68aacd8b2f6bac2cfa5f0862c89f6d8741ea760f1109c043",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.chair_fbx\\c6b6148a7d7c7908\\prepared.tscn": "e7a6501e1813fe0c399601f8071b8e2b0167db01ccef42b56b0518fc523ce490",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\020092b89b924b96\\counter.glb": "591905c7451995c4a63c31642a5763c02c57643224132a110608161bb8549df4",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\020092b89b924b96\\counter_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\020092b89b924b96\\override_albedo.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\020092b89b924b96\\prepared.tscn": "0aea6aacac3d3a7ced5bbfa688860de943c38555b2566ad938ebee5b93ed80df",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\06f14cc1a5e290fd\\counter.glb": "591905c7451995c4a63c31642a5763c02c57643224132a110608161bb8549df4",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\06f14cc1a5e290fd\\counter_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\06f14cc1a5e290fd\\prepared.tscn": "b07b47b1782e1da685e7898bb56906ea9d89f201d21712f76d77573c02d31946",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\172fabba8949c1eb\\counter.glb": "591905c7451995c4a63c31642a5763c02c57643224132a110608161bb8549df4",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\172fabba8949c1eb\\counter_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\172fabba8949c1eb\\override_albedo.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\172fabba8949c1eb\\prepared.tscn": "0c474b3ec12761d37c2e343be544a21f52862a11565632dba1d008e255a0ebfb",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\6179b0c9057384f8\\counter.glb": "591905c7451995c4a63c31642a5763c02c57643224132a110608161bb8549df4",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\6179b0c9057384f8\\counter_0.png": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb",
+    "engine\\sandbox\\runtime\\assets\\library\\qa.transformed\\6179b0c9057384f8\\prepared.tscn": "d4803827df093a07c83785c1755982d34c1e082dec902db4b0ad7c47c77bf37f",
+    "engine\\sandbox\\runtime\\generated\\bank_room\\scene.tscn": "7b05e5288a5fdc326c2c715731e9b8d63d38a999088705a9b39dedfce6832d9b",
+    "engine\\sandbox\\runtime\\project.godot": "c260ba424ab6136f059bb4d2a280c7a6addf5248342095ca7f8e65e8565cd74d",
+    "engine\\sandbox\\runtime\\scenes\\adapter_probe.tscn": "cb7823490dfcb67d4bc57d52802cf214359234199fe6cb9b22373676d6eb1ea3",
+    "engine\\sandbox\\runtime\\scenes\\lab.tscn": "03115ae32b9ea96979a1d8de779e44eb2a8d479829343b3bd4bc318102186595",
+    "engine\\sandbox\\runtime\\scripts\\hud.gd": "69c73fea5826ec639e492ac3c366fa3a9f0cbba8a8eaa49b5a428abf5a5dd29d",
+    "engine\\sandbox\\runtime\\scripts\\lab.gd": "541778e71efb0b27c713e35ddb8ebfed65d3d7a5aa69c7e6633ab42df256c660",
+    "engine\\sandbox\\runtime\\scripts\\npc.gd": "b3d1fb6758e8bfc3feba8f6c3e5f5958dd71da104a86ce776b20cb42983bfbc9",
+    "engine\\sandbox\\runtime\\testing\\lab_adapter.gd": "f750d98a40475e4d4a8cffe11affec16537f7b480f108e438077c222b5d738b6",
+    "engine\\sandbox\\runtime\\testing\\probe.gd": "3b54d36066588e4adeb123dc48c8d2ad3bf961d3ce6fdde286970fbd8596c76d",
+    "engine\\sandbox\\runtime\\testing\\probe_adapter.gd": "0bb8f039cca0db280b9520e4b04a46150bf94c97125464c4ac7029fa59fbb30e"
+  },
+  "sequences": [
+    {
+      "name": "walk_cycle",
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\walk_cycle.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\walk_cycle.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\walk_cycle.contact.jpg",
+      "count": 13,
+      "interval": 5,
+      "simulation_duration": 1.0,
+      "speed": 0.25
+    },
+    {
+      "name": "movement_input",
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\movement_input.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\movement_input.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\20261002-202538-bd5a96bf\\movement_input.contact.jpg",
+      "count": 7,
+      "interval": 5,
+      "simulation_duration": 0.5,
+      "speed": 1.0
+    }
+  ],
+  "summary": {
+    "passed": 53,
+    "failed": 0,
+    "check_failed": 0,
+    "visual_failed": 0,
+    "visual_passed": 0,
+    "visual_needs_review": 19
+  }
+}

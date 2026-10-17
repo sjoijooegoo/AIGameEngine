@@ -1,0 +1,4 @@
+interface:
+  display_name: "AIGameEngine 开发"
+  short_description: "通过本地脚本开发 Godot 游戏、修复工具链并验证运行证据"
+  default_prompt: "使用 $aigameengine-dev 检查当前任务，通过脚本复现问题并完成修改与回归。"

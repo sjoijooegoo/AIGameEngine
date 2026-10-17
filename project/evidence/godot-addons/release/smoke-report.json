@@ -1,0 +1,16 @@
+{
+  "checks": [
+    {
+      "headless": true,
+      "exit_code": 0,
+      "bridge_disabled": true,
+      "log": "D:\\AIGameEngine\\logs\\sessions\\release-smoke-907285a8\\release.log"
+    },
+    {
+      "headless": false,
+      "exit_code": 0,
+      "bridge_disabled": true,
+      "log": "D:\\AIGameEngine\\logs\\sessions\\release-smoke-68c912a5\\release.log"
+    }
+  ]
+}

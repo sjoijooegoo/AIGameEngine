@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "files": {
+    "asset_pipeline/scene_adapter.gd": "2549d92b348fd9e66a8c72f0d287bc2c5d3277e97f1c44efcfa3d0c02aebabfb",
+    "asset_pipeline/scene_adapter.gd.uid": "b7a109d3e7a0f8a8302aa28f48765cca322189295679d20bc6265c063c76fafa",
+    "asset_pipeline/scene_runtime.gd": "2ab99729cf5c9a481c4b5471873747dddf7db62abafdf1d5f71ee7cc6bbf2606",
+    "asset_pipeline/scene_runtime.gd.uid": "9d25ba8514e34993c0e8b6e7a51dff767a7232c821d70f18aa7f9c22bf122096",
+    "asset_pipeline/worker.gd": "5759cc8beb2b03bf734f3f7fe42cbb09a57d8538754a91357c5d691e3d6b6e79",
+    "asset_pipeline/worker.gd.uid": "8cbd5afe29c1f53270412c1b322c5fb0ba339fae948d300bd10b91167004c15a",
+    "fixtures/player.gd": "861c8d244b28b2ee4c2f793e49713410124b2d8877f5b5e4b26760527703f672",
+    "fixtures/player.gd.uid": "5696d20f782754be9b802cb0cb794617856fe3488e0da3e35566f9aa035d0f19",
+    "fixtures/props.gd": "516b05bf7a0b050515e7fb5ef426d1316e5e1be421084edf91f18302a1e6ed1e",
+    "fixtures/props.gd.uid": "70afa3a629a82d742971ef87c541417024fe4f4967d9ab0bae02c205e7550d31",
+    "testing/bridge.gd": "e8e3a9e654ad34dec217d74f2951aee627d6b157a09fa611bf82c7fde64e831b",
+    "testing/bridge.gd.uid": "3156c39fb54e1b7833cb3a91d6d31e69eabd973ce5ee975fd7b15476f3513fee",
+    "testing/game_adapter.gd": "164c26d86af770c429546653332ed015969c38ba92b1cdd8a4f869fb7537f17d",
+    "testing/game_adapter.gd.uid": "d54686b487fc2203ec9b7e7b9785bb8c0e782cfb32cc6817c61c2a5690d3814b",
+    "testing/state_codec.gd": "ef879305e9bfefaead403261f8184e1ed27fcda56b6f11571eac7ea3df5de947",
+    "testing/state_codec.gd.uid": "f30c75d978ee2630ea516d0c5e81c0009ff7381774209649e129cbae6afa95ad",
+    "runtime.json": "58fa71c616413162129751cc3857cc0364edc230dca19e44fc9006c293f73879"
+  }
+}

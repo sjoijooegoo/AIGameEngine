@@ -1,0 +1,32 @@
+{
+  "passed": true,
+  "platform": "WSL Ubuntu x86_64 release server + 4 Windows debug clients",
+  "checks": [
+    "linux_release_start",
+    "cross_os_four_clients",
+    "real_time_authoritative_movement",
+    "cross_os_leave"
+  ],
+  "movement_metres": 2.0533313751220987,
+  "server_build": {
+    "project": "bank",
+    "server": true,
+    "platform": "linux",
+    "protocol": 1,
+    "scope": "2–4 player structural bank movement slice; no combat or interactive doors",
+    "local_reference": false,
+    "sources": {
+      "coop/avatar.gd": "975c9912ea190a6ab4b714cd60cf54def3ddee871c32c89e30b2bdf28451960d",
+      "coop/bank_layout.json": "0408d5c0356af29f32778ea77a445d4c5d01d43b79da42c0409a94c1243abe87",
+      "coop/main.gd": "5b8a76f361105125979cfa60d990ed97a311fd137f3c57edc166adbd111f7d1a",
+      "coop/main.tscn": "be984a7de6b58f754d113df7b0219eca0b7d02fb241cbf5eb63cff716e7b4cdf",
+      "coop/player.gd": "7b92bde40f911e76eafa884406f5c1287255ca72af4f078bb8d9d24604090dc4",
+      "coop/session.gd": "e6f9f913a98e4ac944cc61af1bbc8c266adf754bec95092e2d62a0e45d1e3f4d",
+      "coop/ui.gd": "b92bf17ec0a03686c7372091cf8f453eac8fd239e34cb6ecb9d630ad7efe5691",
+      "coop/world.gd": "9e6792c2f0573ecabe771528baf96cc5bce2ef65423916a74d4e6ad63aae8b21"
+    },
+    "executable": "bank-coop-server.x86_64",
+    "sha256": "f17ed7979edbfc54f6318ddd590049eca4552263083b732d06d46b54fe650dea"
+  },
+  "scope": "Real-time production scheduling over local UDP; not remote VPS capacity/latency validation"
+}

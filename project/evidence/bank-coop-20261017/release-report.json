@@ -1,0 +1,10 @@
+{
+  "passed": true,
+  "checks": [
+    "linux_release_and_windows_release_connect",
+    "two_clients_full_body_reference_load",
+    "test_bridge_absent"
+  ],
+  "server": "D:\\AIGameEngine\\build\\bank\\coop\\20261017-110530-174952\\package\\bank-coop-server.x86_64",
+  "client": "D:\\AIGameEngine\\build\\bank\\coop\\20261017-110530-32cdb4\\package\\BankCoop.exe"
+}

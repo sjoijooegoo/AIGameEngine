@@ -1,0 +1,98 @@
+{
+  "passed": true,
+  "project": "bank",
+  "checks": [
+    {
+      "name": "coop_two_clients",
+      "status": "passed",
+      "dedicated_server_is_not_player": true
+    },
+    {
+      "name": "coop_authoritative_walk_and_stop",
+      "status": "passed",
+      "distance": 2.8000221472509503,
+      "input": "Input.parse_input_event -> normal _input -> UDP RPC"
+    },
+    {
+      "name": "coop_run_animation",
+      "status": "passed",
+      "remote_avatar": {
+        "bones": 85,
+        "clips": [
+          "idle",
+          "run",
+          "walk"
+        ],
+        "motion": "idle",
+        "source": "local_l4d2_reference",
+        "time": 0.15
+      }
+    },
+    {
+      "name": "coop_wall_collision",
+      "status": "passed",
+      "position": [
+        17.7799549102783,
+        -0.0191202759742737,
+        21.6918029785156
+      ]
+    },
+    {
+      "name": "coop_invalid_input_rejected",
+      "status": "passed"
+    },
+    {
+      "name": "coop_stale_input_stops",
+      "status": "passed"
+    },
+    {
+      "name": "coop_four_clients_and_late_join",
+      "status": "passed",
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "coop_capacity_rejected",
+      "status": "passed"
+    },
+    {
+      "name": "coop_leave_button_and_cleanup",
+      "status": "passed"
+    },
+    {
+      "name": "coop_rejoin",
+      "status": "passed"
+    },
+    {
+      "name": "coop_abrupt_disconnect",
+      "status": "passed"
+    },
+    {
+      "name": "coop_map_version_rejected",
+      "status": "passed"
+    },
+    {
+      "name": "coop_server_disconnect_cleanup",
+      "status": "passed"
+    }
+  ],
+  "captures": [
+    "D:/AIGameEngine/logs/sessions/bank-coop-20261017-105154-3d6f6f/bravo/capture_37.png",
+    "D:/AIGameEngine/logs/sessions/bank-coop-20261017-105154-3d6f6f/bravo/capture_39.png",
+    "D:/AIGameEngine/logs/sessions/bank-coop-20261017-105154-3d6f6f/bravo/capture_49.png",
+    "D:/AIGameEngine/logs/sessions/bank-coop-20261017-105154-3d6f6f/bravo/capture_51.png",
+    "D:/AIGameEngine/logs/sessions/bank-coop-20261017-105154-3d6f6f/bravo/capture_53.png",
+    "D:/AIGameEngine/logs/sessions/bank-coop-20261017-105154-3d6f6f/bravo/capture_55.png",
+    "D:/AIGameEngine/logs/sessions/bank-coop-20261017-105154-3d6f6f/bravo/capture_57.png",
+    "D:/AIGameEngine/logs/sessions/bank-coop-20261017-105154-3d6f6f/bravo/capture_59.png",
+    "D:/AIGameEngine/logs/sessions/bank-coop-20261017-105154-3d6f6f/delta/capture_12.png"
+  ],
+  "rendered": true,
+  "reference": true,
+  "project_path": "D:\\AIGameEngine\\build\\bank\\coop\\20261017-105154-255a84\\project",
+  "scope": "real ENet on separate local Godot processes; frozen between bounded 60 Hz steps; no legacy worlds; no WAN latency or Ubuntu execution claim"
+}

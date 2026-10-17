@@ -1,0 +1,153 @@
+{
+  "version": 1,
+  "task": "REPO-001",
+  "date": "2026-10-02",
+  "scope": "Repository layer migration and Skill-first local CLI; not a game port or final art approval",
+  "checks": [
+    {
+      "name": "layout_boundaries",
+      "status": "pass",
+      "detail": "34 unit tests include project/resource boundaries, native Godot rejection of out-of-root sessions, sandbox-only dependencies and reserved bank rejection."
+    },
+    {
+      "name": "runtime_sync_integrity",
+      "status": "pass",
+      "detail": "Deployment matches canonical source; tests prove tampered/unmanaged files reject the entire update before mutation and reject manifest traversal."
+    },
+    {
+      "name": "entrypoint_compatibility",
+      "status": "pass",
+      "detail": "Old/new CLI compared from unrelated cwd; legacy setup and test discovery passed; Skill CLI rendered movement and capture passed; MCP retained as optional and removed from default registration."
+    },
+    {
+      "name": "migration_provenance",
+      "status": "pass",
+      "detail": "8 source snapshot files verified; prior catalogue preparation records, original HTML, all approved baselines and previous evidence unchanged."
+    },
+    {
+      "name": "migration_regression",
+      "status": "pass",
+      "detail": "Headless 20, rendered executable 53, assets 11 and both release smoke modes passed; 19 comparisons to same-machine pre-migration images passed. Approved baseline comparisons remain needs_review for GPU mismatch."
+    }
+  ],
+  "summary": {
+    "passed": 5,
+    "failed": 0,
+    "unit_tests": 34,
+    "headless_checks": 20,
+    "rendered_checks": 53,
+    "asset_checks": 11,
+    "approved_baseline_needs_review": 19
+  },
+  "engine": {
+    "adapter": {
+      "adapter_version": 1,
+      "capabilities": [
+        "view",
+        "asset",
+        "animation",
+        "checkpoint"
+      ],
+      "entities": [
+        "player",
+        "npc"
+      ],
+      "fixtures": [
+        "default",
+        "door_locked",
+        "npc_chase",
+        "npc_occluded",
+        "combat",
+        "gallery"
+      ],
+      "game_id": "bank_lab",
+      "state_version": 2,
+      "views": [
+        "player",
+        "overview",
+        "materials",
+        "model",
+        "npc"
+      ]
+    },
+    "commands": [
+      "describe",
+      "state",
+      "ui",
+      "reset",
+      "act",
+      "step",
+      "click",
+      "capture",
+      "sequence",
+      "checkpoint",
+      "restore",
+      "animation",
+      "view",
+      "resize",
+      "audit",
+      "asset",
+      "quit"
+    ],
+    "godot": "4.7.2-stable (official)",
+    "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+    "inputs": [
+      "W",
+      "A",
+      "S",
+      "D",
+      "E",
+      "TAB",
+      "ESC",
+      "SHIFT"
+    ],
+    "pid": 26648,
+    "protocol": 2,
+    "rendered": true,
+    "renderer": "gl_compatibility"
+  },
+  "evidence_sha256": {
+    "repository-layers/asset-preview-1.png": "dbf4b8f36f2ffab9e62a4f9704f7bf4360b5363769a825bc7ba89650650841ae",
+    "repository-layers/asset-preview-2.png": "df0a4383d2c5b3ca09643f5fb912a7213cd26cfb308e89100a833de5f94d365e",
+    "repository-layers/asset-preview-3.png": "c9f163554e9ab14bb770b9d6308340d4864191585cd0f4c45006b0ccd7f5b6a4",
+    "repository-layers/asset-preview-4.png": "7d5d7c3d2ca541d5d9686dbce5ca05717a3155f9d799317467f198c7c8f1f5e1",
+    "repository-layers/asset-preview-5.png": "7880896793dcb7da33aa9f70c15f02bc2def718eaf9583b2edba468b82a4043b",
+    "repository-layers/asset-report.json": "5add84c90df52afcb0136f6254b73edddedb1051aeff917060bf3046692b36cd",
+    "repository-layers/build-manifest.json": "a13e814733e03cda89ceba2e3a613a966cb77be49f0ed544761fec80dda3ae66",
+    "repository-layers/headless-report.json": "48ddbfb5c275433ae7d1afd777584d2dbd7e311bc692f1727687fd55a62598cb",
+    "repository-layers/original-files.json": "0144a9ce05da06de408fa4d97ad6f84c4aa21ac33f3a8d6bc8608dedae7a30d4",
+    "repository-layers/overview.png": "a7b2c46e339f2df85f713334ca3d4ba2121838fb193387a3bb32c32ba93ac7c9",
+    "repository-layers/provenance.json": "ac5b760768950a90baa0cbc1af38d07d34ba8bf9be21b67c0df2ca13b5940aa4",
+    "repository-layers/release-smoke.json": "097353d5dabdd98effb14ba60a12652c03cbab76584bcd12cf4074c96ee870c9",
+    "repository-layers/rendered-report.json": "18a8931534ce8edbf3230addea52d740c95f6ba246b368e16a8ceb3abb991758",
+    "repository-layers/runtime-deployment.json": "c4d6e677828f1c7d2a707ea82b3d2d13f45843d2b1aaf05ecd06eb57cead0718",
+    "repository-layers/same-machine-visual-comparison.json": "0fd6fbd125621720aca04d65484c79a0ecd05417d354ded94ffbbc1c38e191c4",
+    "repository-layers/skill-smoke.json": "50240ccf284d874c8b95876d8ba739895c65aa8aebc61ffe745507a32af82301",
+    "repository-layers/skill_walk.png": "602fbcf7209565208a9f4bb1b18f93e167bcc440f989977e4a117dd217008bd6",
+    "repository-layers/ui_pause_800x600.png": "c18737e9e785327275d9bb4b1fba92aa7246d911e694fdd035af52d49b2c9eb3",
+    "repository-layers/unittest.log": "64700f306abd57c34892ad5bbc512dc78342327958c2be6077557c2a4d493ebd",
+    "repository-layers/walk_cycle.contact.jpg": "3d6869604687a82458d36320ebcafda41b433c0fa1c128f48c25109b6b7c7f06"
+  },
+  "observations": {
+    "reviewer": "AI",
+    "scope": "Migration smoke observations only; no baseline promotion or final style approval",
+    "viewed": [
+      "overview.png",
+      "ui_pause_800x600.png",
+      "walk_cycle.contact.jpg",
+      "skill_walk.png",
+      "asset-preview-1.png",
+      "asset-preview-2.png",
+      "asset-preview-3.png",
+      "asset-preview-4.png",
+      "asset-preview-5.png"
+    ],
+    "notes": "Room geometry, sampled Chinese UI, movement/animation frames and asset preview contact sheets were actually viewed. No migration-induced visible regression found; 19 same-machine reference comparisons pass."
+  },
+  "limits": [
+    "Bank game/runtime remains reserved without a fake project; PORT-001 is next.",
+    "Historical artifacts and build outputs preserved; old replay source fingerprints intentionally differ.",
+    "GitHub hosted CI and client automatic Skill discovery were not directly exercised.",
+    "Already-running clients may retain old MCP registration until config reload; disk default registration is removed."
+  ]
+}

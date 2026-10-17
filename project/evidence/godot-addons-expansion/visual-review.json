@@ -1,0 +1,18 @@
+{
+  "reviewer": "Codex AI",
+  "scope": "Functional fixture UI, bounded AI progress sequence, and actual puzzle editor visibility only; no final user art approval",
+  "reports": {
+    "systems-rendered/systems-report.json": "6dd5b59c305deede527058bd74fa2de0615c9311247d86aa1fed86486c95841a",
+    "editor/editor-report.json": "3b9c9d492a031b5880ecf2be74808275e442b7e58353f926c8634f563c309f1f"
+  },
+  "images": {
+    "systems-rendered/unlocked_dialogue.png": "4981a73cdc468dba6b1d7dd6e6b629cfd701aa89bb5b6dc780c390dcd9cf12c1",
+    "systems-rendered/ai_progress.contact.jpg": "411ae15f379a6acc2aa45c876504815ec353a4e70b1567d54ab143b2809e1934",
+    "editor/puzzle-editor.png": "525ddaf160d7af37a81ae40a9d334f4205864e98b65ec832cb3fc68e734bd20c"
+  },
+  "observations": [
+    "Chinese conditional line and response buttons fit the viewport",
+    "AI progress changes at fixed captured steps",
+    "Puzzles editor shows three labeled example nodes and two connections"
+  ]
+}

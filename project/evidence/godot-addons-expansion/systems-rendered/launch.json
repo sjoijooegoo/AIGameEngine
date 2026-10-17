@@ -1,0 +1,20 @@
+{
+  "command": [
+    "D:\\AIGameEngine\\.tools\\Godot_v4.7.2-stable_win64_console.exe",
+    "--path",
+    "D:\\AIGameEngine\\engine\\sandbox\\addon_probe",
+    "--fixed-fps",
+    "60",
+    "--max-fps",
+    "60",
+    "--resolution",
+    "1280x720",
+    "--position",
+    "40,40",
+    "--scene",
+    "res://systems/systems.tscn",
+    "--",
+    "--ai-session=D:/AIGameEngine/logs/sessions/20261002-204648-0ac41fe4"
+  ],
+  "pid": 39052
+}

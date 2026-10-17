@@ -1,0 +1,1203 @@
+{
+  "name": "walk",
+  "fps": 10,
+  "interval": 6,
+  "frames": [
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-00.png",
+      "simulation_time": 0.1,
+      "state": {
+        "input_sequence": 36,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 36,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0262586120516062,
+                0.0,
+                0.0,
+                0.999655246734619
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.0499999991485051
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.0192299485206604,
+              16.0830783843994
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190934203565121,
+              16.2799987792969
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 36,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 0.6
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194383226335049,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 36,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-01.png",
+      "simulation_time": 0.2,
+      "state": {
+        "input_sequence": 42,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 42,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.206352844834328,
+                0.0,
+                0.0,
+                0.978477716445923
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.149999997445515
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.0191159397363663,
+              16.3305282592773
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190933495759964,
+              16.560001373291
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 42,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 0.700000000000001
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194434393197298,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 42,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-02.png",
+      "simulation_time": 0.30000000000000004,
+      "state": {
+        "input_sequence": 48,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 48,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.232403501868248,
+                0.0,
+                0.0,
+                0.972619473934174
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.249999995742525
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.01909707672894,
+              16.6051502227783
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190933886915445,
+              16.8400039672852
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 48,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 0.800000000000001
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194442830979824,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 48,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-03.png",
+      "simulation_time": 0.4,
+      "state": {
+        "input_sequence": 54,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 54,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.152539268136024,
+                0.0,
+                0.0,
+                0.988297462463379
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.349999994039536
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.0190939661115408,
+              16.8842639923096
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190933812409639,
+              17.1200065612793
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 54,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 0.900000000000001
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194444227963686,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 54,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-04.png",
+      "simulation_time": 0.5,
+      "state": {
+        "input_sequence": 60,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 58,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                1.26940653544239e-08,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.449999992336546
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.0190935339778662,
+              17.164119720459
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190933961421251,
+              17.4000091552734
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 60,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 1.0
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194444470107555,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 60,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-05.png",
+      "simulation_time": 0.6000000000000001,
+      "state": {
+        "input_sequence": 66,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 64,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                -0.152539253234863,
+                0.0,
+                0.0,
+                0.988297462463379
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.549999990633556
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.0190934054553509,
+              17.4440975189209
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190933793783188,
+              17.6800117492676
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 66,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 1.1
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 66,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-06.png",
+      "simulation_time": 0.7000000000000001,
+      "state": {
+        "input_sequence": 72,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 72,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                -0.23240353167057,
+                0.0,
+                0.0,
+                0.972619533538818
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.649999988930566
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.0190933663398027,
+              17.7240982055664
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190933663398027,
+              17.9600143432617
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 72,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 1.2
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 72,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-07.png",
+      "simulation_time": 0.8,
+      "state": {
+        "input_sequence": 78,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 78,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                -0.206352844834328,
+                0.0,
+                0.0,
+                0.978477656841278
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.749999987227576
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.0190933961421251,
+              18.0041007995605
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190933924168348,
+              18.2400169372559
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 78,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 1.3
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 78,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-08.png",
+      "simulation_time": 0.9,
+      "state": {
+        "input_sequence": 84,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 83,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                -0.0813211724162102,
+                0.0,
+                0.0,
+                0.996688008308411
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.849999985524586
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.01909339427948,
+              18.2841033935547
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190933682024479,
+              18.52001953125
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 84,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 1.4
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 84,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-09.png",
+      "simulation_time": 1.0,
+      "state": {
+        "input_sequence": 90,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 89,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0813211277127266,
+                0.0,
+                0.0,
+                0.996688008308411
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.0499999838215956
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.0190933719277382,
+              18.5641059875488
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190933961421251,
+              18.8000221252441
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 90,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 1.5
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 90,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-10.png",
+      "simulation_time": 1.1,
+      "state": {
+        "input_sequence": 96,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 96,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.206352829933167,
+                0.0,
+                0.0,
+                0.978477656841278
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.149999982118606
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.0190933775156736,
+              18.844108581543
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190933812409639,
+              19.0800247192383
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 96,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 1.6
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 96,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-11.png",
+      "simulation_time": 1.2000000000000002,
+      "state": {
+        "input_sequence": 102,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 102,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.232403516769409,
+                0.0,
+                0.0,
+                0.972619533538818
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.249999980415616
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.0190934408456087,
+              19.1241111755371
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190935209393501,
+              19.3600273132324
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 102,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 1.7
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 102,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\original\\walk-12.png",
+      "simulation_time": 1.3,
+      "state": {
+        "input_sequence": 108,
+        "local_id": 295633406,
+        "network": {
+          "1": {
+            "rtt_ms": 6.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 108,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.152539283037186,
+                0.0,
+                0.0,
+                0.988297462463379
+              ],
+              "motion": "walk",
+              "source": "project_authored",
+              "time": 0.349999978712626
+            },
+            "id": 533943609,
+            "motion": "walk",
+            "name": "Actor",
+            "position": [
+              21.0,
+              -0.0190934091806412,
+              19.4041137695313
+            ],
+            "slot": 0,
+            "target": [
+              21.0,
+              -0.0190933849662542,
+              19.6400299072266
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 108,
+            "avatar": {
+              "bones": 17,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.0,
+                0.0,
+                0.0,
+                1.0
+              ],
+              "motion": "idle",
+              "source": "project_authored",
+              "time": 1.8
+            },
+            "id": 295633406,
+            "motion": "idle",
+            "name": "Observer",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 108,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    }
+  ]
+}

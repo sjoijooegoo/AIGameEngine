@@ -1,0 +1,46 @@
+{
+  "version": 1,
+  "project": "addon_probe",
+  "packages": [
+    {
+      "id": "phantom_camera",
+      "version": "0.11.0.3",
+      "archive": "phantom-camera-v0.11.0.3.zip",
+      "url": "https://api.github.com/repos/ramokz/phantom-camera/zipball/v0.11.0.3",
+      "sha256": "237fab51bc0eefba1c9b32efbf64f8f2e6c56ad758215ce4505d402e516f58d0",
+      "prefix": "ramokz-phantom-camera-cb6e096/addons/phantom_camera/"
+    },
+    {
+      "id": "debug_draw_3d",
+      "version": "1.7.3",
+      "archive": "debug-draw-3d-1.7.3.zip",
+      "url": "https://github.com/DmitriySalnikov/godot_debug_draw_3d/releases/download/1.7.3/debug-draw-3d_1.7.3.zip",
+      "sha256": "e16c7e1bd7f4c30d8e503ce424caef5b9e2fd5f44094cf00be66c334aff54c70",
+      "prefix": "debug_draw_3d-1.7.3/addons/debug_draw_3d/"
+    },
+    {
+      "id": "dialogue_manager",
+      "version": "4.1.0",
+      "archive": "dialogue-manager-4.1.0.zip",
+      "url": "https://api.github.com/repos/nathanhoad/godot_dialogue_manager/zipball/v4.1.0",
+      "sha256": "4dafed4cde950a040c5ea1663756e28ae31f0970f35ee7aa2db4ea0ce36cd383",
+      "prefix": "nathanhoad-godot_dialogue_manager-a719088/addons/dialogue_manager/"
+    },
+    {
+      "id": "puzzle_dependencies",
+      "version": "3.0.1",
+      "archive": "puzzle-dependencies-3.0.1.zip",
+      "url": "https://api.github.com/repos/nathanhoad/godot_puzzle_dependencies/zipball/v3.0.1",
+      "sha256": "0f811a1dfa23bd191dd128b7865ad0c9244ec0c5ed4f0558ed92a4067139cac2",
+      "prefix": "nathanhoad-godot_puzzle_dependencies-875a62f/addons/puzzle_dependencies/"
+    },
+    {
+      "id": "limboai",
+      "version": "1.8.1",
+      "archive": "limboai-1.8.1-gdextension.zip",
+      "url": "https://github.com/limbonaut/limboai/releases/download/v1.8.1/limboai%2Bv1.8.1.gdextension-4.6.zip",
+      "sha256": "0910411f8dbc0da8920f6c8bbbb6397c347cd9f2f193942468a702dfb11d5f0e",
+      "prefix": "addons/limboai/"
+    }
+  ]
+}

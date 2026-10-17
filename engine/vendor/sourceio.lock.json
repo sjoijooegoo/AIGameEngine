@@ -1,0 +1,10 @@
+{
+  "name": "SourceIO",
+  "repository": "https://github.com/REDxEYE/SourceIO",
+  "commit": "472e81542a6750cf3c282daac41af96a2f5d4fd3",
+  "license": "MIT",
+  "checkout": ".tools/SourceIO",
+  "runtime": "Blender 4.5 Python (numpy/mathutils)",
+  "scope": "Offline Source 1 MDL/ANI decoding only. Not a runtime dependency or globally installed addon.",
+  "local_decoder": "engine/tools/source_animation_decode.py"
+}

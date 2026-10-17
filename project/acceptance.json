@@ -1,6 +1,6 @@
 {
   "version": 1,
-  "scope": "AI development framework; the bank game itself is not yet ported",
+  "scope": "Existing development framework plus planned bank-game port. port_* checks and PORT-ART/PORT-AUDIO-REVIEW evidence are not implemented by this planning change; missing evidence remains not_run.",
   "criteria": [
     {
       "id": "FW-ADAPTER",
@@ -101,6 +101,385 @@
       "checks": [
         "test_real_input_door_collision_and_exit"
       ]
+    },
+    {
+      "id": "PORT-SPEC",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "四层实体及规则可追溯；一楼精确清单、实玩参照、主线依赖和冲突决议齐备。",
+      "checks": [
+        "port_source_inventory_complete",
+        "port_rule_conflicts_resolved"
+      ]
+    },
+    {
+      "id": "PORT-SLICE",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "原作出生点到大厅由真实输入完成；双门误开警报、回程钥匙、自动关闭与占用保护有证据，独立 bank 适配器和 QA 入口可用。",
+      "checks": [
+        "port_cashier_to_hall",
+        "port_mantrap_overlap_alarm",
+        "port_mantrap_return_requires_key",
+        "port_interaction_occlusion"
+      ]
+    },
+    {
+      "id": "PORT-PLAYER",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "移动、伤势速度、瞄准、快转、灌木蹲伏及焦点恢复匹配规格，连续镜头证据无穿墙跳变。",
+      "checks": [
+        "port_player_controls",
+        "port_camera_clearance",
+        "port_input_pause_focus"
+      ]
+    },
+    {
+      "id": "PORT-ITEMS",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "钥匙武器文件与回复品完整；错用、取消、重复拾取、余额不足不改变不应改变的状态。",
+      "checks": [
+        "port_inventory_item_use",
+        "port_pickup_idempotence",
+        "port_heal_vending_currency"
+      ]
+    },
+    {
+      "id": "PORT-COMBAT",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "五武器按原作参数工作，弹药耐久与命中时刻准确，变钝菜刀不阻断破锁主线。",
+      "checks": [
+        "port_weapon_damage_ammo",
+        "port_melee_occlusion_durability",
+        "port_grab_death_regen",
+        "port_dull_knife_progression"
+      ]
+    },
+    {
+      "id": "PORT-AI",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "单敌人感知、攻击、死亡、返回与安全区规则实测；六类数据及个体覆盖值可追溯。",
+      "checks": [
+        "port_enemy_sight_noise",
+        "port_enemy_attack_return",
+        "port_safe_room_and_hedge"
+      ]
+    },
+    {
+      "id": "PORT-NAV",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "前后楼梯与平台连续可走；跨层追击归位、门阻路重寻路、窄门多敌人及隔层命中均有实测。",
+      "checks": [
+        "port_stairs_player_enemy",
+        "port_navigation_door_changes",
+        "port_cross_floor_return",
+        "port_enemy_crowding"
+      ]
+    },
+    {
+      "id": "PORT-SAVE",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "三个手动槽与自动档可恢复进度；原作敌人归位语义和完整开发恢复分开验证；新增系统必须同步扩展覆盖。",
+      "checks": [
+        "port_save_slots_and_continue",
+        "port_save_resets_living_only",
+        "port_autosave_safe_conditions",
+        "port_checkpoint_atomic_complete"
+      ]
+    },
+    {
+      "id": "PORT-WORLD",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "按原始实体清单建成四层及后院；出生点、门洞、交通连接和关键路线准确，固定视角可对照。",
+      "checks": [
+        "port_floor_layout_inventory",
+        "port_floor_routes_collision",
+        "port_elevator_space"
+      ]
+    },
+    {
+      "id": "PORT-SUPERVISOR",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "真实输入完成菜刀破锁、台球杆推柜、主管战及钥匙拾取；安全屋存档和死亡重试可用。",
+      "checks": [
+        "port_knife_cue_supervisor_route",
+        "port_supervisor_unique_drops",
+        "port_safe_room_typewriter"
+      ]
+    },
+    {
+      "id": "PORT-POWER",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "供电状态驱动电梯/读卡器等设备；卷帘门时间与占用保护、内外侧权限和诱敌隐藏规则跨层保持正确。",
+      "checks": [
+        "port_power_elevator_access",
+        "port_shutter_timing_occupancy",
+        "port_yard_gate_sided_access",
+        "port_shutter_lure_hedge"
+      ]
+    },
+    {
+      "id": "PORT-HORDE",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "前后楼梯事件、分波及驻守均使用稳定个体；回头换层存读档不重复刷怪，特殊穿群规则实测。",
+      "checks": [
+        "port_front_back_horde_triggers",
+        "port_horde_entity_continuity",
+        "port_horde_passage_rules",
+        "port_horde_save_reload"
+      ]
+    },
+    {
+      "id": "PORT-PUZZLES",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "通过世界钟获得白色门卡、进入休息区、读取0121线索并获得C钥匙；A/B钥匙与主管钥匙串齐备。",
+      "checks": [
+        "port_world_clocks_reward",
+        "port_lounge_card_power",
+        "port_safe_0121_and_staff_keys",
+        "port_puzzle_repeat_cancel"
+      ]
+    },
+    {
+      "id": "PORT-LOGISTICS",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "双锁任意顺序、供电运箱和车钥匙链可真实完成；运钞车只给物资，不冒充结局，无重复奖励。",
+      "checks": [
+        "port_cashbox_dual_locks",
+        "port_dumbwaiter_strongbox_chain",
+        "port_truck_rewards_once",
+        "port_logistics_save_reload"
+      ]
+    },
+    {
+      "id": "PORT-ENDING",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "从新游戏到轿车逃生的真实输入证据完整，Boss追击/掉落、评级与返回标题正确。",
+      "checks": [
+        "port_boss_door_fight_follow",
+        "port_boss_keys_garage_car",
+        "port_ending_rank_restart",
+        "port_new_game_to_ending"
+      ]
+    },
+    {
+      "id": "PORT-UI",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "全部菜单、机关与叙事可真实点击；四种分辨率中文可读，地图门状态正确，过时提示已按规格修正。",
+      "checks": [
+        "port_title_death_continue_flow",
+        "port_ui_resolution_input_matrix",
+        "port_floor_map_door_status",
+        "port_opening_state_cleanup"
+      ]
+    },
+    {
+      "id": "PORT-ASSETS",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "正式资源可追溯，低多边形风格、雾、照明、后处理与动画有实拍对照及连续帧评审；不自动推断用户美术批准。",
+      "checks": [
+        "port_asset_provenance_and_units",
+        "port_asset_material_audit",
+        "port_animation_sequence_timing"
+      ]
+    },
+    {
+      "id": "PORT-AUDIO",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "事件路由、音量、暂停和跨层衰减实测；实际试听与音画同步录像经过具名评审。",
+      "checks": [
+        "port_audio_event_routing",
+        "port_audio_pause_volume_floor"
+      ]
+    },
+    {
+      "id": "PORT-E2E",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "三难度完整路线、资源耗尽和中途读档不软锁；在明确设备及预算下记录真实性能，人工核验画面声音与操作。",
+      "checks": [
+        "port_e2e_easy",
+        "port_e2e_normal",
+        "port_e2e_hard",
+        "port_e2e_no_softlocks",
+        "port_real_time_performance"
+      ]
+    },
+    {
+      "id": "PORT-RELEASE",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "正式银行入口导出，干净环境无需Python/Godot也能离线运行，发行桥关闭，存读档与报告及授权清单齐备。",
+      "checks": [
+        "port_release_bank_entry",
+        "port_release_offline_assets",
+        "port_release_bridge_disabled",
+        "port_release_save_restart"
+      ]
+    },
+    {
+      "id": "PORT-ART-MOTION",
+      "kind": "review",
+      "implementation_status": "planned",
+      "description": "相机避障、快转及楼梯移动连续，无异常穿墙或跳变。",
+      "evidence": [
+        "bank_camera.sequence.json",
+        "bank_camera.contact.jpg"
+      ],
+      "scope_note": "Evidence filenames are planned. A scoped reviewer decision must bind the exact report and evidence hashes; no approval is inferred from test success."
+    },
+    {
+      "id": "PORT-ART-WORLD",
+      "kind": "review",
+      "implementation_status": "planned",
+      "description": "四层及后院空间关系、入口与路径对照原作规格完成审阅。",
+      "evidence": [
+        "bank_g_overview.png",
+        "bank_f2_overview.png",
+        "bank_f3_overview.png",
+        "bank_f4_overview.png",
+        "bank_yard_overview.png"
+      ],
+      "scope_note": "Evidence filenames are planned. A scoped reviewer decision must bind the exact report and evidence hashes; no approval is inferred from test success."
+    },
+    {
+      "id": "PORT-ART-UI",
+      "kind": "review",
+      "implementation_status": "planned",
+      "description": "中文、长文本、地图和机关界面在四种分辨率可读可操作。",
+      "evidence": [
+        "bank_ui_800x600.png",
+        "bank_ui_1024x768.png",
+        "bank_ui_1280x720.png",
+        "bank_ui_1920x1080.png",
+        "bank_ui_review_matrix.json"
+      ],
+      "scope_note": "Evidence filenames are planned. A scoped reviewer decision must bind the exact report and evidence hashes; no approval is inferred from test success."
+    },
+    {
+      "id": "PORT-ART-STYLE",
+      "kind": "review",
+      "implementation_status": "planned",
+      "description": "原作与Godot对照图及动画序列经逐项评审；记录审阅范围与有意差异，用户最终美术认可单独记录。",
+      "evidence": [
+        "bank_style_reference.png",
+        "bank_style_godot.png",
+        "bank_style_review_matrix.json",
+        "bank_combat.sequence.json",
+        "bank_combat.contact.jpg"
+      ],
+      "scope_note": "Evidence filenames are planned. A scoped reviewer decision must bind the exact report and evidence hashes; no approval is inferred from test success."
+    },
+    {
+      "id": "PORT-AUDIO-REVIEW",
+      "kind": "review",
+      "implementation_status": "planned",
+      "description": "实际试听环境、武器、机关、敌人、安全屋和结尾；对照录像判断音画同步，事件日志不能替代试听。",
+      "evidence": [
+        "bank_audio_review.json",
+        "bank_audio_sync.mp4"
+      ],
+      "scope_note": "Evidence filenames are planned. A scoped reviewer decision must bind the exact report and evidence hashes; no approval is inferred from test success."
+    },
+    {
+      "id": "REPO-LAYOUT",
+      "kind": "automated",
+      "description": "目录与运行时边界生效，旧入口兼容，资产来源与历史证据完整，游戏与发行回归无新增失败。",
+      "checks": [
+        "layout_boundaries",
+        "runtime_sync_integrity",
+        "entrypoint_compatibility",
+        "migration_provenance",
+        "migration_regression"
+      ]
+    },
+    {
+      "id": "ADDON-COMPAT",
+      "kind": "automated",
+      "description": "固定插件在独立试验场导入、按真实输入运行、固定帧冻结并导出；部署校验和原有框架回归有证据。完整插件检查点及银行接入不在本项范围。",
+      "checks": [
+        "addon_package_integrity",
+        "addon_headless",
+        "addon_rendered",
+        "addon_fixed_step",
+        "addon_release",
+        "addon_regression",
+        "addon_deployment_negative_tests"
+      ]
+    },
+    {
+      "id": "ADDON-EXTENDED",
+      "kind": "automated",
+      "description": "三个可选插件在独立试验场锁定部署，输入、冻结、编辑器、发行与既有插件回归有证据。",
+      "checks": [
+        "addon_expansion_lock",
+        "addon_systems_headless",
+        "addon_systems_rendered",
+        "addon_puzzle_editor",
+        "addon_systems_release",
+        "addon_expansion_regression",
+        "addon_expansion_units"
+      ]
+    },
+    {
+      "id": "ADDON-PRODUCTION",
+      "kind": "automated",
+      "implementation_status": "planned",
+      "description": "正式银行中按需接入插件，完整状态恢复、资源生命周期与真实流程通过独立验证。",
+      "checks": [
+        "bank_plugin_checkpoint",
+        "bank_plugin_lifecycle",
+        "bank_plugin_input_flow",
+        "bank_plugin_release"
+      ]
+    },
+    {
+      "id": "BANK-COOP-NET",
+      "kind": "automated",
+      "description": "Dedicated ENet server and 2–4 bank clients validate movement, collision, capacity, state joins/leaves, reconnect and release Linux interoperability.",
+      "checks": [
+        "coop_two_clients",
+        "coop_authoritative_walk_and_stop",
+        "coop_run_animation",
+        "coop_wall_collision",
+        "coop_invalid_input_rejected",
+        "coop_stale_input_stops",
+        "coop_four_clients_and_late_join",
+        "coop_capacity_rejected",
+        "coop_leave_button_and_cleanup",
+        "coop_rejoin",
+        "coop_abrupt_disconnect",
+        "coop_map_version_rejected",
+        "coop_server_disconnect_cleanup",
+        "coop_linux_release_interop",
+        "coop_release_clients",
+        "coop_clean_checkout"
+      ]
+    },
+    {
+      "id": "BANK-COOP-VISUAL",
+      "kind": "review",
+      "description": "Review full-body idle/walk/run frames and join UI in the bank co-op structural slice; user art acceptance remains pending.",
+      "evidence": [
+        "gallery.html"
+      ],
+      "scope_note": "Not complete bank art or gameplay; local L4D2 model is reference-only."
     }
   ]
 }

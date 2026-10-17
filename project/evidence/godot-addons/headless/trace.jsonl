@@ -1,0 +1,17 @@
+{"id": "1790944056177947200", "command": "step", "args": {"frames": 45}}
+{"id": "1790944056214860100", "command": "state", "args": {}}
+{"id": "1790944057034932300", "command": "state", "args": {}}
+{"id": "1790944057063954800", "command": "act", "args": {"keys": ["S"], "frames": 55}}
+{"id": "1790944057112802500", "command": "step", "args": {"frames": 45}}
+{"id": "1790944057150912600", "command": "act", "args": {"keys": ["W"], "frames": 85}}
+{"id": "1790944057199855300", "command": "act", "args": {"keys": ["W"], "frames": 140}}
+{"id": "1790944057270919400", "command": "state", "args": {}}
+{"id": "1790944058095145000", "command": "state", "args": {}}
+{"id": "1790944058122662700", "command": "act", "args": {"keys": ["F"], "frames": 1}}
+{"id": "1790944058154718100", "command": "state", "args": {}}
+{"id": "1790944058980207000", "command": "state", "args": {}}
+{"id": "1790944059008919800", "command": "step", "args": {"frames": 24}}
+{"id": "1790944059043643300", "command": "state", "args": {}}
+{"id": "1790944059076370400", "command": "act", "args": {"mouse": [170, -35], "frames": 20}}
+{"id": "1790944059113997400", "command": "checkpoint", "args": {"name": "unsupported"}}
+{"id": "1790944059142660600", "command": "quit", "args": {}}

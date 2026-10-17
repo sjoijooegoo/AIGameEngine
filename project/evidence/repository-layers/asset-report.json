@@ -1,0 +1,384 @@
+{
+  "checks": [
+    {
+      "name": "test_bad_glb_and_dependency_escape",
+      "status": "pass"
+    },
+    {
+      "name": "test_explicit_scale_rotation_and_texture_role",
+      "status": "pass"
+    },
+    {
+      "name": "test_fbx_import_matches_glb_dimensions",
+      "status": "pass"
+    },
+    {
+      "name": "test_glb_png_measurements_and_cache",
+      "status": "pass"
+    },
+    {
+      "name": "test_jobs_cancel_owned_process_and_queued_work",
+      "status": "pass"
+    },
+    {
+      "name": "test_mcp_async_prepare_and_inspect",
+      "status": "pass"
+    },
+    {
+      "name": "test_missing_texture_blocks_preparation",
+      "status": "pass"
+    },
+    {
+      "name": "test_real_input_door_collision_and_exit",
+      "status": "pass"
+    },
+    {
+      "name": "test_reject_float_wall_overlap_support_and_door_sweep",
+      "status": "pass"
+    },
+    {
+      "name": "test_tabletop_anchor_and_reject_cycles",
+      "status": "pass"
+    },
+    {
+      "name": "test_unreachable_route_and_invalid_build_preserve_scene",
+      "status": "pass"
+    }
+  ],
+  "previews": [
+    {
+      "asset_id": "demo.counter",
+      "preparation_key": "6179b0c9057384f8",
+      "source_revision": "92f4c94a60727b0f",
+      "resource_sha256": "a817ced36f82db82c102e3e09384965708884116fb2463f568f1ba543c73f4ac",
+      "lighting": "neutral",
+      "bounds": {
+        "min": [
+          -1.10000002384186,
+          0.0,
+          -0.349999994039536
+        ],
+        "size": [
+          2.20000004768372,
+          1.09999990463257,
+          0.699999988079071
+        ]
+      },
+      "captures": [
+        {
+          "camera": [
+            0.0,
+            1.81722843647003,
+            -3.62065315246582
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\6a61c186c34a48f6aa289cc18fd5772d/front.png",
+          "view": "front",
+          "pixel_stddev": [
+            43.23233884657259,
+            42.757658983016576,
+            42.97116767624643
+          ]
+        },
+        {
+          "camera": [
+            0.0,
+            1.81722843647003,
+            3.62065315246582
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\6a61c186c34a48f6aa289cc18fd5772d/back.png",
+          "view": "back",
+          "pixel_stddev": [
+            45.993447186762545,
+            46.75773494973016,
+            47.31586061148519
+          ]
+        },
+        {
+          "camera": [
+            3.62065315246582,
+            1.81722843647003,
+            0.0
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\6a61c186c34a48f6aa289cc18fd5772d/side.png",
+          "view": "side",
+          "pixel_stddev": [
+            42.388682511525,
+            41.898342367140245,
+            42.113278933617224
+          ]
+        },
+        {
+          "camera": [
+            2.28837370872498,
+            2.60953617095947,
+            2.28837370872498
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\6a61c186c34a48f6aa289cc18fd5772d/overview.png",
+          "view": "overview",
+          "pixel_stddev": [
+            46.64890938275797,
+            43.7797797992578,
+            44.88875297499991
+          ]
+        }
+      ],
+      "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+      "renderer": "gl_compatibility",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\jobs\\6a61c186c34a48f6aa289cc18fd5772d\\contact.png",
+      "report": "D:\\AIGameEngine\\logs\\jobs\\6a61c186c34a48f6aa289cc18fd5772d\\preview.html",
+      "contact_sha256": "dbf4b8f36f2ffab9e62a4f9704f7bf4360b5363769a825bc7ba89650650841ae"
+    },
+    {
+      "asset_id": "qa.chair_fbx",
+      "preparation_key": "15d9b7a4b691b2da",
+      "source_revision": "ca4f7794f807c318",
+      "resource_sha256": "b323cbaff145cb0c68aacd8b2f6bac2cfa5f0862c89f6d8741ea760f1109c043",
+      "lighting": "raking",
+      "bounds": {
+        "min": [
+          -0.275000005960464,
+          0.0,
+          -0.275000005960464
+        ],
+        "size": [
+          0.550000011920929,
+          0.899999976158142,
+          0.549999952316284
+        ]
+      },
+      "captures": [
+        {
+          "camera": [
+            0.0,
+            1.03944635391235,
+            -1.68413269519806
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\410062c831f9473184dc9686a6952095/front.png",
+          "view": "front",
+          "pixel_stddev": [
+            17.96614829665467,
+            18.844813976390604,
+            17.974932064501196
+          ]
+        },
+        {
+          "camera": [
+            0.0,
+            1.03944635391235,
+            1.68413269519806
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\410062c831f9473184dc9686a6952095/back.png",
+          "view": "back",
+          "pixel_stddev": [
+            28.274046653507583,
+            32.787878665196466,
+            32.355999798823824
+          ]
+        },
+        {
+          "camera": [
+            1.68413269519806,
+            1.03944635391235,
+            -2.98023223876953e-08
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\410062c831f9473184dc9686a6952095/side.png",
+          "view": "side",
+          "pixel_stddev": [
+            25.934552164044035,
+            25.035299837164352,
+            23.20410382632063
+          ]
+        },
+        {
+          "camera": [
+            1.06442809104919,
+            1.4079852104187,
+            1.06442809104919
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\410062c831f9473184dc9686a6952095/overview.png",
+          "view": "overview",
+          "pixel_stddev": [
+            24.513041269351675,
+            27.751356054462416,
+            27.225853130890755
+          ]
+        }
+      ],
+      "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+      "renderer": "gl_compatibility",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\jobs\\410062c831f9473184dc9686a6952095\\contact.png",
+      "report": "D:\\AIGameEngine\\logs\\jobs\\410062c831f9473184dc9686a6952095\\preview.html",
+      "contact_sha256": "df0a4383d2c5b3ca09643f5fb912a7213cd26cfb308e89100a833de5f94d365e"
+    },
+    {
+      "asset_id": "demo.terminal",
+      "preparation_key": "b01cf5e86ce9f63d",
+      "source_revision": "041e3eccb95d6c91",
+      "resource_sha256": "6ada3a5d2b4fc496ebac27f604eb85de6ed56450e94f8a158f1125c10ee33f71",
+      "lighting": "dark",
+      "bounds": {
+        "min": [
+          -0.224999994039536,
+          0.0,
+          -0.150000005960464
+        ],
+        "size": [
+          0.449999988079071,
+          0.450000017881393,
+          0.300000011920929
+        ]
+      },
+      "captures": [
+        {
+          "camera": [
+            0.0,
+            0.573633193969727,
+            -0.996094882488251
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\55d6e50f18df4c6c849692fb90cba087/front.png",
+          "view": "front",
+          "pixel_stddev": [
+            14.866241493179974,
+            15.935483023486178,
+            17.48127909217329
+          ]
+        },
+        {
+          "camera": [
+            0.0,
+            0.573633193969727,
+            0.996094882488251
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\55d6e50f18df4c6c849692fb90cba087/back.png",
+          "view": "back",
+          "pixel_stddev": [
+            29.382241313364514,
+            26.276268399949785,
+            22.88617243280829
+          ]
+        },
+        {
+          "camera": [
+            0.996094882488251,
+            0.573633193969727,
+            0.0
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\55d6e50f18df4c6c849692fb90cba087/side.png",
+          "view": "side",
+          "pixel_stddev": [
+            13.07387196445679,
+            13.695589589665277,
+            14.572453525669967
+          ]
+        },
+        {
+          "camera": [
+            0.629565238952637,
+            0.791608691215515,
+            0.629565238952637
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\55d6e50f18df4c6c849692fb90cba087/overview.png",
+          "view": "overview",
+          "pixel_stddev": [
+            26.198867751157927,
+            23.750683231524775,
+            21.241407568077875
+          ]
+        }
+      ],
+      "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+      "renderer": "gl_compatibility",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\jobs\\55d6e50f18df4c6c849692fb90cba087\\contact.png",
+      "report": "D:\\AIGameEngine\\logs\\jobs\\55d6e50f18df4c6c849692fb90cba087\\preview.html",
+      "contact_sha256": "c9f163554e9ab14bb770b9d6308340d4864191585cd0f4c45006b0ccd7f5b6a4"
+    },
+    {
+      "asset_id": "demo.wood",
+      "preparation_key": "90f75d4b403aaa1b",
+      "source_revision": "147e42f8231ca45f",
+      "resource_sha256": "dfe21f5ffb3296f60776b7e8fb2d2bb4fa90688f2fe47a35f347366846df633a",
+      "captures": [
+        {
+          "view": "channels",
+          "path": "D:\\AIGameEngine\\logs\\jobs\\1873b73280a842238ea3ca59a436784f\\texture_channels.png",
+          "pixel_stddev": [
+            38.970055263308495,
+            40.36734818500164,
+            48.58331239065913
+          ]
+        }
+      ],
+      "semantic_role": "Not inferred from filename",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\jobs\\1873b73280a842238ea3ca59a436784f\\contact.png",
+      "report": "D:\\AIGameEngine\\logs\\jobs\\1873b73280a842238ea3ca59a436784f\\preview.html",
+      "contact_sha256": "7d5d7c3d2ca541d5d9686dbce5ca05717a3155f9d799317467f198c7c8f1f5e1"
+    },
+    {
+      "scene_id": "bank_room",
+      "resource_sha256": "7b05e5288a5fdc326c2c715731e9b8d63d38a999088705a9b39dedfce6832d9b",
+      "bounds": {
+        "min": [
+          -4.07499980926514,
+          -0.200000002980232,
+          -8.0
+        ],
+        "size": [
+          8.14999961853027,
+          3.20000004768372,
+          14.0
+        ]
+      },
+      "captures": [
+        {
+          "camera": [
+            11.2906398773193,
+            18.3359603881836,
+            13.1133003234863
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\9669128e1f014fcc99e0447a416b066e/overview.png",
+          "view": "overview",
+          "pixel_stddev": [
+            25.686283870680874,
+            25.209024036452014,
+            23.149779003735134
+          ]
+        },
+        {
+          "camera": [
+            -11.2906398773193,
+            18.3359603881836,
+            -15.1133003234863
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\9669128e1f014fcc99e0447a416b066e/reverse.png",
+          "view": "reverse",
+          "pixel_stddev": [
+            21.26308815424313,
+            20.624436172947394,
+            18.83931620358091
+          ]
+        },
+        {
+          "camera": [
+            0.0,
+            1.60000002384186,
+            3.5
+          ],
+          "path": "D:\\AIGameEngine\\logs\\jobs\\9669128e1f014fcc99e0447a416b066e/player.png",
+          "view": "player",
+          "pixel_stddev": [
+            54.364891527448194,
+            53.751781328833815,
+            54.15678385167228
+          ]
+        }
+      ],
+      "gpu": "NVIDIA GeForce RTX 5070 Ti Laptop GPU",
+      "renderer": "gl_compatibility",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\jobs\\9669128e1f014fcc99e0447a416b066e\\contact.png",
+      "report": "D:\\AIGameEngine\\logs\\jobs\\9669128e1f014fcc99e0447a416b066e\\preview.html",
+      "contact_sha256": "7880896793dcb7da33aa9f70c15f02bc2def718eaf9583b2edba468b82a4043b"
+    }
+  ],
+  "headless": false,
+  "visual_review": "not_reviewed"
+}

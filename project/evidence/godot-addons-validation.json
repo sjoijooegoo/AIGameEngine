@@ -1,0 +1,1473 @@
+{
+  "date": "2026-10-02",
+  "scope": "Isolated Windows Godot addon compatibility experiment, not production bank integration",
+  "checks": [
+    {
+      "name": "addon_package_integrity",
+      "status": "pass"
+    },
+    {
+      "name": "addon_headless",
+      "status": "pass"
+    },
+    {
+      "name": "addon_rendered",
+      "status": "pass"
+    },
+    {
+      "name": "addon_fixed_step",
+      "status": "pass"
+    },
+    {
+      "name": "addon_release",
+      "status": "pass"
+    },
+    {
+      "name": "addon_regression",
+      "status": "pass"
+    },
+    {
+      "name": "addon_deployment_negative_tests",
+      "status": "pass"
+    }
+  ],
+  "headless_checks": 13,
+  "rendered_checks": 17,
+  "unit_tests": 37,
+  "build": {
+    "project": "addon_probe",
+    "configuration": "release",
+    "version": "20261002-202946-0091ea7f",
+    "build_id": "d90e89eb021cb9368bc924032bc1cc88c5971748e4bddb827a1c88f068c1d21c",
+    "command": [
+      "D:\\AIGameEngine\\.tools\\Godot_v4.7.2-stable_win64_console.exe",
+      "--headless",
+      "--path",
+      "D:\\AIGameEngine\\engine\\sandbox\\addon_probe",
+      "--export-release",
+      "Windows Desktop",
+      "D:\\AIGameEngine\\build\\addon_probe\\windows\\release\\20261002-202946-0091ea7f\\AddonProbe.exe"
+    ],
+    "directory": "D:\\AIGameEngine\\build\\addon_probe\\windows\\release\\20261002-202946-0091ea7f",
+    "executable": "D:\\AIGameEngine\\build\\addon_probe\\windows\\release\\20261002-202946-0091ea7f\\AddonProbe.exe",
+    "log": "D:\\AIGameEngine\\logs\\builds\\addon_probe-release-20261002-202946-0091ea7f\\engine.log",
+    "status": "completed",
+    "exit_code": 0,
+    "files": {
+      "AddonProbe.exe": "310100c7db18c21fac6bb348468dfbca4073de2fcd3ab0febf3b5b1d982ec54a",
+      "GODOT-LICENSE.txt": "0cc27400b8da8c06bb35350422c14715647cd2632c138921fd49caa6610a1ef6",
+      "libdd3d.windows.template_release.x86_64.dll": "619e6558f4a3745d4e193f313b625c557a6787d8d2fff44c3cdbe46fb5a57fbe"
+    }
+  },
+  "failure_retained": "project/evidence/godot-addons/failed-before-fix/addon-report.json",
+  "fix": "Manual host alone left inactive cameras ticking; fixture now manually ticks inactive cameras and disables their automatic callbacks without editing vendor code.",
+  "limits": [
+    "Plugin checkpoint/reset unsupported and explicitly rejected; bank integration still planned",
+    "Ramp and rear-wall fixture is not full bank stair/corner traversal coverage",
+    "19 existing sandbox visual comparisons remain needs_review due to device fingerprint mismatch",
+    "Only Windows GL Compatibility tested; no full platform/performance or network audit"
+  ],
+  "provenance_note": "Final export differs from last rendered test only in the manual export destination path; CLI release rebuilt and smoke tested after this change. Final EXE hash matches the previous verified release.",
+  "files": [
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/addon-report.json",
+      "path": "project/evidence/godot-addons/headless/addon-report.json",
+      "sha256": "c8a3b14ab72950f616aee97a9a626ff64c8e74465d41a36dbc80ebaed7ef12e1"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/context.json",
+      "path": "project/evidence/godot-addons/headless/context.json",
+      "sha256": "25c24edf59f2fd1645c3ab6e9213a134b4d7fffff374b40bf15927a1a658e282"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/engine.log",
+      "path": "project/evidence/godot-addons/headless/engine.log",
+      "sha256": "8ad2edd98b69ca111fd1c55ad384432839580e552290f1eaeafa38a08df42121"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/launch.json",
+      "path": "project/evidence/godot-addons/headless/launch.json",
+      "sha256": "098dffa333d0dec883de272774fbd05901513d521b91baa7f3bca10da2a10359"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/ready.json",
+      "path": "project/evidence/godot-addons/headless/ready.json",
+      "sha256": "0479d17b61a24880e6681ad1476062019c34e7d16b2321c0c92384e83bc843a3"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944056177947200.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944056177947200.json",
+      "sha256": "6f1f50fbd74c8d785a417e340bacbdcb674b38b6a00928953411a8b106b5755b"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944056214860100.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944056214860100.json",
+      "sha256": "a74d8bab8b32dec1eb06e62c7b4961590236fdc747b6cadddf6b41b2245bb822"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944057034932300.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944057034932300.json",
+      "sha256": "05615e36b74d4e84f95c84df8d02a1a0068216a20117d65db23478cb509376e9"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944057063954800.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944057063954800.json",
+      "sha256": "d6cbf4d32e1fd2fa8fc28d8bedb824238f2c9f7fffbd513ec44110e73549f9bc"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944057112802500.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944057112802500.json",
+      "sha256": "d4510cdf6800779724e4031cf6d0e20446cc443b8d81f81212ecedf732028d0e"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944057150912600.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944057150912600.json",
+      "sha256": "a24d74be4b7b49088860556b6a7f2289664ec3625d9201dacf6f016946f47f16"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944057199855300.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944057199855300.json",
+      "sha256": "3ca14b15c8cee624fc6e26eab2fa640ddb91244396a72c409a9f83c00df21302"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944057270919400.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944057270919400.json",
+      "sha256": "7968f95d10345bd131621140b2bc3fbc12e3c72a645a5d536ef76437bcd1f12b"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944058095145000.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944058095145000.json",
+      "sha256": "cf6f55c5651f0149e17c033c209b87b629a4e75492ac91db95a0b3f866857a08"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944058122662700.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944058122662700.json",
+      "sha256": "5e0a5220ae4dea5602a5fa955382450a570d01528eb6157cc49f6530fc90755f"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944058154718100.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944058154718100.json",
+      "sha256": "64b938bc19f6343f2c83e88f80557cbc70485a97381d072f69d0fb1f56c98368"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944058980207000.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944058980207000.json",
+      "sha256": "ad8376bb535327c61b48d94e34f93c276018983916eb87a594aed050eff3d05c"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944059008919800.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944059008919800.json",
+      "sha256": "9eae7a7b6a15cb08693df7dadeeb2405e79b714aa93c53fc9230a3f9e758c242"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944059043643300.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944059043643300.json",
+      "sha256": "ff4e8a33e2e74030907c7035984468f9c7466ae3c58051ed2d8c367b3e3f2624"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944059076370400.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944059076370400.json",
+      "sha256": "945e5ab442a510a6f43dadcd88a15694417dd7c34b48a25f766f7396a2becc6d"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944059113997400.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944059113997400.json",
+      "sha256": "4efe3c243ddc7f603652931164c6a365aa8f2cb0ea2ab32afbfed431f13a7cd4"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/response_1790944059142660600.json",
+      "path": "project/evidence/godot-addons/headless/response_1790944059142660600.json",
+      "sha256": "e8d070dc35b846da273edd4e549045c43f47262aa1d3d0b9530785e7310bd4a9"
+    },
+    {
+      "source": "logs/sessions/20261002-202735-be8b1806/trace.jsonl",
+      "path": "project/evidence/godot-addons/headless/trace.jsonl",
+      "sha256": "c7c0bc3b69001cef95bd74dbf91980dd25957d8aa46c08529190f084a2300fe8"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/addon-report.json",
+      "path": "project/evidence/godot-addons/rendered/addon-report.json",
+      "sha256": "8d648fb00a51e0e30b82f0f69438d69f75a9f0e9a9fdedd163a1165901a6d667"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition.contact.jpg",
+      "path": "project/evidence/godot-addons/rendered/aim_transition.contact.jpg",
+      "sha256": "26f209f77bd004a6e24a55a5fd783c4b3c41f82c92e75bd58333f22c52f55c59"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition.html",
+      "path": "project/evidence/godot-addons/rendered/aim_transition.html",
+      "sha256": "7a200065b0b8b7d6ea0876228ee5cd5560e4d3d3f832c47e32384b6c6373d665"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition.sequence.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition.sequence.json",
+      "sha256": "b312f9083114ef8da0518b271c275f5d9d60f366422e689c711d4b8f22821404"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition.webp",
+      "path": "project/evidence/godot-addons/rendered/aim_transition.webp",
+      "sha256": "487feda5d0f86cc981cd0a867b4d5b5b0a17bb2ea58558849a1d74018499bbb6"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_000.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_000.png",
+      "sha256": "7b2dad4575924da2a00c937386f3f491ae0fcd7b261fa076e7536e1307433f4c"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_000.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_000.state.json",
+      "sha256": "5cbc544e9b71b35010c247e72ece38207617925025e63c02e648c2ebf1d22264"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_001.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_001.png",
+      "sha256": "142c62d2bce461c7ba5c5b9bb089c5430905a888199a3042af67d972ff929a63"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_001.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_001.state.json",
+      "sha256": "7bd98d261a7d6543bb964ab35d6a9a4c5beec17bcce971a70b41407936c5d033"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_002.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_002.png",
+      "sha256": "f1c5abe5f4b9f2d16193a0812a399393aa6da36af7e5b1f38d2e03d7d341bf45"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_002.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_002.state.json",
+      "sha256": "867d280973bff2ab3df5f7808cfbc7f1f04784b33f08a3546008a1958de4828b"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_003.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_003.png",
+      "sha256": "63338140d7e03589ed87f9611b82a740fe624a84230f9ff53db97e97fee54e56"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_003.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_003.state.json",
+      "sha256": "99c345ece545886899506f29696719828efdd82b8481dc39ffe08c038b60a9d2"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_004.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_004.png",
+      "sha256": "8b2138f05b65076e6d7216de46620be245bb73dec9c6a36a4c69fae6b9c72992"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_004.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_004.state.json",
+      "sha256": "de59080c8282272f2807b999cde35267ce41778005ad0fb72d41626d46ec9d51"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_005.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_005.png",
+      "sha256": "da2235c80d663f193f378d37467b6c188f23fa44e9f15688118dc883259ef017"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_005.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_005.state.json",
+      "sha256": "de6adcc123abdcb22c934679cb946d3e888bab45d63328b5053745c4e079c891"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_006.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_006.png",
+      "sha256": "cfbaa63601f25ee2ef58980c79722841b93e4857c188d3e185db86d5eb483b1f"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_006.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_006.state.json",
+      "sha256": "e93bc441d9bb63671a1bbb02abcfd65b77bf35879f0a45d765cc18a35c5c2400"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_007.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_007.png",
+      "sha256": "d0f58ba19951c2b2a6b290ca57a62ab38173d2b4999a92ba1cc4cfd0125dc471"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_007.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_007.state.json",
+      "sha256": "c3d79a8dbf0baf8a6ef4f8aee9b76e35d7c669e094a8bc3c9e2f6369e24c75d3"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_008.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_008.png",
+      "sha256": "6b499b7254528073c3a64e481c4e97ed9bd8ccd0386784e43b3a21f7f94842dd"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_008.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_008.state.json",
+      "sha256": "bc1be8e30c491b12d6616d8c10cbe44316529561701d35532658fea5dd3d920d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_009.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_009.png",
+      "sha256": "e5ac543a8446dfdf68353a9c06b9e9a56f0b32a4dcaf279ce634902183e1a077"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_009.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_009.state.json",
+      "sha256": "a12189015aa8f2db81b9e335743e2dbdfa53f8ba988bd934a751c16ae30c492b"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_010.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_010.png",
+      "sha256": "3ea8b06c2b4f1f0e2ce6f4e0030ac3b856e3c12f02964a8dac4001138d4745d0"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_010.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_010.state.json",
+      "sha256": "9521419eb9cbab0d9bd92df002304feaab949e8b7100a4eb53478be6ab4a760d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_011.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_011.png",
+      "sha256": "24ee6380d5c13c14caa78e52834b94e3d016505f7f6d62b3a5352d50d06d7904"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_011.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_011.state.json",
+      "sha256": "ff94dbabb253a63d3e7fd8057b180fed4b6fabf2557bf3aa2b608f4c7f4fe6b4"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_012.png",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_012.png",
+      "sha256": "37ab452af355a2a78db20898e0e999b61d5c7644a18f94de05181c5fe8972b58"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/aim_transition_012.state.json",
+      "path": "project/evidence/godot-addons/rendered/aim_transition_012.state.json",
+      "sha256": "5671af1c1b82be89e2245f343e0bd16a4a4b630b8c3ddbf0891d3428cde6313e"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/context.json",
+      "path": "project/evidence/godot-addons/rendered/context.json",
+      "sha256": "d229930e5bebc73a8b005acbd17a3aba1a97839909ac41a0feaf3e103fc1b6b7"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/engine.log",
+      "path": "project/evidence/godot-addons/rendered/engine.log",
+      "sha256": "8538d2561d66b31fbe44721eede98ee89dc0b1a67d623b8d3b0d6817e2951b3f"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/idle_after.png",
+      "path": "project/evidence/godot-addons/rendered/idle_after.png",
+      "sha256": "2dbb07b19b245f22901219d6ce84edb03e3b15917be820ed4321d6b0bafed4cf"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/idle_after.state.json",
+      "path": "project/evidence/godot-addons/rendered/idle_after.state.json",
+      "sha256": "a09b09ec74ad2b548e2cd368d1db1a7b59bbb07fdf2f53d4a0af40d53d09d3f9"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/idle_before.png",
+      "path": "project/evidence/godot-addons/rendered/idle_before.png",
+      "sha256": "2dbb07b19b245f22901219d6ce84edb03e3b15917be820ed4321d6b0bafed4cf"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/idle_before.state.json",
+      "path": "project/evidence/godot-addons/rendered/idle_before.state.json",
+      "sha256": "a09b09ec74ad2b548e2cd368d1db1a7b59bbb07fdf2f53d4a0af40d53d09d3f9"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/launch.json",
+      "path": "project/evidence/godot-addons/rendered/launch.json",
+      "sha256": "2ce527b0b2339aaa3bedb8c17f07e7e79c427ceed9d95a5c90ad05b7f470891b"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/mid_tween_after.png",
+      "path": "project/evidence/godot-addons/rendered/mid_tween_after.png",
+      "sha256": "7b2dad4575924da2a00c937386f3f491ae0fcd7b261fa076e7536e1307433f4c"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/mid_tween_after.state.json",
+      "path": "project/evidence/godot-addons/rendered/mid_tween_after.state.json",
+      "sha256": "5cbc544e9b71b35010c247e72ece38207617925025e63c02e648c2ebf1d22264"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/mid_tween_before.png",
+      "path": "project/evidence/godot-addons/rendered/mid_tween_before.png",
+      "sha256": "7b2dad4575924da2a00c937386f3f491ae0fcd7b261fa076e7536e1307433f4c"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/mid_tween_before.state.json",
+      "path": "project/evidence/godot-addons/rendered/mid_tween_before.state.json",
+      "sha256": "5cbc544e9b71b35010c247e72ece38207617925025e63c02e648c2ebf1d22264"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/moving_damping_after.png",
+      "path": "project/evidence/godot-addons/rendered/moving_damping_after.png",
+      "sha256": "6d826da74dcc7b3a5690063e00c16b6da6e47e01666d35e2472b2488675b1a5e"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/moving_damping_after.state.json",
+      "path": "project/evidence/godot-addons/rendered/moving_damping_after.state.json",
+      "sha256": "6d1c8cd075c39fdf23525b186a96ee08d6ac77a229a32e520f1d3e25163e823f"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/moving_damping_before.png",
+      "path": "project/evidence/godot-addons/rendered/moving_damping_before.png",
+      "sha256": "6d826da74dcc7b3a5690063e00c16b6da6e47e01666d35e2472b2488675b1a5e"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/moving_damping_before.state.json",
+      "path": "project/evidence/godot-addons/rendered/moving_damping_before.state.json",
+      "sha256": "6d1c8cd075c39fdf23525b186a96ee08d6ac77a229a32e520f1d3e25163e823f"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/overlay_off.png",
+      "path": "project/evidence/godot-addons/rendered/overlay_off.png",
+      "sha256": "d555a89f097fd40acc45d04eb0a28b9bcdec333a392b39f98e9b6071b2af07c0"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/overlay_off.state.json",
+      "path": "project/evidence/godot-addons/rendered/overlay_off.state.json",
+      "sha256": "f642f00e415d20f73261318de3c5b862938af8d32ced161f1c7b58268868aa8e"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/overlay_on.png",
+      "path": "project/evidence/godot-addons/rendered/overlay_on.png",
+      "sha256": "81c122ca6ef10ee89c7c0c9701d88f92eb03199c9b902426aefa38d764f13db3"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/overlay_on.state.json",
+      "path": "project/evidence/godot-addons/rendered/overlay_on.state.json",
+      "sha256": "2e484103a0b5ca9a7010b86bceab363e74f1028454770d227333fb49447f42d6"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow.contact.jpg",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow.contact.jpg",
+      "sha256": "02a52f7598ad798422bf2299159bf360d00d2613b0b3a4865665891a8a83c0f7"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow.html",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow.html",
+      "sha256": "c8e9fe3ae92cb0636b901d3f02060b4ba7e8fae3b13731a1768f0d72e8457083"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow.sequence.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow.sequence.json",
+      "sha256": "7f5bcd8e5479186d4766f7bd8628d1f1cf04e150c17470dea52c9aba00406b55"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow.webp",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow.webp",
+      "sha256": "8de988e58fc9f6791542ae4445d51492edde7ef17953ac3caaf224327b3ee0f1"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_000.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_000.png",
+      "sha256": "af51e50c9ccfc5575a6c8419bc61c5ccf321786c3b0efa675d46790aab617f4d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_000.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_000.state.json",
+      "sha256": "0fb668536937739b7a3c0be23e95365ffddfa434c718d4689a5fdfb53ec57f47"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_001.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_001.png",
+      "sha256": "ce428f9a73904eeda158578d8681a34af3b63951dc12958fe68ceec592927e0d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_001.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_001.state.json",
+      "sha256": "77d9b9e2fb63ffaf99c13853c68bb1d32dbfef4874b33a927b7e87a0a57756f6"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_002.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_002.png",
+      "sha256": "b2f902ea975198b350badc02d3b19e63eaa8e2d7d03346e7d64d22b43c1c8253"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_002.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_002.state.json",
+      "sha256": "421ad1b39df56d9311d6c3feb55f88f3c0b707df9e1ff64d288e1996d0f88430"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_003.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_003.png",
+      "sha256": "deb8f7740dc40472cb352fa6b94d67d0ba37e18dfa8f4db5f9a052eb6a80bb12"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_003.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_003.state.json",
+      "sha256": "cec4fb7be5f1d544997fcfcd6eb34ced74be878032bf8cf5659c40f040d5c0cc"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_004.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_004.png",
+      "sha256": "891a4f43bdc560e9c1a4e87b0a20d55f34b54e7c43359cc8584da748ad4a279d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_004.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_004.state.json",
+      "sha256": "4041879971fd6e6fbc01d2909b49e9fcacd0df447dd47e5e5f50b80c300c73cc"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_005.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_005.png",
+      "sha256": "5720b0804b9cabdc150134b9df4fad45aa20b98ea3583d424ad7796e8013d61d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_005.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_005.state.json",
+      "sha256": "2beafeca2d161d53ac0fd59c407873f9aa223f3ab5dbd691b89a54e432f1305f"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_006.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_006.png",
+      "sha256": "3ff4a66f0a02e4195a6eeeb906eb35e8911c741ed1b9f9ffaabcf41166c239dd"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_006.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_006.state.json",
+      "sha256": "b458ab5e45257c93585c5b84ab25c0624910ad4788944a28ed6975f9c01ce48c"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_007.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_007.png",
+      "sha256": "282bef61b2180877e44b349a61fd24520c171f1e9d8d429b6bcc4df2f55b5b7e"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_007.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_007.state.json",
+      "sha256": "4ef70fbd7a6967474ab77ba8e221afecbfa51720408012a185984013fbd7b56c"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_008.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_008.png",
+      "sha256": "62b2afa112904f7416e21812583ecf87ab3f0c0db39cbdab36f21ab85cb4f31c"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_008.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_008.state.json",
+      "sha256": "6fdc853de6c44fcb6b4e60358781e74a80f093fc8ba5bcebb77dd6b9299152cd"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_009.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_009.png",
+      "sha256": "a7ffb9cb1209d1335c3ea8cb44d679d3bedda94dee71d3112f8bf1b526af946e"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_009.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_009.state.json",
+      "sha256": "0952412efca02b9772df48610905a8b47336dbe51c9eaf2a9b89d1ef882b884d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_010.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_010.png",
+      "sha256": "6e5845ce340094c92de6ff0366b02384eef0be4ca9a2a1614d421ea1d7035bbe"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_010.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_010.state.json",
+      "sha256": "6d0f8b6a8ed03daf870aeb5a6e53c74e3b070366aba5b79b9486ab6b9a09eb69"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_011.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_011.png",
+      "sha256": "ad149a2a3fa58c72cdc319e6c21d60e257d83e0ddebd30a6a3cf65ffe89674a3"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_011.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_011.state.json",
+      "sha256": "adb0c9f43f9a0b035151841f3d5ed15baa6cc7abc2ee7c403533db64614c6828"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_012.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_012.png",
+      "sha256": "888aab572605eb3ae9a5cf9f605cc4ccbb8d929e0fb424ce77d795c53a91e433"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_012.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_012.state.json",
+      "sha256": "25fdd067d53dd4e20eb190e59e11fe8b69a6e6f23654ccecdfa3fc50e674a8f6"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_013.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_013.png",
+      "sha256": "8deca3027e645da60636e6898b358899add9fe74af40743149649eec5c92a5a2"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_013.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_013.state.json",
+      "sha256": "0cfa9709bcf806bb5650fac9f449ba8e7f0b6f73fbbed4dd4948dab3c33aa6a0"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_014.png",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_014.png",
+      "sha256": "6d826da74dcc7b3a5690063e00c16b6da6e47e01666d35e2472b2488675b1a5e"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ramp_follow_014.state.json",
+      "path": "project/evidence/godot-addons/rendered/ramp_follow_014.state.json",
+      "sha256": "6d1c8cd075c39fdf23525b186a96ee08d6ac77a229a32e520f1d3e25163e823f"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/ready.json",
+      "path": "project/evidence/godot-addons/rendered/ready.json",
+      "sha256": "bbed75911f8349ecf1ad6a4ad89f83f04be10478156bc812c0fef509feff2ee6"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/rear_wall.png",
+      "path": "project/evidence/godot-addons/rendered/rear_wall.png",
+      "sha256": "91419bc853254cdb957862ee542bc23f72829fc8571205def998341a135447f4"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/rear_wall.state.json",
+      "path": "project/evidence/godot-addons/rendered/rear_wall.state.json",
+      "sha256": "2d4cf3c7968091f915cb175cc7e297006e49c01716bf7181345c05b94682c6c1"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944060226306300.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944060226306300.json",
+      "sha256": "da5bfcdde35fde7bd8d5196fd2b6a0ff5125d8ceb89819639cefc1fd92ff961d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944060519630900.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944060519630900.json",
+      "sha256": "c358c989e4428a907e37b1a125f4e6759d62ab2cc70863629292486dbc7b126d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944060532846100.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944060532846100.json",
+      "sha256": "4cc666dea4589c48d153741652b37f6903c0ac878cce934a33ca8b1b3b797250"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944061387985600.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944061387985600.json",
+      "sha256": "0b5b9ef893657b6a0a10d817ddd6bdec890a0217b154975846c9b7e60b2cba08"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944061411678500.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944061411678500.json",
+      "sha256": "cf9dd3f1bad1f305298c000edfa27d6a764c85da9ffd368fd4414e133a876208"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944061478183800.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944061478183800.json",
+      "sha256": "86a3ce9f636c5ab5eca20fc4d8e2c28aadca4d0e8bea6aa1661c7b1dc81381f9"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944061826986100.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944061826986100.json",
+      "sha256": "3c7ad3f6f0ad03e9aa8ce6f2b213c3eccbe6405389b0340dfde5920638f4874c"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944062112636900.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944062112636900.json",
+      "sha256": "ee09fc981a7bb4514b004a9278e09a18315711d404d2ccc9f070b94b6a87ea77"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944062166191400.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944062166191400.json",
+      "sha256": "e36733b9f868db2983bbb3afed05d746ede15264f4de3b9df091b17d59494569"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944062696218400.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944062696218400.json",
+      "sha256": "48757672d18c16d868f33cefa273449f21b2f6eb7c7938fd42a4f82564876324"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944063822022800.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944063822022800.json",
+      "sha256": "6bc50d643b7e3c1b47fb05aab683d061cf35fbb3744dc2747c572ecde4c5f7b4"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944064334763900.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944064334763900.json",
+      "sha256": "41ede558ca4fe1df9430be6af59f897fa3f74da828fbe5f588c9d9d0b5bd50ae"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944064349204900.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944064349204900.json",
+      "sha256": "7bc8813ef2ee6fddeacfc7208275e368e108fd143fb2e0b2553a7eedaed7b529"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944065195834000.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944065195834000.json",
+      "sha256": "430d1b4a03a879a788ad3ff8c1a421dbc2beadb0856a3f8dd947629102302676"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944065209503700.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944065209503700.json",
+      "sha256": "208d8e0603d2d9ecd9475071b5e3ca8f08bfb29365bab0aa8b3360089e193299"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944065264038700.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944065264038700.json",
+      "sha256": "24c9fe98b3ea97afdd1a8ca3f8ba7bf0549e70ae3a307c9ce4b3385a9328cc5d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944065280109900.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944065280109900.json",
+      "sha256": "dea7690b5f60b7064f66425e2b80bd8c6af998d6ea189f9e3c581a0c0f3e6cbe"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944065294783000.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944065294783000.json",
+      "sha256": "ec1806b1accf0ff6f7748afa4bdd780deeb4f36f5106f704fac4f87f34c1ba4d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944066131001900.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944066131001900.json",
+      "sha256": "b9da76333dec7c977a959b2294b7555468398857f14539c013448da53719f2bf"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944066158797600.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944066158797600.json",
+      "sha256": "94317798f25fc7447e060a1dfded8d38f5b45615128c01e0962266f2a7a59d8e"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944066215073600.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944066215073600.json",
+      "sha256": "54ea623a962295181b2d5ecca3220225edf095b5c2e866c630737aa6042a9890"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944067144929400.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944067144929400.json",
+      "sha256": "fa4a2393a797a42fd81f5797ee84d00b6b6d62d2b5bd76d59a1f7ae20ea20ef6"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944067158258300.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944067158258300.json",
+      "sha256": "27de6468990ada58d40ef3e271728706d250eaec491cc46b34509549b9fc1f0f"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944067299265900.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944067299265900.json",
+      "sha256": "e8d44c7610885c34518332de3478e5994474c98776faefcb1a5b988e0dbab80d"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944067346779600.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944067346779600.json",
+      "sha256": "8758de4952f2bea02972e07ab88b2a042912d98ef49c5fd3d307776b23b86e95"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944067370166400.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944067370166400.json",
+      "sha256": "51587ad992e4300ec92682459e0e542314af151205f9d6ab3bc889b9953b67f4"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944067408382300.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944067408382300.json",
+      "sha256": "0e6a9cfbd0f25444cdf28fa23f19a30dde37c4d0a5117256d11a27b0a5cdd3d0"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/response_1790944067423499500.json",
+      "path": "project/evidence/godot-addons/rendered/response_1790944067423499500.json",
+      "sha256": "8cd01cbd96d89d647c117fd70a835a62dd43db11f832d329faf3cb7953617948"
+    },
+    {
+      "source": "logs/sessions/20261002-202739-f18c2aef/trace.jsonl",
+      "path": "project/evidence/godot-addons/rendered/trace.jsonl",
+      "sha256": "8df417d4d36c7d08f2e3b23d9e8b11e4afc219a2dc2458f35c6bf6744ce72841"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/addon-report.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/addon-report.json",
+      "sha256": "2dd4529d944c94d07c483b324784186f22ee4771ea18c0806b93aa433aae92a3"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition.contact.jpg",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition.contact.jpg",
+      "sha256": "d4a0b9bb9b0009c383ee88fe76539f2f2fd666a24b6daeebeda6343d708bb34e"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition.html",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition.html",
+      "sha256": "f090f480ceeceecc24f68cd6e32d5e2795f29c579d95ff954457d1a9a923c52a"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition.sequence.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition.sequence.json",
+      "sha256": "a4b6fa7f208e5982a5ec9ddc9a8ba83075edab99758aacd277886e5eaa74c806"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition.webp",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition.webp",
+      "sha256": "f0121e6bd77819141f0a35ea8a8a5a1ed41ae0d172e2cf281c2e671dcf786574"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_000.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_000.png",
+      "sha256": "5b67a609018761e7f9cbc3ccc76751db7125ab9af5d7938cac77d612d849788a"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_000.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_000.state.json",
+      "sha256": "21b850e05dfab1c6846114771c79fa7c44992abdc4bb03379baa2e09c3a5e299"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_001.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_001.png",
+      "sha256": "6fd18f4edc5f28aa88814ca3f0f8f31079fb61eefb7c86e3e8f11d6e6fe59a3b"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_001.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_001.state.json",
+      "sha256": "c5e16f58a5b5b90271d2834910f54e10a2f72c722fdebcbe136284d54f477999"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_002.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_002.png",
+      "sha256": "67dffc6e7ca2c0c02b1c2e8a87499147ee1197e7056880941cac76a15d38e8b3"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_002.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_002.state.json",
+      "sha256": "0d1e682f9d4ca15b453da7a133983a41ee29ed53b9011dc11a7682ca53a4e449"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_003.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_003.png",
+      "sha256": "b048fa024bde18371925c44183c46c57760684aed6f0069056515a4f123ea3ff"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_003.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_003.state.json",
+      "sha256": "c8656549e9f046563b8964d519449857165dd84bf8958fbe2ef7da798d1efc0c"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_004.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_004.png",
+      "sha256": "5ccc8790db7c0c0197f8f999bb803c0b8cd4718a8992e7a911743dd2ea3973d8"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_004.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_004.state.json",
+      "sha256": "f335fdcc25617e1d5d56c9d824a189c4be43c6443480afae5f1f9615f287329f"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_005.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_005.png",
+      "sha256": "73c334fe911dc7aa568ba654b290819672b312801f61f137963087c8062ca363"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_005.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_005.state.json",
+      "sha256": "ddb1f24a834a18fbe63a1f4c7393f45e246231ece2c50f75d5db21dfd6d4b229"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_006.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_006.png",
+      "sha256": "9d5d93595c5c7c0340a308cc5caab39ad102fa37083870683bb21b4b082171e4"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_006.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_006.state.json",
+      "sha256": "6a9ee2cef5fe014c4b8d2951ee261f5d0d1237f7c8a7908323ace3125be25701"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_007.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_007.png",
+      "sha256": "e36e411881949eb7bd9c8c1b09eda3913959072fb4515ff9d87c65009642b925"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_007.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_007.state.json",
+      "sha256": "834176f95e487728c6caa46a4cd39048ccfa5b9e63d9ae684de3824aa4c911d2"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_008.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_008.png",
+      "sha256": "eed420415975a00de5a58cdefab9561bd4d19bd3a7d24ab844f282a54fb5a1cd"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_008.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_008.state.json",
+      "sha256": "ca5e269b2ee6d34cb61b807913c5fd39ea65db797c31ca359d56e9160e5c7535"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_009.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_009.png",
+      "sha256": "8ebc7cf649355427e7504f13f5cc193b51881524326e9787ca2e919956666413"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_009.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_009.state.json",
+      "sha256": "5b2952d09e783ee68592f95c4d0cfa68896b180e05a148281b88d9d29ec88400"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_010.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_010.png",
+      "sha256": "afe74232294e2b4eebe677b317e3d7a5100430af6d32cf0458c0bc9b1b188153"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_010.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_010.state.json",
+      "sha256": "c2427a2d734df5828bd2757bccfca98bcddd2b41a8bd2d7da6d82133e6917b21"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_011.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_011.png",
+      "sha256": "4a97da935250c44ff0823b05a4d2426b83d9d945a32948c8855f4f599af35dd9"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_011.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_011.state.json",
+      "sha256": "d26190f0a0bf51b1eb6c995d1768767dde339a339da32407af319303827d191a"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_012.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_012.png",
+      "sha256": "6560c14189f735ffa80d50f418f85316096e0de1eb16cf0cd8d734daf913f9ec"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/aim_transition_012.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/aim_transition_012.state.json",
+      "sha256": "b9bc7a554f72740a078007a5722a6681efcde223f1afaebc6361003f9ce4806e"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/context.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/context.json",
+      "sha256": "218d3a438b676c549b087647b9cb82c504a2a3ef708b0174e8e9b7cab91c22e5"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/engine.log",
+      "path": "project/evidence/godot-addons/failed-before-fix/engine.log",
+      "sha256": "8538d2561d66b31fbe44721eede98ee89dc0b1a67d623b8d3b0d6817e2951b3f"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/idle_after.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/idle_after.png",
+      "sha256": "2dbb07b19b245f22901219d6ce84edb03e3b15917be820ed4321d6b0bafed4cf"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/idle_after.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/idle_after.state.json",
+      "sha256": "43707a2b4b166084d7e34a4a5e57d2760292b34579a600e986660a1eb0e70b97"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/idle_before.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/idle_before.png",
+      "sha256": "2dbb07b19b245f22901219d6ce84edb03e3b15917be820ed4321d6b0bafed4cf"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/idle_before.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/idle_before.state.json",
+      "sha256": "43707a2b4b166084d7e34a4a5e57d2760292b34579a600e986660a1eb0e70b97"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/launch.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/launch.json",
+      "sha256": "15198036d4fb93532bcca73ef133dd9511e12261f7dcc2ad749a43f12a8a28ef"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/mid_tween_after.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/mid_tween_after.png",
+      "sha256": "5b67a609018761e7f9cbc3ccc76751db7125ab9af5d7938cac77d612d849788a"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/mid_tween_after.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/mid_tween_after.state.json",
+      "sha256": "21b850e05dfab1c6846114771c79fa7c44992abdc4bb03379baa2e09c3a5e299"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/mid_tween_before.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/mid_tween_before.png",
+      "sha256": "5b67a609018761e7f9cbc3ccc76751db7125ab9af5d7938cac77d612d849788a"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/mid_tween_before.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/mid_tween_before.state.json",
+      "sha256": "8b8c7dde390418b1a9450b258a2584ec65b300bb06af4bf0953604ced01bb71b"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/moving_damping_after.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/moving_damping_after.png",
+      "sha256": "6d826da74dcc7b3a5690063e00c16b6da6e47e01666d35e2472b2488675b1a5e"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/moving_damping_after.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/moving_damping_after.state.json",
+      "sha256": "4b1435da7085f1d4ac4b9f0aace5ead8151ecfc2f608cc9956cac4f973d1a1af"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/moving_damping_before.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/moving_damping_before.png",
+      "sha256": "6d826da74dcc7b3a5690063e00c16b6da6e47e01666d35e2472b2488675b1a5e"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/moving_damping_before.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/moving_damping_before.state.json",
+      "sha256": "4b1435da7085f1d4ac4b9f0aace5ead8151ecfc2f608cc9956cac4f973d1a1af"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/overlay_off.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/overlay_off.png",
+      "sha256": "a8717211a6dd46c19bc0fb7f448110d4b4c4ca23d6570263aa16be44183f4fee"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/overlay_off.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/overlay_off.state.json",
+      "sha256": "0e81e21f79fe70fe0e27d9a9ef76c3cae239fcc245d3acce18de3c1878923276"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/overlay_on.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/overlay_on.png",
+      "sha256": "a9a2e011a40d95f665486c2e2fdd07542c20f8da7513c88468bfd3d361cc13d1"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/overlay_on.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/overlay_on.state.json",
+      "sha256": "5575508e8b595af6b2ca43256b41a4a5c42792cfb8fc7738234f8f8ba76de116"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow.contact.jpg",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow.contact.jpg",
+      "sha256": "02a52f7598ad798422bf2299159bf360d00d2613b0b3a4865665891a8a83c0f7"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow.html",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow.html",
+      "sha256": "ef5472bcdb3009a27dd94c5a2ecfed060328921b2c0ae9105df886b4d4fc0f6a"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow.sequence.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow.sequence.json",
+      "sha256": "acf169a305571e49299dde0d0a3ece7443cbdb4ee34e7ee3ba6eb074cfafc26c"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow.webp",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow.webp",
+      "sha256": "8de988e58fc9f6791542ae4445d51492edde7ef17953ac3caaf224327b3ee0f1"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_000.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_000.png",
+      "sha256": "af51e50c9ccfc5575a6c8419bc61c5ccf321786c3b0efa675d46790aab617f4d"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_000.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_000.state.json",
+      "sha256": "65997e99307ecdec0f62cea40842c87811d3dc312499daae2c8f5ee9105dfda2"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_001.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_001.png",
+      "sha256": "ce428f9a73904eeda158578d8681a34af3b63951dc12958fe68ceec592927e0d"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_001.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_001.state.json",
+      "sha256": "6e68016ea5b275edee2637e0454c1690ed3a0605973b19b84671f44b0434a740"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_002.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_002.png",
+      "sha256": "b2f902ea975198b350badc02d3b19e63eaa8e2d7d03346e7d64d22b43c1c8253"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_002.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_002.state.json",
+      "sha256": "e3e146b2b679f1655e2bb5c5177986f50a7bea23bd66121eb0fd79e84b99b7cf"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_003.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_003.png",
+      "sha256": "deb8f7740dc40472cb352fa6b94d67d0ba37e18dfa8f4db5f9a052eb6a80bb12"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_003.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_003.state.json",
+      "sha256": "906776817cd0a0895c743f05e52ae158459e76ae4aa94e7a276a95a1f09d613b"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_004.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_004.png",
+      "sha256": "891a4f43bdc560e9c1a4e87b0a20d55f34b54e7c43359cc8584da748ad4a279d"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_004.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_004.state.json",
+      "sha256": "4d426ac8fef30205666d41cfd4b7f96324d70ece45500da2221d15a934199e7b"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_005.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_005.png",
+      "sha256": "5720b0804b9cabdc150134b9df4fad45aa20b98ea3583d424ad7796e8013d61d"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_005.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_005.state.json",
+      "sha256": "ea91901bc37a63f7fa48d48c48db31dfa8b817bf9f5a9767afdee4c3f4216894"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_006.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_006.png",
+      "sha256": "3ff4a66f0a02e4195a6eeeb906eb35e8911c741ed1b9f9ffaabcf41166c239dd"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_006.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_006.state.json",
+      "sha256": "c10aef9c3baab9987f8a4dc2fd8178e7621620410d2805ee8cca7394425cbe2f"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_007.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_007.png",
+      "sha256": "282bef61b2180877e44b349a61fd24520c171f1e9d8d429b6bcc4df2f55b5b7e"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_007.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_007.state.json",
+      "sha256": "6e98626a1cce35bb513bbb4ce9c3014d59273a26506382213880da9f08269ec7"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_008.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_008.png",
+      "sha256": "62b2afa112904f7416e21812583ecf87ab3f0c0db39cbdab36f21ab85cb4f31c"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_008.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_008.state.json",
+      "sha256": "b8238b940a63b0fe6f2eda83b2595c46b2da8a57b25e306b582275781f50c403"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_009.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_009.png",
+      "sha256": "a7ffb9cb1209d1335c3ea8cb44d679d3bedda94dee71d3112f8bf1b526af946e"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_009.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_009.state.json",
+      "sha256": "fb6c19df01d4862026b0daa6fcaa18b296a5ba5434ee5d0bcdef6b6f53428e3a"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_010.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_010.png",
+      "sha256": "6e5845ce340094c92de6ff0366b02384eef0be4ca9a2a1614d421ea1d7035bbe"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_010.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_010.state.json",
+      "sha256": "6d0f8b6a8ed03daf870aeb5a6e53c74e3b070366aba5b79b9486ab6b9a09eb69"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_011.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_011.png",
+      "sha256": "ad149a2a3fa58c72cdc319e6c21d60e257d83e0ddebd30a6a3cf65ffe89674a3"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_011.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_011.state.json",
+      "sha256": "353b2cf7c7ced8c28b979b1dccff7e83a3410e040891cf3076e6fe94f2d95d4d"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_012.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_012.png",
+      "sha256": "888aab572605eb3ae9a5cf9f605cc4ccbb8d929e0fb424ce77d795c53a91e433"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_012.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_012.state.json",
+      "sha256": "3770b2a619b6d151d993202340caeae39d7c79cade9584cc6f2ab0dd0abb2d6c"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_013.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_013.png",
+      "sha256": "8deca3027e645da60636e6898b358899add9fe74af40743149649eec5c92a5a2"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_013.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_013.state.json",
+      "sha256": "3bb5c1fc2771cc5ba5d97ec384077f031d3b6ea2927ef804c7eb126c396561d9"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_014.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_014.png",
+      "sha256": "6d826da74dcc7b3a5690063e00c16b6da6e47e01666d35e2472b2488675b1a5e"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ramp_follow_014.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ramp_follow_014.state.json",
+      "sha256": "6d1c8cd075c39fdf23525b186a96ee08d6ac77a229a32e520f1d3e25163e823f"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/ready.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/ready.json",
+      "sha256": "a02d040911437aed0cc1037f1568d59a84d39387572f384489d45ac3701bb1d5"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/rear_wall.png",
+      "path": "project/evidence/godot-addons/failed-before-fix/rear_wall.png",
+      "sha256": "91419bc853254cdb957862ee542bc23f72829fc8571205def998341a135447f4"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/rear_wall.state.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/rear_wall.state.json",
+      "sha256": "dfd45ac97480902d6ce2eeedf110ea611db46954995a6a48ccd691608cba6361"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943780940649100.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943780940649100.json",
+      "sha256": "1507ea8e80509a80a3c197a5a404e33054697cf7a06d7b539b6f74584701ea10"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943781875509000.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943781875509000.json",
+      "sha256": "a808b247dbb0f9cbf2d3fe0de0f40be2c8a4e86ad2f640d56bf9fc431cb97d7d"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943781891627400.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943781891627400.json",
+      "sha256": "874c70b8577320f374e5ce6c0b359f2b5f0f413f504af4dd3b35b4e0a764b67c"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943782735987600.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943782735987600.json",
+      "sha256": "d8337eff3d930a25b397906d792b955987f1fde3519dc89876f787fbafd7238d"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943782762561600.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943782762561600.json",
+      "sha256": "7d5c4ea10733c1bf26d3b13edb2d89fbc3c2788a1e002743b6944cd745840d34"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943782884325600.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943782884325600.json",
+      "sha256": "93a4fe5f6b43a67f6cac61173c791f19418ec9529b78d32916236e2822c36479"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943783233080800.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943783233080800.json",
+      "sha256": "d89ea4f121b56f93484f7f1c559ec60b296c6651fcd730df35202a3734f44f45"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943783528128300.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943783528128300.json",
+      "sha256": "1d53ecbc891b940f3c990f1867e55735861916657ef2f308e832fb80651e52de"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943783583709100.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943783583709100.json",
+      "sha256": "2c03b8460f168de372955288ff8c7e7fa1c89d6337c3d3f2e16c622a5a4915c0"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943784112019900.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943784112019900.json",
+      "sha256": "6a021e5cd10c4d4b856c5b7efa8099c40160b42c6f586bdd0b42beb929255a6d"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943785244400700.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943785244400700.json",
+      "sha256": "eddb601d0c9659a9660aaa4ca1934ec5e5c2d775110076835596af1cced7d3e9"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943785963676100.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943785963676100.json",
+      "sha256": "e840a9bbb014adc5978a94622404df3a02615ea14fe812831375866575fc4b4d"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943785976631200.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943785976631200.json",
+      "sha256": "3889ed904c78e9d05bc47b91c85feed753c3ef21b88a159f26ab5c9feaf9dd64"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943787283432100.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943787283432100.json",
+      "sha256": "9bd75ea2cecab378b1f2b5262441a966ac8ded2156fc23f84bf00ddd5aeae9b8"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943787305337600.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943787305337600.json",
+      "sha256": "bae8ca9ab8ccc2e5b0f42083314ec17197702329c0f8608caa9f83320371bd86"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943787447683500.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943787447683500.json",
+      "sha256": "05f3f4d0f06369c782916701c5a526e4f09cd0a160d37a04b3a58cf2954fffe2"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943787462290100.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943787462290100.json",
+      "sha256": "f8f4dfcd612e32a3c45fe1bc20b5bb0c04d396e589a3e42d7ff02d404d3240d7"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943787477872100.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943787477872100.json",
+      "sha256": "0fe7c4585fb223c216bee28f9a9ec8530728d186affc41cb26f0f154d61e3665"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943788314945100.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943788314945100.json",
+      "sha256": "d92b88645d5b512171481020192d4a4316c0db6253bf31b9dc10f2e4ef30d6e7"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943788329235300.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943788329235300.json",
+      "sha256": "38b7d2364258babb3cf350444b04d21d59de9c83978a3bca1ac7a46a053cb6ef"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943788386561200.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943788386561200.json",
+      "sha256": "ead6cd8e463a2e5ed86350af0a6685c833694b6d8fb2374623a6b86ad05f59de"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943789248903000.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943789248903000.json",
+      "sha256": "35eed5b610fea42beabe5aafc7090d96cb83ec561f3dc8ca1e91367542e315d6"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943789267742500.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943789267742500.json",
+      "sha256": "9783b079e6e6dbf6eeccbd1a236b9797d8af69bed064ee9af65df95d4639a8e8"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943790139642400.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943790139642400.json",
+      "sha256": "d6c9536007ef80f361d4cc0ee7639833ef23cf617910166fa1441fa5b722b8ae"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943790183920700.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943790183920700.json",
+      "sha256": "7b450bc5ec4396f2ee81ed20b4aea2c590ec1326ceb43dd097a838ebb5592550"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943790210086300.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943790210086300.json",
+      "sha256": "dbbab2f3f5d98685f71392753ea3bb04a969b8892fddc929d5dc3cf87564f974"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943790250634800.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943790250634800.json",
+      "sha256": "08c161fad1fbdd4be17d5d0b858e7da42202d343a4da42ee2bb3d0898e34231e"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/response_1790943790266822100.json",
+      "path": "project/evidence/godot-addons/failed-before-fix/response_1790943790266822100.json",
+      "sha256": "d622d70c9dc0ff2325f84e2a89e2b5af7c54fc1007ffb0e8ea364026142ae259"
+    },
+    {
+      "source": "logs/sessions/20261002-202259-095becb8/trace.jsonl",
+      "path": "project/evidence/godot-addons/failed-before-fix/trace.jsonl",
+      "sha256": "7a9a15d85790658ce89dd838f19443af3bc77962220b0fc9eca9f84eebe30213"
+    },
+    {
+      "source": "logs/sessions/20261002-202310-f74a41dc/report.json",
+      "path": "project/evidence/godot-addons/sandbox-headless/report.json",
+      "sha256": "a0e97361e2234b1c31ac1a62d3662ae261429f3a7c774da68fa22643f293257f"
+    },
+    {
+      "source": "logs/sessions/20261002-202310-f74a41dc/engine.log",
+      "path": "project/evidence/godot-addons/sandbox-headless/engine.log",
+      "sha256": "83cf0b082206af2aa236c83064fbcfa76be1e00a4aa3558574b2f65965d9481c"
+    },
+    {
+      "source": "logs/sessions/20261002-202310-f74a41dc/context.json",
+      "path": "project/evidence/godot-addons/sandbox-headless/context.json",
+      "sha256": "eab45c66d4fa410cc346efa87ff094d2b65ee06b23b4c4603dfeeb78c37dec4b"
+    },
+    {
+      "source": "logs/sessions/20261002-202538-bd5a96bf/report.json",
+      "path": "project/evidence/godot-addons/sandbox-rendered/report.json",
+      "sha256": "c496fd794f94cbac9f0ef95e5ddec94e5e31fe841a091d3d01f7dc4d096d0400"
+    },
+    {
+      "source": "logs/sessions/20261002-202538-bd5a96bf/engine.log",
+      "path": "project/evidence/godot-addons/sandbox-rendered/engine.log",
+      "sha256": "aa09c4be43ac7f0794a57c6514cbf086daa65ffae502ef84875eb6f6dd00c1ba"
+    },
+    {
+      "source": "logs/sessions/20261002-202538-bd5a96bf/context.json",
+      "path": "project/evidence/godot-addons/sandbox-rendered/context.json",
+      "sha256": "d69d3eb8fd1f760d73920e829a331345933cb9cd0220f088d12bc251e5b9426c"
+    },
+    {
+      "source": "logs/sessions/20261002-202538-bd5a96bf/overview.png",
+      "path": "project/evidence/godot-addons/sandbox-rendered/overview.png",
+      "sha256": "a7b2c46e339f2df85f713334ca3d4ba2121838fb193387a3bb32c32ba93ac7c9"
+    },
+    {
+      "source": "logs/addon-validation-unit-tests.txt",
+      "path": "project/evidence/godot-addons/unit-tests.txt",
+      "sha256": "e84990a1b0c7d920268f3ba76ddc64d1d3824061c369ccb936e9a750ea0f40f8"
+    },
+    {
+      "source": "logs/runs/import-727f8632/engine.log",
+      "path": "project/evidence/godot-addons/import.log",
+      "sha256": "40e2019ff11de7b7994c7def5e1588cf74f4ae7407f486f324b2d04b6cab2e8b"
+    },
+    {
+      "source": "engine/vendor/addons.lock.json",
+      "path": "project/evidence/godot-addons/addons.lock.json",
+      "sha256": "6a569b985cff89c4fb3b9c60c1c613193b786dff31cc77592a1019c96f0235da"
+    },
+    {
+      "source": "logs/builds/addon_probe-release-20261002-202946-0091ea7f/engine.log",
+      "path": "project/evidence/godot-addons/release/engine.log",
+      "sha256": "cb972ba046a314a0691ba7625151aba42b264e46d9a220e4e6b5eb9fe63c9711"
+    },
+    {
+      "source": "logs/builds/addon_probe-release-20261002-202946-0091ea7f/build.json",
+      "path": "project/evidence/godot-addons/release/build.json",
+      "sha256": "e602f3995416888f92112a72443601b3e15dfda889525033a919971142f2d51b"
+    },
+    {
+      "source": "logs/builds/addon_probe-release-20261002-202946-0091ea7f/smoke-report.json",
+      "path": "project/evidence/godot-addons/release/smoke-report.json",
+      "sha256": "94afa717247330598480998e9886c79f8bd96033507daee21f01cdffd3ada652"
+    },
+    {
+      "source": "logs/sessions/release-smoke-907285a8/release.log",
+      "path": "project/evidence/godot-addons/release/headless.log",
+      "sha256": "58622e7681c54f021045e961f73cafb37a7eca04a15b43ec77f214a1edfa65ce"
+    },
+    {
+      "source": "logs/sessions/release-smoke-68c912a5/release.log",
+      "path": "project/evidence/godot-addons/release/rendered.log",
+      "sha256": "0f7a0f39aca3d7626af276168f405d3cca048518d89ec701fc7a758a692084d8"
+    },
+    {
+      "source": "engine/sandbox/addon_probe/adapter.gd",
+      "path": "project/evidence/godot-addons/source/engine/sandbox/addon_probe/adapter.gd",
+      "sha256": "e906c9d52204d909a295173554667ecf5092be666ae9166cc8f05174683509f3"
+    },
+    {
+      "source": "engine/sandbox/addon_probe/probe.gd",
+      "path": "project/evidence/godot-addons/source/engine/sandbox/addon_probe/probe.gd",
+      "sha256": "a8a9575a6f369089cd1a74b352b179405e33b33b8a817049b9ebbc4ca0c94ab5"
+    },
+    {
+      "source": "engine/sandbox/addon_probe/probe.tscn",
+      "path": "project/evidence/godot-addons/source/engine/sandbox/addon_probe/probe.tscn",
+      "sha256": "d99cd653626751b4e036c9b6276bdd4ef625b2472f2ebd2e628bd55edcdad4e2"
+    },
+    {
+      "source": "engine/sandbox/addon_probe/project.godot",
+      "path": "project/evidence/godot-addons/source/engine/sandbox/addon_probe/project.godot",
+      "sha256": "2394e8ee440b6e7f6447953a928b621e72caa6be4fc924d1eb9ce4b3922d736c"
+    },
+    {
+      "source": "engine/sandbox/addon_probe/export_presets.cfg",
+      "path": "project/evidence/godot-addons/source/engine/sandbox/addon_probe/export_presets.cfg",
+      "sha256": "5ed04aa20f9175611a5a3cee00811469447d7b3dbb9020c08044f8546e98c9cb"
+    },
+    {
+      "source": "engine/tools/addons.py",
+      "path": "project/evidence/godot-addons/source/engine/tools/addons.py",
+      "sha256": "316269b79ce6021039ea2e362f7f118dd9f8e465a1a5e30b8ce4b7ae6677095d"
+    },
+    {
+      "source": "engine/tools/addon_qa.py",
+      "path": "project/evidence/godot-addons/source/engine/tools/addon_qa.py",
+      "sha256": "d2532d49ea2de32ec31b7afeb0a49dea41b4023e72791dca7761c77c1ac243e2"
+    },
+    {
+      "source": "engine/tests/test_addons.py",
+      "path": "project/evidence/godot-addons/source/engine/tests/test_addons.py",
+      "sha256": "cec0956f9cce7296dd7818b5c48908d3ee2c7bdf2847c6e3cd0ea097011c7ad7"
+    },
+    {
+      "source": "engine/sandbox/addon_probe/addons/phantom_camera/LICENSE",
+      "path": "project/evidence/godot-addons/licenses/phantom_camera.txt",
+      "sha256": "9edff15559a55c27d4b0612d73315d0597980d13f7e5b3d4ff80192ea57c76d2"
+    },
+    {
+      "source": "engine/sandbox/addon_probe/addons/debug_draw_3d/LICENSE",
+      "path": "project/evidence/godot-addons/licenses/debug_draw_3d.txt",
+      "sha256": "45e0855dea5b6ecb5f836809a3969f3e2b0fc78a9cd9b68f9a36b7ae799eb3a1"
+    }
+  ]
+}

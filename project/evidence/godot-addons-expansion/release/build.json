@@ -1,0 +1,32 @@
+{
+  "project": "addon_probe",
+  "configuration": "release",
+  "version": "20261002-205419-0055d421",
+  "build_id": "1e307c6eb855dc4f82dd0f37b7cce670c52796639171becf1810fa5ab0ca8b92",
+  "command": [
+    "D:\\AIGameEngine\\.tools\\Godot_v4.7.2-stable_win64_console.exe",
+    "--headless",
+    "--path",
+    "D:\\AIGameEngine\\engine\\sandbox\\addon_probe",
+    "--export-release",
+    "Windows Systems Probe",
+    "D:\\AIGameEngine\\build\\addon_probe\\windows\\release\\20261002-205419-0055d421\\AddonProbe.exe"
+  ],
+  "directory": "D:\\AIGameEngine\\build\\addon_probe\\windows\\release\\20261002-205419-0055d421",
+  "executable": "D:\\AIGameEngine\\build\\addon_probe\\windows\\release\\20261002-205419-0055d421\\AddonProbe.exe",
+  "log": "D:\\AIGameEngine\\logs\\builds\\addon_probe-release-20261002-205419-0055d421\\engine.log",
+  "status": "completed",
+  "exit_code": 0,
+  "files": {
+    "AddonProbe.exe": "e9022972b212cebe16a083989c0e0a4abfa0b311069e29ae20ad2e5b02f944eb",
+    "GODOT-LICENSE.txt": "0cc27400b8da8c06bb35350422c14715647cd2632c138921fd49caa6610a1ef6",
+    "libdd3d.windows.template_release.x86_64.dll": "619e6558f4a3745d4e193f313b625c557a6787d8d2fff44c3cdbe46fb5a57fbe",
+    "liblimboai.windows.template_release.x86_64.dll": "5095e3e3daff5f441f58afb3b482de839c2b6d00b30668c59b3003848234f4c2",
+    "licenses/debug_draw_3d/LICENSE": "45e0855dea5b6ecb5f836809a3969f3e2b0fc78a9cd9b68f9a36b7ae799eb3a1",
+    "licenses/dialogue_manager/LICENSE": "21c98fa971b5dd23754a5974901df83c83aaebc351c4f4db60e5615f0571ed8b",
+    "licenses/limboai/LICENSE.md": "1b2d39c48e02b683abfafa1187de21e75796cd54cd18f6f60ddf369529ee8240",
+    "licenses/limboai/LOGO_LICENSE.md": "b3cf21d09f7e2191aed99ae8e3f57e8006bda915f489a732b160bb3fa83e9d31",
+    "licenses/phantom_camera/LICENSE": "9edff15559a55c27d4b0612d73315d0597980d13f7e5b3d4ff80192ea57c76d2",
+    "licenses/puzzle_dependencies/LICENSE": "982f7dfabd5cf44b07b82cf2d0c2eb0fdbbd01fdab74512fcf09789cf45b0be6"
+  }
+}

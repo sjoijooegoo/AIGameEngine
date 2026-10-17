@@ -1,0 +1,89 @@
+{
+  "source_snapshots": [
+    {
+      "path": "engine/sandbox/source_assets/demo.chair/0bdf9d6acd8a2740/chair.glb",
+      "sha256": "211fa7e5653c03cd48432f88743eb743e5ef3734338e6844c65cf131976a1da8"
+    },
+    {
+      "path": "engine/sandbox/source_assets/demo.counter/92f4c94a60727b0f/counter.glb",
+      "sha256": "591905c7451995c4a63c31642a5763c02c57643224132a110608161bb8549df4"
+    },
+    {
+      "path": "engine/sandbox/source_assets/demo.door/c98f1893db652620/door.glb",
+      "sha256": "64d4368cd1bedb565859620a5c0e922df51a08d9f93d3c82dd010421ca66bdf3"
+    },
+    {
+      "path": "engine/sandbox/source_assets/demo.terminal/041e3eccb95d6c91/terminal.glb",
+      "sha256": "4a47ac8650bb844808bd7ad9ba4e5c6b17bee2ff6814210c27bda3e3afdfecf7"
+    },
+    {
+      "path": "engine/sandbox/source_assets/demo.wood/147e42f8231ca45f/wood.png",
+      "sha256": "cc45d60ec9679c4f9d2509d2d9acc71c90fba24629068cab12022bcc049b75fb"
+    },
+    {
+      "path": "engine/sandbox/source_assets/qa.chair_fbx/ca4f7794f807c318/chair.fbx",
+      "sha256": "c0f1f33d30bf8a9ee8dc860707f4444fc6ab7ab57153c8e5c7842154cee23184"
+    },
+    {
+      "path": "engine/sandbox/source_assets/qa.missing/793c4c9cbe330724/missing_texture.gltf",
+      "sha256": "77c4cd3eb76f1657d25558a58e3bd9bd3ec759dfb80b540777ae23cc207830d4"
+    },
+    {
+      "path": "engine/sandbox/source_assets/qa.transformed/92f4c94a60727b0f/counter.glb",
+      "sha256": "591905c7451995c4a63c31642a5763c02c57643224132a110608161bb8549df4"
+    }
+  ],
+  "catalog_versions": [
+    {
+      "asset": "demo.chair",
+      "preserved_preparation_versions": [
+        "1783364f233adefb"
+      ]
+    },
+    {
+      "asset": "demo.counter",
+      "preserved_preparation_versions": [
+        "06f14cc1a5e290fd"
+      ]
+    },
+    {
+      "asset": "demo.door",
+      "preserved_preparation_versions": [
+        "1c6972ca699306ef"
+      ]
+    },
+    {
+      "asset": "demo.terminal",
+      "preserved_preparation_versions": [
+        "e53bbee7e6522df3"
+      ]
+    },
+    {
+      "asset": "demo.wood",
+      "preserved_preparation_versions": [
+        "3ad550d2e2cfe35c"
+      ]
+    },
+    {
+      "asset": "qa.chair_fbx",
+      "preserved_preparation_versions": [
+        "c6b6148a7d7c7908"
+      ]
+    },
+    {
+      "asset": "qa.missing",
+      "preserved_preparation_versions": []
+    },
+    {
+      "asset": "qa.transformed",
+      "preserved_preparation_versions": [
+        "172fabba8949c1eb",
+        "06f14cc1a5e290fd"
+      ]
+    }
+  ],
+  "original_unchanged": true,
+  "baseline_bytes_unchanged": true,
+  "previous_evidence_unchanged": true,
+  "blender_config_preserved": true
+}

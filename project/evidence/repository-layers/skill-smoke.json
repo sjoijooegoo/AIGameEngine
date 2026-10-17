@@ -1,0 +1,61 @@
+{
+  "session": "D:\\AIGameEngine\\logs\\sessions\\20261002-195849-7d391e44",
+  "calls": [
+    {
+      "args": [
+        "start"
+      ],
+      "exit_code": 0,
+      "stdout": "{\"session\": \"D:\\\\AIGameEngine\\\\logs\\\\sessions\\\\20261002-195849-7d391e44\", \"ready\": {\"adapter\": {\"adapter_version\": 1, \"capabilities\": [\"view\", \"asset\", \"animation\", \"checkpoint\"], \"entities\": [\"player\", \"npc\"], \"fixtures\": [\"default\", \"door_locked\", \"npc_chase\", \"npc_occluded\", \"combat\", \"gallery\"], \"game_id\": \"bank_lab\", \"state_version\": 2, \"views\": [\"player\", \"overview\", \"materials\", \"model\", \"npc\"]}, \"commands\": [\"describe\", \"state\", \"ui\", \"reset\", \"act\", \"step\", \"click\", \"capture\", \"sequence\", \"checkpoint\", \"restore\", \"animation\", \"view\", \"resize\", \"audit\", \"asset\", \"quit\"], \"godot\": \"4.7.2-stable (official)\", \"gpu\": \"NVIDIA GeForce RTX 5070 Ti Laptop GPU\", \"inputs\": [\"W\", \"A\", \"S\", \"D\", \"E\", \"TAB\", \"ESC\", \"SHIFT\"], \"pid\": 19780, \"protocol\": 2, \"rendered\": true, \"renderer\": \"gl_compatibility\"}}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "call",
+        "describe",
+        "--session",
+        "D:\\AIGameEngine\\logs\\sessions\\20261002-195849-7d391e44"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"adapter_version\": 1,\n  \"capabilities\": [\n    \"view\",\n    \"asset\",\n    \"animation\",\n    \"checkpoint\"\n  ],\n  \"entities\": [\n    \"player\",\n    \"npc\"\n  ],\n  \"fixtures\": [\n    \"default\",\n    \"door_locked\",\n    \"npc_chase\",\n    \"npc_occluded\",\n    \"combat\",\n    \"gallery\"\n  ],\n  \"game_id\": \"bank_lab\",\n  \"state_version\": 2,\n  \"views\": [\n    \"player\",\n    \"overview\",\n    \"materials\",\n    \"model\",\n    \"npc\"\n  ]\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "call",
+        "act",
+        "--session",
+        "D:\\AIGameEngine\\logs\\sessions\\20261002-195849-7d391e44",
+        "--args-file",
+        "D:\\AIGameEngine\\logs\\migrations\\layout-20261002\\skill-act.json"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"door_open\": false,\n  \"events\": [],\n  \"inventory\": [],\n  \"inventory_open\": false,\n  \"npc\": {\n    \"animation\": {\n      \"clip\": \"idle\",\n      \"preview\": false,\n      \"time\": 0.5\n    },\n    \"attacks\": 0,\n    \"cooldown\": 0.0,\n    \"enabled\": false,\n    \"home\": [\n      5.0,\n      0.0199999995529652,\n      -6.0\n    ],\n    \"hp\": 100.0,\n    \"line_of_sight\": false,\n    \"model_yaw\": 0.0,\n    \"patrol_target\": [\n      6.0,\n      0.0199999995529652,\n      -6.0\n    ],\n    \"position\": [\n      5.0,\n      0.0199999995529652,\n      -6.0\n    ],\n    \"state\": \"idle\",\n    \"velocity\": [\n      0.0,\n      0.0,\n      0.0\n    ]\n  },\n  \"objective_complete\": false,\n  \"paused\": false,\n  \"player\": {\n    \"animation\": {\n      \"clip\": \"walk\",\n      \"preview\": false,\n      \"time\": 0.5\n    },\n    \"hp\": 100.0,\n    \"model_yaw\": 0.0,\n    \"on_floor\": true,\n    \"pitch\": -0.15,\n    \"position\": [\n      0.0,\n      0.000837520812638104,\n      3.49999737739563\n    ],\n    \"velocity\": [\n      0.0,\n      0.0,\n      -3.0\n    ],\n    \"yaw\": 0.0\n  },\n  \"tick\": 30,\n  \"view\": \"player\"\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "call",
+        "capture",
+        "--session",
+        "D:\\AIGameEngine\\logs\\sessions\\20261002-195849-7d391e44",
+        "--args",
+        "{\"name\": \"skill_walk\"}"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"height\": 720,\n  \"path\": \"D:/AIGameEngine/logs/sessions/20261002-195849-7d391e44/skill_walk.png\",\n  \"width\": 1280\n}\n",
+      "stderr": ""
+    },
+    {
+      "args": [
+        "call",
+        "quit",
+        "--session",
+        "D:\\AIGameEngine\\logs\\sessions\\20261002-195849-7d391e44"
+      ],
+      "exit_code": 0,
+      "stdout": "{\n  \"quitting\": true\n}\n",
+      "stderr": ""
+    }
+  ]
+}

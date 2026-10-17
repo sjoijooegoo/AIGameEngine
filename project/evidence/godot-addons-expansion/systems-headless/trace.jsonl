@@ -1,0 +1,22 @@
+{"id": "1790945206780598400", "command": "step", "args": {"frames": 30}}
+{"id": "1790945206814435200", "command": "act", "args": {"keys": ["E"], "frames": 1}}
+{"id": "1790945206841555600", "command": "state", "args": {}}
+{"id": "1790945206867023700", "command": "state", "args": {}}
+{"id": "1790945207496312300", "command": "state", "args": {}}
+{"id": "1790945207512840700", "command": "ui", "args": {}}
+{"id": "1790945207537815100", "command": "click", "args": {"control": "choice_1"}}
+{"id": "1790945207565823100", "command": "state", "args": {}}
+{"id": "1790945207591583700", "command": "act", "args": {"keys": ["E"], "frames": 1}}
+{"id": "1790945207622808400", "command": "state", "args": {}}
+{"id": "1790945207649543100", "command": "act", "args": {"keys": ["K"], "frames": 1}}
+{"id": "1790945207674010300", "command": "act", "args": {"keys": ["E"], "frames": 1}}
+{"id": "1790945207704459100", "command": "state", "args": {}}
+{"id": "1790945207722854600", "command": "act", "args": {"keys": ["2"], "frames": 1}}
+{"id": "1790945207747555900", "command": "state", "args": {}}
+{"id": "1790945207775866400", "command": "act", "args": {"keys": ["F"], "frames": 30}}
+{"id": "1790945207801688800", "command": "state", "args": {}}
+{"id": "1790945208424432300", "command": "state", "args": {}}
+{"id": "1790945208455749900", "command": "act", "args": {"keys": ["SPACE"], "frames": 1}}
+{"id": "1790945208483579800", "command": "step", "args": {"frames": 60}}
+{"id": "1790945208514823000", "command": "act", "args": {"keys": ["SPACE"], "frames": 10}}
+{"id": "1790945208547169700", "command": "quit", "args": {}}

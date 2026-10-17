@@ -1,0 +1,135 @@
+[
+  {
+    "name": "overview",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\overview_diff.png"
+  },
+  {
+    "name": "materials",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\materials_diff.png"
+  },
+  {
+    "name": "model",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\model_diff.png"
+  },
+  {
+    "name": "npc",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\npc_diff.png"
+  },
+  {
+    "name": "model_90",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\model_90_diff.png"
+  },
+  {
+    "name": "model_180",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\model_180_diff.png"
+  },
+  {
+    "name": "model_270",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\model_270_diff.png"
+  },
+  {
+    "name": "ui_gameplay_1280x720",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_gameplay_1280x720_diff.png"
+  },
+  {
+    "name": "ui_inventory_1280x720",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_inventory_1280x720_diff.png"
+  },
+  {
+    "name": "ui_pause_1280x720",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_pause_1280x720_diff.png"
+  },
+  {
+    "name": "ui_gameplay_1024x768",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_gameplay_1024x768_diff.png"
+  },
+  {
+    "name": "ui_inventory_1024x768",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_inventory_1024x768_diff.png"
+  },
+  {
+    "name": "ui_pause_1024x768",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_pause_1024x768_diff.png"
+  },
+  {
+    "name": "ui_gameplay_1920x1080",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_gameplay_1920x1080_diff.png"
+  },
+  {
+    "name": "ui_inventory_1920x1080",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_inventory_1920x1080_diff.png"
+  },
+  {
+    "name": "ui_pause_1920x1080",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_pause_1920x1080_diff.png"
+  },
+  {
+    "name": "ui_gameplay_800x600",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_gameplay_800x600_diff.png"
+  },
+  {
+    "name": "ui_inventory_800x600",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_inventory_800x600_diff.png"
+  },
+  {
+    "name": "ui_pause_800x600",
+    "status": "pass",
+    "changed_ratio": 0.0,
+    "mae": 0.0,
+    "diff": "logs\\migrations\\layout-20261002\\ui_pause_800x600_diff.png"
+  }
+]

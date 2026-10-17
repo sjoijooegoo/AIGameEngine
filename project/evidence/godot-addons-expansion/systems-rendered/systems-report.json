@@ -1,0 +1,120 @@
+{
+  "session": "D:\\AIGameEngine\\logs\\sessions\\20261002-204648-0ac41fe4",
+  "headless": false,
+  "checks": [
+    {
+      "name": "limboai_manual_steps",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "dialogue_locked_branch",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "dialogue_state_frozen",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "dialogue_pixels_frozen",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "controls_inside_viewport",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "real_click_selects_response",
+      "status": "pass",
+      "detail": {
+        "ai_mode": "巡逻",
+        "ai_progress": 0.0775,
+        "ai_ticks": 31,
+        "alert": false,
+        "busy": false,
+        "dialogue_id": "bddhsjqf0dhk2@6",
+        "has_keycard": false,
+        "manual_ai": true,
+        "paused": false,
+        "responses": 0,
+        "text": "终端：先验证门卡，再操作电源。此处仅为插件试验文本。",
+        "tick": 31
+      }
+    },
+    {
+      "name": "dialogue_ends",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "game_owned_state_changes_branch",
+      "status": "pass",
+      "detail": {
+        "ai_mode": "巡逻",
+        "ai_progress": 0.085,
+        "ai_ticks": 34,
+        "alert": false,
+        "busy": false,
+        "dialogue_id": "bddhsjqf0dhk2@2",
+        "has_keycard": true,
+        "manual_ai": true,
+        "paused": false,
+        "responses": 2,
+        "text": "终端：门卡有效，可以继续检查供电。",
+        "tick": 34
+      }
+    },
+    {
+      "name": "keyboard_selects_response",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "blackboard_drives_action",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "ai_state_frozen",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "ai_pixels_frozen",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "pause_stops_ai",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "resume_advances_ai",
+      "status": "pass",
+      "detail": null
+    },
+    {
+      "name": "engine_log_clean",
+      "status": "pass",
+      "detail": null
+    }
+  ],
+  "limits": [
+    "Fixture only, no production navigation or complete checkpoints"
+  ],
+  "sequence": {
+    "viewer": "D:\\AIGameEngine\\logs\\sessions\\20261002-204648-0ac41fe4\\ai_progress.html",
+    "animation": "D:\\AIGameEngine\\logs\\sessions\\20261002-204648-0ac41fe4\\ai_progress.webp",
+    "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\20261002-204648-0ac41fe4\\ai_progress.contact.jpg",
+    "count": 9,
+    "interval": 6,
+    "simulation_duration": 0.8,
+    "speed": 0.25
+  },
+  "passed": true
+}

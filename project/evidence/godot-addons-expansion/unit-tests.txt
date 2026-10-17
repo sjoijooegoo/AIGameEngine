@@ -1,0 +1,44 @@
+test_archive_integrity_precedes_extraction (test_addons.AddonDeploymentTests.test_archive_integrity_precedes_extraction) ... ok
+test_archive_traversal_rejected (test_addons.AddonDeploymentTests.test_archive_traversal_rejected) ... ok
+test_binary_resources_preserved_and_local_edits_rejected (test_addons.AddonDeploymentTests.test_binary_resources_preserved_and_local_edits_rejected) ... ok
+test_expansion_preserves_existing_packages (test_addons.AddonDeploymentTests.test_expansion_preserves_existing_packages) ... ok
+test_limbo_generated_editor_flag_does_not_hide_import_setting_edits (test_addons.AddonDeploymentTests.test_limbo_generated_editor_flag_does_not_hide_import_setting_edits) ... ok
+test_bad_glb_and_dependency_escape (test_asset_pipeline.AssetPipelineTests.test_bad_glb_and_dependency_escape) ... ok
+test_explicit_scale_rotation_and_texture_role (test_asset_pipeline.AssetPipelineTests.test_explicit_scale_rotation_and_texture_role) ... ok
+test_fbx_import_matches_glb_dimensions (test_asset_pipeline.AssetPipelineTests.test_fbx_import_matches_glb_dimensions) ... ok
+test_glb_png_measurements_and_cache (test_asset_pipeline.AssetPipelineTests.test_glb_png_measurements_and_cache) ... ok
+test_jobs_cancel_owned_process_and_queued_work (test_asset_pipeline.AssetPipelineTests.test_jobs_cancel_owned_process_and_queued_work) ... ok
+test_mcp_async_prepare_and_inspect (test_asset_pipeline.AssetPipelineTests.test_mcp_async_prepare_and_inspect) ... ok
+test_missing_texture_blocks_preparation (test_asset_pipeline.AssetPipelineTests.test_missing_texture_blocks_preparation) ... ok
+test_real_input_door_collision_and_exit (test_asset_pipeline.AssetPipelineTests.test_real_input_door_collision_and_exit) ... ok
+test_reject_float_wall_overlap_support_and_door_sweep (test_asset_pipeline.AssetPipelineTests.test_reject_float_wall_overlap_support_and_door_sweep) ... ok
+test_tabletop_anchor_and_reject_cycles (test_asset_pipeline.AssetPipelineTests.test_tabletop_anchor_and_reject_cycles) ... ok
+test_unreachable_route_and_invalid_build_preserve_scene (test_asset_pipeline.AssetPipelineTests.test_unreachable_route_and_invalid_build_preserve_scene) ... ok
+test_assertions_reject_broken_gameplay (test_framework.FrameworkTests.test_assertions_reject_broken_gameplay) ... ok
+test_layout_rejects_clipped_controls (test_framework.FrameworkTests.test_layout_rejects_clipped_controls) ... ok
+test_mcp_handshake_and_gameplay (test_framework.FrameworkTests.test_mcp_handshake_and_gameplay) ... ok
+test_session_scope (test_framework.FrameworkTests.test_session_scope) ... ok
+test_visual_diff_detects_regression_and_masks (test_framework.FrameworkTests.test_visual_diff_detects_regression_and_masks) ... ok
+test_cli_usage_error_is_not_visual_review (test_layout.LayoutTests.test_cli_usage_error_is_not_visual_review) ... ok
+test_config_and_resources_cannot_escape_workspace (test_layout.LayoutTests.test_config_and_resources_cannot_escape_workspace) ... ok
+test_godot_bridge_rejects_session_outside_configured_root (test_layout.LayoutTests.test_godot_bridge_rejects_session_outside_configured_root) ... ok
+test_legacy_entrypoint_works_from_unrelated_cwd (test_layout.LayoutTests.test_legacy_entrypoint_works_from_unrelated_cwd) ... ok
+test_reserved_bank_never_launches_the_sandbox (test_layout.LayoutTests.test_reserved_bank_never_launches_the_sandbox) ... ok
+test_runtime_has_no_game_or_sandbox_script_dependency (test_layout.LayoutTests.test_runtime_has_no_game_or_sandbox_script_dependency) ... ok
+test_runtime_manifest_traversal_is_rejected (test_layout.LayoutTests.test_runtime_manifest_traversal_is_rejected) ... ok
+test_runtime_tampering_rejects_entire_sync_before_writes (test_layout.LayoutTests.test_runtime_tampering_rejects_entire_sync_before_writes) ... ok
+test_runtime_update_and_unmanaged_files (test_layout.LayoutTests.test_runtime_update_and_unmanaged_files) ... ok
+test_session_requires_direct_child (test_layout.LayoutTests.test_session_requires_direct_child) ... ok
+test_expected_visual_change_can_be_reviewed (test_v2.BaselineReviewTests.test_expected_visual_change_can_be_reviewed) ... ok
+test_modified_capture_is_rejected (test_v2.BaselineReviewTests.test_modified_capture_is_rejected) ... ok
+test_partial_update_preserves_other_baselines (test_v2.BaselineReviewTests.test_partial_update_preserves_other_baselines) ... ok
+test_visual_change_flag_cannot_hide_logic_failure (test_v2.BaselineReviewTests.test_visual_change_flag_cannot_hide_logic_failure) ... ok
+test_cyclic_tasks_rejected (test_v2.HandoffTests.test_cyclic_tasks_rejected) ... ok
+test_malformed_response_is_not_hidden (test_v2.HandoffTests.test_malformed_response_is_not_hidden) ... ok
+test_repository_task_contract (test_v2.HandoffTests.test_repository_task_contract) ... ok
+test_response_read_retries_sharing_violation_without_resending (test_v2.HandoffTests.test_response_read_retries_sharing_violation_without_resending) ... ok
+
+----------------------------------------------------------------------
+Ran 39 tests in 4.188s
+
+OK

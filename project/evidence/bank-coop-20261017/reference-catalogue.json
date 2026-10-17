@@ -1,0 +1,677 @@
+{
+  "version": 1,
+  "id": "bank.coop.survivor.nick",
+  "title": "Nick full-body local co-op reference",
+  "tags": [
+    "coop",
+    "native_animation",
+    "skeleton",
+    "survivor"
+  ],
+  "kind": "model",
+  "revision": "052cd21cf24995dc",
+  "source": "game/source_assets/bank.coop.survivor.nick/052cd21cf24995dc/survivor_dfd96a16f0d1.glb",
+  "source_note": "Read-only local L4D2 install; source snapshot outerasset/source-snapshots/coop-gambler-v2/manifest.json; GLB metres, Godot -Z forward; native idle/walk/run.",
+  "usage": "local_reference_only_rights_unverified",
+  "files": {
+    "survivor_dfd96a16f0d1.glb": "dfd96a16f0d1c63e4125ef1b6faefd14554da97764aa4a8e1999deca19cf7ac4"
+  },
+  "missing_dependencies": [],
+  "warnings": [],
+  "status": "prepared",
+  "inferred": {},
+  "declared": {
+    "unit_scale": 1.0,
+    "yaw_degrees": 0.0,
+    "texture_roles": {}
+  },
+  "preparations": {
+    "b903cb7157a49e3c": {
+      "key": "b903cb7157a49e3c",
+      "options": {
+        "pipeline": 2,
+        "worker_sha256": "5759cc8beb2b03bf734f3f7fe42cbb09a57d8538754a91357c5d691e3d6b6e79",
+        "engine": "4.7.2.stable.official.ed1daf0bf",
+        "revision": "d62e3af08c5cb0d1",
+        "unit_scale": 1.0,
+        "yaw_degrees": 0.0,
+        "texture_hashes": {}
+      },
+      "resource": "res://assets/library/bank.coop.survivor.nick/b903cb7157a49e3c/prepared.tscn",
+      "output_sha256": "80b26f532a6fcabf30af9c665b61d43dc148bb1e011a0d87c594c71e000eddf8",
+      "artifact_hashes": {
+        "prepared.tscn": "80b26f532a6fcabf30af9c665b61d43dc148bb1e011a0d87c594c71e000eddf8",
+        "survivor.glb": "dec063e8effc922f436c45c1d11424d80d2bf8e7d4962bc1ca906d37e4d3029a",
+        "survivor_gambler_body_albedo.png": "0280e73445b84bca55152d798c272e14a8abe178d666aef0929aa81135da6ab0",
+        "survivor_gambler_eyeball_l_albedo.png": "47341897fb15d1d1dba5f3cd5e2fbc6d1cb1cfbdafeffda0bea06e744bb19e7d",
+        "survivor_gambler_eyeball_r_albedo.png": "47341897fb15d1d1dba5f3cd5e2fbc6d1cb1cfbdafeffda0bea06e744bb19e7d",
+        "survivor_gambler_hair_albedo.png": "6b3f21b17f811b7ca7cba2d91cc28c0ed2184c197385366b6dbd5a82903a636f",
+        "survivor_gambler_head_albedo.png": "248d4579d1010554b4c9612a6f03db713e77e6445aeacc59708ab59787510e18",
+        "survivor_producer_body_albedo.png": "357015db23026515d84279f70ceca83f1b5a2f6df6de0ef95307d74d63c5bc81"
+      },
+      "measured": {
+        "anchors": {
+          "center": [
+            0,
+            0.927784442901611,
+            0
+          ],
+          "floor": [
+            0,
+            0,
+            0
+          ],
+          "top": [
+            0,
+            1.85556888580322,
+            0
+          ]
+        },
+        "bounds_min": [
+          -0.480629175901413,
+          0.0,
+          -0.199263975024223
+        ],
+        "meshes": [
+          {
+            "name": "gambler_model_merged_dmx",
+            "surfaces": [
+              {
+                "material": "gambler_head",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 2477,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 2048,
+                    "path": "res://assets/library/bank.coop.survivor.nick/b903cb7157a49e3c/survivor_gambler_head_albedo.png",
+                    "width": 2048
+                  }
+                },
+                "triangles": 4540,
+                "uv": 2477,
+                "vertices": 2477
+              },
+              {
+                "material": "gambler_body",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 7949,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 2048,
+                    "path": "res://assets/library/bank.coop.survivor.nick/b903cb7157a49e3c/survivor_gambler_body_albedo.png",
+                    "width": 2048
+                  }
+                },
+                "triangles": 12247,
+                "uv": 7949,
+                "vertices": 7949
+              },
+              {
+                "material": "models/survivors/gambler/gambler_hair",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 187,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 1024,
+                    "path": "res://assets/library/bank.coop.survivor.nick/b903cb7157a49e3c/survivor_gambler_hair_albedo.png",
+                    "width": 2048
+                  }
+                },
+                "triangles": 199,
+                "uv": 187,
+                "vertices": 187
+              },
+              {
+                "material": "models/survivors/gambler/gambler_eyeball_l",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 25,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 128,
+                    "path": "res://assets/library/bank.coop.survivor.nick/b903cb7157a49e3c/survivor_gambler_eyeball_l_albedo.png",
+                    "width": 128
+                  }
+                },
+                "triangles": 30,
+                "uv": 25,
+                "vertices": 25
+              },
+              {
+                "material": "models/survivors/gambler/gambler_eyeball_r",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 25,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 128,
+                    "path": "res://assets/library/bank.coop.survivor.nick/b903cb7157a49e3c/survivor_gambler_eyeball_r_albedo.png",
+                    "width": 128
+                  }
+                },
+                "triangles": 30,
+                "uv": 25,
+                "vertices": 25
+              },
+              {
+                "material": "models/survivors/producer/producer_body",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 431,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 2048,
+                    "path": "res://assets/library/bank.coop.survivor.nick/b903cb7157a49e3c/survivor_producer_body_albedo.png",
+                    "width": 2048
+                  }
+                },
+                "triangles": 400,
+                "uv": 431,
+                "vertices": 431
+              }
+            ]
+          }
+        ],
+        "rig": {
+          "animations": [
+            {
+              "duration": 1.56666672229767,
+              "name": "idle"
+            },
+            {
+              "duration": 1.39999997615814,
+              "name": "run"
+            },
+            {
+              "duration": 1.89999997615814,
+              "name": "walk"
+            }
+          ],
+          "skeletons": [
+            {
+              "bones": 85,
+              "name": "Skeleton3D"
+            }
+          ]
+        },
+        "scene": "res://assets/library/bank.coop.survivor.nick/b903cb7157a49e3c/prepared.tscn",
+        "size_m": [
+          0.961258351802826,
+          1.85556888580322,
+          0.398527950048447
+        ]
+      }
+    },
+    "a6eda658814d326e": {
+      "key": "a6eda658814d326e",
+      "options": {
+        "pipeline": 2,
+        "worker_sha256": "5759cc8beb2b03bf734f3f7fe42cbb09a57d8538754a91357c5d691e3d6b6e79",
+        "engine": "4.7.2.stable.official.ed1daf0bf",
+        "revision": "052cd21cf24995dc",
+        "unit_scale": 1.0,
+        "yaw_degrees": 0.0,
+        "texture_hashes": {}
+      },
+      "resource": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/prepared.tscn",
+      "output_sha256": "c0ccc069ad6a7bcd091eb64bc1ac424525ef882b67a621445e6c00193276a861",
+      "artifact_hashes": {
+        "prepared.tscn": "c0ccc069ad6a7bcd091eb64bc1ac424525ef882b67a621445e6c00193276a861",
+        "survivor_dfd96a16f0d1.glb": "dfd96a16f0d1c63e4125ef1b6faefd14554da97764aa4a8e1999deca19cf7ac4",
+        "survivor_dfd96a16f0d1_gambler_body_albedo.png": "ee8a42696f1e6c7a0ddc8b55892bba6d6b9f9fbbe0a46554bf54816282e9afa0",
+        "survivor_dfd96a16f0d1_gambler_eyeball_l_albedo.png": "3456f460205ab211a66300934205a05264624c2e8304e030e8dd7e74e111ee9d",
+        "survivor_dfd96a16f0d1_gambler_eyeball_r_albedo.png": "3456f460205ab211a66300934205a05264624c2e8304e030e8dd7e74e111ee9d",
+        "survivor_dfd96a16f0d1_gambler_hair_albedo.png": "f0ebf538731b7eafa392de946188aa814b716cbd6d2ff3594b722224444d6d0a",
+        "survivor_dfd96a16f0d1_gambler_head_albedo.png": "7127210ff9be7098010265aba1e0fa5aa5fa459869e38a96d279283f0a0554f2",
+        "survivor_dfd96a16f0d1_producer_body_albedo.png": "461a574616713102bacb16bbae25722a6ac6754904b26395da6b3bb9aa6a20c8"
+      },
+      "measured": {
+        "anchors": {
+          "center": [
+            0,
+            0.927784442901611,
+            0
+          ],
+          "floor": [
+            0,
+            0,
+            0
+          ],
+          "top": [
+            0,
+            1.85556888580322,
+            0
+          ]
+        },
+        "bounds_min": [
+          -0.480629175901413,
+          0.0,
+          -0.199263975024223
+        ],
+        "meshes": [
+          {
+            "name": "gambler_model_merged_dmx",
+            "surfaces": [
+              {
+                "material": "gambler_head",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 2477,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 2048,
+                    "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_gambler_head_albedo.png",
+                    "width": 2048
+                  }
+                },
+                "triangles": 4540,
+                "uv": 2477,
+                "vertices": 2477
+              },
+              {
+                "material": "gambler_body",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 7949,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 2048,
+                    "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_gambler_body_albedo.png",
+                    "width": 2048
+                  }
+                },
+                "triangles": 12247,
+                "uv": 7949,
+                "vertices": 7949
+              },
+              {
+                "material": "models/survivors/gambler/gambler_hair",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 187,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 1024,
+                    "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_gambler_hair_albedo.png",
+                    "width": 2048
+                  }
+                },
+                "triangles": 199,
+                "uv": 187,
+                "vertices": 187
+              },
+              {
+                "material": "models/survivors/gambler/gambler_eyeball_l",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 25,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 128,
+                    "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_gambler_eyeball_l_albedo.png",
+                    "width": 128
+                  }
+                },
+                "triangles": 30,
+                "uv": 25,
+                "vertices": 25
+              },
+              {
+                "material": "models/survivors/gambler/gambler_eyeball_r",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 25,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 128,
+                    "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_gambler_eyeball_r_albedo.png",
+                    "width": 128
+                  }
+                },
+                "triangles": 30,
+                "uv": 25,
+                "vertices": 25
+              },
+              {
+                "material": "models/survivors/producer/producer_body",
+                "material_type": "StandardMaterial3D",
+                "metallic": 0.0,
+                "normals": 431,
+                "roughness": 0.850000023841858,
+                "textures": {
+                  "albedo": {
+                    "height": 2048,
+                    "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_producer_body_albedo.png",
+                    "width": 2048
+                  }
+                },
+                "triangles": 400,
+                "uv": 431,
+                "vertices": 431
+              }
+            ]
+          }
+        ],
+        "rig": {
+          "animations": [
+            {
+              "duration": 1.56666672229767,
+              "name": "idle"
+            },
+            {
+              "duration": 1.39999997615814,
+              "name": "run"
+            },
+            {
+              "duration": 1.89999997615814,
+              "name": "walk"
+            }
+          ],
+          "skeletons": [
+            {
+              "bones": 85,
+              "name": "Skeleton3D"
+            }
+          ]
+        },
+        "scene": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/prepared.tscn",
+        "size_m": [
+          0.961258351802826,
+          1.85556888580322,
+          0.398527950048447
+        ]
+      }
+    }
+  },
+  "usage_profiles": {
+    "b903cb7157a49e3c": {
+      "version": 1,
+      "basis": {
+        "source_revision": "d62e3af08c5cb0d1",
+        "preparation_key": "b903cb7157a49e3c"
+      },
+      "facts": {
+        "label_zh": {
+          "value": "Nick full-body local co-op reference",
+          "status": "inferred",
+          "source": "filename_rules_v1",
+          "confidence": 0.65,
+          "evidence": []
+        },
+        "category": {
+          "value": "unknown",
+          "status": "inferred",
+          "source": "filename_rules_v1",
+          "confidence": 0.65,
+          "evidence": []
+        },
+        "use_tags": {
+          "value": [],
+          "status": "inferred",
+          "source": "filename_rules_v1",
+          "confidence": 0.65,
+          "evidence": []
+        },
+        "placement": {
+          "value": "unknown",
+          "status": "inferred",
+          "source": "filename_rules_v1",
+          "confidence": 0.65,
+          "evidence": []
+        },
+        "object_form": {
+          "value": "unknown",
+          "status": "inferred",
+          "source": "filename_rules_v1",
+          "confidence": 0.65,
+          "evidence": []
+        }
+      },
+      "previews": []
+    },
+    "a6eda658814d326e": {
+      "version": 1,
+      "basis": {
+        "source_revision": "052cd21cf24995dc",
+        "preparation_key": "a6eda658814d326e"
+      },
+      "facts": {
+        "label_zh": {
+          "value": "Nick full-body local co-op reference",
+          "status": "inferred",
+          "source": "filename_rules_v1",
+          "confidence": 0.65,
+          "evidence": []
+        },
+        "category": {
+          "value": "unknown",
+          "status": "inferred",
+          "source": "filename_rules_v1",
+          "confidence": 0.65,
+          "evidence": []
+        },
+        "use_tags": {
+          "value": [],
+          "status": "inferred",
+          "source": "filename_rules_v1",
+          "confidence": 0.65,
+          "evidence": []
+        },
+        "placement": {
+          "value": "unknown",
+          "status": "inferred",
+          "source": "filename_rules_v1",
+          "confidence": 0.65,
+          "evidence": []
+        },
+        "object_form": {
+          "value": "unknown",
+          "status": "inferred",
+          "source": "filename_rules_v1",
+          "confidence": 0.65,
+          "evidence": []
+        }
+      },
+      "previews": []
+    }
+  },
+  "prepared": {
+    "key": "a6eda658814d326e",
+    "options": {
+      "pipeline": 2,
+      "worker_sha256": "5759cc8beb2b03bf734f3f7fe42cbb09a57d8538754a91357c5d691e3d6b6e79",
+      "engine": "4.7.2.stable.official.ed1daf0bf",
+      "revision": "052cd21cf24995dc",
+      "unit_scale": 1.0,
+      "yaw_degrees": 0.0,
+      "texture_hashes": {}
+    },
+    "resource": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/prepared.tscn",
+    "output_sha256": "c0ccc069ad6a7bcd091eb64bc1ac424525ef882b67a621445e6c00193276a861",
+    "artifact_hashes": {
+      "prepared.tscn": "c0ccc069ad6a7bcd091eb64bc1ac424525ef882b67a621445e6c00193276a861",
+      "survivor_dfd96a16f0d1.glb": "dfd96a16f0d1c63e4125ef1b6faefd14554da97764aa4a8e1999deca19cf7ac4",
+      "survivor_dfd96a16f0d1_gambler_body_albedo.png": "ee8a42696f1e6c7a0ddc8b55892bba6d6b9f9fbbe0a46554bf54816282e9afa0",
+      "survivor_dfd96a16f0d1_gambler_eyeball_l_albedo.png": "3456f460205ab211a66300934205a05264624c2e8304e030e8dd7e74e111ee9d",
+      "survivor_dfd96a16f0d1_gambler_eyeball_r_albedo.png": "3456f460205ab211a66300934205a05264624c2e8304e030e8dd7e74e111ee9d",
+      "survivor_dfd96a16f0d1_gambler_hair_albedo.png": "f0ebf538731b7eafa392de946188aa814b716cbd6d2ff3594b722224444d6d0a",
+      "survivor_dfd96a16f0d1_gambler_head_albedo.png": "7127210ff9be7098010265aba1e0fa5aa5fa459869e38a96d279283f0a0554f2",
+      "survivor_dfd96a16f0d1_producer_body_albedo.png": "461a574616713102bacb16bbae25722a6ac6754904b26395da6b3bb9aa6a20c8"
+    },
+    "measured": {
+      "anchors": {
+        "center": [
+          0,
+          0.927784442901611,
+          0
+        ],
+        "floor": [
+          0,
+          0,
+          0
+        ],
+        "top": [
+          0,
+          1.85556888580322,
+          0
+        ]
+      },
+      "bounds_min": [
+        -0.480629175901413,
+        0.0,
+        -0.199263975024223
+      ],
+      "meshes": [
+        {
+          "name": "gambler_model_merged_dmx",
+          "surfaces": [
+            {
+              "material": "gambler_head",
+              "material_type": "StandardMaterial3D",
+              "metallic": 0.0,
+              "normals": 2477,
+              "roughness": 0.850000023841858,
+              "textures": {
+                "albedo": {
+                  "height": 2048,
+                  "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_gambler_head_albedo.png",
+                  "width": 2048
+                }
+              },
+              "triangles": 4540,
+              "uv": 2477,
+              "vertices": 2477
+            },
+            {
+              "material": "gambler_body",
+              "material_type": "StandardMaterial3D",
+              "metallic": 0.0,
+              "normals": 7949,
+              "roughness": 0.850000023841858,
+              "textures": {
+                "albedo": {
+                  "height": 2048,
+                  "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_gambler_body_albedo.png",
+                  "width": 2048
+                }
+              },
+              "triangles": 12247,
+              "uv": 7949,
+              "vertices": 7949
+            },
+            {
+              "material": "models/survivors/gambler/gambler_hair",
+              "material_type": "StandardMaterial3D",
+              "metallic": 0.0,
+              "normals": 187,
+              "roughness": 0.850000023841858,
+              "textures": {
+                "albedo": {
+                  "height": 1024,
+                  "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_gambler_hair_albedo.png",
+                  "width": 2048
+                }
+              },
+              "triangles": 199,
+              "uv": 187,
+              "vertices": 187
+            },
+            {
+              "material": "models/survivors/gambler/gambler_eyeball_l",
+              "material_type": "StandardMaterial3D",
+              "metallic": 0.0,
+              "normals": 25,
+              "roughness": 0.850000023841858,
+              "textures": {
+                "albedo": {
+                  "height": 128,
+                  "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_gambler_eyeball_l_albedo.png",
+                  "width": 128
+                }
+              },
+              "triangles": 30,
+              "uv": 25,
+              "vertices": 25
+            },
+            {
+              "material": "models/survivors/gambler/gambler_eyeball_r",
+              "material_type": "StandardMaterial3D",
+              "metallic": 0.0,
+              "normals": 25,
+              "roughness": 0.850000023841858,
+              "textures": {
+                "albedo": {
+                  "height": 128,
+                  "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_gambler_eyeball_r_albedo.png",
+                  "width": 128
+                }
+              },
+              "triangles": 30,
+              "uv": 25,
+              "vertices": 25
+            },
+            {
+              "material": "models/survivors/producer/producer_body",
+              "material_type": "StandardMaterial3D",
+              "metallic": 0.0,
+              "normals": 431,
+              "roughness": 0.850000023841858,
+              "textures": {
+                "albedo": {
+                  "height": 2048,
+                  "path": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/survivor_dfd96a16f0d1_producer_body_albedo.png",
+                  "width": 2048
+                }
+              },
+              "triangles": 400,
+              "uv": 431,
+              "vertices": 431
+            }
+          ]
+        }
+      ],
+      "rig": {
+        "animations": [
+          {
+            "duration": 1.56666672229767,
+            "name": "idle"
+          },
+          {
+            "duration": 1.39999997615814,
+            "name": "run"
+          },
+          {
+            "duration": 1.89999997615814,
+            "name": "walk"
+          }
+        ],
+        "skeletons": [
+          {
+            "bones": 85,
+            "name": "Skeleton3D"
+          }
+        ]
+      },
+      "scene": "res://assets/library/bank.coop.survivor.nick/a6eda658814d326e/prepared.tscn",
+      "size_m": [
+        0.961258351802826,
+        1.85556888580322,
+        0.398527950048447
+      ]
+    }
+  }
+}

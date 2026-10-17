@@ -1,1 +1,1 @@
-Pillow==12.0.0
+-r engine/requirements.txt

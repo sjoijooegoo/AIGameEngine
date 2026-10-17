@@ -1,12 +1,8 @@
-# Project-local MCP configuration. Paths resolve from this .codex directory.
-# Prerequisite: run tools/setup.ps1 and open this repository as a trusted project.
-[mcp_servers.aigameengine]
-command = "python"
-args = ["-u", "tools/mcp_server.py"]
-cwd = ".."
-env_vars = ["GODOT_BIN"]
-startup_timeout_sec = 30
-tool_timeout_sec = 120
+# Game tools use .agents/skills/aigameengine-dev and engine/run.py.
+# Optional game MCP: python engine/run.py mcp (not auto-registered).
+[mcp_servers.blender]
+command = "uvx"
+args = ["--python", "3.11", "mcp-for-blender"]
 
-[mcp_servers.aigameengine.env]
-PYTHONUTF8 = "1"
+[mcp_servers.blender.env]
+UV_PYTHON_PREFERENCE = "only-managed"

@@ -1,0 +1,56 @@
+{
+  "version": 1,
+  "default_project": "sandbox",
+  "godot": ".tools/Godot_v4.7.2-stable_win64_console.exe",
+  "templates": ".tools/templates",
+  "runtime_source": "engine/godot",
+  "logs": "logs",
+  "cache": ".cache",
+  "build": "build",
+  "projects": {
+    "sandbox": {
+      "root": "engine/sandbox/runtime",
+      "sources": "engine/sandbox/source_assets",
+      "catalog": "engine/sandbox/catalog",
+      "recipes": "engine/sandbox/recipes",
+      "tests": "engine/tests",
+      "default_scene": "lab",
+      "scenes": {
+        "lab": "res://scenes/lab.tscn",
+        "probe": "res://scenes/adapter_probe.tscn"
+      },
+      "assembly": true,
+      "executable": "BankCrisisLab.exe",
+      "export_preset": "Windows Desktop"
+    },
+    "bank": {
+      "root": "game/runtime",
+      "sources": "game/source_assets",
+      "catalog": "game/catalog",
+      "recipes": "game/recipes",
+      "tests": "game/tests",
+      "default_scene": "bank",
+      "scenes": {
+        "bank": "res://scenes/main.tscn"
+      },
+      "assembly": false,
+      "executable": "BankCrisis.exe",
+      "export_preset": "Windows Desktop"
+    },
+    "addon_probe": {
+      "root": "engine/sandbox/addon_probe",
+      "sources": "engine/sandbox/source_assets",
+      "catalog": "engine/sandbox/catalog",
+      "recipes": "engine/sandbox/recipes",
+      "tests": "engine/tests",
+      "default_scene": "addons",
+      "scenes": {
+        "addons": "res://probe.tscn",
+        "systems": "res://systems/systems.tscn"
+      },
+      "assembly": false,
+      "executable": "AddonProbe.exe",
+      "export_preset": "Windows Desktop"
+    }
+  }
+}

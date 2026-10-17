@@ -1,0 +1,487 @@
+{
+  "name": "run",
+  "fps": 20,
+  "interval": 3,
+  "frames": [
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\run\\run-00.png",
+      "simulation_time": 0.0,
+      "state": {
+        "input_sequence": 129,
+        "local_id": 344376231,
+        "network": {
+          "1": {
+            "rtt_ms": 15.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 129,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "run",
+              "source": "local_l4d2_reference",
+              "time": 0.39999999170718
+            },
+            "id": 951863713,
+            "motion": "run",
+            "name": "alpha",
+            "position": [
+              19.3174362182617,
+              -0.0191202107816935,
+              18.8000202178955
+            ],
+            "slot": 0,
+            "target": [
+              18.9299716949463,
+              -0.0191202331334352,
+              18.8000221252441
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 129,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "idle",
+              "source": "local_l4d2_reference",
+              "time": 0.583333277702331
+            },
+            "id": 344376231,
+            "motion": "idle",
+            "name": "bravo",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 129,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\run\\run-01.png",
+      "simulation_time": 0.05,
+      "state": {
+        "input_sequence": 132,
+        "local_id": 344376231,
+        "network": {
+          "1": {
+            "rtt_ms": 15.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 132,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "run",
+              "source": "local_l4d2_reference",
+              "time": 0.449999990670578
+            },
+            "id": 951863713,
+            "motion": "run",
+            "name": "alpha",
+            "position": [
+              19.0875034332275,
+              -0.0191202238202095,
+              18.8000202178955
+            ],
+            "slot": 0,
+            "target": [
+              18.6999683380127,
+              -0.0191201958805323,
+              18.8000221252441
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 132,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "idle",
+              "source": "local_l4d2_reference",
+              "time": 0.633333277702331
+            },
+            "id": 344376231,
+            "motion": "idle",
+            "name": "bravo",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 132,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\run\\run-02.png",
+      "simulation_time": 0.1,
+      "state": {
+        "input_sequence": 135,
+        "local_id": 344376231,
+        "network": {
+          "1": {
+            "rtt_ms": 15.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 135,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "run",
+              "source": "local_l4d2_reference",
+              "time": 0.499999989633975
+            },
+            "id": 951863713,
+            "motion": "run",
+            "name": "alpha",
+            "position": [
+              18.8575267791748,
+              -0.0191202070564032,
+              18.8000202178955
+            ],
+            "slot": 0,
+            "target": [
+              18.4699649810791,
+              -0.0191202275454998,
+              18.8000221252441
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 135,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "idle",
+              "source": "local_l4d2_reference",
+              "time": 0.683333277702331
+            },
+            "id": 344376231,
+            "motion": "idle",
+            "name": "bravo",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 135,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\run\\run-03.png",
+      "simulation_time": 0.15000000000000002,
+      "state": {
+        "input_sequence": 138,
+        "local_id": 344376231,
+        "network": {
+          "1": {
+            "rtt_ms": 15.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 138,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "run",
+              "source": "local_l4d2_reference",
+              "time": 0.549999988597372
+            },
+            "id": 951863713,
+            "motion": "run",
+            "name": "alpha",
+            "position": [
+              18.627534866333,
+              -0.0191202200949192,
+              18.8000202178955
+            ],
+            "slot": 0,
+            "target": [
+              18.2399616241455,
+              -0.0191202331334352,
+              18.8000221252441
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 138,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "idle",
+              "source": "local_l4d2_reference",
+              "time": 0.733333277702331
+            },
+            "id": 344376231,
+            "motion": "idle",
+            "name": "bravo",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 138,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\run\\run-04.png",
+      "simulation_time": 0.2,
+      "state": {
+        "input_sequence": 141,
+        "local_id": 344376231,
+        "network": {
+          "1": {
+            "rtt_ms": 15.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 141,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "run",
+              "source": "local_l4d2_reference",
+              "time": 0.59999998756077
+            },
+            "id": 951863713,
+            "motion": "run",
+            "name": "alpha",
+            "position": [
+              18.3975372314453,
+              -0.0191202275454998,
+              18.8000202178955
+            ],
+            "slot": 0,
+            "target": [
+              18.0099582672119,
+              -0.019120205193758,
+              18.8000221252441
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 141,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "idle",
+              "source": "local_l4d2_reference",
+              "time": 0.783333277702332
+            },
+            "id": 344376231,
+            "motion": "idle",
+            "name": "bravo",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 141,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    },
+    {
+      "path": "D:\\AIGameEngine\\project\\evidence\\bank-coop-20261017\\run\\run-05.png",
+      "simulation_time": 0.25,
+      "state": {
+        "input_sequence": 144,
+        "local_id": 344376231,
+        "network": {
+          "1": {
+            "rtt_ms": 15.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 144,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "run",
+              "source": "local_l4d2_reference",
+              "time": 0.649999986524167
+            },
+            "id": 951863713,
+            "motion": "run",
+            "name": "alpha",
+            "position": [
+              18.1675357818604,
+              -0.0191202145069838,
+              18.8000202178955
+            ],
+            "slot": 0,
+            "target": [
+              17.7799549102783,
+              -0.0191202163696289,
+              18.8000221252441
+            ],
+            "yaw": 3.14159274101257
+          },
+          {
+            "ack": 144,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "idle",
+                "run",
+                "walk"
+              ],
+              "motion": "idle",
+              "source": "local_l4d2_reference",
+              "time": 0.833333277702332
+            },
+            "id": 344376231,
+            "motion": "idle",
+            "name": "bravo",
+            "position": [
+              22.0,
+              -0.0194444488734007,
+              16.0
+            ],
+            "slot": 1,
+            "target": [
+              22.0,
+              -0.0194444507360458,
+              16.0
+            ],
+            "yaw": 3.14159274101257
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 2,
+        "server": false,
+        "snapshot_tick": 144,
+        "status": "已连接 · 2/4 人",
+        "tick": 0
+      }
+    }
+  ]
+}

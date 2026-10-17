@@ -1,0 +1,159 @@
+{
+  "passed": true,
+  "project": "bank",
+  "checks": [
+    {
+      "name": "coop_two_clients",
+      "status": "pass",
+      "dedicated_server_is_not_player": true
+    },
+    {
+      "name": "coop_authoritative_walk_and_stop",
+      "status": "pass",
+      "distance": 2.8000221472509503,
+      "input": "Input.parse_input_event -> normal _input -> UDP RPC"
+    },
+    {
+      "name": "coop_run_animation",
+      "status": "pass",
+      "remote_avatar": {
+        "bones": 17,
+        "clips": [
+          "idle",
+          "run",
+          "walk"
+        ],
+        "leg_rotation": [
+          0.0,
+          0.0,
+          0.0,
+          1.0
+        ],
+        "motion": "idle",
+        "source": "project_authored",
+        "time": 0.15
+      }
+    },
+    {
+      "name": "coop_wall_collision",
+      "status": "pass",
+      "position": [
+        19.1599750518799,
+        -0.0191202089190483,
+        21.6918029785156
+      ]
+    },
+    {
+      "name": "coop_invalid_input_rejected",
+      "status": "pass"
+    },
+    {
+      "name": "coop_stale_input_stops",
+      "status": "pass"
+    },
+    {
+      "name": "coop_four_clients_and_late_join",
+      "status": "pass",
+      "slots": [
+        0,
+        1,
+        2,
+        3
+      ]
+    },
+    {
+      "name": "coop_capacity_rejected",
+      "status": "pass"
+    },
+    {
+      "name": "coop_leave_button_and_cleanup",
+      "status": "pass"
+    },
+    {
+      "name": "coop_rejoin",
+      "status": "pass"
+    },
+    {
+      "name": "coop_abrupt_disconnect",
+      "status": "pass"
+    },
+    {
+      "name": "coop_map_version_rejected",
+      "status": "pass"
+    },
+    {
+      "name": "coop_server_disconnect_cleanup",
+      "status": "pass"
+    },
+    {
+      "name": "coop_linux_release_interop",
+      "status": "pass",
+      "evidence": "linux-report.json"
+    },
+    {
+      "name": "coop_release_clients",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "coop_clean_checkout",
+      "status": "pass",
+      "evidence": "clean-checkout-report.json"
+    }
+  ],
+  "technical_visual_review": "Reviewed actual native/original front/side/back PNGs and walking/run contact sheets; corrected missing/flipped/stale textures and original segmented-rig pose propagation.",
+  "user_art_acceptance": "pending",
+  "scope": "Movement-only structural bank scene; 2–4 players; no combat, doors interaction, NPCs, prediction or public matchmaking.",
+  "failed_runs_preserved": [
+    {
+      "path": "logs\\sessions\\bank-coop-20261017-103423-309a67\\report.json",
+      "sha256": "8e909569b9257c2db1e17aa0c4d0f34e42dd39e1a9e9bf1bd44274c686a3253b",
+      "error": "PermissionError(13, 'Permission denied')"
+    },
+    {
+      "path": "logs\\sessions\\bank-coop-20261017-103503-2d51ac\\report.json",
+      "sha256": "4c7a0977a4ccb2c162f0692476c168fa5f95a3e8edcd816c35cd351e3ee2de08",
+      "error": "TimeoutError('D:\\\\AIGameEngine\\\\logs\\\\sessions\\\\bank-coop-20261017-103503-2d51ac\\\\server\\\\response.json')"
+    },
+    {
+      "path": "logs\\sessions\\bank-coop-20261017-103550-f16b54\\report.json",
+      "sha256": "bbe1a19426ff7551608db250f5f00f3c08463757a29782788c5e60393092972e",
+      "error": "AssertionError(([21.0, -0.0192708354443312, 16.0], [21.0, -0.0190731156617403, 17.3299579620361], 1.3299579767332241))"
+    },
+    {
+      "path": "logs\\sessions\\bank-coop-20261017-103619-758b28\\report.json",
+      "sha256": "eedd2e7a402c0ba10fb92a2025d171f072622051a1a0aa30e54d17ce42972670",
+      "error": "AssertionError('Timed out waiting for network state')"
+    },
+    {
+      "path": "logs\\sessions\\bank-coop-20261017-104011-6ce01a\\report.json",
+      "sha256": "325429563b3cafc4abbe4a0ca3a339af97aa34509019ffb83e556a48d884ee78",
+      "error": "AssertionError(([21.0, -0.0194444507360458, 16.0], [21.0, -0.0190933793783188, 17.6800117492676], 1.680011785949217))"
+    },
+    {
+      "path": "logs\\sessions\\bank-coop-linux-20261017-104731\\report.json",
+      "sha256": "8fe0a732f40280701f5db40263e59b1f15b01a52b7a18ee252dc34f630aa46c0",
+      "error": null
+    },
+    {
+      "path": "logs\\sessions\\bank-coop-linux-20261017-104926\\report.json",
+      "sha256": "8fe0a732f40280701f5db40263e59b1f15b01a52b7a18ee252dc34f630aa46c0",
+      "error": null
+    }
+  ],
+  "source_hashes": {
+    "game/runtime/coop/avatar.gd": "975c9912ea190a6ab4b714cd60cf54def3ddee871c32c89e30b2bdf28451960d",
+    "game/runtime/coop/main.gd": "5b8a76f361105125979cfa60d990ed97a311fd137f3c57edc166adbd111f7d1a",
+    "game/runtime/coop/player.gd": "7b92bde40f911e76eafa884406f5c1287255ca72af4f078bb8d9d24604090dc4",
+    "game/runtime/coop/session.gd": "e6f9f913a98e4ac944cc61af1bbc8c266adf754bec95092e2d62a0e45d1e3f4d",
+    "game/runtime/coop/ui.gd": "b92bf17ec0a03686c7372091cf8f453eac8fd239e34cb6ecb9d630ad7efe5691",
+    "game/runtime/coop/world.gd": "9e6792c2f0573ecabe771528baf96cc5bce2ef65423916a74d4e6ad63aae8b21"
+  },
+  "known_limits": [
+    "same Nick skin for all reference players",
+    "reference weapon poses retained without held weapon",
+    "strafe/backward-specific clips absent",
+    "WAN and actual VPS not tested",
+    "no complete bank graphics or gameplay port"
+  ]
+}

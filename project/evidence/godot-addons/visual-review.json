@@ -1,0 +1,13 @@
+{
+  "reviewer": "Codex AI",
+  "scope": "Functional fixture visibility, follow/aim sequence and debug overlay only; not final user art approval",
+  "report": "project/evidence/godot-addons/rendered/addon-report.json",
+  "report_sha256": "8d648fb00a51e0e30b82f0f69438d69f75a9f0e9a9fdedd163a1165901a6d667",
+  "observed": {
+    "ramp_follow.contact.jpg": "02a52f7598ad798422bf2299159bf360d00d2613b0b3a4865665891a8a83c0f7",
+    "aim_transition.contact.jpg": "26f209f77bd004a6e24a55a5fd783c4b3c41f82c92e75bd58333f22c52f55c59",
+    "overlay_on.png": "81c122ca6ef10ee89c7c0c9701d88f92eb03199c9b902426aefa38d764f13db3",
+    "overlay_off.png": "d555a89f097fd40acc45d04eb0a28b9bcdec333a392b39f98e9b6071b2af07c0"
+  },
+  "notes": "Viewed actual images. Capsule stays visible through follow/aim sequence; range sphere and box visible; overlay disappears on G. User art approval not inferred."
+}

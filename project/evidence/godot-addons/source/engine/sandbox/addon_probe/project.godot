@@ -1,0 +1,13 @@
+config_version=5
+[application]
+config/name="AIGameEngine Addon Compatibility Probe"
+run/main_scene="res://probe.tscn"
+[autoload]
+PhantomCameraManager="*res://addons/phantom_camera/scripts/managers/phantom_camera_manager.gd"
+[display]
+window/size/viewport_width=1280
+window/size/viewport_height=720
+[rendering]
+renderer/rendering_method="gl_compatibility"
+[editor_plugins]
+enabled=PackedStringArray("res://addons/phantom_camera/plugin.cfg")

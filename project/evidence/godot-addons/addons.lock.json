@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "project": "addon_probe",
+  "packages": [
+    {
+      "id": "phantom_camera",
+      "version": "0.11.0.3",
+      "archive": "phantom-camera-v0.11.0.3.zip",
+      "url": "https://api.github.com/repos/ramokz/phantom-camera/zipball/v0.11.0.3",
+      "sha256": "237fab51bc0eefba1c9b32efbf64f8f2e6c56ad758215ce4505d402e516f58d0",
+      "prefix": "ramokz-phantom-camera-cb6e096/addons/phantom_camera/"
+    },
+    {
+      "id": "debug_draw_3d",
+      "version": "1.7.3",
+      "archive": "debug-draw-3d-1.7.3.zip",
+      "url": "https://github.com/DmitriySalnikov/godot_debug_draw_3d/releases/download/1.7.3/debug-draw-3d_1.7.3.zip",
+      "sha256": "e16c7e1bd7f4c30d8e503ce424caef5b9e2fd5f44094cf00be66c334aff54c70",
+      "prefix": "debug_draw_3d-1.7.3/addons/debug_draw_3d/"
+    }
+  ]
+}

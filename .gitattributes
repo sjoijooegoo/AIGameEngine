@@ -1,0 +1,3 @@
+# Evidence manifests hash exact bytes. Preserve captures, reports, logs and
+# source snapshots across Windows/Linux checkouts instead of applying autocrlf.
+project/evidence/** -text

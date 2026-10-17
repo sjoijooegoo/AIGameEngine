@@ -1,0 +1,33 @@
+{
+  "reviewer": "Codex technical image inspection",
+  "scope": "Original 17-bone and local Nick 85-bone full-body rendering; front/side/back and walk/run frames. No final user art acceptance.",
+  "report_sha256": "fabfffd1f9d97848ff455b0ee2e044cf4b658b703d5f5b170d7da2ec99de4496",
+  "inspected": [
+    "original/front.png",
+    "original/side.png",
+    "original/back.png",
+    "original/walk.contact.jpg",
+    "reference/front.png",
+    "reference/side.png",
+    "reference/back.png",
+    "reference/walk.contact.jpg",
+    "run/run.contact.jpg"
+  ],
+  "notes": [
+    "Corrected missing base-texture directory resolution, vertical image orientation and stale extracted images.",
+    "Original skeleton pose propagation to segmented body is visible in alternating legs and arms.",
+    "Native weapon holding poses retained with no held gun; backward/strafe-specific clips are not implemented."
+  ],
+  "user_art_acceptance": "pending",
+  "evidence_sha256": {
+    "original/front.png": "7e17906a466a8ca0d93f78ae6d26de4d9775ea0384568c0a68b6c0f69bd5fd1a",
+    "original/side.png": "25b8b2d81e8f08852ea636075f0c85253f070f7253a6a3476cc312d87b40288e",
+    "original/back.png": "368069e341c7f7c02f8b617d4985508a83ddafe4630b7083c3162fa562b6310f",
+    "original/walk.contact.jpg": "af8629e43f34b4efb5a6df758d24c896f40ba35dfdb6be124c3827c3a9f561d1",
+    "reference/front.png": "b00326722d3bf68018d60e6b1f67d2a5008effefe3f94831b3c8e42d90eab9ac",
+    "reference/side.png": "ebda9ab475533a44e8d32b7df71b74ede1a3a53f7d09f6c4520cf368d6f485e1",
+    "reference/back.png": "df843d57b9693a166ea71a62157e555d94c2dc389fa2ba7a4b906a82b7471f6e",
+    "reference/walk.contact.jpg": "d33daf555b5bb00208eb4b9615446a56ed176d95ada78b7a1f8e91dbb3d32f74",
+    "run/run.contact.jpg": "726ea9e76067f22dcd9b8aed062880f9be009806cd27db51cf3e93d957694429"
+  }
+}
