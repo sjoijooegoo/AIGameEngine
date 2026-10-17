@@ -61,7 +61,8 @@ func blocks_world() -> bool:return mode in ["title","pause","loadout","settings"
 func set_mode(next: String) -> void:
 	if mode==next:return
 	mode=next;world.held_actions.clear();world.firearms.clear_input();world.strike_time=-1
-	Input.mouse_mode=Input.MOUSE_MODE_CAPTURED if mode=="play" else Input.MOUSE_MODE_VISIBLE
+	if mode=="play":Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
+	else:preload("res://coop/input_capture.gd").release(world.get_viewport())
 	# Freeze ongoing world voices; clear_input separately cancels queued actions.
 	for type in ["AudioStreamPlayer","AudioStreamPlayer3D"]:
 		for player in world.find_children("*",type,true,false):player.stream_paused=blocks_world()

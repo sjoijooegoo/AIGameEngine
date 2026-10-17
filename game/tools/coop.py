@@ -33,7 +33,7 @@ def stage(destination: Path | None = None, reference: bool = False) -> Path:
     destination.mkdir(parents=True, exist_ok=False)
     (destination / 'coop').mkdir()
     for path in SOURCE.iterdir():
-        if path.name in {'main.gd','main.tscn','world.gd','session.gd','player.gd','avatar.gd','ui.gd','bank_layout.json'}:
+        if path.name in {'main.gd','main.tscn','world.gd','session.gd','player.gd','avatar.gd','ui.gd','bank_layout.json','movement_prediction.gd'}:
             shutil.copy2(path, destination / 'coop' / path.name)
     if reference:
         folder=SOURCE/'local_reference'
@@ -122,7 +122,7 @@ application/modify_resources=false
         shutil.copy2(ROOT / 'game/deploy/bank-coop.service', output)
     source_hashes = {p.relative_to(project).as_posix(): hashlib.sha256(p.read_bytes()).hexdigest()
                      for p in (project / 'coop').rglob('*') if p.is_file() and p.suffix not in ('.import', '.uid')}
-    manifest = {'project': 'bank', 'server': server, 'platform': platform, 'protocol': 1,
+    manifest = {'project': 'bank', 'server': server, 'platform': platform, 'protocol': 2,
                 'scope': '2–4 player structural bank movement slice; no combat or interactive doors',
                 'local_reference': reference and not server, 'sources': source_hashes,
                 'executable': executable, 'sha256': hashlib.sha256((output / executable).read_bytes()).hexdigest()}

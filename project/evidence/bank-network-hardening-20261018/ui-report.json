@@ -1,0 +1,52 @@
+{
+  "checks": [
+    {
+      "name": "bank_network_native_ui_cancel",
+      "status": "pass",
+      "normal_input": true
+    }
+  ],
+  "captures": [
+    "D:/AIGameEngine/logs/sessions/bank-network-ui-20261018-044603/client/connected-hud.png",
+    "D:/AIGameEngine/logs/sessions/bank-network-ui-20261018-044603/client/network-interrupted.png",
+    "D:/AIGameEngine/logs/sessions/bank-network-ui-20261018-044603/client/cancel-reconnect.png",
+    "D:/AIGameEngine/logs/sessions/bank-network-ui-20261018-044603/client/canceled-back-to-browser.png"
+  ],
+  "proxy": {
+    "profile": {
+      "name": "ui",
+      "rtt_ms": 100,
+      "jitter_ms": 10,
+      "loss": 0,
+      "duplicate": 0
+    },
+    "seed": 18003,
+    "duration_s": 24.92200000002049,
+    "error": null,
+    "socket_events": [],
+    "directions": {
+      "up": {
+        "received": 41,
+        "bytes": 13553,
+        "random_dropped": 0,
+        "blackout_dropped": 16,
+        "overflow_dropped": 0,
+        "sent": 25,
+        "duplicates": 0,
+        "delay_mean_ms": 59.40000000060536,
+        "delay_p95_ms": 62.999999994644895
+      },
+      "down": {
+        "received": 880,
+        "bytes": 595626,
+        "random_dropped": 0,
+        "blackout_dropped": 808,
+        "overflow_dropped": 0,
+        "sent": 72,
+        "duplicates": 0,
+        "delay_mean_ms": 55.48611110942956,
+        "delay_p95_ms": 62.999999994644895
+      }
+    }
+  }
+}

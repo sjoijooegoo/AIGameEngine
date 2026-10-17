@@ -1,0 +1,408 @@
+{
+  "scope": "Current bank, two actual headless clients and one real-time dedicated process; seeded UDP impairment in both directions. Not real VPS/GPU/FPS/long-soak validation.",
+  "delay_definition": "Configured rtt_ms is added RTT; each direction gets half, with independent uniform +/- jitter_ms. Loss is per UDP datagram per direction; retransmissions also traverse proxy.",
+  "harness_revision": "ordered-fixture-barrier-v2",
+  "cases": [
+    {
+      "profile": {
+        "name": "rtt300",
+        "rtt_ms": 300,
+        "jitter_ms": 0,
+        "loss": 0,
+        "duplicate": 0
+      },
+      "repeat": 1,
+      "outcome": "completed",
+      "metrics": {
+        "join_ms": 1312.999999994645,
+        "move_server_ms": 188.0,
+        "move_visible_ms": 430.0,
+        "stop_server_ms": 189.0,
+        "shot_server_ms": 172.0,
+        "shot_all_clients_ms": 412.0,
+        "door_server_complete_ms": 1468.9999999827705,
+        "door_all_clients_complete_ms": 1733.9999999967404,
+        "server_hz": 60.160965794768615,
+        "client_rtt_median_ms": [
+          319.0,
+          328.0
+        ],
+        "world_gap_p95_ms": [
+          117.0,
+          117.0
+        ],
+        "world_gap_max_ms": [
+          118.0,
+          133.0
+        ],
+        "world_delivery_hz": [
+          10.06036217303823,
+          10.160965794768613
+        ],
+        "world_age_p95_ms": [
+          101,
+          100
+        ],
+        "throttle_min": [
+          28.0,
+          3.0
+        ],
+        "snapshot_bytes_mean": 3037.7412353923205
+      },
+      "issues": [],
+      "stage": "complete",
+      "measurement": "process-frame telemetry; join and door are controller upper bounds",
+      "samples": "rtt300-r1.json",
+      "engine_errors": {},
+      "proxies": [
+        {
+          "profile": {
+            "name": "rtt300",
+            "rtt_ms": 300,
+            "jitter_ms": 0,
+            "loss": 0,
+            "duplicate": 0
+          },
+          "seed": 20261107,
+          "duration_s": 30.51600000000326,
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+          "directions": {
+            "up": {
+              "received": 1117,
+              "bytes": 50538,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1109,
+              "duplicates": 0,
+              "delay_mean_ms": 156.41568981003348,
+              "delay_p95_ms": 157.00000000651926
+            },
+            "down": {
+              "received": 1242,
+              "bytes": 799502,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1233,
+              "duplicates": 0,
+              "delay_mean_ms": 156.56690997601618,
+              "delay_p95_ms": 157.00000000651926
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "rtt300",
+            "rtt_ms": 300,
+            "jitter_ms": 0,
+            "loss": 0,
+            "duplicate": 0
+          },
+          "seed": 20261108,
+          "duration_s": 30.51600000000326,
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+          "directions": {
+            "up": {
+              "received": 516,
+              "bytes": 22589,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 506,
+              "duplicates": 0,
+              "delay_mean_ms": 156.66205533535134,
+              "delay_p95_ms": 157.00000000651926
+            },
+            "down": {
+              "received": 1242,
+              "bytes": 800354,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1234,
+              "duplicates": 0,
+              "delay_mean_ms": 156.73176661293013,
+              "delay_p95_ms": 157.00000000651926
+            }
+          }
+        }
+      ],
+      "duration_s": 30.51600000000326
+    },
+    {
+      "profile": {
+        "name": "rtt500",
+        "rtt_ms": 500,
+        "jitter_ms": 0,
+        "loss": 0,
+        "duplicate": 0
+      },
+      "repeat": 1,
+      "outcome": "completed",
+      "metrics": {
+        "join_ms": 1921.0000000020955,
+        "move_server_ms": 278.0,
+        "move_visible_ms": 606.0,
+        "stop_server_ms": 280.0,
+        "shot_server_ms": 274.0,
+        "shot_all_clients_ms": 563.0,
+        "door_server_complete_ms": 1532.0000000065193,
+        "door_all_clients_complete_ms": 1953.9999999979045,
+        "server_hz": 60.09399060093991,
+        "client_rtt_median_ms": [
+          513.0,
+          511.0
+        ],
+        "world_gap_p95_ms": [
+          117.0,
+          117.0
+        ],
+        "world_gap_max_ms": [
+          136.0,
+          118.0
+        ],
+        "world_delivery_hz": [
+          9.99900009999,
+          10.098990100989901
+        ],
+        "world_age_p95_ms": [
+          113,
+          100
+        ],
+        "throttle_min": [
+          17.0,
+          5.0
+        ],
+        "snapshot_bytes_mean": 3040.7408637873755
+      },
+      "issues": [],
+      "stage": "complete",
+      "measurement": "process-frame telemetry; join and door are controller upper bounds",
+      "samples": "rtt500-r1.json",
+      "engine_errors": {},
+      "proxies": [
+        {
+          "profile": {
+            "name": "rtt500",
+            "rtt_ms": 500,
+            "jitter_ms": 0,
+            "loss": 0,
+            "duplicate": 0
+          },
+          "seed": 20261117,
+          "duration_s": 20.59299999999348,
+          "error": null,
+          "directions": {
+            "up": {
+              "received": 782,
+              "bytes": 35494,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 782,
+              "duplicates": 0,
+              "delay_mean_ms": 250.50383631721027,
+              "delay_p95_ms": 250.0
+            },
+            "down": {
+              "received": 1309,
+              "bytes": 851824,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1307,
+              "duplicates": 0,
+              "delay_mean_ms": 250.39556235662508,
+              "delay_p95_ms": 250.0
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "rtt500",
+            "rtt_ms": 500,
+            "jitter_ms": 0,
+            "loss": 0,
+            "duplicate": 0
+          },
+          "seed": 20261118,
+          "duration_s": 20.59299999999348,
+          "error": null,
+          "directions": {
+            "up": {
+              "received": 625,
+              "bytes": 28299,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 625,
+              "duplicates": 0,
+              "delay_mean_ms": 250.601600000076,
+              "delay_p95_ms": 250.0
+            },
+            "down": {
+              "received": 1317,
+              "bytes": 854111,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1303,
+              "duplicates": 0,
+              "delay_mean_ms": 250.25095932476196,
+              "delay_p95_ms": 250.0
+            }
+          }
+        }
+      ],
+      "duration_s": 20.59299999999348
+    },
+    {
+      "profile": {
+        "name": "rtt800",
+        "rtt_ms": 800,
+        "jitter_ms": 0,
+        "loss": 0,
+        "duplicate": 0
+      },
+      "repeat": 1,
+      "outcome": "completed",
+      "metrics": {
+        "join_ms": 2797.000000020489,
+        "move_server_ms": 446.0,
+        "move_visible_ms": 934.0,
+        "stop_server_ms": 430.0,
+        "shot_server_ms": 446.0,
+        "shot_all_clients_ms": 918.0,
+        "door_server_complete_ms": 1719.0000000118744,
+        "door_all_clients_complete_ms": 2282.0000000065193,
+        "server_hz": 60.12221565148827,
+        "client_rtt_median_ms": [
+          821.0,
+          822.0
+        ],
+        "world_gap_p95_ms": [
+          118.0,
+          700.0
+        ],
+        "world_gap_max_ms": [
+          132.0,
+          996.0
+        ],
+        "world_delivery_hz": [
+          10.15178395426769,
+          5.223733491030948
+        ],
+        "world_age_p95_ms": [
+          115,
+          751
+        ],
+        "throttle_min": [
+          32.0,
+          7.0
+        ],
+        "snapshot_bytes_mean": 3038.140752864157
+      },
+      "issues": [],
+      "stage": "complete",
+      "measurement": "process-frame telemetry; join and door are controller upper bounds",
+      "samples": "rtt800-r1.json",
+      "engine_errors": {},
+      "proxies": [
+        {
+          "profile": {
+            "name": "rtt800",
+            "rtt_ms": 800,
+            "jitter_ms": 0,
+            "loss": 0,
+            "duplicate": 0
+          },
+          "seed": 20261127,
+          "duration_s": 22.79700000002049,
+          "error": null,
+          "directions": {
+            "up": {
+              "received": 844,
+              "bytes": 38321,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 844,
+              "duplicates": 0,
+              "delay_mean_ms": 406.9312796209703,
+              "delay_p95_ms": 407.00000000651926
+            },
+            "down": {
+              "received": 1407,
+              "bytes": 915367,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1400,
+              "duplicates": 0,
+              "delay_mean_ms": 406.79071428921554,
+              "delay_p95_ms": 407.00000000651926
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "rtt800",
+            "rtt_ms": 800,
+            "jitter_ms": 0,
+            "loss": 0,
+            "duplicate": 0
+          },
+          "seed": 20261128,
+          "duration_s": 22.79700000002049,
+          "error": null,
+          "directions": {
+            "up": {
+              "received": 691,
+              "bytes": 31283,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 691,
+              "duplicates": 0,
+              "delay_mean_ms": 406.7901591898812,
+              "delay_p95_ms": 407.00000000651926
+            },
+            "down": {
+              "received": 1314,
+              "bytes": 853201,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1292,
+              "duplicates": 0,
+              "delay_mean_ms": 407.1284829757927,
+              "delay_p95_ms": 407.00000000651926
+            }
+          }
+        }
+      ],
+      "duration_s": 22.79700000002049
+    }
+  ],
+  "outages": [],
+  "engine_errors": {},
+  "functional_passed": true,
+  "weak_network_quality": "not certified; completed cases may still have severe input latency or snapshot gaps",
+  "sources": {
+    "game\\runtime\\coop\\avatar.gd": "a48b7a878154314bbf46d37bdab05d73b6cffd90d127be6698dc5944e77e5c6b",
+    "game\\runtime\\coop\\bank_game.gd": "cf7fa98363de83a9bccf49a7e5859d4ea00549bcaadfc979e66efc597335e0be",
+    "game\\runtime\\coop\\bank_peer.gd": "b74ea152a666f0a1c04ff1aaadb7f3ae181d9cbde3d7b1be3d0333fc268f7b21",
+    "game\\runtime\\coop\\bank_session.gd": "10918deeb3b949f73891fc4977d3f2668818741ac17482e99827e4c944619beb",
+    "game\\runtime\\coop\\bank_ui.gd": "0800744cd1b5684bbf20bcb9ebf1cb3d1ad01ca2ebe8512d561c7eee0b24ba39",
+    "game\\runtime\\coop\\discovery.gd": "a78b4f877388e13fd0ae1be89d193a3794b0dbc11c8ff88ff870b19febddc611",
+    "game\\runtime\\coop\\equipment.gd": "bfa8b237653bfd1d90d490f0d2b92586d6a83088394acb3de8dc883a2c2f94dd",
+    "game\\runtime\\coop\\input_capture.gd": "6cfb8ebf68eb587f1d9cd8b88dfb2b1f83ff01339b70f677a7dd10e38e3c1288",
+    "game\\runtime\\coop\\main.gd": "5b8a76f361105125979cfa60d990ed97a311fd137f3c57edc166adbd111f7d1a",
+    "game\\runtime\\coop\\player.gd": "a9be2c54213807a1f44505327ef3bb994b4d2eaed39aa85482efde32258cc5d4",
+    "game\\runtime\\coop\\session.gd": "99e54d31985f30596e3285d3766b4340cf2f104d4a0ec3d283bac3b86c7fc082",
+    "game\\runtime\\coop\\ui.gd": "b92bf17ec0a03686c7372091cf8f453eac8fd239e34cb6ecb9d630ad7efe5691",
+    "game\\runtime\\coop\\world.gd": "9e6792c2f0573ecabe771528baf96cc5bce2ef65423916a74d4e6ad63aae8b21",
+    "game\\runtime\\coop\\world_presentation.gd": "6801e303857c953d117c296dfa1a8534b86163bba0ed45b40a7de146304ed3c1"
+  }
+}

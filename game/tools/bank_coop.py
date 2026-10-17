@@ -4,6 +4,7 @@ import argparse
 import datetime
 import hashlib
 import json
+import re
 from pathlib import Path
 import shutil
 import subprocess
@@ -67,7 +68,9 @@ application/modify_resources=false
             for sub in ['coop','scripts','data','ui','scenes','frontend'] for p in (project/sub).rglob('*')
             if p.is_file() and p.suffix in ['.gd','.gdshader','.json','.tscn']}
     hashes['project.godot']=hashlib.sha256((project/'project.godot').read_bytes()).hexdigest()
-    manifest={'scope':'bank main menu, single player and co-op combat','platform':platform,'engine':'4.7.2','sources':hashes,'bake':bake,
+    protocol=int(re.search(r'^const PROTOCOL := (\d+)',(project/'coop/session.gd').read_text(encoding='utf8'),re.M).group(1))
+    network_build=re.search(r'^const BUILD="([^"]+)"',(project/'coop/discovery.gd').read_text(encoding='utf8'),re.M).group(1)
+    manifest={'scope':'bank main menu, single player and co-op combat','platform':platform,'engine':'4.7.2','wire_protocol':protocol,'network_build':network_build,'sources':hashes,'bake':bake,
               'local_reference_assets':True,'executable':filename,'sha256':hashlib.sha256((package/filename).read_bytes()).hexdigest()}
     (package/'build.json').write_text(json.dumps(manifest,indent=2),encoding='utf8')
     shutil.make_archive(str(folder/f'bank-coop-{platform}'),'zip',package)

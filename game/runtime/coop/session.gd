@@ -1,6 +1,6 @@
 extends Node3D
 ## Only this node owns the wire protocol. No gameplay callbacks are exposed remotely.
-const PROTOCOL := 1
+const PROTOCOL := 2
 const PlayerBody = preload("res://coop/player.gd")
 var players: Dictionary={}
 var pending: Dictionary={}
@@ -27,6 +27,11 @@ var connection_age := 0.0
 var rejected_inputs := 0
 var last_sent_axes := Vector2.INF
 var last_sent_run := false
+var ready_peers: Dictionary={}
+var prediction_enabled := false
+var prediction=preload("res://coop/movement_prediction.gd").new()
+var input_history: Array=[]
+var pending_reconcile: Dictionary={}
 signal status_changed
 
 func _ready() -> void:
@@ -35,14 +40,14 @@ func _ready() -> void:
 	map_hash=FileAccess.get_file_as_string("res://coop/bank_layout.json").replace("\r\n","\n").sha256_text()
 	multiplayer.allow_object_decoding=false
 	multiplayer.server_relay=false
-	multiplayer.auth_timeout=5.0
+	multiplayer.auth_timeout=12.0
 	multiplayer.auth_callback=_authenticate
 	multiplayer.peer_authenticating.connect(_authenticating)
 	multiplayer.peer_authentication_failed.connect(_authentication_failed)
 	multiplayer.peer_connected.connect(_connected)
 	multiplayer.peer_disconnected.connect(_disconnected)
-	multiplayer.connection_failed.connect(func():disconnect_game("无法连接服务器"))
-	multiplayer.server_disconnected.connect(func():disconnect_game("服务器已断开"))
+	multiplayer.connection_failed.connect(func():connection_lost("无法连接服务器"))
+	multiplayer.server_disconnected.connect(func():connection_lost("服务器已断开"))
 	multiplayer.connected_to_server.connect(func():local_id=multiplayer.get_unique_id();set_status("正在进入银行…"))
 	if visual:
 		camera=Camera3D.new();camera.position=Vector3(22,1.62,16);camera.near=.05;camera.fov=75;camera.current=true;add_child(camera)
@@ -68,7 +73,7 @@ func start_server(port: int, limit: int=4) -> Error:
 	disconnect_game("")
 	is_host=true;max_players=limit;peer=ENetMultiplayerPeer.new()
 	# A few transport slots permit a bounded, explicit room-full handshake.
-	var error:=peer.create_server(port,limit+4,3)
+	var error:=peer.create_server(port,limit+4,6)
 	if error!=OK:set_status("服务端端口不可用：%d" % port);peer=null;is_host=false;return error
 	multiplayer.multiplayer_peer=peer
 	set_status("服务端监听 UDP %d，人数上限 %d" % [port,limit])
@@ -83,7 +88,7 @@ func join_game(address: String, port: int, label: String) -> Error:
 	if panel:
 		panel.address.text=address.strip_edges();panel.port.value=port;panel.nickname.text=player_name
 	peer=ENetMultiplayerPeer.new()
-	var error:=peer.create_client(address.strip_edges(),port,3)
+	var error:=peer.create_client(address.strip_edges(),port,6)
 	if error!=OK:set_status("创建连接失败");peer=null;return error
 	multiplayer.multiplayer_peer=peer;connection_age=0
 	set_status("正在连接 %s:%d…" % [address,port])
@@ -95,13 +100,31 @@ func disconnect_game(message: String="已退出房间") -> void:
 	multiplayer.multiplayer_peer=OfflineMultiplayerPeer.new();peer=null
 	for body in players.values():body.free()
 	players.clear();pending.clear();local_id=0;is_host=false
+	ready_peers.clear();input_history.clear();prediction.reset();pending_reconcile.clear()
 	tick=0;latest_tick=-1;sequence=0;roster_revision=0;connection_age=0
 	Input.mouse_mode=Input.MOUSE_MODE_VISIBLE
 	if not message.is_empty():set_status(message)
 
+func connection_lost(message: String) -> void:
+	disconnect_game(message)
+
+func auth_request() -> Dictionary:return {}
+func auth_response(_id: int) -> Dictionary:return {}
+func accept_auth_response(_value: Dictionary) -> void:pass
+func occupied_slots() -> int:return players.size()+pending.size()
+func reserved_slots() -> Array:return []
+func network_epoch() -> int:return 0
+func client_can_move() -> bool:return input_enabled
+func connection_timeout() -> float:return 25.0
+func reserve_peer(id: int,value: Dictionary) -> String:
+	if occupied_slots()>=max_players:return "房间已满"
+	pending[id]=value.name.strip_edges()
+	return ""
+
 func _authenticating(id: int) -> void:
 	if not is_host and id==1:
-		multiplayer.send_auth(1,JSON.stringify({"protocol":PROTOCOL,"map":map_hash,"name":player_name}).to_utf8_buffer())
+		var request:={"protocol":PROTOCOL,"map":map_hash,"name":player_name};request.merge(auth_request())
+		multiplayer.send_auth(1,JSON.stringify(request).to_utf8_buffer())
 
 func _authenticate(id: int, bytes: PackedByteArray) -> void:
 	if bytes.size()>512:return
@@ -112,10 +135,12 @@ func _authenticate(id: int, bytes: PackedByteArray) -> void:
 		var reason:=""
 		if value.get("protocol")!=PROTOCOL or value.get("map")!=map_hash:reason="客户端版本或地图不一致"
 		elif not value.get("name") is String or value.name.length()>24 or value.name.strip_edges().is_empty():reason="玩家名称无效"
-		elif players.size()+pending.size()>=max_players:reason="房间已满"
-		multiplayer.send_auth(id,JSON.stringify({"accepted":reason.is_empty(),"reason":reason,"protocol":PROTOCOL,"map":map_hash,"limit":max_players}).to_utf8_buffer())
+		else:reason=reserve_peer(id,value)
+		var reply:={"accepted":reason.is_empty(),"reason":reason,"protocol":PROTOCOL,"map":map_hash,"limit":max_players}
+		if reason.is_empty():reply.merge(auth_response(id))
+		multiplayer.send_auth(id,JSON.stringify(reply).to_utf8_buffer())
 		if reason.is_empty():
-			pending[id]=value.name.strip_edges();multiplayer.complete_auth(id)
+			multiplayer.complete_auth(id)
 	else:
 		if id!=1:return
 		if value.get("accepted")!=true:
@@ -123,24 +148,25 @@ func _authenticate(id: int, bytes: PackedByteArray) -> void:
 		if value.get("protocol")!=PROTOCOL or value.get("map")!=map_hash:
 			disconnect_game.call_deferred("服务器版本或地图不一致");return
 		max_players=clampi(int(value.get("limit",4)),2,4)
+		accept_auth_response(value)
 		multiplayer.complete_auth(1)
 
 func _authentication_failed(id: int) -> void:
 	pending.erase(id)
-	if not is_host and peer:disconnect_game.call_deferred("握手失败或房间已满")
+	if not is_host and peer:connection_lost.call_deferred("握手超时，连接中断")
 
 func _connected(id: int) -> void:
 	if not is_host:return
 	if not pending.has(id):multiplayer.disconnect_peer(id);return
-	var occupied: Array=[]
+	var occupied: Array=reserved_slots()
 	for body in players.values():occupied.append(body.slot)
 	var slot:=0
 	while slot in occupied:slot+=1
 	var body=PlayerBody.new();add_child(body);body.configure(id,slot,pending[id],false)
 	body.position=Vector3(21.0+float(slot)*1.0,.05,16.0);body.rotation.y=PI
-	players[id]=body;pending.erase(id);roster_revision+=1
+	players[id]=body;pending.erase(id)
 	prepare_player(body)
-	_receive_roster.rpc(roster_revision,all_states())
+	broadcast_roster()
 	print("COOP_JOIN ",id," slot=",slot," players=",players.size())
 
 func prepare_player(_body: CharacterBody3D) -> void:
@@ -148,9 +174,10 @@ func prepare_player(_body: CharacterBody3D) -> void:
 
 func _disconnected(id: int) -> void:
 	pending.erase(id)
+	ready_peers.erase(id)
 	if not is_host:return
 	if players.has(id):players[id].free();players.erase(id)
-	roster_revision+=1;_receive_roster.rpc(roster_revision,all_states())
+	broadcast_roster()
 	print("COOP_LEAVE ",id," players=",players.size())
 
 func all_states() -> Array:
@@ -158,8 +185,25 @@ func all_states() -> Array:
 	for id in players:states.append(players[id].snapshot())
 	return states
 
-@rpc("authority","call_remote","reliable",2)
-func _receive_roster(revision: int, rows: Array) -> void:
+func broadcast_roster() -> void:
+	roster_revision+=1
+	_receive_roster.rpc(roster_revision,all_states(),network_epoch(),tick)
+
+func ready_ids() -> Array:
+	var ids: Array=[]
+	for id in players:
+		if ready_peers.get(id,-1)==roster_revision:ids.append(id)
+	return ids
+
+@rpc("any_peer","call_remote","reliable",0)
+func _roster_ready(revision: int) -> void:
+	var id:=multiplayer.get_remote_sender_id()
+	if is_host and players.has(id) and revision==roster_revision:ready_peers[id]=revision
+
+# Channel zero is ordered behind the engine's own authentication completion.
+# No other channels are sent until this roster is acknowledged by the client.
+@rpc("authority","call_remote","reliable",0)
+func _receive_roster(revision: int, rows: Array,_epoch: int=0,_server_tick: int=0) -> void:
 	if is_host or revision<roster_revision:return
 	roster_revision=revision
 	var present: Array=[]
@@ -173,6 +217,7 @@ func _receive_roster(revision: int, rows: Array) -> void:
 				if not testing:Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 	for id in players.keys():
 		if id not in present:players[id].free();players.erase(id)
+	_roster_ready.rpc_id(1,revision)
 	set_status("已连接 · %d/%d 人" % [players.size(),max_players])
 
 @rpc("any_peer","call_remote","unreliable_ordered",0)
@@ -193,12 +238,43 @@ func accept_input(id: int, serial: int, move: Vector2, look_yaw: float, look_pit
 	body.rotation.y=wrapf(look_yaw,-PI,PI);body.aim_pitch=clampf(look_pitch,-1.25,1.25)
 	body.running=sprint;body.last_input_tick=tick
 
+@rpc("any_peer","call_remote","unreliable",4)
+func _input_bundle(epoch: int,rows: Array) -> void:
+	var id:=multiplayer.get_remote_sender_id()
+	if not is_host or not players.has(id) or epoch!=network_epoch() or rows.size()>12:return
+	var body=players[id]
+	if body.input_budget<1:return
+	body.input_budget-=1
+	for row in rows:
+		if not row is Array or row.size()!=6:return
+		if not row[0] is int or not row[1] is Vector2 or not (row[2] is float) or not (row[3] is float) or not row[4] is bool or not row[5] is int:return
+		if not row[1].is_finite() or not is_finite(row[2]) or not is_finite(row[3]):rejected_inputs+=1;continue
+		var serial: int=row[0]
+		if serial<=body.last_sequence or serial>2147483647 or tick-row[5]>180 or row[5]>tick+6:continue
+		if body.commands.size()<120:body.commands[serial]=row
+
+@rpc("any_peer","call_remote","reliable",2)
+func _input_checkpoint(epoch: int,rows: Array) -> void:
+	_input_bundle(epoch,rows)
+
+func consume_input(body) -> void:
+	body.axes=Vector2.ZERO;body.running=false
+	if body.commands.is_empty():return
+	var serial: int=body.commands.keys().min()
+	var row: Array=body.commands[serial];body.commands.erase(serial)
+	if serial<=body.last_sequence or tick-row[5]>180:return
+	body.last_sequence=serial;body.axes=Vector2(row[1]).limit_length(1.0)
+	body.rotation.y=wrapf(row[2],-PI,PI);body.aim_pitch=clampf(row[3],-1.25,1.25)
+	body.running=row[4];body.last_input_tick=tick
+
 @rpc("authority","call_remote","unreliable_ordered",1)
-func _receive_snapshot(server_tick: int, revision: int, rows: Array) -> void:
-	if is_host or server_tick<=latest_tick or revision!=roster_revision:return
+func _receive_snapshot(server_tick: int, revision: int, rows: Array,epoch: int=0) -> void:
+	if is_host or server_tick<=latest_tick or revision!=roster_revision or epoch!=network_epoch():return
 	latest_tick=server_tick
 	for row in rows:
-		if players.has(int(row.id)):players[int(row.id)].apply_snapshot(row)
+		if players.has(int(row.id)):
+			if prediction_enabled and int(row.id)==local_id:pending_reconcile=row
+			else:players[int(row.id)].apply_snapshot(row)
 
 func _physics_process(dt: float) -> void:
 	if not testing:advance(dt)
@@ -208,22 +284,33 @@ func advance(dt: float) -> void:
 	if is_host:
 		tick+=1
 		for body in players.values():body.simulate(dt,tick)
-		if tick%3==0 and not players.is_empty():_receive_snapshot.rpc(tick,roster_revision,all_states())
+		if tick%3==0:
+			for id in ready_ids():_receive_snapshot.rpc_id(id,tick,roster_revision,all_states())
 	else:
 		connection_age+=dt
 		if not players.has(local_id):
-			if connection_age>10.0:disconnect_game("连接超时")
+			if connection_age>connection_timeout():connection_lost("连接超时")
 			return
 		var move:=Vector2(float(held.get(KEY_D,false))-float(held.get(KEY_A,false)),float(held.get(KEY_S,false))-float(held.get(KEY_W,false))) if input_enabled else Vector2.ZERO
 		sequence+=1
 		var sprint: bool=input_enabled and held.get(KEY_SHIFT,false)
-		# Reliable transitions + 5 Hz confirmations keep a held key alive when
-		# ENet adaptively throttles unreliable traffic. Serial guards reject stale retries.
-		if move!=last_sent_axes or sprint!=last_sent_run or sequence%12==1:
-			_confirm_input.rpc_id(1,sequence,move.limit_length(1.0),yaw,pitch,sprint)
+		if prediction_enabled:
+			if not pending_reconcile.is_empty():prediction.reconcile(players[local_id],pending_reconcile);pending_reconcile={}
+			if not client_can_move():move=Vector2.ZERO;sprint=false
+			input_history.append([sequence,move.limit_length(1.0),yaw,pitch,sprint,maxi(latest_tick,0)])
+			while input_history.size()>12:input_history.pop_front()
+			# 30 Hz plus edges; repeated recent commands recover loss without a
+			# reliable head-of-line queue. Server consumes at most one per tick.
+			if sequence%2==0 or move!=last_sent_axes or sprint!=last_sent_run:_input_bundle.rpc_id(1,network_epoch(),input_history)
+			# Bounded 10 Hz recovery on an independent channel; unreliable updates
+			# remain current even if reliable delivery stalls. Server age/credit
+			# limits prevent replaying a backlog as extra movement after an outage.
+			if sequence%6==1:_input_checkpoint.rpc_id(1,network_epoch(),input_history)
+			prediction.advance(players[local_id],sequence,move,yaw,sprint,dt,client_can_move())
+		elif move!=last_sent_axes or sprint!=last_sent_run or sequence%12==1:_confirm_input.rpc_id(1,sequence,move.limit_length(1.0),yaw,pitch,sprint)
 		else:_submit_input.rpc_id(1,sequence,move.limit_length(1.0),yaw,pitch,sprint)
 		last_sent_axes=move;last_sent_run=sprint
-		for body in players.values():body.present(dt,body.peer_id==local_id)
+		for body in players.values():body.present(dt,body.peer_id==local_id,prediction_enabled and body.peer_id==local_id)
 		if camera:
 			camera.position=players[local_id].position+Vector3.UP*1.62
 			camera.rotation=Vector3(pitch,yaw,0)

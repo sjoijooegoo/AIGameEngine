@@ -60,6 +60,7 @@ func refresh() -> void:
 	visible=game.active;menu.visible=not game.input_enabled
 	lobby_backdrop.visible=game.frontend_managed and not game.started
 	lobby_header.visible=lobby_backdrop.visible
+	lobby_header.text="BANK CRISIS   /   正在恢复连接" if game.recovery.retrying else "BANK CRISIS   /   正在进入服务器"
 	status_label.text="正在同步银行场景…" if game.players.has(game.local_id) and not game.started else game.status
 	var connected: bool=game.players.has(game.local_id)
 	endpoint_label.visible=connected and not game.started
@@ -71,10 +72,12 @@ func refresh() -> void:
 	connection_fields.visible=not connected and not game.frontend_managed
 	create_button.visible=connection_fields.visible;join_button.visible=connection_fields.visible
 	create_button.disabled=game.peer!=null or game.launching;join_button.disabled=create_button.disabled
-	resume_button.visible=connected and game.started;leave_button.visible=game.peer!=null or game.launching
-	back_button.visible=not connected
+	resume_button.visible=connected and game.started;leave_button.visible=game.peer!=null or game.launching or game.recovery.retrying
+	leave_button.text="取消重连" if game.recovery.retrying else "离开会话"
+	resume_button.disabled=game.network_stalled or game.recovery.retrying or game.leaving
+	back_button.visible=not connected and not game.recovery.retrying
 	back_button.text="取消并返回连接页面" if game.frontend_managed else "返回单人模式"
-	if game.frontend_managed:leave_button.visible=connected
+	if game.frontend_managed:leave_button.visible=connected or game.recovery.retrying
 	refresh_hud()
 
 func refresh_hud() -> void:
@@ -83,6 +86,8 @@ func refresh_hud() -> void:
 		var body=game.players[id];var state: Dictionary=game.team.get(id,{})
 		lines.append("%s%s  ·  %s" % [body.display_name,"（你）" if id==game.local_id else "", "阵亡" if state.get("dead",false) else "生命 %d" % int(state.get("hp",100))])
 	members.text="\n".join(lines);team_hud.text="合作 %d/%d  ·  击倒 %d\n" % [game.players.size(),game.max_players,game.world.kills]+"\n".join(lines)
+	team_hud.text+="\n"+game.network_summary()
+	if game.reserved_count>0:team_hud.text+=" · 暂留 %d 人" % game.reserved_count
 	team_hud.visible=game.input_enabled
 	if game.team_wiped:team_hud.text+="\n全队阵亡 · Esc 打开会话后重新开始"
 	elif game.world.player_dead:team_hud.text+="\n你已阵亡 · 等待队友，Esc 可离开会话"

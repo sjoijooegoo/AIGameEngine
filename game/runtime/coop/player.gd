@@ -14,6 +14,9 @@ var avatar: Node3D
 var target_position := Vector3.ZERO
 var target_yaw := 0.0
 var motion := "idle"
+var commands: Dictionary={}
+var movement_credit := 0.0
+var input_budget := 80.0
 
 func configure(id: int, player_slot: int, label: String, visuals: bool) -> void:
 	peer_id=id;slot=player_slot;display_name=label
@@ -44,9 +47,10 @@ func apply_snapshot(row: Dictionary, first: bool=false) -> void:
 	velocity=row.velocity;motion=row.motion;last_sequence=row.ack
 	if first:position=target_position;rotation.y=target_yaw
 
-func present(dt: float, local: bool) -> void:
-	position=position.lerp(target_position,1.0-exp(-18.0*dt))
-	rotation.y=lerp_angle(rotation.y,target_yaw,1.0-exp(-18.0*dt))
+func present(dt: float, local: bool,predicted: bool=false) -> void:
+	if not predicted:
+		position=position.lerp(target_position,1.0-exp(-18.0*dt))
+		rotation.y=lerp_angle(rotation.y,target_yaw,1.0-exp(-18.0*dt))
 	if avatar:
 		avatar.visible=not local
 		avatar.advance(dt,motion,Vector2(velocity.x,velocity.z).length(),aim_pitch)

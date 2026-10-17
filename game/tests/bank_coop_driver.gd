@@ -38,7 +38,7 @@ func _process(_dt: float) -> bool:
 	busy=true;execute(value);return false
 
 func execute(request: Dictionary) -> void:
-	var result: Dictionary={}
+	var result: Dictionary={"received_at_ms":Time.get_unix_time_from_system()*1000.0}
 	match request.command:
 		"step":
 			var frames:=int(request.get("frames",1))
@@ -91,7 +91,7 @@ func execute(request: Dictionary) -> void:
 					context.feedback.reset();context.weapon.reset("pistol")
 					context.body.position=game.original_player.position+Vector3(float(context.body.slot)*1.3,0,0)
 					context.body.rotation.y=game.original_player.rotation.y;context.body.aim_pitch=game.world.pitch;context.body.axes=Vector2.ZERO
-				game._round_reset.rpc(game.all_states())
+				game.broadcast_reset()
 		"state":pass
 		"quit":
 			game.disconnect_game();write_json("response.json",{"id":request.id,"result":{}});quit();return

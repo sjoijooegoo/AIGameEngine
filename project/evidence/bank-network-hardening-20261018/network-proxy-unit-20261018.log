@@ -1,0 +1,6 @@
+test_two_clients_delay_loss_and_duplicate (game.tests.test_network_fault_proxy.ProxyContract.test_two_clients_delay_loss_and_duplicate) ... ok
+
+----------------------------------------------------------------------
+Ran 1 test in 0.682s
+
+OK

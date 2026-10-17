@@ -1,0 +1,36 @@
+<!doctype html><meta charset="utf-8"><title>银行弱网加固 · 2026-10-18</title><style>body{background:#111918;color:#eee;font:17px/1.65 system-ui;max-width:1300px;margin:35px auto;padding:0 24px}a{color:#d9b76b}img{max-width:100%;height:auto}table{border-collapse:collapse;font-size:14px}td,th{padding:7px;border:1px solid #52615b}h2{margin-top:42px}</style>
+<h1>银行联机弱网加固</h1><p>16 组主要网络用例完成；30% 丢包另两轮一轮失败、一轮完成。极高延迟/强抖动仍可明显回拉。本页是技术证据，不代表用户最终手感或美术批准。</p>
+<p><a href="report.json">汇总报告</a> · <a href="metrics.csv">逐轮指标 CSV</a> · <a href="raw-evidence.zip">原始日志、过程测量和失败记录</a> · <a href="../../../docs/bank-network-hardening.md">实现与限制</a></p>
+<p>当前发布 Windows 与 Linux 均为协议 2 / bank-combat-v4；本地 WSL 实测四人、第五人拒绝、列表加入与主动离开后仍 0/4 在线。25 秒断网保留生命、弹药和位置。</p>
+<p>下面的移动响应为进程逻辑测量，不是鼠标到屏幕延迟；快照 Hz 不是 FPS。截图中的 FPS 受并行测试/截图影响，不作为性能结论。</p>
+<table><tr><th>条件/轮</th><th>结果</th><th>本地移动 ms</th><th>权威移动 ms</th><th>快照 Hz 下限</th><th>移动校正最大 m</th></tr>
+<tr><td>local/1</td><td>completed</td><td>28.0</td><td>71.0</td><td>9.996</td><td>0.0</td></tr>
+<tr><td>rtt100/1</td><td>completed</td><td>21.0</td><td>124.0</td><td>10.123</td><td>0.0</td></tr>
+<tr><td>rtt500_loss5/1</td><td>completed</td><td>16.0</td><td>337.0</td><td>9.853</td><td>0.0</td></tr>
+<tr><td>rtt800_loss10/1</td><td>completed</td><td>14.0</td><td>867.0</td><td>8.7</td><td>0.933</td></tr>
+<tr><td>rtt200_loss20/1</td><td>completed</td><td>20.0</td><td>179.0</td><td>7.137</td><td>0.0</td></tr>
+<tr><td>reorder_duplicate/1</td><td>completed</td><td>22.0</td><td>443.0</td><td>8.953</td><td>1.54</td></tr>
+<tr><td>rtt300/1</td><td>completed</td><td>18.0</td><td>236.0</td><td>10.046</td><td>0.0</td></tr>
+<tr><td>rtt800/1</td><td>completed</td><td>17.0</td><td>1026.0</td><td>10.047</td><td>1.167</td></tr>
+<tr><td>local/2</td><td>completed</td><td>29.0</td><td>85.0</td><td>10.097</td><td>0.0</td></tr>
+<tr><td>rtt100/2</td><td>completed</td><td>21.0</td><td>102.0</td><td>10.111</td><td>0.0</td></tr>
+<tr><td>rtt500_loss5/2</td><td>completed</td><td>15.0</td><td>508.0</td><td>9.473</td><td>0.467</td></tr>
+<tr><td>rtt800_loss10/2</td><td>completed</td><td>21.0</td><td>562.0</td><td>8.73</td><td>0.747</td></tr>
+<tr><td>rtt200_loss20/2</td><td>completed</td><td>23.0</td><td>240.0</td><td>7.522</td><td>0.0</td></tr>
+<tr><td>reorder_duplicate/2</td><td>completed</td><td>19.0</td><td>505.0</td><td>8.539</td><td>0.0</td></tr>
+<tr><td>rtt300/2</td><td>completed</td><td>18.0</td><td>413.0</td><td>10.098</td><td>0.0</td></tr>
+<tr><td>rtt800/2</td><td>completed</td><td>21.0</td><td>847.0</td><td>10.145</td><td>0.98</td></tr>
+<tr><td>rtt300_loss30/1</td><td>failed</td><td>None</td><td>None</td><td>None</td><td>None</td></tr>
+<tr><td>rtt300_loss30/2</td><td>completed</td><td>21.0</td><td>331.0</td><td>5.016</td><td>0.0</td></tr>
+</table><p>最高 1.54 米左右的校正可见，30% 丢包失败保留。服务器判定不受本地预测覆盖；缺少历史命中回溯、限带宽/真实 VPS/长期稳定性验证。</p>
+<h2>predicted_walk</h2><p>普通输入、固定模拟步长，等待截图时冻结世界。<a href="predicted_walk.webp">逐帧慢放 WebP</a></p><img src="predicted_walk.jpg">
+<h2>predicted_fire</h2><p>普通输入、固定模拟步长，等待截图时冻结世界。<a href="predicted_fire.webp">逐帧慢放 WebP</a></p><img src="predicted_fire.jpg">
+<h2>door_close</h2><p>普通输入、固定模拟步长，等待截图时冻结世界。<a href="door_close.webp">逐帧慢放 WebP</a></p><img src="door_close.jpg">
+<h2>connected-hud.png</h2><img src="connected-hud.png">
+<h2>network-interrupted.png</h2><img src="network-interrupted.png">
+<h2>cancel-reconnect.png</h2><img src="cancel-reconnect.png">
+<h2>canceled-back-to-browser.png</h2><img src="canceled-back-to-browser.png">
+<h2>wsl-localhost-0-of-4.png</h2><img src="wsl-localhost-0-of-4.png">
+<h2>wsl-localhost-4-of-4.png</h2><img src="wsl-localhost-4-of-4.png">
+<h2>wsl-browse-join.png</h2><img src="wsl-browse-join.png">
+<h2>wsl-stays-online-after-leave.png</h2><img src="wsl-stays-online-after-leave.png">

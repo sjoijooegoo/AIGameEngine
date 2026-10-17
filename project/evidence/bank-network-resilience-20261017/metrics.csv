@@ -1,0 +1,30 @@
+﻿run,profile,repeat,added_rtt_ms,jitter_each_way_ms,loss_each_way,duplicate,outcome,stage,movement_visible_ms,shot_visible_both_ms,world_hz,world_gap_p95_ms,world_gap_max_ms,server_hz,measurement
+initial-matrix,local,1,0,0,0,0,completed,not captured,113.0,108.0,"10.09,10.09","102,102","117,117",60.01597763131616,frame samples
+initial-matrix,rtt100,1,100,10,0,0,completed,not captured,236.0,239.0,"10.02,10.02","117,118","119,131",59.9146910028767,frame samples
+initial-matrix,rtt200,1,200,25,0,0,completed,not captured,323.0,355.0,"10.03,10.13","117,117","134,134",60.086267429029995,frame samples
+initial-matrix,rtt300_loss5,1,300,40,0.05,0,completed,not captured,404.0,435.0,"8.57,8.97","200,198","333,332",60.08968609865471,frame samples
+initial-matrix,rtt500_loss5,1,500,75,0.05,0,completed,not captured,683.0,734.0,"5.47,5.27","359,416","517,484",60.09352303253407,frame samples
+initial-matrix,rtt800_loss10,1,800,100,0.1,0,failed,not captured,,,,,,,controller upper bounds; incomplete case
+initial-matrix,rtt200_loss20,1,200,40,0.2,0,completed,not captured,355.0,413.0,"4.05,4.05","517,600","833,800",60.0612466660081,frame samples
+initial-matrix,rtt300_loss30,1,300,80,0.3,0,failed,not captured,,,,,,,controller upper bounds; incomplete case
+initial-matrix,reorder_duplicate,1,200,140,0.02,0.03,completed,not captured,234.0,899.0,"2.28,2.58","949,867","1100,1033",60.079443892750746,frame samples
+initial-matrix,local,2,0,0,0,0,completed,not captured,116.0,52.0,"10.10,10.10","116,102","118,118",60.081164010689896,frame samples
+initial-matrix,rtt100,2,100,10,0,0,completed,not captured,241.0,217.0,"10.08,10.08","121,117","135,120",60.07984031936128,frame samples
+initial-matrix,rtt200,2,200,25,0,0,completed,not captured,319.0,314.0,"9.73,10.13","138,133","201,154",60.086267429029995,frame samples
+initial-matrix,rtt300_loss5,2,300,40,0.05,0,completed,not captured,417.0,620.0,"8.73,8.23","218,216","235,333",60.10712160285657,frame samples
+initial-matrix,rtt500_loss5,2,500,75,0.05,0,completed,not captured,718.0,883.0,"4.70,5.20","384,318","845,733",60.06996501749125,frame samples
+initial-matrix,rtt800_loss10,2,800,100,0.1,0,failed,not captured,1016.0000000032596,1358.9999999967404,,,,,controller upper bounds; incomplete case
+initial-matrix,rtt200_loss20,2,200,40,0.2,0,failed,not captured,483.99999999674037,797.0000000204891,,,,,controller upper bounds; incomplete case
+initial-matrix,rtt300_loss30,2,300,80,0.3,0,failed,not captured,515.9999999741558,8766.00000000326,,,,,controller upper bounds; incomplete case
+initial-matrix,reorder_duplicate,2,200,140,0.02,0.03,completed,not captured,253.0,636.0,"2.69,2.19","698,717","733,835",60.08968609865471,frame samples
+ordered-setup-retest,local,1,0,0,0,0,completed,complete,103.0,71.0,"10.12,10.12","102,102","124,103",60.10712160285657,frame samples
+ordered-setup-retest,rtt800_loss10,1,800,100,0.1,0,completed,complete,1048.0,1074.0,"2.61,2.61","687,700","916,983",60.20469596628538,frame samples
+ordered-setup-retest,rtt200_loss20,1,200,40,0.2,0,completed,complete,369.0,571.0,"4.86,2.78","416,818","615,1433",60.11308401944252,frame samples
+ordered-setup-retest,rtt300_loss30,1,300,80,0.3,0,failed,movement_fixture,,,,,,,controller upper bounds; incomplete case
+ordered-setup-retest,reorder_duplicate,1,200,140,0.02,0.03,completed,complete,305.0,921.0,"2.18,2.18","874,967","983,1084",60.08541066640182,frame samples
+delay-only,rtt300,1,300,0,0,0,completed,complete,430.0,412.0,"10.06,10.16","117,117","118,133",60.160965794768615,frame samples
+delay-only,rtt500,1,500,0,0,0,completed,complete,606.0,563.0,"10.00,10.10","117,117","136,118",60.09399060093991,frame samples
+delay-only,rtt800,1,800,0,0,0,completed,complete,934.0,918.0,"10.15,5.22","118,700","132,996",60.12221565148827,frame samples
+proxy-lifecycle-retest,local,1,0,0,0,0,completed,complete,116.0,140.0,"10.02,10.12","101,117","104,120",60.01984126984127,frame samples
+proxy-lifecycle-retest,rtt800_loss10,1,800,100,0.1,0,completed,complete,912.0,1344.0,"2.58,2.88","734,683","1000,900",60.22659511031605,frame samples
+proxy-lifecycle-retest,rtt300_loss30,1,300,80,0.3,0,failed,join,,,,,,,controller upper bounds; incomplete case

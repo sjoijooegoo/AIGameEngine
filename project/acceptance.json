@@ -668,6 +668,80 @@
         "comparison.jpg",
         "light_walk.webp"
       ]
+    },
+    {
+      "id": "BANK-COOP-PRESENTATION",
+      "kind": "automated",
+      "description": "Current bank combat, logical input release, continuous door/motion frames and release startup.",
+      "checks": [
+        "bank_session_ui_join_two",
+        "bank_join_starts_immediately",
+        "bank_team_movement",
+        "bank_shared_damage_and_separate_ammo",
+        "bank_shared_kill_and_corpse",
+        "bank_server_reload",
+        "bank_local_menu_does_not_pause",
+        "bank_wall_blocks_shot",
+        "bank_shared_door_and_crossing",
+        "bank_teammate_rescues_grab",
+        "bank_server_infected_damage",
+        "bank_team_wipe_restart",
+        "bank_late_join_existing_world",
+        "bank_empty_room_starts_fresh",
+        "bank_server_loss_cleanup",
+        "preview_esc_releases_logical_buttons_and_trigger",
+        "preview_door_close_continuous_steps",
+        "preview_infected_chase_sequence",
+        "bank_release_starts_menu_without_world",
+        "bank_release_two_clients",
+        "bank_release_debug_bridge_disabled",
+        "bank_release_bake_loaded",
+        "bank_release_hanging_lights_enabled"
+      ]
+    },
+    {
+      "id": "BANK-COOP-PRESENTATION-REVIEW",
+      "kind": "review",
+      "description": "Native outside-window mouse behavior and final movement quality require user trial.",
+      "evidence": [
+        "gallery.html",
+        "report.json"
+      ]
+    },
+    {
+      "id": "BANK-NETWORK-AUDIT",
+      "kind": "review",
+      "description": "Weak-network audit evidence and methodological limits, not network quality approval.",
+      "evidence": [
+        "report.json",
+        "metrics.csv",
+        "manifest.json"
+      ]
+    },
+    {
+      "id": "BANK-NETWORK-HARDENING",
+      "kind": "automated",
+      "description": "Bounded packet assembly, client prediction, authoritative convergence and stateful automatic recovery in current bank.",
+      "checks": [
+        "bank_network_packet_bounds",
+        "bank_network_prediction",
+        "bank_network_recovery",
+        "bank_network_capacity_reservation",
+        "bank_network_normal_combat",
+        "bank_network_join_during_round_reset",
+        "bank_network_native_ui_cancel",
+        "bank_network_cooperative_damage",
+        "bank_network_shared_kill_without_duplicate_shots"
+      ]
+    },
+    {
+      "id": "BANK-NETWORK-HARDENING-REVIEW",
+      "kind": "review",
+      "description": "Current bank network HUD and movement/door sequence inspection; user play feel remains separate.",
+      "evidence": [
+        "gallery.html",
+        "report.json"
+      ]
     }
   ]
 }

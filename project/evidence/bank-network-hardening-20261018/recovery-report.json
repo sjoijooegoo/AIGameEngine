@@ -1,0 +1,103 @@
+{
+  "checks": [
+    {
+      "name": "bank_network_capacity_reservation",
+      "status": "pass",
+      "occupied": 2,
+      "connected": 1
+    },
+    {
+      "name": "bank_network_recovery",
+      "status": "pass",
+      "blackout_seconds": 25,
+      "recovery_after_link_ms": 2421.9999999913853,
+      "hp": 73.0,
+      "ammo": 14,
+      "stale_click_did_not_fire": true
+    },
+    {
+      "name": "bank_network_voluntary_leave_releases_slot",
+      "status": "pass"
+    },
+    {
+      "name": "bank_network_join_during_round_reset",
+      "status": "pass"
+    }
+  ],
+  "proxies": [
+    {
+      "profile": {
+        "name": "recovery",
+        "rtt_ms": 100,
+        "jitter_ms": 10,
+        "loss": 0,
+        "duplicate": 0
+      },
+      "seed": 18001,
+      "duration_s": 45.453000000008615,
+      "error": null,
+      "socket_events": [],
+      "directions": {
+        "up": {
+          "received": 939,
+          "bytes": 547782,
+          "random_dropped": 0,
+          "blackout_dropped": 586,
+          "overflow_dropped": 0,
+          "sent": 353,
+          "duplicates": 0,
+          "delay_mean_ms": 56.271954674554706,
+          "delay_p95_ms": 62.999999994644895
+        },
+        "down": {
+          "received": 1390,
+          "bytes": 981097,
+          "random_dropped": 0,
+          "blackout_dropped": 780,
+          "overflow_dropped": 0,
+          "sent": 610,
+          "duplicates": 0,
+          "delay_mean_ms": 57.50819672000228,
+          "delay_p95_ms": 62.999999994644895
+        }
+      }
+    },
+    {
+      "profile": {
+        "name": "join_reset_race",
+        "rtt_ms": 500,
+        "jitter_ms": 0,
+        "loss": 0,
+        "duplicate": 0
+      },
+      "seed": 18002,
+      "duration_s": 3.1559999999881256,
+      "error": null,
+      "socket_events": [],
+      "directions": {
+        "up": {
+          "received": 27,
+          "bytes": 5957,
+          "random_dropped": 0,
+          "blackout_dropped": 0,
+          "overflow_dropped": 0,
+          "sent": 27,
+          "duplicates": 0,
+          "delay_mean_ms": 250.59259259271332,
+          "delay_p95_ms": 250.0
+        },
+        "down": {
+          "received": 77,
+          "bytes": 40925,
+          "random_dropped": 0,
+          "blackout_dropped": 0,
+          "overflow_dropped": 0,
+          "sent": 77,
+          "duplicates": 0,
+          "delay_mean_ms": 250.0,
+          "delay_p95_ms": 250.0
+        }
+      }
+    }
+  ]
+}

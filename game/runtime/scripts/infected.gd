@@ -337,7 +337,7 @@ func receive_body_collision(direction: Vector3,speed_m_s: float,point: Vector3,s
 	# no damage, blood, kill credit, or recursive knockdown cascade.
 	receive_hit(0,direction,{"weapon":"body_collision","point":point,"speed":speed_m_s})
 
-func play_pose(dt: float) -> void:
+func play_pose(dt: float, continuous: bool=false) -> void:
 	# Setup/reset already invalidates last_sample_time before its forced sample.
 	if dt==0 and last_sample_time<0:reset_scheduling()
 	# Visual pose LOD only: AI, movement, contact timers and health still advance
@@ -345,7 +345,7 @@ func play_pose(dt: float) -> void:
 	pending_pose_dt+=dt
 	var distance_squared: float=global_position.distance_squared_to(game.player.global_position)
 	var stride: int=1
-	if dt>0 and last_sample_time>=0 and reaction_time>=reaction_duration and mode in ["idle","chase","return"] and not priority_target():
+	if not continuous and dt>0 and last_sample_time>=0 and reaction_time>=reaction_duration and mode in ["idle","chase","return"] and not priority_target():
 		if distance_squared>16:stride=4 if mode=="idle" else 2
 		if distance_squared>144:stride=6 if mode=="idle" else 4
 	if stride>1 and game.tick_count%stride!=get_index()%stride:

@@ -43,7 +43,7 @@ func save(world: Node3D) -> void:
 	strike_kind=world.strike_kind;strike_applied=world.strike_applied
 
 func state() -> Dictionary:
-	return {"hp":hp,"dead":dead,"weapon":weapon.selected,"ammo":weapon.ammo.duplicate(true),
+	return {"hp":hp,"dead":dead,"action_ack":last_action,"weapon":weapon.selected,"ammo":weapon.ammo.duplicate(true),
 		"phase":weapon.phase,"time":weapon.phase_time,"duration":weapon.duration,"shots":weapon.shots,
 		"hit":weapon.hit_time,"head":weapon.last_headshot,"kill":weapon.last_kill,
 		"last_shot":weapon.last_shot,"grabbed":feedback.is_grabbed(),"struggles":feedback.struggles,

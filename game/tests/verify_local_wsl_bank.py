@@ -41,7 +41,11 @@ def main():
         browser.call('act',keys=['Escape']);browser.call('click',control='leave_button')
         until(lambda:browser.state().get('scene')=='MainMenu');population(3)
         mark('wsl_native_browse_join_and_leave')
-        for p in clients:p.close();peers.remove(p)
+        remaining=len(clients)
+        for p in clients:
+            if p.state().get('input_enabled'):p.call('menu')
+            p.call('click',control='leave_button');remaining-=1;population(remaining)
+            p.close();peers.remove(p)
         population(0);until(lambda:browser.state()['discovery']['localhost:24567']['players']==0,15)
         after=wsl(cfg['distro'],'systemctl','show','bank-coop-local.service','-p','MainPID','-p','ActiveEnterTimestamp','-p','NRestarts').stdout
         assert before==after,(before,after)

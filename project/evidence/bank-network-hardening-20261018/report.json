@@ -1,0 +1,607 @@
+{
+  "scope": "Current bank weak-network hardening; short local fault-injection runs, not production WAN certification.",
+  "checks": [
+    {
+      "name": "bank_network_packet_bounds",
+      "status": "pass",
+      "evidence": "network-components-20261018.log"
+    },
+    {
+      "name": "bank_network_proxy_contract",
+      "status": "pass",
+      "evidence": "network-proxy-unit-20261018.log"
+    },
+    {
+      "name": "bank_network_prediction",
+      "status": "pass",
+      "evidence": "network-report.json",
+      "completed_cases": 16,
+      "scope": "First local response and final authoritative convergence; maximum intermediate correction is separately reported, not certified smooth."
+    },
+    {
+      "name": "bank_network_normal_combat",
+      "status": "pass",
+      "evidence": "normal-combat-report.json",
+      "checks": 15
+    },
+    {
+      "name": "bank_session_ui_join_two",
+      "status": "pass",
+      "population": 84,
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_join_starts_immediately",
+      "status": "pass",
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_team_movement",
+      "status": "pass",
+      "distance": 1.3999549013850892,
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_shared_damage_and_separate_ammo",
+      "status": "pass",
+      "hp": [
+        65.0,
+        51.0,
+        37.0
+      ],
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_shared_kill_and_corpse",
+      "status": "pass",
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_server_reload",
+      "status": "pass",
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_local_menu_does_not_pause",
+      "status": "pass",
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_wall_blocks_shot",
+      "status": "pass",
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_shared_door_and_crossing",
+      "status": "pass",
+      "before": [
+        24.1499996185303,
+        -0.019309900701046,
+        6.75
+      ],
+      "after": [
+        26.5300216674805,
+        -0.0190932974219322,
+        6.75
+      ],
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_teammate_rescues_grab",
+      "status": "pass",
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_server_infected_damage",
+      "status": "pass",
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_team_wipe_restart",
+      "status": "pass",
+      "fixture": "both players start with 5 HP; normal enemy attacks",
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_late_join_existing_world",
+      "status": "pass",
+      "enemy_hp": 65.0,
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_empty_room_starts_fresh",
+      "status": "pass",
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_server_loss_cleanup",
+      "status": "pass",
+      "evidence": "normal-combat-report.json"
+    },
+    {
+      "name": "bank_network_capacity_reservation",
+      "status": "pass",
+      "occupied": 2,
+      "connected": 1,
+      "evidence": "recovery-report.json"
+    },
+    {
+      "name": "bank_network_recovery",
+      "status": "pass",
+      "blackout_seconds": 25,
+      "recovery_after_link_ms": 2421.9999999913853,
+      "hp": 73.0,
+      "ammo": 14,
+      "stale_click_did_not_fire": true,
+      "evidence": "recovery-report.json"
+    },
+    {
+      "name": "bank_network_voluntary_leave_releases_slot",
+      "status": "pass",
+      "evidence": "recovery-report.json"
+    },
+    {
+      "name": "bank_network_join_during_round_reset",
+      "status": "pass",
+      "evidence": "recovery-report.json"
+    },
+    {
+      "name": "bank_network_cooperative_damage",
+      "status": "pass",
+      "hp": [
+        65.0,
+        51.0,
+        37.0
+      ],
+      "ammo": [
+        14,
+        14
+      ],
+      "evidence": "weak-combat-report.json"
+    },
+    {
+      "name": "bank_network_shared_kill_without_duplicate_shots",
+      "status": "pass",
+      "evidence": "weak-combat-report.json"
+    },
+    {
+      "name": "bank_network_reload_and_shared_door",
+      "status": "pass",
+      "evidence": "weak-combat-report.json"
+    },
+    {
+      "name": "bank_network_live_84_actor_world",
+      "status": "pass",
+      "snapshot_bytes": 3548,
+      "evidence": "weak-combat-report.json"
+    },
+    {
+      "name": "bank_network_native_ui_cancel",
+      "status": "pass",
+      "normal_input": true,
+      "evidence": "ui-report.json"
+    },
+    {
+      "name": "bank_network_rendered_sequences",
+      "status": "pass",
+      "normal_input": true,
+      "frozen_between_steps": true,
+      "evidence": "visual-report.json"
+    },
+    {
+      "name": "bank_release_starts_menu_without_world",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_two_clients",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_debug_bridge_disabled",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_bake_loaded",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_hanging_lights_enabled",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "wsl_localhost_discovery_empty",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    },
+    {
+      "name": "wsl_first_player_enters_and_moves",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    },
+    {
+      "name": "wsl_localhost_four_independent_peers",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    },
+    {
+      "name": "wsl_rejects_fifth_peer",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    },
+    {
+      "name": "wsl_native_browse_join_and_leave",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    },
+    {
+      "name": "wsl_persistent_service_survives_all_clients_leaving",
+      "status": "pass",
+      "evidence": "wsl-report.json"
+    }
+  ],
+  "network_cases": [
+    {
+      "profile": "local",
+      "repeat": 1,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 500.0,
+      "local_move_ms": 28.0,
+      "server_move_ms": 71.0,
+      "fire_feedback_ms": 2.0,
+      "server_shot_ms": 28.0,
+      "both_clients_shot_ms": 111.0,
+      "world_hz_min": 9.996001599360257,
+      "world_gap_max_ms": 117.0,
+      "max_movement_prediction_error_m": 0.0,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt100",
+      "repeat": 1,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 875.0,
+      "local_move_ms": 21.0,
+      "server_move_ms": 124.0,
+      "fire_feedback_ms": 3.0,
+      "server_shot_ms": 76.0,
+      "both_clients_shot_ms": 241.0,
+      "world_hz_min": 10.12328355216999,
+      "world_gap_max_ms": 140.0,
+      "max_movement_prediction_error_m": 0.0,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt500_loss5",
+      "repeat": 1,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 3157.0000000065193,
+      "local_move_ms": 16.0,
+      "server_move_ms": 337.0,
+      "fire_feedback_ms": 1.0,
+      "server_shot_ms": 288.0,
+      "both_clients_shot_ms": 701.0,
+      "world_hz_min": 9.853187506158243,
+      "world_gap_max_ms": 217.0,
+      "max_movement_prediction_error_m": 0.0,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt800_loss10",
+      "repeat": 1,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 3687.000000005355,
+      "local_move_ms": 14.0,
+      "server_move_ms": 867.0,
+      "fire_feedback_ms": 1.0,
+      "server_shot_ms": 355.0,
+      "both_clients_shot_ms": 869.0,
+      "world_hz_min": 8.699950568462679,
+      "world_gap_max_ms": 318.0,
+      "max_movement_prediction_error_m": 0.933336734771729,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt200_loss20",
+      "repeat": 1,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 3250.0,
+      "local_move_ms": 20.0,
+      "server_move_ms": 179.0,
+      "fire_feedback_ms": 2.0,
+      "server_shot_ms": 103.0,
+      "both_clients_shot_ms": 381.0,
+      "world_hz_min": 7.137192704203014,
+      "world_gap_max_ms": 566.0,
+      "max_movement_prediction_error_m": 0.0,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "reorder_duplicate",
+      "repeat": 1,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 1608.9999999967404,
+      "local_move_ms": 22.0,
+      "server_move_ms": 443.0,
+      "fire_feedback_ms": 3.0,
+      "server_shot_ms": 308.0,
+      "both_clients_shot_ms": 536.0,
+      "world_hz_min": 8.953442101074414,
+      "world_gap_max_ms": 284.0,
+      "max_movement_prediction_error_m": 1.54000520706177,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt300",
+      "repeat": 1,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 1703.0000000086147,
+      "local_move_ms": 18.0,
+      "server_move_ms": 236.0,
+      "fire_feedback_ms": 2.0,
+      "server_shot_ms": 203.0,
+      "both_clients_shot_ms": 422.0,
+      "world_hz_min": 10.04575293415556,
+      "world_gap_max_ms": 138.0,
+      "max_movement_prediction_error_m": 0.0,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt800",
+      "repeat": 1,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 3703.0000000086147,
+      "local_move_ms": 17.0,
+      "server_move_ms": 1026.0,
+      "fire_feedback_ms": 2.0,
+      "server_shot_ms": 415.0,
+      "both_clients_shot_ms": 842.0,
+      "world_hz_min": 10.04675221326967,
+      "world_gap_max_ms": 133.0,
+      "max_movement_prediction_error_m": 1.16666889190674,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "local",
+      "repeat": 2,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 390.00000001396984,
+      "local_move_ms": 29.0,
+      "server_move_ms": 85.0,
+      "fire_feedback_ms": 2.0,
+      "server_shot_ms": 31.0,
+      "both_clients_shot_ms": 59.0,
+      "world_hz_min": 10.096970908727382,
+      "world_gap_max_ms": 120.0,
+      "max_movement_prediction_error_m": 0.0,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt100",
+      "repeat": 2,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 782.0000000065193,
+      "local_move_ms": 21.0,
+      "server_move_ms": 102.0,
+      "fire_feedback_ms": 3.0,
+      "server_shot_ms": 67.0,
+      "both_clients_shot_ms": 182.0,
+      "world_hz_min": 10.111022997620937,
+      "world_gap_max_ms": 150.0,
+      "max_movement_prediction_error_m": 0.0,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt500_loss5",
+      "repeat": 2,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 2641.0000000032596,
+      "local_move_ms": 15.0,
+      "server_move_ms": 508.0,
+      "fire_feedback_ms": 3.0,
+      "server_shot_ms": 215.0,
+      "both_clients_shot_ms": 572.0,
+      "world_hz_min": 9.473060982830077,
+      "world_gap_max_ms": 266.0,
+      "max_movement_prediction_error_m": 0.466667175292969,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt800_loss10",
+      "repeat": 2,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 6858.99999999674,
+      "local_move_ms": 21.0,
+      "server_move_ms": 562.0,
+      "fire_feedback_ms": 2.0,
+      "server_shot_ms": 779.0,
+      "both_clients_shot_ms": 1313.0,
+      "world_hz_min": 8.73015873015873,
+      "world_gap_max_ms": 250.0,
+      "max_movement_prediction_error_m": 0.746668338775635,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt200_loss20",
+      "repeat": 2,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 2797.000000020489,
+      "local_move_ms": 23.0,
+      "server_move_ms": 240.0,
+      "fire_feedback_ms": 1.0,
+      "server_shot_ms": 94.0,
+      "both_clients_shot_ms": 381.0,
+      "world_hz_min": 7.521813258449503,
+      "world_gap_max_ms": 498.0,
+      "max_movement_prediction_error_m": 0.0,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "reorder_duplicate",
+      "repeat": 2,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 1593.9999999827705,
+      "local_move_ms": 19.0,
+      "server_move_ms": 505.0,
+      "fire_feedback_ms": 2.0,
+      "server_shot_ms": 56.0,
+      "both_clients_shot_ms": 479.0,
+      "world_hz_min": 8.538522637013504,
+      "world_gap_max_ms": 267.0,
+      "max_movement_prediction_error_m": 0.0,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt300",
+      "repeat": 2,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 1608.9999999967404,
+      "local_move_ms": 18.0,
+      "server_move_ms": 413.0,
+      "fire_feedback_ms": 2.0,
+      "server_shot_ms": 153.0,
+      "both_clients_shot_ms": 359.0,
+      "world_hz_min": 10.097980403919216,
+      "world_gap_max_ms": 140.0,
+      "max_movement_prediction_error_m": 0.0,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt800",
+      "repeat": 2,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 3562.999999994645,
+      "local_move_ms": 21.0,
+      "server_move_ms": 847.0,
+      "fire_feedback_ms": 3.0,
+      "server_shot_ms": 482.0,
+      "both_clients_shot_ms": 963.0,
+      "world_hz_min": 10.145215834493733,
+      "world_gap_max_ms": 131.0,
+      "max_movement_prediction_error_m": 0.980003356933594,
+      "position_error_after_stop_m": 0.0
+    },
+    {
+      "profile": "rtt300_loss30",
+      "repeat": 1,
+      "outcome": "failed",
+      "stage": "movement_fixture",
+      "join_ms": 9750.0,
+      "local_move_ms": null,
+      "server_move_ms": null,
+      "fire_feedback_ms": null,
+      "server_shot_ms": null,
+      "both_clients_shot_ms": null,
+      "world_hz_min": null,
+      "world_gap_max_ms": null,
+      "max_movement_prediction_error_m": null,
+      "position_error_after_stop_m": null
+    },
+    {
+      "profile": "rtt300_loss30",
+      "repeat": 2,
+      "outcome": "completed",
+      "stage": "complete",
+      "join_ms": 12046.999999991385,
+      "local_move_ms": 21.0,
+      "server_move_ms": 331.0,
+      "fire_feedback_ms": 2.0,
+      "server_shot_ms": 100.0,
+      "both_clients_shot_ms": 356.0,
+      "world_hz_min": 5.0155481994181965,
+      "world_gap_max_ms": 735.0,
+      "max_movement_prediction_error_m": 0.0,
+      "position_error_after_stop_m": 0.0
+    }
+  ],
+  "outages": [
+    {
+      "blackout_seconds": 3,
+      "server_stopped_s": 0.139999999984866,
+      "client_disconnected_s": null,
+      "session_survived": true,
+      "automatic_recovery_after_link_ms": 2233.9999999967404,
+      "recovery": {
+        "occupied": 2,
+        "reserved": 0,
+        "resumed": 0,
+        "retrying": false
+      }
+    },
+    {
+      "blackout_seconds": 12,
+      "server_stopped_s": 0.15600000001722947,
+      "client_disconnected_s": 8.187000000005355,
+      "session_survived": true,
+      "automatic_recovery_after_link_ms": 2156.0000000172295,
+      "recovery": {
+        "occupied": 2,
+        "reserved": 0,
+        "resumed": 1,
+        "retrying": false
+      }
+    }
+  ],
+  "builds": {
+    "windows": {
+      "package": "build/bank/combat-coop/20261018-045547/windows/package",
+      "sha256": "9e8968b12fd98039338de019b6fab4d30d8d7c987225a87f982b6340c5c1ad04",
+      "build_manifest": "windows-build.json"
+    },
+    "linux": {
+      "package": "build/bank/combat-coop/20261018-045637/linux/package",
+      "sha256": "ba2c5833981126e88965f0cc5c926f19ca038580e7a5f0ba9c56658564032da0",
+      "build_manifest": "linux-build.json"
+    }
+  },
+  "sessions": {
+    "network": "bank-network-20261018-041516",
+    "stress30": "bank-network-20261018-044826",
+    "recovery": "bank-network-recovery-20261018-044328",
+    "weak-combat": "bank-network-combat-20261018-044031",
+    "normal-combat": "bank-combat-coop-20261018-043513",
+    "ui": "bank-network-ui-20261018-044603",
+    "visual": "bank-network-visual-20261018-042724",
+    "release": "bank-coop-release-20261018-045806",
+    "wsl": "bank-local-wsl-20261018-045910"
+  },
+  "source_delta_after_matrix": {
+    "game\\runtime\\coop\\bank_ui.gd": {
+      "matrix": "87b43d45e3728567109b2fd54d1ea7a18e9262e88ae6343bc768b4d355cc10a2",
+      "release": "d30ed7b1303a180d36dbc88be2fab5fc979ce0571efa0786c1b63b10db7cd510"
+    }
+  },
+  "source_delta_explanation": "Only recovery menu header and redundant back button visibility changed after the 16-case matrix. Final UI/recovery/weak-combat/release/WSL checks use the release sources.",
+  "original_bank_source_sha256": "5f61d35394e5c91fe18d703a5ced17f5599301a24868079024601d6b363c9793",
+  "limits": [
+    "30% packet loss: one of two cases failed at movement_fixture synchronization; completed case only about 5 Hz world delivery.",
+    "800 ms and strong jitter can lose historical movement beyond the 200 ms redundant input window and cause visible authoritative correction; see maximum prediction error column.",
+    "No historical hit rewind. Instant local weapon presentation is not immediate authoritative hit confirmation.",
+    "3/12 second recovery durations include controller waiting and are upper bounds; local movement is process telemetry, not display latency.",
+    "No real VPS, bandwidth limit, asymmetric link or hours-long four-player soak. 84-active-actor observation is a short separate check.",
+    "Rendered shutdown retains historical Texture RID/ObjectDB warnings; no long-run leak conclusion.",
+    "Native Windows outside-window dragging and final play feel remain user acceptance items."
+  ],
+  "stress_quality_status": "not_certified",
+  "user_art_acceptance": "pending"
+}

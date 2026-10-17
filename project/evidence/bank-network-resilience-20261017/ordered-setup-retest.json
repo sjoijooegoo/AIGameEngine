@@ -1,0 +1,719 @@
+{
+  "scope": "Current bank, two actual headless clients and one real-time dedicated process; seeded UDP impairment in both directions. Not real VPS/GPU/FPS/long-soak validation.",
+  "delay_definition": "Configured rtt_ms is added RTT; each direction gets half, with independent uniform +/- jitter_ms. Loss is per UDP datagram per direction; retransmissions also traverse proxy.",
+  "harness_revision": "ordered-fixture-barrier-v2",
+  "cases": [
+    {
+      "profile": {
+        "name": "local",
+        "rtt_ms": 0,
+        "jitter_ms": 0,
+        "loss": 0,
+        "duplicate": 0
+      },
+      "repeat": 1,
+      "outcome": "completed",
+      "metrics": {
+        "join_ms": 422.0000000204891,
+        "move_server_ms": 44.0,
+        "move_visible_ms": 103.0,
+        "stop_server_ms": 28.0,
+        "shot_server_ms": 24.0,
+        "shot_all_clients_ms": 71.0,
+        "door_server_complete_ms": 1312.999999994645,
+        "door_all_clients_complete_ms": 1453.0000000086147,
+        "server_hz": 60.10712160285657,
+        "client_rtt_median_ms": [
+          23.0,
+          23.0
+        ],
+        "world_gap_p95_ms": [
+          102.0,
+          102.0
+        ],
+        "world_gap_max_ms": [
+          124.0,
+          103.0
+        ],
+        "world_delivery_hz": [
+          10.11704026978774,
+          10.11704026978774
+        ],
+        "world_age_p95_ms": [
+          100,
+          100
+        ],
+        "throttle_min": [
+          26.0,
+          28.0
+        ],
+        "snapshot_bytes_mean": 3036.490939044481
+      },
+      "issues": [],
+      "stage": "complete",
+      "measurement": "process-frame telemetry; join and door are controller upper bounds",
+      "samples": "local-r1.json",
+      "engine_errors": {},
+      "proxies": [
+        {
+          "profile": {
+            "name": "local",
+            "rtt_ms": 0,
+            "jitter_ms": 0,
+            "loss": 0,
+            "duplicate": 0
+          },
+          "seed": 20261017,
+          "duration_s": 17.344000000011874,
+          "error": null,
+          "directions": {
+            "up": {
+              "received": 989,
+              "bytes": 44187,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 989,
+              "duplicates": 0,
+              "delay_mean_ms": 0.031344792678485146,
+              "delay_p95_ms": 0.0
+            },
+            "down": {
+              "received": 1195,
+              "bytes": 758757,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1195,
+              "duplicates": 0,
+              "delay_mean_ms": 0.06276150633460184,
+              "delay_p95_ms": 0.0
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "local",
+            "rtt_ms": 0,
+            "jitter_ms": 0,
+            "loss": 0,
+            "duplicate": 0
+          },
+          "seed": 20261018,
+          "duration_s": 17.344000000011874,
+          "error": null,
+          "directions": {
+            "up": {
+              "received": 1068,
+              "bytes": 47826,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1068,
+              "duplicates": 0,
+              "delay_mean_ms": 0.0589887640126789,
+              "delay_p95_ms": 0.0
+            },
+            "down": {
+              "received": 1187,
+              "bytes": 755801,
+              "random_dropped": 0,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1187,
+              "duplicates": 0,
+              "delay_mean_ms": 0.038753159251220984,
+              "delay_p95_ms": 0.0
+            }
+          }
+        }
+      ],
+      "duration_s": 17.344000000011874
+    },
+    {
+      "profile": {
+        "name": "rtt800_loss10",
+        "rtt_ms": 800,
+        "jitter_ms": 100,
+        "loss": 0.1,
+        "duplicate": 0
+      },
+      "repeat": 1,
+      "outcome": "completed",
+      "metrics": {
+        "join_ms": 4078.0000000086147,
+        "move_server_ms": 575.0,
+        "move_visible_ms": 1048.0,
+        "stop_server_ms": 8.0,
+        "shot_server_ms": 459.0,
+        "shot_all_clients_ms": 1074.0,
+        "door_server_complete_ms": 2546.9999999913853,
+        "door_all_clients_complete_ms": 3437.000000005355,
+        "server_hz": 60.20469596628538,
+        "client_rtt_median_ms": [
+          819.0,
+          808.0
+        ],
+        "world_gap_p95_ms": [
+          687.0,
+          700.0
+        ],
+        "world_gap_max_ms": [
+          916.0,
+          983.0
+        ],
+        "world_delivery_hz": [
+          2.608870158539033,
+          2.608870158539033
+        ],
+        "world_age_p95_ms": [
+          683,
+          734
+        ],
+        "throttle_min": [
+          30.0,
+          30.0
+        ],
+        "snapshot_bytes_mean": 3040.74
+      },
+      "issues": [],
+      "stage": "complete",
+      "measurement": "process-frame telemetry; join and door are controller upper bounds",
+      "samples": "rtt800_loss10-r1.json",
+      "engine_errors": {},
+      "proxies": [
+        {
+          "profile": {
+            "name": "rtt800_loss10",
+            "rtt_ms": 800,
+            "jitter_ms": 100,
+            "loss": 0.1,
+            "duplicate": 0
+          },
+          "seed": 20261027,
+          "duration_s": 38.26600000000326,
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+          "directions": {
+            "up": {
+              "received": 1173,
+              "bytes": 51408,
+              "random_dropped": 115,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1035,
+              "duplicates": 0,
+              "delay_mean_ms": 407.8714975840041,
+              "delay_p95_ms": 500.0
+            },
+            "down": {
+              "received": 1783,
+              "bytes": 1170206,
+              "random_dropped": 186,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1571,
+              "duplicates": 0,
+              "delay_mean_ms": 406.23360916635806,
+              "delay_p95_ms": 500.0
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "rtt800_loss10",
+            "rtt_ms": 800,
+            "jitter_ms": 100,
+            "loss": 0.1,
+            "duplicate": 0
+          },
+          "seed": 20261028,
+          "duration_s": 38.26600000000326,
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+          "directions": {
+            "up": {
+              "received": 1256,
+              "bytes": 54949,
+              "random_dropped": 116,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1117,
+              "duplicates": 0,
+              "delay_mean_ms": 403.91047448528496,
+              "delay_p95_ms": 500.0
+            },
+            "down": {
+              "received": 1776,
+              "bytes": 1171317,
+              "random_dropped": 178,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1571,
+              "duplicates": 0,
+              "delay_mean_ms": 406.13430935736386,
+              "delay_p95_ms": 500.0
+            }
+          }
+        }
+      ],
+      "duration_s": 38.26600000000326
+    },
+    {
+      "profile": {
+        "name": "rtt200_loss20",
+        "rtt_ms": 200,
+        "jitter_ms": 40,
+        "loss": 0.2,
+        "duplicate": 0
+      },
+      "repeat": 1,
+      "outcome": "completed",
+      "metrics": {
+        "join_ms": 5141.00000000326,
+        "move_server_ms": 165.0,
+        "move_visible_ms": 369.0,
+        "stop_server_ms": 141.0,
+        "shot_server_ms": 247.0,
+        "shot_all_clients_ms": 571.0,
+        "door_server_complete_ms": 1437.999999994645,
+        "door_all_clients_complete_ms": 1796.9999999913853,
+        "server_hz": 60.11308401944252,
+        "client_rtt_median_ms": [
+          228.0,
+          229.0
+        ],
+        "world_gap_p95_ms": [
+          416.0,
+          818.0
+        ],
+        "world_gap_max_ms": [
+          615.0,
+          1433.0
+        ],
+        "world_delivery_hz": [
+          4.860628905862514,
+          2.7775022319214364
+        ],
+        "world_age_p95_ms": [
+          400,
+          966
+        ],
+        "throttle_min": [
+          32.0,
+          32.0
+        ],
+        "snapshot_bytes_mean": 3038.5831960461287
+      },
+      "issues": [],
+      "stage": "complete",
+      "measurement": "process-frame telemetry; join and door are controller upper bounds",
+      "samples": "rtt200_loss20-r1.json",
+      "engine_errors": {},
+      "proxies": [
+        {
+          "profile": {
+            "name": "rtt200_loss20",
+            "rtt_ms": 200,
+            "jitter_ms": 40,
+            "loss": 0.2,
+            "duplicate": 0
+          },
+          "seed": 20261037,
+          "duration_s": 35.60899999999674,
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+          "directions": {
+            "up": {
+              "received": 1396,
+              "bytes": 62188,
+              "random_dropped": 262,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1128,
+              "duplicates": 0,
+              "delay_mean_ms": 107.64450354657238,
+              "delay_p95_ms": 141.00000000325963
+            },
+            "down": {
+              "received": 1754,
+              "bytes": 1155466,
+              "random_dropped": 357,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1388,
+              "duplicates": 0,
+              "delay_mean_ms": 108.70028818331902,
+              "delay_p95_ms": 141.00000000325963
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "rtt200_loss20",
+            "rtt_ms": 200,
+            "jitter_ms": 40,
+            "loss": 0.2,
+            "duplicate": 0
+          },
+          "seed": 20261038,
+          "duration_s": 35.60899999999674,
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+          "directions": {
+            "up": {
+              "received": 1279,
+              "bytes": 57692,
+              "random_dropped": 249,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1028,
+              "duplicates": 0,
+              "delay_mean_ms": 107.76361867686138,
+              "delay_p95_ms": 141.00000000325963
+            },
+            "down": {
+              "received": 1449,
+              "bytes": 948101,
+              "random_dropped": 304,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1139,
+              "duplicates": 0,
+              "delay_mean_ms": 107.86742756630848,
+              "delay_p95_ms": 141.00000000325963
+            }
+          }
+        }
+      ],
+      "duration_s": 35.60899999999674
+    },
+    {
+      "profile": {
+        "name": "rtt300_loss30",
+        "rtt_ms": 300,
+        "jitter_ms": 80,
+        "loss": 0.3,
+        "duplicate": 0
+      },
+      "repeat": 1,
+      "outcome": "failed",
+      "metrics": {
+        "join_ms": 10203.000000008615
+      },
+      "issues": [
+        "condition did not converge"
+      ],
+      "stage": "movement_fixture",
+      "measurement": "controller upper bounds until completed",
+      "end_states": [
+        {
+          "bank_tick": -1,
+          "door": 0.0,
+          "fixture_barrier": 7,
+          "id": 0,
+          "input": false,
+          "network": {
+            "1358502341": {
+              "rtt_ms": 285.0,
+              "rtt_variance_ms": 65.0,
+              "throttle": 32.0,
+              "throttle_limit": 32.0
+            }
+          },
+          "players": {
+            "1358502341": {
+              "ack": 771,
+              "last_input_tick": 6679,
+              "motion": "idle",
+              "position": [
+                21.2999992370605,
+                -0.019309900701046,
+                -7.0
+              ]
+            }
+          },
+          "round": 12,
+          "started": true,
+          "status": "服务端监听 UDP 23500，人数上限 4",
+          "tick": 7120,
+          "tick_usec": 445,
+          "weapons": {
+            "1358502341": {
+              "ammo": {
+                "baton": {
+                  "clip": 0,
+                  "reserve": 0
+                },
+                "pistol": {
+                  "clip": 15,
+                  "reserve": -1
+                },
+                "shotgun": {
+                  "clip": 8,
+                  "reserve": 72
+                }
+              },
+              "hp": 100.0,
+              "shots": 0
+            }
+          },
+          "wire_bytes": 3014,
+          "world_age_ms": -1
+        },
+        {
+          "bank_tick": -1,
+          "door": 0.0,
+          "fixture_barrier": 6,
+          "id": 0,
+          "input": false,
+          "network": {},
+          "players": {},
+          "round": 0,
+          "started": false,
+          "status": "服务器已断开",
+          "tick": 0,
+          "tick_usec": 0,
+          "weapons": {},
+          "wire_bytes": 0,
+          "world_age_ms": -1
+        },
+        {
+          "bank_tick": -1,
+          "door": 0.0,
+          "fixture_barrier": 7,
+          "id": 0,
+          "input": false,
+          "network": {},
+          "players": {},
+          "round": 0,
+          "started": false,
+          "status": "服务器已断开",
+          "tick": 0,
+          "tick_usec": 0,
+          "weapons": {},
+          "wire_bytes": 0,
+          "world_age_ms": -1
+        }
+      ],
+      "engine_errors": {},
+      "proxies": [
+        {
+          "profile": {
+            "name": "rtt300_loss30",
+            "rtt_ms": 300,
+            "jitter_ms": 80,
+            "loss": 0.3,
+            "duplicate": 0
+          },
+          "seed": 20261047,
+          "duration_s": 30.90700000000652,
+          "error": null,
+          "directions": {
+            "up": {
+              "received": 1165,
+              "bytes": 60135,
+              "random_dropped": 381,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 784,
+              "duplicates": 0,
+              "delay_mean_ms": 154.66454081615666,
+              "delay_p95_ms": 233.99999999674037
+            },
+            "down": {
+              "received": 1096,
+              "bytes": 744049,
+              "random_dropped": 327,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 769,
+              "duplicates": 0,
+              "delay_mean_ms": 157.82964889302102,
+              "delay_p95_ms": 233.99999999674037
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "rtt300_loss30",
+            "rtt_ms": 300,
+            "jitter_ms": 80,
+            "loss": 0.3,
+            "duplicate": 0
+          },
+          "seed": 20261048,
+          "duration_s": 30.90700000000652,
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+          "directions": {
+            "up": {
+              "received": 629,
+              "bytes": 29029,
+              "random_dropped": 167,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 456,
+              "duplicates": 0,
+              "delay_mean_ms": 161.9342105258782,
+              "delay_p95_ms": 233.99999999674037
+            },
+            "down": {
+              "received": 934,
+              "bytes": 634381,
+              "random_dropped": 290,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 642,
+              "duplicates": 0,
+              "delay_mean_ms": 158.7165109023058,
+              "delay_p95_ms": 233.99999999674037
+            }
+          }
+        }
+      ],
+      "duration_s": 30.90700000000652
+    },
+    {
+      "profile": {
+        "name": "reorder_duplicate",
+        "rtt_ms": 200,
+        "jitter_ms": 140,
+        "loss": 0.02,
+        "duplicate": 0.03
+      },
+      "repeat": 1,
+      "outcome": "completed",
+      "metrics": {
+        "join_ms": 2077.999999979511,
+        "move_server_ms": 176.0,
+        "move_visible_ms": 305.0,
+        "stop_server_ms": 51.0,
+        "shot_server_ms": 18.0,
+        "shot_all_clients_ms": 921.0,
+        "door_server_complete_ms": 1375.0,
+        "door_all_clients_complete_ms": 2218.9999999827705,
+        "server_hz": 60.08541066640182,
+        "client_rtt_median_ms": [
+          241.0,
+          238.0
+        ],
+        "world_gap_p95_ms": [
+          874.0,
+          967.0
+        ],
+        "world_gap_max_ms": [
+          983.0,
+          1084.0
+        ],
+        "world_delivery_hz": [
+          2.1849240242327936,
+          2.1849240242327936
+        ],
+        "world_age_p95_ms": [
+          783,
+          883
+        ],
+        "throttle_min": [
+          30.0,
+          32.0
+        ],
+        "snapshot_bytes_mean": 3035.003300330033
+      },
+      "issues": [],
+      "stage": "complete",
+      "measurement": "process-frame telemetry; join and door are controller upper bounds",
+      "samples": "reorder_duplicate-r1.json",
+      "engine_errors": {},
+      "proxies": [
+        {
+          "profile": {
+            "name": "reorder_duplicate",
+            "rtt_ms": 200,
+            "jitter_ms": 140,
+            "loss": 0.02,
+            "duplicate": 0.03
+          },
+          "seed": 20261057,
+          "duration_s": 22.296000000002095,
+          "error": null,
+          "directions": {
+            "up": {
+              "received": 1148,
+              "bytes": 49934,
+              "random_dropped": 20,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1161,
+              "duplicates": 33,
+              "delay_mean_ms": 113.43324720076106,
+              "delay_p95_ms": 234.99999998603016
+            },
+            "down": {
+              "received": 1478,
+              "bytes": 954201,
+              "random_dropped": 22,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1497,
+              "duplicates": 42,
+              "delay_mean_ms": 113.80494321822363,
+              "delay_p95_ms": 234.99999998603016
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "reorder_duplicate",
+            "rtt_ms": 200,
+            "jitter_ms": 140,
+            "loss": 0.02,
+            "duplicate": 0.03
+          },
+          "seed": 20261058,
+          "duration_s": 22.296000000002095,
+          "error": null,
+          "directions": {
+            "up": {
+              "received": 1199,
+              "bytes": 52142,
+              "random_dropped": 25,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1206,
+              "duplicates": 32,
+              "delay_mean_ms": 110.11857379783504,
+              "delay_p95_ms": 234.0000000258442
+            },
+            "down": {
+              "received": 1454,
+              "bytes": 934943,
+              "random_dropped": 27,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1459,
+              "duplicates": 35,
+              "delay_mean_ms": 117.59355722935653,
+              "delay_p95_ms": 234.99999998603016
+            }
+          }
+        }
+      ],
+      "duration_s": 22.280999999988126
+    }
+  ],
+  "outages": [],
+  "engine_errors": {},
+  "passed": false,
+  "sources": {
+    "game\\runtime\\coop\\avatar.gd": "a48b7a878154314bbf46d37bdab05d73b6cffd90d127be6698dc5944e77e5c6b",
+    "game\\runtime\\coop\\bank_game.gd": "cf7fa98363de83a9bccf49a7e5859d4ea00549bcaadfc979e66efc597335e0be",
+    "game\\runtime\\coop\\bank_peer.gd": "b74ea152a666f0a1c04ff1aaadb7f3ae181d9cbde3d7b1be3d0333fc268f7b21",
+    "game\\runtime\\coop\\bank_session.gd": "10918deeb3b949f73891fc4977d3f2668818741ac17482e99827e4c944619beb",
+    "game\\runtime\\coop\\bank_ui.gd": "0800744cd1b5684bbf20bcb9ebf1cb3d1ad01ca2ebe8512d561c7eee0b24ba39",
+    "game\\runtime\\coop\\discovery.gd": "a78b4f877388e13fd0ae1be89d193a3794b0dbc11c8ff88ff870b19febddc611",
+    "game\\runtime\\coop\\equipment.gd": "bfa8b237653bfd1d90d490f0d2b92586d6a83088394acb3de8dc883a2c2f94dd",
+    "game\\runtime\\coop\\input_capture.gd": "6cfb8ebf68eb587f1d9cd8b88dfb2b1f83ff01339b70f677a7dd10e38e3c1288",
+    "game\\runtime\\coop\\main.gd": "5b8a76f361105125979cfa60d990ed97a311fd137f3c57edc166adbd111f7d1a",
+    "game\\runtime\\coop\\player.gd": "a9be2c54213807a1f44505327ef3bb994b4d2eaed39aa85482efde32258cc5d4",
+    "game\\runtime\\coop\\session.gd": "99e54d31985f30596e3285d3766b4340cf2f104d4a0ec3d283bac3b86c7fc082",
+    "game\\runtime\\coop\\ui.gd": "b92bf17ec0a03686c7372091cf8f453eac8fd239e34cb6ecb9d630ad7efe5691",
+    "game\\runtime\\coop\\world.gd": "9e6792c2f0573ecabe771528baf96cc5bce2ef65423916a74d4e6ad63aae8b21",
+    "game\\runtime\\coop\\world_presentation.gd": "6801e303857c953d117c296dfa1a8534b86163bba0ed45b40a7de146304ed3c1"
+  }
+}

@@ -146,6 +146,7 @@ func refresh_servers() -> void:
 	for id in browser.rows:
 		var row: Dictionary=browser.rows[id]
 		var status: String=("%d/%d 人 · %d ms" % [row.players,row.capacity,row.ping]) if row.online else "未连接 · 服务未响应"
+		if row.online and int(row.get("reserved",0))>0:status+=" · 暂留 %d" % int(row.reserved)
 		if row.online and not row.compatible:status="服务器版本不匹配"
 		var node:=Button.new();node.name="server_"+str(i);node.text="%s  %s  ·  %s" % ["●" if row.online else "○",row.address+":"+str(row.port),status]
 		node.set_meta("server_id",id)
@@ -156,9 +157,9 @@ func refresh_servers() -> void:
 		i+=1
 	var selected: Dictionary=browser.rows.get(selected_server,{})
 	if controls.has("connect"):
-		var full: bool=int(selected.get("players",0))>=int(selected.get("capacity",4))
+		var full: bool=int(selected.get("occupied",selected.get("players",0)))>=int(selected.get("capacity",4))
 		controls.connect.disabled=not selected.get("online",false) or not selected.get("compatible",false) or full
-		controls.connect.text="服务器已满（%d/%d）" % [selected.players,selected.capacity] if full else "加入选中服务器"
+		controls.connect.text="服务器已满（%d/%d）" % [selected.get("occupied",selected.players),selected.capacity] if full else "加入选中服务器"
 
 func remember_form() -> void:
 	var values: Dictionary=AppFlow.fields.duplicate()
@@ -182,7 +183,7 @@ func submit() -> void:
 	remember_form()
 	if connection_mode=="find":
 		var row: Dictionary=browser.rows.get(selected_server,{})
-		if not row.get("online",false) or int(row.players)>=int(row.capacity):return
+		if not row.get("online",false) or int(row.get("occupied",row.players))>=int(row.capacity):return
 		AppFlow.fields.address=row.address;AppFlow.fields.port=row.port;AppFlow.remember(AppFlow.fields)
 	AppFlow.launch({"mode":"multiplayer","action":"join" if connection_mode=="find" else connection_mode})
 

@@ -510,6 +510,63 @@
         "project/evidence/bank-lighting-entry-20261017/gallery.html"
       ],
       "notes": "12 项技术检查通过；沿用原预览 v46 间接光，未声称匹配重烘焙或最终美术批准。"
+    },
+    {
+      "id": "BANK-COOP-PRESENTATION-004",
+      "title": "联机鼠标释放与门、感染者连续播放试玩",
+      "status": "in_progress",
+      "depends_on": [
+        "BANK-LIGHTING-ENTRY-001"
+      ],
+      "acceptance": [
+        "BANK-COOP-PRESENTATION",
+        "BANK-COOP-PRESENTATION-REVIEW"
+      ],
+      "definition_of_done": "Esc 平衡释放输入且窗口外不残留拖拽；门、丧尸连续播放，保留服务端战斗权威；定向验证与用户试玩确认。",
+      "evidence": [
+        "project/evidence/bank-motion-preview-20261017/report.json",
+        "project/evidence/bank-motion-preview-20261017/gallery.html"
+      ],
+      "notes": "已交付独立测试包，23 项检查通过。真实 Windows 窗口外拖拽与最终动作观感尚待用户试玩，不能当作完全修复。"
+    },
+    {
+      "id": "BANK-NETWORK-AUDIT-005",
+      "title": "银行联机延迟、丢包、乱序与断网实测",
+      "status": "done",
+      "depends_on": [
+        "BANK-COOP-003"
+      ],
+      "acceptance": [
+        "BANK-NETWORK-AUDIT"
+      ],
+      "definition_of_done": "真实服务端和双客户端注入弱网，保留原始失败与测量边界，核查现有容错并提出可执行加固顺序；不将审计完成视为弱网验收通过。",
+      "evidence": [
+        "project/evidence/bank-network-resilience-20261017/report.json",
+        "project/evidence/bank-network-resilience-20261017/report.html",
+        "project/evidence/bank-network-resilience-20261017/manifest.json",
+        "docs/bank-network-resilience.md"
+      ],
+      "notes": "首轮18例、有序重置同步后5例、3例纯延迟、修正代理UDP端点关闭通知后3例复测及两例断网。保留原始错误和测试方法限制；最终代理无致命错误仍出现高延迟状态空档与30%丢包加入失败。正式运行时未改，真实VPS和长期四人弱网稳定性未验证。"
+    },
+    {
+      "id": "BANK-NETWORK-HARDENING-006",
+      "title": "弱网快照、移动预测和会话恢复",
+      "status": "done",
+      "depends_on": [
+        "BANK-NETWORK-AUDIT-005"
+      ],
+      "acceptance": [
+        "BANK-NETWORK-HARDENING",
+        "BANK-NETWORK-HARDENING-REVIEW"
+      ],
+      "definition_of_done": "有界抗乱序快照和丢片恢复、加入/回合时序、权威校正的本地移动预测、即时开火表现、弱网提示、保留角色状态的自动重连；正常战斗回归与相同弱网对照，发布兼容版本和文档。真实公网与用户观感单独注明。",
+      "evidence": [
+        "project/evidence/bank-network-hardening-20261018/report.json",
+        "project/evidence/bank-network-hardening-20261018/gallery.html",
+        "project/evidence/bank-network-hardening-20261018/manifest.json",
+        "docs/bank-network-hardening.md"
+      ],
+      "notes": "40 technical checks and 16 network cases complete; 30 percent loss failed one of two stress cases, extreme RTT/jitter still corrects position. Matched Windows/Linux protocol 2 releases and local WSL verified. Actual VPS, long soak, native outside-window dragging and final user play feel remain unverified."
     }
   ],
   "known_limits": [

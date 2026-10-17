@@ -1,0 +1,1032 @@
+{
+  "scope": "Current bank, two actual headless clients and one real-time dedicated process; seeded UDP impairment in both directions. Not real VPS/GPU/FPS/long-soak validation.",
+  "delay_definition": "Configured rtt_ms is added RTT; each direction gets half, with independent uniform +/- jitter_ms. Loss is per UDP datagram per direction; retransmissions also traverse proxy.",
+  "harness_revision": "ordered-fixture-barrier-v3-port-unreachable-aware",
+  "cases": [
+    {
+      "profile": {
+        "name": "rtt300_loss30",
+        "rtt_ms": 300,
+        "jitter_ms": 80,
+        "loss": 0.3,
+        "duplicate": 0
+      },
+      "repeat": 1,
+      "outcome": "failed",
+      "metrics": {
+        "join_ms": 9750.0
+      },
+      "issues": [
+        "condition did not converge"
+      ],
+      "stage": "movement_fixture",
+      "measurement": "controller upper bounds until completed",
+      "end_states": [
+        {
+          "assembly": {
+            "bytes": 0,
+            "completed": 0,
+            "expired": 0,
+            "frames": 0,
+            "recovered": 0,
+            "rejected": 0
+          },
+          "bank_tick": -1,
+          "door": 0.0,
+          "fixture_barrier": 1,
+          "id": 0,
+          "input": false,
+          "network": {
+            "1314658736": {
+              "rtt_ms": 311.0,
+              "rtt_variance_ms": 30.0,
+              "throttle": 32.0,
+              "throttle_limit": 32.0
+            },
+            "1456844642": {
+              "rtt_ms": 333.0,
+              "rtt_variance_ms": 54.0,
+              "throttle": 32.0,
+              "throttle_limit": 32.0
+            }
+          },
+          "network_text": "正在同步…",
+          "players": {
+            "1314658736": {
+              "ack": 996,
+              "last_input_tick": 1729,
+              "motion": "idle",
+              "position": [
+                21.2999992370605,
+                -0.019309900701046,
+                -7.0
+              ],
+              "queued_inputs": 6
+            },
+            "1456844642": {
+              "ack": 374,
+              "last_input_tick": 791,
+              "motion": "idle",
+              "position": [
+                20.0,
+                -0.019309900701046,
+                -7.0
+              ],
+              "queued_inputs": 0
+            }
+          },
+          "prediction": {
+            "ack": -1,
+            "corrections": 0,
+            "error": 0.0,
+            "pending": 0,
+            "replay_steps": 0
+          },
+          "preview_shots": 0,
+          "recovery": {
+            "occupied": 2,
+            "reserved": 0,
+            "resumed": 0,
+            "retrying": false
+          },
+          "round": 3,
+          "started": true,
+          "status": "服务端监听 UDP 22600，人数上限 4",
+          "tick": 1729,
+          "tick_usec": 542,
+          "transport": true,
+          "weapons": {
+            "1314658736": {
+              "ammo": {
+                "baton": {
+                  "clip": 0,
+                  "reserve": 0
+                },
+                "pistol": {
+                  "clip": 15,
+                  "reserve": -1
+                },
+                "shotgun": {
+                  "clip": 8,
+                  "reserve": 72
+                }
+              },
+              "hp": 100.0,
+              "shots": 0
+            },
+            "1456844642": {
+              "ammo": {
+                "baton": {
+                  "clip": 0,
+                  "reserve": 0
+                },
+                "pistol": {
+                  "clip": 15,
+                  "reserve": -1
+                },
+                "shotgun": {
+                  "clip": 8,
+                  "reserve": 72
+                }
+              },
+              "hp": 100.0,
+              "shots": 0
+            }
+          },
+          "wire_bytes": 3060,
+          "world_age_ms": -1
+        },
+        {
+          "assembly": {
+            "bytes": 2161,
+            "completed": 104,
+            "expired": 124,
+            "frames": 1,
+            "recovered": 70,
+            "rejected": 0
+          },
+          "bank_tick": 1710,
+          "door": 0.0,
+          "fixture_barrier": 1,
+          "id": 1314658736,
+          "input": true,
+          "network": {
+            "1": {
+              "rtt_ms": 288.0,
+              "rtt_variance_ms": 70.0,
+              "throttle": 32.0,
+              "throttle_limit": 32.0
+            }
+          },
+          "network_text": "延迟 288 ms",
+          "players": {
+            "1314658736": {
+              "ack": 992,
+              "last_input_tick": 1013,
+              "motion": "idle",
+              "position": [
+                21.2999992370605,
+                -0.019309900701046,
+                -7.0
+              ],
+              "queued_inputs": 0
+            },
+            "1456844642": {
+              "ack": 374,
+              "last_input_tick": -1000,
+              "motion": "idle",
+              "position": [
+                20.0,
+                -0.0193098988384008,
+                -7.0
+              ],
+              "queued_inputs": 0
+            }
+          },
+          "prediction": {
+            "ack": 992,
+            "corrections": 1,
+            "error": 0.0,
+            "pending": 21,
+            "replay_steps": 120
+          },
+          "preview_shots": 0,
+          "recovery": {
+            "occupied": 2,
+            "reserved": 0,
+            "resumed": 0,
+            "retrying": false
+          },
+          "round": 3,
+          "started": true,
+          "status": "已连接 · 2/4 人",
+          "tick": 0,
+          "tick_usec": 0,
+          "transport": true,
+          "weapons": {
+            "1314658736": {
+              "ammo": {
+                "baton": {
+                  "clip": 0,
+                  "reserve": 0
+                },
+                "pistol": {
+                  "clip": 15,
+                  "reserve": -1
+                },
+                "shotgun": {
+                  "clip": 8,
+                  "reserve": 72
+                }
+              },
+              "hp": 100.0,
+              "shots": 0
+            },
+            "1456844642": {
+              "ammo": {
+                "baton": {
+                  "clip": 0,
+                  "reserve": 0
+                },
+                "pistol": {
+                  "clip": 15,
+                  "reserve": -1
+                },
+                "shotgun": {
+                  "clip": 8,
+                  "reserve": 72
+                }
+              },
+              "hp": 100.0,
+              "shots": 0
+            }
+          },
+          "wire_bytes": 0,
+          "world_age_ms": 149
+        },
+        {
+          "assembly": {
+            "bytes": 0,
+            "completed": 29,
+            "expired": 21,
+            "frames": 0,
+            "recovered": 20,
+            "rejected": 0
+          },
+          "bank_tick": -1,
+          "door": 0.0,
+          "fixture_barrier": 1,
+          "id": 0,
+          "input": false,
+          "network": {},
+          "network_text": "连接中断 · 正在自动重连",
+          "players": {},
+          "prediction": {
+            "ack": -1,
+            "corrections": 1,
+            "error": 0.0,
+            "pending": 0,
+            "replay_steps": 0
+          },
+          "preview_shots": 0,
+          "recovery": {
+            "occupied": 0,
+            "reserved": 0,
+            "resumed": 0,
+            "retrying": true
+          },
+          "round": 0,
+          "started": false,
+          "status": "正在自动重连（第 1 次）…",
+          "tick": 0,
+          "tick_usec": 0,
+          "transport": true,
+          "weapons": {},
+          "wire_bytes": 0,
+          "world_age_ms": -1
+        }
+      ],
+      "proxies_before_cleanup": [
+        {
+          "profile": {
+            "name": "rtt300_loss30",
+            "rtt_ms": 300,
+            "jitter_ms": 80,
+            "loss": 0.3,
+            "duplicate": 0
+          },
+          "seed": 20261087,
+          "duration_s": 25.53100000001723,
+          "error": null,
+          "socket_events": [],
+          "directions": {
+            "up": {
+              "received": 809,
+              "bytes": 545547,
+              "random_dropped": 231,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 575,
+              "duplicates": 0,
+              "delay_mean_ms": 159.84869565283273,
+              "delay_p95_ms": 233.99999999674037
+            },
+            "down": {
+              "received": 1369,
+              "bytes": 898097,
+              "random_dropped": 409,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 952,
+              "duplicates": 0,
+              "delay_mean_ms": 160.27626050690588,
+              "delay_p95_ms": 233.99999999674037
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "rtt300_loss30",
+            "rtt_ms": 300,
+            "jitter_ms": 80,
+            "loss": 0.3,
+            "duplicate": 0
+          },
+          "seed": 20261088,
+          "duration_s": 25.53100000001723,
+          "error": null,
+          "socket_events": [
+            {
+              "elapsed_s": 20.469000000011874,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            }
+          ],
+          "directions": {
+            "up": {
+              "received": 110,
+              "bytes": 46269,
+              "random_dropped": 40,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 70,
+              "duplicates": 0,
+              "delay_mean_ms": 153.5285714281989,
+              "delay_p95_ms": 219.00000001187436
+            },
+            "down": {
+              "received": 413,
+              "bytes": 277568,
+              "random_dropped": 137,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 276,
+              "duplicates": 0,
+              "delay_mean_ms": 158.27898550976872,
+              "delay_p95_ms": 233.99999999674037
+            }
+          }
+        }
+      ],
+      "engine_errors": {},
+      "proxies": [
+        {
+          "profile": {
+            "name": "rtt300_loss30",
+            "rtt_ms": 300,
+            "jitter_ms": 80,
+            "loss": 0.3,
+            "duplicate": 0
+          },
+          "seed": 20261087,
+          "duration_s": 73.67200000002049,
+          "error": null,
+          "socket_events": [
+            {
+              "elapsed_s": 27.328000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.328000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.328000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.39000000001397,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.39000000001397,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.42200000002049,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.437000000005355,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.453000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.453000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.469000000011874,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.5,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.53100000001723,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.54700000002049,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.562000000005355,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.562000000005355,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.578000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.578000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.609000000025844,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.625,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.64000000001397,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.64000000001397,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.67200000002049,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.734000000025844,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.734000000025844,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.75,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.78100000001723,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.78100000001723,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.828000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.859000000025844,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.875,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.875,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.90600000001723,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.90600000001723,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.937000000005355,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.953000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.953000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.969000000011874,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.984000000025844,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 27.984000000025844,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.01500000001397,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.04700000002049,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.04700000002049,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.078000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.125,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.14000000001397,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.15600000001723,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.15600000001723,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.15600000001723,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.17200000002049,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.17200000002049,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.219000000011874,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.28100000001723,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.28100000001723,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.328000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.344000000011874,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.344000000011874,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.344000000011874,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.39000000001397,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.39000000001397,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.437000000005355,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.437000000005355,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.453000000008615,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.51500000001397,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 28.53100000001723,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            }
+          ],
+          "directions": {
+            "up": {
+              "received": 913,
+              "bytes": 601788,
+              "random_dropped": 263,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 650,
+              "duplicates": 0,
+              "delay_mean_ms": 158.6384615390293,
+              "delay_p95_ms": 233.99999999674037
+            },
+            "down": {
+              "received": 2005,
+              "bytes": 1364705,
+              "random_dropped": 598,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1407,
+              "duplicates": 0,
+              "delay_mean_ms": 160.00568585934656,
+              "delay_p95_ms": 233.99999999674037
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "rtt300_loss30",
+            "rtt_ms": 300,
+            "jitter_ms": 80,
+            "loss": 0.3,
+            "duplicate": 0
+          },
+          "seed": 20261088,
+          "duration_s": 73.67200000002049,
+          "error": null,
+          "socket_events": [
+            {
+              "elapsed_s": 20.469000000011874,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            },
+            {
+              "elapsed_s": 26.0,
+              "operation": "client_receive",
+              "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+            }
+          ],
+          "directions": {
+            "up": {
+              "received": 111,
+              "bytes": 46285,
+              "random_dropped": 41,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 70,
+              "duplicates": 0,
+              "delay_mean_ms": 153.5285714281989,
+              "delay_p95_ms": 219.00000001187436
+            },
+            "down": {
+              "received": 415,
+              "bytes": 277664,
+              "random_dropped": 138,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 277,
+              "duplicates": 0,
+              "delay_mean_ms": 158.4981949482994,
+              "delay_p95_ms": 233.99999999674037
+            }
+          }
+        }
+      ],
+      "duration_s": 73.67200000002049
+    },
+    {
+      "profile": {
+        "name": "rtt300_loss30",
+        "rtt_ms": 300,
+        "jitter_ms": 80,
+        "loss": 0.3,
+        "duplicate": 0
+      },
+      "repeat": 2,
+      "outcome": "completed",
+      "metrics": {
+        "join_ms": 12046.999999991385,
+        "move_server_ms": 331.0,
+        "move_visible_ms": 21.0,
+        "stop_server_ms": 319.0,
+        "position_error_after_stop": 0.0,
+        "shot_server_ms": 100.0,
+        "shot_all_clients_ms": 356.0,
+        "door_server_complete_ms": 1421.9999999913853,
+        "door_all_clients_complete_ms": 2266.0000000032596,
+        "fire_feedback_ms": 2.0,
+        "server_hz": 60.086267429029995,
+        "client_rtt_median_ms": [
+          337.0,
+          325.0
+        ],
+        "world_gap_p95_ms": [
+          383.0,
+          384.0
+        ],
+        "world_gap_max_ms": [
+          600.0,
+          735.0
+        ],
+        "world_delivery_hz": [
+          5.0155481994181965,
+          5.216170127394925
+        ],
+        "world_age_p95_ms": [
+          349,
+          366
+        ],
+        "throttle_min": [
+          26.0,
+          32.0
+        ],
+        "snapshot_bytes_mean": 3072.2833333333333,
+        "snapshot_assembly": [
+          {
+            "bytes": 2700,
+            "completed": 217,
+            "expired": 230,
+            "frames": 1,
+            "recovered": 155,
+            "rejected": 0
+          },
+          {
+            "bytes": 3600,
+            "completed": 144,
+            "expired": 133,
+            "frames": 2,
+            "recovered": 111,
+            "rejected": 0
+          }
+        ]
+      },
+      "issues": [],
+      "stage": "complete",
+      "measurement": "process-frame telemetry; join and door are controller upper bounds",
+      "samples": "rtt300_loss30-r2.json",
+      "proxies_before_cleanup": [
+        {
+          "profile": {
+            "name": "rtt300_loss30",
+            "rtt_ms": 300,
+            "jitter_ms": 80,
+            "loss": 0.3,
+            "duplicate": 0
+          },
+          "seed": 20262087,
+          "duration_s": 32.655999999988126,
+          "error": null,
+          "socket_events": [],
+          "directions": {
+            "up": {
+              "received": 1105,
+              "bytes": 697905,
+              "random_dropped": 340,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 758,
+              "duplicates": 0,
+              "delay_mean_ms": 160.18733509195297,
+              "delay_p95_ms": 233.99999999674037
+            },
+            "down": {
+              "received": 1799,
+              "bytes": 1213477,
+              "random_dropped": 513,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1276,
+              "duplicates": 0,
+              "delay_mean_ms": 157.76489028394852,
+              "delay_p95_ms": 233.99999999674037
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "rtt300_loss30",
+            "rtt_ms": 300,
+            "jitter_ms": 80,
+            "loss": 0.3,
+            "duplicate": 0
+          },
+          "seed": 20262088,
+          "duration_s": 32.655999999988126,
+          "error": null,
+          "socket_events": [],
+          "directions": {
+            "up": {
+              "received": 1251,
+              "bytes": 857741,
+              "random_dropped": 376,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 872,
+              "duplicates": 0,
+              "delay_mean_ms": 157.2098623852538,
+              "delay_p95_ms": 233.99999999674037
+            },
+            "down": {
+              "received": 2024,
+              "bytes": 1330079,
+              "random_dropped": 629,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1385,
+              "duplicates": 0,
+              "delay_mean_ms": 158.02743682471382,
+              "delay_p95_ms": 233.99999999674037
+            }
+          }
+        }
+      ],
+      "engine_errors": {},
+      "proxies": [
+        {
+          "profile": {
+            "name": "rtt300_loss30",
+            "rtt_ms": 300,
+            "jitter_ms": 80,
+            "loss": 0.3,
+            "duplicate": 0
+          },
+          "seed": 20262087,
+          "duration_s": 40.780999999988126,
+          "error": null,
+          "socket_events": [],
+          "directions": {
+            "up": {
+              "received": 1143,
+              "bytes": 714454,
+              "random_dropped": 349,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 794,
+              "duplicates": 0,
+              "delay_mean_ms": 160.2632241807872,
+              "delay_p95_ms": 233.99999999674037
+            },
+            "down": {
+              "received": 1856,
+              "bytes": 1248059,
+              "random_dropped": 532,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1324,
+              "duplicates": 0,
+              "delay_mean_ms": 157.94259818923044,
+              "delay_p95_ms": 233.99999999674037
+            }
+          }
+        },
+        {
+          "profile": {
+            "name": "rtt300_loss30",
+            "rtt_ms": 300,
+            "jitter_ms": 80,
+            "loss": 0.3,
+            "duplicate": 0
+          },
+          "seed": 20262088,
+          "duration_s": 40.780999999988126,
+          "error": null,
+          "socket_events": [],
+          "directions": {
+            "up": {
+              "received": 1404,
+              "bytes": 934304,
+              "random_dropped": 418,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 986,
+              "duplicates": 0,
+              "delay_mean_ms": 157.42089249475615,
+              "delay_p95_ms": 233.99999999674037
+            },
+            "down": {
+              "received": 2095,
+              "bytes": 1364591,
+              "random_dropped": 645,
+              "blackout_dropped": 0,
+              "overflow_dropped": 0,
+              "sent": 1450,
+              "duplicates": 0,
+              "delay_mean_ms": 158.33586207065122,
+              "delay_p95_ms": 233.99999999674037
+            }
+          }
+        }
+      ],
+      "duration_s": 40.780999999988126
+    }
+  ],
+  "outages": [],
+  "engine_errors": {},
+  "fatal_error": null,
+  "functional_passed": false,
+  "weak_network_quality": "not certified; completed cases may still have severe input latency or snapshot gaps",
+  "sources": {
+    "game\\runtime\\coop\\avatar.gd": "a48b7a878154314bbf46d37bdab05d73b6cffd90d127be6698dc5944e77e5c6b",
+    "game\\runtime\\coop\\bank_game.gd": "cf7fa98363de83a9bccf49a7e5859d4ea00549bcaadfc979e66efc597335e0be",
+    "game\\runtime\\coop\\bank_peer.gd": "f1a55cc1e2e11ad5d5959b673ba5c99482501a5dab2bd25bb33b0ee98d0702a6",
+    "game\\runtime\\coop\\bank_session.gd": "d67fe917a0ce63cf011089e8f15eb6886e852046558214aea7009ee5e5eba03a",
+    "game\\runtime\\coop\\bank_ui.gd": "d30ed7b1303a180d36dbc88be2fab5fc979ce0571efa0786c1b63b10db7cd510",
+    "game\\runtime\\coop\\discovery.gd": "1bab85a96f5aee98e61248b44cd5d4a3dc818c24c54e2a8b341b662fa5816d44",
+    "game\\runtime\\coop\\equipment.gd": "bfa8b237653bfd1d90d490f0d2b92586d6a83088394acb3de8dc883a2c2f94dd",
+    "game\\runtime\\coop\\input_capture.gd": "6cfb8ebf68eb587f1d9cd8b88dfb2b1f83ff01339b70f677a7dd10e38e3c1288",
+    "game\\runtime\\coop\\main.gd": "5b8a76f361105125979cfa60d990ed97a311fd137f3c57edc166adbd111f7d1a",
+    "game\\runtime\\coop\\movement_prediction.gd": "3ea6d8edb5fe4d03d295c2da008aea060ab10aae22013d3c234cd99490964d6e",
+    "game\\runtime\\coop\\player.gd": "7fa7874ea4913c6e051492a983214807d68ed4452b678b89f1d801dc7b778a2f",
+    "game\\runtime\\coop\\session.gd": "b7169df73617e63a447dae33eb7e546057b456569909a65e568590f58b033c37",
+    "game\\runtime\\coop\\session_recovery.gd": "b0d09a2b20ae5c9a96bd13b0adfc1a637d3069bf37555f4d9270ff1db3612ac8",
+    "game\\runtime\\coop\\snapshot_buffer.gd": "aae906783e303227e3f2c916e83bb55e8bb4b9f567b11c66c129127eab837536",
+    "game\\runtime\\coop\\ui.gd": "b92bf17ec0a03686c7372091cf8f453eac8fd239e34cb6ecb9d630ad7efe5691",
+    "game\\runtime\\coop\\world.gd": "9e6792c2f0573ecabe771528baf96cc5bce2ef65423916a74d4e6ad63aae8b21",
+    "game\\runtime\\coop\\world_presentation.gd": "e35bfa24c5e5fbfd8f01ea70202458aa65543738be305a65bf2501b2c6588a8b"
+  }
+}

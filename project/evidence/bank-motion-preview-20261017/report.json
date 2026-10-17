@@ -1,0 +1,149 @@
+{
+  "preview": true,
+  "checks": [
+    {
+      "name": "bank_session_ui_join_two",
+      "status": "pass",
+      "population": 84,
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_join_starts_immediately",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_team_movement",
+      "status": "pass",
+      "distance": 1.3999549013850892,
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_shared_damage_and_separate_ammo",
+      "status": "pass",
+      "hp": [
+        65.0,
+        51.0,
+        37.0
+      ],
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_shared_kill_and_corpse",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_server_reload",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_local_menu_does_not_pause",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_wall_blocks_shot",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_shared_door_and_crossing",
+      "status": "pass",
+      "before": [
+        24.1499996185303,
+        -0.019309900701046,
+        6.75
+      ],
+      "after": [
+        26.5300216674805,
+        -0.0190932974219322,
+        6.75
+      ],
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_teammate_rescues_grab",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_server_infected_damage",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_team_wipe_restart",
+      "status": "pass",
+      "fixture": "both players start with 5 HP; normal enemy attacks",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_late_join_existing_world",
+      "status": "pass",
+      "enemy_hp": 65.0,
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_empty_room_starts_fresh",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_server_loss_cleanup",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "preview_esc_releases_logical_buttons_and_trigger",
+      "status": "pass",
+      "scope": "Synthetic normal InputEvents; outside-window native Windows drag still requires user trial",
+      "evidence": "motion-report.json"
+    },
+    {
+      "name": "preview_door_close_continuous_steps",
+      "status": "pass",
+      "changed_steps": 70,
+      "evidence": "motion-report.json"
+    },
+    {
+      "name": "preview_infected_chase_sequence",
+      "status": "pass",
+      "evidence": "motion-report.json"
+    },
+    {
+      "name": "bank_release_starts_menu_without_world",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_two_clients",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_debug_bridge_disabled",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_bake_loaded",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_hanging_lights_enabled",
+      "status": "pass",
+      "evidence": "release-report.json"
+    }
+  ],
+  "package": "D:\\AIGameEngine\\build\\bank\\combat-coop\\20261017-193936\\windows\\package",
+  "native_windows_drag_confirmed_fixed": false,
+  "notes": [
+    "Retains 54 hanging-light emitters and the verified v46 indirect bake.",
+    "Server physics remains 60 Hz and world snapshots 10 Hz; presentation uses a 100 ms interpolation buffer.",
+    "Synthetic normal input confirms Esc clears logical mouse buttons and stops attacks; physical outside-window drag remains for user trial.",
+    "Captured and inspected normal door closing and infected movement sequences; this is not final user art or performance acceptance."
+  ]
+}

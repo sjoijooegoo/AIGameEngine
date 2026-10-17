@@ -1,0 +1,815 @@
+{
+  "audit_completed": true,
+  "weak_network_qualified": false,
+  "runtime_changes_this_audit": false,
+  "runs": [
+    {
+      "name": "initial-matrix",
+      "session": "logs/sessions/bank-network-20261017-201802",
+      "report": "initial-matrix.json",
+      "cases": 18,
+      "completed": 13,
+      "failed": 5,
+      "engine_errors": {
+        "bravo": {
+          "count": 68,
+          "unique": [
+            "ERROR: Condition \"len < 2 || (packet[0] & CMD_MASK) != NETWORK_COMMAND_SYS || packet[1] != SYS_COMMAND_AUTH\" is true. Continuing."
+          ]
+        }
+      },
+      "proxy_diagnostics": [
+        {
+          "profile": "local",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt100",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt200",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt300_loss5",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt500_loss5",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt800_loss10",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt200_loss20",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt300_loss30",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "reorder_duplicate",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "local",
+          "repeat": 2,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt100",
+          "repeat": 2,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt200",
+          "repeat": 2,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt300_loss5",
+          "repeat": 2,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt500_loss5",
+          "repeat": 2,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt800_loss10",
+          "repeat": 2,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt200_loss20",
+          "repeat": 2,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt300_loss30",
+          "repeat": 2,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "reorder_duplicate",
+          "repeat": 2,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        }
+      ],
+      "outages": [
+        {
+          "blackout_seconds": 3,
+          "server_stopped_s": 0.5160000000032596,
+          "client_disconnected_s": null,
+          "session_survived": true
+        },
+        {
+          "blackout_seconds": 12,
+          "server_stopped_s": 0.46900000001187436,
+          "client_disconnected_s": 8.187999999994645,
+          "session_survived": false,
+          "manual_rejoin_ms": 655.9999999881256
+        }
+      ]
+    },
+    {
+      "name": "ordered-setup-retest",
+      "session": "logs/sessions/bank-network-20261017-203709",
+      "report": "ordered-setup-retest.json",
+      "cases": 5,
+      "completed": 4,
+      "failed": 1,
+      "engine_errors": {},
+      "proxy_diagnostics": [
+        {
+          "profile": "local",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt800_loss10",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt200_loss20",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt300_loss30",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "reorder_duplicate",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        }
+      ],
+      "outages": []
+    },
+    {
+      "name": "delay-only",
+      "session": "logs/sessions/bank-network-20261017-204530",
+      "report": "delay-only.json",
+      "cases": 3,
+      "completed": 3,
+      "failed": 0,
+      "engine_errors": {},
+      "proxy_diagnostics": [
+        {
+          "profile": "rtt300",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)",
+            "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt500",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        },
+        {
+          "profile": "rtt800",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [],
+          "before_cleanup_recorded": false
+        }
+      ],
+      "outages": []
+    },
+    {
+      "name": "proxy-lifecycle-retest",
+      "session": "logs/sessions/bank-network-20261017-210454",
+      "report": "proxy-lifecycle-retest.json",
+      "cases": 3,
+      "completed": 2,
+      "failed": 1,
+      "engine_errors": {},
+      "proxy_diagnostics": [
+        {
+          "profile": "local",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [
+            null,
+            null
+          ],
+          "before_cleanup_recorded": true
+        },
+        {
+          "profile": "rtt800_loss10",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [
+            null,
+            null
+          ],
+          "before_cleanup_recorded": true
+        },
+        {
+          "profile": "rtt300_loss30",
+          "repeat": 1,
+          "fatal_after_cleanup": [
+            null,
+            null
+          ],
+          "fatal_before_cleanup": [
+            null,
+            null
+          ],
+          "before_cleanup_recorded": true
+        }
+      ],
+      "outages": []
+    }
+  ],
+  "preview_build": "build/bank/combat-coop/20261017-193936/windows/package/BankCoop.exe",
+  "preview_sources_match": true,
+  "source_comparison": {
+    "coop/avatar.gd": {
+      "preview_sha256": "a48b7a878154314bbf46d37bdab05d73b6cffd90d127be6698dc5944e77e5c6b",
+      "current_sha256": "a48b7a878154314bbf46d37bdab05d73b6cffd90d127be6698dc5944e77e5c6b",
+      "matches": true
+    },
+    "coop/bank_game.gd": {
+      "preview_sha256": "cf7fa98363de83a9bccf49a7e5859d4ea00549bcaadfc979e66efc597335e0be",
+      "current_sha256": "cf7fa98363de83a9bccf49a7e5859d4ea00549bcaadfc979e66efc597335e0be",
+      "matches": true
+    },
+    "coop/bank_layout.json": {
+      "preview_sha256": "0408d5c0356af29f32778ea77a445d4c5d01d43b79da42c0409a94c1243abe87",
+      "current_sha256": "0408d5c0356af29f32778ea77a445d4c5d01d43b79da42c0409a94c1243abe87",
+      "matches": true
+    },
+    "coop/bank_peer.gd": {
+      "preview_sha256": "b74ea152a666f0a1c04ff1aaadb7f3ae181d9cbde3d7b1be3d0333fc268f7b21",
+      "current_sha256": "b74ea152a666f0a1c04ff1aaadb7f3ae181d9cbde3d7b1be3d0333fc268f7b21",
+      "matches": true
+    },
+    "coop/bank_session.gd": {
+      "preview_sha256": "10918deeb3b949f73891fc4977d3f2668818741ac17482e99827e4c944619beb",
+      "current_sha256": "10918deeb3b949f73891fc4977d3f2668818741ac17482e99827e4c944619beb",
+      "matches": true
+    },
+    "coop/bank_ui.gd": {
+      "preview_sha256": "0800744cd1b5684bbf20bcb9ebf1cb3d1ad01ca2ebe8512d561c7eee0b24ba39",
+      "current_sha256": "0800744cd1b5684bbf20bcb9ebf1cb3d1ad01ca2ebe8512d561c7eee0b24ba39",
+      "matches": true
+    },
+    "coop/discovery.gd": {
+      "preview_sha256": "a78b4f877388e13fd0ae1be89d193a3794b0dbc11c8ff88ff870b19febddc611",
+      "current_sha256": "a78b4f877388e13fd0ae1be89d193a3794b0dbc11c8ff88ff870b19febddc611",
+      "matches": true
+    },
+    "coop/equipment.gd": {
+      "preview_sha256": "bfa8b237653bfd1d90d490f0d2b92586d6a83088394acb3de8dc883a2c2f94dd",
+      "current_sha256": "bfa8b237653bfd1d90d490f0d2b92586d6a83088394acb3de8dc883a2c2f94dd",
+      "matches": true
+    },
+    "coop/input_capture.gd": {
+      "preview_sha256": "6cfb8ebf68eb587f1d9cd8b88dfb2b1f83ff01339b70f677a7dd10e38e3c1288",
+      "current_sha256": "6cfb8ebf68eb587f1d9cd8b88dfb2b1f83ff01339b70f677a7dd10e38e3c1288",
+      "matches": true
+    },
+    "coop/main.gd": {
+      "preview_sha256": "5b8a76f361105125979cfa60d990ed97a311fd137f3c57edc166adbd111f7d1a",
+      "current_sha256": "5b8a76f361105125979cfa60d990ed97a311fd137f3c57edc166adbd111f7d1a",
+      "matches": true
+    },
+    "coop/main.tscn": {
+      "preview_sha256": "be984a7de6b58f754d113df7b0219eca0b7d02fb241cbf5eb63cff716e7b4cdf",
+      "current_sha256": "be984a7de6b58f754d113df7b0219eca0b7d02fb241cbf5eb63cff716e7b4cdf",
+      "matches": true
+    },
+    "coop/player.gd": {
+      "preview_sha256": "a9be2c54213807a1f44505327ef3bb994b4d2eaed39aa85482efde32258cc5d4",
+      "current_sha256": "a9be2c54213807a1f44505327ef3bb994b4d2eaed39aa85482efde32258cc5d4",
+      "matches": true
+    },
+    "coop/session.gd": {
+      "preview_sha256": "99e54d31985f30596e3285d3766b4340cf2f104d4a0ec3d283bac3b86c7fc082",
+      "current_sha256": "99e54d31985f30596e3285d3766b4340cf2f104d4a0ec3d283bac3b86c7fc082",
+      "matches": true
+    },
+    "coop/ui.gd": {
+      "preview_sha256": "b92bf17ec0a03686c7372091cf8f453eac8fd239e34cb6ecb9d630ad7efe5691",
+      "current_sha256": "b92bf17ec0a03686c7372091cf8f453eac8fd239e34cb6ecb9d630ad7efe5691",
+      "matches": true
+    },
+    "coop/world.gd": {
+      "preview_sha256": "9e6792c2f0573ecabe771528baf96cc5bce2ef65423916a74d4e6ad63aae8b21",
+      "current_sha256": "9e6792c2f0573ecabe771528baf96cc5bce2ef65423916a74d4e6ad63aae8b21",
+      "matches": true
+    },
+    "coop/world_presentation.gd": {
+      "preview_sha256": "6801e303857c953d117c296dfa1a8534b86163bba0ed45b40a7de146304ed3c1",
+      "current_sha256": "6801e303857c953d117c296dfa1a8534b86163bba0ed45b40a7de146304ed3c1",
+      "matches": true
+    },
+    "coop/local_reference/manifest.json": {
+      "preview_sha256": "07b810a8dbdc0058c3402958f81c2d49adbff06cc026841d766da1da3582d2f6",
+      "current_sha256": "07b810a8dbdc0058c3402958f81c2d49adbff06cc026841d766da1da3582d2f6",
+      "matches": true
+    },
+    "coop/local_reference/weapons.json": {
+      "preview_sha256": "ad5db0cfab4d24be654fd45818fdd8243473a794a00ca3d5c0e1449d56263a0b",
+      "current_sha256": "ad5db0cfab4d24be654fd45818fdd8243473a794a00ca3d5c0e1449d56263a0b",
+      "matches": true
+    },
+    "scripts/audio_mix.gd": {
+      "preview_sha256": "84a42ec0d165f80ecba1e2311ded8d94b336ead0925fbda8160c5f3979258cb8",
+      "current_sha256": "84a42ec0d165f80ecba1e2311ded8d94b336ead0925fbda8160c5f3979258cb8",
+      "matches": true
+    },
+    "scripts/bank_indirect.gd": {
+      "preview_sha256": "c66461ec5c6054a04c080e08934068504ab161d5c11262e9f67fe66bb1b2abc9",
+      "current_sha256": "c66461ec5c6054a04c080e08934068504ab161d5c11262e9f67fe66bb1b2abc9",
+      "matches": true
+    },
+    "scripts/bank_reflections.gd": {
+      "preview_sha256": "eb203bb88ffcf1525906581859323c641ba64d136ff0da998e80fd066be3f98b",
+      "current_sha256": "eb203bb88ffcf1525906581859323c641ba64d136ff0da998e80fd066be3f98b",
+      "matches": true
+    },
+    "scripts/baton_combat.gd": {
+      "preview_sha256": "a345230594d0e734bc116a163cd73e8fa1790f2e35869043c40fed931eb92aaa",
+      "current_sha256": "a345230594d0e734bc116a163cd73e8fa1790f2e35869043c40fed931eb92aaa",
+      "matches": true
+    },
+    "scripts/camera_motion.gd": {
+      "preview_sha256": "91993ae256a51d4f0ab3435905440efd9c98e065d396684a1958fdb8e782cf56",
+      "current_sha256": "91993ae256a51d4f0ab3435905440efd9c98e065d396684a1958fdb8e782cf56",
+      "matches": true
+    },
+    "scripts/combat_feedback.gd": {
+      "preview_sha256": "6e70a34f0bb94c306d8a00803cdec9bc23e035c7a9db1c29a0d0e798073de491",
+      "current_sha256": "6e70a34f0bb94c306d8a00803cdec9bc23e035c7a9db1c29a0d0e798073de491",
+      "matches": true
+    },
+    "scripts/door_lighting.gd": {
+      "preview_sha256": "61c7d72253154ba8bf9293116ad8b73ac4d2d70694ccbb51ddbeb585a5dab811",
+      "current_sha256": "61c7d72253154ba8bf9293116ad8b73ac4d2d70694ccbb51ddbeb585a5dab811",
+      "matches": true
+    },
+    "scripts/exploration.gd": {
+      "preview_sha256": "5f61d35394e5c91fe18d703a5ced17f5599301a24868079024601d6b363c9793",
+      "current_sha256": "5f61d35394e5c91fe18d703a5ced17f5599301a24868079024601d6b363c9793",
+      "matches": true
+    },
+    "scripts/exploration_adapter.gd": {
+      "preview_sha256": "2b2e868ad4bacbc6a4cc458b475eeea541c90d7664993512528adc2261c32b22",
+      "current_sha256": "2b2e868ad4bacbc6a4cc458b475eeea541c90d7664993512528adc2261c32b22",
+      "matches": true
+    },
+    "scripts/exploration_door.gd": {
+      "preview_sha256": "f52bb09c0fac4672087033dbc666d5d1db54f58b9aad8feeeba07b45f8250efd",
+      "current_sha256": "f52bb09c0fac4672087033dbc666d5d1db54f58b9aad8feeeba07b45f8250efd",
+      "matches": true
+    },
+    "scripts/firearms.gd": {
+      "preview_sha256": "5fcdf1061587c2253a97f93a06d4bf918b9e72bb70abb095f24dd6f942110cf9",
+      "current_sha256": "5fcdf1061587c2253a97f93a06d4bf918b9e72bb70abb095f24dd6f942110cf9",
+      "matches": true
+    },
+    "scripts/firearm_hud.gd": {
+      "preview_sha256": "359ac569325243640e25ab8694dcd2b1973cb2f9a45853b518af107fcd86e3c6",
+      "current_sha256": "359ac569325243640e25ab8694dcd2b1973cb2f9a45853b518af107fcd86e3c6",
+      "matches": true
+    },
+    "scripts/firearm_view.gd": {
+      "preview_sha256": "bc0021caa8e97bd73016f3a0ee3d214374093e1abb21526626d72a59b49d3cf4",
+      "current_sha256": "bc0021caa8e97bd73016f3a0ee3d214374093e1abb21526626d72a59b49d3cf4",
+      "matches": true
+    },
+    "scripts/flashlight_beam.gd": {
+      "preview_sha256": "b7641cb8e635235b4eb27a0b3438fa1db2504e7bd84dbf473d58e58166507727",
+      "current_sha256": "b7641cb8e635235b4eb27a0b3438fa1db2504e7bd84dbf473d58e58166507727",
+      "matches": true
+    },
+    "scripts/flashlight_lighting.gd": {
+      "preview_sha256": "d4229db1048ba9bb24634af27d84780af890a634473cae4cc1e2d69ea9ada51c",
+      "current_sha256": "d4229db1048ba9bb24634af27d84780af890a634473cae4cc1e2d69ea9ada51c",
+      "matches": true
+    },
+    "scripts/held_weapon.gd": {
+      "preview_sha256": "ce3e80fc947e86bbd5da58a4643a783c200e797f57f0f00deabb6b0c9e2ce41d",
+      "current_sha256": "ce3e80fc947e86bbd5da58a4643a783c200e797f57f0f00deabb6b0c9e2ce41d",
+      "matches": true
+    },
+    "scripts/impact_effects.gd": {
+      "preview_sha256": "8e6efa8b15899cf2d20fdcd4ce33dcbc06158949655caa7627bf715670099965",
+      "current_sha256": "8e6efa8b15899cf2d20fdcd4ce33dcbc06158949655caa7627bf715670099965",
+      "matches": true
+    },
+    "scripts/indoor_lights.gd": {
+      "preview_sha256": "17b50482c36e0a12e405d87222d9e2d34d768a2ffd754293d44dac5a8015502b",
+      "current_sha256": "17b50482c36e0a12e405d87222d9e2d34d768a2ffd754293d44dac5a8015502b",
+      "matches": true
+    },
+    "scripts/infected.gd": {
+      "preview_sha256": "98b74d8e35d71be513a249eeeaf2bec351bcb1826ba7bc20bea10f2469313107",
+      "current_sha256": "98b74d8e35d71be513a249eeeaf2bec351bcb1826ba7bc20bea10f2469313107",
+      "matches": true
+    },
+    "scripts/infected_anatomy.gd": {
+      "preview_sha256": "2fb5e8fa11c903d192e316101f973aa8e0e52e2fc2ffdf0e8e5d83888a7cf481",
+      "current_sha256": "2fb5e8fa11c903d192e316101f973aa8e0e52e2fc2ffdf0e8e5d83888a7cf481",
+      "matches": true
+    },
+    "scripts/infected_archetypes.gd": {
+      "preview_sha256": "515501da6f871a326f220ac44bbed92708d08925a9424081502c317ed4cbc8ee",
+      "current_sha256": "515501da6f871a326f220ac44bbed92708d08925a9424081502c317ed4cbc8ee",
+      "matches": true
+    },
+    "scripts/infected_audio.gd": {
+      "preview_sha256": "1486a91f3762f932b579ee48f0df1abc8054ae131a228cda408d512a1477415d",
+      "current_sha256": "1486a91f3762f932b579ee48f0df1abc8054ae131a228cda408d512a1477415d",
+      "matches": true
+    },
+    "scripts/infected_crowd.gd": {
+      "preview_sha256": "909ffc6447779b5c07b4bbff973a4d3bbc8130feabc14fbbb69554597e80764a",
+      "current_sha256": "909ffc6447779b5c07b4bbff973a4d3bbc8130feabc14fbbb69554597e80764a",
+      "matches": true
+    },
+    "scripts/infected_native_motion.gd": {
+      "preview_sha256": "cdc956c8ba4cb84210c6fab6368df489a78c1e8146225595d1b3059a4a8e1e42",
+      "current_sha256": "cdc956c8ba4cb84210c6fab6368df489a78c1e8146225595d1b3059a4a8e1e42",
+      "matches": true
+    },
+    "scripts/infected_navigation.gd": {
+      "preview_sha256": "8f1d9aa683b18ac3efb56aad475e7f8a37d5c831fad8c592b16053d91d369d33",
+      "current_sha256": "8f1d9aa683b18ac3efb56aad475e7f8a37d5c831fad8c592b16053d91d369d33",
+      "matches": true
+    },
+    "scripts/infected_ragdoll.gd": {
+      "preview_sha256": "d5709e34ee7cb8699a8ad22569f8ee51c304e1cdd9b68ac375b42b8408ff3b9d",
+      "current_sha256": "d5709e34ee7cb8699a8ad22569f8ee51c304e1cdd9b68ac375b42b8408ff3b9d",
+      "matches": true
+    },
+    "scripts/infected_reactions.gd": {
+      "preview_sha256": "f75a687ba80e27fe06199b84efedb2dcecb0482eeb7055b4426f183277110cbe",
+      "current_sha256": "f75a687ba80e27fe06199b84efedb2dcecb0482eeb7055b4426f183277110cbe",
+      "matches": true
+    },
+    "scripts/infected_skin_batch.gd": {
+      "preview_sha256": "423e637227f67c98a2fae91168e44427962c147cc8a70074f0e9b41283cd7714",
+      "current_sha256": "423e637227f67c98a2fae91168e44427962c147cc8a70074f0e9b41283cd7714",
+      "matches": true
+    },
+    "scripts/line_luminaire_preview.gd": {
+      "preview_sha256": "eb54b61eaca3fc034b87c6b594895a81c1d500add80e2c4aabc5e388141adac4",
+      "current_sha256": "eb54b61eaca3fc034b87c6b594895a81c1d500add80e2c4aabc5e388141adac4",
+      "matches": true
+    },
+    "scripts/line_luminaire_profile.gd": {
+      "preview_sha256": "d012d64e01ab096f24d4fb282fb51db1e84dca9aca89f4693d11f555c8044ebf",
+      "current_sha256": "d012d64e01ab096f24d4fb282fb51db1e84dca9aca89f4693d11f555c8044ebf",
+      "matches": true
+    },
+    "scripts/pose_transition.gd": {
+      "preview_sha256": "b1288154198b0e857379d2a678f3c7911ecf2cb3542580903b12e7e52a6f0052",
+      "current_sha256": "b1288154198b0e857379d2a678f3c7911ecf2cb3542580903b12e7e52a6f0052",
+      "matches": true
+    },
+    "scripts/render_layers.gd": {
+      "preview_sha256": "6a2e3d3bc5291984858cf520f7ebd676ce960e2a1d36ff4e1076aa6d18f84fb3",
+      "current_sha256": "6a2e3d3bc5291984858cf520f7ebd676ce960e2a1d36ff4e1076aa6d18f84fb3",
+      "matches": true
+    },
+    "scripts/static_render.gd": {
+      "preview_sha256": "048401ea1984e676b43f32e50d0f8431d0bf160e6fe1426b7aa9e0ed9ad37d18",
+      "current_sha256": "048401ea1984e676b43f32e50d0f8431d0bf160e6fe1426b7aa9e0ed9ad37d18",
+      "matches": true
+    },
+    "scripts/surface_materials.gd": {
+      "preview_sha256": "f08e44c5b8425d0c975966993f17f4426b9c1a60364a9d96139ba59ed9dd4e7e",
+      "current_sha256": "f08e44c5b8425d0c975966993f17f4426b9c1a60364a9d96139ba59ed9dd4e7e",
+      "matches": true
+    },
+    "scripts/viewmodel_lighting.gd": {
+      "preview_sha256": "1f309530b3acd07b9591ab2cb8489627f8855eaef2e866eb97bb88d09c8bfd5b",
+      "current_sha256": "1f309530b3acd07b9591ab2cb8489627f8855eaef2e866eb97bb88d09c8bfd5b",
+      "matches": true
+    },
+    "scripts/viewmodel_sleeves.gd": {
+      "preview_sha256": "d30fc841790fbf336e9b11618a96735cea9a56363a4477aee6f0bdc205eacd8b",
+      "current_sha256": "d30fc841790fbf336e9b11618a96735cea9a56363a4477aee6f0bdc205eacd8b",
+      "matches": true
+    },
+    "scripts/weapon_audio.gd": {
+      "preview_sha256": "c8d1c2a9544910fcddd4025365cfd52cce3e6f24dd3bbddf2621259bcfecd65d",
+      "current_sha256": "c8d1c2a9544910fcddd4025365cfd52cce3e6f24dd3bbddf2621259bcfecd65d",
+      "matches": true
+    },
+    "data/audio_calibration.json": {
+      "preview_sha256": "b2f8c1c5cc1966d7d5a7828034ffbe4473bfb53376a836ffc72f7d4287bf4b73",
+      "current_sha256": "b2f8c1c5cc1966d7d5a7828034ffbe4473bfb53376a836ffc72f7d4287bf4b73",
+      "matches": true
+    },
+    "data/audio_standard.json": {
+      "preview_sha256": "f63b5d346bb78fe37ae663daed2cd887489e8039c75cf996dac660ccc978005c",
+      "current_sha256": "f63b5d346bb78fe37ae663daed2cd887489e8039c75cf996dac660ccc978005c",
+      "matches": true
+    },
+    "data/door_design.json": {
+      "preview_sha256": "cae4fbb9b514ff768b0adae920ab34f192c7564cb4e9d4bc6ecaa79b153e3fbe",
+      "current_sha256": "cae4fbb9b514ff768b0adae920ab34f192c7564cb4e9d4bc6ecaa79b153e3fbe",
+      "matches": true
+    },
+    "data/dressing.json": {
+      "preview_sha256": "08425c04413f0b1b3290c3e86770eb2d6cf987a9513c2a9f8fff16a930570336",
+      "current_sha256": "08425c04413f0b1b3290c3e86770eb2d6cf987a9513c2a9f8fff16a930570336",
+      "matches": true
+    },
+    "data/firearms.json": {
+      "preview_sha256": "e9b5d9848646125fff900d080b6112d7f5250be485884239464a13b213fb1ed1",
+      "current_sha256": "e9b5d9848646125fff900d080b6112d7f5250be485884239464a13b213fb1ed1",
+      "matches": true
+    },
+    "data/infected.json": {
+      "preview_sha256": "ffeecbcd97cad624d9d55779f6fe61a7852a704edc1fab3ea72ea44b91b57b07",
+      "current_sha256": "ffeecbcd97cad624d9d55779f6fe61a7852a704edc1fab3ea72ea44b91b57b07",
+      "matches": true
+    },
+    "data/infected_animation_sources.json": {
+      "preview_sha256": "efcf436b07586ce21a12413df0d2f49cde48b196b985e8c00a8cbacbbbf35700",
+      "current_sha256": "efcf436b07586ce21a12413df0d2f49cde48b196b985e8c00a8cbacbbbf35700",
+      "matches": true
+    },
+    "data/infected_archetypes.json": {
+      "preview_sha256": "0cdc07b80bd8f2e4038f7b07d4591852032a5a15f3e244bd156b31c0c53c257d",
+      "current_sha256": "0cdc07b80bd8f2e4038f7b07d4591852032a5a15f3e244bd156b31c0c53c257d",
+      "matches": true
+    },
+    "data/infected_native_motion.json": {
+      "preview_sha256": "0ce880f8b1bc2f4982833bc0a68cb99c7bd170e32b37a4fee5bdac953416c33a",
+      "current_sha256": "0ce880f8b1bc2f4982833bc0a68cb99c7bd170e32b37a4fee5bdac953416c33a",
+      "matches": true
+    },
+    "data/lighting.json": {
+      "preview_sha256": "57e4bd20382229acae90f02c87f0d99f1a99356d61cafc99c3d019a7ae99e0cb",
+      "current_sha256": "57e4bd20382229acae90f02c87f0d99f1a99356d61cafc99c3d019a7ae99e0cb",
+      "matches": true
+    },
+    "data/lighting_bake.json": {
+      "preview_sha256": "39f4bf7229e7c8656ce2b1a6f3e9d403e66e8fb83f5360d38a3f79b99983f38f",
+      "current_sha256": "39f4bf7229e7c8656ce2b1a6f3e9d403e66e8fb83f5360d38a3f79b99983f38f",
+      "matches": true
+    },
+    "data/origin_structure.json": {
+      "preview_sha256": "0408d5c0356af29f32778ea77a445d4c5d01d43b79da42c0409a94c1243abe87",
+      "current_sha256": "0408d5c0356af29f32778ea77a445d4c5d01d43b79da42c0409a94c1243abe87",
+      "matches": true
+    },
+    "data/pbr_textures.json": {
+      "preview_sha256": "aaec9d6bcad5aa5c0e6e195eabfad5e8a734f011cd5bc2c9d4a9f6ace310c7d1",
+      "current_sha256": "aaec9d6bcad5aa5c0e6e195eabfad5e8a734f011cd5bc2c9d4a9f6ace310c7d1",
+      "matches": true
+    },
+    "data/review_views.json": {
+      "preview_sha256": "ec055f02e7126f99bd61733cf24cacce7ef808e843c43ced5c93af9d075f12e9",
+      "current_sha256": "ec055f02e7126f99bd61733cf24cacce7ef808e843c43ced5c93af9d075f12e9",
+      "matches": true
+    },
+    "data/shooting_feedback.json": {
+      "preview_sha256": "4376a9262041c4a9d597c386d7605ea401d5d1e0791a3a1d5a2a7a39ea5f6049",
+      "current_sha256": "4376a9262041c4a9d597c386d7605ea401d5d1e0791a3a1d5a2a7a39ea5f6049",
+      "matches": true
+    },
+    "data/texture_sampling.json": {
+      "preview_sha256": "4135bf95dda4d03818d0d109a0bd945802db854382195b9675da9c934f6b1149",
+      "current_sha256": "4135bf95dda4d03818d0d109a0bd945802db854382195b9675da9c934f6b1149",
+      "matches": true
+    },
+    "ui/equipment_plate.gd": {
+      "preview_sha256": "ed22c01cad4f6387a90afc07baa3c90941d59671d27d7a6b7328480d3d41f080",
+      "current_sha256": "ed22c01cad4f6387a90afc07baa3c90941d59671d27d7a6b7328480d3d41f080",
+      "matches": true
+    },
+    "ui/hud.gd": {
+      "preview_sha256": "4194fae1e56cd7fd537c28ff03c3596beb790c95d15a775f40c2332a30bb982b",
+      "current_sha256": "4194fae1e56cd7fd537c28ff03c3596beb790c95d15a775f40c2332a30bb982b",
+      "matches": true
+    },
+    "ui/menu_veil.gdshader": {
+      "preview_sha256": "18a8210ea866d3d2c405dac7f67ab396fe15cc5bc39082597fc61e27e9756cc4",
+      "current_sha256": "18a8210ea866d3d2c405dac7f67ab396fe15cc5bc39082597fc61e27e9756cc4",
+      "matches": true
+    },
+    "ui/shell.gd": {
+      "preview_sha256": "f3705c7d7817ed66b2fc5466cfacf5f4bb4bb1aff0df4067a5d7cb20df008a82",
+      "current_sha256": "f3705c7d7817ed66b2fc5466cfacf5f4bb4bb1aff0df4067a5d7cb20df008a82",
+      "matches": true
+    },
+    "ui/style.gd": {
+      "preview_sha256": "08238f8585f477e8f80b34c68026057e633fc9fddc5c37f969473ce8c926ab3e",
+      "current_sha256": "08238f8585f477e8f80b34c68026057e633fc9fddc5c37f969473ce8c926ab3e",
+      "matches": true
+    },
+    "scenes/line_luminaire_preview.tscn": {
+      "preview_sha256": "159950b9d0167c95d594259dbd820c0a3af92049c5a35531fc43d8551849315b",
+      "current_sha256": "159950b9d0167c95d594259dbd820c0a3af92049c5a35531fc43d8551849315b",
+      "matches": true
+    },
+    "scenes/main.tscn": {
+      "preview_sha256": "2865451852f0b17b079c4cfb3423d7eb106cd9225cf7027423cb18d3f4c34fb3",
+      "current_sha256": "2865451852f0b17b079c4cfb3423d7eb106cd9225cf7027423cb18d3f4c34fb3",
+      "matches": true
+    },
+    "frontend/app_flow.gd": {
+      "preview_sha256": "4cc5f10e175fd3d7c45b988b806df2e898b837654cecbf7869d66e681614d8b8",
+      "current_sha256": "4cc5f10e175fd3d7c45b988b806df2e898b837654cecbf7869d66e681614d8b8",
+      "matches": true
+    },
+    "frontend/background.gdshader": {
+      "preview_sha256": "5bf1dc654cb0c7a95a72ce16ad308be0c75b016665eae782dd0d4e7de6d552e5",
+      "current_sha256": "5bf1dc654cb0c7a95a72ce16ad308be0c75b016665eae782dd0d4e7de6d552e5",
+      "matches": true
+    },
+    "frontend/main.tscn": {
+      "preview_sha256": "7135f8d0a28a56ecd7ac7163eb36bebb37164731ac856f45a13db1bd54828873",
+      "current_sha256": "7135f8d0a28a56ecd7ac7163eb36bebb37164731ac856f45a13db1bd54828873",
+      "matches": true
+    },
+    "frontend/menu.gd": {
+      "preview_sha256": "54703ebec6686d6c72b1f1d35e51b1eb99d27c7ac91f646b7ace49894ac90475",
+      "current_sha256": "54703ebec6686d6c72b1f1d35e51b1eb99d27c7ac91f646b7ace49894ac90475",
+      "matches": true
+    },
+    "project.godot": {
+      "preview_sha256": "17ae25fa5d9890db20a8458736c7ae86508d454a41fa21e39c6107f5c0ab4623",
+      "current_sha256": "17ae25fa5d9890db20a8458736c7ae86508d454a41fa21e39c6107f5c0ab4623",
+      "matches": true
+    }
+  },
+  "limits": [
+    "Two headless clients on local Windows; not Ubuntu VPS, WAN routing or GPU frame-rate validation.",
+    "Short 10-second steady samples, one/two repetitions per profile; not statistical availability or long-duration soak.",
+    "Initial matrix fixture synchronization could race a delayed reliable reset. Do not interpret its action failures as isolated production action defects. Ordered channel-2 setup marker added only to debug test driver; retest preserved separately.",
+    "Completed cases mean actions converged, not acceptable weak-network feel. Failed-case controller times must not be pooled with process-frame latency.",
+    "Initial matrix emitted 68 auth-state packet errors in Bravo; follow-up did not reproduce. Root cause remains unconfirmed.",
+    "Older proxy aborted on Windows UDP Port Unreachable, usually after a client closed; it did not timestamp the event. Keep earlier failure causality qualified. Final proxy-lifecycle-retest tolerates and timestamps endpoint notifications: no proxy fatal error before cleanup, 800ms+10% still has ~1s snapshot gaps and 30% loss still fails joining.",
+    "No bandwidth cap, burst-loss model, asymmetric link, NAT changes, server restart or four-player soak in this audit."
+  ],
+  "checks": [
+    {
+      "name": "UDP proxy contract",
+      "status": "pass",
+      "command": ".venv/Scripts/python.exe -m unittest game.tests.test_network_fault_proxy -v"
+    },
+    {
+      "name": "network quality certification",
+      "status": "fail",
+      "reason": "Severe snapshot gaps and 30% loss disconnection; input prediction and reconnect recovery not implemented"
+    }
+  ]
+}

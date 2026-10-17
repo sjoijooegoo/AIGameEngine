@@ -1,0 +1,38 @@
+{
+  "checks": [
+    {
+      "name": "preview_esc_releases_logical_buttons_and_trigger",
+      "status": "pass",
+      "scope": "Synthetic normal InputEvents; outside-window native Windows drag still requires user trial"
+    },
+    {
+      "name": "preview_door_close_continuous_steps",
+      "status": "pass",
+      "changed_steps": 70
+    },
+    {
+      "name": "preview_infected_chase_sequence",
+      "status": "pass"
+    }
+  ],
+  "sequences": [
+    {
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\bank-motion-preview-20261017-194949\\client\\door_close.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-motion-preview-20261017-194949\\client\\door_close.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\bank-motion-preview-20261017-194949\\client\\door_close.contact.jpg",
+      "count": 12,
+      "interval": 6,
+      "simulation_duration": 1.1,
+      "speed": 0.25
+    },
+    {
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\bank-motion-preview-20261017-194949\\client\\infected_chase.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-motion-preview-20261017-194949\\client\\infected_chase.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\bank-motion-preview-20261017-194949\\client\\infected_chase.contact.jpg",
+      "count": 12,
+      "interval": 3,
+      "simulation_duration": 0.55,
+      "speed": 0.25
+    }
+  ]
+}

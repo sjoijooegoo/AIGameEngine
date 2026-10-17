@@ -1,7 +1,7 @@
 extends Node
 ## Separate bounded UDP status channel; discovery never occupies a player slot.
 const MAGIC="BANK_STATUS_1"
-const BUILD="bank-combat-v3"
+const BUILD="bank-combat-v4"
 var socket: PacketPeerUDP
 var server: Node
 var game_port := 24567
@@ -36,7 +36,7 @@ func add_target(host: String,port: int,title: String="") -> void:
 	var id:=host+":"+str(port)
 	if rows.has(id):return
 	if rows.size()>=8:return
-	rows[id]={"id":id,"address":host,"port":port,"name":title if not title.is_empty() else host,"online":false,"players":0,"capacity":4,"ping":0,"seen":0,"compatible":true}
+	rows[id]={"id":id,"address":host,"port":port,"name":title if not title.is_empty() else host,"online":false,"players":0,"occupied":0,"reserved":0,"capacity":4,"ping":0,"seen":0,"compatible":true}
 	changed.emit()
 
 func refresh() -> void:
@@ -70,7 +70,7 @@ func _process(dt: float) -> void:
 		if server!=null:
 			if value.get("query")!=true or bytes.size()<192 or value.nonce.length()>40 or budget<1:continue
 			budget-=1
-			var reply:={"magic":MAGIC,"nonce":value.nonce,"build":BUILD,"name":server_name,"port":game_port,"players":server.players.size(),"capacity":server.max_players}
+			var reply:={"magic":MAGIC,"nonce":value.nonce,"build":BUILD,"name":server_name,"port":game_port,"players":server.players.size(),"occupied":server.occupied_slots(),"reserved":server.recovery.reservations.size(),"capacity":server.max_players}
 			socket.set_dest_address(address,port);socket.put_packet(JSON.stringify(reply).to_utf8_buffer())
 		else:receive(value,address,port)
 
@@ -80,6 +80,10 @@ func receive(value: Dictionary,address: String,port: int) -> void:
 	if port!=query_port(int(sent.port)) or not value.get("name") is String:return
 	if not value.get("players") is float or not value.get("capacity") is float or not value.get("port") is float:return
 	var count:=int(value.players);var capacity:=int(value.capacity)
+	if value.has("occupied") and not value.occupied is float:return
+	if value.has("reserved") and not value.reserved is float:return
+	var occupied:=int(value.get("occupied",count));var reserved:=int(value.get("reserved",0))
+	if occupied<count or occupied>capacity or reserved<0 or reserved>occupied-count:return
 	if capacity<2 or capacity>4 or count<0 or count>capacity or int(value.get("port",0))!=int(sent.port):return
 	var id: String=sent.id
 	if id=="lan":
@@ -90,6 +94,7 @@ func receive(value: Dictionary,address: String,port: int) -> void:
 	var row: Dictionary=rows[id]
 	row.online=true;row.seen=Time.get_ticks_msec();row.ping=maxi(0,int(row.seen)-int(sent.sent))
 	row.players=count;row.capacity=capacity;row.name=value.name.left(40);row.compatible=value.get("build")==BUILD
+	row.occupied=occupied;row.reserved=reserved
 	if sent.id!="lan":pending.erase(value.nonce)
 	changed.emit()
 

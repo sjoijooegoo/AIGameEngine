@@ -1,0 +1,203 @@
+{
+  "checks": [
+    {
+      "name": "bank_network_cooperative_damage",
+      "status": "pass",
+      "hp": [
+        65.0,
+        51.0,
+        37.0
+      ],
+      "ammo": [
+        14,
+        14
+      ]
+    },
+    {
+      "name": "bank_network_shared_kill_without_duplicate_shots",
+      "status": "pass"
+    },
+    {
+      "name": "bank_network_reload_and_shared_door",
+      "status": "pass"
+    },
+    {
+      "name": "bank_network_live_84_actor_world",
+      "status": "pass",
+      "snapshot_bytes": 3548
+    }
+  ],
+  "proxies": [
+    {
+      "profile": {
+        "name": "combat_loss5",
+        "rtt_ms": 200,
+        "jitter_ms": 25,
+        "loss": 0.05,
+        "duplicate": 0
+      },
+      "seed": 18100,
+      "duration_s": 29.28100000001723,
+      "error": null,
+      "socket_events": [
+        {
+          "elapsed_s": 29.078000000008615,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 29.187000000005355,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 29.23399999999674,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        }
+      ],
+      "directions": {
+        "up": {
+          "received": 1024,
+          "bytes": 643640,
+          "random_dropped": 41,
+          "blackout_dropped": 0,
+          "overflow_dropped": 0,
+          "sent": 983,
+          "duplicates": 0,
+          "delay_mean_ms": 107.81383519902344,
+          "delay_p95_ms": 125.0
+        },
+        "down": {
+          "received": 1876,
+          "bytes": 1238005,
+          "random_dropped": 104,
+          "blackout_dropped": 0,
+          "overflow_dropped": 0,
+          "sent": 1772,
+          "duplicates": 0,
+          "delay_mean_ms": 107.77990970571113,
+          "delay_p95_ms": 125.0
+        }
+      }
+    },
+    {
+      "profile": {
+        "name": "combat_loss5",
+        "rtt_ms": 200,
+        "jitter_ms": 25,
+        "loss": 0.05,
+        "duplicate": 0
+      },
+      "seed": 18101,
+      "duration_s": 23.062000000005355,
+      "error": null,
+      "socket_events": [
+        {
+          "elapsed_s": 22.57799999997951,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.59299999999348,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.59299999999348,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.60899999999674,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.625,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.625,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.639999999984866,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.655999999988126,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.687000000005355,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.70299999997951,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.70299999997951,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.70299999997951,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.70299999997951,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.71799999999348,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.71799999999348,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        },
+        {
+          "elapsed_s": 22.764999999984866,
+          "operation": "client_receive",
+          "error": "ConnectionResetError(10054, '远程主机强迫关闭了一个现有的连接。', None, 10054, None)"
+        }
+      ],
+      "directions": {
+        "up": {
+          "received": 707,
+          "bytes": 470335,
+          "random_dropped": 39,
+          "blackout_dropped": 0,
+          "overflow_dropped": 0,
+          "sent": 668,
+          "duplicates": 0,
+          "delay_mean_ms": 106.92215568888277,
+          "delay_p95_ms": 125.0
+        },
+        "down": {
+          "received": 1306,
+          "bytes": 885383,
+          "random_dropped": 65,
+          "blackout_dropped": 0,
+          "overflow_dropped": 0,
+          "sent": 1241,
+          "duplicates": 0,
+          "delay_mean_ms": 107.82191780796177,
+          "delay_p95_ms": 125.0
+        }
+      }
+    }
+  ]
+}
