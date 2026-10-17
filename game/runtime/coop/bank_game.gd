@@ -1,15 +1,23 @@
 extends "res://scripts/exploration.gd"
-## Multiplayer entry around the unchanged bank builder (including baked lighting).
+## Shared single-player/co-op entry; preserve the bake and the selected live lights.
 var coop: Node3D
+var room_lighting: RefCounted
 
 func _ready() -> void:
 	super._ready()
+	var args:=OS.get_cmdline_user_args()
+	if not "--server" in args and AppFlow.intent.get("mode")!="server" and not OS.has_feature("dedicated_server") and not "--bank-bake-source" in args:
+		room_lighting=preload("res://scripts/line_luminaire_profile.gd").new()
+		room_lighting.setup(self)
+		var configuration: Dictionary=room_lighting.observe()
+		print("BANK_ROOM_LIGHTING ",JSON.stringify({"profile":"hanging_diffuse","fixtures":configuration.fixture_count,"emitters":configuration.emitters,"lobby":configuration.get("lobby",{}),"indirect":configuration.indirect}))
 	coop=preload("res://coop/bank_session.gd").new();coop.world=self;add_child(coop)
 	AppFlow.bank_ready.call_deferred(self)
 
 func advance(dt: float) -> void:
 	if coop!=null and coop.active:coop.advance(dt)
 	else:super.advance(dt)
+	if room_lighting!=null:room_lighting.update_viewmodel()
 
 func update_camera() -> void:
 	if coop!=null and coop.active and coop.is_host:
@@ -20,6 +28,7 @@ func update_camera() -> void:
 func _process(dt: float) -> void:
 	if coop!=null and coop.active and coop.is_host:return
 	super._process(dt)
+	if room_lighting!=null:room_lighting.update_viewmodel()
 
 func _input(event: InputEvent) -> void:
 	if coop!=null and coop.active:

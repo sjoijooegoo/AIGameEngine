@@ -38,8 +38,12 @@ def main():
             assert 'SCRIPT ERROR' not in text and '\nERROR:' not in text,text[-2000:]
             baked=[json.loads(line.split('BANK_LIGHTING ',1)[1]) for line in text.splitlines() if line.startswith('BANK_LIGHTING ')]
             assert baked and baked[-1].get('loaded') and baked[-1].get('meshes')==481,(name,baked)
+            rooms=[json.loads(line.split('BANK_ROOM_LIGHTING ',1)[1]) for line in text.splitlines() if line.startswith('BANK_ROOM_LIGHTING ')]
+            if name=='server':assert not rooms,'Dedicated server must not build client-only hanging lights'
+            else:assert rooms and rooms[-1]['emitters']==54 and rooms[-1]['lobby']['source']=='G_source_10',(name,rooms)
             assert not (folder/name/'ready.json').exists()
         checks += [{'name':'bank_release_two_clients','status':'pass'},{'name':'bank_release_debug_bridge_disabled','status':'pass'}, {'name':'bank_release_bake_loaded','status':'pass'}]
+        checks.append({'name':'bank_release_hanging_lights_enabled','status':'pass'})
         print('BANK_RELEASE_PASS',flush=True)
     finally:
         for p in processes:

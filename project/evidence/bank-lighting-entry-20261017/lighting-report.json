@@ -1,0 +1,6706 @@
+{
+  "checks": [
+    {
+      "name": "lighting_preview_54_emitters_and_bake",
+      "status": "pass"
+    },
+    {
+      "name": "lighting_solo_normal_entry_and_movement",
+      "status": "pass"
+    },
+    {
+      "name": "lighting_solo_54_emitters_and_bake",
+      "status": "pass"
+    },
+    {
+      "name": "lighting_normal_walk_preserves_weapon_projector",
+      "status": "pass"
+    },
+    {
+      "name": "lighting_multiplayer_normal_entry_and_movement",
+      "status": "pass"
+    },
+    {
+      "name": "lighting_multiplayer_54_emitters_and_bake",
+      "status": "pass"
+    },
+    {
+      "name": "lighting_five_views_match_selected_preview",
+      "status": "pass",
+      "metrics": {
+        "cash": {
+          "base": 2.8823163082437273,
+          "solo": 0.18123924731182794,
+          "multiplayer": 0.2140752688172043
+        },
+        "lobby": {
+          "base": 10.344851254480288,
+          "solo": 0.016690860215053765,
+          "multiplayer": 0.04650448028673835
+        },
+        "meeting": {
+          "base": 3.878883512544803,
+          "solo": 0.09148387096774195,
+          "multiplayer": 0.0
+        },
+        "floor3": {
+          "base": 2.9367661290322586,
+          "solo": 0.0,
+          "multiplayer": 0.0
+        },
+        "floor4": {
+          "base": 3.0900582437275985,
+          "solo": 0.0,
+          "multiplayer": 0.0
+        }
+      }
+    }
+  ],
+  "captures": {
+    "base": {
+      "cash": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/base/cash.png",
+      "lobby": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/base/lobby.png",
+      "meeting": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/base/meeting.png",
+      "floor3": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/base/floor3.png",
+      "floor4": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/base/floor4.png"
+    },
+    "preview": {
+      "cash": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/preview/cash.png",
+      "lobby": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/preview/lobby.png",
+      "meeting": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/preview/meeting.png",
+      "floor3": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/preview/floor3.png",
+      "floor4": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/preview/floor4.png"
+    },
+    "solo": {
+      "cash": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/solo/cash.png",
+      "lobby": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/solo/lobby.png",
+      "meeting": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/solo/meeting.png",
+      "floor3": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/solo/floor3.png",
+      "floor4": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/solo/floor4.png"
+    },
+    "multiplayer": {
+      "cash": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/multiplayer/cash.png",
+      "lobby": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/multiplayer/lobby.png",
+      "meeting": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/multiplayer/meeting.png",
+      "floor3": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/multiplayer/floor3.png",
+      "floor4": "D:/AIGameEngine/logs/sessions/bank-lighting-entry-20261017-182214/multiplayer/floor4.png"
+    }
+  },
+  "states": {
+    "base": {
+      "diffuse_nodes": 0,
+      "lighting": {
+        "bake_mode": "indirect_only",
+        "loaded": true,
+        "meshes": 481.0,
+        "preview": false
+      },
+      "profile_copies": [],
+      "reference": "base",
+      "room_lighting": {}
+    },
+    "preview": {
+      "diffuse_nodes": 54,
+      "lighting": {
+        "bake_mode": "indirect_only",
+        "loaded": true,
+        "meshes": 481.0,
+        "preview": false
+      },
+      "profile_copies": [],
+      "reference": "preview",
+      "room_lighting": {
+        "emitters": 54,
+        "fixture_count": 54,
+        "fixtures": [
+          {
+            "floor": "G",
+            "id": "G_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_5",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "现金柜台"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_6",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "现金柜台"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_7",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "经理室"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_8",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "经理室"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_9",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "理财室"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_10",
+            "line_total_energy": 1.79285402655601,
+            "range": 8.0,
+            "spot_energy": 1.50660002231598,
+            "zone": "前楼梯走廊"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_11",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "监控机房"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_12",
+            "line_total_energy": 1.39444196224213,
+            "range": 5.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "二道门"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_18",
+            "line_total_energy": 0.959140026569366,
+            "range": 6.0,
+            "spot_energy": 1.37020003795624,
+            "zone": "车库"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_19",
+            "line_total_energy": 1.59364795684814,
+            "range": 7.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "保安宿舍"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_4",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "楼梯口"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_5",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "杂物房"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_6",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "二楼现金柜台"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_7",
+            "line_total_energy": 1.39444196224213,
+            "range": 7.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "客户经理办公室"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_8",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "厕所"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_9",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "二楼现金柜台"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_10",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "客户休息区"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_11",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "客户休息区"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_12",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "客户休息区"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_13",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "行长办公室"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_4",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "楼梯口"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_5",
+            "line_total_energy": 1.39444196224213,
+            "range": 7.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "主管宿舍"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_6",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "员工宿舍A"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_8",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "员工宿舍B"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_9",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "储物间"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_10",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "活动室"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_11",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "活动室"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_12",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "员工宿舍B"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_13",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "我的宿舍"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_14",
+            "line_total_energy": 1.19523596763611,
+            "range": 8.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "后走廊"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_15",
+            "line_total_energy": 0.99602997303009,
+            "range": 8.0,
+            "spot_energy": 1.42289996147156,
+            "zone": "厕所"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_0",
+            "line_total_energy": 0.95200001001358,
+            "range": 5.0,
+            "spot_energy": 1.36000001430511,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_3",
+            "line_total_energy": 0.95200001001358,
+            "range": 5.0,
+            "spot_energy": 1.36000001430511,
+            "zone": "前楼梯"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_4",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "楼梯口"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_5",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "休息区"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_6",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "西走廊"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_7",
+            "line_total_energy": 0.796823978424072,
+            "range": 7.0,
+            "spot_energy": 1.13831996917725,
+            "zone": "厕所"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_8",
+            "line_total_energy": 1.75301275253296,
+            "range": 8.0,
+            "spot_energy": 2.50430393218994,
+            "zone": "会议室"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_9",
+            "line_total_energy": 1.75301275253296,
+            "range": 8.0,
+            "spot_energy": 2.50430393218994,
+            "zone": "会议室"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_10",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "台球区"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_11",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "台球区"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_12",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "厨房"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_13",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "食堂"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_14",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "食堂"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_0",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_1",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_2",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_3",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_4",
+            "line_total_energy": 0.0,
+            "range": 8.0,
+            "spot_energy": 0.0,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_5",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          }
+        ],
+        "indirect": "unchanged v46; preview, not a matching rebake",
+        "lobby": {
+          "cabin_lights_unchanged": [
+            "G_source_2",
+            "F2_source_2",
+            "F3_source_2",
+            "F4_source_2"
+          ],
+          "energy": 1.79285407066345,
+          "housing": "/root/ReferenceBank/LobbyFluorescentHousing",
+          "housing_position": "(38.0, 2.761598, 12.5)",
+          "light_position": "(38.0, 2.731598, 12.5)",
+          "light_size": 0.0,
+          "shadow": true,
+          "source": "G_source_10"
+        },
+        "profile": {
+          "distance_attenuation": 1.0,
+          "energy_scale_from_v46": 0.7,
+          "points": 1,
+          "projector": "256x128 downward cosine",
+          "shadow_bias": 0.025,
+          "shadow_filter": "medium PCSS; lobby filtered PCF",
+          "shadow_normal_bias": 0.02,
+          "size_m": 0.08,
+          "spacing_m": 0.0
+        },
+        "shadow_geometry": "original_meshes",
+        "shadow_meshes": 0,
+        "shadow_triangles": 0
+      }
+    },
+    "solo": {
+      "bank_cached": false,
+      "bank_nodes": 7948,
+      "controls": {},
+      "coop": {
+        "active": false,
+        "aim": [
+          0.0,
+          0.0
+        ],
+        "bank_scene": true,
+        "bank_tick": -1,
+        "camera_rotation": "(0.0, -1.120596, 0.0)",
+        "combat": {},
+        "doors": {
+          "F2_elev": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "leaves": 4,
+            "mode": "slide",
+            "position": [
+              38.5,
+              3.59999990463257,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "F3_elev": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "leaves": 4,
+            "mode": "slide",
+            "position": [
+              38.5,
+              7.19999980926514,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "F4_elev": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "leaves": 4,
+            "mode": "slide",
+            "position": [
+              38.5,
+              10.8000001907349,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "G_elev": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "leaves": 4,
+            "mode": "slide",
+            "position": [
+              38.5,
+              0.0,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_back": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              6.0,
+              3.59999990463257,
+              1.79999995231628
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_counter": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              22.7000007629395,
+              3.59999990463257,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_front": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              34.0,
+              3.59999990463257,
+              12.8000001907349
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_mgr": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              27.7000007629395,
+              3.59999990463257,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_pres": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              14.0,
+              3.59999990463257,
+              15.8000001907349
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_storage": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              9.69999980926514,
+              3.59999990463257,
+              3.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_toilet": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              30.0,
+              3.59999990463257,
+              1.70000004768372
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_back": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              6.0,
+              7.19999980926514,
+              1.79999995231628
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_dA": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              16.0,
+              7.19999980926514,
+              12.6999998092651
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_dB": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              20.0,
+              7.19999980926514,
+              5.69999980926514
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_front": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              34.0,
+              7.19999980926514,
+              12.8000001907349
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_safe": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              16.0,
+              7.19999980926514,
+              18.7000007629395
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_store": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              30.7000007629395,
+              7.19999980926514,
+              8.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_sup": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              16.0,
+              7.19999980926514,
+              6.69999980926514
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_t1": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              23.2000007629395,
+              7.19999980926514,
+              16.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_t2": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              30.2000007629395,
+              7.19999980926514,
+              16.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_code": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              6.0,
+              10.8000001907349,
+              1.79999995231628
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_conf": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              19.7000007629395,
+              10.8000001907349,
+              8.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_front": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              34.0,
+              10.8000001907349,
+              12.8000001907349
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_gate": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0
+            ],
+            "leaves": 2,
+            "mode": "hinge",
+            "position": [
+              26.0,
+              10.8000001907349,
+              12.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_kitchen": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              29.7000007629395,
+              10.8000001907349,
+              8.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_lounge": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              12.6999998092651,
+              10.8000001907349,
+              8.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_t1": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              8.0,
+              10.8000001907349,
+              14.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_t2": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              12.0,
+              10.8000001907349,
+              14.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_comp": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              31.0,
+              0.0,
+              5.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_fin": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              31.7000007629395,
+              0.0,
+              16.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_garage": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0
+            ],
+            "leaves": 2,
+            "mode": "hinge",
+            "position": [
+              46.0,
+              0.0,
+              16.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_gate": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0
+            ],
+            "leaves": 2,
+            "mode": "hinge",
+            "position": [
+              45.0,
+              0.0,
+              29.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_inner": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              26.0,
+              0.0,
+              6.75
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_iron": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              2.79999995231628,
+              0.0,
+              0.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_main": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0
+            ],
+            "leaves": 2,
+            "mode": "hinge",
+            "position": [
+              18.0,
+              0.0,
+              22.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_mgr": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              35.0,
+              0.0,
+              11.6999998092651
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_monitor": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              34.2999992370605,
+              0.0,
+              5.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_outer": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              29.0,
+              0.0,
+              6.75
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_secu": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              44.7000007629395,
+              0.0,
+              -7.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_shutter": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "lift",
+            "position": [
+              40.0,
+              0.0,
+              13.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_wc": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              10.0,
+              0.0,
+              4.19999980926514
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          }
+        },
+        "enemies": [
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_mon",
+            "mode": "idle",
+            "position": [
+              35.5,
+              -0.00965278223156929,
+              3.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall0",
+            "mode": "idle",
+            "position": [
+              8.0,
+              -0.00895833596587181,
+              13.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall1",
+            "mode": "idle",
+            "position": [
+              10.0,
+              -0.00991319864988327,
+              16.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall2",
+            "mode": "idle",
+            "position": [
+              13.0,
+              -0.00965278223156929,
+              12.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall3",
+            "mode": "idle",
+            "position": [
+              16.0,
+              -0.00965278223156929,
+              16.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall4",
+            "mode": "idle",
+            "position": [
+              19.0,
+              -0.00895833596587181,
+              20.0
+            ]
+          },
+          {
+            "active": false,
+            "hp": 65.0,
+            "id": "G_hall5",
+            "mode": "idle",
+            "position": [
+              22.0,
+              0.0399999991059303,
+              14.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall6",
+            "mode": "idle",
+            "position": [
+              24.0,
+              -0.00965278223156929,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall7",
+            "mode": "idle",
+            "position": [
+              7.5,
+              -0.00991319864988327,
+              18.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall8",
+            "mode": "idle",
+            "position": [
+              14.0,
+              -0.00895833596587181,
+              20.5
+            ]
+          },
+          {
+            "active": false,
+            "hp": 65.0,
+            "id": "G_hall9",
+            "mode": "idle",
+            "position": [
+              20.0,
+              0.0399999991059303,
+              11.5
+            ]
+          },
+          {
+            "active": false,
+            "hp": 65.0,
+            "id": "G_hall10",
+            "mode": "idle",
+            "position": [
+              25.0,
+              0.0399999991059303,
+              12.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall11",
+            "mode": "idle",
+            "position": [
+              17.0,
+              -0.00991319864988327,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 60.0,
+            "id": "G_run0",
+            "mode": "idle",
+            "position": [
+              12.0,
+              -0.00895833596587181,
+              19.5
+            ]
+          },
+          {
+            "active": false,
+            "hp": 60.0,
+            "id": "G_run1",
+            "mode": "idle",
+            "position": [
+              22.5,
+              0.0399999991059303,
+              16.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 60.0,
+            "id": "G_run2",
+            "mode": "idle",
+            "position": [
+              9.0,
+              -0.00895833596587181,
+              14.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 120.0,
+            "id": "G_fe0",
+            "mode": "idle",
+            "position": [
+              23.0,
+              -0.00991319864988327,
+              20.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 120.0,
+            "id": "G_fe1",
+            "mode": "idle",
+            "position": [
+              9.0,
+              -0.00895833596587181,
+              17.5
+            ]
+          },
+          {
+            "active": false,
+            "hp": 120.0,
+            "id": "G_fe2",
+            "mode": "idle",
+            "position": [
+              19.0,
+              0.0399999991059303,
+              13.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 330.0,
+            "id": "G_elite",
+            "mode": "idle",
+            "position": [
+              16.0,
+              -0.00965278223156929,
+              13.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_out0",
+            "mode": "idle",
+            "position": [
+              16.5,
+              -0.00991319864988327,
+              23.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_out1",
+            "mode": "idle",
+            "position": [
+              18.0,
+              -0.00895833596587181,
+              23.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_out2",
+            "mode": "idle",
+            "position": [
+              19.5,
+              -0.00991319864988327,
+              23.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_cow0",
+            "mode": "idle",
+            "position": [
+              11.4843511581421,
+              -0.00895833596587181,
+              2.98586058616638
+            ]
+          },
+          {
+            "active": false,
+            "hp": 65.0,
+            "id": "G_cow1",
+            "mode": "idle",
+            "position": [
+              16.0,
+              0.0399999991059303,
+              7.5
+            ]
+          },
+          {
+            "active": false,
+            "hp": 65.0,
+            "id": "G_cow2",
+            "mode": "idle",
+            "position": [
+              21.0,
+              0.0399999991059303,
+              2.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_y0",
+            "mode": "idle",
+            "position": [
+              12.0,
+              -0.00991319864988327,
+              -3.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_y1",
+            "mode": "idle",
+            "position": [
+              24.0,
+              -0.00895833596587181,
+              -11.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_y2",
+            "mode": "idle",
+            "position": [
+              47.5,
+              -0.00965278223156929,
+              -3.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 120.0,
+            "id": "G_pe",
+            "mode": "idle",
+            "position": [
+              22.0,
+              -0.00895833596587181,
+              -12.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 660.0,
+            "id": "F2_boss",
+            "mode": "idle",
+            "position": [
+              9.5,
+              3.58999991416931,
+              17.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "ST3",
+            "mode": "idle",
+            "position": [
+              35.842456817627,
+              5.39104127883911,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 150.0,
+            "id": "F3_sup",
+            "mode": "idle",
+            "position": [
+              11.5,
+              7.19008588790894,
+              6.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F3_e0",
+            "mode": "idle",
+            "position": [
+              18.0,
+              7.19034624099731,
+              4.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F3_e1",
+            "mode": "idle",
+            "position": [
+              24.0,
+              7.19034624099731,
+              13.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F3_e2",
+            "mode": "idle",
+            "position": [
+              18.0,
+              7.19104099273682,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F3_e3",
+            "mode": "idle",
+            "position": [
+              31.0,
+              7.19034624099731,
+              5.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_cook",
+            "mode": "idle",
+            "position": [
+              30.0,
+              10.7910423278809,
+              4.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_bil",
+            "mode": "idle",
+            "position": [
+              17.0,
+              10.7900009155273,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "ST4",
+            "mode": "idle",
+            "position": [
+              38.342456817627,
+              8.991042137146,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_c0",
+            "mode": "idle",
+            "position": [
+              16.5,
+              10.7900009155273,
+              1.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_c1",
+            "mode": "idle",
+            "position": [
+              24.0,
+              10.7910423278809,
+              2.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_c2",
+            "mode": "idle",
+            "position": [
+              22.5,
+              10.7900009155273,
+              7.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_l0",
+            "mode": "idle",
+            "position": [
+              8.0,
+              10.7910423278809,
+              6.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_l1",
+            "mode": "idle",
+            "position": [
+              12.0,
+              10.7900009155273,
+              1.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 198.0,
+            "id": "F4_elite",
+            "mode": "idle",
+            "position": [
+              10.0,
+              10.7910423278809,
+              6.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_wc",
+            "mode": "idle",
+            "position": [
+              8.0,
+              10.7900009155273,
+              15.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_0",
+            "mode": "idle",
+            "position": [
+              35.0,
+              1.79104161262512,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_1",
+            "mode": "idle",
+            "position": [
+              36.5,
+              1.79008674621582,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_2",
+            "mode": "idle",
+            "position": [
+              37.5,
+              1.79104161262512,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_3",
+            "mode": "idle",
+            "position": [
+              39.0,
+              1.79008674621582,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_4",
+            "mode": "idle",
+            "position": [
+              38.0,
+              2.13027763366699,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_5",
+            "mode": "idle",
+            "position": [
+              39.0,
+              2.38027763366699,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_6",
+            "mode": "idle",
+            "position": [
+              38.0,
+              2.63027763366699,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_7",
+            "mode": "idle",
+            "position": [
+              39.0,
+              2.88027763366699,
+              18.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_8",
+            "mode": "idle",
+            "position": [
+              38.0,
+              3.13027763366699,
+              18.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_0",
+            "mode": "idle",
+            "position": [
+              35.0,
+              3.88027763366699,
+              17.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_1",
+            "mode": "idle",
+            "position": [
+              36.0,
+              4.13027763366699,
+              18.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_2",
+            "mode": "idle",
+            "position": [
+              35.0,
+              4.63027763366699,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_3",
+            "mode": "idle",
+            "position": [
+              36.0,
+              4.88027763366699,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_4",
+            "mode": "idle",
+            "position": [
+              35.0,
+              5.13027763366699,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_5",
+            "mode": "idle",
+            "position": [
+              35.0,
+              5.39104127883911,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_6",
+            "mode": "idle",
+            "position": [
+              36.657543182373,
+              5.39008617401123,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_7",
+            "mode": "idle",
+            "position": [
+              37.5,
+              5.39104127883911,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_8",
+            "mode": "idle",
+            "position": [
+              39.0,
+              5.39008617401123,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_9",
+            "mode": "idle",
+            "position": [
+              38.0,
+              5.73027753829956,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_10",
+            "mode": "idle",
+            "position": [
+              39.0,
+              5.98027753829956,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_11",
+            "mode": "idle",
+            "position": [
+              38.0,
+              6.23027753829956,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_12",
+            "mode": "idle",
+            "position": [
+              39.0,
+              6.48027753829956,
+              18.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_13",
+            "mode": "idle",
+            "position": [
+              38.0,
+              6.73027753829956,
+              18.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_0",
+            "mode": "idle",
+            "position": [
+              35.0,
+              7.48027753829956,
+              17.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_1",
+            "mode": "idle",
+            "position": [
+              36.0,
+              7.73027753829956,
+              18.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_2",
+            "mode": "idle",
+            "position": [
+              35.0,
+              8.23027801513672,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_3",
+            "mode": "idle",
+            "position": [
+              36.0,
+              8.48027801513672,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_4",
+            "mode": "idle",
+            "position": [
+              35.0,
+              8.73027801513672,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_5",
+            "mode": "idle",
+            "position": [
+              35.0,
+              8.991042137146,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_6",
+            "mode": "idle",
+            "position": [
+              36.5,
+              8.99000072479248,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_7",
+            "mode": "idle",
+            "position": [
+              37.5,
+              8.991042137146,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_8",
+            "mode": "idle",
+            "position": [
+              39.157543182373,
+              8.99000072479248,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_9",
+            "mode": "idle",
+            "position": [
+              38.0,
+              9.33027839660645,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_10",
+            "mode": "idle",
+            "position": [
+              39.0,
+              9.58027839660645,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_11",
+            "mode": "idle",
+            "position": [
+              38.0,
+              9.83027839660645,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_12",
+            "mode": "idle",
+            "position": [
+              39.0,
+              10.0802783966064,
+              18.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_13",
+            "mode": "idle",
+            "position": [
+              38.0,
+              10.3302783966064,
+              18.0
+            ]
+          }
+        ],
+        "equipment": {},
+        "input_sequence": 0,
+        "kills": 0,
+        "leader": 0,
+        "local_id": 0,
+        "local_server_pid": -1,
+        "network": {},
+        "players": [],
+        "rejected_inputs": 0,
+        "revision": 0,
+        "round": 0,
+        "server": false,
+        "server_peak_usec": 0,
+        "server_tick_usec": 0,
+        "snapshot_tick": -1,
+        "started": false,
+        "status": "未连接",
+        "team_wiped": false,
+        "tick": 0,
+        "wire_bytes": 0
+      },
+      "diffuse_nodes": 54,
+      "enemies": [
+        {
+          "active": true,
+          "id": "G_mon",
+          "position": [
+            35.5,
+            -0.00965278223156929,
+            3.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall0",
+          "position": [
+            8.0,
+            -0.00895833596587181,
+            13.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall1",
+          "position": [
+            10.0,
+            -0.00991319864988327,
+            16.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall2",
+          "position": [
+            13.0,
+            -0.00965278223156929,
+            12.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall3",
+          "position": [
+            16.0,
+            -0.00965278223156929,
+            16.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall4",
+          "position": [
+            19.0,
+            -0.00895833596587181,
+            20.0
+          ]
+        },
+        {
+          "active": false,
+          "id": "G_hall5",
+          "position": [
+            22.0,
+            0.0399999991059303,
+            14.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall6",
+          "position": [
+            24.0,
+            -0.00965278223156929,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall7",
+          "position": [
+            7.5,
+            -0.00991319864988327,
+            18.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall8",
+          "position": [
+            14.0,
+            -0.00895833596587181,
+            20.5
+          ]
+        },
+        {
+          "active": false,
+          "id": "G_hall9",
+          "position": [
+            20.0,
+            0.0399999991059303,
+            11.5
+          ]
+        },
+        {
+          "active": false,
+          "id": "G_hall10",
+          "position": [
+            25.0,
+            0.0399999991059303,
+            12.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall11",
+          "position": [
+            17.0,
+            -0.00991319864988327,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_run0",
+          "position": [
+            12.0,
+            -0.00895833596587181,
+            19.5
+          ]
+        },
+        {
+          "active": false,
+          "id": "G_run1",
+          "position": [
+            22.5,
+            0.0399999991059303,
+            16.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_run2",
+          "position": [
+            9.0,
+            -0.00895833596587181,
+            14.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_fe0",
+          "position": [
+            23.0,
+            -0.00991319864988327,
+            20.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_fe1",
+          "position": [
+            9.0,
+            -0.00895833596587181,
+            17.5
+          ]
+        },
+        {
+          "active": false,
+          "id": "G_fe2",
+          "position": [
+            19.0,
+            0.0399999991059303,
+            13.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_elite",
+          "position": [
+            16.0,
+            -0.00965278223156929,
+            13.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_out0",
+          "position": [
+            16.5,
+            -0.00991319864988327,
+            23.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_out1",
+          "position": [
+            18.0,
+            -0.00895833596587181,
+            23.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_out2",
+          "position": [
+            19.5,
+            -0.00991319864988327,
+            23.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_cow0",
+          "position": [
+            11.4843511581421,
+            -0.00895833596587181,
+            2.98586058616638
+          ]
+        },
+        {
+          "active": false,
+          "id": "G_cow1",
+          "position": [
+            16.0,
+            0.0399999991059303,
+            7.5
+          ]
+        },
+        {
+          "active": false,
+          "id": "G_cow2",
+          "position": [
+            21.0,
+            0.0399999991059303,
+            2.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_y0",
+          "position": [
+            12.0,
+            -0.00991319864988327,
+            -3.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_y1",
+          "position": [
+            24.0,
+            -0.00895833596587181,
+            -11.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_y2",
+          "position": [
+            47.5,
+            -0.00965278223156929,
+            -3.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_pe",
+          "position": [
+            22.0,
+            -0.00895833596587181,
+            -12.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F2_boss",
+          "position": [
+            9.5,
+            3.58999991416931,
+            17.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "ST3",
+          "position": [
+            35.842456817627,
+            5.39104127883911,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F3_sup",
+          "position": [
+            11.5,
+            7.19008588790894,
+            6.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F3_e0",
+          "position": [
+            18.0,
+            7.19034624099731,
+            4.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F3_e1",
+          "position": [
+            24.0,
+            7.19034624099731,
+            13.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F3_e2",
+          "position": [
+            18.0,
+            7.19104099273682,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F3_e3",
+          "position": [
+            31.0,
+            7.19034624099731,
+            5.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_cook",
+          "position": [
+            30.0,
+            10.7910423278809,
+            4.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_bil",
+          "position": [
+            17.0,
+            10.7900009155273,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "ST4",
+          "position": [
+            38.342456817627,
+            8.991042137146,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_c0",
+          "position": [
+            16.5,
+            10.7900009155273,
+            1.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_c1",
+          "position": [
+            24.0,
+            10.7910423278809,
+            2.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_c2",
+          "position": [
+            22.5,
+            10.7900009155273,
+            7.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_l0",
+          "position": [
+            8.0,
+            10.7910423278809,
+            6.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_l1",
+          "position": [
+            12.0,
+            10.7900009155273,
+            1.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_elite",
+          "position": [
+            10.0,
+            10.7910423278809,
+            6.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_wc",
+          "position": [
+            8.0,
+            10.7900009155273,
+            15.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_0",
+          "position": [
+            35.0,
+            1.79104161262512,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_1",
+          "position": [
+            36.5,
+            1.79008674621582,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_2",
+          "position": [
+            37.5,
+            1.79104161262512,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_3",
+          "position": [
+            39.0,
+            1.79008674621582,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_4",
+          "position": [
+            38.0,
+            2.13027763366699,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_5",
+          "position": [
+            39.0,
+            2.38027763366699,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_6",
+          "position": [
+            38.0,
+            2.63027763366699,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_7",
+          "position": [
+            39.0,
+            2.88027763366699,
+            18.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_8",
+          "position": [
+            38.0,
+            3.13027763366699,
+            18.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_0",
+          "position": [
+            35.0,
+            3.88027763366699,
+            17.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_1",
+          "position": [
+            36.0,
+            4.13027763366699,
+            18.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_2",
+          "position": [
+            35.0,
+            4.63027763366699,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_3",
+          "position": [
+            36.0,
+            4.88027763366699,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_4",
+          "position": [
+            35.0,
+            5.13027763366699,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_5",
+          "position": [
+            35.0,
+            5.39104127883911,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_6",
+          "position": [
+            36.657543182373,
+            5.39008617401123,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_7",
+          "position": [
+            37.5,
+            5.39104127883911,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_8",
+          "position": [
+            39.0,
+            5.39008617401123,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_9",
+          "position": [
+            38.0,
+            5.73027753829956,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_10",
+          "position": [
+            39.0,
+            5.98027753829956,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_11",
+          "position": [
+            38.0,
+            6.23027753829956,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_12",
+          "position": [
+            39.0,
+            6.48027753829956,
+            18.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_13",
+          "position": [
+            38.0,
+            6.73027753829956,
+            18.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_0",
+          "position": [
+            35.0,
+            7.48027753829956,
+            17.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_1",
+          "position": [
+            36.0,
+            7.73027753829956,
+            18.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_2",
+          "position": [
+            35.0,
+            8.23027801513672,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_3",
+          "position": [
+            36.0,
+            8.48027801513672,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_4",
+          "position": [
+            35.0,
+            8.73027801513672,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_5",
+          "position": [
+            35.0,
+            8.991042137146,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_6",
+          "position": [
+            36.5,
+            8.99000072479248,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_7",
+          "position": [
+            37.5,
+            8.991042137146,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_8",
+          "position": [
+            39.157543182373,
+            8.99000072479248,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_9",
+          "position": [
+            38.0,
+            9.33027839660645,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_10",
+          "position": [
+            39.0,
+            9.58027839660645,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_11",
+          "position": [
+            38.0,
+            9.83027839660645,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_12",
+          "position": [
+            39.0,
+            10.0802783966064,
+            18.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_13",
+          "position": [
+            38.0,
+            10.3302783966064,
+            18.0
+          ]
+        }
+      ],
+      "hp": 100.0,
+      "input_enabled": false,
+      "lighting": {
+        "bake_mode": "indirect_only",
+        "loaded": true,
+        "meshes": 481.0,
+        "preview": false
+      },
+      "loading": false,
+      "message": "",
+      "page": "loading",
+      "position": [
+        24.2604541778564,
+        -0.0190933682024479,
+        7.59080076217651
+      ],
+      "profile_copies": [
+        true,
+        true
+      ],
+      "room_lighting": {
+        "emitters": 54,
+        "fixture_count": 54,
+        "fixtures": [
+          {
+            "floor": "G",
+            "id": "G_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_5",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "现金柜台"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_6",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "现金柜台"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_7",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "经理室"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_8",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "经理室"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_9",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "理财室"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_10",
+            "line_total_energy": 1.79285402655601,
+            "range": 8.0,
+            "spot_energy": 1.50660002231598,
+            "zone": "前楼梯走廊"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_11",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "监控机房"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_12",
+            "line_total_energy": 1.39444196224213,
+            "range": 5.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "二道门"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_18",
+            "line_total_energy": 0.959140026569366,
+            "range": 6.0,
+            "spot_energy": 1.37020003795624,
+            "zone": "车库"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_19",
+            "line_total_energy": 1.59364795684814,
+            "range": 7.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "保安宿舍"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_4",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "楼梯口"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_5",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "杂物房"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_6",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "二楼现金柜台"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_7",
+            "line_total_energy": 1.39444196224213,
+            "range": 7.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "客户经理办公室"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_8",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "厕所"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_9",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "二楼现金柜台"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_10",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "客户休息区"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_11",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "客户休息区"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_12",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "客户休息区"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_13",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "行长办公室"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_4",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "楼梯口"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_5",
+            "line_total_energy": 1.39444196224213,
+            "range": 7.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "主管宿舍"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_6",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "员工宿舍A"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_8",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "员工宿舍B"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_9",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "储物间"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_10",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "活动室"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_11",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "活动室"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_12",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "员工宿舍B"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_13",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "我的宿舍"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_14",
+            "line_total_energy": 1.19523596763611,
+            "range": 8.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "后走廊"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_15",
+            "line_total_energy": 0.99602997303009,
+            "range": 8.0,
+            "spot_energy": 1.42289996147156,
+            "zone": "厕所"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_0",
+            "line_total_energy": 0.95200001001358,
+            "range": 5.0,
+            "spot_energy": 1.36000001430511,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_3",
+            "line_total_energy": 0.95200001001358,
+            "range": 5.0,
+            "spot_energy": 1.36000001430511,
+            "zone": "前楼梯"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_4",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "楼梯口"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_5",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "休息区"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_6",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "西走廊"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_7",
+            "line_total_energy": 0.796823978424072,
+            "range": 7.0,
+            "spot_energy": 1.13831996917725,
+            "zone": "厕所"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_8",
+            "line_total_energy": 1.75301275253296,
+            "range": 8.0,
+            "spot_energy": 2.50430393218994,
+            "zone": "会议室"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_9",
+            "line_total_energy": 1.75301275253296,
+            "range": 8.0,
+            "spot_energy": 2.50430393218994,
+            "zone": "会议室"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_10",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "台球区"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_11",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "台球区"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_12",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "厨房"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_13",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "食堂"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_14",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "食堂"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_0",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_1",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_2",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_3",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_4",
+            "line_total_energy": 0.0,
+            "range": 8.0,
+            "spot_energy": 0.0,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_5",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          }
+        ],
+        "indirect": "unchanged v46; preview, not a matching rebake",
+        "lobby": {
+          "cabin_lights_unchanged": [
+            "G_source_2",
+            "F2_source_2",
+            "F3_source_2",
+            "F4_source_2"
+          ],
+          "energy": 1.79285407066345,
+          "housing": "/root/BankExploration/LobbyFluorescentHousing",
+          "housing_position": "(38.0, 2.761598, 12.5)",
+          "light_position": "(38.0, 2.731598, 12.5)",
+          "light_size": 0.0,
+          "shadow": true,
+          "source": "G_source_10"
+        },
+        "profile": {
+          "distance_attenuation": 1.0,
+          "energy_scale_from_v46": 0.7,
+          "points": 1,
+          "projector": "256x128 downward cosine",
+          "shadow_bias": 0.025,
+          "shadow_filter": "medium PCSS; lobby filtered PCF",
+          "shadow_normal_bias": 0.02,
+          "size_m": 0.08,
+          "spacing_m": 0.0
+        },
+        "shadow_geometry": "original_meshes",
+        "shadow_meshes": 0,
+        "shadow_triangles": 0
+      },
+      "scene": "BankExploration",
+      "server_pid": -1,
+      "started": false,
+      "ui": "play"
+    },
+    "multiplayer": {
+      "bank_cached": false,
+      "bank_nodes": 7956,
+      "controls": {
+        "address": {
+          "disabled": false,
+          "rect": [
+            384.0,
+            164.0,
+            81.25,
+            33.0
+          ],
+          "text": "127.0.0.1",
+          "visible": false
+        },
+        "back_button": {
+          "disabled": false,
+          "rect": [
+            384.0,
+            310.0,
+            512.0,
+            45.0
+          ],
+          "text": "取消并返回连接页面",
+          "visible": false
+        },
+        "create_button": {
+          "disabled": true,
+          "rect": [
+            384.0,
+            164.0,
+            144.0,
+            45.0
+          ],
+          "text": "创建本地会话",
+          "visible": false
+        },
+        "join_button": {
+          "disabled": true,
+          "rect": [
+            384.0,
+            164.0,
+            162.0,
+            45.0
+          ],
+          "text": "加入指定服务器",
+          "visible": false
+        },
+        "leave_button": {
+          "disabled": false,
+          "rect": [
+            384.0,
+            339.0,
+            512.0,
+            45.0
+          ],
+          "text": "离开会话",
+          "visible": false
+        },
+        "nickname": {
+          "disabled": false,
+          "rect": [
+            384.0,
+            164.0,
+            81.25,
+            33.0
+          ],
+          "text": "玩家",
+          "visible": false
+        },
+        "restart_button": {
+          "disabled": false,
+          "rect": [
+            384.0,
+            164.0,
+            144.0,
+            45.0
+          ],
+          "text": "全队重新开始",
+          "visible": false
+        },
+        "resume_button": {
+          "disabled": false,
+          "rect": [
+            384.0,
+            164.0,
+            108.0,
+            45.0
+          ],
+          "text": "继续行动",
+          "visible": false
+        }
+      },
+      "coop": {
+        "active": true,
+        "aim": [
+          -1.12059605121613,
+          0.0
+        ],
+        "bank_scene": true,
+        "bank_tick": 9552,
+        "camera_rotation": "(0.0, -1.120596, 0.0)",
+        "combat": {
+          "1627786735": {
+            "ammo": {
+              "baton": {
+                "clip": 0,
+                "reserve": 0
+              },
+              "pistol": {
+                "clip": 15,
+                "reserve": -1
+              },
+              "shotgun": {
+                "clip": 8,
+                "reserve": 72
+              }
+            },
+            "damage_direction": "(0.0, 0.0)",
+            "damage_time": 0.0,
+            "dead": false,
+            "duration": 1.0,
+            "grabbed": false,
+            "grabber": "",
+            "head": false,
+            "hit": 0.0,
+            "hp": 100.0,
+            "kill": false,
+            "last_shot": {},
+            "phase": "idle",
+            "shots": 0,
+            "struggles": 0,
+            "time": 0.766666666666667,
+            "weapon": "pistol"
+          }
+        },
+        "doors": {
+          "F2_elev": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "leaves": 4,
+            "mode": "slide",
+            "position": [
+              38.5,
+              3.59999990463257,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "F3_elev": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "leaves": 4,
+            "mode": "slide",
+            "position": [
+              38.5,
+              7.19999980926514,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "F4_elev": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "leaves": 4,
+            "mode": "slide",
+            "position": [
+              38.5,
+              10.8000001907349,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "G_elev": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0,
+              0.0,
+              0.0
+            ],
+            "leaves": 4,
+            "mode": "slide",
+            "position": [
+              38.5,
+              0.0,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_back": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              6.0,
+              3.59999990463257,
+              1.79999995231628
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_counter": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              22.7000007629395,
+              3.59999990463257,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_front": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              34.0,
+              3.59999990463257,
+              12.8000001907349
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_mgr": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              27.7000007629395,
+              3.59999990463257,
+              9.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_pres": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              14.0,
+              3.59999990463257,
+              15.8000001907349
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_storage": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              9.69999980926514,
+              3.59999990463257,
+              3.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f2_toilet": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              30.0,
+              3.59999990463257,
+              1.70000004768372
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_back": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              6.0,
+              7.19999980926514,
+              1.79999995231628
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_dA": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              16.0,
+              7.19999980926514,
+              12.6999998092651
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_dB": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              20.0,
+              7.19999980926514,
+              5.69999980926514
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_front": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              34.0,
+              7.19999980926514,
+              12.8000001907349
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_safe": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              16.0,
+              7.19999980926514,
+              18.7000007629395
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_store": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              30.7000007629395,
+              7.19999980926514,
+              8.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_sup": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              16.0,
+              7.19999980926514,
+              6.69999980926514
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_t1": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              23.2000007629395,
+              7.19999980926514,
+              16.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f3_t2": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              30.2000007629395,
+              7.19999980926514,
+              16.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_code": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              6.0,
+              10.8000001907349,
+              1.79999995231628
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_conf": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              19.7000007629395,
+              10.8000001907349,
+              8.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_front": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              34.0,
+              10.8000001907349,
+              12.8000001907349
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_gate": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0
+            ],
+            "leaves": 2,
+            "mode": "hinge",
+            "position": [
+              26.0,
+              10.8000001907349,
+              12.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_kitchen": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              29.7000007629395,
+              10.8000001907349,
+              8.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_lounge": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              12.6999998092651,
+              10.8000001907349,
+              8.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_t1": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              8.0,
+              10.8000001907349,
+              14.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "f4_t2": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              12.0,
+              10.8000001907349,
+              14.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_comp": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              31.0,
+              0.0,
+              5.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_fin": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              31.7000007629395,
+              0.0,
+              16.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_garage": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0
+            ],
+            "leaves": 2,
+            "mode": "hinge",
+            "position": [
+              46.0,
+              0.0,
+              16.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_gate": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0
+            ],
+            "leaves": 2,
+            "mode": "hinge",
+            "position": [
+              45.0,
+              0.0,
+              29.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_inner": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              26.0,
+              0.0,
+              6.75
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_iron": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              2.79999995231628,
+              0.0,
+              0.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_main": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0,
+              0.0
+            ],
+            "leaves": 2,
+            "mode": "hinge",
+            "position": [
+              18.0,
+              0.0,
+              22.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_mgr": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              35.0,
+              0.0,
+              11.6999998092651
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_monitor": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              34.2999992370605,
+              0.0,
+              5.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_outer": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              29.0,
+              0.0,
+              6.75
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_secu": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              44.7000007629395,
+              0.0,
+              -7.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_shutter": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": 1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "lift",
+            "position": [
+              40.0,
+              0.0,
+              13.0
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          },
+          "g_wc": {
+            "angle": 0.0,
+            "blocked": false,
+            "blocker": {},
+            "hinge_swing": -1.0,
+            "leaf_rotations": [
+              0.0
+            ],
+            "leaves": 1,
+            "mode": "hinge",
+            "position": [
+              10.0,
+              0.0,
+              4.19999980926514
+            ],
+            "progress": 0.0,
+            "target": 0.0
+          }
+        },
+        "enemies": [
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_mon",
+            "mode": "idle",
+            "position": [
+              35.5,
+              -0.00973954610526562,
+              3.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall0",
+            "mode": "idle",
+            "position": [
+              8.0,
+              -0.00895833596587181,
+              13.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall1",
+            "mode": "idle",
+            "position": [
+              10.0,
+              -0.00869791768491268,
+              16.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall2",
+            "mode": "idle",
+            "position": [
+              13.0,
+              -0.00973954610526562,
+              12.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall3",
+            "mode": "idle",
+            "position": [
+              16.0,
+              -0.00973954610526562,
+              16.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall4",
+            "mode": "idle",
+            "position": [
+              19.0,
+              -0.00895833596587181,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall5",
+            "mode": "idle",
+            "position": [
+              22.0,
+              -0.00973945483565331,
+              14.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall6",
+            "mode": "idle",
+            "position": [
+              24.0,
+              -0.00973945483565331,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall7",
+            "mode": "idle",
+            "position": [
+              7.5,
+              -0.00869791768491268,
+              18.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall8",
+            "mode": "idle",
+            "position": [
+              14.0,
+              -0.00895833596587181,
+              20.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall9",
+            "mode": "idle",
+            "position": [
+              20.0,
+              -0.00973958428949118,
+              11.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall10",
+            "mode": "idle",
+            "position": [
+              25.0,
+              -0.00973958428949118,
+              12.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_hall11",
+            "mode": "idle",
+            "position": [
+              17.0,
+              -0.00869791768491268,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 60.0,
+            "id": "G_run0",
+            "mode": "idle",
+            "position": [
+              12.0,
+              -0.00895833596587181,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 60.0,
+            "id": "G_run1",
+            "mode": "idle",
+            "position": [
+              22.5,
+              -0.00973954610526562,
+              16.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 60.0,
+            "id": "G_run2",
+            "mode": "idle",
+            "position": [
+              9.0,
+              -0.00895833596587181,
+              14.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 120.0,
+            "id": "G_fe0",
+            "mode": "idle",
+            "position": [
+              23.0,
+              -0.00869791768491268,
+              20.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 120.0,
+            "id": "G_fe1",
+            "mode": "idle",
+            "position": [
+              9.0,
+              -0.00895833596587181,
+              17.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 120.0,
+            "id": "G_fe2",
+            "mode": "idle",
+            "position": [
+              19.0,
+              -0.00973945483565331,
+              13.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 330.0,
+            "id": "G_elite",
+            "mode": "idle",
+            "position": [
+              16.0,
+              -0.00973945483565331,
+              13.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_out0",
+            "mode": "idle",
+            "position": [
+              16.5,
+              -0.00869791768491268,
+              23.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_out1",
+            "mode": "idle",
+            "position": [
+              18.0,
+              -0.00895833596587181,
+              23.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_out2",
+            "mode": "idle",
+            "position": [
+              19.5,
+              -0.00869791768491268,
+              23.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_cow0",
+            "mode": "idle",
+            "position": [
+              11.4861469268799,
+              -0.00895833596587181,
+              2.98748350143433
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_cow1",
+            "mode": "chase",
+            "position": [
+              16.5806407928467,
+              -0.00903783179819584,
+              7.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_cow2",
+            "mode": "chase",
+            "position": [
+              21.0,
+              -0.00903784111142159,
+              3.06591486930847
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_y0",
+            "mode": "idle",
+            "position": [
+              12.0,
+              -0.00999995227903128,
+              -3.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_y1",
+            "mode": "idle",
+            "position": [
+              24.0,
+              -0.00895833596587181,
+              -11.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "G_y2",
+            "mode": "idle",
+            "position": [
+              47.5,
+              -0.00973954610526562,
+              -3.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 120.0,
+            "id": "G_pe",
+            "mode": "idle",
+            "position": [
+              22.0,
+              -0.00895833596587181,
+              -12.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 660.0,
+            "id": "F2_boss",
+            "mode": "idle",
+            "position": [
+              9.5,
+              3.59130191802979,
+              17.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "ST3",
+            "mode": "idle",
+            "position": [
+              35.8354034423828,
+              5.39019775390625,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 150.0,
+            "id": "F3_sup",
+            "mode": "idle",
+            "position": [
+              11.5,
+              7.19130182266235,
+              6.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F3_e0",
+            "mode": "idle",
+            "position": [
+              18.0,
+              7.19025993347168,
+              4.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F3_e1",
+            "mode": "idle",
+            "position": [
+              24.0,
+              7.19025993347168,
+              13.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F3_e2",
+            "mode": "idle",
+            "position": [
+              18.0,
+              7.19104146957397,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F3_e3",
+            "mode": "idle",
+            "position": [
+              31.0,
+              7.19026041030884,
+              5.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_cook",
+            "mode": "idle",
+            "position": [
+              30.0,
+              10.7910413742065,
+              4.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_bil",
+            "mode": "idle",
+            "position": [
+              17.0,
+              10.7900018692017,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "ST4",
+            "mode": "idle",
+            "position": [
+              38.3354034423828,
+              8.99019908905029,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_c0",
+            "mode": "idle",
+            "position": [
+              16.5,
+              10.7900018692017,
+              1.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_c1",
+            "mode": "idle",
+            "position": [
+              24.0,
+              10.7910413742065,
+              2.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_c2",
+            "mode": "idle",
+            "position": [
+              22.5,
+              10.79026222229,
+              7.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_l0",
+            "mode": "idle",
+            "position": [
+              8.0,
+              10.7910413742065,
+              6.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_l1",
+            "mode": "idle",
+            "position": [
+              12.0,
+              10.7900018692017,
+              1.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 198.0,
+            "id": "F4_elite",
+            "mode": "idle",
+            "position": [
+              10.0,
+              10.7910413742065,
+              6.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "F4_wc",
+            "mode": "idle",
+            "position": [
+              8.0,
+              10.7900009155273,
+              15.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_0",
+            "mode": "idle",
+            "position": [
+              35.0,
+              1.79104161262512,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_1",
+            "mode": "idle",
+            "position": [
+              36.5,
+              1.7913019657135,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_2",
+            "mode": "idle",
+            "position": [
+              37.5,
+              1.79104161262512,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_3",
+            "mode": "idle",
+            "position": [
+              39.0,
+              1.7913019657135,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_4",
+            "mode": "idle",
+            "position": [
+              38.0,
+              2.13062477111816,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_5",
+            "mode": "idle",
+            "position": [
+              39.0,
+              2.38062477111816,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_6",
+            "mode": "idle",
+            "position": [
+              38.0,
+              2.63062477111816,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_7",
+            "mode": "idle",
+            "position": [
+              39.0,
+              2.88062477111816,
+              18.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC0_8",
+            "mode": "idle",
+            "position": [
+              38.0,
+              3.13062477111816,
+              18.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_0",
+            "mode": "idle",
+            "position": [
+              35.0,
+              3.88062477111816,
+              17.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_1",
+            "mode": "idle",
+            "position": [
+              36.0,
+              4.13062477111816,
+              18.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_2",
+            "mode": "idle",
+            "position": [
+              35.0,
+              4.63062477111816,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_3",
+            "mode": "idle",
+            "position": [
+              36.0,
+              4.88062477111816,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_4",
+            "mode": "idle",
+            "position": [
+              35.0,
+              5.13062477111816,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_5",
+            "mode": "idle",
+            "position": [
+              35.0,
+              5.39104175567627,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_6",
+            "mode": "idle",
+            "position": [
+              36.516040802002,
+              5.39000034332275,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_7",
+            "mode": "idle",
+            "position": [
+              37.5,
+              5.39104175567627,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_8",
+            "mode": "idle",
+            "position": [
+              39.0,
+              5.39000034332275,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_9",
+            "mode": "idle",
+            "position": [
+              38.0,
+              5.73062467575073,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_10",
+            "mode": "idle",
+            "position": [
+              39.0,
+              5.98062467575073,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_11",
+            "mode": "idle",
+            "position": [
+              38.0,
+              6.23062467575073,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_12",
+            "mode": "idle",
+            "position": [
+              39.0,
+              6.48062467575073,
+              18.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC1_13",
+            "mode": "idle",
+            "position": [
+              38.0,
+              6.73062467575073,
+              18.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_0",
+            "mode": "idle",
+            "position": [
+              35.0,
+              7.48062467575073,
+              17.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_1",
+            "mode": "idle",
+            "position": [
+              36.0,
+              7.73062467575073,
+              18.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_2",
+            "mode": "idle",
+            "position": [
+              35.0,
+              8.23062515258789,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_3",
+            "mode": "idle",
+            "position": [
+              36.0,
+              8.48062515258789,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_4",
+            "mode": "idle",
+            "position": [
+              35.0,
+              8.73062515258789,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_5",
+            "mode": "idle",
+            "position": [
+              35.0,
+              8.99104118347168,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_6",
+            "mode": "idle",
+            "position": [
+              36.5,
+              8.9900016784668,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_7",
+            "mode": "idle",
+            "position": [
+              37.5,
+              8.99104118347168,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_8",
+            "mode": "idle",
+            "position": [
+              39.016040802002,
+              8.9900016784668,
+              21.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_9",
+            "mode": "idle",
+            "position": [
+              38.0,
+              9.33062553405762,
+              20.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_10",
+            "mode": "idle",
+            "position": [
+              39.0,
+              9.58062553405762,
+              19.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_11",
+            "mode": "idle",
+            "position": [
+              38.0,
+              9.83062553405762,
+              19.0
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_12",
+            "mode": "idle",
+            "position": [
+              39.0,
+              10.0806255340576,
+              18.5
+            ]
+          },
+          {
+            "active": true,
+            "hp": 65.0,
+            "id": "SC2_13",
+            "mode": "idle",
+            "position": [
+              38.0,
+              10.3306255340576,
+              18.0
+            ]
+          }
+        ],
+        "equipment": {},
+        "input_sequence": 39,
+        "kills": 0,
+        "leader": 1627786735,
+        "local_id": 1627786735,
+        "local_server_pid": -1,
+        "network": {
+          "1": {
+            "rtt_ms": 12.0,
+            "throttle": 32.0
+          }
+        },
+        "players": [
+          {
+            "ack": 37,
+            "avatar": {
+              "bones": 85,
+              "clips": [
+                "fire_pistol",
+                "fire_shotgun",
+                "idle",
+                "reload_pistol",
+                "reload_shotgun",
+                "reload_shotgun_end",
+                "reload_shotgun_start",
+                "run",
+                "shotgun_idle",
+                "shotgun_run",
+                "shotgun_walk",
+                "walk"
+              ],
+              "leg_rotation": [
+                0.643437504768372,
+                -0.479066073894501,
+                0.462750464677811,
+                -0.377287775278091
+              ],
+              "motion": "idle",
+              "source": "local_l4d2_reference",
+              "time": 0.0166666666666667,
+              "upper_action": "",
+              "weapon": "pistol"
+            },
+            "id": 1627786735,
+            "motion": "idle",
+            "name": "玩家",
+            "position": [
+              24.153881072998,
+              -0.019093181937933,
+              7.64231157302856
+            ],
+            "slot": 0,
+            "target": [
+              24.3024711608887,
+              -0.0190933961421251,
+              7.57049512863159
+            ],
+            "yaw": -1.12059605121613
+          }
+        ],
+        "rejected_inputs": 0,
+        "revision": 17,
+        "round": 4,
+        "server": false,
+        "server_peak_usec": 0,
+        "server_tick_usec": 0,
+        "snapshot_tick": 9552,
+        "started": true,
+        "status": "已连接 · 1/4 人",
+        "team_wiped": false,
+        "tick": 0,
+        "wire_bytes": 0
+      },
+      "diffuse_nodes": 54,
+      "enemies": [
+        {
+          "active": true,
+          "id": "G_mon",
+          "position": [
+            35.5,
+            -0.00973954610526562,
+            3.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall0",
+          "position": [
+            8.0,
+            -0.00895833596587181,
+            13.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall1",
+          "position": [
+            10.0,
+            -0.00869791768491268,
+            16.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall2",
+          "position": [
+            13.0,
+            -0.00973954610526562,
+            12.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall3",
+          "position": [
+            16.0,
+            -0.00973954610526562,
+            16.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall4",
+          "position": [
+            19.0,
+            -0.00895833596587181,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall5",
+          "position": [
+            22.0,
+            -0.00973945483565331,
+            14.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall6",
+          "position": [
+            24.0,
+            -0.00973945483565331,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall7",
+          "position": [
+            7.5,
+            -0.00869791768491268,
+            18.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall8",
+          "position": [
+            14.0,
+            -0.00895833596587181,
+            20.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall9",
+          "position": [
+            20.0,
+            -0.00973958428949118,
+            11.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall10",
+          "position": [
+            25.0,
+            -0.00973958428949118,
+            12.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_hall11",
+          "position": [
+            17.0,
+            -0.00869791768491268,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_run0",
+          "position": [
+            12.0,
+            -0.00895833596587181,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_run1",
+          "position": [
+            22.5,
+            -0.00973954610526562,
+            16.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_run2",
+          "position": [
+            9.0,
+            -0.00895833596587181,
+            14.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_fe0",
+          "position": [
+            23.0,
+            -0.00869791768491268,
+            20.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_fe1",
+          "position": [
+            9.0,
+            -0.00895833596587181,
+            17.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_fe2",
+          "position": [
+            19.0,
+            -0.00973945483565331,
+            13.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_elite",
+          "position": [
+            16.0,
+            -0.00973945483565331,
+            13.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_out0",
+          "position": [
+            16.5,
+            -0.00869791768491268,
+            23.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_out1",
+          "position": [
+            18.0,
+            -0.00895833596587181,
+            23.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_out2",
+          "position": [
+            19.5,
+            -0.00869791768491268,
+            23.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_cow0",
+          "position": [
+            11.4861469268799,
+            -0.00895833596587181,
+            2.98748350143433
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_cow1",
+          "position": [
+            16.5806407928467,
+            -0.00903783179819584,
+            7.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_cow2",
+          "position": [
+            21.0,
+            -0.00903784111142159,
+            3.06591486930847
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_y0",
+          "position": [
+            12.0,
+            -0.00999995227903128,
+            -3.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_y1",
+          "position": [
+            24.0,
+            -0.00895833596587181,
+            -11.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_y2",
+          "position": [
+            47.5,
+            -0.00973954610526562,
+            -3.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "G_pe",
+          "position": [
+            22.0,
+            -0.00895833596587181,
+            -12.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F2_boss",
+          "position": [
+            9.5,
+            3.59130191802979,
+            17.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "ST3",
+          "position": [
+            35.8354034423828,
+            5.39019775390625,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F3_sup",
+          "position": [
+            11.5,
+            7.19130182266235,
+            6.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F3_e0",
+          "position": [
+            18.0,
+            7.19025993347168,
+            4.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F3_e1",
+          "position": [
+            24.0,
+            7.19025993347168,
+            13.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F3_e2",
+          "position": [
+            18.0,
+            7.19104146957397,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F3_e3",
+          "position": [
+            31.0,
+            7.19026041030884,
+            5.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_cook",
+          "position": [
+            30.0,
+            10.7910413742065,
+            4.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_bil",
+          "position": [
+            17.0,
+            10.7900018692017,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "ST4",
+          "position": [
+            38.3354034423828,
+            8.99019908905029,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_c0",
+          "position": [
+            16.5,
+            10.7900018692017,
+            1.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_c1",
+          "position": [
+            24.0,
+            10.7910413742065,
+            2.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_c2",
+          "position": [
+            22.5,
+            10.79026222229,
+            7.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_l0",
+          "position": [
+            8.0,
+            10.7910413742065,
+            6.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_l1",
+          "position": [
+            12.0,
+            10.7900018692017,
+            1.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_elite",
+          "position": [
+            10.0,
+            10.7910413742065,
+            6.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "F4_wc",
+          "position": [
+            8.0,
+            10.7900009155273,
+            15.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_0",
+          "position": [
+            35.0,
+            1.79104161262512,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_1",
+          "position": [
+            36.5,
+            1.7913019657135,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_2",
+          "position": [
+            37.5,
+            1.79104161262512,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_3",
+          "position": [
+            39.0,
+            1.7913019657135,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_4",
+          "position": [
+            38.0,
+            2.13062477111816,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_5",
+          "position": [
+            39.0,
+            2.38062477111816,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_6",
+          "position": [
+            38.0,
+            2.63062477111816,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_7",
+          "position": [
+            39.0,
+            2.88062477111816,
+            18.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC0_8",
+          "position": [
+            38.0,
+            3.13062477111816,
+            18.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_0",
+          "position": [
+            35.0,
+            3.88062477111816,
+            17.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_1",
+          "position": [
+            36.0,
+            4.13062477111816,
+            18.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_2",
+          "position": [
+            35.0,
+            4.63062477111816,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_3",
+          "position": [
+            36.0,
+            4.88062477111816,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_4",
+          "position": [
+            35.0,
+            5.13062477111816,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_5",
+          "position": [
+            35.0,
+            5.39104175567627,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_6",
+          "position": [
+            36.516040802002,
+            5.39000034332275,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_7",
+          "position": [
+            37.5,
+            5.39104175567627,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_8",
+          "position": [
+            39.0,
+            5.39000034332275,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_9",
+          "position": [
+            38.0,
+            5.73062467575073,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_10",
+          "position": [
+            39.0,
+            5.98062467575073,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_11",
+          "position": [
+            38.0,
+            6.23062467575073,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_12",
+          "position": [
+            39.0,
+            6.48062467575073,
+            18.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC1_13",
+          "position": [
+            38.0,
+            6.73062467575073,
+            18.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_0",
+          "position": [
+            35.0,
+            7.48062467575073,
+            17.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_1",
+          "position": [
+            36.0,
+            7.73062467575073,
+            18.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_2",
+          "position": [
+            35.0,
+            8.23062515258789,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_3",
+          "position": [
+            36.0,
+            8.48062515258789,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_4",
+          "position": [
+            35.0,
+            8.73062515258789,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_5",
+          "position": [
+            35.0,
+            8.99104118347168,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_6",
+          "position": [
+            36.5,
+            8.9900016784668,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_7",
+          "position": [
+            37.5,
+            8.99104118347168,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_8",
+          "position": [
+            39.016040802002,
+            8.9900016784668,
+            21.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_9",
+          "position": [
+            38.0,
+            9.33062553405762,
+            20.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_10",
+          "position": [
+            39.0,
+            9.58062553405762,
+            19.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_11",
+          "position": [
+            38.0,
+            9.83062553405762,
+            19.0
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_12",
+          "position": [
+            39.0,
+            10.0806255340576,
+            18.5
+          ]
+        },
+        {
+          "active": true,
+          "id": "SC2_13",
+          "position": [
+            38.0,
+            10.3306255340576,
+            18.0
+          ]
+        }
+      ],
+      "hp": 100.0,
+      "input_enabled": true,
+      "lighting": {
+        "bake_mode": "indirect_only",
+        "loaded": true,
+        "meshes": 481.0,
+        "preview": false
+      },
+      "loading": false,
+      "message": "",
+      "page": "loading",
+      "position": [
+        24.153881072998,
+        -0.019093181937933,
+        7.64231157302856
+      ],
+      "profile_copies": [
+        true,
+        true
+      ],
+      "room_lighting": {
+        "emitters": 54,
+        "fixture_count": 54,
+        "fixtures": [
+          {
+            "floor": "G",
+            "id": "G_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_5",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "现金柜台"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_6",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "现金柜台"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_7",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "经理室"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_8",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "经理室"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_9",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "理财室"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_10",
+            "line_total_energy": 1.79285402655601,
+            "range": 8.0,
+            "spot_energy": 1.50660002231598,
+            "zone": "前楼梯走廊"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_11",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "监控机房"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_12",
+            "line_total_energy": 1.39444196224213,
+            "range": 5.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "二道门"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_18",
+            "line_total_energy": 0.959140026569366,
+            "range": 6.0,
+            "spot_energy": 1.37020003795624,
+            "zone": "车库"
+          },
+          {
+            "floor": "G",
+            "id": "G_source_19",
+            "line_total_energy": 1.59364795684814,
+            "range": 7.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "保安宿舍"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_4",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "楼梯口"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_5",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "杂物房"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_6",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "二楼现金柜台"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_7",
+            "line_total_energy": 1.39444196224213,
+            "range": 7.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "客户经理办公室"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_8",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "厕所"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_9",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "二楼现金柜台"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_10",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "客户休息区"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_11",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "客户休息区"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_12",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "客户休息区"
+          },
+          {
+            "floor": "F2",
+            "id": "F2_source_13",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "行长办公室"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_4",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "楼梯口"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_5",
+            "line_total_energy": 1.39444196224213,
+            "range": 7.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "主管宿舍"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_6",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "员工宿舍A"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_8",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "员工宿舍B"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_9",
+            "line_total_energy": 1.19523596763611,
+            "range": 7.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "储物间"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_10",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "活动室"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_11",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "活动室"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_12",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "员工宿舍B"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_13",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "我的宿舍"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_14",
+            "line_total_energy": 1.19523596763611,
+            "range": 8.0,
+            "spot_energy": 1.70747995376587,
+            "zone": "后走廊"
+          },
+          {
+            "floor": "F3",
+            "id": "F3_source_15",
+            "line_total_energy": 0.99602997303009,
+            "range": 8.0,
+            "spot_energy": 1.42289996147156,
+            "zone": "厕所"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_0",
+            "line_total_energy": 0.95200001001358,
+            "range": 5.0,
+            "spot_energy": 1.36000001430511,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_1",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "后楼梯"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_3",
+            "line_total_energy": 0.95200001001358,
+            "range": 5.0,
+            "spot_energy": 1.36000001430511,
+            "zone": "前楼梯"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_4",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "楼梯口"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_5",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "休息区"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_6",
+            "line_total_energy": 1.39444196224213,
+            "range": 8.0,
+            "spot_energy": 1.99205994606018,
+            "zone": "西走廊"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_7",
+            "line_total_energy": 0.796823978424072,
+            "range": 7.0,
+            "spot_energy": 1.13831996917725,
+            "zone": "厕所"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_8",
+            "line_total_energy": 1.75301275253296,
+            "range": 8.0,
+            "spot_energy": 2.50430393218994,
+            "zone": "会议室"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_9",
+            "line_total_energy": 1.75301275253296,
+            "range": 8.0,
+            "spot_energy": 2.50430393218994,
+            "zone": "会议室"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_10",
+            "line_total_energy": 1.99205994606018,
+            "range": 8.0,
+            "spot_energy": 2.84579992294312,
+            "zone": "台球区"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_11",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "台球区"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_12",
+            "line_total_energy": 1.59364795684814,
+            "range": 8.0,
+            "spot_energy": 2.27663993835449,
+            "zone": "厨房"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_13",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "食堂"
+          },
+          {
+            "floor": "F4",
+            "id": "F4_source_14",
+            "line_total_energy": 1.79285395145416,
+            "range": 8.0,
+            "spot_energy": 2.5612199306488,
+            "zone": "食堂"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_0",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_1",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_2",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_3",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_4",
+            "line_total_energy": 0.0,
+            "range": 8.0,
+            "spot_energy": 0.0,
+            "zone": "大厅"
+          },
+          {
+            "floor": "G",
+            "id": "G_hall_5",
+            "line_total_energy": 1.62315998077393,
+            "range": 8.0,
+            "spot_energy": 2.31879997253418,
+            "zone": "大厅"
+          }
+        ],
+        "indirect": "unchanged v46; preview, not a matching rebake",
+        "lobby": {
+          "cabin_lights_unchanged": [
+            "G_source_2",
+            "F2_source_2",
+            "F3_source_2",
+            "F4_source_2"
+          ],
+          "energy": 1.79285407066345,
+          "housing": "/root/BankExploration/LobbyFluorescentHousing",
+          "housing_position": "(38.0, 2.761598, 12.5)",
+          "light_position": "(38.0, 2.731598, 12.5)",
+          "light_size": 0.0,
+          "shadow": true,
+          "source": "G_source_10"
+        },
+        "profile": {
+          "distance_attenuation": 1.0,
+          "energy_scale_from_v46": 0.7,
+          "points": 1,
+          "projector": "256x128 downward cosine",
+          "shadow_bias": 0.025,
+          "shadow_filter": "medium PCSS; lobby filtered PCF",
+          "shadow_normal_bias": 0.02,
+          "size_m": 0.08,
+          "spacing_m": 0.0
+        },
+        "shadow_geometry": "original_meshes",
+        "shadow_meshes": 0,
+        "shadow_triangles": 0
+      },
+      "scene": "BankExploration",
+      "server_pid": -1,
+      "started": true,
+      "ui": "play"
+    }
+  },
+  "sequences": [
+    {
+      "viewer": "D:\\AIGameEngine\\logs\\sessions\\bank-lighting-entry-20261017-182214\\solo\\light_walk.html",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-lighting-entry-20261017-182214\\solo\\light_walk.webp",
+      "contact_sheet": "D:\\AIGameEngine\\logs\\sessions\\bank-lighting-entry-20261017-182214\\solo\\light_walk.contact.jpg",
+      "count": 8,
+      "interval": 6,
+      "simulation_duration": 0.7000000000000001,
+      "speed": 0.25
+    }
+  ],
+  "scope": "Fixed inspection cameras for world lighting; actual entry/movement via native inputs. Existing v46 indirect bake retained."
+}

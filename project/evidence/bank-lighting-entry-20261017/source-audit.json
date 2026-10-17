@@ -1,0 +1,17 @@
+{
+  "source_mismatches": {
+    "windows": [],
+    "linux": []
+  },
+  "packages": {
+    "windows": {
+      "path": "build/bank/combat-coop/20261017-182250/windows/package/BankCoop.exe",
+      "sha256": "4a666ece832d629a0ed0e7816329657a3fa3e31598bdf1b0ed298b202b892322"
+    },
+    "linux": {
+      "path": "build/bank/combat-coop/20261017-182250/linux/package/bank-coop-server.x86_64",
+      "sha256": "0e5a42f3424fe8af6586c93e17eddcc1ac4723a39a85277c2d8b32e15db3eeae"
+    }
+  },
+  "original_builder_sha256": "5f61d35394e5c91fe18d703a5ced17f5599301a24868079024601d6b363c9793"
+}

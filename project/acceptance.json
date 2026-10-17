@@ -639,6 +639,35 @@
         "gallery.html",
         "technical-review.json"
       ]
+    },
+    {
+      "id": "BANK-LIGHTING-ENTRY",
+      "kind": "automated",
+      "description": "Shared hanging lights in real solo/multiplayer entry, matched reference views, movement/projectors and release activation.",
+      "checks": [
+        "lighting_preview_54_emitters_and_bake",
+        "lighting_solo_normal_entry_and_movement",
+        "lighting_solo_54_emitters_and_bake",
+        "lighting_normal_walk_preserves_weapon_projector",
+        "lighting_multiplayer_normal_entry_and_movement",
+        "lighting_multiplayer_54_emitters_and_bake",
+        "lighting_five_views_match_selected_preview",
+        "bank_release_starts_menu_without_world",
+        "bank_release_two_clients",
+        "bank_release_debug_bridge_disabled",
+        "bank_release_bake_loaded",
+        "bank_release_hanging_lights_enabled"
+      ]
+    },
+    {
+      "id": "BANK-LIGHTING-ENTRY-ART",
+      "kind": "review",
+      "description": "Matched current bank lighting views and normal-movement sequence; final user art approval pending.",
+      "evidence": [
+        "gallery.html",
+        "comparison.jpg",
+        "light_walk.webp"
+      ]
     }
   ]
 }

@@ -492,6 +492,24 @@
         "docs/bank-coop-combat.md"
       ],
       "notes": "46 项技术检查通过，真实用户最终美术验收和公网 VPS 测试未推断为通过。"
+    },
+    {
+      "id": "BANK-LIGHTING-ENTRY-001",
+      "title": "修复主菜单和联机入口遗漏吊灯预览配光",
+      "status": "done",
+      "depends_on": [
+        "BANK-COOP-003"
+      ],
+      "acceptance": [
+        "BANK-LIGHTING-ENTRY",
+        "BANK-LIGHTING-ENTRY-ART"
+      ],
+      "definition_of_done": "单人和联机客户端启用已有54发光源配置，五视角与原预览一致，正常输入及正式包启用检查通过。",
+      "evidence": [
+        "project/evidence/bank-lighting-entry-20261017/report.json",
+        "project/evidence/bank-lighting-entry-20261017/gallery.html"
+      ],
+      "notes": "12 项技术检查通过；沿用原预览 v46 间接光，未声称匹配重烘焙或最终美术批准。"
     }
   ],
   "known_limits": [

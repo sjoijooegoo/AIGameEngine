@@ -1,5 +1,7 @@
 # 银行危机 · AI 游戏开发与测试框架
 
+已修复主菜单/联机入口遗漏吊灯配置的问题：单人和多人现在启用原预览的 54 个发光源及走廊灯具修正。[对照画面和 12 项定向检查](project/evidence/bank-lighting-entry-20261017/gallery.html) · [当前试玩包](build/bank/combat-coop/20261017-182250/windows/package/BankCoop.exe)。
+
 当前 [多人合作支持寻找服务器、随时加入和常驻 localhost WSL 服务](docs/bank-coop-combat.md)，人数实时显示，满 4 人拒绝加入；队友使用原生手枪/霰弹枪世界模型与骨骼动作。[46 项验证与动态画面](project/evidence/bank-open-coop-20261017/gallery.html)。
 
 新增 [当前银行 2–4 人合作会话与战斗](docs/bank-coop-combat.md)：创建/加入独立服务端、实时人数、共享门与感染者、独立生命和弹药、队友救援及全队重开。[验证画面与报告](project/evidence/bank-coop-combat-20261017/gallery.html)。

@@ -1,0 +1,107 @@
+{
+  "passed": true,
+  "checks": [
+    {
+      "name": "lighting_preview_54_emitters_and_bake",
+      "status": "pass",
+      "evidence": "lighting-report.json"
+    },
+    {
+      "name": "lighting_solo_normal_entry_and_movement",
+      "status": "pass",
+      "evidence": "lighting-report.json"
+    },
+    {
+      "name": "lighting_solo_54_emitters_and_bake",
+      "status": "pass",
+      "evidence": "lighting-report.json"
+    },
+    {
+      "name": "lighting_normal_walk_preserves_weapon_projector",
+      "status": "pass",
+      "evidence": "lighting-report.json"
+    },
+    {
+      "name": "lighting_multiplayer_normal_entry_and_movement",
+      "status": "pass",
+      "evidence": "lighting-report.json"
+    },
+    {
+      "name": "lighting_multiplayer_54_emitters_and_bake",
+      "status": "pass",
+      "evidence": "lighting-report.json"
+    },
+    {
+      "name": "lighting_five_views_match_selected_preview",
+      "status": "pass",
+      "metrics": {
+        "cash": {
+          "base": 2.8823163082437273,
+          "solo": 0.18123924731182794,
+          "multiplayer": 0.2140752688172043
+        },
+        "lobby": {
+          "base": 10.344851254480288,
+          "solo": 0.016690860215053765,
+          "multiplayer": 0.04650448028673835
+        },
+        "meeting": {
+          "base": 3.878883512544803,
+          "solo": 0.09148387096774195,
+          "multiplayer": 0.0
+        },
+        "floor3": {
+          "base": 2.9367661290322586,
+          "solo": 0.0,
+          "multiplayer": 0.0
+        },
+        "floor4": {
+          "base": 3.0900582437275985,
+          "solo": 0.0,
+          "multiplayer": 0.0
+        }
+      },
+      "evidence": "lighting-report.json"
+    },
+    {
+      "name": "bank_release_starts_menu_without_world",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_two_clients",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_debug_bridge_disabled",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_bake_loaded",
+      "status": "pass",
+      "evidence": "release-report.json"
+    },
+    {
+      "name": "bank_release_hanging_lights_enabled",
+      "status": "pass",
+      "evidence": "release-report.json"
+    }
+  ],
+  "sources": {
+    "lighting": "bank-lighting-entry-20261017-182214",
+    "release": "bank-coop-release-20261017-182537"
+  },
+  "cause": "Normal bank entry extended exploration.gd but never applied the hanging-luminaire profile used by the separate preview. Valid indirect bake hashes did not cover activation of realtime direct lights.",
+  "fix": "Shared single-player/co-op client entry applies the existing 54-emitter profile and viewmodel projectors. Dedicated server skips client lights.",
+  "scope": "Five matched fixed inspection views across four floors; native menu entry and movement; eight-frame native strafing sequence; release main menu and two clients.",
+  "limitations": [
+    "Existing v46 indirect light is retained exactly as in the selected preview; no matching rebake is claimed.",
+    "Technical comparison is not final user art approval or a whole-map performance claim."
+  ],
+  "failed_attempts": [
+    "logs/sessions/bank-lighting-entry-20261017-181718 (missing-meta getter emitted errors, fixed with has_meta)",
+    "logs/sessions/bank-lighting-entry-20261017-181843 (door prompt overlapped lighting ROI; comparison captures now consistently hide UI)"
+  ]
+}

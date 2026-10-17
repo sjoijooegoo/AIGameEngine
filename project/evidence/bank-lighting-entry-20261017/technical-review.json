@@ -1,0 +1,31 @@
+{
+  "reviewer": "Codex technical review",
+  "user_art_approval": false,
+  "report_sha256": "d672827c14e620b054b4175ced624388a58565fe6c1f92e09305b086f708648d",
+  "scope": "Reviewed before/reference/solo/multiplayer contact sheet and native movement sequence. Static inspection hides UI/actors, gameplay entry and movement are separate native-input checks.",
+  "evidence_sha256": {
+    "base-cash.png": "dd278f497e0408fa357250fda3fe830cefc96237161fdfd650ea115c8fb86185",
+    "base-lobby.png": "b0cf373fb86f6fa2e343d7db89fc64df3314bb315b2dadc1828ee2abe608f42e",
+    "base-meeting.png": "f821fb45a71f45985ef3ca9ef413e07c6174b3f44b5646ee7c79ae71577dd468",
+    "base-floor3.png": "ad691949e1642252ead188d6bb3e777440793f337dbb0e14e9dd265b1cb277fd",
+    "base-floor4.png": "fe4aa3d9a5ea52f7d18a9a8dd41db6b174d4e63cf5fa9c0cf521fb418aedb932",
+    "preview-cash.png": "47b2d962068d4370f126c7b54ba485f77dd540e8059a80d2ee184a829267bdb9",
+    "preview-lobby.png": "3532d2b1e9babb7808b6cdfb417f8291f2cae3d4e14f230e703ad3bc4bfb9934",
+    "preview-meeting.png": "e2346dabfb4da69ab96448037f4c2246dfd1cc98c11307550bcf046d9afa1bf6",
+    "preview-floor3.png": "c9e0026bc662ad0051ba64377bfbf26ea05bc9795f6b312b844dabe1cf173393",
+    "preview-floor4.png": "8a0b8a3278f7bd2124d3fbe7e4421cca987e4d6d35f2a8a7b6b52b0d0fae5f3c",
+    "solo-cash.png": "c19135ab21e3b72a15b533991004471a9f9ddf506007e1a6579b90b3a249ed77",
+    "solo-lobby.png": "82dadec26d8f4a2f98decf035d46274362bdcfa3831dc3175d72e5a4674472e0",
+    "solo-meeting.png": "de6428da2795c004e8094005b251e7285f029e41104b4fcb0f3ee5081de86c20",
+    "solo-floor3.png": "c9e0026bc662ad0051ba64377bfbf26ea05bc9795f6b312b844dabe1cf173393",
+    "solo-floor4.png": "8a0b8a3278f7bd2124d3fbe7e4421cca987e4d6d35f2a8a7b6b52b0d0fae5f3c",
+    "multiplayer-cash.png": "03a4e79b6698ec014ea95d73753b136f61fac27fa2ed42a7b44ac4a91bd6999e",
+    "multiplayer-lobby.png": "ac7e7e1e85a5bf8f9761e46a7a38197e671a0c220ffb76a5a4b368b2fa45110b",
+    "multiplayer-meeting.png": "b7e75f3a519976377cc1d0c481a422def4b55f6ecb8b39f8447f1788cf18e860",
+    "multiplayer-floor3.png": "c9e0026bc662ad0051ba64377bfbf26ea05bc9795f6b312b844dabe1cf173393",
+    "multiplayer-floor4.png": "8a0b8a3278f7bd2124d3fbe7e4421cca987e4d6d35f2a8a7b6b52b0d0fae5f3c",
+    "light_walk.webp": "83bcfb52d8bf1cd8e875e07b23bcad147579bacf2b22163763cd4fa67f5ee21a",
+    "light_walk.contact.jpg": "2b27e9a586239eef66ab1cd8d259943c82510f3220af8d9ded734c11f86ce628",
+    "comparison.jpg": "676fb309dd0ecda09b7673e913298d77ad5533ed7261683e866683460222a23f"
+  }
+}

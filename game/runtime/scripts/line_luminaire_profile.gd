@@ -20,7 +20,13 @@ func diffuser() -> Texture2D:
 
 func setup(owner_world: Node3D) -> void:
 	world=owner_world
+	# Main-menu entry and explicit inspection tools share one set of emitters.
+	var existing=world.get_meta("bank_hanging_lights") if world.has_meta("bank_hanging_lights") else null
+	if existing!=null:
+		lights=existing.lights;fixtures=existing.fixtures;lobby_housing=existing.lobby_housing
+		return
 	assert(world.indirect_stats.get("loaded",false),"The reference v46 indirect bake must be present")
+	world.set_meta("bank_hanging_lights",self)
 	# Medium PCSS keeps blocker-dependent penumbrae with a bounded sample budget.
 	# This affects positional lights (including the flashlight), not atlas size.
 	RenderingServer.positional_soft_shadow_filter_set_quality(RenderingServer.SHADOW_QUALITY_SOFT_MEDIUM)
