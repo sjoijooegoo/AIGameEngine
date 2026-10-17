@@ -33,9 +33,13 @@ var started := false
 var leader := 0
 var equipment: Dictionary={}
 var remote_shots: Dictionary={}
+var closing := false
+var frontend_managed := false
 
 func _ready() -> void:
 	original_player=world.player;original_weapon=world.firearms;original_feedback=world.feedback
+	frontend_managed=AppFlow.intent.get("mode")=="multiplayer"
+	if frontend_managed:active=true
 	testing=world.testing;visual=false
 	for arg in OS.get_cmdline_user_args():
 		if arg=="--server":active=true
@@ -79,7 +83,7 @@ func open_menu() -> void:
 	if panel:panel.refresh()
 
 func resume() -> void:
-	if not players.has(local_id):return
+	if not players.has(local_id) or not started:return
 	input_enabled=true;world.ui.set_mode("play");Input.mouse_mode=Input.MOUSE_MODE_CAPTURED
 	panel.refresh()
 
@@ -95,14 +99,29 @@ func disconnect_game(message: String="已退出会话") -> void:
 	started=false;leader=0;last_bank_received_msec=0
 	world.player.collision_layer=2;world.player.collision_mask=9
 	if panel:panel.refresh()
+	if frontend_managed and not closing and not message.is_empty():AppFlow.return_menu("multiplayer",message)
 
 func leave_session() -> void:
+	if frontend_managed:AppFlow.return_menu("multiplayer");return
 	disconnect_game();launching=false
 	if local_server_pid>0 and OS.is_process_running(local_server_pid):OS.kill(local_server_pid)
 	local_server_pid=-1;world.reset_fixture("default");open_menu()
 
 func back_to_solo() -> void:
+	if frontend_managed:AppFlow.return_menu("multiplayer");return
 	leave_session();active=false;panel.refresh();world.ui.set_mode("pause")
+
+func shutdown() -> void:
+	closing=true;launching=false;disconnect_game("")
+	stop_owned_server()
+
+func stop_owned_server() -> void:
+	if local_server_pid>0 and OS.is_process_running(local_server_pid):OS.kill(local_server_pid)
+	local_server_pid=-1
+
+func _exit_tree() -> void:
+	stop_owned_server()
+	if peer:peer.close()
 
 func create_session(port_number: int, limit: int, label: String) -> void:
 	if launching or peer!=null:return
@@ -114,7 +133,7 @@ func create_session(port_number: int, limit: int, label: String) -> void:
 	if FileAccess.file_exists(ready_path):DirAccess.remove_absolute(ready_path)
 	write_lease()
 	local_server_pid=OS.create_process(OS.get_executable_path(),args,false)
-	if local_server_pid<=0:set_status("本地服务端启动失败");return
+	if local_server_pid<=0:disconnect_game("本地服务端启动失败");return
 	launch_age=0;launching=true;set_status("正在加载本地银行服务端…")
 
 func join_game(address: String, port_number: int, label: String) -> Error:
@@ -162,6 +181,7 @@ func _receive_roster(revision: int, rows: Array) -> void:
 	if players.has(local_id):
 		original_player.position=players[local_id].position;original_player.rotation.y=yaw
 		world.camera_motion.reset();world.ui.set_mode("play")
+		if not started:open_menu()
 		if panel:panel.refresh()
 
 func _input(_event: InputEvent) -> void:
@@ -235,10 +255,10 @@ func advance(dt: float) -> void:
 		disconnect_game("服务器响应超时，连接已断开");return
 	if launching:
 		launch_age+=dt
-		if not OS.is_process_running(local_server_pid):launching=false;set_status("服务端未能启动，请检查端口是否占用")
+		if not OS.is_process_running(local_server_pid):launching=false;disconnect_game("服务端未能启动，请检查端口是否占用");return
 		elif FileAccess.file_exists("user://coop_ready_"+str(OS.get_process_id())+".json"):
 			launching=false;join_game("127.0.0.1",launch_port,player_name)
-		elif launch_age>90:launching=false;set_status("本地服务端加载超时")
+		elif launch_age>90:launching=false;disconnect_game("本地服务端加载超时");return
 	if is_host:
 		if owner_pid>0 and Time.get_unix_time_from_system()-FileAccess.get_modified_time("user://coop_owner_"+str(owner_pid)+".json")>15:
 			get_tree().quit();return

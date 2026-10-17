@@ -524,6 +524,59 @@
         "gallery.html",
         "technical-review.json"
       ]
+    },
+    {
+      "id": "BANK-ENTRY-FLOW",
+      "kind": "automated",
+      "description": "Standalone startup, on-demand solo/co-op entry, safe solo spawn, latest matching indirect bake, native UI and release/Ubuntu checks.",
+      "checks": [
+        "frontend_lightweight_and_validation",
+        "frontend_solo_spawn_bake_and_return",
+        "frontend_failure_returns_with_fields",
+        "frontend_two_clients_create_join_and_start",
+        "frontend_leave_cleans_owned_server",
+        "frontend_cancel_connection",
+        "frontend_native_keyboard_navigation",
+        "frontend_layout_1280x720",
+        "frontend_layout_800x600",
+        "frontend_layout_2560x1080",
+        "bank_session_ui_join_two",
+        "bank_lobby_world_waits",
+        "bank_lobby_start_ui",
+        "bank_team_movement",
+        "bank_shared_damage_and_separate_ammo",
+        "bank_shared_kill_and_corpse",
+        "bank_server_reload",
+        "bank_local_menu_does_not_pause",
+        "bank_wall_blocks_shot",
+        "bank_shared_door_and_crossing",
+        "bank_teammate_rescues_grab",
+        "bank_server_infected_damage",
+        "bank_team_wipe_restart",
+        "bank_late_join_existing_world",
+        "bank_empty_room_starts_fresh",
+        "bank_server_loss_cleanup",
+        "bank_ui_navigation",
+        "bank_ui_settings",
+        "bank_ui_gameplay_feedback",
+        "bank_release_starts_menu_without_world",
+        "bank_release_two_clients",
+        "bank_release_debug_bridge_disabled",
+        "bank_release_bake_loaded",
+        "bank_linux_four_clients_and_movement",
+        "bank_linux_authoritative_weapon_state",
+        "bank_linux_leave_cleanup",
+        "bank_linux_cli_address_rejoin"
+      ]
+    },
+    {
+      "id": "BANK-ENTRY-REVIEW",
+      "kind": "review",
+      "description": "Main menu and server connection/lobby UI technical captures. Final user visual acceptance pending.",
+      "evidence": [
+        "gallery.html",
+        "technical-review.json"
+      ]
     }
   ]
 }

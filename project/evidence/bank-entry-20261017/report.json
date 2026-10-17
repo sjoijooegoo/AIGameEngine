@@ -1,0 +1,279 @@
+{
+  "scope": "Current bank standalone entry, solo spawn exclusion, server connection UI and matched release bake; no legacy QA.",
+  "passed": true,
+  "checks": [
+    {
+      "name": "frontend_lightweight_and_validation",
+      "status": "pass",
+      "bank_nodes": 0,
+      "bank_resource_cached": false,
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_solo_spawn_bake_and_return",
+      "status": "pass",
+      "active_enemies": 77,
+      "baked_meshes": 481,
+      "real_movement": true,
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_failure_returns_with_fields",
+      "status": "pass",
+      "message": "连接超时",
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_two_clients_create_join_and_start",
+      "status": "pass",
+      "server_pid": 23716,
+      "players": 2,
+      "real_movement": true,
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_leave_cleans_owned_server",
+      "status": "pass",
+      "remote_return": true,
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_cancel_connection",
+      "status": "pass",
+      "evidence": "frontend-report.json"
+    },
+    {
+      "name": "frontend_native_keyboard_navigation",
+      "status": "pass",
+      "evidence": "layouts-report.json"
+    },
+    {
+      "name": "frontend_layout_1280x720",
+      "status": "pass",
+      "evidence": "layouts-report.json"
+    },
+    {
+      "name": "frontend_layout_800x600",
+      "status": "pass",
+      "evidence": "layouts-report.json"
+    },
+    {
+      "name": "frontend_layout_2560x1080",
+      "status": "pass",
+      "evidence": "layouts-report.json"
+    },
+    {
+      "name": "bank_session_ui_join_two",
+      "status": "pass",
+      "population": 84,
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_lobby_world_waits",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_lobby_start_ui",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_team_movement",
+      "status": "pass",
+      "distance": 1.3999549013850892,
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_shared_damage_and_separate_ammo",
+      "status": "pass",
+      "hp": [
+        65.0,
+        51.0,
+        37.0
+      ],
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_shared_kill_and_corpse",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_server_reload",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_local_menu_does_not_pause",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_wall_blocks_shot",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_shared_door_and_crossing",
+      "status": "pass",
+      "before": [
+        24.1499996185303,
+        -0.019309900701046,
+        6.75
+      ],
+      "after": [
+        26.5300216674805,
+        -0.0190932974219322,
+        6.75
+      ],
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_teammate_rescues_grab",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_server_infected_damage",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_team_wipe_restart",
+      "status": "pass",
+      "fixture": "both players start with 5 HP; normal enemy attacks",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_late_join_existing_world",
+      "status": "pass",
+      "enemy_hp": 65.0,
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_empty_room_starts_fresh",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_server_loss_cleanup",
+      "status": "pass",
+      "evidence": "combat-report.json"
+    },
+    {
+      "name": "bank_ui_navigation",
+      "status": "pass",
+      "pause_freezes_world": true,
+      "no_click_through": true,
+      "native_buttons": true,
+      "keyboard": true,
+      "equipment": true,
+      "evidence": "solo-ui-report.json"
+    },
+    {
+      "name": "bank_ui_settings",
+      "status": "pass",
+      "volume_and_sensitivity": true,
+      "large_text": true,
+      "tests_do_not_write_preferences": true,
+      "evidence": "solo-ui-report.json"
+    },
+    {
+      "name": "bank_ui_gameplay_feedback",
+      "status": "pass",
+      "ammo": true,
+      "reload": true,
+      "door": true,
+      "grab": true,
+      "death_restart": true,
+      "evidence": "solo-ui-report.json"
+    },
+    {
+      "name": "bank_release_starts_menu_without_world",
+      "status": "pass",
+      "evidence": "windows-release-report.json"
+    },
+    {
+      "name": "bank_release_two_clients",
+      "status": "pass",
+      "evidence": "windows-release-report.json"
+    },
+    {
+      "name": "bank_release_debug_bridge_disabled",
+      "status": "pass",
+      "evidence": "windows-release-report.json"
+    },
+    {
+      "name": "bank_release_bake_loaded",
+      "status": "pass",
+      "evidence": "windows-release-report.json"
+    },
+    {
+      "name": "bank_linux_four_clients_and_movement",
+      "status": "pass",
+      "metres": 2.0532270236622674,
+      "evidence": "ubuntu-report.json"
+    },
+    {
+      "name": "bank_linux_authoritative_weapon_state",
+      "status": "pass",
+      "evidence": "ubuntu-report.json"
+    },
+    {
+      "name": "bank_linux_leave_cleanup",
+      "status": "pass",
+      "evidence": "ubuntu-report.json"
+    },
+    {
+      "name": "bank_linux_cli_address_rejoin",
+      "status": "pass",
+      "evidence": "ubuntu-report.json"
+    }
+  ],
+  "not_run_checks": [
+    {
+      "name": "bank_ui_layouts",
+      "status": "not_run",
+      "reason": "Rendered layouts require a rendered run.",
+      "evidence": "solo-ui-report.json"
+    }
+  ],
+  "reports": {
+    "frontend": "logs/sessions/bank-frontend-20261017-143504/report.json",
+    "layouts": "logs/sessions/bank-frontend-layout-20261017-143654/report.json",
+    "combat": "logs/sessions/bank-combat-coop-20261017-143324/report.json",
+    "solo-ui": "logs/sessions/20261017-143612-b5743aa8/ui-report.json",
+    "windows-release": "logs/sessions/bank-coop-release-20261017-143953/report.json",
+    "ubuntu": "logs/sessions/bank-combat-linux-20261017-143804/report.json"
+  },
+  "captures": [
+    "help-1280x720.png",
+    "help-2560x1080.png",
+    "help-800x600.png",
+    "home-1280x720.png",
+    "home-2560x1080.png",
+    "home-800x600.png",
+    "multiplayer-1280x720.png",
+    "multiplayer-2560x1080.png",
+    "multiplayer-800x600.png",
+    "settings-1280x720.png",
+    "settings-2560x1080.png",
+    "settings-800x600.png",
+    "03-single-spawn.png",
+    "04-connection-failed.png",
+    "05-create-session.png",
+    "06-two-player-lobby.png",
+    "07-coop-entered.png"
+  ],
+  "build": "build/bank/combat-coop/20261017-143654",
+  "limitations": [
+    "User final visual acceptance pending.",
+    "Actual VPS/WAN latency and 2-core server CPU capacity not measured.",
+    "Static indirect bake retained because its 13 source hashes and 3 artifact hashes match; no static geometry changed."
+  ],
+  "failed_attempts_preserved": [
+    "logs/sessions/bank-frontend-20261017-142919",
+    "logs/sessions/bank-frontend-20261017-143227"
+  ]
+}

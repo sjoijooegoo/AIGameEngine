@@ -1,0 +1,23 @@
+{
+  "source_mismatches": {
+    "windows": [],
+    "linux": []
+  },
+  "bake_hash_checks": {
+    "windows": 16,
+    "linux": 16
+  },
+  "packages": {
+    "windows": {
+      "path": "build/bank/combat-coop/20261017-143654/windows/bank-coop-windows.zip",
+      "sha256": "2ef7adaf5902e3040da6606071c075b2839ab3e53475e65c62cbbd1d18e17dbb",
+      "bytes": 326854065
+    },
+    "linux": {
+      "path": "build/bank/combat-coop/20261017-143654/linux/bank-coop-linux.zip",
+      "sha256": "cc1f0ddfda9e00df7d9a971a3734fcaecb96d5258cd5b4efbbb70877d6f29c74",
+      "bytes": 317206561
+    }
+  },
+  "original_builder_sha256": "5f61d35394e5c91fe18d703a5ced17f5599301a24868079024601d6b363c9793"
+}

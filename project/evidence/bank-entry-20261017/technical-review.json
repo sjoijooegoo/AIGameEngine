@@ -1,0 +1,85 @@
+{
+  "reviewer": "Codex technical image review",
+  "user_art_approval": false,
+  "result": "Technical layout review complete; final user art acceptance pending",
+  "reviewed": [
+    {
+      "path": "help-1280x720.png",
+      "sha256": "f425cc5c8529a002dfa942c60dec0a9b28ca62dc33300632dc18d76faf201a69"
+    },
+    {
+      "path": "help-2560x1080.png",
+      "sha256": "f2912a522ae264980aed42ebdcdcd8ce51b0e02edac05a85853e41ba3f9e45c3"
+    },
+    {
+      "path": "help-800x600.png",
+      "sha256": "7ff7083190cb9c14ecf41c9a89adfa9c7b3695affc853aeabf0301e7b5b13ced"
+    },
+    {
+      "path": "home-1280x720.png",
+      "sha256": "a714caddd0e8214f29d10930905b1fe7753c688dcd9ca3aedd8fbaf520f7ee33"
+    },
+    {
+      "path": "home-2560x1080.png",
+      "sha256": "47f3622c10335e231bcf57a6c1cd8601ef4584438f7a21e5a427a259b6664c7a"
+    },
+    {
+      "path": "home-800x600.png",
+      "sha256": "063881c97848c7fbaa20a44c905626589a9c1d3c5eaf246e023d007a6cad307a"
+    },
+    {
+      "path": "multiplayer-1280x720.png",
+      "sha256": "913b4f382774034b1a1485dead00e56b4cb6ae718fe268065c4fb3dc0521a2e8"
+    },
+    {
+      "path": "multiplayer-2560x1080.png",
+      "sha256": "2e797e353970e2813df2206fd5f2789575df2bc1733856df55c312e3649e38e8"
+    },
+    {
+      "path": "multiplayer-800x600.png",
+      "sha256": "5edbf7a7550767048339a755fb805f6f8185747f609acddb082bb40224a356e9"
+    },
+    {
+      "path": "settings-1280x720.png",
+      "sha256": "88d91073fa03672765859dcc4c556e4099f8fca2dde224c7aa006d93cb51c0cf"
+    },
+    {
+      "path": "settings-2560x1080.png",
+      "sha256": "2c10f2d11df4133972e0d04747affb8472ab5718901e86b33db82e0951f44795"
+    },
+    {
+      "path": "settings-800x600.png",
+      "sha256": "5cbc78dc7b7c668ddea7c3f4fffe49e1c0b0c4a5d0dc6e9cb4b72ffb378d20c8"
+    },
+    {
+      "path": "03-single-spawn.png",
+      "sha256": "1a84a07b735e42d7b0257ab7936cfbb620e90ebe32cfbc7ba1a268f9ec2bc8dd"
+    },
+    {
+      "path": "04-connection-failed.png",
+      "sha256": "bf91df981a8667cd1f93d1e1b75361bfef1b104904211fec52774a8fd5486dee"
+    },
+    {
+      "path": "05-create-session.png",
+      "sha256": "205bce4e81343e95d4533dd55b508a7c07fe70bd09e99bf3c6af7bac9ee5f25e"
+    },
+    {
+      "path": "06-two-player-lobby.png",
+      "sha256": "c2b4f309aeaf47441ec6b964fdeef633555f66d7147065be67f6943c1843fb02"
+    },
+    {
+      "path": "07-coop-entered.png",
+      "sha256": "c3aa55b507fc1246c9867a9340d143ca6514d76c473cc9b65a085790f1aea656"
+    }
+  ],
+  "observations": [
+    "Native 1280x720 main menu retains dark green/brass visual style without loading bank geometry.",
+    "800x600, 1280x720 and 2560x1080 bounds and keyboard navigation checked; small-window labels adjusted for legibility.",
+    "Real single-player spawn, join error, create form, two-client lobby and in-game captures inspected.",
+    "Fixed anonymous-parent bake matching; all source and artifact hashes still enforced.",
+    "Larger menu font and individually aligned help rows inspected."
+  ],
+  "report_sha256": "c1cd1498f4d6df507d3cc62726f1c0aa55c28f268ee494d1a28f4f206544549f",
+  "contact_sheet_sha256": "574ae4e3a5e3ef340ce78c7399d3e5f61222a7d8343612801b534d6f4e55c7cd",
+  "inspection_method": "Representative full-resolution PNGs and full 17-image contact sheet inspected; no final user art approval."
+}

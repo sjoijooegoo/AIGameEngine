@@ -16,6 +16,14 @@ def main():
     exe=(args.package/'BankCoop.exe').resolve();processes=[];logs=[];checks=[]
     with socket.socket(type=socket.SOCK_DGRAM) as s:s.bind(('127.0.0.1',0));port=s.getsockname()[1]
     try:
+        startup=folder/'startup';startup.mkdir()
+        with (startup/'engine.log').open('w',encoding='utf8') as log:
+            result=subprocess.run([str(exe),'--headless','--max-fps','60','--quit-after','180','--',f'--ai-session={startup.as_posix()}'],stdout=log,stderr=subprocess.STDOUT,creationflags=HIDDEN,timeout=30)
+        text=(startup/'engine.log').read_text(encoding='utf8')
+        assert result.returncode==0 and 'BANK_MAIN_MENU bank_loaded=false' in text,text
+        assert 'BANK_LIGHTING' not in text and 'BANK_ENTRY_READY' not in text and 'SCRIPT ERROR' not in text and '\nERROR:' not in text,text
+        assert not (startup/'ready.json').exists()
+        checks.append({'name':'bank_release_starts_menu_without_world','status':'pass'})
         for name in ['server','Alpha','Bravo']:
             path=folder/name;path.mkdir();log=(path/'engine.log').open('w',encoding='utf8');logs.append(log)
             flags=['--server',f'--port={port}'] if name=='server' else ['--connect=127.0.0.1',f'--port={port}',f'--name={name}']
@@ -28,8 +36,10 @@ def main():
         for name,process in zip(['server','Alpha','Bravo'],processes):
             text=(folder/name/'engine.log').read_text(encoding='utf8');assert process.poll() is None
             assert 'SCRIPT ERROR' not in text and '\nERROR:' not in text,text[-2000:]
+            baked=[json.loads(line.split('BANK_LIGHTING ',1)[1]) for line in text.splitlines() if line.startswith('BANK_LIGHTING ')]
+            assert baked and baked[-1].get('loaded') and baked[-1].get('meshes')==481,(name,baked)
             assert not (folder/name/'ready.json').exists()
-        checks=[{'name':'bank_release_two_clients','status':'pass'},{'name':'bank_release_debug_bridge_disabled','status':'pass'}]
+        checks += [{'name':'bank_release_two_clients','status':'pass'},{'name':'bank_release_debug_bridge_disabled','status':'pass'}, {'name':'bank_release_bake_loaded','status':'pass'}]
         print('BANK_RELEASE_PASS',flush=True)
     finally:
         for p in processes:

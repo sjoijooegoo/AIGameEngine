@@ -28,13 +28,31 @@ static func attach(world: Node3D) -> Dictionary:
 			push_warning("Bank indirect light is stale; regenerate after changing "+source)
 			return {"loaded":false,"reason":"stale","source":source}
 	var baked: Node3D=(load(manifest.scene) as PackedScene).instantiate()
+	# Anonymous parent names contain process-wide allocation counters. A menu
+	# or a second visit changes those counters, but not the stable render IDs.
+	# Match the complete ancestry with only those generated counters removed;
+	# never accept a missing/ambiguous ID or bypass the source hashes above.
+	var stable: Dictionary={}
+	for visual in world.find_children("BankRenderSource_*","GeometryInstance3D",true,false):
+		var key:=stable_path(str(world.get_path_to(visual)))
+		if stable.has(key):stable[key]=null
+		else:stable[key]=visual
+	var originals: Array[GeometryInstance3D]=[]
 	# Every expected original must exist before any render state is changed.
 	for source in manifest.source_nodes:
-		if not world.get_node_or_null(NodePath(source)) is GeometryInstance3D:
+		var visual=stable.get(stable_path(source))
+		if not visual is GeometryInstance3D:
 			baked.free();push_warning("Bank static snapshot does not match scene nodes")
 			return {"loaded":false,"reason":"node_mismatch","source":source}
+		originals.append(visual)
 	world.add_child(baked)
-	for source in manifest.source_nodes:
-		var visual: Node=world.get_node_or_null(NodePath(source))
-		if visual is GeometryInstance3D:visual.visible=false
+	for visual in originals:visual.visible=false
 	return {"loaded":true,"meshes":manifest.meshes,"preview":preview,"bake_mode":manifest.bake_mode}
+
+static func stable_path(path: String) -> String:
+	var parts:=path.split("/")
+	for i in parts.size():
+		if parts[i].begins_with("@"):
+			var suffix:=parts[i].rfind("@")
+			if suffix>0 and parts[i].substr(suffix+1).is_valid_int():parts[i]=parts[i].substr(0,suffix)
+	return "/".join(parts)

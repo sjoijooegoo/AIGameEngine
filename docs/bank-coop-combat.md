@@ -1,6 +1,8 @@
 # 当前银行场景：2–4 人合作会话
 
-本入口运行 `game/runtime/scenes/main.tscn` 的真实银行：四层地图、现有烘焙灯光、家具、可开关门、84 个感染者初始点位、原有枪械与近战规则。旧 `game/tools/coop.py` 仍是结构与移动原型；本版本使用 `game/tools/bank_coop.py`。
+默认入口是轻量的 `game/runtime/frontend/main.tscn`：启动 EXE 只显示主菜单，选择单人或确认服务器连接后才加载 `game/runtime/scenes/main.tscn` 的真实银行。多人保留四层地图、烘焙灯光、家具、可开关门、84 个感染者初始点位和原有战斗规则。旧 `game/tools/coop.py` 仍是结构与移动原型；本版本使用 `game/tools/bank_coop.py`。
+
+单人模式直接进入银行，清除默认出生点 `(23, 0.04, 8.2)` 同层 8 米内的 7 个感染者（剩余 77 个）。重新开始时同样应用；测试战斗布置和多人敌人配置不受影响。Esc 暂停后可以返回主菜单，银行场景随之卸载。菜单包含设置、操作手册和退出游戏。
 
 ## 本机开始
 
@@ -8,15 +10,23 @@
 .venv/Scripts/python.exe -m game.tools.bank_coop --project bank client
 ```
 
-也可以普通方式打开银行，按 Esc，在暂停页选择「多人合作 / 创建或加入」。填写呼号、UDP 端口与人数上限，点击「创建本地会话」。客户端会启动一个独立、无渲染的 Godot 服务端进程，加载完银行后连接它。创建者自己占一个玩家名额，服务端不占名额。
+直接打开 `BankCoop.exe` 后选择「多人模式」。也可用上方命令或 `Play Co-op.cmd` 直接到多人表单。选择「创建本地会话」页签，填写呼号、端口与人数上限，点击「创建并进入会话」。客户端会启动一个独立、无渲染的 Godot 服务端进程，加载完银行后连接它。创建者自己占一个玩家名额，服务端不占名额。
 
-第二个客户端填写服务器地址和相同端口，点击「加入指定服务器」。同一台机器填 `127.0.0.1`；局域网填创建者的局域网 IP；VPS 填其公网 IP。两人到齐后，房主点击「开始合作行动」。等待大厅期间敌人不行动。
+第二个客户端在「加入服务器」页签填写呼号、地址和相同端口，点击「连接服务器」。同一台机器填 `127.0.0.1`；局域网填创建者的局域网 IP；VPS 填其公网 IP 或域名（不带 `http://` 和端口）。两人到齐后，房主点击「开始合作行动」。等待大厅期间敌人不行动，Esc 不能跳过等待。连接中可以取消；连接失败、版本不符、房间已满或掉线会回到连接表单，保留地址、端口和呼号供重试。仅确认连接后才加载银行。
 
 操作：WASD 移动，Shift 奔跑，鼠标瞄准，左键射击或近战，右键推开，1/2/3/4 切换手枪/霰弹枪/手电/警棍，R 装填，E 开门，F 手电，Esc 会话菜单。被抓取时可交替 A/D 挣脱，也可由队友攻击抓取者救援。
 
 菜单只停止本人的输入，战斗继续。当前规则关闭友军伤害；玩家死亡后等待队友，全队阵亡可从会话菜单重新开始。**尚无倒地扶起、检查点复活和任务通关目标**。本次闭环是会话建立、合作战斗、死亡重开和离开，并不等于完整银行剧情移植。
 
-创建者点击离开会话时，会关闭其本机创建的服务端；其他客户端会返回会话面板。加入独立 VPS 的玩家离开不会关闭服务器。创建者进程异常退出时，本机服务端的心跳租约约 15 秒后失效，避免遗留服务端进程。
+创建者点击离开会话时，会关闭其本机创建的服务端；其他客户端会返回连接表单。加入独立 VPS 的玩家离开不会关闭服务器。创建者进程异常退出时，本机服务端的心跳租约约 15 秒后失效，避免遗留服务端进程。
+
+菜单和模式切换由 autoload `frontend/app_flow.gd` 管理，地图采用后台资源读取，构建场景时显示加载页。`--server` 仍直接进入无渲染服务端；`--connect=...` 支持直接连接。测试驱动位于 `game/tests/`，不放进发布包；正式包不会启用本地调试桥。
+
+## 烘焙数据
+
+当前主场景仍使用最新有效的 `generated/bank_lighting_v2` 六次反弹、仅间接光烘焙：481 个网格。后续独立吊灯预览也沿用这份间接光；此次未改静态几何或重新烘焙。导出前与导出副本分别核对 13 个源文件及 3 个烘焙产物的 SHA-256，过期则停止构建，校验记录写入 `build.json`。
+
+旧清单中部分父节点名带 Godot 进程内自动编号；菜单先创建节点或重复进入银行会改变编号。加载器现在只归一化这些临时编号，并继续精确匹配完整父子路径和稳定 `BankRenderSource` 标识；缺失或重复匹配仍拒绝加载。源文件哈希校验保持原有严格规则。检查日志应看到 `BANK_LIGHTING` 的 `loaded: true`、`meshes: 481`。
 
 ## 单独启动服务端
 
@@ -61,6 +71,8 @@ systemd 使用原 [部署服务文件](../game/deploy/bank-coop.service)，安�
 ## 定向验证
 
 ```powershell
+.venv/Scripts/python.exe -m game.tests.verify_frontend --project bank --rendered
+.venv/Scripts/python.exe -m game.tests.verify_frontend_layout --project bank
 .venv/Scripts/python.exe -m game.tests.verify_bank_coop --project bank
 .venv/Scripts/python.exe -m game.tests.verify_bank_coop --project bank --rendered
 .venv/Scripts/python.exe -m game.tests.verify_bank_session_ui --project bank --rendered

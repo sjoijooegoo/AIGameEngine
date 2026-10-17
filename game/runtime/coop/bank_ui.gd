@@ -18,10 +18,16 @@ var restart_button: Button
 var controls: Dictionary={}
 var connection_fields: VBoxContainer
 var team_hud: Label
+var lobby_backdrop: ColorRect
+var lobby_header: Label
+var endpoint_label: Label
 
 func _ready() -> void:
 	S.fonts();theme=S.theme_for(1.0)
 	set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);mouse_filter=Control.MOUSE_FILTER_IGNORE
+	lobby_backdrop=ColorRect.new();lobby_backdrop.set_anchors_and_offsets_preset(Control.PRESET_FULL_RECT);lobby_backdrop.color=Color("09100e");add_child(lobby_backdrop)
+	var backdrop_material:=ShaderMaterial.new();backdrop_material.shader=preload("res://frontend/background.gdshader");lobby_backdrop.material=backdrop_material
+	lobby_header=Label.new();lobby_header.text="BANK CRISIS   /   02  等待队友";lobby_header.position=Vector2(60,36);lobby_header.add_theme_color_override("font_color",S.BRASS);lobby_header.add_theme_font_size_override("font_size",14);add_child(lobby_header)
 	team_hud=Label.new();team_hud.position=Vector2(20,155);team_hud.add_theme_font_size_override("font_size",16);add_child(team_hud)
 	menu=PanelContainer.new();menu.set_anchors_and_offsets_preset(Control.PRESET_CENTER);menu.position=Vector2(-280,-300);menu.custom_minimum_size=Vector2(560,600);add_child(menu)
 	var background:=StyleBoxFlat.new();background.bg_color=Color("101b20f5");background.border_color=S.BRASS
@@ -30,6 +36,7 @@ func _ready() -> void:
 	var tag:=Label.new();tag.text="BANK CRISIS  /  COOPERATIVE OPERATION";tag.add_theme_color_override("font_color",S.BRASS);tag.add_theme_font_size_override("font_size",14);box.add_child(tag)
 	var title:=Label.new();title.text="多人合作会话";title.add_theme_font_size_override("font_size",30);box.add_child(title)
 	status_label=Label.new();status_label.autowrap_mode=TextServer.AUTOWRAP_WORD_SMART;box.add_child(status_label)
+	endpoint_label=Label.new();endpoint_label.add_theme_font_size_override("font_size",14);endpoint_label.add_theme_color_override("font_color",S.BRASS);box.add_child(endpoint_label)
 	connection_fields=VBoxContainer.new();connection_fields.add_theme_constant_override("separation",9);box.add_child(connection_fields)
 	nickname=LineEdit.new();nickname.text="玩家";nickname.placeholder_text="你的呼号";nickname.max_length=24;connection_fields.add_child(nickname);controls.nickname=nickname
 	address=LineEdit.new();address.text="127.0.0.1";address.placeholder_text="服务器 IP 或域名";connection_fields.add_child(address);controls.address=address
@@ -53,15 +60,26 @@ func button(parent: Node, id: String, text: String, action: Callable) -> Button:
 
 func refresh() -> void:
 	visible=game.active;menu.visible=not game.input_enabled
+	lobby_backdrop.visible=game.frontend_managed and not game.started
+	lobby_header.visible=lobby_backdrop.visible
 	status_label.text=("等待队友 · 房主点击开始，至少 2 人" if game.players.has(game.local_id) and not game.started else game.status)
 	var connected: bool=game.players.has(game.local_id)
-	connection_fields.visible=not connected
-	create_button.visible=not connected;join_button.visible=not connected
+	endpoint_label.visible=connected and not game.started
+	endpoint_label.text="%s : %d   /   %d–%d 人行动" % [address.text,int(port.value),2,game.max_players]
+	if game.frontend_managed:
+		var height: float=440 if connected else 340
+		menu.custom_minimum_size=Vector2(560,height);menu.size=Vector2(560,height)
+		menu.set_anchors_and_offsets_preset(Control.PRESET_CENTER,Control.PRESET_MODE_KEEP_SIZE)
+	connection_fields.visible=not connected and not game.frontend_managed
+	create_button.visible=connection_fields.visible;join_button.visible=connection_fields.visible
 	create_button.disabled=game.peer!=null or game.launching;join_button.disabled=create_button.disabled
 	start_button.visible=connected and not game.started
 	start_button.disabled=game.players.size()<2 or game.local_id!=game.leader
 	resume_button.visible=connected and game.started;leave_button.visible=game.peer!=null or game.launching
-	back_button.visible=not connected;refresh_hud()
+	back_button.visible=not connected
+	back_button.text="取消并返回连接页面" if game.frontend_managed else "返回单人模式"
+	if game.frontend_managed:leave_button.visible=connected
+	refresh_hud()
 
 func refresh_hud() -> void:
 	var lines:=PackedStringArray()

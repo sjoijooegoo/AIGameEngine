@@ -10,12 +10,29 @@ import subprocess
 from game.tools.coop import ROOT, HIDDEN, godot, templates, run
 
 
+def validate_bake(project: Path) -> dict:
+    config=json.loads((project/'data/lighting_bake.json').read_text(encoding='utf8'))
+    path=project/config['output'].removeprefix('res://')/'manifest.json'
+    manifest=json.loads(path.read_text(encoding='utf8'))
+    if not manifest.get('runtime_enabled') or manifest.get('bake_mode')!='indirect_only':
+        raise RuntimeError('The current bank needs an enabled, reviewed indirect bake')
+    checked={}
+    for resource,expected in {**manifest['hashes'],**manifest['artifact_hashes']}.items():
+        file=project/resource.removeprefix('res://')
+        actual=hashlib.sha256(file.read_bytes()).hexdigest()
+        if actual!=expected:raise RuntimeError(f'Stale bank bake: {resource}')
+        checked[resource]=actual
+    return {'manifest_sha256':hashlib.sha256(path.read_bytes()).hexdigest(),'verified_files':checked,'meshes':manifest['meshes']}
+
+
 def export(platform: str) -> Path:
+    validate_bake(ROOT/'game/runtime')
     stamp=datetime.datetime.now().strftime('%Y%m%d-%H%M%S')
     folder=ROOT/'build/bank/combat-coop'/stamp/platform
     project=folder/'project';project.parent.mkdir(parents=True,exist_ok=True)
     # Immutable staging leaves the user's project/export presets untouched.
     shutil.copytree(ROOT/'game/runtime',project,ignore=shutil.ignore_patterns('.godot','.git','*.tmp'))
+    bake=validate_bake(project)
     # Reuse imported resources; export still scans source hashes for changed files.
     cache=ROOT/'game/runtime/.godot/imported'
     if cache.exists():shutil.copytree(cache,project/'.godot/imported')
@@ -47,10 +64,10 @@ application/modify_resources=false
     else:
         (package/'Play Co-op.cmd').write_text('@echo off\r\ncd /d "%~dp0"\r\nstart "" BankCoop.exe -- --coop\r\n',encoding='ascii')
     hashes={str(p.relative_to(project)).replace('\\','/'):hashlib.sha256(p.read_bytes()).hexdigest()
-            for sub in ['coop','scripts','data','ui','scenes'] for p in (project/sub).rglob('*')
-            if p.is_file() and p.suffix in ['.gd','.json','.tscn']}
+            for sub in ['coop','scripts','data','ui','scenes','frontend'] for p in (project/sub).rglob('*')
+            if p.is_file() and p.suffix in ['.gd','.gdshader','.json','.tscn']}
     hashes['project.godot']=hashlib.sha256((project/'project.godot').read_bytes()).hexdigest()
-    manifest={'scope':'actual bank co-op combat','platform':platform,'engine':'4.7.2','sources':hashes,
+    manifest={'scope':'bank main menu, single player and co-op combat','platform':platform,'engine':'4.7.2','sources':hashes,'bake':bake,
               'local_reference_assets':True,'executable':filename,'sha256':hashlib.sha256((package/filename).read_bytes()).hexdigest()}
     (package/'build.json').write_text(json.dumps(manifest,indent=2),encoding='utf8')
     shutil.make_archive(str(folder/f'bank-coop-{platform}'),'zip',package)

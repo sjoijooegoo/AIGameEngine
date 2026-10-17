@@ -13,9 +13,13 @@ config_version=5
 run/flush_stdout_on_print=true
 
 config/name="银行危机 · 枪械与警棍试玩"
-run/main_scene="res://scenes/main.tscn"
+run/main_scene="res://frontend/main.tscn"
 run/main_scene.bank_line_luminaires_preview="res://scenes/line_luminaire_preview.tscn"
 config/features=PackedStringArray("4.7", "Forward Plus")
+
+[autoload]
+
+AppFlow="*res://frontend/app_flow.gd"
 
 [display]
 

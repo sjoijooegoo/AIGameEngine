@@ -454,6 +454,25 @@
         "project/evidence/bank-coop-combat-20261017/gallery.html"
       ],
       "notes": "真实会话创建/加入、全队阵亡重开、空房间清理已验证；无扶起、任务通关、预测/延迟补偿和公网容量结论。"
+    },
+    {
+      "id": "BANK-ENTRY-001",
+      "title": "独立主菜单、单人入口与多人连接流程",
+      "status": "done",
+      "depends_on": [
+        "BANK-COOP-002"
+      ],
+      "acceptance": [
+        "BANK-ENTRY-FLOW",
+        "BANK-ENTRY-REVIEW"
+      ],
+      "definition_of_done": "EXE 默认仅显示主菜单；正常点击进入单人或多人，清理单人出生点附近感染者，保持当前烘焙有效，验证两人流程、失败返回与发布包启动。",
+      "evidence": [
+        "project/evidence/bank-entry-20261017/report.json",
+        "project/evidence/bank-entry-20261017/gallery.html",
+        "docs/bank-coop-combat.md"
+      ],
+      "notes": "37 项技术检查通过；最终美术验收和真实 VPS/WAN 仍待用户完成。"
     }
   ],
   "known_limits": [

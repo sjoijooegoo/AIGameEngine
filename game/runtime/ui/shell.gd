@@ -216,8 +216,8 @@ func build_pause(w: float,h: float) -> void:
 	button("equipment","02    随身装备",Rect2(56,y+step,width,48*font_factor),func():selected_item=world.firearms.selected;set_mode("loadout"))
 	button("pause_settings","03    行动设置",Rect2(56,y+step*2,width,48*font_factor),func():open_page("settings"))
 	button("restart","04    重新开始",Rect2(56,y+step*3,width,48*font_factor),func():confirm("restart"))
-	button("to_title","05    返回主菜单",Rect2(56,y+step*4,width,48*font_factor),title_screen)
-	button("multiplayer","多人合作 / 创建或加入",Rect2(w*.61,h-122,w*.32,48*font_factor),func():world.coop.open_menu())
+	button("to_title","05    返回主菜单",Rect2(56,y+step*4,width,48*font_factor),func():AppFlow.return_menu())
+	button("multiplayer","多人合作 / 创建或加入",Rect2(w*.61,h-122,w*.32,48*font_factor),func():AppFlow.return_menu("multiplayer"))
 	var x: float=w*.61;rule(Vector2(x,content_top()+18),w*.3,S.BRASS)
 	label("pause_location",floor_code()+" / "+location_name(),Rect2(x,content_top()+40,w*.32,55*font_factor),26,S.PAPER,S.title)
 	var record_top:=content_top()+40+70*font_factor
@@ -275,7 +275,7 @@ func build_death(w: float,h: float) -> void:
 	label("death_copy","你没能离开这里。",Rect2(56,content_top()+6,w*.5,60*font_factor),25,S.PAPER,S.title)
 	label("death_record",floor_code()+"  /  "+location_name()+"\n\n本次击倒  %02d"%world.kills,Rect2(56,content_top()+90*font_factor,w*.50,116*font_factor),19,S.MUTED,null,true)
 	button("retry","R    重新开始",Rect2(56,back_y()-74*font_factor,310*font_factor,52*font_factor),begin_game)
-	button("death_title","返回主菜单",Rect2(56,back_y()-12,310*font_factor,48*font_factor),func():has_run=false;set_mode("title"))
+	button("death_title","返回主菜单",Rect2(56,back_y()-12,310*font_factor,48*font_factor),func():AppFlow.return_menu())
 	label("death_seal","记录终止",Rect2(w*.66,h*.46,w*.27,75*font_factor),40,S.DANGER,S.title)
 
 func build_confirm(w: float,h: float) -> void:
