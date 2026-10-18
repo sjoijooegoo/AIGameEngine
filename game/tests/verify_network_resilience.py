@@ -29,6 +29,10 @@ class NetworkPeer(Peer):
 def percentile(values,p):
     values=sorted(values);return values[min(len(values)-1,int((len(values)-1)*p))] if values else None
 
+def first_time(rows,epoch,end,predicate):
+    """Response latency inside its input phase; a later fixture is not a response."""
+    return next((x['time_ms']-epoch for x in rows if epoch<=x['time_ms']<end and predicate(x)),None)
+
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--project',choices=['bank'],required=True)
     parser.add_argument('--repeat',type=int,default=2,choices=[1,2,3]);parser.add_argument('--profiles',nargs='*');parser.add_argument('--sample-seconds',type=float,default=8)
@@ -148,13 +152,14 @@ def main():
                         samples.append({'elapsed':now-t0,'server':ss,'clients':[aa,bb]});time.sleep(.075)
                     telemetry=[peer.call('record_stop')['samples'] for peer in [server,a,b]]
                     recording=False
-                    def first_time(rows,epoch,predicate):return next((x['time_ms']-epoch for x in rows if x['time_ms']>=epoch and predicate(x)),None)
-                    case['metrics']['move_server_ms']=first_time(telemetry[0],move_epoch,lambda x:aid in x['players'] and math.dist(origin,x['players'][aid]['position'])>.08)
-                    case['metrics']['move_visible_ms']=first_time(telemetry[1],move_epoch,lambda x:aid in x['players'] and math.dist(visible_origin,x['players'][aid]['position'])>.08)
-                    case['metrics']['stop_server_ms']=first_time(telemetry[0],stop_epoch,lambda x:aid in x['players'] and x['players'][aid]['motion']=='idle')
-                    case['metrics']['shot_server_ms']=first_time(telemetry[0],shot_epoch,lambda x:x['shots'].get(aid,0)>before)
-                    case['metrics']['fire_feedback_ms']=first_time(telemetry[1],shot_epoch,lambda x:x['preview_shots']>preview_before)
-                    shot_times=[first_time(rows,shot_epoch,lambda x:x['shots'].get(aid,-1)==before+1) for rows in telemetry[1:]]
+                    # Do not count the next fixture's teleport as delayed movement.
+                    # Controller assertions remain unchanged and bounded.
+                    case['metrics']['move_server_ms']=first_time(telemetry[0],move_epoch,shot_epoch,lambda x:aid in x['players'] and math.dist(origin,x['players'][aid]['position'])>.08)
+                    case['metrics']['move_visible_ms']=first_time(telemetry[1],move_epoch,shot_epoch,lambda x:aid in x['players'] and math.dist(visible_origin,x['players'][aid]['position'])>.08)
+                    case['metrics']['stop_server_ms']=first_time(telemetry[0],stop_epoch,shot_epoch,lambda x:aid in x['players'] and x['players'][aid]['motion']=='idle')
+                    case['metrics']['shot_server_ms']=first_time(telemetry[0],shot_epoch,steady_epoch,lambda x:x['shots'].get(aid,0)>before)
+                    case['metrics']['fire_feedback_ms']=first_time(telemetry[1],shot_epoch,steady_epoch,lambda x:x['preview_shots']>preview_before)
+                    shot_times=[first_time(rows,shot_epoch,steady_epoch,lambda x:x['shots'].get(aid,-1)==before+1) for rows in telemetry[1:]]
                     case['metrics']['shot_all_clients_ms']=max(shot_times) if all(x is not None for x in shot_times) else None
                     steady=[[x for x in rows if x['time_ms']>=steady_epoch] for rows in telemetry]
                     duration=(steady[0][-1]['time_ms']-steady[0][0]['time_ms'])/1000

@@ -754,6 +754,19 @@
         "coop_perf_repeated_samples",
         "coop_perf_runtime_errors_absent"
       ]
+    },
+    {
+      "id": "BANK-COOP-OPTIMIZATION",
+      "kind": "automated",
+      "description": "Current bank animation/hit/collision preservation, loss-safe delta replication and repeated performance evidence; not public VPS certification.",
+      "checks": [
+        "coop_optimization_pose_hitbox_equivalence",
+        "coop_optimization_crowd_equivalence",
+        "coop_optimization_delta_loss_reset",
+        "coop_optimization_normal_combat",
+        "coop_optimization_weak_network",
+        "coop_optimization_repeated_performance"
+      ]
     }
   ]
 }

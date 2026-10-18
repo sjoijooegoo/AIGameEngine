@@ -1,5 +1,7 @@
 # 银行危机 · AI 游戏开发与测试框架
 
+已完成[感染者计算与联机呈现优化（1、3）](docs/bank-coop-optimization.md)：减少骨骼/命中体重复计算，跳过隐藏角色与稳定尸体，并加入抗丢包增量快照；保留原画质、吊灯和碰撞规则。[性能对照与证据](project/evidence/bank-coop-optimization-20261018/gallery.html) · [新版 Windows 试玩](build/bank/combat-coop/20261018-074754/windows/package/BankCoop.exe) · [配套 Linux 服务端](build/bank/combat-coop/20261018-074754/linux/bank-coop-linux.zip)。当前协议 3 / bank-combat-v5，本地 WSL 已同步更新。
+
 新增[多人室内大规模战斗性能测试与优化方案](docs/bank-coop-performance.md)：五种室内区域、2/4 人和 24–84 名感染者，22 次正式采样及原始证据。大厅 84 敌已出现服务端单步超预算；优先优化感染者模拟和客户端动态阴影，当前未改变正式画质或玩法。[逐场景数据与实拍](project/evidence/bank-coop-performance-20261018/gallery.html)。
 
 已加入[弱网移动预测、快照恢复和自动重连](docs/bank-network-hardening.md)，本地 WSL 服务已更新。[新版 Windows 试玩](build/bank/combat-coop/20261018-045547/windows/package/BankCoop.exe) · [配套 Linux 服务端](build/bank/combat-coop/20261018-045637/linux/bank-coop-linux.zip) · [16 组网络用例、断网恢复与失败边界](project/evidence/bank-network-hardening-20261018/gallery.html)。协议 2 / bank-combat-v4 需要成对更新；30% 丢包仍有失败，800 ms 和强抖动仍可明显校正。

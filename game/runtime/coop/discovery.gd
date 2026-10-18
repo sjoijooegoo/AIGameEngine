@@ -1,7 +1,7 @@
 extends Node
 ## Separate bounded UDP status channel; discovery never occupies a player slot.
 const MAGIC="BANK_STATUS_1"
-const BUILD="bank-combat-v4"
+const BUILD="bank-combat-v5"
 var socket: PacketPeerUDP
 var server: Node
 var game_port := 24567

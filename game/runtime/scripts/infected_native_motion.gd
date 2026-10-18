@@ -13,6 +13,7 @@ var gait_frame := 0
 var locomotion_key := ""
 var foot_locks: Dictionary={}
 var leg_ids: Dictionary={}
+var flinch_bones: Dictionary={}
 
 func setup(owner_actor: CharacterBody3D) -> void:
 	actor=owner_actor
@@ -28,6 +29,13 @@ func setup(owner_actor: CharacterBody3D) -> void:
 	variation=posmod(str(actor.definition.id).hash(),997)
 	for side in ["L","R"]:
 		leg_ids[side]=[actor.skeleton.find_bone("ValveBiped.Bip01_"+side+"_Thigh"),actor.skeleton.find_bone("ValveBiped.Bip01_"+side+"_Calf"),actor.skeleton.find_bone("ValveBiped.Bip01_"+side+"_Foot")]
+	for key in roles.flinch:
+		var animation: Animation=actor.animator.get_animation("native/"+key)
+		var indices:=PackedInt32Array()
+		for track in animation.get_track_count():
+			var bone: int=actor.skeleton.find_bone(animation.track_get_path(track).get_subname(0))
+			indices.append(bone if bone>=0 and actor.skeleton.get_bone_parent(bone)>=0 else -1)
+		flinch_bones[key]=indices
 	reset()
 
 func reset() -> void:
@@ -78,7 +86,6 @@ func ground_feet(dt: float) -> void:
 		foot_locks.clear();return
 	var gait: Dictionary=clips[gait_key].gait
 	var rig: Skeleton3D=actor.skeleton
-	rig.force_update_all_bone_transforms()
 	var poses: Dictionary={}
 	# Cache both chains before mutation: two-bone analytic IK needs no repeated
 	# whole-skeleton update between hip/knee rotations.
@@ -128,8 +135,8 @@ func flinch() -> void:
 	var time: float=clampf(actor.reaction_time/actor.reaction_duration,0,1)*animation.length
 	var weight: float=sin(PI*clampf(actor.reaction_time/actor.reaction_duration,0,1))*actor.reaction_strength
 	for track in animation.get_track_count():
-		var bone: int=actor.skeleton.find_bone(animation.track_get_path(track).get_subname(0))
-		if bone<0 or actor.skeleton.get_bone_parent(bone)<0:continue
+		var bone: int=flinch_bones[key][track]
+		if bone<0:continue
 		var delta: Quaternion=animation.rotation_track_interpolate(track,time)
 		actor.skeleton.set_bone_pose_rotation(bone,(actor.skeleton.get_bone_pose_rotation(bone)*Quaternion.IDENTITY.slerp(delta,weight)).normalized())
 

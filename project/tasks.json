@@ -586,6 +586,25 @@
         "docs/bank-coop-performance.md"
       ],
       "notes": "22 final measurements across 5 interior areas, with actual reload validation; 15 normal co-op regression checks and 4 report semantics tests pass. 84-enemy hall misses the 60 Hz server/60 FPS client budgets. Windows local shared-host debug measurements only, not Ubuntu VPS capacity or long-soak certification. Production graphics/gameplay unchanged; optimization proposals are not implemented."
+    },
+    {
+      "id": "BANK-COOP-OPTIMIZATION-008",
+      "title": "感染者计算与联机表现、快照增量优化",
+      "status": "done",
+      "depends_on": [
+        "BANK-COOP-PERF-007"
+      ],
+      "acceptance": [
+        "BANK-COOP-OPTIMIZATION"
+      ],
+      "definition_of_done": "在保持命中、伤害、抓取、碰撞和现有画质的前提下减少感染者姿态与密集移动重复计算，跳过隐藏角色与静止尸体表现，使用可抗丢包的增量快照；正常与弱网回归、动态画面和相同战斗性能案例前后对照。",
+      "evidence": [
+        "project/evidence/bank-coop-optimization-20261018/report.json",
+        "project/evidence/bank-coop-optimization-20261018/gallery.html",
+        "project/evidence/bank-coop-optimization-20261018/manifest.json",
+        "docs/bank-coop-optimization.md"
+      ],
+      "notes": "Selected compute/presentation reductions and acknowledged-base delta replication implemented. 16 final performance samples, final normal combat, six difficult network cases, outages, dynamic corpse/door sequences, matched release packages and WSL verified. 84-enemy server P95 still exceeds 60 Hz budget; public VPS and long soak unverified. Initial failures preserved."
     }
   ],
   "known_limits": [

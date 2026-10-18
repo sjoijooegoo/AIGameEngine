@@ -1,0 +1,662 @@
+{
+  "report": "D:\\AIGameEngine\\project\\evidence\\bank-coop-optimization-20261018\\report.json",
+  "reviewer": null,
+  "scope": null,
+  "criteria": [
+    {
+      "id": "FW-ADAPTER",
+      "status": "not_run",
+      "detail": "adapter_contract"
+    },
+    {
+      "id": "FW-RESTORE",
+      "status": "not_run",
+      "detail": "snapshot_restore_replay, invalid_checkpoint_is_atomic, save_load_continuity"
+    },
+    {
+      "id": "FW-INPUT",
+      "status": "not_run",
+      "detail": "key_door_objective, pause_and_ui_hit_test, inventory_blocks_movement, mouse_look"
+    },
+    {
+      "id": "FW-ANIMATION",
+      "status": "not_run",
+      "detail": "animation_time_control, animation_sequence, movement_sequence"
+    },
+    {
+      "id": "ART-CRATE",
+      "status": "not_run",
+      "detail": "Missing evidence: model.png, model_90.png, model_180.png, model_270.png"
+    },
+    {
+      "id": "ART-UI",
+      "status": "not_run",
+      "detail": "Missing evidence: ui_pause_800x600.png, ui_gameplay_1920x1080.png"
+    },
+    {
+      "id": "ART-MOTION",
+      "status": "not_run",
+      "detail": "Missing evidence: walk_cycle.sequence.json, walk_cycle.contact.jpg, walk_cycle.webp"
+    },
+    {
+      "id": "ASSET-IMPORT",
+      "status": "not_run",
+      "detail": "test_glb_png_measurements_and_cache, test_fbx_import_matches_glb_dimensions, test_explicit_scale_rotation_and_texture_role, test_missing_texture_blocks_preparation"
+    },
+    {
+      "id": "ASSET-SPACE",
+      "status": "not_run",
+      "detail": "test_reject_float_wall_overlap_support_and_door_sweep, test_unreachable_route_and_invalid_build_preserve_scene, test_tabletop_anchor_and_reject_cycles"
+    },
+    {
+      "id": "ASSET-PLAY",
+      "status": "not_run",
+      "detail": "test_real_input_door_collision_and_exit"
+    },
+    {
+      "id": "PORT-SPEC",
+      "status": "not_run",
+      "detail": "port_source_inventory_complete, port_rule_conflicts_resolved"
+    },
+    {
+      "id": "PORT-SLICE",
+      "status": "not_run",
+      "detail": "port_cashier_to_hall, port_mantrap_overlap_alarm, port_mantrap_return_requires_key, port_interaction_occlusion"
+    },
+    {
+      "id": "PORT-PLAYER",
+      "status": "not_run",
+      "detail": "port_player_controls, port_camera_clearance, port_input_pause_focus"
+    },
+    {
+      "id": "PORT-ITEMS",
+      "status": "not_run",
+      "detail": "port_inventory_item_use, port_pickup_idempotence, port_heal_vending_currency"
+    },
+    {
+      "id": "PORT-COMBAT",
+      "status": "not_run",
+      "detail": "port_weapon_damage_ammo, port_melee_occlusion_durability, port_grab_death_regen, port_dull_knife_progression"
+    },
+    {
+      "id": "PORT-AI",
+      "status": "not_run",
+      "detail": "port_enemy_sight_noise, port_enemy_attack_return, port_safe_room_and_hedge"
+    },
+    {
+      "id": "PORT-NAV",
+      "status": "not_run",
+      "detail": "port_stairs_player_enemy, port_navigation_door_changes, port_cross_floor_return, port_enemy_crowding"
+    },
+    {
+      "id": "PORT-SAVE",
+      "status": "not_run",
+      "detail": "port_save_slots_and_continue, port_save_resets_living_only, port_autosave_safe_conditions, port_checkpoint_atomic_complete"
+    },
+    {
+      "id": "PORT-WORLD",
+      "status": "not_run",
+      "detail": "port_floor_layout_inventory, port_floor_routes_collision, port_elevator_space"
+    },
+    {
+      "id": "PORT-SUPERVISOR",
+      "status": "not_run",
+      "detail": "port_knife_cue_supervisor_route, port_supervisor_unique_drops, port_safe_room_typewriter"
+    },
+    {
+      "id": "PORT-POWER",
+      "status": "not_run",
+      "detail": "port_power_elevator_access, port_shutter_timing_occupancy, port_yard_gate_sided_access, port_shutter_lure_hedge"
+    },
+    {
+      "id": "PORT-HORDE",
+      "status": "not_run",
+      "detail": "port_front_back_horde_triggers, port_horde_entity_continuity, port_horde_passage_rules, port_horde_save_reload"
+    },
+    {
+      "id": "PORT-PUZZLES",
+      "status": "not_run",
+      "detail": "port_world_clocks_reward, port_lounge_card_power, port_safe_0121_and_staff_keys, port_puzzle_repeat_cancel"
+    },
+    {
+      "id": "PORT-LOGISTICS",
+      "status": "not_run",
+      "detail": "port_cashbox_dual_locks, port_dumbwaiter_strongbox_chain, port_truck_rewards_once, port_logistics_save_reload"
+    },
+    {
+      "id": "PORT-ENDING",
+      "status": "not_run",
+      "detail": "port_boss_door_fight_follow, port_boss_keys_garage_car, port_ending_rank_restart, port_new_game_to_ending"
+    },
+    {
+      "id": "PORT-UI",
+      "status": "not_run",
+      "detail": "port_title_death_continue_flow, port_ui_resolution_input_matrix, port_floor_map_door_status, port_opening_state_cleanup"
+    },
+    {
+      "id": "PORT-ASSETS",
+      "status": "not_run",
+      "detail": "port_asset_provenance_and_units, port_asset_material_audit, port_animation_sequence_timing"
+    },
+    {
+      "id": "PORT-AUDIO",
+      "status": "not_run",
+      "detail": "port_audio_event_routing, port_audio_pause_volume_floor"
+    },
+    {
+      "id": "PORT-E2E",
+      "status": "not_run",
+      "detail": "port_e2e_easy, port_e2e_normal, port_e2e_hard, port_e2e_no_softlocks, port_real_time_performance"
+    },
+    {
+      "id": "PORT-RELEASE",
+      "status": "not_run",
+      "detail": "port_release_bank_entry, port_release_offline_assets, port_release_bridge_disabled, port_release_save_restart"
+    },
+    {
+      "id": "PORT-ART-MOTION",
+      "status": "not_run",
+      "detail": "Missing evidence: bank_camera.sequence.json, bank_camera.contact.jpg"
+    },
+    {
+      "id": "PORT-ART-WORLD",
+      "status": "not_run",
+      "detail": "Missing evidence: bank_g_overview.png, bank_f2_overview.png, bank_f3_overview.png, bank_f4_overview.png, bank_yard_overview.png"
+    },
+    {
+      "id": "PORT-ART-UI",
+      "status": "not_run",
+      "detail": "Missing evidence: bank_ui_800x600.png, bank_ui_1024x768.png, bank_ui_1280x720.png, bank_ui_1920x1080.png, bank_ui_review_matrix.json"
+    },
+    {
+      "id": "PORT-ART-STYLE",
+      "status": "not_run",
+      "detail": "Missing evidence: bank_style_reference.png, bank_style_godot.png, bank_style_review_matrix.json, bank_combat.sequence.json, bank_combat.contact.jpg"
+    },
+    {
+      "id": "PORT-AUDIO-REVIEW",
+      "status": "not_run",
+      "detail": "Missing evidence: bank_audio_review.json, bank_audio_sync.mp4"
+    },
+    {
+      "id": "REPO-LAYOUT",
+      "status": "not_run",
+      "detail": "layout_boundaries, runtime_sync_integrity, entrypoint_compatibility, migration_provenance, migration_regression"
+    },
+    {
+      "id": "ADDON-COMPAT",
+      "status": "not_run",
+      "detail": "addon_package_integrity, addon_headless, addon_rendered, addon_fixed_step, addon_release, addon_regression, addon_deployment_negative_tests"
+    },
+    {
+      "id": "ADDON-EXTENDED",
+      "status": "not_run",
+      "detail": "addon_expansion_lock, addon_systems_headless, addon_systems_rendered, addon_puzzle_editor, addon_systems_release, addon_expansion_regression, addon_expansion_units"
+    },
+    {
+      "id": "EXT-HL2-DOWNLOAD",
+      "status": "not_run",
+      "detail": "hl2_download_inventory, hl2_download_hashes, hl2_download_formats"
+    },
+    {
+      "id": "ADDON-PRODUCTION",
+      "status": "not_run",
+      "detail": "bank_plugin_checkpoint, bank_plugin_lifecycle, bank_plugin_input_flow, bank_plugin_release"
+    },
+    {
+      "id": "EXT-SOURCE-COLLECTIONS-DOWNLOAD",
+      "status": "not_run",
+      "detail": "portal-2_download_inventory, portal-2_download_hashes, portal-2_download_formats, left-4-dead-2_download_inventory, left-4-dead-2_download_hashes, left-4-dead-2_download_formats, counter-strike-source_download_inventory, counter-strike-source_download_hashes, counter-strike-source_download_formats"
+    },
+    {
+      "id": "EXT-HL2-STATIC-POC",
+      "status": "not_run",
+      "detail": "hl2_sample_source_preserved, hl2_sample_glb_import, hl2_sample_render_evidence, hl2_sample_real_input, hl2_sample_asset_regression"
+    },
+    {
+      "id": "EXT-HL2-STATIC-BATCH",
+      "status": "not_run",
+      "detail": "hl2_batch_inventory, hl2_batch_source_integrity, hl2_batch_import_render, hl2_batch_showroom_input, hl2_batch_units, hl2_batch_regression"
+    },
+    {
+      "id": "EXT-HL2-SURFACE-BATCH",
+      "status": "not_run",
+      "detail": "hl2_surface_semantics, hl2_surface_source_integrity, hl2_environment_batch, hl2_surface_input, hl2_surface_regression"
+    },
+    {
+      "id": "EXT-HL2-NORMAL-BATCH",
+      "status": "not_run",
+      "detail": "hl2_normal_basis, hl2_normal_pixels, hl2_normal_godot, hl2_batch03_inventory, hl2_batch03_input, hl2_batch03_regression"
+    },
+    {
+      "id": "EXT-CSGO-DOWNLOAD",
+      "status": "not_run",
+      "detail": "csgo_download_inventory, csgo_download_hashes, csgo_download_formats"
+    },
+    {
+      "id": "EXT-INTERIOR-DEMO",
+      "status": "not_run",
+      "detail": "interior_reference_preserved, interior_asset_pins, interior_render_evidence, interior_real_input, interior_regression"
+    },
+    {
+      "id": "EXT-ASSET-USAGE",
+      "status": "not_run",
+      "detail": "asset_usage_schema, asset_usage_backfill, asset_usage_search, asset_usage_evidence, asset_usage_regression"
+    },
+    {
+      "id": "EXT-L4D2-PREFABS",
+      "status": "not_run",
+      "detail": "l4d2_static_inventory, l4d2_static_import, l4d2_usage_info, l4d2_prefab_instances, l4d2_prefab_input, l4d2_regression"
+    },
+    {
+      "id": "EXPLORE-STRUCTURE",
+      "status": "not_run",
+      "detail": "explore_source_structure, explore_continuous_stairs"
+    },
+    {
+      "id": "EXPLORE-PLAY",
+      "status": "not_run",
+      "detail": "explore_first_person_flashlight, infected_source_placements, explore_all_doors, explore_placement_and_routes"
+    },
+    {
+      "id": "EXPLORE-PACKAGE",
+      "status": "not_run",
+      "detail": "explore_build, explore_package_input, explore_release_bridge_disabled"
+    },
+    {
+      "id": "EXPLORE-VISUAL",
+      "status": "not_run",
+      "detail": "explore_lighting_design, explore_rendered_room_review"
+    },
+    {
+      "id": "GRIP-RUNTIME",
+      "status": "not_run",
+      "detail": "skinned_bone_socket_and_frozen_captures, normal_walk_and_wall_retraction, normal_F_and_mouse_input, repeatable_animation_clock"
+    },
+    {
+      "id": "INFECTED-PLAY",
+      "status": "not_run",
+      "detail": "infected_source_placements, infected_chase_and_occlusion, infected_combat_and_death, infected_player_death_restart, infected_navigation"
+    },
+    {
+      "id": "INFECTED-ART",
+      "status": "not_run",
+      "detail": "Missing evidence: infected_showcase.png, infected_walk.contact.jpg, infected_attack.contact.jpg"
+    },
+    {
+      "id": "FIREARMS-PLAY",
+      "status": "not_run",
+      "detail": "firearms_native_models, firearms_pistol_cycle_reload, firearms_shotgun_reload_interrupt, firearms_hits_occlusion, firearms_switch_shove_death, firearms_frozen_clock"
+    },
+    {
+      "id": "FIREARMS-ART",
+      "status": "not_run",
+      "detail": "Missing evidence: runtime/pistol_fire.contact.jpg, runtime/pistol_reload.contact.jpg, runtime/shotgun_fire.contact.jpg, runtime/shotgun_reload.contact.jpg"
+    },
+    {
+      "id": "COMBAT-POLISH-PLAY",
+      "status": "not_run",
+      "detail": "combat_transition_continuity, combat_directional_reactions, combat_grab_escape_and_bite, combat_camera_recovery, combat_encounter_matrix"
+    },
+    {
+      "id": "COMBAT-POLISH-VISUAL",
+      "status": "not_run",
+      "detail": "Missing evidence: runtime/grab_escape.contact.jpg, runtime/shotgun_combat.contact.jpg"
+    },
+    {
+      "id": "COMBAT-POLISH-NATIVE",
+      "status": "not_run",
+      "detail": "combat_native_window_input, combat_release_smoke"
+    },
+    {
+      "id": "INFECTED-PHYSICS-PLAY",
+      "status": "not_run",
+      "detail": "infected_animation_source_audit, infected_joint_ragdoll, infected_intact_hits, infected_corpse_freeze_reset"
+    },
+    {
+      "id": "INFECTED-PHYSICS-VISUAL",
+      "status": "not_run",
+      "detail": "Missing evidence: runtime/intact_headshot.contact.jpg, runtime/shotgun_blood.contact.jpg"
+    },
+    {
+      "id": "PERFORMANCE-MEASURED",
+      "status": "not_run",
+      "detail": "performance_benchmark, performance_regression"
+    },
+    {
+      "id": "SURFACE-SAMPLING",
+      "status": "not_run",
+      "detail": "surface_sampling_audit, surface_sampling_rendered"
+    },
+    {
+      "id": "BATON-PLAY",
+      "status": "not_run",
+      "detail": "baton_combos, baton_hit_feedback, baton_occlusion_and_range, baton_interruptions"
+    },
+    {
+      "id": "BATON-VISUAL",
+      "status": "not_run",
+      "detail": "Missing evidence: visual/gun_framing.contact.jpg, visual/baton_combo.contact.jpg"
+    },
+    {
+      "id": "HIT-FEEDBACK-PLAY",
+      "status": "not_run",
+      "detail": "intact_infected_hits, blood_hit_feedback, blood_surface_occlusion, blood_budget_clock_reset"
+    },
+    {
+      "id": "HIT-FEEDBACK-VISUAL",
+      "status": "not_run",
+      "detail": "Missing evidence: runtime/pistol_blood.contact.jpg, runtime/shotgun_blood.contact.jpg, runtime/intact_headshot.contact.jpg"
+    },
+    {
+      "id": "CORPSE-PLAY",
+      "status": "not_run",
+      "detail": "corpse_local_impacts, corpse_weapon_response, corpse_melee_interaction, corpse_sleep_stability"
+    },
+    {
+      "id": "CORPSE-VISUAL",
+      "status": "not_run",
+      "detail": "Missing evidence: runtime/corpse_pistol.contact.jpg, runtime/corpse_shotgun.contact.jpg, runtime/corpse_baton.contact.jpg"
+    },
+    {
+      "id": "WEAPON-AUDIO-PLAY",
+      "status": "not_run",
+      "detail": "weapon_audio_assets, weapon_audio_input, weapon_audio_mix"
+    },
+    {
+      "id": "WEAPON-AUDIO-REVIEW",
+      "status": "not_run",
+      "detail": "Missing evidence: audio/pistol.wav, audio/shotgun.wav, audio/reload.wav"
+    },
+    {
+      "id": "INFECTED-AUDIO-PLAY",
+      "status": "not_run",
+      "detail": "infected_audio_assets, infected_audio_events, infected_audio_spatial_budget, infected_audio_recording"
+    },
+    {
+      "id": "INFECTED-AUDIO-REVIEW",
+      "status": "not_run",
+      "detail": "Missing evidence: audio/approach.wav, audio/grab_bite.wav, audio/combat.wav"
+    },
+    {
+      "id": "ARCHETYPES-PLAY",
+      "status": "not_run",
+      "detail": "archetype_asset_contract, archetype_attack_timing, archetype_combat"
+    },
+    {
+      "id": "ARCHETYPES-VISUAL",
+      "status": "not_run",
+      "detail": "Missing evidence: lineup.png, runtime/elite_attack.contact.jpg, runtime/fastElite_attack.contact.jpg, runtime/boss_attack.contact.jpg"
+    },
+    {
+      "id": "BANK-UI-PLAY",
+      "status": "not_run",
+      "detail": "bank_ui_navigation, bank_ui_gameplay_feedback, bank_ui_settings, bank_ui_layouts"
+    },
+    {
+      "id": "BANK-UI-VISUAL",
+      "status": "not_run",
+      "detail": "Missing evidence: title.png, hud.png, loadout.png, settings.png, death.png"
+    },
+    {
+      "id": "BANK-DEEP-PERFORMANCE",
+      "status": "not_run",
+      "detail": "bank_deep_performance, bank_performance_gameplay, bank_performance_visual"
+    },
+    {
+      "id": "BANK-INDOOR-PERFORMANCE",
+      "status": "not_run",
+      "detail": "indoor_performance_comparison, indoor_light_visibility, indoor_gameplay_regression"
+    },
+    {
+      "id": "BANK-CAMERA-MOTION",
+      "status": "not_run",
+      "detail": "camera_motion_rendered, camera_motion_input, camera_motion_visual"
+    },
+    {
+      "id": "BANK-INFECTED-SOURCE",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-infected-source-v21/report.json"
+    },
+    {
+      "id": "BANK-INFECTED-GROUNDING",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-infected-grounding-v22/report.json"
+    },
+    {
+      "id": "BANK-AUDIO-STANDARD",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-audio-standard-v23/report.json"
+    },
+    {
+      "id": "BANK-SHOOTING-FEEL",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-shooting-feel-v24/report.json"
+    },
+    {
+      "id": "BANK-SHOOTING-REACTIONS",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-shooting-reactions-v25/report.json"
+    },
+    {
+      "id": "BANK-SHOOTING-TRANSITION",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-shooting-transition-v26/report.json"
+    },
+    {
+      "id": "BANK-PBR",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-pbr-v27/report.json"
+    },
+    {
+      "id": "BANK-SHOOTING-BLOOD",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-shooting-blood-v27/report.json"
+    },
+    {
+      "id": "BANK-WEAPON-WALL",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-weapon-wall-v38/report.json"
+    },
+    {
+      "id": "BANK-HUD-STARTUP",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-hud-startup-20261015/report.json"
+    },
+    {
+      "id": "BANK-V24-CEILING",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-v24-ceiling-20261015/report.json"
+    },
+    {
+      "id": "BANK-FPS-HUD",
+      "status": "not_run",
+      "detail": "Missing evidence: project/evidence/bank-fps-hud-20261015/report.json"
+    },
+    {
+      "id": "BANK-LIGHTING-TECH",
+      "status": "not_run",
+      "detail": "lighting_bake_contract, lighting_runtime, lighting_inputs, lighting_performance, lighting_release"
+    },
+    {
+      "id": "BANK-LIGHTING-REVIEW",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-BOUNCE-TECH",
+      "status": "not_run",
+      "detail": "bounce_inputs, bounce_metrics, bounce_performance, bounce_release"
+    },
+    {
+      "id": "BANK-BOUNCE-REVIEW",
+      "status": "not_run",
+      "detail": "Missing evidence: metrics.json"
+    },
+    {
+      "id": "BANK-DUAL-FLASHLIGHT-TECH",
+      "status": "not_run",
+      "detail": "dual_inputs, dual_occlusion, dual_metrics, dual_performance, dual_release"
+    },
+    {
+      "id": "BANK-DUAL-FLASHLIGHT-REVIEW",
+      "status": "not_run",
+      "detail": "Missing evidence: metrics.json"
+    },
+    {
+      "id": "BANK-SHOTGUN-HITCH",
+      "status": "not_run",
+      "detail": "bank_shotgun_hitch_diagnosis, bank_shotgun_resources_input, bank_shotgun_ejection_sequence"
+    },
+    {
+      "id": "BANK-RTX-RESEARCH-REVIEW",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-LUMINAIRE-TECH",
+      "status": "not_run",
+      "detail": "luminaire_bake, luminaire_inputs, luminaire_metrics, luminaire_performance, luminaire_release"
+    },
+    {
+      "id": "BANK-LUMINAIRE-REVIEW",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-LINE-LUMINAIRE-PREVIEW",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-LINE-PERFORMANCE",
+      "status": "not_run",
+      "detail": "same_inputs_camera_ticks, same_53_fixture_159_emitter_configuration, same_floor_culling, same_pcss_and_diffuser, existing_bake_loaded_and_unchanged, no_additional_shadow_subdivision, real_input_two_doors_and_walk, same_environment_three_routes_two_repeats, v48_release_startup"
+    },
+    {
+      "id": "BANK-LINE-PERFORMANCE-REVIEW",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-LUMINAIRE-1440-TECH",
+      "status": "not_run",
+      "detail": "native_1440_scale_one, matched_52_input_camera_frames, same_53_fixtures_energy_diffuser, floor_culling_and_real_shadows, unchanged_indirect_bake_loaded, normal_doors_walk_and_torch, five_routes_two_repeats_alive_84_actors, v49_release_startup"
+    },
+    {
+      "id": "BANK-LUMINAIRE-1440-TARGET",
+      "status": "not_run",
+      "detail": "all_routes_1440_p95_under_10ms"
+    },
+    {
+      "id": "BANK-LUMINAIRE-1440-REVIEW",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-GAMEPLAY-PERF",
+      "status": "not_run",
+      "detail": "bank_gameplay_bottleneck_measurement, bank_ragdoll_resource_reuse, bank_corpse_input_regression, bank_corpse_motion_preservation"
+    },
+    {
+      "id": "BANK-COMBAT-100FPS-PLAN",
+      "status": "not_run",
+      "detail": "bank_combat_bottleneck_ablation, bank_combat_100fps_plan"
+    },
+    {
+      "id": "BANK-COMBAT-100FPS-TARGET",
+      "status": "not_run",
+      "detail": "combat100_native1440_workload, combat100_tail_budget, combat100_normal_input, combat100_motion_shadow_sequences, combat100_release_recording"
+    },
+    {
+      "id": "BANK-ANIMATION-AI-SCHEDULING",
+      "status": "not_run",
+      "detail": "animation_ai_crowd_contract, animation_ai_priority_input, animation_ai_combat_regression, animation_ai_performance, animation_ai_sequence_review"
+    },
+    {
+      "id": "BANK-COOP-NET",
+      "status": "not_run",
+      "detail": "coop_two_clients, coop_authoritative_walk_and_stop, coop_run_animation, coop_wall_collision, coop_invalid_input_rejected, coop_stale_input_stops, coop_four_clients_and_late_join, coop_capacity_rejected, coop_leave_button_and_cleanup, coop_rejoin, coop_abrupt_disconnect, coop_map_version_rejected, coop_server_disconnect_cleanup, coop_linux_release_interop, coop_release_clients, coop_clean_checkout"
+    },
+    {
+      "id": "BANK-COOP-VISUAL",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-COOP-COMBAT",
+      "status": "not_run",
+      "detail": "bank_session_ui_join_two, bank_lobby_world_waits, bank_lobby_start_ui, bank_team_movement, bank_shared_damage_and_separate_ammo, bank_shared_kill_and_corpse, bank_server_reload, bank_local_menu_does_not_pause, bank_wall_blocks_shot, bank_shared_door_and_crossing, bank_teammate_rescues_grab, bank_server_infected_damage, bank_team_wipe_restart, bank_late_join_existing_world, bank_empty_room_starts_fresh, bank_server_loss_cleanup, bank_ui_create_dedicated_process, bank_ui_start_real_time_two_clients, bank_ui_host_closes_owned_server, bank_ui_navigation, bank_ui_settings, bank_ui_gameplay_feedback, bank_release_two_clients, bank_release_debug_bridge_disabled, bank_linux_four_clients_and_movement, bank_linux_authoritative_weapon_state, bank_linux_leave_cleanup, bank_linux_cli_address_rejoin"
+    },
+    {
+      "id": "BANK-COOP-COMBAT-ART",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-ENTRY-FLOW",
+      "status": "not_run",
+      "detail": "frontend_lightweight_and_validation, frontend_solo_spawn_bake_and_return, frontend_failure_returns_with_fields, frontend_two_clients_create_join_and_start, frontend_leave_cleans_owned_server, frontend_cancel_connection, frontend_native_keyboard_navigation, frontend_layout_1280x720, frontend_layout_800x600, frontend_layout_2560x1080, bank_session_ui_join_two, bank_lobby_world_waits, bank_lobby_start_ui, bank_team_movement, bank_shared_damage_and_separate_ammo, bank_shared_kill_and_corpse, bank_server_reload, bank_local_menu_does_not_pause, bank_wall_blocks_shot, bank_shared_door_and_crossing, bank_teammate_rescues_grab, bank_server_infected_damage, bank_team_wipe_restart, bank_late_join_existing_world, bank_empty_room_starts_fresh, bank_server_loss_cleanup, bank_ui_navigation, bank_ui_settings, bank_ui_gameplay_feedback, bank_release_starts_menu_without_world, bank_release_two_clients, bank_release_debug_bridge_disabled, bank_release_bake_loaded, bank_linux_four_clients_and_movement, bank_linux_authoritative_weapon_state, bank_linux_leave_cleanup, bank_linux_cli_address_rejoin"
+    },
+    {
+      "id": "BANK-ENTRY-REVIEW",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-COOP-OPEN",
+      "status": "not_run",
+      "detail": "teammate_native_pistol_grip_aim_walk_run, teammate_pistol_reload_and_fire, teammate_native_shotgun_grip_walk_fire_reload, teammate_weapon_switch_hides_stowed_gun, discovery_empty_server_without_player_slot, discovery_native_find_ui_no_scene_load, open_server_first_player_moves_immediately, open_server_hard_four_player_limit, open_server_browse_join_freed_slot, open_server_disconnect_cleanup, wsl_localhost_discovery_empty, wsl_first_player_enters_and_moves, wsl_localhost_four_independent_peers, wsl_rejects_fifth_peer, wsl_native_browse_join_and_leave, wsl_persistent_service_survives_all_clients_leaving, frontend_lightweight_and_validation, frontend_solo_spawn_bake_and_return, frontend_failure_returns_with_fields, frontend_one_player_enters_without_waiting, frontend_two_clients_create_join_and_start, frontend_leave_cleans_owned_server, frontend_cancel_connection, frontend_native_keyboard_navigation, frontend_layout_1280x720, frontend_layout_800x600, frontend_layout_2560x1080, bank_session_ui_join_two, bank_join_starts_immediately, bank_team_movement, bank_shared_damage_and_separate_ammo, bank_shared_kill_and_corpse, bank_server_reload, bank_local_menu_does_not_pause, bank_wall_blocks_shot, bank_shared_door_and_crossing, bank_teammate_rescues_grab, bank_server_infected_damage, bank_team_wipe_restart, bank_late_join_existing_world, bank_empty_room_starts_fresh, bank_server_loss_cleanup, bank_release_starts_menu_without_world, bank_release_two_clients, bank_release_debug_bridge_disabled, bank_release_bake_loaded"
+    },
+    {
+      "id": "BANK-COOP-OPEN-ART",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-LIGHTING-ENTRY",
+      "status": "not_run",
+      "detail": "lighting_preview_54_emitters_and_bake, lighting_solo_normal_entry_and_movement, lighting_solo_54_emitters_and_bake, lighting_normal_walk_preserves_weapon_projector, lighting_multiplayer_normal_entry_and_movement, lighting_multiplayer_54_emitters_and_bake, lighting_five_views_match_selected_preview, bank_release_starts_menu_without_world, bank_release_two_clients, bank_release_debug_bridge_disabled, bank_release_bake_loaded, bank_release_hanging_lights_enabled"
+    },
+    {
+      "id": "BANK-LIGHTING-ENTRY-ART",
+      "status": "not_run",
+      "detail": "Missing evidence: comparison.jpg, light_walk.webp"
+    },
+    {
+      "id": "BANK-COOP-PRESENTATION",
+      "status": "not_run",
+      "detail": "bank_session_ui_join_two, bank_join_starts_immediately, bank_team_movement, bank_shared_damage_and_separate_ammo, bank_shared_kill_and_corpse, bank_server_reload, bank_local_menu_does_not_pause, bank_wall_blocks_shot, bank_shared_door_and_crossing, bank_teammate_rescues_grab, bank_server_infected_damage, bank_team_wipe_restart, bank_late_join_existing_world, bank_empty_room_starts_fresh, bank_server_loss_cleanup, preview_esc_releases_logical_buttons_and_trigger, preview_door_close_continuous_steps, preview_infected_chase_sequence, bank_release_starts_menu_without_world, bank_release_two_clients, bank_release_debug_bridge_disabled, bank_release_bake_loaded, bank_release_hanging_lights_enabled"
+    },
+    {
+      "id": "BANK-COOP-PRESENTATION-REVIEW",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-NETWORK-AUDIT",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-NETWORK-HARDENING",
+      "status": "not_run",
+      "detail": "bank_network_packet_bounds, bank_network_prediction, bank_network_recovery, bank_network_capacity_reservation, bank_network_normal_combat, bank_network_join_during_round_reset, bank_network_native_ui_cancel, bank_network_cooperative_damage, bank_network_shared_kill_without_duplicate_shots"
+    },
+    {
+      "id": "BANK-NETWORK-HARDENING-REVIEW",
+      "status": "needs_review",
+      "detail": "No explicit visual review"
+    },
+    {
+      "id": "BANK-COOP-PERF",
+      "status": "pass",
+      "detail": "coop_perf_valid_placements, coop_perf_real_combat, coop_perf_multiple_interiors, coop_perf_repeated_samples, coop_perf_runtime_errors_absent"
+    },
+    {
+      "id": "BANK-COOP-OPTIMIZATION",
+      "status": "pass",
+      "detail": "coop_optimization_pose_hitbox_equivalence, coop_optimization_crowd_equivalence, coop_optimization_delta_loss_reset, coop_optimization_normal_combat, coop_optimization_weak_network, coop_optimization_repeated_performance"
+    }
+  ]
+}

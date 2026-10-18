@@ -1,5 +1,6 @@
 extends CharacterBody3D
 ## Native skins and retail ANI motion, contact-aware combat and intact ragdolls.
+var replica_only := false
 var game: Node3D
 var definition: Dictionary
 var stats: Dictionary
@@ -98,7 +99,7 @@ func setup(world: Node3D,source: Dictionary,type: Dictionary,pin: Dictionary) ->
 	sight_query.collision_mask=3;sight_query.exclude=[get_rid()]
 	head_bone=skeleton.find_bone("ValveBiped.Bip01_Head1")
 	assert(head_bone>=0,"Infected has no native head bone")
-	head_hitbox=Area3D.new();head_hitbox.name="HeadHitbox";head_hitbox.collision_layer=16;head_hitbox.collision_mask=0;head_hitbox.monitoring=false
+	head_hitbox=Area3D.new();head_hitbox.name="HeadHitbox";head_hitbox.collision_layer=16;head_hitbox.collision_mask=0;head_hitbox.monitoring=false;head_hitbox.monitorable=false
 	head_hitbox.set_meta("shot_owner",self);add_child(head_hitbox)
 	var head_shape:=CollisionShape3D.new();var sphere:=SphereShape3D.new();sphere.radius=float(motion_profile.head_radius)*float(motion_profile.visual_scale);head_shape.shape=sphere;head_hitbox.add_child(head_shape)
 	animator.callback_mode_process=AnimationMixer.ANIMATION_CALLBACK_MODE_PROCESS_MANUAL
@@ -235,21 +236,9 @@ func advance(dt: float) -> void:
 	# normal move_and_slide still owns wall, floor, player and actor contacts.
 	if mode in ["chase","return"]:
 		var separation_started: int=game.profiler.mark()
-		var separation:=Vector3.ZERO
 		var neighbours: Array=game.crowd.neighbours(self)
 		game.profiler.count("neighbour_candidates",neighbours.size())
-		var origin:=global_position
-		for other in neighbours:
-			if other==self or not other.active or other.mode=="dead":continue
-			var apart: Vector3=origin-other.global_position
-			if absf(apart.y)>.65:continue
-			apart.y=0
-			var radius: float=collision_radius+other.collision_radius+.10
-			if apart.length_squared()>=radius*radius:continue
-			var length:=apart.length()
-			if length>.01 and length<radius:separation+=apart/length*(1-length/radius)
-		separation=separation.limit_length(.65)
-		velocity+=separation
+		velocity+=game.crowd.separation(self,neighbours)
 		game.profiler.end_scope("separation",separation_started)
 	velocity.y=-1 if is_on_floor() else velocity.y-20*dt
 	# CharacterBody3D is kinematic: an idle body resting on unchanged static
@@ -374,7 +363,6 @@ func play_pose(dt: float, continuous: bool=false) -> void:
 	native_motion.ground_feet(dt)
 	native_motion.flinch()
 	if reaction_time>=reaction_duration:reactions.current_deltas.clear();reactions.peak_degrees=0
-	if reaction_time<reaction_duration or mode in ["grab","attack"]:skeleton.force_update_all_bone_transforms()
 	if reaction_time<reaction_duration and mode!="dead":
 		var pulse: float=(1-exp(-reaction_time*65))*exp(-reaction_time*7)*reaction_strength
 		var pitch: float=reaction_vector.z*deg_to_rad(18)*pulse
@@ -394,19 +382,19 @@ func play_pose(dt: float, continuous: bool=false) -> void:
 		rotate_world("Spine1",global_basis.x,-.16)
 		rotate_world("Spine2",global_basis.x,-.10)
 		rotate_world("Head1",global_basis.x,-.10+sin(state_time*9)*.018)
-		skeleton.force_update_all_bone_transforms()
 		for side in ["L","R"]:
 			var sign_side: float=-1 if side=="L" else 1
 			var target: Vector3=game.player.global_position+Vector3.UP*1.35+global_basis.x*sign_side*.23+global_basis.z*.20
 			reach_arm(side,target,1.0)
 	elif mode=="attack":
 		native_motion.align_contact()
-	skeleton.force_update_all_bone_transforms()
 	head_hitbox.global_position=skeleton.to_global(skeleton.get_bone_global_pose(head_bone).origin)+Vector3.UP*.075*float(motion_profile.visual_scale)
-	head_hitbox.collision_layer=16 if active and mode!="dead" else 0
+	head_hitbox.collision_layer=16 if active and mode!="dead" and not replica_only else 0
 	ragdoll.update_hitboxes()
 	game.profiler.end_scope("pose",started)
 
+# Godot 4.7 get_bone_global_pose updates its dirty ancestor chain. Avoid
+# repeatedly refreshing the complete rig between each IK/reaction operation.
 func rotate_world(suffix: String, axis: Vector3, angle: float) -> void:
 	var bone: int=bone_ids.get(suffix,-1)
 	if bone<0:return
@@ -423,7 +411,6 @@ func aim_bone(suffix: String, child: String, target: Vector3, weight: float) -> 
 	var desired: Vector3=(target-origin).normalized()
 	var axis:=current.cross(desired)
 	if axis.length_squared()>.000001:rotate_world(suffix,axis.normalized(),acos(clampf(current.dot(desired),-1,1))*weight)
-	skeleton.force_update_all_bone_transforms()
 
 func reach_arm(side: String, target: Vector3, weight: float) -> void:
 	if weight<.001:return

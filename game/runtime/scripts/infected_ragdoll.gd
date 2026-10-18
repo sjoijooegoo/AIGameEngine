@@ -59,6 +59,12 @@ var source_frame := Basis.IDENTITY
 const HIT_PAIRS={"Body":["Pelvis","Spine2"],"ArmL":["L_UpperArm","L_Hand"],"ArmR":["R_UpperArm","R_Hand"],"LegL":["L_Thigh","L_Foot"],"LegR":["R_Thigh","R_Foot"]}
 var point_bones: Dictionary={}
 var hit_shapes: Dictionary={}
+class HitBinding:
+	var area: Area3D
+	var shape: CapsuleShape3D
+	var first: int
+	var second: int
+var hit_bindings: Array[HitBinding]=[]
 var inverse_masses: Array[float]=[]
 var quiet_time := 0.0
 var max_speed := 0.0
@@ -90,11 +96,14 @@ func setup(owner_actor: CharacterBody3D) -> void:
 		elif mesh.name.begins_with("Sever_"):
 			sever_parts[str(mesh.name).trim_prefix("Sever_").split(".")[0].split("_")[0]]=mesh;mesh.visible=false
 	for part in ["Body","ArmL","ArmR","LegL","LegR"]:
-		var area:=Area3D.new();area.name="Hit_"+part;area.collision_layer=16;area.collision_mask=0;area.monitoring=false
+		var area:=Area3D.new();area.name="Hit_"+part;area.collision_layer=16;area.collision_mask=0;area.monitoring=false;area.monitorable=false
 		area.set_meta("shot_owner",actor);area.set_meta("hit_part",part);actor.add_child(area)
 		var shape:=CollisionShape3D.new();shape.shape=CapsuleShape3D.new();area.add_child(shape);hitboxes[part]=area
 		hit_shapes[part]=shape.shape
 		shape.shape.radius=(float(actor.motion_profile.body_radius) if part=="Body" else .085 if part.begins_with("Arm") else .115)*actor.model.scale.y
+		var binding:=HitBinding.new();binding.area=area;binding.shape=shape.shape
+		binding.first=point_bones[HIT_PAIRS[part][0]];binding.second=point_bones[HIT_PAIRS[part][1]]
+		hit_bindings.append(binding)
 	if parts.has("Body"):body_mesh=parts.Body.mesh
 	actor.head_hitbox.set_meta("hit_part","Head")
 	intact_skin=preload("res://scripts/infected_skin_batch.gd").create(parts)
@@ -114,18 +123,18 @@ func point(suffix: String) -> Vector3:
 	return rig.to_global(rig.get_bone_global_pose(int(point_bones[suffix])).origin)
 
 func update_hitboxes() -> void:
+	if actor.replica_only:return # Client shots are cosmetic; authority owns all hit tests.
 	var started: int=actor.game.profiler.mark()
 	var layer: int=(32 if active else 16) if actor.active else 0
 	var transform: Transform3D=rig.global_transform
-	for part in hitboxes:
-		var area: Area3D=hitboxes[part]
+	for binding: HitBinding in hit_bindings:
+		var area: Area3D=binding.area
 		if area.collision_layer!=layer:area.collision_layer=layer
 		if not actor.active:continue
-		var pair: Array=HIT_PAIRS[part]
-		var a: Vector3=transform*rig.get_bone_global_pose(point_bones[pair[0]]).origin
-		var b: Vector3=transform*rig.get_bone_global_pose(point_bones[pair[1]]).origin
+		var a: Vector3=transform*rig.get_bone_global_pose(binding.first).origin
+		var b: Vector3=transform*rig.get_bone_global_pose(binding.second).origin
 		var axis: Vector3=(b-a).normalized()
-		var shape: CapsuleShape3D=hit_shapes[part]
+		var shape: CapsuleShape3D=binding.shape
 		var height:=maxf(shape.radius*2,a.distance_to(b)+shape.radius)
 		# Radius never changes; avoid re-registering physics geometry for numerical
 		# noise. Maximum endpoint error is 1.5 mm; transforms still update at 60 Hz.
@@ -498,7 +507,6 @@ func apply_pose() -> void:
 		if direction.length_squared()<.1:continue
 		var rotation: Basis=anatomy.bone_rotation(n) if anatomy.frames.has(n) else Basis(Quaternion(torso_rotation*directions[n],direction))*torso_rotation
 		rig.set_bone_global_pose(bones[n],inverse*Transform3D(rotation*bases[n],positions[ids[n]]))
-	rig.force_update_all_bone_transforms()
 	actor.head_hitbox.global_position=point("Head1")+Vector3.UP*.075*actor.model.scale.y
 
 func reset() -> void:

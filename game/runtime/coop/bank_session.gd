@@ -24,6 +24,10 @@ var clock_age := 0.0
 var wire_bytes := 0
 var server_tick_usec := 0
 var server_peak_usec := 0
+var snapshot_delta=preload("res://coop/snapshot_delta.gd").new()
+var snapshot_rows: Dictionary={}
+var snapshot_keyframe_tick := -1
+var snapshot_keyframe_sent: Dictionary={}
 var snapshot_buffer=preload("res://coop/snapshot_buffer.gd").new()
 var recovery=preload("res://coop/session_recovery.gd").new()
 var network_stalled := false
@@ -68,7 +72,7 @@ func _ready() -> void:
 	super._ready()
 	visual=not is_host
 	# Protocol includes the real bank rules and layout, not the old structural slice.
-	var fingerprint:="bank-combat-v4"
+	var fingerprint:="bank-combat-v5"
 	for path in ["origin_structure","infected","infected_archetypes","firearms","door_design","shooting_feedback"]:
 		fingerprint+=FileAccess.get_file_as_string("res://data/"+path+".json").replace("\r\n","\n")
 	map_hash=fingerprint.sha256_text()
@@ -117,13 +121,14 @@ func disconnect_game(message: String="已退出会话") -> void:
 	for context in contexts.values():context.weapon.queue_free()
 	contexts.clear();restore_local()
 	super.disconnect_game(message)
-	equipment.clear();remote_shots.clear();snapshot_buffer.reset()
+	equipment.clear();remote_shots.clear();snapshot_buffer.reset();snapshot_delta.reset();snapshot_rows.clear();snapshot_keyframe_tick=-1;snapshot_keyframe_sent.clear()
 	preview_fire.clear();preview_cooldown=0;network_stalled=false
 	local_fire_age=99;local_fire_weapon=""
 	reserved_count=0
 	pending_actions.clear()
 	team.clear();replicas.clear();presentation.reset();bank_tick=-1;received_round=0;received_shots=-1;team_wiped=false
 	started=false;leader=0;last_bank_received_msec=0
+	for enemy in world.infected:enemy.replica_only=false
 	world.player.collision_layer=2;world.player.collision_mask=9
 	if panel:panel.refresh()
 	if frontend_managed and not closing and not message.is_empty():AppFlow.return_menu("multiplayer",message)
@@ -190,7 +195,9 @@ func join_game(address: String, port_number: int, label: String) -> Error:
 	prepare_client_resources()
 	var result:=super.join_game(address,port_number,label)
 	world.player.collision_layer=0;world.player.collision_mask=0
-	for enemy in world.infected:enemy.visible=false;enemy.collision_layer=0;enemy.head_hitbox.collision_layer=0
+	for enemy in world.infected:
+		enemy.replica_only=true;enemy.visible=false;enemy.collision_layer=0;enemy.head_hitbox.collision_layer=0
+		for area in enemy.ragdoll.hitboxes.values():area.collision_layer=0
 	return result
 
 func prepare_client_resources() -> void:
@@ -280,6 +287,7 @@ func _roster_ready(revision: int) -> void:
 		_round_reset.rpc_id(id,round_id,tick,all_states())
 
 func _disconnected(id: int) -> void:
+	snapshot_delta.acknowledgements.erase(id);snapshot_keyframe_sent.erase(id)
 	if contexts.has(id):
 		var context=contexts[id];context.bind(world)
 		if context.feedback.is_grabbed():context.feedback.release("disconnected")
@@ -504,10 +512,15 @@ func server_advance(dt: float) -> void:
 	for door in world.doors.values():door.advance(dt)
 	world.navigation.update_doors();world.crowd.rebuild(world.infected)
 	world.profiler.end_scope("server_doors_crowd",profile_stage);profile_stage=world.profiler.mark()
+	var bound_target=null
 	for enemy in world.infected:
+		if not enemy.active:continue
+		if enemy.mode=="dead" and enemy.ragdoll.sleeping:
+			enemy.advance(dt);continue
 		var target=choose_target(enemy)
 		if target==null:continue
-		target.bind(world);enemy.advance(dt);target.save(world)
+		if target!=bound_target:target.bind(world);bound_target=target
+		enemy.advance(dt);target.save(world)
 		if enemy.active and enemy.mode!="dead":world.crowd.update(enemy)
 	world.profiler.end_scope("server_infected",profile_stage);profile_stage=world.profiler.mark()
 	# A teammate's hit can release a grab owned by another player's context.
@@ -569,7 +582,7 @@ func broadcast_reset() -> void:
 func _round_reset(epoch: int,server_tick: int,rows: Array) -> void:
 	if epoch<=received_round:return
 	received_round=epoch;latest_tick=maxi(latest_tick,server_tick);bank_tick=maxi(bank_tick,server_tick-1)
-	snapshot_buffer.reset();prediction.reset();input_history.clear();pending_reconcile.clear();preview_fire.clear()
+	snapshot_buffer.reset();snapshot_delta.reset(epoch);prediction.reset();input_history.clear();pending_reconcile.clear();preview_fire.clear()
 	pending_actions.clear()
 	world.reset_infected("default");replicas.clear();presentation.reset();world.feedback.reset();received_shots=-1
 	for row in rows:
@@ -581,6 +594,8 @@ func _round_reset(epoch: int,server_tick: int,rows: Array) -> void:
 func broadcast_bank() -> void:
 	var recipients:=ready_ids()
 	if recipients.is_empty():return
+	if snapshot_delta.epoch!=round_id:
+		snapshot_delta.reset(round_id);snapshot_rows.clear();snapshot_keyframe_tick=-1;snapshot_keyframe_sent.clear()
 	var states: Dictionary={}
 	for id in contexts:states[id]=contexts[id].state()
 	var doors: Dictionary={}
@@ -588,28 +603,66 @@ func broadcast_bank() -> void:
 		var door=world.doors[id];doors[id]=[door.progress,door.target,door.swing,door.blocked]
 	var enemies: Array=[]
 	for enemy in world.infected:
-		enemies.append([str(enemy.name),enemy.position,enemy.rotation.y,enemy.velocity,enemy.hp,enemy.mode,enemy.clock,enemy.state_time,enemy.active,
-			enemy.ragdoll.positions.duplicate() if enemy.mode=="dead" else [],enemy.ragdoll.head_destroyed,enemy.animation_name,enemy.animation_time,enemy.native_motion.phase,enemy.attack_serial,enemy.reaction_time,enemy.reaction_duration,enemy.reaction_zone,enemy.reaction_direction,enemy.reaction_vector,enemy.reaction_strength,enemy.strong_reaction])
+		var cached: Array=snapshot_rows.get(enemy.name,[])
+		# Frozen rows only omit irrelevant clocks. A wake, head burst, transform,
+		# health/visibility change or round reset immediately invalidates the row.
+		var stable: bool=not cached.is_empty() and cached[8]==enemy.active and cached[5]==enemy.mode and cached[4]==enemy.hp and cached[1]==enemy.position and cached[2]==enemy.rotation.y
+		if stable and (not enemy.active or (enemy.mode=="dead" and enemy.ragdoll.sleeping and cached[9]==enemy.ragdoll.positions and cached[10]==enemy.ragdoll.head_destroyed)):
+			enemies.append(cached);continue
+		var row: Array=[str(enemy.name),enemy.position,enemy.rotation.y,enemy.velocity,enemy.hp,enemy.mode,enemy.clock,enemy.state_time,enemy.active,
+			enemy.ragdoll.positions.duplicate() if enemy.mode=="dead" else [],enemy.ragdoll.head_destroyed,enemy.animation_name,enemy.animation_time,enemy.native_motion.phase,enemy.attack_serial,enemy.reaction_time,enemy.reaction_duration,enemy.reaction_zone,enemy.reaction_direction,enemy.reaction_vector,enemy.reaction_strength,enemy.strong_reaction]
+		enemies.append(row);snapshot_rows[enemy.name]=row
 	var packet: Dictionary={"round":round_id,"team":states,"doors":doors,"enemies":enemies,"kills":world.kills,"wiped":team_wiped,"started":started,"leader":leader,"reserved":recovery.reservations.size()}
-	var raw:=var_to_bytes(packet)
-	var compressed:=raw.compress(FileAccess.COMPRESSION_ZSTD)
-	wire_bytes=compressed.size()
-	var parts: Array=snapshot_buffer.shards(compressed);var count:=parts.size()-1
+	var keyframe: bool=snapshot_keyframe_tick<0 or tick-snapshot_keyframe_tick>=60
+	if keyframe:snapshot_delta.remember(tick,packet);snapshot_keyframe_tick=tick
+	var encoded: Dictionary={}
 	for id in recipients:
-		for index in parts.size():_bank_chunk.rpc_id(id,tick,index,count,raw.size(),compressed.size(),parts[index])
-		if tick%60==6:_bank_keyframe.rpc_id(id,tick,raw.size(),compressed)
+		var base_tick: int=snapshot_delta.acknowledgements.get(id,-1)
+		if not snapshot_delta.bases.has(base_tick):base_tick=-1
+		if not encoded.has(base_tick):
+			var raw:=var_to_bytes(snapshot_delta.encode(packet,base_tick))
+			var compressed:=raw.compress(FileAccess.COMPRESSION_ZSTD)
+			encoded[base_tick]={"size":raw.size(),"bytes":compressed,"parts":snapshot_buffer.shards(compressed)}
+		var data: Dictionary=encoded[base_tick];var count: int=data.parts.size()-1
+		wire_bytes=data.bytes.size()
+		for index in data.parts.size():_bank_chunk.rpc_id(id,tick,index,count,data.size,data.bytes.size(),data.parts[index])
+		if snapshot_keyframe_sent.get(id,-1)!=snapshot_keyframe_tick:
+			if not encoded.has("keyframe"):
+				var raw:=var_to_bytes(snapshot_delta.full(snapshot_delta.bases[snapshot_keyframe_tick],true))
+				encoded.keyframe={"size":raw.size(),"bytes":raw.compress(FileAccess.COMPRESSION_ZSTD)}
+			_bank_keyframe.rpc_id(id,snapshot_keyframe_tick,encoded.keyframe.size,encoded.keyframe.bytes)
+			snapshot_keyframe_sent[id]=snapshot_keyframe_tick
+
+@rpc("any_peer","call_remote","unreliable",1)
+func _bank_base_ack(epoch: int, server_tick: int) -> void:
+	var id:=multiplayer.get_remote_sender_id()
+	if is_host and contexts.has(id):snapshot_delta.acknowledge(id,epoch,server_tick)
+
+func receive_bank_wire(server_tick: int,wire: Dictionary) -> void:
+	if is_host or not players.has(local_id):return
+	var decoded: Dictionary=snapshot_delta.decode(server_tick,wire,received_round)
+	if decoded.is_empty():return
+	# A delayed reliable base must be stored/acknowledged even if a newer
+	# snapshot was displayed. _bank_snapshot still rejects state rewinds.
+	# Confirm repeatedly until the sender actually uses our newest base. Losing
+	# an ack costs bandwidth only. Never queue these behind reliable input or
+	# make movement wait for retransmission of a snapshot acknowledgement.
+	if not snapshot_delta.bases.is_empty():
+		var newest: int=snapshot_delta.bases.keys().max()
+		if wire.base!=newest:_bank_base_ack.rpc_id(1,received_round,newest)
+	_bank_snapshot(server_tick,decoded)
 
 @rpc("authority","call_remote","reliable",2)
 func _bank_keyframe(server_tick: int, size: int, bytes: PackedByteArray) -> void:
 	if size<1 or size>1048576 or bytes.size()>115200:return
 	var decoded=bytes_to_var(bytes.decompress(size,FileAccess.COMPRESSION_ZSTD))
-	if decoded is Dictionary:_bank_snapshot(server_tick,decoded)
+	if decoded is Dictionary:receive_bank_wire(server_tick,decoded)
 
 @rpc("authority","call_remote","unreliable",1)
 func _bank_chunk(server_tick: int, index: int, count: int, size: int,wire_size: int,bytes: PackedByteArray) -> void:
 	if is_host:return
 	var decoded: Dictionary=snapshot_buffer.receive(server_tick,index,count,size,wire_size,bytes,Time.get_ticks_msec(),bank_tick)
-	if not decoded.is_empty():_bank_snapshot(server_tick,decoded)
+	if not decoded.is_empty():receive_bank_wire(server_tick,decoded)
 
 func _bank_snapshot(server_tick: int, packet: Dictionary) -> void:
 	if is_host or server_tick<=bank_tick or not players.has(local_id):return
@@ -633,7 +686,7 @@ func _bank_snapshot(server_tick: int, packet: Dictionary) -> void:
 		var enemy=world.get_node_or_null(NodePath(row[0]))
 		if enemy==null:continue
 		var old: Array=replicas.get(row[0],[])
-		var fresh: bool=old.is_empty()
+		var fresh: bool=old.is_empty() or (row[8] and not old[8])
 		if fresh:
 			enemy.position=row[1];enemy.rotation.y=row[2];enemy.clock=row[6]
 			enemy.native_motion.phase=row[13];enemy.native_motion.previous_position=enemy.global_position
@@ -681,7 +734,7 @@ func _bank_snapshot(server_tick: int, packet: Dictionary) -> void:
 func observe() -> Dictionary:
 	var result:=super.observe()
 	result.presentation=presentation.observe();result.mouse_mode=Input.mouse_mode;result.mouse_buttons=Input.get_mouse_button_mask()
-	result.prediction=prediction.observe();result.snapshot_assembly=snapshot_buffer.observe()
+	result.prediction=prediction.observe();result.snapshot_assembly=snapshot_buffer.observe();result.snapshot_delta=snapshot_delta.observe()
 	result.recovery={"retrying":recovery.retrying,"attempts":recovery.attempts,"resumed":recovery.resumed,"reserved":recovery.reservations.size(),"occupied":occupied_slots() if is_host else players.size()}
 	result.network_stalled=network_stalled;result.preview_shots=preview_count
 	result.merge({"active":active,"bank_tick":bank_tick,"round":round_id if is_host else received_round,"team_wiped":team_wiped,"local_server_pid":local_server_pid,

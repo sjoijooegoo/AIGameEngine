@@ -1,0 +1,33 @@
+<!doctype html><meta charset="utf-8"><title>银行联机优化 1、3 · 对照报告</title><style>body{max-width:1500px;margin:32px auto;padding:0 24px;background:#111a18;color:#e1e8e3;font:17px/1.7 system-ui}a{color:#e0be7b}table{width:100%;border-collapse:collapse;font-size:15px}td,th{padding:12px;border-bottom:1px solid #3c5045;text-align:left}img{max-width:100%}details{padding:14px 0}.note{color:#e3ba79}</style>
+<h1>银行多人战斗：感染者计算与增量复制优化</h1>
+<p>同一台 Windows 机器、原 1080p 画质和吊灯/阴影，真实专用服务端 + 2/4 个客户端，其中一个渲染。8 个案例各预热 3 秒、测量 16 秒、重复 2 次。正常输入触发射击、装填、推搡和移动。范围是两轮值，并非置信区间。</p>
+<p class="note">同机竞争和战斗结果有波动；相同输入策略不等于每帧完全相同的敌人/尸体数量。服务端单步 P95 超过 16.67 ms 的案例仍未达到稳定 60 Hz。此报告不证明 2 核 VPS 容量、长期稳定性或所有弱网条件达标。</p>
+<p><a href="../../../docs/bank-coop-optimization.md">实现、验证与剩余瓶颈</a> · <a href="report.json">完整对照</a> · <a href="metrics.csv">优化后逐轮 CSV</a> · <a href="raw-evidence.zip">性能原始数据和精确源码</a> · <a href="verification-evidence.zip">定向回归、弱网与动态证据</a></p>
+<table><tr><th>案例</th><th>平均 FPS：前 → 后</th><th>服务端步 P95 ms</th><th>实际服务端 Hz</th><th>服务端发送 KiB/s</th></tr>
+<tr><td>一楼大厅 · 2人32敌</td><td>93.8–116.7 → 121.4–143.6</td><td>7.7–8.3 → 7.2–7.9</td><td>60.0–60.1 → 60.0–60.1</td><td>183.7–201.4 → 97.7–104.6</td></tr>
+<tr><td>一楼大厅 · 4人32敌</td><td>74.4–91.5 → 125.5–128.4</td><td>9.9–12.1 → 11.3–11.5</td><td>60.0–60.1 → 60.1–60.1</td><td>476.0–485.7 → 261.5–264.1</td></tr>
+<tr><td>一楼大厅 · 4人64敌</td><td>60.0–74.1 → 86.1–89.9</td><td>18.6–20.7 → 17.2–19.2</td><td>58.2–60.0 → 59.5–60.0</td><td>413.5–479.2 → 258.3–266.9</td></tr>
+<tr><td>一楼大厅 · 4人84敌</td><td>53.8–65.7 → 72.5–76.9</td><td>22.6–23.6 → 19.6–22.9</td><td>48.8–55.1 → 52.5–59.8</td><td>334.2–446.5 → 235.4–237.8</td></tr>
+<tr><td>一楼现金办公区 · 4人32敌</td><td>85.3–86.8 → 128.1–135.1</td><td>11.9–12.8 → 10.2–10.6</td><td>60.1–60.1 → 60.0–60.1</td><td>558.5–563.7 → 260.3–277.1</td></tr>
+<tr><td>三楼活动区 · 4人32敌</td><td>94.8–100.3 → 122.2–143.0</td><td>9.2–11.1 → 10.4–10.9</td><td>60.1–60.1 → 60.1–60.1</td><td>504.0–507.5 → 245.4–254.8</td></tr>
+<tr><td>四楼会议区 · 4人32敌</td><td>117.6–129.3 → 150.2–152.6</td><td>7.8–15.4 → 10.0–11.7</td><td>60.0–60.1 → 60.0–60.1</td><td>397.5–479.7 → 229.3–250.9</td></tr>
+<tr><td>三楼前楼梯走廊 · 4人24敌</td><td>76.5–79.7 → 96.4–97.7</td><td>6.4–15.5 → 7.6–12.6</td><td>60.0–60.1 → 60.1–60.1</td><td>411.1–499.8 → 217.2–251.5</td></tr>
+</table>
+<h2>画面检查</h2><p>截图在采样结束后冻结场景取得，HUD FPS 是静止时的值，不用于性能统计。高血量为诊断夹具；未改变正式玩法平衡。近距离拥挤和模型遮挡保留在证据中；最终动作观感仍由用户试玩判断。</p><img src="interiors.jpg">
+<details><summary>一楼大厅 · 2人32敌 · 第 1 轮 · 143.6 FPS</summary><img loading="lazy" src="hall_2p_32-r1.webp"></details>
+<details><summary>一楼大厅 · 2人32敌 · 第 2 轮 · 121.4 FPS</summary><img loading="lazy" src="hall_2p_32-r2.webp"></details>
+<details><summary>一楼大厅 · 4人32敌 · 第 1 轮 · 125.5 FPS</summary><img loading="lazy" src="hall_4p_32-r1.webp"></details>
+<details><summary>一楼大厅 · 4人64敌 · 第 1 轮 · 86.1 FPS</summary><img loading="lazy" src="hall_4p_64-r1.webp"></details>
+<details><summary>一楼大厅 · 4人84敌 · 第 1 轮 · 76.9 FPS</summary><img loading="lazy" src="hall_4p_84-r1.webp"></details>
+<details><summary>一楼现金办公区 · 4人32敌 · 第 1 轮 · 128.1 FPS</summary><img loading="lazy" src="cash_4p_32-r1.webp"></details>
+<details><summary>三楼活动区 · 4人32敌 · 第 1 轮 · 143.0 FPS</summary><img loading="lazy" src="activity_4p_32-r1.webp"></details>
+<details><summary>四楼会议区 · 4人32敌 · 第 1 轮 · 152.6 FPS</summary><img loading="lazy" src="conference_4p_32-r1.webp"></details>
+<details><summary>三楼前楼梯走廊 · 4人24敌 · 第 1 轮 · 96.4 FPS</summary><img loading="lazy" src="corridor_4p_24-r1.webp"></details>
+<details><summary>一楼大厅 · 4人32敌 · 第 2 轮 · 128.4 FPS</summary><img loading="lazy" src="hall_4p_32-r2.webp"></details>
+<details><summary>一楼大厅 · 4人64敌 · 第 2 轮 · 89.9 FPS</summary><img loading="lazy" src="hall_4p_64-r2.webp"></details>
+<details><summary>一楼大厅 · 4人84敌 · 第 2 轮 · 72.5 FPS</summary><img loading="lazy" src="hall_4p_84-r2.webp"></details>
+<details><summary>一楼现金办公区 · 4人32敌 · 第 2 轮 · 135.1 FPS</summary><img loading="lazy" src="cash_4p_32-r2.webp"></details>
+<details><summary>三楼活动区 · 4人32敌 · 第 2 轮 · 122.2 FPS</summary><img loading="lazy" src="activity_4p_32-r2.webp"></details>
+<details><summary>四楼会议区 · 4人32敌 · 第 2 轮 · 150.2 FPS</summary><img loading="lazy" src="conference_4p_32-r2.webp"></details>
+<details><summary>三楼前楼梯走廊 · 4人24敌 · 第 2 轮 · 97.7 FPS</summary><img loading="lazy" src="corridor_4p_24-r2.webp"></details>
+<h2>固定步动态检查</h2><p>正常输入的倒地、关门和尸体补射唤醒；冻结截图之间的模拟，以下不是实时性能采样。</p><details><summary>尸体倒地</summary><img src="corpse-fall.jpg"></details><details><summary>关门</summary><img src="door-close.jpg"></details><details><summary>静止尸体补射唤醒</summary><img src="corpse-wake.webp"></details>

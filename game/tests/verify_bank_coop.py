@@ -14,13 +14,13 @@ from game.tools.coop import ROOT, HIDDEN, godot
 
 
 class BankPeer(Peer):
-    def __init__(self, folder, args, rendered=False):
+    def __init__(self, folder, args, rendered=False, driver=None):
         folder.mkdir(); self.folder=folder; self.serial=0
         self.log=(folder/'engine.log').open('w',encoding='utf8')
         executable=godot();direct=executable.with_name(executable.name.replace('_console.exe','.exe'))
         if direct.is_file():executable=direct
         cmd=[str(executable),'--path',str(ROOT/'game/runtime'),'--max-fps','120',
-             '--resolution','1280x720','--script',str(ROOT/'game/tests/bank_coop_driver.gd')]
+             '--resolution','1280x720','--script',str(driver or ROOT/'game/tests/bank_coop_driver.gd')]
         if not rendered:cmd+=['--headless']
         cmd+=['--',f'--test-session={folder.as_posix()}','--performance-benchmark','--coop',*args]
         self.process=subprocess.Popen(cmd,stdout=self.log,stderr=subprocess.STDOUT,cwd=ROOT,creationflags=HIDDEN)

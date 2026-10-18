@@ -1,6 +1,6 @@
 extends Node3D
 ## Only this node owns the wire protocol. No gameplay callbacks are exposed remotely.
-const PROTOCOL := 2
+const PROTOCOL := 3
 const PlayerBody = preload("res://coop/player.gd")
 var players: Dictionary={}
 var pending: Dictionary={}

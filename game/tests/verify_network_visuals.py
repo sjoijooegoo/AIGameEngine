@@ -1,5 +1,5 @@
 """Rendered current-bank prediction/door/fire sequences through normal inputs."""
-import argparse,datetime,json,socket
+import argparse,datetime,json,socket,math
 from concurrent.futures import ThreadPoolExecutor
 from pathlib import Path
 from PIL import Image,ImageDraw
@@ -29,10 +29,16 @@ def main():
         (folder/(name+'.json')).write_text(json.dumps({'frames':captures,'states':states},ensure_ascii=False,indent=2),encoding='utf8')
         sequences.append({'name':name,'contact':str(contact),'animation':str(animation),'frames':captures})
         return states
+    def aim_at(point):
+        camera=a.call('pose_state')['camera'];state=a.state()
+        d=[point[i]-camera[i] for i in range(3)]
+        yaw=math.atan2(-d[0],-d[2]);pitch=math.atan2(d[1],math.hypot(d[0],d[2]))
+        a.call('input',mouse=[-((yaw-state['aim'][0]+math.pi)%(2*math.pi)-math.pi)/.0025,-(pitch-state['aim'][1])/.0025]);frames(3)
     try:
-        server=BankPeer(folder/'server',['--server',f'--port={port}']);peers.append(server)
-        a=BankPeer(folder/'alpha',[],True);peers.append(a)
-        b=BankPeer(folder/'bravo',[]);peers.append(b)
+        driver=ROOT/'game/tests/bank_pose_probe.gd'
+        server=BankPeer(folder/'server',['--server',f'--port={port}'],driver=driver);peers.append(server)
+        a=BankPeer(folder/'alpha',[],True,driver=driver);peers.append(a)
+        b=BankPeer(folder/'bravo',[],driver=driver);peers.append(b)
         for client,name in [(a,'Alpha'),(b,'Bravo')]:client.call('fields',nickname=name,port=port);client.call('click',control='join_button')
         until(lambda:len(server.state()['players'])==2 and len(a.state()['players'])==2 and len(b.state()['players'])==2,30);frames(30)
         server.call('fixture',name='firearms_range');frames(18)
@@ -45,6 +51,27 @@ def main():
         assert a.state()['doors']['g_inner']['progress']>.98
         a.call('input',keys=['E']);frames(3);a.call('input');states=sequence('door_close',16,6)
         assert states[0]['doors']['g_inner']['progress']>states[-1]['doors']['g_inner']['progress']+.5
+        server.call('fixture',name='physics_police');frames(18)
+        assert a.call('pose_state')['actors'][0]['hit_layer']==0
+        assert server.call('pose_state')['actors'][0]['hit_layer']==16
+        aim_at(server.call('pose_state')['actors'][0]['targets']['Head'])
+        a.call('input',buttons=['left']);frames(3);a.call('input')
+        # The bank pistol does 37 near head damage: a 65 HP actor needs two
+        # genuine hits. Preserve that rule instead of changing fixture health.
+        frames(36);aim_at(server.call('pose_state')['actors'][0]['targets']['Head'])
+        a.call('input',buttons=['left']);frames(3);a.call('input')
+        assert server.call('pose_state')['actors'][0]['mode']=='dead'
+        sequence('corpse_fall',12,6);frames(360)
+        assert server.call('pose_state')['actors'][0]['sleeping']
+        aim_at(server.call('pose_state')['actors'][0]['targets']['Body'])
+        before=a.state()['presentation']['corpse_skipped'];sequence('corpse_settled',4,6)
+        assert a.state()['presentation']['corpse_skipped']>before
+        wakes=server.call('pose_state')['actors'][0]['wake_count']
+        a.call('input',buttons=['left']);frames(3);a.call('input')
+        assert server.call('pose_state')['actors'][0]['wake_count']>wakes
+        assert server.state()['kills']==1
+        sequence('corpse_shot_wake',10,3)
+        checks.append({'name':'bank_network_corpse_sleep_wake','status':'pass','normal_input':True,'client_hit_areas_disabled':True,'authority_hit_areas_enabled':True})
         a.call('menu');menu=a.call('capture')['capture'];sequences.append({'name':'session_menu','image':menu})
         checks.append({'name':'bank_network_rendered_sequences','status':'pass','normal_input':True,'frozen_between_steps':True})
         for peer in peers:

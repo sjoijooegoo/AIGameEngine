@@ -9,9 +9,13 @@ var samples := 0
 var elapsed := 0.0
 var last_arrival := -1.0
 var delay_ticks := 6.0
+var settled_poses: Dictionary={}
+var hidden_skipped := 0
+var corpse_skipped := 0
 
 func reset() -> void:
 	frames.clear();render_tick=0.0;samples=0;elapsed=0;last_arrival=-1;delay_ticks=6
+	settled_poses.clear();hidden_skipped=0;corpse_skipped=0
 
 func push(server_tick: int,packet: Dictionary) -> void:
 	if last_arrival>=0:
@@ -47,15 +51,28 @@ func advance(dt: float) -> void:
 		var id:=str(enemy.name)
 		if not b.actors.has(id):continue
 		var next: Array=b.actors[id];var previous: Array=a.actors.get(id,next)
+		if not enemy.active or not next[8]:
+			hidden_skipped+=1;settled_poses.erase(id);continue
+		if not previous[8]:previous=next # Reactivation must not lerp from a hidden fixture.
 		var teleport: bool=Vector3(previous[1]).distance_squared_to(next[1])>16.0
 		enemy.position=next[1] if teleport else Vector3(previous[1]).lerp(next[1],weight)
 		if extrapolate>0 and next[5] in ["chase","patrol"]:enemy.position+=Vector3(next[3])*extrapolate
 		enemy.rotation.y=lerp_angle(float(previous[2]),float(next[2]),weight)
 		if enemy.mode=="dead" and next[5]=="dead" and next[9].size()==enemy.ragdoll.positions.size():
+			var settled: bool=weight>=1.0 or (previous[5]=="dead" and previous[9]==next[9])
+			var cached: Dictionary=settled_poses.get(id,{})
+			if settled and cached.get("points",[])==next[9] and cached.get("root") == enemy.global_transform:
+				corpse_skipped+=1;continue
 			for i in next[9].size():
 				enemy.ragdoll.positions[i]=Vector3(previous[9][i]).lerp(next[9][i],weight) if previous[5]=="dead" and previous[9].size()==next[9].size() else next[9][i]
+			var basis_before: Basis=enemy.ragdoll.anatomy.current_basis
 			enemy.ragdoll.apply_pose()
+			# Late joining can replace the standing joints with a rotated corpse.
+			# Its iterative torso fit must settle too, not only the input points.
+			if settled and basis_before.is_equal_approx(enemy.ragdoll.anatomy.current_basis):settled_poses[id]={"points":next[9],"root":enemy.global_transform}
+			else:settled_poses.erase(id)
 		elif enemy.mode!="dead":
+			settled_poses.erase(id)
 			# Gait is distance-driven. Never rewind its phase on every packet.
 			if teleport:enemy.native_motion.previous_position=enemy.global_position
 			enemy.clock+=dt;enemy.state_time+=dt;enemy.reaction_time+=dt
@@ -63,4 +80,4 @@ func advance(dt: float) -> void:
 	samples+=1
 
 func observe() -> Dictionary:
-	return {"buffer_ms":delay_ticks*1000.0/60.0,"extrapolate_max_ms":100,"render_tick":render_tick,"frames":frames.size(),"samples":samples,"world_snapshot_hz":10,"simulation_hz":60}
+	return {"buffer_ms":delay_ticks*1000.0/60.0,"extrapolate_max_ms":100,"render_tick":render_tick,"frames":frames.size(),"samples":samples,"world_snapshot_hz":10,"simulation_hz":60,"hidden_skipped":hidden_skipped,"corpse_skipped":corpse_skipped}

@@ -58,3 +58,20 @@ func near_position(position: Vector3) -> Array:
 	if queries.size()>=256:queries.clear()
 	queries[origin]=result
 	return result
+
+func separation(actor: CharacterBody3D, neighbours: Array) -> Vector3:
+	# Typed references avoid dynamic Variant dispatch in the dense inner loop.
+	# Retain roster order, exact radius checks and sequential movement semantics.
+	var result:=Vector3.ZERO
+	var origin:=actor.global_position
+	var radius: float=actor.collision_radius
+	for other: CharacterBody3D in neighbours:
+		if other==actor or not other.active or other.mode=="dead":continue
+		var apart:=origin-other.global_position
+		if absf(apart.y)>.65:continue
+		apart.y=0
+		var combined: float=radius+other.collision_radius+.10
+		if apart.length_squared()>=combined*combined:continue
+		var length:=apart.length()
+		if length>.01 and length<combined:result+=apart/length*(1-length/combined)
+	return result.limit_length(.65)

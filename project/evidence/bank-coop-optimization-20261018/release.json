@@ -1,0 +1,39 @@
+{
+  "windows": {
+    "package": "D:\\AIGameEngine\\build\\bank\\combat-coop\\20261018-074754\\windows\\package",
+    "zip": "D:\\AIGameEngine\\build\\bank\\combat-coop\\20261018-074754\\windows\\bank-coop-windows.zip",
+    "executable_sha256": "6e64e6c33ed57b848696e6a020f3ff236b98cdc88dda7eceb1f63997be215a0b",
+    "wire_protocol": 3,
+    "build": "bank-combat-v5",
+    "bake_meshes": 481.0
+  },
+  "linux": {
+    "package": "D:\\AIGameEngine\\build\\bank\\combat-coop\\20261018-074754\\linux\\package",
+    "zip": "D:\\AIGameEngine\\build\\bank\\combat-coop\\20261018-074754\\linux\\bank-coop-linux.zip",
+    "executable_sha256": "1b6797ac77d5d6ef6e8a89f8638f4e809b6120a6ed5c917bb8f0643f8453c395",
+    "wire_protocol": 3,
+    "build": "bank-combat-v5",
+    "bake_meshes": 481.0
+  },
+  "local_wsl": {
+    "service": "active",
+    "localhost": {
+      "build": "bank-combat-v5",
+      "capacity": 4,
+      "magic": "BANK_STATUS_1",
+      "name": "Local WSL Bank",
+      "nonce": "c932cfde4e6544b3a352b9d38d0061cd",
+      "occupied": 0,
+      "players": 0,
+      "port": 24567,
+      "reserved": 0
+    },
+    "config": {
+      "distro": "Ubuntu",
+      "port": 24567,
+      "sha256": "1b6797ac77d5d6ef6e8a89f8638f4e809b6120a6ed5c917bb8f0643f8453c395",
+      "linux_executable": "/home/song/.local/share/aigameengine-bank/1b6797ac77d5d6ef/bank-server",
+      "package": "D:\\AIGameEngine\\build\\bank\\combat-coop\\20261018-074754\\linux\\package"
+    }
+  }
+}

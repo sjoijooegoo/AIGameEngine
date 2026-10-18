@@ -1,0 +1,18 @@
+{
+  "reviewer": "Codex",
+  "scope": "Technical inspection of actual final bank captures and fixed-step corpse/door sequences; not user art approval.",
+  "report_sha256": "f978b0bd7e74a03587b781646116f392a40cb4d2ae3da17a293757a3b3729678",
+  "inspected": [
+    "hall_4p_84-r1/combat.png",
+    "cash_4p_32-r1/combat.png",
+    "activity_4p_32-r1/combat.png",
+    "conference_4p_32-r1/combat.png",
+    "corridor_4p_24-r1/combat.png",
+    "corpse_fall.jpg",
+    "corpse_settled.jpg",
+    "corpse_shot_wake.jpg",
+    "door_close.jpg"
+  ],
+  "observed": "Infected bodies and original hanging lights/shadows remain. Dense crowds and teammate face occlusion/model intersection are visible and preserved. Corpse falls, settles and receives normal pistol wake impact; door progresses across fixed frames. Capture HUD FPS is post-sampling/static and not used as measurement.",
+  "user_art_acceptance": "not_inferred"
+}

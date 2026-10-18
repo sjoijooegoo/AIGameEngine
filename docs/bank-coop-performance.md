@@ -1,5 +1,7 @@
 # 多人银行室内战斗性能测试 · 2026-10-18
 
+此页保留优化前基线与归因。已实施的计算、呈现及复制优化和前后数据见[后续优化报告](bank-coop-optimization.md)。
+
 本轮测试对象为当前银行联机协议 2 / bank-combat-v4。新增多人性能驱动、可重复案例和联机 CPU 分段采样，目标是区分客户端渲染、感染者呈现、服务端模拟及网络复制的成本。没有改变正式游戏画质、感染者数量、伤害或网络频率。
 
 [完整表格与场景实拍](../project/evidence/bank-coop-performance-20261018/gallery.html) · [逐轮 CSV](../project/evidence/bank-coop-performance-20261018/metrics.csv) · [原始数据及源码快照](../project/evidence/bank-coop-performance-20261018/raw-evidence.zip)。最终采样：`logs/performance/bank-coop-20261018-054954`。22 次正式采样均满足有效战斗、实际装填、连接/数量不变与采样完整性检查；另有 15 项联机玩法回归和 4 项统计口径检查通过。**这不表示每个压力档达到了 60 FPS / 60 Hz。**

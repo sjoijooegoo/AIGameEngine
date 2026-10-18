@@ -1,5 +1,7 @@
 # 银行联机弱网加固 · 2026-10-18
 
+版本说明：本文记录协议 2 的历史加固与证据；当前协议 3 / bank-combat-v5 和配套包见[计算与增量复制优化](bank-coop-optimization.md)。
+
 试玩：[Windows EXE](../build/bank/combat-coop/20261018-045547/windows/package/BankCoop.exe) · [Windows ZIP](../build/bank/combat-coop/20261018-045547/windows/bank-coop-windows.zip) · [Linux 服务端 ZIP](../build/bank/combat-coop/20261018-045637/linux/bank-coop-linux.zip)。[汇总报告与连续画面](../project/evidence/bank-network-hardening-20261018/gallery.html)。本地 WSL 常驻服务已更新为同版本。
 
 本次在当前银行工程实现快照抗乱序、本地移动预测、即时开火表现、网络提示和保留角色状态的自动重连。服务端仍决定合法位置、碰撞、伤害、生命、弹药、门和感染者行为；模拟频率保持 60 Hz。
