@@ -122,6 +122,7 @@ func ground_feet(dt: float) -> void:
 		var knee_basis: Quaternion=hip_turn*chain[1].basis.get_rotation_quaternion()
 		var total: Quaternion=knee_turn*hip_turn
 		var foot_basis: Quaternion=total*chain[2].basis.get_rotation_quaternion()
+		for bone in indices:actor.remember_base_bone(bone)
 		rig.set_bone_pose_rotation(indices[0],(rig.get_bone_pose_rotation(indices[0])*hip_basis.inverse()*hip_turn*hip_basis).normalized())
 		rig.set_bone_pose_rotation(indices[1],(rig.get_bone_pose_rotation(indices[1])*knee_basis.inverse()*knee_turn*knee_basis).normalized())
 		rig.set_bone_pose_rotation(indices[2],(rig.get_bone_pose_rotation(indices[2])*foot_basis.inverse()*total.inverse()*foot_basis).normalized())
@@ -138,6 +139,7 @@ func flinch() -> void:
 		var bone: int=flinch_bones[key][track]
 		if bone<0:continue
 		var delta: Quaternion=animation.rotation_track_interpolate(track,time)
+		actor.remember_base_bone(bone)
 		actor.skeleton.set_bone_pose_rotation(bone,(actor.skeleton.get_bone_pose_rotation(bone)*Quaternion.IDENTITY.slerp(delta,weight)).normalized())
 
 func align_contact() -> void:

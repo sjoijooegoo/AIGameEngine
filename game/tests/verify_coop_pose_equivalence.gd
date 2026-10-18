@@ -52,6 +52,15 @@ func run() -> void:
 				value.ragdoll.apply_pose();value.ragdoll.update_hitboxes()
 			for bone in actor.skeleton.get_bone_count():compare(actor.skeleton.get_bone_global_pose(bone),reference.skeleton.get_bone_global_pose(bone))
 			for part in actor.ragdoll.hitboxes:compare(actor.ragdoll.hitboxes[part].global_transform,reference.ragdoll.hitboxes[part].global_transform)
+		# The solver itself, including floor collision and all joint passes,
+		# must retain the same particle positions/velocities after loop typing.
+		for frame in 90:
+			actor.ragdoll.advance(1.0/60);reference.ragdoll.advance(1.0/60)
+			assert(actor.ragdoll.sleeping==reference.ragdoll.sleeping)
+			for i in actor.ragdoll.positions.size():
+				assert(actor.ragdoll.positions[i].distance_to(reference.ragdoll.positions[i])<.00002)
+				assert(actor.ragdoll.previous[i].distance_to(reference.ragdoll.previous[i])<.00002)
+			for part in actor.ragdoll.hitboxes:compare(actor.ragdoll.hitboxes[part].global_transform,reference.ragdoll.hitboxes[part].global_transform)
 		reference.free()
 	print("BANK_POSE_EQUIVALENCE_PASS models=",visited.size()," transform_comparisons=",compared," max_error=",max_error)
 	quit()

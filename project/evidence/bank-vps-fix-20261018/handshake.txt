@@ -1,0 +1,6 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+COOP_STATUS 服务端监听 UDP 25463，人数上限 2
+BANK_ENET_HANDSHAKE_PASS {"channels":8,"incoming_bandwidth":0,"mtu":1392,"outgoing_bandwidth":0,"window":65536}
+COOP_STATUS 正在连接 127.0.0.1:51596…
+BANK_ENET_CLIENT_HANDSHAKE_PASS {"channels":8,"incoming_bandwidth":0,"mtu":1392,"outgoing_bandwidth":0,"window":65536}

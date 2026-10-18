@@ -1,7 +1,7 @@
 extends Node
 ## Separate bounded UDP status channel; discovery never occupies a player slot.
 const MAGIC="BANK_STATUS_1"
-const BUILD="bank-combat-v5"
+const BUILD="bank-combat-v6"
 var socket: PacketPeerUDP
 var server: Node
 var game_port := 24567
@@ -71,7 +71,7 @@ func _process(dt: float) -> void:
 		if server!=null:
 			if value.get("query")!=true or bytes.size()<192 or value.nonce.length()>40 or budget<1:continue
 			budget-=1
-			var reply:={"magic":MAGIC,"nonce":value.nonce,"build":BUILD,"name":server_name,"port":game_port,"players":server.players.size(),"occupied":server.occupied_slots(),"reserved":server.recovery.reservations.size(),"capacity":server.max_players}
+			var reply:={"magic":MAGIC,"nonce":value.nonce,"build":BUILD,"name":server_name,"port":game_port,"players":server.players.size(),"occupied":server.occupied_slots(),"reserved":server.recovery.reservations.size(),"capacity":server.max_players,"transport":"tcp" if server.prefer_tcp_advertise else "udp"}
 			socket.set_dest_address(address,port);socket.put_packet(JSON.stringify(reply).to_utf8_buffer())
 		else:receive(value,address,port)
 
@@ -96,6 +96,7 @@ func receive(value: Dictionary,address: String,port: int) -> void:
 	row.online=true;row.seen=Time.get_ticks_msec();row.ping=maxi(0,int(row.seen)-int(sent.sent))
 	row.players=count;row.capacity=capacity;row.name=value.name.left(40);row.compatible=value.get("build")==BUILD
 	row.occupied=occupied;row.reserved=reserved
+	row.transport="tcp" if value.get("transport")=="tcp" else "udp"
 	if sent.id!="lan":pending.erase(value.nonce)
 	changed.emit()
 

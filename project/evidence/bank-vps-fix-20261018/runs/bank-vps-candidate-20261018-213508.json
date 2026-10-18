@@ -1,0 +1,17 @@
+{
+  "id": "bank-vps-candidate-20261018-213508",
+  "source": "logs/sessions/bank-vps-candidate-20261018-213508/report.json",
+  "sha256": "a0fa278e1b2ac0034a517a5e8ab338f92497443ccc0a6667f427927357e2b3fd",
+  "checks": [],
+  "failure": "CalledProcessError(1, ['D:\\\\AIGameEngine\\\\.venv\\\\Scripts\\\\python.exe', '-m', 'game.tests.verify_vps_release', '--project', 'bank', '--package', 'build\\\\bank\\\\combat-coop\\\\20261018-211024\\\\windows\\\\package', '--players', '2', '--transport', 'tcp', '--seconds', '180', '--skip-service-recovery'])",
+  "passed": null,
+  "scope": null,
+  "restored_service": {
+    "returncode": 0,
+    "active": "active",
+    "error": ""
+  },
+  "remote": {
+    "pid": 200047
+  }
+}

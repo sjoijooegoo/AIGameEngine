@@ -19,11 +19,13 @@ def main():
     p.add_argument('--engine',required=True);p.add_argument('--pack',required=True)
     p.add_argument('--overlay',required=True);p.add_argument('--drivers',type=Path,required=True)
     p.add_argument('--session',type=Path,required=True);p.add_argument('--players',type=int,choices=[2,4],required=True)
+    p.add_argument('--port',type=int,default=24567);p.add_argument('--candidate-overlay')
     args=p.parse_args();args.session.mkdir(parents=True,exist_ok=False)
     log=(args.session/'engine.log').open('w')
     command=[args.engine,'--headless','--main-pack',args.pack,'--script',str(args.drivers/'vps_performance.gd'),
              '--','--test-session='+str(args.session),'--validation-overlay='+args.overlay,
-             '--performance-benchmark','--coop','--server','--port=24567',f'--max-players={args.players}']
+             '--performance-benchmark','--coop','--server','--prefer-tcp',f'--port={args.port}',f'--max-players={args.players}']
+    if args.candidate_overlay:command.append('--candidate-overlay='+args.candidate_overlay)
     process=subprocess.Popen(command,stdout=log,stderr=subprocess.STDOUT,start_new_session=True)
     serial=0;sampler=None
     def wait_file(path,timeout=30):

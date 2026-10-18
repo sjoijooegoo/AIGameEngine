@@ -643,6 +643,25 @@
         "docs/bank-vps-deployment.md"
       ],
       "notes": "Deployment and audit delivered, not stability acceptance: default public discovery, 4-slot native UI, Linux systemd and crash recovery verified. Six real-WAN dense-hall samples expose main-thread overload (4p84 ~19.6Hz) and intermittent snapshot stalls. Two release clients over 120s reproduce 2 reconnects; shutdown roster send error remains. Full raw failures preserved; no claim of stable production readiness."
+    },
+    {
+      "id": "BANK-VPS-FIX-011",
+      "title": "修复公网同步停顿与服务端性能，复测并更新发布",
+      "status": "in_progress",
+      "depends_on": [
+        "BANK-VPS-DEPLOY-010"
+      ],
+      "acceptance": [
+        "BANK-VPS-FIX"
+      ],
+      "definition_of_done": "两端诊断并修复无故重连/长时间快照停顿；减少服务端CPU开销且保留命中、动画、碰撞和玩法；定向弱网回归、两人四人公网战斗和发布包驻留验证通过后更新VPS与客户端；保留原始失败和容量边界。",
+      "evidence": [
+        "project/evidence/bank-vps-fix-20261018/report.json",
+        "project/evidence/bank-vps-fix-20261018/gallery.html",
+        "project/evidence/bank-vps-fix-20261018/manifest.json",
+        "docs/bank-vps-stability.md"
+      ],
+      "notes": "Candidate protocol 4 implementation and local contracts pass; six hotspot battle windows have no network/gameplay issues. Independent systemd-hosted release soak on original network failed: 2p 180s one reconnect, 4p 180s three reconnects; six native UI checks pass. Strict CPU budget still fails. Production and WSL restored v5 0/4; matched candidate packages retained, not promoted. Await stable path and passing repeat before deployment."
     }
   ],
   "known_limits": [

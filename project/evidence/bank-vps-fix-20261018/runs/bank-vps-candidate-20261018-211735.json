@@ -1,0 +1,9 @@
+{
+  "id": "bank-vps-candidate-20261018-211735",
+  "source": "logs/sessions/bank-vps-candidate-20261018-211735/report.json",
+  "sha256": "e3eeb5b497ea877740de13a1de1c0f8625a4cf414cb1e63d6230a64d65a274be",
+  "checks": [],
+  "failure": "JSONDecodeError('Expecting value: line 1 column 1 (char 0)')",
+  "passed": null,
+  "scope": null
+}

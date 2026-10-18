@@ -33,6 +33,19 @@ func _process(dt: float) -> bool:
 	return result
 
 func execute(request: Dictionary) -> void:
+	if request.command=="tcp_only_fixture":
+		# Bounded transport setup: an unused UDP endpoint with a live TCP carrier.
+		# The carrier still forwards only to this bank server's original UDP port.
+		assert(game.is_host and is_instance_valid(game.server_tunnel))
+		var port:=int(request.get("port",0));assert(port>=1024 and port<=65535)
+		game.server_tunnel.listener.stop()
+		assert(game.server_tunnel.listener.listen(port,"127.0.0.2")==OK)
+		write_json("response.json",{"id":request.id,"result":{"port":port}});busy=false;return
+	if request.command=="cut_tcp":
+		# Transport fault injection only; normal production recovery handles it.
+		assert(not game.is_host and is_instance_valid(game.client_tunnel))
+		for link in game.client_tunnel.links:link.tcp.disconnect_from_host()
+		write_json("response.json",{"id":request.id,"result":{"cut":true}});busy=false;return
 	if request.command=="fixture":
 		var recovery_fixture: bool=request.get("name","")=="recovery_state"
 		if recovery_fixture:request=request.duplicate();request.name="firearms_range"
@@ -60,6 +73,7 @@ func execute(request: Dictionary) -> void:
 	value.prediction=game.prediction.observe();value.assembly=game.snapshot_buffer.observe();value.preview_shots=game.preview_count
 	value.network_text=game.network_summary()
 	value.transport=game.peer!=null
+	value.carrier=game.transport_mode
 	value.recovery={"retrying":game.recovery.retrying,"resumed":game.recovery.resumed,"reserved":game.recovery.reservations.size(),"occupied":game.occupied_slots() if game.is_host else game.players.size()}
 	value.fixture_barrier=fixture_barrier.serial
 	write_json("response.json",{"id":request.id,"result":value});busy=false

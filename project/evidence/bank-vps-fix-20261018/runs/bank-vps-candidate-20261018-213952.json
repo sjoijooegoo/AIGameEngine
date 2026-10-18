@@ -1,0 +1,43 @@
+{
+  "id": "bank-vps-candidate-20261018-213952",
+  "source": "logs/sessions/bank-vps-candidate-20261018-213952/report.json",
+  "sha256": "6977fd8208ece35e4913ba55600037fff1a40170fbbb2b26f27d732938e8c4fb",
+  "checks": [
+    {
+      "players": 2,
+      "seconds": 180,
+      "packaged_soak": "fail"
+    },
+    {
+      "players": 4,
+      "seconds": 180,
+      "packaged_soak": "fail"
+    },
+    {
+      "ui": "fail"
+    }
+  ],
+  "failure": "AssertionError('Candidate acceptance failed; all requested cases retained')",
+  "passed": null,
+  "scope": null,
+  "restored_service": "active\n",
+  "remote": {
+    "pid": 201136,
+    "command": [
+      "/home/dev/bank-coop-validation/candidates/20261018-211024-v6/bank-coop-server.x86_64",
+      "--headless",
+      "--max-fps",
+      "60",
+      "--",
+      "--server",
+      "--port=24567",
+      "--max-players=4",
+      "--prefer-tcp"
+    ]
+  },
+  "network_change": {
+    "classification": "invalid_control_plane_interruption",
+    "evidence": "Soak 214012 received v6 2/4 until 113.3s, then no discovery, then v5 0/4 from 128.2s. SSH-dependent bridge terminated and restored production during candidate test. Following four-client and UI runs targeted restored v5 and are not valid v6 acceptance.",
+    "fix": "SSH-independent bounded systemd transient candidate unit; fixed-version assertion before each test."
+  }
+}

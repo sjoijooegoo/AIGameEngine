@@ -8,7 +8,7 @@ Type=simple
 User=bankcoop
 Group=bankcoop
 WorkingDirectory=/opt/bank-coop/current
-ExecStart=/opt/bank-coop/current/bank-coop-server.x86_64 --headless --max-fps 60 -- --server --port=24567 --max-players=4 "--server-name=Public Bank Co-op"
+ExecStart=/opt/bank-coop/current/bank-coop-server.x86_64 --headless --max-fps 60 -- --server --port=24567 --max-players=4 --prefer-tcp "--server-name=Public Bank Co-op"
 Restart=on-failure
 RestartSec=3
 NoNewPrivileges=true

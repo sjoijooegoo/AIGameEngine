@@ -88,6 +88,7 @@ func apply() -> void:
 		var blended: Quaternion=previous.slerp(delta,weight).normalized()
 		current_deltas[bone]=blended
 		peak_degrees=maxf(peak_degrees,rad_to_deg(Quaternion.IDENTITY.angle_to(blended)))
+		actor.remember_base_bone(index)
 		actor.skeleton.set_bone_pose_rotation(index,(base[bone]*blended).normalized())
 
 func turn(bone: String,degrees: Vector3) -> void:

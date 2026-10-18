@@ -1,0 +1,56 @@
+{
+  "id": "bank-vps-candidate-20261018-214753",
+  "source": "logs/sessions/bank-vps-candidate-20261018-214753/report.json",
+  "sha256": "1e467906022003108901bc33e5cb8dec3a96bcf5f89d4ba9393baea1dc99abaf",
+  "checks": [
+    {
+      "players": 2,
+      "seconds": 180,
+      "packaged_soak": "fail"
+    },
+    {
+      "players": 4,
+      "seconds": 180,
+      "packaged_soak": "fail"
+    },
+    {
+      "ui": "pass"
+    }
+  ],
+  "failure": "AssertionError('Candidate acceptance failed; all requested cases retained')",
+  "passed": null,
+  "scope": null,
+  "restored_service": "active",
+  "remote": {
+    "unit": "bank-vps-candidate-20261018-214753.service",
+    "command": [
+      "sudo",
+      "-n",
+      "systemd-run",
+      "--quiet",
+      "--collect",
+      "--unit=bank-vps-candidate-20261018-214753.service",
+      "--property=Type=exec",
+      "--property=User=dev",
+      "--property=Group=dev",
+      "--property=RuntimeMaxSec=1200",
+      "--property=TimeoutStopSec=20",
+      "--property=Conflicts=bank-coop.service",
+      "--property=After=bank-coop.service",
+      "--property=ExecStopPost=+/usr/bin/systemctl --no-block start bank-coop.service",
+      "--property=StandardOutput=append:/home/dev/bank-coop-validation/sessions/bank-vps-candidate-20261018-214753/engine.log",
+      "--property=StandardError=inherit",
+      "/home/dev/bank-coop-validation/candidates/20261018-211024-v6/bank-coop-server.x86_64",
+      "--headless",
+      "--max-fps",
+      "60",
+      "--",
+      "--server",
+      "--port=24567",
+      "--max-players=4",
+      "--prefer-tcp"
+    ],
+    "returncode": 0,
+    "stderr": ""
+  }
+}

@@ -41,6 +41,7 @@ var reaction_strength := 0.0
 var reaction_serial := 0
 var strong_reaction := false
 var base_pose: Array[Transform3D]=[]
+var layered_bones: Dictionary={}
 var locomotion_recovery := 0.0
 var collision_radius := .34
 var bone_ids: Dictionary={}
@@ -241,10 +242,10 @@ func advance(dt: float) -> void:
 		velocity+=game.crowd.separation(self,neighbours)
 		game.profiler.end_scope("separation",separation_started)
 	velocity.y=-1 if is_on_floor() else velocity.y-20*dt
-	# CharacterBody3D is kinematic: an idle body resting on unchanged static
+	# CharacterBody3D is kinematic: a stationary body on unchanged static
 	# support does not need the same sweep again. Keep perception/animation at
 	# 60 Hz; wake immediately for movement, displacement or a door revision.
-	var resting: bool=mode=="idle" and is_on_floor() and Vector2(velocity.x,velocity.z).length_squared()<.000001 and global_position.is_equal_approx(resting_position) and resting_nav_revision==game.navigation.revision
+	var resting: bool=mode in ["idle","attack","hurt"] and is_on_floor() and Vector2(velocity.x,velocity.z).length_squared()<.000001 and global_position.is_equal_approx(resting_position) and resting_nav_revision==game.navigation.revision
 	var movement_started: int=game.profiler.mark()
 	if not resting or game.tick_count<=3 or game.tick_count%12==get_index()%12:
 		advance_movement(dt);game.profiler.count("movement_sweeps")
@@ -347,10 +348,13 @@ func play_pose(dt: float, continuous: bool=false) -> void:
 	var clip: String=sampled.clip
 	var changed:=animation_name!=clip
 	if changed:
-		if last_sample_time>=0:pose_blend.begin(.24 if reaction_time<reaction_duration+.30 else .12,[base_pose] if not base_pose.is_empty() else [])
+		if last_sample_time>=0:
+			capture_base_pose()
+			pose_blend.begin(.24 if reaction_time<reaction_duration+.30 else .12,[base_pose])
 		animation_name=clip
 	animation_time=sampled.time
-	if not changed and animation_time<last_sample_time-.03 and mode in ["hurt","attack"]:pose_blend.begin(.065,[base_pose] if not base_pose.is_empty() else [])
+	if not changed and animation_time<last_sample_time-.03 and mode in ["hurt","attack"]:
+		capture_base_pose();pose_blend.begin(.065,[base_pose])
 	last_sample_time=animation_time
 	# Native rotations are complete; constant bind translations are omitted.
 	# Reset on clip changes only, then absolute tracks replace each layered pose.
@@ -359,7 +363,7 @@ func play_pose(dt: float, continuous: bool=false) -> void:
 	animator.seek(animation_time,false);animator.advance(0)
 	pose_blend.apply(dt)
 	if base_pose.size()!=skeleton.get_bone_count():base_pose.resize(skeleton.get_bone_count())
-	for bone in skeleton.get_bone_count():base_pose[bone]=skeleton.get_bone_pose(bone)
+	layered_bones.clear()
 	native_motion.ground_feet(dt)
 	native_motion.flinch()
 	if reaction_time>=reaction_duration:reactions.current_deltas.clear();reactions.peak_degrees=0
@@ -393,11 +397,24 @@ func play_pose(dt: float, continuous: bool=false) -> void:
 	ragdoll.update_hitboxes()
 	game.profiler.end_scope("pose",started)
 
+func capture_base_pose() -> void:
+	# Only procedural layers overwrite the previous base pose. Those bones are
+	# saved immediately before their first mutation; all others remain in the
+	# skeleton and are read only when a transition actually needs the full pose.
+	if base_pose.size()!=skeleton.get_bone_count():base_pose.resize(skeleton.get_bone_count())
+	for bone in skeleton.get_bone_count():
+		if not layered_bones.has(bone):base_pose[bone]=skeleton.get_bone_pose(bone)
+
+func remember_base_bone(bone: int) -> void:
+	if layered_bones.has(bone):return
+	base_pose[bone]=skeleton.get_bone_pose(bone);layered_bones[bone]=true
+
 # Godot 4.7 get_bone_global_pose updates its dirty ancestor chain. Avoid
 # repeatedly refreshing the complete rig between each IK/reaction operation.
 func rotate_world(suffix: String, axis: Vector3, angle: float) -> void:
 	var bone: int=bone_ids.get(suffix,-1)
 	if bone<0:return
+	remember_base_bone(bone)
 	var basis: Basis=(skeleton.global_basis*skeleton.get_bone_global_pose(bone).basis).orthonormalized()
 	var local_axis:=basis.inverse()*axis.normalized()
 	skeleton.set_bone_pose_rotation(bone,(skeleton.get_bone_pose_rotation(bone)*Quaternion(local_axis,angle)).normalized())

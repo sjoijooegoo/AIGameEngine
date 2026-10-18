@@ -1,0 +1,50 @@
+{
+  "id": "bank-coop-optimization-20261018-203131",
+  "source": "logs/sessions/bank-coop-optimization-20261018-203131/report.json",
+  "sha256": "5d177e8fa84a57a7f0b6950c17146d73efd83be019b5146599d9eff7ba29e640",
+  "checks": [
+    {
+      "name": "verify_coop_pose_equivalence",
+      "status": "pass",
+      "log": "verify_coop_pose_equivalence.log",
+      "output": [
+        "BANK_POSE_EQUIVALENCE_PASS models=8 transform_comparisons=101088 max_error=0.0"
+      ]
+    },
+    {
+      "name": "verify_crowd_cache",
+      "status": "pass",
+      "log": "verify_crowd_cache.log",
+      "output": [
+        "CROWD_CACHE_PASS queries=26880 moves/deaths/reactivation/reorder/replacement"
+      ]
+    },
+    {
+      "name": "verify_snapshot_delta",
+      "status": "pass",
+      "log": "verify_snapshot_delta.log",
+      "output": [
+        "BANK_DELTA_PASS loss / reorder / immutable / late base / bounded fallback / round / membership / death / doors"
+      ]
+    },
+    {
+      "name": "verify_world_presentation_work",
+      "status": "pass",
+      "log": "verify_world_presentation_work.log",
+      "output": [
+        "BANK_PRESENTATION_WORK_PASS hidden / reactivation / sleeping / wake / reset"
+      ]
+    },
+    {
+      "name": "verify_network_components",
+      "status": "pass",
+      "log": "verify_network_components.log",
+      "output": [
+        "BANK_NETWORK_COMPONENTS_PASS bounds / out-of-order / parity / stale / expiry / conflicts"
+      ]
+    }
+  ],
+  "failure": null,
+  "passed": true,
+  "scope": "Math/replication contracts only; real input combat and visual sequences run separately."
+}

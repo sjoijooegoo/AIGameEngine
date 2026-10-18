@@ -433,7 +433,7 @@ func advance(dt: float) -> void:
 				# resolves its residual length error. Two stronger anatomical
 				# projections retain the shape without four expensive fits.
 				if iteration in [3,7]:anatomy.solve()
-				for c in links:
+				for c: DistanceConstraint in links:
 					var delta: Vector3=positions[c.b]-positions[c.a];var length:=delta.length()
 					if length<.00001:continue
 					var error: float=length-clampf(length,c.min,c.max)
@@ -454,7 +454,7 @@ func advance(dt: float) -> void:
 					for i in positions.size():collide(i,before[i])
 		collide_living(frame_before,h)
 		max_error=0
-		for c in links:
+		for c: DistanceConstraint in links:
 			var distance: float=positions[c.a].distance_to(positions[c.b])
 			max_error=maxf(max_error,absf(distance-clampf(distance,c.min,c.max)))
 		if max_error>.06 and frame_contacts>0:
@@ -465,7 +465,7 @@ func advance(dt: float) -> void:
 			# once feasible; the extra work is restricted to strained contacts.
 			for correction_pass in 24:
 				if correction_pass in [0,8,16]:anatomy.solve()
-				for c in links:
+				for c: DistanceConstraint in links:
 					var delta: Vector3=positions[c.b]-positions[c.a];var length:=delta.length()
 					if length<.00001:continue
 					var error: float=length-clampf(length,c.min,c.max)
@@ -475,12 +475,12 @@ func advance(dt: float) -> void:
 				if correction_pass%4==3:
 					for i in positions.size():collide(i,frame_before[i])
 					var residual:=0.0
-					for c in links:
+					for c: DistanceConstraint in links:
 						var length: float=positions[c.a].distance_to(positions[c.b])
 						residual=maxf(residual,absf(length-clampf(length,c.min,c.max)))
 					if residual<.035:break
 			max_error=0
-			for c in links:
+			for c: DistanceConstraint in links:
 				var length: float=positions[c.a].distance_to(positions[c.b]);max_error=maxf(max_error,absf(length-clampf(length,c.min,c.max)))
 		max_speed=0
 		# Wall/ceiling impact spends the launch energy. Retaining the airborne

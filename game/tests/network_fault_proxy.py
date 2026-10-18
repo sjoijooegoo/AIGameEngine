@@ -38,6 +38,11 @@ class FaultProxy:
             delay=max(0,self.profile.rtt_ms/2+self.rng.uniform(-self.profile.jitter_ms,self.profile.jitter_ms))/1000
             self.serial+=1;heapq.heappush(self.queue,(now+delay,self.serial,now,direction,data,sock,address));self.queued_bytes+=len(data)
 
+    def create_upstream(self):
+        upstream=socket.socket(socket.AF_INET,socket.SOCK_DGRAM)
+        upstream.connect(self.target);upstream.setblocking(False)
+        return upstream
+
     def run(self):
         try:
             while not self.stop.is_set():
@@ -59,7 +64,7 @@ class FaultProxy:
                         except (ConnectionResetError,ConnectionRefusedError) as exc:self.socket_event('client_receive',exc);continue
                         if address not in self.channels:
                             if len(self.channels)>=8:continue
-                            upstream=socket.socket(socket.AF_INET,socket.SOCK_DGRAM);upstream.connect(self.target);upstream.setblocking(False)
+                            upstream=self.create_upstream()
                             self.channels[address]={'socket':upstream}
                         self.schedule('up',data,self.channels[address]['socket'])
                     else:

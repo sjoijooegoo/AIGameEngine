@@ -26,9 +26,17 @@ func _initialize() -> void:
 			assert(ProjectSettings.load_resource_pack(arg.trim_prefix("--validation-overlay="),true))
 			found=true
 	assert(found,"Validation requires exact bake source bytes from the paired release")
+	for arg in OS.get_cmdline_user_args():
+		if arg.begins_with("--candidate-overlay="):
+			assert(ProjectSettings.load_resource_pack(arg.trim_prefix("--candidate-overlay="),true))
+			var manifest=JSON.parse_string(FileAccess.get_file_as_string("res://candidate_manifest.json"))
+			for resource in manifest:
+				assert(FileAccess.get_sha256(resource)==manifest[resource])
+				assert(load(resource).source_code==FileAccess.get_file_as_string(resource),"Candidate script remap did not load exact source: "+resource)
 	super._initialize()
 
 func boot() -> void:
 	await super.boot()
 	assert(game.world.indirect_stats.get("loaded",false),"Validation must use the current baked scene")
-	write_json("validation.json",{"bake":game.world.indirect_stats,"debug":OS.is_debug_build(),"engine":Engine.get_version_info().string})
+	write_json("validation.json",{"bake":game.world.indirect_stats,"debug":OS.is_debug_build(),"engine":Engine.get_version_info().string,"protocol":game.PROTOCOL,
+		"candidate":JSON.parse_string(FileAccess.get_file_as_string("res://candidate_manifest.json")) if FileAccess.file_exists("res://candidate_manifest.json") else {}})

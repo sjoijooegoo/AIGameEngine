@@ -29,6 +29,9 @@ var snapshot_rows: Dictionary={}
 var snapshot_keyframe_tick := -1
 var snapshot_keyframe_sent: Dictionary={}
 var snapshot_buffer=preload("res://coop/snapshot_buffer.gd").new()
+var snapshot_pacer=preload("res://coop/snapshot_pacer.gd").new()
+var snapshot_encoder=preload("res://coop/snapshot_encoder.gd").new()
+var snapshot_job: Dictionary={}
 var recovery=preload("res://coop/session_recovery.gd").new()
 var network_stalled := false
 var leaving := false
@@ -54,6 +57,11 @@ var frontend_managed := false
 var discovery: Node
 var client_resources: Array=[]
 var client_prepared := false
+var server_tunnel: Node
+var client_tunnel: Node
+var tcp_preferred := false
+var transport_mode := "udp"
+var prefer_tcp_advertise := false
 var presentation=preload("res://coop/world_presentation.gd").new()
 
 func _ready() -> void:
@@ -64,15 +72,18 @@ func _ready() -> void:
 	if frontend_managed:active=true
 	testing=world.testing;visual=false
 	for arg in OS.get_cmdline_user_args():
+		if arg=="--transport=tcp":tcp_preferred=true
+		if arg=="--prefer-tcp":prefer_tcp_advertise=true
 		if arg=="--server":active=true
 		if arg.begins_with("--connect=") or arg=="--coop":active=true
 		if arg.begins_with("--connect="):preferred_address=arg.trim_prefix("--connect=")
 		if arg.begins_with("--port="):launch_port=arg.trim_prefix("--port=").to_int()
 		if arg.begins_with("--owner-pid="):owner_pid=arg.trim_prefix("--owner-pid=").to_int()
+	if AppFlow.intent.get("transport")=="tcp":tcp_preferred=true
 	super._ready()
 	visual=not is_host
 	# Protocol includes the real bank rules and layout, not the old structural slice.
-	var fingerprint:="bank-combat-v5"
+	var fingerprint:="bank-combat-v6"
 	for path in ["origin_structure","infected","infected_archetypes","firearms","door_design","shooting_feedback"]:
 		fingerprint+=FileAccess.get_file_as_string("res://data/"+path+".json").replace("\r\n","\n")
 	map_hash=fingerprint.sha256_text()
@@ -89,6 +100,7 @@ func _physics_process(_dt: float) -> void:
 
 func _process(_dt: float) -> void:
 	recovery.advance()
+	if is_host:flush_bank_encoding()
 	if leaving and Time.get_ticks_msec()>=leave_deadline:finish_leave()
 	# OS.is_process_running only reliably tracks this process's own children.
 	# An owned server watches a local lease instead of trying to query its parent.
@@ -116,12 +128,17 @@ func restore_local() -> void:
 	world.player=original_player;world.firearms=original_weapon;world.feedback=original_feedback
 
 func disconnect_game(message: String="已退出会话") -> void:
+	snapshot_encoder.reset();snapshot_job.clear()
+	for tunnel in [client_tunnel,server_tunnel]:
+		if is_instance_valid(tunnel):tunnel.close();tunnel.queue_free()
+	client_tunnel=null;server_tunnel=null
+	if is_instance_valid(discovery):discovery.queue_free();discovery=null
 	if is_host:recovery.clear_server()
 	if not message.is_empty():recovery.cancel()
 	for context in contexts.values():context.weapon.queue_free()
 	contexts.clear();restore_local()
 	super.disconnect_game(message)
-	equipment.clear();remote_shots.clear();snapshot_buffer.reset();snapshot_delta.reset();snapshot_rows.clear();snapshot_keyframe_tick=-1;snapshot_keyframe_sent.clear()
+	equipment.clear();remote_shots.clear();snapshot_buffer.reset();snapshot_delta.reset();snapshot_pacer.reset();snapshot_rows.clear();snapshot_keyframe_tick=-1;snapshot_keyframe_sent.clear()
 	preview_fire.clear();preview_cooldown=0;network_stalled=false
 	local_fire_age=99;local_fire_weapon=""
 	reserved_count=0
@@ -172,6 +189,7 @@ func stop_owned_server() -> void:
 	local_server_pid=-1
 
 func _exit_tree() -> void:
+	snapshot_encoder.reset()
 	stop_owned_server()
 	if peer:peer.close()
 
@@ -193,7 +211,20 @@ func join_game(address: String, port_number: int, label: String) -> Error:
 	recovery.endpoint={"address":address,"port":port_number,"label":label}
 	active=true;world.ui.set_mode("play");world.ensure_infected()
 	prepare_client_resources()
-	var result:=super.join_game(address,port_number,label)
+	var result: Error
+	if tcp_preferred:
+		# Close the previous native peer before creating a new loopback carrier.
+		disconnect_game("")
+		var tunnel=preload("res://coop/tcp_tunnel.gd").new();add_child(tunnel)
+		var local_port: int=tunnel.connect_game(address,port_number)
+		if local_port<0:tunnel.queue_free();return ERR_CANT_CONNECT
+		# The base join calls disconnect_game, so assign ownership afterwards.
+		result=super.join_game("127.0.0.1",local_port,label)
+		client_tunnel=tunnel;transport_mode="tcp"
+		tunnel.failed.connect(func():if peer!=null and not closing:connection_lost("TCP 兼容连接已中断"))
+		if panel:panel.address.text=address;panel.port.value=port_number
+	else:
+		result=super.join_game(address,port_number,label);transport_mode="udp"
 	world.player.collision_layer=0;world.player.collision_mask=0
 	for enemy in world.infected:
 		enemy.replica_only=true;enemy.visible=false;enemy.collision_layer=0;enemy.head_hitbox.collision_layer=0
@@ -223,6 +254,11 @@ func start_server(port_number: int, limit: int=4) -> Error:
 	if error==OK:
 		discovery=preload("res://coop/discovery.gd").new();add_child(discovery)
 		if discovery.serve(self,port_number)!=OK:push_warning("Server discovery port unavailable; direct joining is still available")
+		server_tunnel=preload("res://coop/tcp_tunnel.gd").new();add_child(server_tunnel)
+		if server_tunnel.serve(port_number)!=OK:
+			server_tunnel.queue_free();server_tunnel=null
+			if prefer_tcp_advertise:disconnect_game("TCP 兼容端口不可用");return ERR_CANT_CREATE
+			push_warning("TCP compatibility unavailable; ENet UDP remains available")
 	return error
 
 func prepare_player(body: CharacterBody3D) -> void:
@@ -236,7 +272,13 @@ func prepare_player(body: CharacterBody3D) -> void:
 	original_player.collision_layer=0
 
 func _connected(id: int) -> void:
-	if peer:peer.get_peer(id).set_timeout(32,4000,12000)
+	if peer:
+		peer.get_peer(id).set_timeout(32,4000,12000)
+		# ENet's packet-level RTT throttle can discard several parts of EVERY
+		# world, and even all input bundles, on a jittery but live connection.
+		# World traffic is instead capped/paced as complete frames below. Keep
+		# native reliability, loss detection and the original disconnect timeout.
+		peer.get_peer(id).throttle_configure(1000,4,0)
 	if is_host and recovery.tokens.has(id):
 		var old_id: int=recovery.active_id(recovery.tokens[id])
 		if old_id>0 and old_id!=id:
@@ -252,6 +294,7 @@ func _connected(id: int) -> void:
 func occupied_slots() -> int:return recovery.count()
 func reserved_slots() -> Array:return recovery.slots()
 func network_epoch() -> int:return round_id if is_host else received_round
+func reliable_carrier() -> bool:return transport_mode=="tcp"
 func auth_request() -> Dictionary:return {"resume":recovery.token}
 func reserve_peer(id: int,value: Dictionary) -> String:return recovery.reserve(id,value)
 func auth_response(id: int) -> Dictionary:return {"resume":recovery.tokens.get(id,"")}
@@ -267,11 +310,17 @@ func network_summary() -> String:
 	if peer and multiplayer.get_peers().has(1):
 		var ping:=int(peer.get_peer(1).get_statistic(ENetPacketPeer.PEER_ROUND_TRIP_TIME))
 		var age:=Time.get_ticks_msec()-last_bank_received_msec if last_bank_received_msec>0 else 0
-		return "延迟 %d ms%s" % [ping," · 网络波动" if ping>300 or age>350 else ""]
+		return ("TCP 兼容 · " if transport_mode=="tcp" else "")+"延迟 %d ms%s" % [ping," · 网络波动" if ping>300 or age>350 else ""]
 	return "正在同步…"
 
 func connection_lost(message: String) -> void:
 	if closing or leaving:finish_leave();return
+	if transport_mode=="udp" and not tcp_preferred and not recovery.endpoint.is_empty() and recovery.endpoint.address not in ["127.0.0.1","localhost","::1"]:
+		tcp_preferred=true
+		if recovery.token.is_empty():
+			var endpoint: Dictionary=recovery.endpoint.duplicate()
+			disconnect_game("");set_status("UDP 连接不稳定，正在尝试 TCP 兼容通道…")
+			join_game.call_deferred(endpoint.address,int(endpoint.port),endpoint.label);return
 	if not recovery.lost(message):disconnect_game(message)
 
 func _authentication_failed(id: int) -> void:
@@ -288,6 +337,7 @@ func _roster_ready(revision: int) -> void:
 
 func _disconnected(id: int) -> void:
 	snapshot_delta.acknowledgements.erase(id);snapshot_keyframe_sent.erase(id)
+	snapshot_pacer.peers.erase(id)
 	if contexts.has(id):
 		var context=contexts[id];context.bind(world)
 		if context.feedback.is_grabbed():context.feedback.release("disconnected")
@@ -466,6 +516,11 @@ func advance(dt: float) -> void:
 
 func server_advance(dt: float) -> void:
 	world.ensure_infected()
+	flush_bank_encoding()
+	# Physics catch-up can run several expensive ticks before the next idle
+	# frame. Poll transports between ticks so combat cannot starve input/ACKs.
+	if is_instance_valid(server_tunnel):server_tunnel.pump()
+	if peer:multiplayer.poll()
 	if not ready_written and owner_pid>0:
 		var file:=FileAccess.open("user://coop_ready_"+str(owner_pid)+".json",FileAccess.WRITE)
 		file.store_string(JSON.stringify({"pid":OS.get_process_id()}));file.close();ready_written=true
@@ -533,8 +588,9 @@ func server_advance(dt: float) -> void:
 	if restart_requested and team_wiped:restart_round()
 	world.profiler.end_scope("server_team_state",profile_stage);profile_stage=world.profiler.mark()
 	if tick%3==0:
-		for id in ready_ids():_receive_snapshot.rpc_id(id,tick,roster_revision,all_states(),round_id)
+		broadcast_players()
 	if tick%6==0:broadcast_bank()
+	if is_instance_valid(server_tunnel):server_tunnel.pump()
 	world.profiler.end_scope("server_snapshot_send",profile_stage)
 	world.profiler.count("routes",world.navigation.queries_this_frame)
 	server_tick_usec=Time.get_ticks_usec()-tick_started_usec;server_peak_usec=maxi(server_peak_usec,server_tick_usec)
@@ -592,10 +648,17 @@ func _round_reset(epoch: int,server_tick: int,rows: Array) -> void:
 	if started:resume()
 
 func broadcast_bank() -> void:
+	if snapshot_encoder.task>=0:return # No queue of obsolete worlds.
 	var recipients:=ready_ids()
 	if recipients.is_empty():return
+	var tcp_peers: Dictionary={};var needs_parity:=false
+	for id in recipients:
+		var connection:=peer.get_peer(id)
+		tcp_peers[id]=is_instance_valid(server_tunnel) and connection.get_remote_address()=="127.0.0.1" and server_tunnel.owns_udp_port(connection.get_remote_port())
+		if not tcp_peers[id]:needs_parity=true
 	if snapshot_delta.epoch!=round_id:
 		snapshot_delta.reset(round_id);snapshot_rows.clear();snapshot_keyframe_tick=-1;snapshot_keyframe_sent.clear()
+		snapshot_pacer.reset()
 	var states: Dictionary={}
 	for id in contexts:states[id]=contexts[id].state()
 	var doors: Dictionary={}
@@ -615,23 +678,41 @@ func broadcast_bank() -> void:
 	var packet: Dictionary={"round":round_id,"team":states,"doors":doors,"enemies":enemies,"kills":world.kills,"wiped":team_wiped,"started":started,"leader":leader,"reserved":recovery.reservations.size()}
 	var keyframe: bool=snapshot_keyframe_tick<0 or tick-snapshot_keyframe_tick>=60
 	if keyframe:snapshot_delta.remember(tick,packet);snapshot_keyframe_tick=tick
-	var encoded: Dictionary={}
+	var wires: Dictionary={};var deliveries: Dictionary={}
 	for id in recipients:
 		var base_tick: int=snapshot_delta.acknowledgements.get(id,-1)
 		if not snapshot_delta.bases.has(base_tick):base_tick=-1
-		if not encoded.has(base_tick):
-			var raw:=var_to_bytes(snapshot_delta.encode(packet,base_tick))
-			var compressed:=raw.compress(FileAccess.COMPRESSION_ZSTD)
-			encoded[base_tick]={"size":raw.size(),"bytes":compressed,"parts":snapshot_buffer.shards(compressed)}
-		var data: Dictionary=encoded[base_tick];var count: int=data.parts.size()-1
+		# A full baseline is replaceable state, not a reliable control message.
+		# Retry the newest baseline at a bounded rate; never queue obsolete full
+		# worlds behind a missing ENet fragment. Other updates still use the last
+		# acknowledged baseline so one lost refresh cannot stop the world.
+		var refresh_base: bool=base_tick<0 or (base_tick!=snapshot_keyframe_tick and tick-int(snapshot_keyframe_sent.get(id,-1000))>=18)
+		var encode_key: int=-2 if refresh_base else base_tick
+		if not wires.has(encode_key):
+			var wire: Dictionary=snapshot_delta.full(snapshot_delta.bases[snapshot_keyframe_tick],true) if refresh_base else snapshot_delta.encode(packet,base_tick)
+			if refresh_base:wire.state_tick=snapshot_keyframe_tick
+			wires[encode_key]=wire
+		deliveries[id]={"key":encode_key,"refresh":refresh_base,"tcp":tcp_peers[id]}
+	snapshot_job={"tick":tick,"round":round_id,"deliveries":deliveries}
+	snapshot_encoder.submit(wires,needs_parity)
+
+func flush_bank_encoding() -> void:
+	var encoded: Dictionary=snapshot_encoder.take()
+	if encoded.is_empty():return
+	var job:=snapshot_job;snapshot_job={}
+	if not is_host or job.is_empty() or job.round!=round_id or tick-int(job.tick)>30:return
+	for id in job.deliveries:
+		if id not in ready_ids():continue
+		var delivery: Dictionary=job.deliveries[id]
+		var data: Dictionary=encoded[delivery.key];var count: int=ceili(float(data.bytes.size())/snapshot_buffer.SHARD)
+		# The TCP stream already retransmits each datagram. Its parity packets
+		# would only amplify a bandwidth queue. UDP keeps the loss-recovery stripes.
+		var parts: int=count if delivery.tcp else data.parts.size()
+		var cost: int=data.bytes.size()+(parts-count)*snapshot_buffer.SHARD+parts*64
+		if not snapshot_pacer.take(id,Time.get_ticks_msec(),cost,peer.get_peer(id).get_statistic(ENetPacketPeer.PEER_ROUND_TRIP_TIME)):continue
 		wire_bytes=data.bytes.size()
-		for index in data.parts.size():_bank_chunk.rpc_id(id,tick,index,count,data.size,data.bytes.size(),data.parts[index])
-		if snapshot_keyframe_sent.get(id,-1)!=snapshot_keyframe_tick:
-			if not encoded.has("keyframe"):
-				var raw:=var_to_bytes(snapshot_delta.full(snapshot_delta.bases[snapshot_keyframe_tick],true))
-				encoded.keyframe={"size":raw.size(),"bytes":raw.compress(FileAccess.COMPRESSION_ZSTD)}
-			_bank_keyframe.rpc_id(id,snapshot_keyframe_tick,encoded.keyframe.size,encoded.keyframe.bytes)
-			snapshot_keyframe_sent[id]=snapshot_keyframe_tick
+		for index in parts:_bank_chunk.rpc_id(id,job.tick,index,count,data.size,data.bytes.size(),data.parts[index])
+		if delivery.refresh:snapshot_keyframe_sent[id]=job.tick
 
 @rpc("any_peer","call_remote","unreliable",1)
 func _bank_base_ack(epoch: int, server_tick: int) -> void:
@@ -640,6 +721,11 @@ func _bank_base_ack(epoch: int, server_tick: int) -> void:
 
 func receive_bank_wire(server_tick: int,wire: Dictionary) -> void:
 	if is_host or not players.has(local_id):return
+	# A baseline retry has a fresh transport tick but retains its immutable
+	# state tick. Store/acknowledge it even when a newer delta is on screen.
+	if wire.has("state_tick"):
+		if wire.get("base")!=-1 or wire.get("keyframe")!=true or not wire.state_tick is int or wire.state_tick<0 or wire.state_tick>server_tick:return
+		server_tick=wire.state_tick
 	var decoded: Dictionary=snapshot_delta.decode(server_tick,wire,received_round)
 	if decoded.is_empty():return
 	# A delayed reliable base must be stored/acknowledged even if a newer
@@ -651,12 +737,6 @@ func receive_bank_wire(server_tick: int,wire: Dictionary) -> void:
 		var newest: int=snapshot_delta.bases.keys().max()
 		if wire.base!=newest:_bank_base_ack.rpc_id(1,received_round,newest)
 	_bank_snapshot(server_tick,decoded)
-
-@rpc("authority","call_remote","reliable",2)
-func _bank_keyframe(server_tick: int, size: int, bytes: PackedByteArray) -> void:
-	if size<1 or size>1048576 or bytes.size()>115200:return
-	var decoded=bytes_to_var(bytes.decompress(size,FileAccess.COMPRESSION_ZSTD))
-	if decoded is Dictionary:receive_bank_wire(server_tick,decoded)
 
 @rpc("authority","call_remote","unreliable",1)
 func _bank_chunk(server_tick: int, index: int, count: int, size: int,wire_size: int,bytes: PackedByteArray) -> void:
@@ -733,6 +813,7 @@ func _bank_snapshot(server_tick: int, packet: Dictionary) -> void:
 
 func observe() -> Dictionary:
 	var result:=super.observe()
+	result.transport=transport_mode
 	result.presentation=presentation.observe();result.mouse_mode=Input.mouse_mode;result.mouse_buttons=Input.get_mouse_button_mask()
 	result.prediction=prediction.observe();result.snapshot_assembly=snapshot_buffer.observe();result.snapshot_delta=snapshot_delta.observe()
 	result.recovery={"retrying":recovery.retrying,"attempts":recovery.attempts,"resumed":recovery.resumed,"reserved":recovery.reservations.size(),"occupied":occupied_slots() if is_host else players.size()}

@@ -797,6 +797,22 @@
         "vps_combat_capacity_60hz",
         "vps_runtime_errors_absent"
       ]
+    },
+    {
+      "id": "BANK-VPS-FIX",
+      "kind": "automated",
+      "description": "Paired release and public WAN stability acceptance; all failures and CPU capacity boundaries remain explicit. Candidate implementation alone is not deployment acceptance.",
+      "checks": [
+        "vps_fix_native_enet_handshake",
+        "vps_fix_pose_and_ragdoll_equivalence",
+        "vps_fix_bounded_snapshot_and_tcp_transport",
+        "vps_fix_disconnect_recovery",
+        "vps_fix_repeated_2p_4p_battle",
+        "vps_fix_2p_4p_packaged_soak",
+        "vps_fix_cpu_capacity",
+        "vps_fix_release_ui",
+        "vps_fix_production_updated"
+      ]
     }
   ]
 }

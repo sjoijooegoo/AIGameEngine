@@ -1,0 +1,751 @@
+{
+  "id": "bank-vps-release-20261018-212745",
+  "source": "logs/sessions/bank-vps-release-20261018-212745/report.json",
+  "sha256": "e1904fd3e1ff220ea7c707bda3b7e97a5c4cdf07993ba4995a7bdfc4c48364e5",
+  "checks": [
+    {
+      "name": "vps_packaged_clients_join",
+      "status": "pass"
+    }
+  ],
+  "failure": "AssertionError('Population changed during soak')",
+  "passed": null,
+  "scope": null,
+  "samples": [
+    {
+      "seconds": 1.312000000005355,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 4.030999999988126,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 6.10899999999674,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 8.812000000005355,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 10.937000000005355,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 13.01500000001397,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 15.71799999999348,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 18.421000000002095,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 21.10899999999674,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 23.21799999999348,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 27.030999999988126,
+      "status": null
+    },
+    {
+      "seconds": 30.85899999999674,
+      "status": null
+    },
+    {
+      "seconds": 34.671000000002095,
+      "status": null
+    },
+    {
+      "seconds": 38.48399999999674,
+      "status": null
+    },
+    {
+      "seconds": 42.296000000002095,
+      "status": null
+    },
+    {
+      "seconds": 46.125,
+      "status": null
+    },
+    {
+      "seconds": 48.48399999999674,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 0,
+        "reserved": 2,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 50.546000000002095,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 0,
+        "reserved": 2,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 52.578000000008615,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 0,
+        "reserved": 2,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 55.23399999999674,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 0,
+        "reserved": 2,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 57.26500000001397,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 59.296000000002095,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 61.953000000008615,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 64.60899999999674,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 66.64000000001397,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 68.68700000000536,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 70.71799999999348,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 72.76500000001397,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 74.7960000000021,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 76.85899999999674,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 78.89000000001397,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 80.93700000000536,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 82.98399999999674,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 85.625,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 87.6710000000021,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 89.70300000000861,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 91.75,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 93.7960000000021,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 95.84299999999348,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 97.875,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 100.25,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 102.2960000000021,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 104.34299999999348,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 107.0,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 109.0460000000021,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 111.09299999999348,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 113.125,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 115.1710000000021,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 117.20300000000861,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 119.875,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 122.21799999999348,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 124.26500000001397,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 126.31200000000536,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 128.35899999999674,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 131.0,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 133.07800000000861,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 135.125,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 137.1710000000021,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 139.21799999999348,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 141.25,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 143.90599999998813,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 145.93700000000536,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 147.96799999999348,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 150.01500000001397,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 152.65599999998813,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 154.71799999999348,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 156.75,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 158.7960000000021,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 161.45300000000861,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 163.48399999999674,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 165.53099999998813,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 168.1710000000021,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 170.82800000000861,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 172.875,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 174.9210000000021,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 176.96799999999348,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 179.0,
+      "status": {
+        "build": "bank-combat-v6",
+        "players": 2,
+        "reserved": 0,
+        "occupied": 2,
+        "transport": "tcp"
+      }
+    }
+  ],
+  "discovery_missed_datagrams": 108
+}

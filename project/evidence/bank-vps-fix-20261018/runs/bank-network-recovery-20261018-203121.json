@@ -1,0 +1,33 @@
+{
+  "id": "bank-network-recovery-20261018-203121",
+  "source": "logs/sessions/bank-network-recovery-20261018-203121/report.json",
+  "sha256": "24403aafc7082f0b2bd23211a10391f43f8749e11d59a2273bed562b80b8cead",
+  "checks": [
+    {
+      "name": "bank_network_capacity_reservation",
+      "status": "pass",
+      "occupied": 2,
+      "connected": 1
+    },
+    {
+      "name": "bank_network_recovery",
+      "status": "pass",
+      "blackout_seconds": 25,
+      "recovery_after_link_ms": 2562.000000005355,
+      "hp": 73.0,
+      "ammo": 14,
+      "stale_click_did_not_fire": true
+    },
+    {
+      "name": "bank_network_voluntary_leave_releases_slot",
+      "status": "pass"
+    },
+    {
+      "name": "bank_network_join_during_round_reset",
+      "status": "pass"
+    }
+  ],
+  "failure": null,
+  "passed": null,
+  "scope": null
+}

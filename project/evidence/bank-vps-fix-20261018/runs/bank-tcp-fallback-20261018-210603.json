@@ -1,0 +1,15 @@
+{
+  "id": "bank-tcp-fallback-20261018-210603",
+  "source": "logs/sessions/bank-tcp-fallback-20261018-210603/report.json",
+  "sha256": "8ca79d3ad691166d554bbd362c55c04a9f05ef2dea8e31f7a665962dfe03de01",
+  "checks": [
+    {
+      "name": "udp_unavailable_tcp_fallback_native_join",
+      "status": "pass",
+      "elapsed_ms": 35594.000000011874
+    }
+  ],
+  "failure": null,
+  "passed": null,
+  "scope": null
+}

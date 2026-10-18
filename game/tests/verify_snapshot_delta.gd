@@ -43,5 +43,18 @@ func _initialize() -> void:
 	bad=wire.duplicate(true);bad.enemies=[[0,2]]
 	assert(validation.decode(400,bad,3).is_empty())
 	assert(validation.bases[60]==first)
+	var visual=load("res://coop/snapshot_wire.gd")
+	var precise:=packet();precise.enemies[3][1]=Vector3(13.123456,.123456,21.123456);precise.enemies[3][6]=123.456789
+	precise.enemies[3][4]=73.123456;precise.enemies[3][9]=[Vector3(13.123456,.123456,21.123456)]
+	var normalized: Dictionary=visual.encode(Codec.full(precise,true))
+	assert(normalized.state.enemies[3][1].distance_to(precise.enemies[3][1])<.00085)
+	assert(absf(normalized.state.enemies[3][6]-precise.enemies[3][6])<=1.0/2048)
+	assert(normalized.state.enemies[3][4]==precise.enemies[3][4],"Health is lossless")
+	assert(precise.enemies[3][1]==Vector3(13.123456,.123456,21.123456),"Wire conversion mutated authority state")
+	var visual_sender:=Codec.new();visual_sender.reset(3);visual_sender.remember(60,precise)
+	var visual_receiver:=Codec.new();visual_receiver.decode(60,normalized,3)
+	var moved:=precise.duplicate(true);moved.enemies[3][1]+=Vector3(.23456,0,.12345);moved.enemies[3][9][0]+=Vector3(.12345,0,0)
+	var decoded:=visual_receiver.decode(66,visual.encode(visual_sender.encode(moved,60)),3)
+	assert(decoded==visual.encode(Codec.full(moved)).state,"Quantized full and base-relative deltas disagree")
 	print("BANK_DELTA_PASS loss / reorder / immutable / late base / bounded fallback / round / membership / death / doors")
 	quit()

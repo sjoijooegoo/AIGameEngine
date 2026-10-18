@@ -22,7 +22,7 @@ with zipfile.ZipFile(sys.argv[1]) as z:
         if not target.is_relative_to(dest):raise ValueError('Invalid archive path')
     z.extractall(dest)
 build=json.loads((dest/'build.json').read_text())
-assert build['platform']=='linux' and build['wire_protocol']==3
+assert build['platform']=='linux' and build['wire_protocol']==4
 binary=dest/build['executable']
 assert binary.parent==dest and hashlib.sha256(binary.read_bytes()).hexdigest()==build['sha256']
 print(json.dumps({'engine':build['engine'],'build':build['network_build'],'sha256':build['sha256']}))

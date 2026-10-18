@@ -12,11 +12,11 @@ def main():
     reference=folder/'reference';reference.mkdir(parents=True)
     revision=subprocess.check_output(['git','rev-parse',args.reference],cwd=ROOT,text=True).strip()
     hashes={}
-    for name in ['infected.gd','infected_native_motion.gd','infected_ragdoll.gd']:
+    for name in ['infected.gd','infected_native_motion.gd','infected_ragdoll.gd','infected_reactions.gd']:
         source=subprocess.check_output(['git','show',f'{revision}:game/runtime/scripts/{name}'],cwd=ROOT)
         hashes[name]=hashlib.sha256(source).hexdigest()
         if name=='infected.gd':
-            for dep in ['infected_native_motion.gd','infected_ragdoll.gd']:
+            for dep in ['infected_native_motion.gd','infected_ragdoll.gd','infected_reactions.gd']:
                 source=source.replace(('res://scripts/'+dep).encode(),(reference/dep).as_posix().encode())
         (reference/name).write_bytes(source)
     exe=godot();direct=exe.with_name(exe.name.replace('_console.exe','.exe'))

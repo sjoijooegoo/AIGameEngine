@@ -1,0 +1,9 @@
+{
+  "id": "bank-vps-ui-20261018-214518",
+  "source": "logs/sessions/bank-vps-ui-20261018-214518/report.json",
+  "sha256": "b7cfbda6d41cff6492d2d05f63717b2a2e97f3d2e8e2ee5ec0055f33483f21b8",
+  "checks": [],
+  "failure": "AssertionError()",
+  "passed": null,
+  "scope": null
+}

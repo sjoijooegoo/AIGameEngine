@@ -1,7 +1,8 @@
 extends Node3D
 ## Only this node owns the wire protocol. No gameplay callbacks are exposed remotely.
-const PROTOCOL := 3
+const PROTOCOL := 4
 const PlayerBody = preload("res://coop/player.gd")
+const RpcCodec = preload("res://coop/rpc_codec.gd")
 var players: Dictionary={}
 var pending: Dictionary={}
 var peer: ENetMultiplayerPeer
@@ -73,8 +74,12 @@ func start_server(port: int, limit: int=4) -> Error:
 	disconnect_game("")
 	is_host=true;max_players=limit;peer=ENetMultiplayerPeer.new()
 	# A few transport slots permit a bounded, explicit room-full handshake.
-	var error:=peer.create_server(port,limit+4,6)
+	# Pinned Godot 4.7.2 forwards max_channels+2 into incoming bandwidth.
+	# create_server(..., 6) advertises only 8 BYTES/s and a 4 KiB window on
+	# the wire. Use its unlimited default, then set the channel bound directly.
+	var error:=peer.create_server(port,limit+4,0)
 	if error!=OK:set_status("服务端端口不可用：%d" % port);peer=null;is_host=false;return error
+	peer.host.channel_limit(8)
 	multiplayer.multiplayer_peer=peer
 	set_status("服务端监听 UDP %d，人数上限 %d" % [port,limit])
 	return OK
@@ -115,6 +120,7 @@ func occupied_slots() -> int:return players.size()+pending.size()
 func reserved_slots() -> Array:return []
 func network_epoch() -> int:return 0
 func client_can_move() -> bool:return input_enabled
+func reliable_carrier() -> bool:return false
 func connection_timeout() -> float:return 25.0
 func reserve_peer(id: int,value: Dictionary) -> String:
 	if occupied_slots()>=max_players:return "房间已满"
@@ -187,12 +193,19 @@ func all_states() -> Array:
 
 func broadcast_roster() -> void:
 	roster_revision+=1
-	_receive_roster.rpc(roster_revision,all_states(),network_epoch(),tick)
+	# ENet can dispatch several disconnects in one poll. The multiplayer roster
+	# may still contain another peer whose native channel array is already gone.
+	var rows:=all_states()
+	for id in players:
+		if connected_peer(id):_receive_roster.rpc_id(id,roster_revision,rows,network_epoch(),tick)
+
+func connected_peer(id: int) -> bool:
+	return peer!=null and multiplayer.get_peers().has(id) and peer.get_peer(id).get_state()==ENetPacketPeer.STATE_CONNECTED
 
 func ready_ids() -> Array:
 	var ids: Array=[]
 	for id in players:
-		if ready_peers.get(id,-1)==roster_revision:ids.append(id)
+		if ready_peers.get(id,-1)==roster_revision and connected_peer(id):ids.append(id)
 	return ids
 
 @rpc("any_peer","call_remote","reliable",0)
@@ -239,12 +252,14 @@ func accept_input(id: int, serial: int, move: Vector2, look_yaw: float, look_pit
 	body.running=sprint;body.last_input_tick=tick
 
 @rpc("any_peer","call_remote","unreliable",4)
-func _input_bundle(epoch: int,rows: Array) -> void:
+func _input_bundle(epoch: int,wire: PackedByteArray) -> void:
 	var id:=multiplayer.get_remote_sender_id()
-	if not is_host or not players.has(id) or epoch!=network_epoch() or rows.size()>12:return
+	if not is_host or not players.has(id) or epoch!=network_epoch():return
 	var body=players[id]
 	if body.input_budget<1:return
 	body.input_budget-=1
+	var rows:=RpcCodec.decode(wire)
+	if rows.size()>12:return
 	for row in rows:
 		if not row is Array or row.size()!=6:return
 		if not row[0] is int or not row[1] is Vector2 or not (row[2] is float) or not (row[3] is float) or not row[4] is bool or not row[5] is int:return
@@ -254,8 +269,8 @@ func _input_bundle(epoch: int,rows: Array) -> void:
 		if body.commands.size()<120:body.commands[serial]=row
 
 @rpc("any_peer","call_remote","reliable",2)
-func _input_checkpoint(epoch: int,rows: Array) -> void:
-	_input_bundle(epoch,rows)
+func _input_checkpoint(epoch: int,wire: PackedByteArray) -> void:
+	_input_bundle(epoch,wire)
 
 func consume_input(body) -> void:
 	body.axes=Vector2.ZERO;body.running=false
@@ -268,8 +283,10 @@ func consume_input(body) -> void:
 	body.running=row[4];body.last_input_tick=tick
 
 @rpc("authority","call_remote","unreliable_ordered",1)
-func _receive_snapshot(server_tick: int, revision: int, rows: Array,epoch: int=0) -> void:
+func _receive_snapshot(server_tick: int, revision: int, wire: PackedByteArray,epoch: int=0) -> void:
 	if is_host or server_tick<=latest_tick or revision!=roster_revision or epoch!=network_epoch():return
+	var rows:=RpcCodec.decode(wire)
+	if rows.is_empty() or rows.size()>4:return
 	latest_tick=server_tick
 	for row in rows:
 		if players.has(int(row.id)):
@@ -285,7 +302,7 @@ func advance(dt: float) -> void:
 		tick+=1
 		for body in players.values():body.simulate(dt,tick)
 		if tick%3==0:
-			for id in ready_ids():_receive_snapshot.rpc_id(id,tick,roster_revision,all_states())
+			broadcast_players()
 	else:
 		connection_age+=dt
 		if not players.has(local_id):
@@ -301,11 +318,14 @@ func advance(dt: float) -> void:
 			while input_history.size()>12:input_history.pop_front()
 			# 30 Hz plus edges; repeated recent commands recover loss without a
 			# reliable head-of-line queue. Server consumes at most one per tick.
-			if sequence%2==0 or move!=last_sent_axes or sprint!=last_sent_run:_input_bundle.rpc_id(1,network_epoch(),input_history)
+			var send_bundle: bool=sequence%2==0 or move!=last_sent_axes or sprint!=last_sent_run
+			var send_checkpoint: bool=sequence%6==1 and not reliable_carrier()
+			var wire:=RpcCodec.encode(input_history) if send_bundle or send_checkpoint else PackedByteArray()
+			if send_bundle:_input_bundle.rpc_id(1,network_epoch(),wire)
 			# Bounded 10 Hz recovery on an independent channel; unreliable updates
 			# remain current even if reliable delivery stalls. Server age/credit
 			# limits prevent replaying a backlog as extra movement after an outage.
-			if sequence%6==1:_input_checkpoint.rpc_id(1,network_epoch(),input_history)
+			if send_checkpoint:_input_checkpoint.rpc_id(1,network_epoch(),wire)
 			prediction.advance(players[local_id],sequence,move,yaw,sprint,dt,client_can_move())
 		elif move!=last_sent_axes or sprint!=last_sent_run or sequence%12==1:_confirm_input.rpc_id(1,sequence,move.limit_length(1.0),yaw,pitch,sprint)
 		else:_submit_input.rpc_id(1,sequence,move.limit_length(1.0),yaw,pitch,sprint)
@@ -314,6 +334,10 @@ func advance(dt: float) -> void:
 		if camera:
 			camera.position=players[local_id].position+Vector3.UP*1.62
 			camera.rotation=Vector3(pitch,yaw,0)
+
+func broadcast_players() -> void:
+	var wire:=RpcCodec.encode(all_states())
+	for id in ready_ids():_receive_snapshot.rpc_id(id,tick,roster_revision,wire,network_epoch())
 
 func _input(event: InputEvent) -> void:
 	if event is InputEventKey:

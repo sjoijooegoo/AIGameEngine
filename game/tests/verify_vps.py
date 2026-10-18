@@ -15,7 +15,7 @@ from game.tools.local_bank_server import query
 
 def main():
     parser=argparse.ArgumentParser(description=__doc__);parser.add_argument('--project',choices=['bank'],required=True)
-    parser.add_argument('--host',default='207.57.124.243');args=parser.parse_args()
+    parser.add_argument('--host',default='207.57.124.243');parser.add_argument('--transport',choices=['udp','tcp'],default='udp');args=parser.parse_args()
     folder=ROOT/'logs/sessions'/('bank-vps-ui-'+datetime.datetime.now().strftime('%Y%m%d-%H%M%S'));folder.mkdir(parents=True)
     print(folder,flush=True);peers=[];checks=[];captures=[];failure=None
     def population(n):return until(lambda:(r:=query(args.host,timeout=2)) and r['players']==n,60)
@@ -32,7 +32,7 @@ def main():
         assert browser.state()['bank_nodes']==0 and not browser.state()['controls']['connect']['disabled']
         captures.append(browser.call('capture',name='vps-online-empty')['capture'])
         mark('vps_default_discovery_no_scene_load',row=browser.state()['discovery'][target])
-        first=BankPeer(folder/'client-1',['--connect='+args.host,'--port=24567','--name=VPS1','--real-time']);peers.append(first)
+        first=BankPeer(folder/'client-1',['--connect='+args.host,'--port=24567','--name=VPS1','--real-time','--transport='+args.transport]);peers.append(first)
         s=state_ready(first);population(1);aid=s['local_id']
         before=next(p for p in s['players'] if p['id']==aid)['position']
         first.call('input',keys=['S']);time.sleep(.65);first.call('input');time.sleep(1)
@@ -43,7 +43,7 @@ def main():
         mark('vps_first_player_immediate_move_fire',metres=math.dist(before,after))
         clients=[first]
         with ThreadPoolExecutor(max_workers=3) as pool:
-            futures=[pool.submit(BankPeer,folder/f'client-{i}', ['--connect='+args.host,'--port=24567',f'--name=VPS{i}','--real-time']) for i in [2,3,4]]
+            futures=[pool.submit(BankPeer,folder/f'client-{i}', ['--connect='+args.host,'--port=24567',f'--name=VPS{i}','--real-time','--transport='+args.transport]) for i in [2,3,4]]
             for f in futures:client=f.result();clients.append(client);peers.append(client)
         for client in clients:state_ready(client)
         population(4)
@@ -53,7 +53,7 @@ def main():
         captures.append(browser.call('capture',name='vps-online-full')['capture'])
         assert all(c.state()['combat'][str(aid)]['shots']>=1 for c in clients)
         mark('vps_four_clients_authoritative_weapon_and_capacity')
-        extra=BankPeer(folder/'fifth',['--connect='+args.host,'--port=24567','--name=Fifth']);peers.append(extra)
+        extra=BankPeer(folder/'fifth',['--connect='+args.host,'--port=24567','--name=Fifth','--transport='+args.transport]);peers.append(extra)
         until(lambda:'满' in extra.state()['status'],30);assert not extra.state()['players'];population(4)
         mark('vps_fifth_client_rejected')
         last=clients.pop();last.call('menu');last.call('click',control='leave_button');population(3)

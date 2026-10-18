@@ -1,5 +1,6 @@
 extends "wsl_coop_performance.gd"
 ## Native ENet telemetry for real WAN sampling; no injected latency.
+var next_buffer_sample := 0
 func _physics_process(dt: float) -> bool:
 	if game!=null and (run_config.is_empty() or Time.get_unix_time_from_system()<float(run_config.start)):
 		game.world.advance(dt)
@@ -13,6 +14,15 @@ func _process(dt: float) -> bool:
 		telemetry[-1].delta=game.snapshot_delta.observe()
 		telemetry[-1].retrying=game.recovery.retrying
 		telemetry[-1].peer_id=game.local_id
+		telemetry[-1].transport=game.get("transport_mode")
+		telemetry[-1].player_tick=game.latest_tick
+		if Time.get_ticks_msec()>=next_buffer_sample:
+			next_buffer_sample=Time.get_ticks_msec()+500
+			var pending: Array=[]
+			for key in game.snapshot_buffer.frames:
+				var frame: Dictionary=game.snapshot_buffer.frames[key]
+				pending.append({"tick":key,"count":frame.count,"parts":frame.parts.keys()})
+			telemetry[-1].inflight=pending
 	if measuring and not telemetry.is_empty() and game.peer and game.multiplayer.get_peers().has(1):
 		var peer=game.peer.get_peer(1)
 		telemetry[-1].rtt_ms=peer.get_statistic(ENetPacketPeer.PEER_ROUND_TRIP_TIME)

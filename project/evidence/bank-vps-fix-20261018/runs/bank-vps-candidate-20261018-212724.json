@@ -1,0 +1,25 @@
+{
+  "id": "bank-vps-candidate-20261018-212724",
+  "source": "logs/sessions/bank-vps-candidate-20261018-212724/report.json",
+  "sha256": "a08c7e5a308de82f265ba39877220dd419f9fcb41c148e673b458d2ff3026f66",
+  "checks": [],
+  "failure": "CalledProcessError(1, ['D:\\\\AIGameEngine\\\\.venv\\\\Scripts\\\\python.exe', '-m', 'game.tests.verify_vps_release', '--project', 'bank', '--package', 'build\\\\bank\\\\combat-coop\\\\20261018-211024\\\\windows\\\\package', '--players', '2', '--transport', 'tcp', '--seconds', '180', '--skip-service-recovery'])",
+  "passed": null,
+  "scope": null,
+  "remote": {
+    "pid": 198301
+  },
+  "network_change": {
+    "classification": "invalid_fixed_network_soak",
+    "user_confirmed": "Switched back from phone hotspot during this test",
+    "before": {
+      "interface": 21,
+      "address": "10.108.23.136"
+    },
+    "after": {
+      "interface": 21,
+      "address": "10.1.0.132"
+    },
+    "result": "Failure retained; not counted as a stable-network pass or isolated game regression. Both clients eventually rejoined. Further reconnections cannot be attributed exclusively to the network switch."
+  }
+}

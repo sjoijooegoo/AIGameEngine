@@ -6,10 +6,16 @@ from game.tests.verify_coop import until
 from game.tools.coop import ROOT
 
 def main():
-    p=argparse.ArgumentParser();p.add_argument('--project',required=True,choices=['bank']);p.parse_args()
+    p=argparse.ArgumentParser();p.add_argument('--project',required=True,choices=['bank']);p.add_argument('--transport',choices=['udp','tcp'],default='udp');args=p.parse_args()
     folder=ROOT/'logs/sessions'/('bank-network-combat-'+datetime.datetime.now().strftime('%Y%m%d-%H%M%S'));folder.mkdir();print(folder,flush=True)
     peers=[];proxies=[];checks=[]
-    with socket.socket(type=socket.SOCK_DGRAM) as s:s.bind(('127.0.0.1',0));port=s.getsockname()[1]
+    # Windows/Hyper-V excludes different TCP/UDP ranges. Reserve both rather
+    # than treating an ephemeral UDP port as evidence that TCP is available.
+    while True:
+        with socket.socket() as tcp,socket.socket(type=socket.SOCK_DGRAM) as udp:
+            tcp.bind(('0.0.0.0',0));port=tcp.getsockname()[1]
+            try:udp.bind(('0.0.0.0',port));break
+            except OSError:continue
     def fixture(name):
         serial=server.net()['fixture_barrier']+1;server.call('fixture',name=name)
         until(lambda:a.net()['fixture_barrier']==serial and b.net()['fixture_barrier']==serial,20)
@@ -21,11 +27,13 @@ def main():
         time.sleep(.22)
         assert server.net()['weapons'][ident]['shots']==old+1,'duplicate operation fired twice'
     try:
-        server=NetworkPeer(folder/'server',['--server',f'--port={port}']);peers.append(server)
-        a=NetworkPeer(folder/'alpha',[]);peers.append(a);b=NetworkPeer(folder/'bravo',[]);peers.append(b)
+        server=NetworkPeer(folder/'server',['--server',f'--port={port}']+(['--prefer-tcp'] if args.transport=='tcp' else []));peers.append(server)
+        a=NetworkPeer(folder/'alpha',['--transport='+args.transport]);peers.append(a);b=NetworkPeer(folder/'bravo',['--transport='+args.transport]);peers.append(b)
         for i,client in enumerate([a,b]):
-            proxy=FaultProxy(('127.0.0.1',port),Profile('combat_loss5',200,25,.05),18100+i);proxies.append(proxy)
-            client.call('fields',nickname=['Alpha','Bravo'][i],port=proxy.port);client.call('click',control='join_button')
+            target=port
+            if args.transport=='udp':
+                proxy=FaultProxy(('127.0.0.1',port),Profile('combat_loss5',200,25,.05),18100+i);proxies.append(proxy);target=proxy.port
+            client.call('fields',nickname=['Alpha','Bravo'][i],port=target);client.call('click',control='join_button')
         until(lambda:a.net()['started'] and b.net()['started'] and len(server.net()['players'])==2,30)
         aid=str(a.net()['id']);bid=str(b.net()['id']);fixture('firearms_target')
         # Match the target's chest from each actual spawn slot.
@@ -56,7 +64,7 @@ def main():
     finally:
         for peer in reversed(peers):peer.close()
         for proxy in proxies:proxy.close()
-        (folder/'report.json').write_text(json.dumps({'checks':checks,'proxies':[x.report() for x in proxies]},ensure_ascii=False,indent=2),encoding='utf8')
+        (folder/'report.json').write_text(json.dumps({'checks':checks,'transport':args.transport,'proxies':[x.report() for x in proxies]},ensure_ascii=False,indent=2),encoding='utf8')
     print(folder/'report.json',flush=True)
 
 if __name__=='__main__':main()

@@ -1,0 +1,36 @@
+{
+  "id": "bank-network-combat-20261018-203111",
+  "source": "logs/sessions/bank-network-combat-20261018-203111/report.json",
+  "sha256": "71eccf8f7d95710a663e9dd6c7584b4b09711e7386c8110f584274d0eb027008",
+  "checks": [
+    {
+      "name": "bank_network_cooperative_damage",
+      "status": "pass",
+      "hp": [
+        65.0,
+        51.0,
+        37.0
+      ],
+      "ammo": [
+        14,
+        14
+      ]
+    },
+    {
+      "name": "bank_network_shared_kill_without_duplicate_shots",
+      "status": "pass"
+    },
+    {
+      "name": "bank_network_reload_and_shared_door",
+      "status": "pass"
+    },
+    {
+      "name": "bank_network_live_84_actor_world",
+      "status": "pass",
+      "snapshot_bytes": 894
+    }
+  ],
+  "failure": null,
+  "passed": null,
+  "scope": null
+}

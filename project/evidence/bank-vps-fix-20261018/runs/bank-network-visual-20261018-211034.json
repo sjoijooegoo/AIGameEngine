@@ -1,0 +1,23 @@
+{
+  "id": "bank-network-visual-20261018-211034",
+  "source": "logs/sessions/bank-network-visual-20261018-211034/report.json",
+  "sha256": "e831ebf9a1065b8363128105089e841cda6b65adb2324c3db849b880e00e6c7c",
+  "checks": [
+    {
+      "name": "bank_network_corpse_sleep_wake",
+      "status": "pass",
+      "normal_input": true,
+      "client_hit_areas_disabled": true,
+      "authority_hit_areas_enabled": true
+    },
+    {
+      "name": "bank_network_rendered_sequences",
+      "status": "pass",
+      "normal_input": true,
+      "frozen_between_steps": true
+    }
+  ],
+  "failure": null,
+  "passed": null,
+  "scope": null
+}

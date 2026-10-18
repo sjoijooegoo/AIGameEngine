@@ -1,0 +1,170 @@
+{
+  "id": "bank-network-20261018-201213",
+  "source": "logs/sessions/bank-network-20261018-201213/report.json",
+  "sha256": "997fcdad9c1adda1d4c811a7ab50bbfd776a30024e5255a3c95c20a7ab6ec632",
+  "checks": [],
+  "failure": null,
+  "passed": null,
+  "scope": "Current bank, two actual headless clients and one real-time dedicated process; seeded UDP impairment in both directions. Not real VPS/GPU/FPS/long-soak validation.",
+  "weak_network_cases": [
+    {
+      "profile": {
+        "name": "rtt300_loss5",
+        "rtt_ms": 300,
+        "jitter_ms": 40,
+        "loss": 0.05,
+        "duplicate": 0
+      },
+      "repeat": 1,
+      "outcome": "completed",
+      "stage": "complete",
+      "issues": [],
+      "metrics": {
+        "join_ms": 1671.9999999913853,
+        "move_server_ms": 214.0,
+        "move_visible_ms": 29.0,
+        "stop_server_ms": 41.0,
+        "position_error_after_stop": 0.0,
+        "shot_server_ms": 158.0,
+        "shot_all_clients_ms": 430.0,
+        "door_server_complete_ms": 1437.000000005355,
+        "door_all_clients_complete_ms": 1905.9999999881256,
+        "fire_feedback_ms": 4.0,
+        "server_hz": 60.06979062811566,
+        "client_rtt_median_ms": [
+          333.0,
+          329.0
+        ],
+        "world_gap_p95_ms": [
+          185.0,
+          200.0
+        ],
+        "world_gap_max_ms": [
+          251.0,
+          215.0
+        ],
+        "world_delivery_hz": [
+          9.4715852442672,
+          9.346959122632105
+        ],
+        "world_age_p95_ms": [
+          150,
+          150
+        ],
+        "throttle_min": [
+          32.0,
+          32.0
+        ],
+        "snapshot_bytes_mean": 508.7929606625259,
+        "snapshot_assembly": [
+          {
+            "bytes": 0,
+            "completed": 200,
+            "expired": 14,
+            "frames": 0,
+            "recovered": 80,
+            "rejected": 0
+          },
+          {
+            "bytes": 0,
+            "completed": 141,
+            "expired": 15,
+            "frames": 0,
+            "recovered": 82,
+            "rejected": 0
+          }
+        ]
+      },
+      "duration_s": 32.671999999991385
+    },
+    {
+      "profile": {
+        "name": "rtt500_loss5",
+        "rtt_ms": 500,
+        "jitter_ms": 75,
+        "loss": 0.05,
+        "duplicate": 0
+      },
+      "repeat": 1,
+      "outcome": "completed",
+      "stage": "complete",
+      "issues": [],
+      "metrics": {
+        "join_ms": 3092.9999999934807,
+        "move_server_ms": 340.0,
+        "move_visible_ms": 25.0,
+        "stop_server_ms": 72.0,
+        "position_error_after_stop": 0.0,
+        "shot_server_ms": 230.0,
+        "shot_all_clients_ms": 664.0,
+        "door_server_complete_ms": 1469.0000000118744,
+        "door_all_clients_complete_ms": 2125.0,
+        "fire_feedback_ms": 4.0,
+        "server_hz": 60.087445346658335,
+        "client_rtt_median_ms": [
+          527.0,
+          503.0
+        ],
+        "world_gap_p95_ms": [
+          318.0,
+          299.0
+        ],
+        "world_gap_max_ms": [
+          333.0,
+          417.0
+        ],
+        "world_delivery_hz": [
+          6.495940037476577,
+          6.7457838850718295
+        ],
+        "world_age_p95_ms": [
+          266,
+          266
+        ],
+        "throttle_min": [
+          32.0,
+          32.0
+        ],
+        "snapshot_bytes_mean": 637.8672199170124,
+        "snapshot_assembly": [
+          {
+            "bytes": 0,
+            "completed": 334,
+            "expired": 38,
+            "frames": 0,
+            "recovered": 168,
+            "rejected": 0
+          },
+          {
+            "bytes": 0,
+            "completed": 275,
+            "expired": 38,
+            "frames": 0,
+            "recovered": 151,
+            "rejected": 0
+          }
+        ]
+      },
+      "duration_s": 21.030999999988126
+    },
+    {
+      "profile": {
+        "name": "rtt300_loss30",
+        "rtt_ms": 300,
+        "jitter_ms": 80,
+        "loss": 0.3,
+        "duplicate": 0
+      },
+      "repeat": 1,
+      "outcome": "failed",
+      "stage": "join",
+      "issues": [
+        "condition did not converge"
+      ],
+      "metrics": {},
+      "duration_s": 17.094000000011874
+    }
+  ],
+  "functional_passed": false,
+  "weak_network_quality": "not certified; completed cases may still have severe input latency or snapshot gaps"
+}

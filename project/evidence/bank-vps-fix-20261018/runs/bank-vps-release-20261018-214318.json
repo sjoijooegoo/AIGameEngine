@@ -1,0 +1,11 @@
+{
+  "id": "bank-vps-release-20261018-214318",
+  "source": "logs/sessions/bank-vps-release-20261018-214318/report.json",
+  "sha256": "42eb0d3b25603115aa8f24c3358985ecf77cdbd3bf5587df08108dd0f3621823",
+  "checks": [],
+  "failure": "AssertionError('Timed out waiting for network state')",
+  "passed": null,
+  "scope": null,
+  "samples": [],
+  "discovery_missed_datagrams": 129
+}

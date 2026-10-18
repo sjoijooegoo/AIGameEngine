@@ -1,0 +1,26 @@
+{
+  "id": "bank-tcp-recovery-20261018-205327",
+  "source": "logs/sessions/bank-tcp-recovery-20261018-205327/report.json",
+  "sha256": "be55540c4d191fc410c22ec5c6feb21624024387c61d223047ecf5a43c12cc9f",
+  "checks": [
+    {
+      "name": "tcp_udp_shared_capacity_and_damage",
+      "status": "pass",
+      "players": 2
+    },
+    {
+      "name": "tcp_socket_reset_recovery",
+      "status": "pass",
+      "recovery_ms": 1608.9999999967404,
+      "hp": 73,
+      "clip": 14
+    },
+    {
+      "name": "tcp_voluntary_leave_and_replacement",
+      "status": "pass"
+    }
+  ],
+  "failure": null,
+  "passed": null,
+  "scope": null
+}

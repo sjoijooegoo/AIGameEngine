@@ -1,0 +1,30 @@
+{
+  "id": "bank-coop-release-20261018-211427",
+  "source": "logs/sessions/bank-coop-release-20261018-211427/report.json",
+  "sha256": "cd548d8b4fa4aea39a5905588467c47cb45e426a3d4421ce9b804023476dec8d",
+  "checks": [
+    {
+      "name": "bank_release_starts_menu_without_world",
+      "status": "pass"
+    },
+    {
+      "name": "bank_release_two_clients",
+      "status": "pass"
+    },
+    {
+      "name": "bank_release_debug_bridge_disabled",
+      "status": "pass"
+    },
+    {
+      "name": "bank_release_bake_loaded",
+      "status": "pass"
+    },
+    {
+      "name": "bank_release_hanging_lights_enabled",
+      "status": "pass"
+    }
+  ],
+  "failure": null,
+  "passed": null,
+  "scope": null
+}

@@ -23,7 +23,10 @@ class NetworkPeer(Peer):
              '--',f'--test-session={folder.as_posix()}','--performance-benchmark','--coop','--real-time',*args]
         self.process=subprocess.Popen(cmd,stdout=self.log,stderr=subprocess.STDOUT,cwd=ROOT,creationflags=HIDDEN)
         (folder/'launch.json').write_text(json.dumps({'command':cmd,'pid':self.process.pid},indent=2),encoding='utf8')
-        self.wait_file(folder/'ready.json',90)
+        try:self.wait_file(folder/'ready.json',90)
+        except BaseException:
+            if self.process.poll() is None:self.process.terminate();self.process.wait(timeout=10)
+            self.log.close();raise
     def net(self):return self.call('net_state')
 
 def percentile(values,p):

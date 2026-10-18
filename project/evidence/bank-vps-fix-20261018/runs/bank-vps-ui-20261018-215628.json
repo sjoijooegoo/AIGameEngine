@@ -1,0 +1,50 @@
+{
+  "id": "bank-vps-ui-20261018-215628",
+  "source": "logs/sessions/bank-vps-ui-20261018-215628/report.json",
+  "sha256": "a7aab3264f6727e93b2bcbcd5b2982bcb22422fe9edf9c603db5b45314f7b622",
+  "checks": [
+    {
+      "name": "vps_default_discovery_no_scene_load",
+      "status": "pass",
+      "row": {
+        "address": "207.57.124.243",
+        "capacity": 4,
+        "compatible": true,
+        "id": "207.57.124.243:24567",
+        "name": "银行合作服务器",
+        "occupied": 0,
+        "online": true,
+        "ping": 561,
+        "players": 0,
+        "port": 24567,
+        "reserved": 0,
+        "seen": 2140,
+        "transport": "tcp"
+      }
+    },
+    {
+      "name": "vps_first_player_immediate_move_fire",
+      "status": "pass",
+      "metres": 1.959935125931494
+    },
+    {
+      "name": "vps_four_clients_authoritative_weapon_and_capacity",
+      "status": "pass"
+    },
+    {
+      "name": "vps_fifth_client_rejected",
+      "status": "pass"
+    },
+    {
+      "name": "vps_native_browser_join_leave_and_current_bake",
+      "status": "pass"
+    },
+    {
+      "name": "vps_service_persists_empty",
+      "status": "pass"
+    }
+  ],
+  "failure": null,
+  "passed": null,
+  "scope": null
+}

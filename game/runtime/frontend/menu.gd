@@ -181,11 +181,13 @@ func submit() -> void:
 	if not error.is_empty():
 		AppFlow.message=error;controls.error.text=error;return
 	remember_form()
+	var transport:="udp"
 	if connection_mode=="find":
 		var row: Dictionary=browser.rows.get(selected_server,{})
 		if not row.get("online",false) or int(row.get("occupied",row.players))>=int(row.capacity):return
 		AppFlow.fields.address=row.address;AppFlow.fields.port=row.port;AppFlow.remember(AppFlow.fields)
-	AppFlow.launch({"mode":"multiplayer","action":"join" if connection_mode=="find" else connection_mode})
+		transport=row.get("transport","udp")
+	AppFlow.launch({"mode":"multiplayer","action":"join" if connection_mode=="find" else connection_mode,"transport":transport})
 
 func build_settings(w: float,h: float) -> void:
 	label("title","行动设置",Rect2(58,92,w-116,64),42,S.PAPER,S.title)
