@@ -605,6 +605,25 @@
         "docs/bank-coop-optimization.md"
       ],
       "notes": "Selected compute/presentation reductions and acknowledged-base delta replication implemented. 16 final performance samples, final normal combat, six difficult network cases, outages, dynamic corpse/door sequences, matched release packages and WSL verified. 84-enemy server P95 still exceeds 60 Hz budget; public VPS and long soak unverified. Initial failures preserved."
+    },
+    {
+      "id": "BANK-WSL-CAPACITY-009",
+      "title": "WSL 2核4GB双人及四人尸群容量实测",
+      "status": "done",
+      "depends_on": [
+        "BANK-COOP-OPTIMIZATION-008"
+      ],
+      "acceptance": [
+        "BANK-WSL-CAPACITY"
+      ],
+      "definition_of_done": "确认WSL整机2逻辑CPU、4GiB和无交换空间；Windows真实输入客户端在VM外，2/4人多档尸群重复计时、线程CPU、内存与网络；保留负载失败和容量阈值，分析瓶颈，恢复环境。短时容量审计不等于真实VPS长期认证。",
+      "evidence": [
+        "project/evidence/bank-wsl-capacity-20261018/report.json",
+        "project/evidence/bank-wsl-capacity-20261018/gallery.html",
+        "project/evidence/bank-wsl-capacity-20261018/manifest.json",
+        "docs/bank-wsl-capacity.md"
+      ],
+      "notes": "36 formal samples plus one smoke; full 2/4-player population matrix, sustained living crowds and lean-client isolation. Server ~60 Hz through 84 allocated enemies; three conservative physics-peak warnings retained. Full four-client Windows generator slows at 64–84; two 16-enemy waves lack enemy contact and remain insufficient. 11 counter contracts pass. WSL restored and persistent localhost 0/4; actual VPS, WAN, rendered client FPS and long soak unverified."
     }
   ],
   "known_limits": [

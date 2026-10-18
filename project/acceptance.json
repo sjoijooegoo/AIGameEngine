@@ -767,6 +767,18 @@
         "coop_optimization_weak_network",
         "coop_optimization_repeated_performance"
       ]
+    },
+    {
+      "id": "BANK-WSL-CAPACITY",
+      "kind": "automated",
+      "description": "Bounded current-bank WSL 2-vCPU/4-GiB capacity audit with real input clients, repeated population matrix, measurement semantics, raw failures and restored environment; not VPS or long-soak certification.",
+      "checks": [
+        "wsl_capacity_limits_verified",
+        "wsl_capacity_real_combat_matrix",
+        "wsl_capacity_sustained_living_diagnostic",
+        "wsl_capacity_counter_contracts",
+        "wsl_capacity_environment_restored"
+      ]
     }
   ]
 }

@@ -1,0 +1,21 @@
+{
+  "retained": [
+    {
+      "session": "logs/performance/bank-wsl-2c4g-20261018-084622",
+      "reason": "Preflight rejected normal server still active after VM restart; no capacity samples."
+    },
+    {
+      "session": "logs/performance/bank-wsl-2c4g-20261018-084650",
+      "reason": "Linux debug export template does not allow --path. Replaced with checksum-verified editor engine of identical version; no capacity samples."
+    },
+    {
+      "session": "logs/performance/bank-wsl-2c4g-20261018-084804",
+      "reason": "WSL restarted after transient mask disappeared; preflight rejected competing normal service. Normal service temporarily disabled until restoration."
+    },
+    {
+      "session": "logs/performance/bank-wsl-2c4g-20261018-085019",
+      "reason": "After nine completed samples, result.json briefly denied a host read. Original failure retained. Completed samples have no source changes or engine errors. Missing 2p 16/24/32 second repeats rerun separately."
+    }
+  ],
+  "measurement_note": "Godot physics performance monitor publishes per-second maxima. Its repeated sample P95 is conservative headroom, not a per-tick physical-processing P95. Initial flags are retained; no failed criterion is waived."
+}

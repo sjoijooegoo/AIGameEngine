@@ -1,0 +1,5 @@
+{
+  "exit_code": 0,
+  "tests": 11,
+  "scope": "Counter math, incomplete and missing second buckets, separate peak budget, bounded transient file-read retry; no game worlds launched."
+}

@@ -1,0 +1,212 @@
+{
+  "scope": "Capacity audit completed, not every workload certified stable and not a public VPS benchmark",
+  "passed": true,
+  "formal_samples": 36,
+  "additional_smoke_samples": 1,
+  "route_counts": {
+    "normal_clients_combat": 24,
+    "lean_clients_hold": 8,
+    "lean_clients_combat": 4
+  },
+  "source_reports": [
+    {
+      "session": "logs/performance/bank-wsl-2c4g-20261018-085019",
+      "report_sha256": "5eef13bce292db516cee727e4aefa5eb88deacf82ffae3a9886fd053694189c9"
+    },
+    {
+      "session": "logs/performance/bank-wsl-2c4g-20261018-090012",
+      "report_sha256": "cbf11d392027dc7383efb7ce7b73aebf0a85a363d4596b6793c40900f69a5e0c"
+    },
+    {
+      "session": "logs/performance/bank-wsl-2c4g-20261018-090326",
+      "report_sha256": "1d7310e6847e4672f950685efd00bd4c95dece02f8453363389a599d860e0ef3"
+    },
+    {
+      "session": "logs/performance/bank-wsl-2c4g-20261018-091550",
+      "report_sha256": "5d997fe3aee9d33dfc827017671684b2d441f0b7230da2d756bda167ab828180"
+    },
+    {
+      "session": "logs/performance/bank-wsl-2c4g-20261018-092326",
+      "report_sha256": "d18686eed71a6760ea545d8d1f8c280388b7d38d9dc444dc38dc3d1856fa08e1"
+    }
+  ],
+  "checks": [
+    {
+      "name": "wsl_capacity_limits_verified",
+      "status": "pass",
+      "evidence": "raw-sessions.zip/environment/after.txt",
+      "details": "Whole WSL VM 2 logical CPUs, MemTotal 3917 MiB, swap 0; one server, clients outside VM."
+    },
+    {
+      "name": "wsl_capacity_real_combat_matrix",
+      "status": "pass",
+      "details": "24 planned normal-client samples collected across 2/4 players and six populations, two each. Two 4p16 waves killed before enemy contact remain explicitly insufficient for sustained contact; three high-load client stalls retained. This is audit coverage, not all-workload approval."
+    },
+    {
+      "name": "wsl_capacity_sustained_living_diagnostic",
+      "status": "pass",
+      "details": "Eight 2/4p 64/84 living-crowd samples and four 4p64/84 gunfire samples with lean load generators; normal inputs, full authoritative server, all generators keep up."
+    },
+    {
+      "name": "wsl_capacity_counter_contracts",
+      "status": "pass",
+      "details": "11 focused measurement contract tests. Physics monitor is a repeated once-per-second maximum; conservative warning flags retained."
+    },
+    {
+      "name": "wsl_capacity_environment_restored",
+      "status": "pass",
+      "details": "Original absent .wslconfig restored; WSL back to 32 CPUs/default memory and swap; original enabled server active and localhost 0/4."
+    }
+  ],
+  "conservative_server_budget_warnings": [
+    {
+      "session_case": {
+        "id": "hall_2p_64",
+        "players": 2,
+        "population": 64,
+        "floor": 0.04,
+        "area": [
+          7,
+          11,
+          25,
+          21
+        ],
+        "player": [
+          18,
+          20
+        ],
+        "label": "一楼大厅 · 4人84敌",
+        "resolution": [
+          1920,
+          1080
+        ],
+        "repeat": 2
+      },
+      "budget": {
+        "average_tick_59_5hz": true,
+        "script_p95_16_67ms": true,
+        "physics_p95_16_67ms": false,
+        "no_second_below_57ticks": true
+      }
+    },
+    {
+      "session_case": {
+        "id": "hall_2p_84",
+        "players": 2,
+        "population": 84,
+        "floor": 0.04,
+        "area": [
+          7,
+          11,
+          25,
+          21
+        ],
+        "player": [
+          18,
+          20
+        ],
+        "label": "hall 2p 84 infected",
+        "route": "hold",
+        "lean_clients": true,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "repeat": 2
+      },
+      "budget": {
+        "average_tick_59_5hz": true,
+        "script_p95_16_67ms": true,
+        "physics_monitor_peak_p95_16_67ms": false,
+        "no_second_below_57ticks": true
+      }
+    },
+    {
+      "session_case": {
+        "id": "hall_4p_84",
+        "players": 4,
+        "population": 84,
+        "floor": 0.04,
+        "area": [
+          7,
+          11,
+          25,
+          21
+        ],
+        "player": [
+          18,
+          20
+        ],
+        "label": "hall 4p 84 infected",
+        "route": "combat",
+        "lean_clients": true,
+        "resolution": [
+          1920,
+          1080
+        ],
+        "repeat": 1
+      },
+      "budget": {
+        "average_tick_59_5hz": true,
+        "script_p95_16_67ms": true,
+        "physics_monitor_peak_p95_16_67ms": false,
+        "no_second_below_57ticks": true
+      }
+    }
+  ],
+  "insufficient_contact": [
+    {
+      "id": "hall_4p_16",
+      "players": 4,
+      "population": 16,
+      "floor": 0.04,
+      "area": [
+        7,
+        11,
+        25,
+        21
+      ],
+      "player": [
+        18,
+        20
+      ],
+      "label": "hall 4p 16 infected",
+      "route": "combat",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "repeat": 1
+    },
+    {
+      "id": "hall_4p_16",
+      "players": 4,
+      "population": 16,
+      "floor": 0.04,
+      "area": [
+        7,
+        11,
+        25,
+        21
+      ],
+      "player": [
+        18,
+        20
+      ],
+      "label": "hall 4p 16 infected",
+      "route": "combat",
+      "resolution": [
+        1920,
+        1080
+      ],
+      "repeat": 2
+    }
+  ],
+  "limits": [
+    "Single bank hall geometry; 5 seconds warmup + 30 seconds measurement per case, not a continuous soak.",
+    "i9-13900HX virtual CPUs are not equivalent to an unspecified shared VPS core.",
+    "Windows headless client simulation rates are not rendered player FPS. Lean generators skip replica bone presentation only.",
+    "No WAN latency, packet loss, egress shaping, thermal characterization, or multi-room capacity test.",
+    "Profiler/runtime/fixture data use a matching Linux debug engine, not a production release performance certification."
+  ]
+}

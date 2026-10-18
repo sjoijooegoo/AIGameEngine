@@ -1,0 +1,17 @@
+{
+  "wslconfig_exists": false,
+  "service": "active",
+  "enabled": "enabled",
+  "localhost": {
+    "build": "bank-combat-v5",
+    "capacity": 4,
+    "magic": "BANK_STATUS_1",
+    "name": "Local WSL Bank",
+    "nonce": "16e6f36d8f1f49fcb2df109e9131d00b",
+    "occupied": 0,
+    "players": 0,
+    "port": 24567,
+    "reserved": 0
+  },
+  "resources": "32\n               total        used        free      shared  buff/cache   available\nMem:           23884        1335       22079           3         725       22548\nSwap:           6144           0        6144\n"
+}

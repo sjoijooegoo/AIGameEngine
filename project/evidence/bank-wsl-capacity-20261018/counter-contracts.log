@@ -1,0 +1,16 @@
+test_average_rate_cannot_hide_a_stalled_second (game.tests.test_wsl_capacity_report.CapacityReportContract.test_average_rate_cannot_hide_a_stalled_second) ... ok
+test_cpu_does_not_double_count_linux_guest_time (game.tests.test_wsl_capacity_report.CapacityReportContract.test_cpu_does_not_double_count_linux_guest_time) ... ok
+test_missing_whole_second_is_zero_not_omitted (game.tests.test_wsl_capacity_report.CapacityReportContract.test_missing_whole_second_is_zero_not_omitted) ... ok
+test_partial_last_second_not_reported_as_stall (game.tests.test_wsl_capacity_report.CapacityReportContract.test_partial_last_second_not_reported_as_stall) ... ok
+test_permanent_file_sharing_error_has_a_deadline (game.tests.test_wsl_capacity_report.CapacityReportContract.test_permanent_file_sharing_error_has_a_deadline) ... ok
+test_physics_budget_is_independent_of_script_budget (game.tests.test_wsl_capacity_report.CapacityReportContract.test_physics_budget_is_independent_of_script_budget) ... ok
+test_transient_file_sharing_error_retries_only_the_read (game.tests.test_wsl_capacity_report.CapacityReportContract.test_transient_file_sharing_error_retries_only_the_read) ... ok
+test_cpu_percent_uses_one_core_convention (game.tests.test_coop_performance_report.PerformanceReportContract.test_cpu_percent_uses_one_core_convention) ... ok
+test_delivery_rate_counts_new_worlds_not_render_frames (game.tests.test_coop_performance_report.PerformanceReportContract.test_delivery_rate_counts_new_worlds_not_render_frames) ... ok
+test_headless_loop_is_not_rendered_fps (game.tests.test_coop_performance_report.PerformanceReportContract.test_headless_loop_is_not_rendered_fps) ... ok
+test_zero_gpu_is_unavailable_not_free_rendering (game.tests.test_coop_performance_report.PerformanceReportContract.test_zero_gpu_is_unavailable_not_free_rendering) ... ok
+
+----------------------------------------------------------------------
+Ran 11 tests in 0.002s
+
+OK
