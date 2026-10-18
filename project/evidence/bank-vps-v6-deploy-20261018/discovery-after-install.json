@@ -1,0 +1,12 @@
+{
+  "build": "bank-combat-v6",
+  "capacity": 4,
+  "magic": "BANK_STATUS_1",
+  "name": "Public Bank Co-op",
+  "nonce": "03ead03589fc42e2a324336276afd941",
+  "occupied": 0,
+  "players": 0,
+  "port": 24567,
+  "reserved": 0,
+  "transport": "tcp"
+}

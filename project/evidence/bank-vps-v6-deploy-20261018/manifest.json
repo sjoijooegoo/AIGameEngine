@@ -1,0 +1,10 @@
+{
+  "files": {
+    "discovery-after-install.json": "b40eea787351545d80eab5d1e30b59eff524123534fe24e2b28bd74756157279",
+    "dispatch.json": "b9b383b66631848e2d068c62675b9601da61697aa533fb923b27349a61db4cbb",
+    "installation.txt": "ecdc4f39be2fe33e013490a4d47b84eba3fd155ec512e2a8503973de4e1ebc75",
+    "report.json": "c0f3ff4fb52986ece39fbdadd0668413922986476234ad52e4d65a65f42460e9",
+    "request.json": "26263f1c638225a79ea6bee0accb02b58ced514a62db3a04bab430e8d5e5c5de",
+    "smoke-report.json": "2b4e49f2670b49dff9e69d0770d2248d2df2021288853a4cfc01fea50d152ee7"
+  }
+}

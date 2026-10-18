@@ -661,7 +661,25 @@
         "project/evidence/bank-vps-fix-20261018/manifest.json",
         "docs/bank-vps-stability.md"
       ],
-      "notes": "Candidate protocol 4 implementation and local contracts pass; six hotspot battle windows have no network/gameplay issues. Independent systemd-hosted release soak on original network failed: 2p 180s one reconnect, 4p 180s three reconnects; six native UI checks pass. Strict CPU budget still fails. Production and WSL restored v5 0/4; matched candidate packages retained, not promoted. Await stable path and passing repeat before deployment."
+      "notes": "Candidate protocol 4 implementation and local contracts pass; six hotspot battle windows have no network/gameplay issues. Independent systemd-hosted release soak on original network failed: 2p 180s one reconnect, 4p 180s three reconnects; six native UI checks pass. Strict CPU budget still fails. Production and WSL restored v5 0/4; matched candidate packages retained, not promoted. Await stable path and passing repeat before deployment. Subsequently user explicitly requested promotion of package 211024: completed under BANK-VPS-V6-012, then requested no further tests. Stability acceptance remains unresolved."
+    },
+    {
+      "id": "BANK-VPS-V6-012",
+      "title": "按用户指定部署 211024 v6 服务端",
+      "status": "done",
+      "depends_on": [
+        "BANK-VPS-DEPLOY-010"
+      ],
+      "acceptance": [
+        "BANK-VPS-V6-DEPLOY"
+      ],
+      "definition_of_done": "用户知悉原网络稳定性尚未通过后明确指定部署现有 211024 包；核对两端包与服务器文件哈希，保留旧版回滚，切换常驻服务并验证发现和配套发布版连接。部署完成不等于稳定性验收通过。",
+      "evidence": [
+        "project/evidence/bank-vps-v6-deploy-20261018/report.json",
+        "project/evidence/bank-vps-v6-deploy-20261018/manifest.json",
+        "docs/bank-vps-v6-deployment.md"
+      ],
+      "notes": "Exact requested v6 promoted, active/enabled, rollback v5 retained, paired Windows clients joined. Existing timeout reproduced during short smoke; user then requested no more testing. Stability is not accepted; deployment remains as explicitly requested. WSL not changed."
     }
   ],
   "known_limits": [

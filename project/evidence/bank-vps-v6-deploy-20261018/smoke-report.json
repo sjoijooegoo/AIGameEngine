@@ -1,0 +1,234 @@
+{
+  "checks": [
+    {
+      "name": "vps_packaged_clients_join",
+      "status": "pass"
+    }
+  ],
+  "samples": [
+    {
+      "seconds": 0.046999999991385266,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "73fcfbcc03d344b187a7ac7920f996ab",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 2.077999999979511,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "e6d36f889ced411d96c82ddab2407ddb",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 4.73399999999674,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "1075c22ed40a49a391106312bd6b547e",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 6.780999999988126,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "3903ba90a5d247179c05ad6aa2e504ed",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 8.875,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "860359bc05e84aa29e254c6057871c70",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 11.546999999991385,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "4a81763621b94c7f80a689714a9756cf",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 14.764999999984866,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "080ef6c48eaa4d5fac4bd53451c5e488",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 16.82799999997951,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "a6e38ce568cb49248d0dd60e7acc0484",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 19.562000000005355,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "2237b987cea3441182f0f54ff4804939",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 21.60899999999674,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "b9f902cd46e14de0b7f958ff887cb3f7",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 23.639999999984866,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "c90be50d3a494acfac90db766a73ed95",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 25.780999999988126,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "189091bc35004b269a4e54bdc3100b2b",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 27.82799999997951,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "ba203b75fd944cde8235d0e5c4eafd70",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    },
+    {
+      "seconds": 29.889999999984866,
+      "status": {
+        "build": "bank-combat-v6",
+        "capacity": 4,
+        "magic": "BANK_STATUS_1",
+        "name": "Public Bank Co-op",
+        "nonce": "163d2052b34d4931b732b56e8d290712",
+        "occupied": 2,
+        "players": 2,
+        "port": 24567,
+        "reserved": 0,
+        "transport": "tcp"
+      }
+    }
+  ],
+  "failure": "AssertionError('Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org\\n\\nBANK_MAIN_MENU bank_loaded=false\\nBANK_LIGHTING {\"bake_mode\":\"indirect_only\",\"loaded\":true,\"meshes\":481.0,\"preview\":false}\\nBANK_ROOM_LIGHTING {\"emitters\":54,\"fixtures\":54,\"indirect\":\"unchanged v46; preview, not a matching rebake\",\"lobby\":{\"cabin_lights_unchanged\":[\"G_source_2\",\"F2_source_2\",\"F3_source_2\",\"F4_source_2\"],\"energy\":1.79285407066345,\"housing\":\"/root/BankExploration/LobbyFluorescentHousing\",\"housing_position\":\"(38.0, 2.761598, 12.5)\",\"light_position\":\"(38.0, 2.731598, 12.5)\",\"light_size\":0.0,\"shadow\":true,\"source\":\"G_source_10\"},\"profile\":\"hanging_diffuse\"}\\nCOOP_STATUS 正在连接 127.0.0.1:50384…\\nBANK_ENTRY_READY multiplayer\\nCOOP_STATUS 正在进入银行…\\nCOOP_STATUS 已连接 · 1/4 人\\nCOOP_STATUS 已连接 · 2/4 人\\nCOOP_STATUS 服务器响应超时，连接已断开 · 正在自动重连，可取消\\n')",
+  "discovery_missed_datagrams": 65,
+  "status_after_clients": {
+    "build": "bank-combat-v6",
+    "capacity": 4,
+    "magic": "BANK_STATUS_1",
+    "name": "Public Bank Co-op",
+    "nonce": "986db3e05d0b4797a44c82c4dfbfbf23",
+    "occupied": 0,
+    "players": 0,
+    "port": 24567,
+    "reserved": 0,
+    "transport": "tcp"
+  }
+}

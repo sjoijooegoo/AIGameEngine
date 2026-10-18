@@ -1,0 +1,7 @@
+{
+  "requested_package": "20261018-211024",
+  "requested_target": "207.57.124.243",
+  "known_stability_failures_acknowledged_by_new_deploy_request": true,
+  "previous_release": "20261018-095340",
+  "new_release": "20261018-211024-v6"
+}

@@ -1,0 +1,53 @@
+{
+  "release": "20261018-211024-v6",
+  "protocol": 4,
+  "status": "deployed_by_user_request",
+  "testing": "User requested no further testing; no new test will be run.",
+  "runtime_revision": "6d996ade5df4a399734ba340981de2dd4a71aa11",
+  "current": "/opt/bank-coop/releases/20261018-211024-v6",
+  "previous": "/opt/bank-coop/releases/20261018-095340",
+  "windows_executable": "build/bank/combat-coop/20261018-211024/windows/package/BankCoop.exe",
+  "linux_sha256": "38de641b7d3133c534dd0809dc90eba7e23cdb44a11bc62a406d6debf23e5df3",
+  "windows_sha256": "d62730ec50f527e035faa40659e8daf425133bfba0756f51aa5d504b703c8a16",
+  "discovery_after_smoke": {
+    "build": "bank-combat-v6",
+    "capacity": 4,
+    "magic": "BANK_STATUS_1",
+    "name": "Public Bank Co-op",
+    "nonce": "986db3e05d0b4797a44c82c4dfbfbf23",
+    "occupied": 0,
+    "players": 0,
+    "port": 24567,
+    "reserved": 0,
+    "transport": "tcp"
+  },
+  "checks": [
+    {
+      "name": "vps_v6_package_identity",
+      "status": "pass"
+    },
+    {
+      "name": "vps_v6_current_and_previous",
+      "status": "pass"
+    },
+    {
+      "name": "vps_v6_service_active_enabled",
+      "status": "pass"
+    },
+    {
+      "name": "vps_v6_discovery",
+      "status": "pass"
+    },
+    {
+      "name": "vps_v6_packaged_clients_join",
+      "status": "pass"
+    }
+  ],
+  "stability": "not_accepted",
+  "smoke_result": "Both clients joined; the 30-second check recorded a timeout on one client, so the no-reconnect assertion failed. Existing issue retained, not hidden. No further test after user stop instruction.",
+  "evidence": {
+    "deployment_logs": "D:/AIGameEngine/logs/deployments/bank-v6-20261018-223727",
+    "smoke": "logs/sessions/bank-vps-release-20261018-224114/report.json",
+    "smoke_sha256": "121c7aced017cdacfff8fe855c82615d7563fe8a8caa96e65c7cea477c4913f4"
+  }
+}

@@ -1,0 +1,36 @@
+{
+  "started": 1792334324.4816048,
+  "failure": null,
+  "before": {
+    "build": "bank-combat-v5",
+    "capacity": 4,
+    "magic": "BANK_STATUS_1",
+    "name": "Public Bank Co-op",
+    "nonce": "00681ee9324348a7aa8fd87df77eae73",
+    "occupied": 0,
+    "players": 0,
+    "port": 24567,
+    "reserved": 0
+  },
+  "returncode": 0,
+  "finished": 1792334350.833688
+}{"engine": "4.7.2", "build": "bank-combat-v6", "sha256": "38de641b7d3133c534dd0809dc90eba7e23cdb44a11bc62a406d6debf23e5df3"}
+	linux-vdso.so.1 (0x00007fffd63fc000)
+	librt.so.1 => /lib/x86_64-linux-gnu/librt.so.1 (0x000070946ef9c000)
+	libpthread.so.0 => /lib/x86_64-linux-gnu/libpthread.so.0 (0x000070946ef97000)
+	libdl.so.2 => /lib/x86_64-linux-gnu/libdl.so.2 (0x000070946ef92000)
+	libm.so.6 => /lib/x86_64-linux-gnu/libm.so.6 (0x000070946eea9000)
+	libc.so.6 => /lib/x86_64-linux-gnu/libc.so.6 (0x000070946ec00000)
+	/lib64/ld-linux-x86-64.so.2 (0x000070946efad000)
+{"build": "bank-combat-v6", "capacity": 4, "magic": "BANK_STATUS_1", "name": "Public Bank Co-op", "nonce": "6963ebbe0fbc4a42b3a0b64d5a0cc304", "occupied": 0, "players": 0, "port": 24567, "reserved": 0, "transport": "tcp"}
+MainPID=212981
+NRestarts=0
+MemoryCurrent=547192832
+ActiveState=active
+active
+enabled
+/opt/bank-coop/releases/20261018-211024-v6
+/opt/bank-coop/releases/20261018-095340
+MainPID=212981
+NRestarts=0
+MemoryCurrent=547233792

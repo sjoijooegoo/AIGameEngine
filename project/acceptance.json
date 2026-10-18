@@ -813,6 +813,18 @@
         "vps_fix_release_ui",
         "vps_fix_production_updated"
       ]
+    },
+    {
+      "id": "BANK-VPS-V6-DEPLOY",
+      "kind": "automated",
+      "description": "User-requested promotion of exact v6 package, rollback retention, active/enabled service and paired-client connectivity; does not certify WAN stability.",
+      "checks": [
+        "vps_v6_package_identity",
+        "vps_v6_current_and_previous",
+        "vps_v6_service_active_enabled",
+        "vps_v6_discovery",
+        "vps_v6_packaged_clients_join"
+      ]
     }
   ]
 }
