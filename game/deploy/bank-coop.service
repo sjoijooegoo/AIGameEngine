@@ -7,8 +7,8 @@ Wants=network-online.target
 Type=simple
 User=bankcoop
 Group=bankcoop
-WorkingDirectory=/opt/bank-coop
-ExecStart=/opt/bank-coop/bank-coop-server.x86_64 --headless -- --server --port=24567 --max-players=4
+WorkingDirectory=/opt/bank-coop/current
+ExecStart=/opt/bank-coop/current/bank-coop-server.x86_64 --headless --max-fps 60 -- --server --port=24567 --max-players=4 "--server-name=Public Bank Co-op"
 Restart=on-failure
 RestartSec=3
 NoNewPrivileges=true
@@ -17,6 +17,10 @@ ProtectSystem=strict
 ProtectHome=true
 StateDirectory=bank-coop
 Environment=HOME=/var/lib/bank-coop
+MemoryHigh=1G
+MemoryMax=1536M
+CPUWeight=50
+TimeoutStopSec=20
 
 [Install]
 WantedBy=multi-user.target

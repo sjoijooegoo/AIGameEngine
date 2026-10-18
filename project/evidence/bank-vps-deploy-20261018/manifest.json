@@ -1,0 +1,64 @@
+{
+  "files": {
+    "acceptance.json": {
+      "bytes": 29309,
+      "sha256": "340695867e38f69d9a3849c4be62d73937a42c117bca228314c965d82ab7798e"
+    },
+    "gallery.html": {
+      "bytes": 4434,
+      "sha256": "541db2464dc60ce5805723ddd07a09b16fb528891c845b17894dd56ebbc87d5e"
+    },
+    "hall_2p_16-r1.png": {
+      "bytes": 2076612,
+      "sha256": "3f85868fa55ae12b99cf8456598a7411e77eb4c6e62bf1844b08f87901afb509"
+    },
+    "hall_2p_32-r1.png": {
+      "bytes": 2335414,
+      "sha256": "3a36080eed6b54e4a75d072f19c0f3f77c5f62c166f124ce5194a6ca3907e7d8"
+    },
+    "hall_2p_84-r1.png": {
+      "bytes": 2181452,
+      "sha256": "5e31ffb1c131fa72a5784b5726e47a11d7caea1da3c3ad46bc15873b7106a054"
+    },
+    "hall_4p_16-r1.png": {
+      "bytes": 1969169,
+      "sha256": "cb6b9c2a70c2e31882ba6f06ea606477121bc453aa9fb42bd544d7f002392565"
+    },
+    "hall_4p_32-r1.png": {
+      "bytes": 2035690,
+      "sha256": "af0d631e0358999d5dc544ccf380c994452e7c4f271c35c43089ff26b603c6fa"
+    },
+    "hall_4p_84-r1.png": {
+      "bytes": 1981824,
+      "sha256": "4001a51e116776e09fbe1f980da702a1dd4ca75a01b6a2f864ee6d4ccb5654be"
+    },
+    "metrics.csv": {
+      "bytes": 1566,
+      "sha256": "d689fe290b8c01372f293f2b99780186cbe215ba57688f63668b7788de6da954"
+    },
+    "raw-sessions.zip": {
+      "bytes": 67567767,
+      "sha256": "9a6055bca650a31dce4392a4bd78f514e9a3bb0d90b243dbf72aad094683740c"
+    },
+    "report.json": {
+      "bytes": 418217,
+      "sha256": "aae12da7b4a94b3dba7d89fb8ccad07ae7c85566d870c99a53b6eb3e409fd746"
+    },
+    "vps-browser-entered-bank.png": {
+      "bytes": 790605,
+      "sha256": "b7bda6eef5d146414ef7ccf8a5e85faba34198d6b971f68343fcb8a87908e6c0"
+    },
+    "vps-online-empty.png": {
+      "bytes": 753067,
+      "sha256": "6c05aeee3071faba71a33b5d4e103977ba8695d1dfc3ddc51481507d33b57e8e"
+    },
+    "vps-online-full.png": {
+      "bytes": 761989,
+      "sha256": "bb4e54a9be8e10d76e3a16a6f646474fa46b6bb520e1a82421c47c25c2288852"
+    },
+    "vps-still-online-after-leave.png": {
+      "bytes": 751929,
+      "sha256": "a45282158bc63a5cf9dbb9ab4cba892024b824549d12bb6204141d259dbdc7cd"
+    }
+  }
+}

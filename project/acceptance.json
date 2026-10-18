@@ -779,6 +779,24 @@
         "wsl_capacity_counter_contracts",
         "wsl_capacity_environment_restored"
       ]
+    },
+    {
+      "id": "BANK-VPS-DEPLOY",
+      "kind": "automated",
+      "description": "Public VPS deployment and actual WAN bank verification; the audit is delivered but network stability and 60-Hz capacity checks currently fail.",
+      "checks": [
+        "vps_default_discovery_no_scene_load",
+        "vps_first_player_immediate_move_fire",
+        "vps_four_clients_authoritative_weapon_and_capacity",
+        "vps_fifth_client_rejected",
+        "vps_native_browser_join_leave_and_current_bake",
+        "vps_service_persists_empty",
+        "vps_systemd_crash_recovery",
+        "vps_combat_matrix_collected",
+        "vps_release_connection_soak",
+        "vps_combat_capacity_60hz",
+        "vps_runtime_errors_absent"
+      ]
     }
   ]
 }

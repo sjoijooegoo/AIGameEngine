@@ -28,6 +28,7 @@ func browse() -> void:
 	if socket.bind(0)!=OK:socket=null;return
 	socket.set_broadcast_enabled(true)
 	add_target("localhost",24567,"本机 WSL / localhost")
+	add_target("207.57.124.243",24567,"公网银行合作服务器")
 
 func add_target(host: String,port: int,title: String="") -> void:
 	host=host.strip_edges()

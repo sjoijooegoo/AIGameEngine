@@ -132,7 +132,7 @@ func build_connection(w: float,h: float) -> void:
 	button("back","返回主菜单",Rect2(right,h-144,w*.33,48),func():navigate("home"))
 	line(Vector2(right,218),w*.33,S.BRASS)
 	label("brief_title","随时加入，并肩作战。",Rect2(right,244,w*.33,45),26,S.PAPER,S.title)
-	label("brief","连接成功就进入银行，无需等待队友。\n人数实时显示，达到上限后停止接纳。\n\n寻找本机、局域网与最近的服务器。\n公网 VPS 可使用「直接连接」。",Rect2(right,302,w*.33,148),16,S.MUTED)
+	label("brief","连接成功就进入银行，无需等待队友。\n人数实时显示，达到上限后停止接纳。\n\n列表包含公网、本机和局域网服务器。\n选择在线服务器即可加入。",Rect2(right,302,w*.33,148),16,S.MUTED)
 	if connection_mode=="find":button("refresh","刷新服务器",Rect2(right,462,w*.33,42),func():browser.refresh())
 	label("server_note","localhost 指向本机常驻服务。\n创建本地会话则随创建者离开而关闭。",Rect2(right,h-210,w*.33,52),13,S.BRASS)
 	if connection_mode=="find":refresh_servers();browser.refresh.call_deferred()

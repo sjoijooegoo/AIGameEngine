@@ -624,6 +624,25 @@
         "docs/bank-wsl-capacity.md"
       ],
       "notes": "36 formal samples plus one smoke; full 2/4-player population matrix, sustained living crowds and lean-client isolation. Server ~60 Hz through 84 allocated enemies; three conservative physics-peak warnings retained. Full four-client Windows generator slows at 64–84; two 16-enemy waves lack enemy contact and remain insufficient. 11 counter contracts pass. WSL restored and persistent localhost 0/4; actual VPS, WAN, rendered client FPS and long soak unverified."
+    },
+    {
+      "id": "BANK-VPS-DEPLOY-010",
+      "title": "Ubuntu VPS正式部署、公网发现与多人战斗验证",
+      "status": "done",
+      "depends_on": [
+        "BANK-WSL-CAPACITY-009"
+      ],
+      "acceptance": [
+        "BANK-VPS-DEPLOY"
+      ],
+      "definition_of_done": "拉取最新源码、部署可回滚的Linux服务和开机启动；默认服务器列表加入公网IP；通过公网真实UI加入、容量/退出/重连与2/4人战斗测试，采集服务端CPU内存tick和连接指标，提供客户端包、运维文档及明确未验证边界。",
+      "evidence": [
+        "project/evidence/bank-vps-deploy-20261018/report.json",
+        "project/evidence/bank-vps-deploy-20261018/gallery.html",
+        "project/evidence/bank-vps-deploy-20261018/manifest.json",
+        "docs/bank-vps-deployment.md"
+      ],
+      "notes": "Deployment and audit delivered, not stability acceptance: default public discovery, 4-slot native UI, Linux systemd and crash recovery verified. Six real-WAN dense-hall samples expose main-thread overload (4p84 ~19.6Hz) and intermittent snapshot stalls. Two release clients over 120s reproduce 2 reconnects; shutdown roster send error remains. Full raw failures preserved; no claim of stable production readiness."
     }
   ],
   "known_limits": [
