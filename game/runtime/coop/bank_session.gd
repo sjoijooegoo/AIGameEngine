@@ -83,7 +83,7 @@ func _ready() -> void:
 	super._ready()
 	visual=not is_host
 	# Protocol includes the real bank rules and layout, not the old structural slice.
-	var fingerprint:="bank-combat-v6"
+	var fingerprint:="bank-combat-v7"
 	for path in ["origin_structure","infected","infected_archetypes","firearms","door_design","shooting_feedback"]:
 		fingerprint+=FileAccess.get_file_as_string("res://data/"+path+".json").replace("\r\n","\n")
 	map_hash=fingerprint.sha256_text()
@@ -145,7 +145,7 @@ func disconnect_game(message: String="已退出会话") -> void:
 	pending_actions.clear()
 	team.clear();replicas.clear();presentation.reset();bank_tick=-1;received_round=0;received_shots=-1;team_wiped=false
 	started=false;leader=0;last_bank_received_msec=0
-	for enemy in world.infected:enemy.replica_only=false
+	for enemy in world.infected:enemy.replica_only=false;enemy.configure_authority(false)
 	world.player.collision_layer=2;world.player.collision_mask=9
 	if panel:panel.refresh()
 	if frontend_managed and not closing and not message.is_empty():AppFlow.return_menu("multiplayer",message)
@@ -252,6 +252,7 @@ func start_server(port_number: int, limit: int=4) -> Error:
 	world.ensure_infected()
 	var error:=super.start_server(port_number,limit)
 	if error==OK:
+		for enemy in world.infected:enemy.configure_authority(true)
 		discovery=preload("res://coop/discovery.gd").new();add_child(discovery)
 		if discovery.serve(self,port_number)!=OK:push_warning("Server discovery port unavailable; direct joining is still available")
 		server_tunnel=preload("res://coop/tcp_tunnel.gd").new();add_child(server_tunnel)
@@ -570,7 +571,10 @@ func server_advance(dt: float) -> void:
 	var bound_target=null
 	for enemy in world.infected:
 		if not enemy.active:continue
-		if enemy.mode=="dead" and enemy.ragdoll.sleeping:
+		if enemy.mode=="dead":
+			# Corpses need no player target, perception, animation or context bind.
+			if enemy.ragdoll.sleeping:
+				world.profiler.count("sleeping_corpses");continue
 			enemy.advance(dt);continue
 		var target=choose_target(enemy)
 		if target==null:continue
@@ -670,10 +674,10 @@ func broadcast_bank() -> void:
 		# Frozen rows only omit irrelevant clocks. A wake, head burst, transform,
 		# health/visibility change or round reset immediately invalidates the row.
 		var stable: bool=not cached.is_empty() and cached[8]==enemy.active and cached[5]==enemy.mode and cached[4]==enemy.hp and cached[1]==enemy.position and cached[2]==enemy.rotation.y
-		if stable and (not enemy.active or (enemy.mode=="dead" and enemy.ragdoll.sleeping and cached[9]==enemy.ragdoll.positions and cached[10]==enemy.ragdoll.head_destroyed)):
+		if stable and (not enemy.active or (enemy.mode=="dead" and cached[9].get("revision",0)==enemy.ragdoll.corpse_stream.state.get("revision",0) and cached[10]==enemy.ragdoll.head_destroyed)):
 			enemies.append(cached);continue
 		var row: Array=[str(enemy.name),enemy.position,enemy.rotation.y,enemy.velocity,enemy.hp,enemy.mode,enemy.clock,enemy.state_time,enemy.active,
-			enemy.ragdoll.positions.duplicate() if enemy.mode=="dead" else [],enemy.ragdoll.head_destroyed,enemy.animation_name,enemy.animation_time,enemy.native_motion.phase,enemy.attack_serial,enemy.reaction_time,enemy.reaction_duration,enemy.reaction_zone,enemy.reaction_direction,enemy.reaction_vector,enemy.reaction_strength,enemy.strong_reaction]
+			enemy.ragdoll.corpse_stream.state if enemy.mode=="dead" else {},enemy.ragdoll.head_destroyed,enemy.animation_name,enemy.animation_time,enemy.native_motion.phase,enemy.attack_serial,enemy.reaction_time,enemy.reaction_duration,enemy.reaction_zone,enemy.reaction_direction,enemy.reaction_vector,enemy.reaction_strength,enemy.strong_reaction]
 		enemies.append(row);snapshot_rows[enemy.name]=row
 	var packet: Dictionary={"round":round_id,"team":states,"doors":doors,"enemies":enemies,"kills":world.kills,"wiped":team_wiped,"started":started,"leader":leader,"reserved":recovery.reservations.size()}
 	var keyframe: bool=snapshot_keyframe_tick<0 or tick-snapshot_keyframe_tick>=60
@@ -778,8 +782,7 @@ func _bank_snapshot(server_tick: int, packet: Dictionary) -> void:
 		enemy.attack_serial=row[14];enemy.reaction_duration=row[16];enemy.reaction_zone=row[17];enemy.reaction_direction=row[18];enemy.reaction_vector=row[19];enemy.reaction_strength=row[20];enemy.strong_reaction=row[21]
 		enemy.collision_layer=8 if enemy.mode!="dead" and enemy.active else 0
 		if enemy.mode=="dead":
-			if not enemy.ragdoll.active:enemy.ragdoll.start(Vector3.ZERO,enemy.position)
-			if (fresh or old[5]!="dead") and row[9].size()==enemy.ragdoll.positions.size():enemy.ragdoll.positions.assign(row[9]);enemy.ragdoll.apply_pose()
+			enemy.ragdoll.corpse_stream.receive(enemy.ragdoll,row[9])
 			if row[10] and not enemy.ragdoll.head_destroyed:enemy.ragdoll.destroy_head()
 		replicas[row[0]]=row
 	presentation.push(server_tick,packet)

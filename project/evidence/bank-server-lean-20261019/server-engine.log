@@ -1,0 +1,22 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+BANK_LIGHTING {"bake_mode":"indirect_only","loaded":true,"meshes":481.0,"preview":false}
+COOP_STATUS 服务端监听 UDP 63232，人数上限 4
+BANK_DISCOVERY UDP 63233
+BANK_ENTRY_READY direct
+COOP_JOIN 1655443995 slot=0 players=1
+COOP_JOIN 878430127 slot=1 players=2
+COOP_LEAVE 878430127 players=1
+COOP_LEAVE 1655443995 players=0
+COOP_STATUS 已退出会话
+ERROR: 11 RID allocations of type 'P11JoltShape3D' were leaked at exit.
+ERROR: 4 RID allocations of type 'N13RendererDummy15MaterialStorage13DummyMaterialE' were leaked at exit.
+ERROR: 1 RID allocations of type 'N13RendererDummy15MaterialStorage11DummyShaderE' were leaked at exit.
+ERROR: 3 RID allocations of type 'N13RendererDummy9DummyMeshE' were leaked at exit.
+ERROR: 3 RID allocations of type 'PN13RendererDummy14TextureStorage12DummyTextureE' were leaked at exit.
+WARNING: 82 ObjectDB instances were leaked at exit (run with `--verbose` for details).
+   at: cleanup (core/object/object.cpp:2536)
+ERROR: 12 resources still in use at exit (run with --verbose for details).
+   at: clear (core/io/resource.cpp:822)
+ERROR: Pages in use exist at exit in PagedAllocator: N12VariantPools12BucketMediumE
+   at: ~PagedAllocator (./core/templates/paged_allocator.h:170)

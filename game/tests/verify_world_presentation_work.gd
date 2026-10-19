@@ -2,11 +2,11 @@ extends SceneTree
 class Body extends RefCounted:
 	var positions: Array[Vector3]=[Vector3.ZERO,Vector3.UP]
 	var samples := 0
-	var fitting := 0
-	var anatomy: Dictionary={"current_basis":Basis.IDENTITY}
-	func apply_pose() -> void:
-		samples+=1
-		if fitting>0:anatomy.current_basis=Basis(Vector3.UP,float(fitting)*.1);fitting-=1
+	var sleeping := false
+	var corpse_stream=Stream.new()
+class Stream extends RefCounted:
+	func advance(body,dt: float) -> void:
+		assert(is_equal_approx(dt,1.0/60.0));body.samples+=1
 class Actor extends Node3D:
 	var active := false
 	var mode := "idle"
@@ -17,6 +17,7 @@ class Actor extends Node3D:
 	var ragdoll:=Body.new()
 	var native_motion: Dictionary={"previous_position":Vector3.ZERO}
 	func play_pose(_dt: float,_continuous: bool=false) -> void:samples+=1
+	func update_shadow_layers() -> void:pass
 class World extends Node3D:
 	var infected: Array=[]
 	var doors: Dictionary={}
@@ -34,19 +35,17 @@ func run() -> void:
 	actor.active=true;row=row.duplicate(true);row[8]=true;row[1]=Vector3(2,0,0)
 	presentation.push(12,{"doors":{},"enemies":[row]});presentation.render_tick=12;presentation.advance(1.0/60)
 	assert(actor.samples==1 and actor.position==Vector3(2,0,0))
-	actor.mode="dead";row=row.duplicate(true);row[5]="dead";row[9]=[Vector3.ZERO,Vector3.UP]
+	actor.mode="dead";row=row.duplicate(true);row[5]="dead";row[9]={"revision":1}
 	presentation.push(18,{"doors":{},"enemies":[row]});presentation.render_tick=18;presentation.advance(1.0/60)
 	var samples:=actor.ragdoll.samples
+	actor.ragdoll.sleeping=true
 	for i in 60:presentation.advance(1.0/60)
 	assert(actor.ragdoll.samples==samples and presentation.corpse_skipped==60)
-	row=row.duplicate(true);row[9][0]=Vector3.RIGHT
+	actor.ragdoll.sleeping=false
+	row=row.duplicate(true);row[9]={"revision":2};row[1]=Vector3(99,0,0)
 	presentation.push(24,{"doors":{},"enemies":[row]});presentation.render_tick=24;presentation.advance(1.0/60)
-	assert(actor.ragdoll.samples==samples+1 and actor.ragdoll.positions[0]==Vector3.RIGHT,"Wake pose was incorrectly skipped")
-	row=row.duplicate(true);row[9][0]=Vector3(2,0,0);actor.ragdoll.fitting=3
-	presentation.push(30,{"doors":{},"enemies":[row]});presentation.render_tick=30
-	samples=actor.ragdoll.samples
-	for i in 20:presentation.advance(1.0/60)
-	assert(actor.ragdoll.fitting==0 and actor.ragdoll.samples==samples+4,"Static joint points must not freeze an unconverged torso fit")
+	assert(actor.ragdoll.samples==samples+1,"Local wake was incorrectly skipped")
+	assert(actor.position==Vector3(2,0,0) and actor.ragdoll.positions[0]==Vector3.ZERO,"Snapshots must not overwrite a local corpse")
 	presentation.reset();assert(presentation.settled_poses.is_empty())
 	print("BANK_PRESENTATION_WORK_PASS hidden / reactivation / sleeping / wake / reset")
 	quit()

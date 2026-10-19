@@ -1,6 +1,8 @@
 extends CharacterBody3D
 ## Native skins and retail ANI motion, contact-aware combat and intact ragdolls.
 var replica_only := false
+var authority_only := false
+var authority_bones: Array=[]
 var game: Node3D
 var definition: Dictionary
 var stats: Dictionary
@@ -115,6 +117,7 @@ func setup(world: Node3D,source: Dictionary,type: Dictionary,pin: Dictionary) ->
 	play_pose(0)
 
 func update_shadow_layers() -> void:
+	if authority_only:return # No server mesh/shadow presentation work.
 	var low: float=global_position.y
 	var high: float=low+2.1*model.scale.y
 	if mode=="dead" and not ragdoll.positions.is_empty():
@@ -125,6 +128,19 @@ func update_shadow_layers() -> void:
 	if layers==shadow_layers:return
 	shadow_layers=layers
 	for mesh: MeshInstance3D in render_meshes:preload("res://scripts/render_layers.gd").assign(mesh,layers)
+
+func configure_authority(enabled: bool) -> void:
+	if authority_only==enabled:return
+	authority_only=enabled;authority_bones.clear()
+	if enabled:
+		# Every hit/contact bone and its ancestors retain the native pose. Finger
+		# and face blending cannot affect these world transforms.
+		for suffix in ragdoll.NAMES:
+			var bone: int=bone_ids.get(suffix,-1)
+			while bone>=0:
+				if not bone in authority_bones:authority_bones.append(bone)
+				bone=skeleton.get_bone_parent(bone)
+	pose_blend.selected_bones=authority_bones
 
 func set_mode(value: String) -> void:
 	if mode==value:return
@@ -402,7 +418,7 @@ func capture_base_pose() -> void:
 	# saved immediately before their first mutation; all others remain in the
 	# skeleton and are read only when a transition actually needs the full pose.
 	if base_pose.size()!=skeleton.get_bone_count():base_pose.resize(skeleton.get_bone_count())
-	for bone in skeleton.get_bone_count():
+	for bone in (authority_bones if authority_only else range(skeleton.get_bone_count())):
 		if not layered_bones.has(bone):base_pose[bone]=skeleton.get_bone_pose(bone)
 
 func remember_base_bone(bone: int) -> void:

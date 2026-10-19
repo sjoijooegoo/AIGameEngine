@@ -825,6 +825,17 @@
         "vps_v6_discovery",
         "vps_v6_packaged_clients_join"
       ]
+    },
+    {
+      "id": "BANK-SERVER-LEAN",
+      "kind": "automated",
+      "description": "Focused local bank checks of authoritative corpse proxy, client-only ragdolls, durable death/impulse replication and single-player preservation. No new WAN capacity claim.",
+      "checks": [
+        "server_lean_corpse_authority",
+        "server_lean_death_loss_late_join",
+        "server_lean_local_combat",
+        "server_lean_visual_sequence"
+      ]
     }
   ]
 }

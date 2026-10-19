@@ -1,0 +1,136 @@
+{
+  "files": {
+    "alpha-engine.log": {
+      "sha256": "89ae28d678abfeb7c3c0ebe69a0bce24851273b1279a0a35f416d744126d2a30",
+      "bytes": 1044
+    },
+    "alpha-trace.jsonl.gz": {
+      "sha256": "5598b05ae2e0b0f186c639b736689ba01844f412e93ab62bdee09d8069175b1b",
+      "bytes": 160550
+    },
+    "bravo-engine.log": {
+      "sha256": "38006e6c5c2f34ed0219d4ddbd76de6fa0a4fccbb06b6361dd0a4c40985f8975",
+      "bytes": 777
+    },
+    "bravo-trace.jsonl.gz": {
+      "sha256": "29c18a330edf1313724b4f118a1db8e5cfe1007bda6bdf9a9c9191815d692bc0",
+      "bytes": 123823
+    },
+    "corpse_fall.jpg": {
+      "sha256": "73a73fc0abbd1414f4354fff4dd6e1e92f6d075afc34835ce407dbda17d2e519",
+      "bytes": 210961
+    },
+    "corpse_fall.webp": {
+      "sha256": "494a7bb09fe2334c0815d3339f4ae92cd81066d216f17ed60d1ae9fd67c0e354",
+      "bytes": 5847194
+    },
+    "corpse_settled.jpg": {
+      "sha256": "aa13bac6f5889233e12532b9bb9ef21e1222030d5c7268abc1aa47401a10a2dd",
+      "bytes": 78253
+    },
+    "corpse_settled.webp": {
+      "sha256": "8c1ffd4ec38d65ad3e1ffdb3bd453a53cea3a61cb99ddac6b593233512279506",
+      "bytes": 1211570
+    },
+    "corpse_shot_wake.jpg": {
+      "sha256": "1a8d034faa77cab6d3e273cc036d955e39770c682156fb2f5da8fd943a04e116",
+      "bytes": 202912
+    },
+    "corpse_shot_wake.webp": {
+      "sha256": "756cbb60c7aebf1011112151bea4f16dba36af2fe344961157bc42d738e0a61a",
+      "bytes": 10362578
+    },
+    "gallery.html": {
+      "sha256": "30e735cdaba6a3e29c35f124624b74318224a3192439e1232f4e007a70c76c36",
+      "bytes": 1443
+    },
+    "pose-equivalence.log": {
+      "sha256": "bd936df3239b6917f5b8247cd4769cfeaa2784247be85e673e6eacb426472902",
+      "bytes": 729
+    },
+    "report.json": {
+      "sha256": "1ecf0a9eeada692cb3d42d2c71ba03cd206a89763edd5d879bbc55ef40da9452",
+      "bytes": 4487
+    },
+    "server-engine.log": {
+      "sha256": "46fe5f853fc1568dff82f3c302b6e998b22b2438bd00cb99c969bcc2ff027796",
+      "bytes": 1298
+    },
+    "server-trace.jsonl.gz": {
+      "sha256": "5924b3eab18db410a27bbd08c539bccaeec8a1460538c2b694f7d95d2d813dfa",
+      "bytes": 71458
+    },
+    "verify_corpse_replication.log": {
+      "sha256": "628c3c4d09033988c0ca6a911ccb12d3c16923b1f4c0700b7b3bdad9231934e8",
+      "bytes": 167
+    },
+    "verify_snapshot_delta.log": {
+      "sha256": "f9087ced52b1b7a6aeaac849b753ecda4e7d5ef7f38b4fb804f8119201b11cc2",
+      "bytes": 184
+    },
+    "verify_world_presentation_work.log": {
+      "sha256": "bf1f5ffe727cf926b8c6da6c2ecb717a58c596c54fa9c61b1850affef282c910",
+      "bytes": 149
+    },
+    "visual-run.json": {
+      "sha256": "483c22c158ae7da91e0e3740d89314193a0c7f0a784239a66b191fcadc4d09f3",
+      "bytes": 8792
+    },
+    "bank-network-visual-20261019-195132/alpha-engine.log": {
+      "sha256": "c81fe8b34e3256627512981cbc2e58d71094b455ff83673caa53c4ac260ee608",
+      "bytes": 978
+    },
+    "bank-network-visual-20261019-195132/alpha-trace.jsonl.gz": {
+      "sha256": "269d64acbdb0a10941a477e1a006d86a69aba75ec5e4be75397ed74861864b72",
+      "bytes": 2443
+    },
+    "bank-network-visual-20261019-195132/bravo-engine.log": {
+      "sha256": "5e9d7bbb1945a5c158ff495d3e28a1de179b5891d19cca6103f5d631e495b5d3",
+      "bytes": 682
+    },
+    "bank-network-visual-20261019-195132/bravo-trace.jsonl.gz": {
+      "sha256": "3e6ecf3d58d83c8c362733ab8105fedb8e1327b163fedfcbeec05733e91e7d30",
+      "bytes": 1346
+    },
+    "bank-network-visual-20261019-195132/report.json": {
+      "sha256": "cd26f75055cbd01748d37304326ac8f3f36ac402a24f979513b96bf759afd681",
+      "bytes": 37
+    },
+    "bank-network-visual-20261019-195132/server-engine.log": {
+      "sha256": "957026cb1298edd4691dab7af432f0b7968a112a1a9b617ee1cec58c3c579dc1",
+      "bytes": 364
+    },
+    "bank-network-visual-20261019-195132/server-trace.jsonl.gz": {
+      "sha256": "09a061f6b0307650235fb0301212df9184a69fa2d23611c75f4de23e918aa8f5",
+      "bytes": 81
+    },
+    "bank-network-visual-20261019-195403/alpha-engine.log": {
+      "sha256": "ebe5f0280402ff9ba18158622a353c6659624ce7f34bde385033fc50e37e7e1d",
+      "bytes": 1290
+    },
+    "bank-network-visual-20261019-195403/alpha-trace.jsonl.gz": {
+      "sha256": "e7f6ca8259091d6cf89b822dd7bc903d5bdc34c2dac507ebe6fb91e2e65d6668",
+      "bytes": 118693
+    },
+    "bank-network-visual-20261019-195403/bravo-engine.log": {
+      "sha256": "a3effb8587604ed7f6f19836fb98d5c501394ff0aeeaf0c57ea57629a802d005",
+      "bytes": 1056
+    },
+    "bank-network-visual-20261019-195403/bravo-trace.jsonl.gz": {
+      "sha256": "1bd5a9b5efffe535711c3607e8cbd690a4064ff903a2dd69e4f6908b6a5dc261",
+      "bytes": 64967
+    },
+    "bank-network-visual-20261019-195403/report.json": {
+      "sha256": "247d4ad156149a3f0f3e8e42cbd412ac52ac4b5baeb2074f62dad92d20d78bb3",
+      "bytes": 4847
+    },
+    "bank-network-visual-20261019-195403/server-engine.log": {
+      "sha256": "b4cca0ec8f3093781abc561f1a5394c6ea92f86a593239e28373c77016bf2349",
+      "bytes": 496
+    },
+    "bank-network-visual-20261019-195403/server-trace.jsonl.gz": {
+      "sha256": "a35b939501283c2c37f95ca428748c3c5a05f1148b6a12fb6c62f835126e073f",
+      "bytes": 39401
+    }
+  }
+}

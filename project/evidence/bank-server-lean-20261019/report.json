@@ -1,0 +1,107 @@
+{
+  "date": "2026-10-19",
+  "task": "BANK-SERVER-LEAN-013",
+  "network_build": "bank-combat-v7",
+  "protocol": 5,
+  "status": "local_scoped_checks_pass",
+  "checks": [
+    {
+      "name": "verify_corpse_replication",
+      "status": "pass",
+      "log": "verify_corpse_replication.log"
+    },
+    {
+      "name": "verify_snapshot_delta",
+      "status": "pass",
+      "log": "verify_snapshot_delta.log"
+    },
+    {
+      "name": "verify_world_presentation_work",
+      "status": "pass",
+      "log": "verify_world_presentation_work.log"
+    },
+    {
+      "name": "authority_pose_and_single_player_equivalence",
+      "status": "pass",
+      "models": 8,
+      "transform_comparisons": 69084,
+      "max_transform_component_error": 6.50101038e-06,
+      "reference": "8bbe209",
+      "log": "pose-equivalence.log"
+    },
+    {
+      "name": "bank_network_corpse_sleep_wake",
+      "status": "pass",
+      "normal_input": true,
+      "client_hit_areas_disabled": true,
+      "authority_hit_areas_enabled": true
+    },
+    {
+      "name": "bank_network_rendered_sequences",
+      "status": "pass",
+      "normal_input": true,
+      "frozen_between_steps": true
+    },
+    {
+      "name": "server_lean_corpse_authority",
+      "status": "pass",
+      "evidence": "verify_corpse_replication.log"
+    },
+    {
+      "name": "server_lean_death_loss_late_join",
+      "status": "pass",
+      "evidence": "verify_corpse_replication.log"
+    },
+    {
+      "name": "server_lean_local_combat",
+      "status": "pass",
+      "evidence": "visual-run.json"
+    },
+    {
+      "name": "server_lean_visual_sequence",
+      "status": "pass",
+      "evidence": "corpse_fall.jpg / corpse_settled.jpg / corpse_shot_wake.jpg"
+    }
+  ],
+  "visual_session": "logs/sessions/bank-network-visual-20261019-195849",
+  "calculation_session": "logs/sessions/bank-server-lean-20261019-195454",
+  "failed_attempts": [
+    {
+      "session": "logs/sessions/bank-network-visual-20261019-195132",
+      "reason": "Cold client resource loading exceeded the ordinary 15s command wait.",
+      "durable": "bank-network-visual-20261019-195132"
+    },
+    {
+      "session": "logs/sessions/bank-network-visual-20261019-195403",
+      "reason": "Frozen authority sent no snapshots while second client prewarmed; clients reconnected and the first test shot was lost.",
+      "durable": "bank-network-visual-20261019-195403"
+    }
+  ],
+  "review": {
+    "contact_sheets_inspected": [
+      "corpse_fall.jpg",
+      "corpse_settled.jpg",
+      "corpse_shot_wake.jpg"
+    ],
+    "finding": "Continuous local fall, stable resting corpse and small post-hit motion; intact skin visible. This is scoped technical review, not final art approval."
+  },
+  "limits": [
+    "Public VPS and WSL remain v6/v5 respectively; no export, deployment or WAN retest in this change.",
+    "No measured VPS CPU reduction or revised capacity limit. Existing WAN-stall acceptance remains unresolved.",
+    "Corpse hit/occlusion and knockback use a coarse authority proxy, so client limbs and final poses may differ.",
+    "Late-join/loss/duplicate behavior tested as state contracts; rendered test uses two peers and one corpse, not a 4-player stress test.",
+    "Rendered run preceded the final removal of a proxy RefCounted back-reference; final parameter API and bounded work validated again in local contracts."
+  ],
+  "sources": {
+    "game/runtime/coop/bank_session.gd": "e5ffe1e5db6cc6d8d0d5f4ad523811e037a24fd0af0fc38b8f0f5072f316e690",
+    "game/runtime/coop/corpse_replication.gd": "199143d67419d61251788ba5369c559aa5802ca93b057eee26dff09267ce132a",
+    "game/runtime/coop/world_presentation.gd": "d2360adedfe6ef9fbc4134147d3fee99c8d02f56e62ec0ae3692af3b8725a08b",
+    "game/runtime/coop/snapshot_wire.gd": "4fc36c94aec3c8416587ec641bdba7d273763c253cb07fe86c3761e76ed22705",
+    "game/runtime/coop/session.gd": "d83c7d6a9feb39967152f5fb5c3c69c7e64908cb0723f3cbb5a18459ec034729",
+    "game/runtime/coop/discovery.gd": "fb51368ca8c8e591de3d5f997c08f52051dae2b89bf55fd0aced82efa12f1958",
+    "game/runtime/scripts/corpse_proxy.gd": "fd78139cf835ebfb498216a1b22067a131842d41f1e2e849cda318e5ee0624ab",
+    "game/runtime/scripts/infected.gd": "0266d6e739651bbb3e1ef07a986285aa6b5d609330821efe54bde3c3d306aeb0",
+    "game/runtime/scripts/infected_ragdoll.gd": "19148620e67a383881a05a7e68bd365e7dc9d797ab31a06a965ed3f8920a524f",
+    "game/runtime/scripts/pose_transition.gd": "ad3adb6505b6c1d30600a582d147db177cbab4fcb765c15fc623a6a5b97f0e82"
+  }
+}

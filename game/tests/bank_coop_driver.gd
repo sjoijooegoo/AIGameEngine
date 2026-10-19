@@ -16,6 +16,10 @@ func _initialize() -> void:
 func boot() -> void:
 	var bank=(load("res://scenes/main.tscn") as PackedScene).instantiate();root.add_child(bank)
 	bank.testing=true;game=bank.coop;game.testing=true
+	if "--warm-client-resources" in OS.get_cmdline_user_args():
+		# Fixture setup before any peers connect. A frozen authority cannot send
+		# heartbeats while another process is still warming all reference assets.
+		bank.ensure_infected();game.prepare_client_resources()
 	if "--real-time" in OS.get_cmdline_user_args():bank.testing=false;game.testing=true # real physics scheduling, isolated synthetic-input focus
 	write_json("ready.json",{"ready":true})
 

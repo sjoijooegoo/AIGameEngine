@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+BANK_LIGHTING {"bake_mode":"indirect_only","loaded":true,"meshes":481.0,"preview":false}
+BANK_ROOM_LIGHTING {"emitters":54,"fixtures":54,"indirect":"unchanged v46; preview, not a matching rebake","lobby":{"cabin_lights_unchanged":["G_source_2","F2_source_2","F3_source_2","F4_source_2"],"energy":1.79285407066345,"housing":"/root/BankExploration/LobbyFluorescentHousing","housing_position":"(38.0, 2.761598, 12.5)","light_position":"(38.0, 2.731598, 12.5)","light_size":0.0,"shadow":true,"source":"G_source_10"},"profile":"hanging_diffuse"}
+BANK_ENTRY_READY direct
+COOP_STATUS 正在连接 127.0.0.1:63232…
+COOP_STATUS 正在进入银行…
+COOP_STATUS 已连接 · 2/4 人
+COOP_STATUS 已退出会话

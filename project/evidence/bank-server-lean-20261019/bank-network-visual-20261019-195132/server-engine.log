@@ -1,0 +1,9 @@
+Godot Engine v4.7.2.stable.official.ed1daf0bf - https://godotengine.org
+
+BANK_LIGHTING {"bake_mode":"indirect_only","loaded":true,"meshes":481.0,"preview":false}
+COOP_STATUS 服务端监听 UDP 57175，人数上限 4
+BANK_DISCOVERY UDP 57176
+BANK_ENTRY_READY direct
+COOP_JOIN 1605084460 slot=0 players=1
+COOP_LEAVE 1605084460 players=0
+COOP_STATUS 已退出会话

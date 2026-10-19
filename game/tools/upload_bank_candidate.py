@@ -12,7 +12,7 @@ def main():
     p=argparse.ArgumentParser();p.add_argument('--project',required=True,choices=['bank']);p.add_argument('--package',type=Path,required=True);p.add_argument('--name',required=True);args=p.parse_args()
     assert re.fullmatch(r'[a-zA-Z0-9][a-zA-Z0-9._-]{0,79}',args.name)
     package=args.package.resolve();build=json.loads((package/'build.json').read_text(encoding='utf8'))
-    assert build['platform']=='linux' and build['wire_protocol']==4
+    assert build['platform']=='linux' and build['wire_protocol']==5
     binary=package/build['executable'];assert binary.parent==package and hashlib.sha256(binary.read_bytes()).hexdigest()==build['sha256']
     remote='/home/dev/bank-coop-validation/candidates/'+args.name
     setup="import pathlib,shutil;dest=pathlib.Path("+repr(remote)+");dest.mkdir(parents=True,exist_ok=False);shutil.copyfile('/opt/bank-coop/current/bank-coop-server.x86_64',dest/'bank-coop-server.x86_64')"

@@ -7,6 +7,7 @@ var elapsed := 1.0
 var duration := .1
 var active := false
 var max_position_step := 0.0
+var selected_bones: Array=[] # Empty means the complete visual skeleton.
 
 func setup(skeletons: Array) -> void:
 	rigs=skeletons
@@ -25,7 +26,7 @@ func apply(dt: float) -> void:
 	var t:=smoothstep(0,duration,elapsed)
 	for r in range(rigs.size()):
 		var rig: Skeleton3D=rigs[r]
-		for i in range(rig.get_bone_count()):
+		for i in (selected_bones if not selected_bones.is_empty() else range(rig.get_bone_count())):
 			var target:=rig.get_bone_pose(i)
 			var pose: Transform3D=previous[r][i].interpolate_with(target,t)
 			rig.set_bone_pose(i,pose)

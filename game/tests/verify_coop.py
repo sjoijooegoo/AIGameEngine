@@ -32,13 +32,13 @@ class Peer:
             if time.monotonic()>end: raise TimeoutError(str(path))
             time.sleep(.004)
 
-    def call(self,command,**args):
+    def call(self,command,*,_timeout=15,**args):
         self.serial+=1
         response=self.folder/'response.json'
         if response.exists():response.unlink()
         request={'id':self.serial,'command':command,**args}
         path=self.folder/'request.tmp';path.write_text(json.dumps(request),encoding='utf8');path.replace(self.folder/'request.json')
-        self.wait_file(response)
+        self.wait_file(response,_timeout)
         result=None
         for _ in range(100):
             try:result=json.loads(response.read_text(encoding='utf8'));break

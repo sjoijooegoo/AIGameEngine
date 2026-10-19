@@ -37,9 +37,13 @@ def main():
     try:
         driver=ROOT/'game/tests/bank_pose_probe.gd'
         server=BankPeer(folder/'server',['--server',f'--port={port}'],driver=driver);peers.append(server)
-        a=BankPeer(folder/'alpha',[],True,driver=driver);peers.append(a)
-        b=BankPeer(folder/'bravo',[],driver=driver);peers.append(b)
-        for client,name in [(a,'Alpha'),(b,'Bravo')]:client.call('fields',nickname=name,port=port);client.call('click',control='join_button')
+        a=BankPeer(folder/'alpha',['--warm-client-resources'],True,driver=driver);peers.append(a)
+        b=BankPeer(folder/'bravo',['--warm-client-resources'],driver=driver);peers.append(b)
+        for client,name in [(a,'Alpha'),(b,'Bravo')]:
+            client.call('fields',nickname=name,port=port)
+            # The first join prewarms all bank actors/reference avatars. Bound
+            # cold loading separately from ordinary 15-second input commands.
+            client.call('click',control='join_button',_timeout=90)
         until(lambda:len(server.state()['players'])==2 and len(a.state()['players'])==2 and len(b.state()['players'])==2,30);frames(30)
         server.call('fixture',name='firearms_range');frames(18)
         a.call('input',keys=['S']);states=sequence('predicted_walk',12,6);a.call('input');frames(24)
@@ -63,6 +67,9 @@ def main():
         assert server.call('pose_state')['actors'][0]['mode']=='dead'
         sequence('corpse_fall',12,6);frames(360)
         assert server.call('pose_state')['actors'][0]['sleeping']
+        assert server.call('pose_state')['actors'][0]['authority_proxy']
+        assert a.call('pose_state')['actors'][0]['local_corpse']
+        assert not a.call('pose_state')['actors'][0]['authority_proxy']
         aim_at(server.call('pose_state')['actors'][0]['targets']['Body'])
         before=a.state()['presentation']['corpse_skipped'];sequence('corpse_settled',4,6)
         assert a.state()['presentation']['corpse_skipped']>before

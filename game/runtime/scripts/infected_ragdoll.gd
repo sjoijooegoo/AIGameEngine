@@ -79,6 +79,8 @@ var frame_wall_contact := false
 var frame_floor_contact := false
 var separation_pairs: Array=[]
 var anatomy=preload("res://scripts/infected_anatomy.gd").new()
+var corpse_stream=preload("res://coop/corpse_replication.gd").new()
+var authority_proxy
 
 func setup(owner_actor: CharacterBody3D) -> void:
 	actor=owner_actor;rig=actor.skeleton
@@ -120,6 +122,7 @@ func torso_frame() -> Basis:
 	return Basis(x,y,z).orthonormalized()
 
 func point(suffix: String) -> Vector3:
+	if actor.authority_only and active and ids.has(suffix):return positions[ids[suffix]]
 	return rig.to_global(rig.get_bone_global_pose(int(point_bones[suffix])).origin)
 
 func update_hitboxes() -> void:
@@ -131,8 +134,10 @@ func update_hitboxes() -> void:
 		var area: Area3D=binding.area
 		if area.collision_layer!=layer:area.collision_layer=layer
 		if not actor.active:continue
-		var a: Vector3=transform*rig.get_bone_global_pose(binding.first).origin
-		var b: Vector3=transform*rig.get_bone_global_pose(binding.second).origin
+		var proxy: bool=actor.authority_only and active
+		var part: String=area.get_meta("hit_part")
+		var a: Vector3=point(HIT_PAIRS[part][0]) if proxy else transform*rig.get_bone_global_pose(binding.first).origin
+		var b: Vector3=point(HIT_PAIRS[part][1]) if proxy else transform*rig.get_bone_global_pose(binding.second).origin
 		var axis: Vector3=(b-a).normalized()
 		var shape: CapsuleShape3D=binding.shape
 		var height:=maxf(shape.radius*2,a.distance_to(b)+shape.radius)
@@ -141,6 +146,7 @@ func update_hitboxes() -> void:
 		if absf(shape.height-height)>.003:shape.height=height
 		area.global_transform=Transform3D(Basis(Quaternion(Vector3.UP,axis)),(a+b)*.5)
 	var head_layer: int=0 if head_destroyed else layer
+	if actor.authority_only and active:actor.head_hitbox.global_position=point("Head1")+Vector3.UP*.075*actor.model.scale.y
 	if actor.head_hitbox.collision_layer!=head_layer:actor.head_hitbox.collision_layer=head_layer
 	actor.game.profiler.end_scope("hitboxes",started)
 
@@ -230,6 +236,9 @@ func start(push: Vector3,impact: Vector3,info: Dictionary={}) -> void:
 		if launch_remaining>0:fall=launch_velocity+actor.velocity.limit_length(1.0)+blast_spin.cross(positions[i]-positions[ids.Pelvis]).limit_length(4.5)
 		previous[i]=positions[i]-fall/SOLVER_HZ
 	actor.velocity=Vector3.ZERO;actor.collision_layer=0;actor.collision_mask=0
+	if actor.authority_only:
+		corpse_stream.death(self)
+		authority_proxy=preload("res://scripts/corpse_proxy.gd").new();authority_proxy.setup(self)
 
 func prepare_blast(direction: Vector3,blast: float,corpse: bool) -> Vector3:
 	var tuning: Dictionary=actor.game.firearms.feedback_data.shotgun
@@ -321,8 +330,11 @@ func impulse(part: String, direction: Vector3, impact: Vector3, info: Dictionary
 		var change: Vector3=velocity-before;applied_velocity[names[i]]=[change.x,change.y,change.z]
 		if weight>.25:affected.append(names[i])
 	last_impact={"launched":launched,"part":part,"parts":hit_parts,"weapon":weapon,"point":[impact.x,impact.y,impact.z],"direction":[incoming.x,incoming.y,incoming.z],"strength":strength,"affected":affected,"applied_velocity":applied_velocity,"woke":was_sleeping,"serial":impact_count,"tick":actor.game.tick_count}
+	if actor.authority_only:
+		authority_proxy.wake(self);corpse_stream.impact(part,direction,impact,info)
 
 func collide_living(before: Array[Vector3],dt: float) -> void:
+	if actor.replica_only:return # Local corpse physics must never affect combat.
 	if launch_remaining<=0 or not launch_kind.begins_with("shotgun"):return
 	var tuning: Dictionary=actor.game.firearms.feedback_data.body_collision
 	var from: Vector3=(before[ids.Pelvis]+before[ids.Spine2])*.5
@@ -363,7 +375,8 @@ func collide_living(before: Array[Vector3],dt: float) -> void:
 		if outward.length_squared()>.0001:correction+=outward.normalized()*minf(.20,penetration)
 		for i in positions.size():
 			positions[i]+=correction
-			collide(i,before[i])
+			if not actor.authority_only:collide(i,before[i])
+		if actor.authority_only:authority_proxy.velocity*=float(tuning.retained_velocity)
 		break
 
 func collide(i: int,old: Vector3) -> void:
@@ -414,6 +427,10 @@ func collide(i: int,old: Vector3) -> void:
 
 func advance(dt: float) -> void:
 	if not active or sleeping:return
+	if actor.authority_only:
+		actor.game.profiler.count("corpse_proxy_steps")
+		authority_proxy.advance(self,dt);return
+	actor.game.profiler.count("ragdoll_joint_steps")
 	if not sleeping and dt>0:
 		launch_remaining=maxf(0,launch_remaining-dt)
 		var cap:=speed_limit()
@@ -510,6 +527,7 @@ func apply_pose() -> void:
 	actor.head_hitbox.global_position=point("Head1")+Vector3.UP*.075*actor.model.scale.y
 
 func reset() -> void:
+	authority_proxy=null;corpse_stream.reset()
 	head_destroyed=false;launch_remaining=0;launch_velocity=Vector3.ZERO;launch_cap=MAX_SPEED
 	launch_kind="";death_variant="";launch_serial=0;body_contacts.clear();body_contact_events.clear()
 	active=false;sleeping=false;age=0;positions.clear();previous.clear();radii.clear();particle_shapes.clear();names.clear();ids.clear();bones.clear();bases.clear();directions.clear();ends.clear();links.clear();detached.clear();contacts=0;max_error=0
@@ -531,4 +549,4 @@ func observe() -> Dictionary:
 	for n in ["Pelvis","Head1","L_Hand","R_Hand","L_Foot","R_Foot"]:
 		if ids.has(n):
 			var p: Vector3=positions[ids[n]];points[n]=[p.x,p.y,p.z]
-	return {"launch_kind":launch_kind,"death_variant":death_variant,"body_contacts":body_contact_events.duplicate(true),"dismemberment_enabled":false,"head_burst_enabled":true,"head_destroyed":head_destroyed,"head_hitbox_enabled":actor.head_hitbox.collision_layer!=0,"launch_remaining":launch_remaining,"launch_velocity":[launch_velocity.x,launch_velocity.y,launch_velocity.z],"intact_skin_visible":intact_skin.visible if intact_skin!=null else false,"active":active,"solver":"fixed_step_position_based_joints","sleeping":sleeping,"sleep_reason":sleep_reason,"quiet_time":quiet_time,"max_speed":max_speed,"speed_cap":speed_limit(),"wake_count":wake_count,"impact_count":impact_count,"last_impact":last_impact.duplicate(true),"age":age,"points":points,"targets":targets,"joint_count":links.size(),"anatomy":anatomy.observe() if active else {},"detached":detached.duplicate(),"contacts":contacts,"max_joint_error":max_error}
+	return {"launch_kind":launch_kind,"death_variant":death_variant,"body_contacts":body_contact_events.duplicate(true),"dismemberment_enabled":false,"head_burst_enabled":true,"head_destroyed":head_destroyed,"head_hitbox_enabled":actor.head_hitbox.collision_layer!=0,"launch_remaining":launch_remaining,"launch_velocity":[launch_velocity.x,launch_velocity.y,launch_velocity.z],"intact_skin_visible":intact_skin.visible if intact_skin!=null else false,"active":active,"solver":"authority_torso_proxy" if actor.authority_only else "fixed_step_position_based_joints","sleeping":sleeping,"sleep_reason":sleep_reason,"quiet_time":quiet_time,"max_speed":max_speed,"speed_cap":speed_limit(),"wake_count":wake_count,"impact_count":impact_count,"last_impact":last_impact.duplicate(true),"age":age,"points":points,"targets":targets,"joint_count":links.size(),"anatomy":anatomy.observe() if active else {},"detached":detached.duplicate(),"contacts":contacts,"max_joint_error":max_error}

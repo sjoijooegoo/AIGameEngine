@@ -1,0 +1,131 @@
+{
+  "checks": [
+    {
+      "name": "bank_network_corpse_sleep_wake",
+      "status": "pass",
+      "normal_input": true,
+      "client_hit_areas_disabled": true,
+      "authority_hit_areas_enabled": true
+    },
+    {
+      "name": "bank_network_rendered_sequences",
+      "status": "pass",
+      "normal_input": true,
+      "frozen_between_steps": true
+    }
+  ],
+  "sequences": [
+    {
+      "name": "predicted_walk",
+      "contact": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\predicted_walk.jpg",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\predicted_walk.webp",
+      "frames": [
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_23.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_27.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_31.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_35.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_39.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_43.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_47.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_51.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_55.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_59.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_63.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_67.png"
+      ]
+    },
+    {
+      "name": "predicted_fire",
+      "contact": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\predicted_fire.jpg",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\predicted_fire.webp",
+      "frames": [
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_80.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_83.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_86.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_89.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_92.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_95.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_98.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_101.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_104.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_107.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_110.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_113.png"
+      ]
+    },
+    {
+      "name": "door_close",
+      "contact": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\door_close.jpg",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\door_close.webp",
+      "frames": [
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_169.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_173.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_177.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_181.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_185.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_189.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_193.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_197.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_201.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_205.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_209.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_213.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_217.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_221.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_225.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_229.png"
+      ]
+    },
+    {
+      "name": "corpse_fall",
+      "contact": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\corpse_fall.jpg",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\corpse_fall.webp",
+      "frames": [
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_266.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_270.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_274.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_278.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_282.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_286.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_290.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_294.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_298.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_302.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_306.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_310.png"
+      ]
+    },
+    {
+      "name": "corpse_settled",
+      "contact": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\corpse_settled.jpg",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\corpse_settled.webp",
+      "frames": [
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_441.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_445.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_449.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_453.png"
+      ]
+    },
+    {
+      "name": "corpse_shot_wake",
+      "contact": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\corpse_shot_wake.jpg",
+      "animation": "D:\\AIGameEngine\\logs\\sessions\\bank-network-visual-20261019-195849\\corpse_shot_wake.webp",
+      "frames": [
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_460.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_463.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_466.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_469.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_472.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_475.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_478.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_481.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_484.png",
+        "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_487.png"
+      ]
+    },
+    {
+      "name": "session_menu",
+      "image": "D:/AIGameEngine/logs/sessions/bank-network-visual-20261019-195849/alpha/capture_490.png"
+    }
+  ]
+}

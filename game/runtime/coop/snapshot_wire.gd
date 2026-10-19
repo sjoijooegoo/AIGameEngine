@@ -9,9 +9,9 @@ static func field(index: int,value):
 		6,7,12,13,15,16,20:return snappedf(value,1.0/1024.0)
 		19:return (value as Vector3).snapped(Vector3.ONE/4096.0)
 		9:
-			var points: Array=[]
-			for point: Vector3 in value:points.append(point.snapped(Vector3.ONE/1024.0))
-			return points
+			# Immutable corpse events, not a stream of joint transforms. Preserve
+			# the one-time death seed's precision for the client's local solver.
+			return value
 	return value
 
 static func encode(wire: Dictionary) -> Dictionary:

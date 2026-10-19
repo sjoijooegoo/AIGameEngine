@@ -680,6 +680,25 @@
         "docs/bank-vps-v6-deployment.md"
       ],
       "notes": "Exact requested v6 promoted, active/enabled, rollback v5 retained, paired Windows clients joined. Existing timeout reproduced during short smoke; user then requested no more testing. Stability is not accepted; deployment remains as explicitly requested. WSL not changed."
+    },
+    {
+      "id": "BANK-SERVER-LEAN-013",
+      "title": "减少专用服务器尸体物理与表现层开销",
+      "status": "done",
+      "depends_on": [
+        "BANK-VPS-V6-012"
+      ],
+      "acceptance": [
+        "BANK-SERVER-LEAN"
+      ],
+      "definition_of_done": "合作模式服务端以单体代理保留尸体击退和命中判定，客户端独立运行完整布娃娃；死亡和受力状态可重传及晚加入，不再逐帧同步关节；保留活体权威战斗与60Hz时序，完成定向本地验证并说明性能和公网未验证边界。",
+      "evidence": [
+        "project/evidence/bank-server-lean-20261019/report.json",
+        "project/evidence/bank-server-lean-20261019/gallery.html",
+        "project/evidence/bank-server-lean-20261019/manifest.json",
+        "docs/bank-server-lean.md"
+      ],
+      "notes": "v7/protocol 5 source implementation complete. Durable corpse events, one torso collision proxy per awake body, client-only full joints and preserved authority combat. Six focused local check groups pass; 8 models/69084 pose comparisons, rendered two-peer corpse sleep/wake reviewed. Cold-loading/frozen-harness failures retained. No new VPS performance/capacity acceptance; public v6 and existing client packages unchanged."
     }
   ],
   "known_limits": [
